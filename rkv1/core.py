@@ -268,14 +268,14 @@ def read_manifest(stream):
     return header, body_start
 
 
-def decode_block(stream, body_start, key, meta):
+def decode_block(stream, body_start, key, meta, csv_decoder=None):
     stream.seek(body_start + meta["offset"])
     stored = stream.read(meta["stored_size"])
     if len(stored) != meta["stored_size"]:
         raise ValueError("Truncated block")
     raw = decompress(stored, meta["codec"], meta.get("coded_size", meta["raw_size"]))
     if meta.get("transform", "none") == "csv-columns-v1":
-        raw = csv_columns_decode(raw, meta["raw_size"])
+        raw = (csv_decoder or csv_columns_decode)(raw, meta["raw_size"])
     if len(raw) != meta["raw_size"] or digest(raw) != block_hash(key):
         raise ValueError("Block SHA-256 mismatch or length mismatch")
     return raw
@@ -283,9 +283,12 @@ def decode_block(stream, body_start, key, meta):
 
 class Archive:
     """Single-threaded reader. Range reads verify touched chunks, not other files."""
-    def __init__(self, path, *, index_cache_bytes=1 << 20):
+    def __init__(self, path, *, index_cache_bytes=1 << 20, decoder_backend="python", native_library=None):
         if type(index_cache_bytes) is not int or not 0 <= index_cache_bytes <= MAX_HEADER:
             raise ValueError("Invalid index cache budget")
+        from .native import select_decoder
+        self._csv_decoder = select_decoder(decoder_backend, native_library)
+        self.decoder_backend = decoder_backend
         self._indexes = OrderedDict()
         self._index_bytes = 0
         self.index_cache_bytes = index_cache_bytes
@@ -334,12 +337,12 @@ class Archive:
         if self.header["version"] == UNIT_VERSION:
             meta = self.header["blocks"][key]
             index, offsets, _ = self.unit_index(key)
-            raw = b"".join(decode_unit(self.stream, self.body_start, meta, index, offsets, i)
+            raw = b"".join(decode_unit(self.stream, self.body_start, meta, index, offsets, i, self._csv_decoder)
                            for i in range(meta["unit_count"]))
             if digest(raw) != block_hash(key):
                 raise ValueError("Block SHA-256 mismatch")
             return raw
-        return decode_block(self.stream, self.body_start, key, self.header["blocks"][key])
+        return decode_block(self.stream, self.body_start, key, self.header["blocks"][key], self._csv_decoder)
 
     def block_range(self, key, offset, length):
         meta = self.header["blocks"][key]
@@ -354,7 +357,7 @@ class Archive:
         unit_size = self.header["unit_size"]
         result = bytearray()
         for i in range(offset // unit_size, (offset + length + unit_size - 1) // unit_size):
-            raw = decode_unit(self.stream, self.body_start, meta, index, offsets, i)
+            raw = decode_unit(self.stream, self.body_start, meta, index, offsets, i, self._csv_decoder)
             start, end = max(0, offset - i * unit_size), min(len(raw), offset + length - i * unit_size)
             result.extend(raw[start:end])
         data = bytes(result)
@@ -547,12 +550,12 @@ def _file_digest(path):
     return h.hexdigest()
 
 
-def verify(archive):
-    with Archive(archive) as reader:
+def verify(archive, *, decoder_backend="python", native_library=None):
+    with Archive(archive, decoder_backend=decoder_backend, native_library=native_library) as reader:
         return reader.process()
 
 
-def unpack(archive, destination):
+def unpack(archive, destination, *, decoder_backend="python", native_library=None):
     destination = Path(destination)
     if destination.exists() or destination.is_symlink():
         raise FileExistsError("Destination must not already exist")
@@ -560,7 +563,7 @@ def unpack(archive, destination):
     with tempfile.TemporaryDirectory(prefix=".rkv-extract-", dir=destination.parent) as temporary:
         stage = Path(temporary) / "data"
         stage.mkdir()
-        with Archive(archive) as reader:
+        with Archive(archive, decoder_backend=decoder_backend, native_library=native_library) as reader:
             result = reader.process(stage)
         # Check again just before publish; extraction parents must be trusted.
         if destination.exists() or destination.is_symlink():

@@ -6,6 +6,11 @@ from . import __version__
 from .core import Archive, DEFAULT_CHUNK, assert_tree_equal, pack, unpack, verify
 
 
+def decoder_options(parser):
+    parser.add_argument("--decoder-backend", choices=("python", "rust"), default="python")
+    parser.add_argument("--native-library", help="Trusted release DLL/SO with adjacent native.json; required for rust")
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description="RKV-1: reversible scientific evidence storage")
     parser.add_argument("--version", action="version", version=__version__)
@@ -23,9 +28,12 @@ def main(argv=None):
     p = sub.add_parser("unpack")
     p.add_argument("archive")
     p.add_argument("destination")
+    decoder_options(p)
     for name in ("verify", "inspect"):
         p = sub.add_parser(name)
         p.add_argument("archive")
+        if name == "verify":
+            decoder_options(p)
     p = sub.add_parser("compare")
     p.add_argument("source")
     p.add_argument("restored")
@@ -35,6 +43,7 @@ def main(argv=None):
     p.add_argument("--offset", type=int, default=0)
     p.add_argument("--length", type=int)
     p.add_argument("--out", required=True)
+    decoder_options(p)
     p = sub.add_parser("bench")
     p.add_argument("source")
     p.add_argument("--out", required=True)
@@ -66,9 +75,10 @@ def main(argv=None):
             result = pack(args.source, args.archive, args.chunk_size, base=args.base, overwrite=args.overwrite,
                           compression=args.codec, deduplicate=not args.no_dedup, transform=args.transform, unit_size=args.unit_size)
         elif args.command == "unpack":
-            result = unpack(args.archive, args.destination)
+            result = unpack(args.archive, args.destination, decoder_backend=args.decoder_backend,
+                            native_library=args.native_library)
         elif args.command == "verify":
-            result = verify(args.archive)
+            result = verify(args.archive, decoder_backend=args.decoder_backend, native_library=args.native_library)
         elif args.command == "inspect":
             with Archive(args.archive) as reader:
                 result = {"manifest_verified": True, "payload_verified": False, "manifest": reader.header}
@@ -76,7 +86,7 @@ def main(argv=None):
             assert_tree_equal(args.source, args.restored)
             result = {"bytewise_verified": True}
         elif args.command == "read":
-            with Archive(args.archive) as reader:
+            with Archive(args.archive, decoder_backend=args.decoder_backend, native_library=args.native_library) as reader:
                 raw = reader.read_range(args.path, args.offset, args.length)
                 segmented = reader.header["version"] == 3
             with Path(args.out).open("xb") as stream:

@@ -108,7 +108,9 @@ def range_trial(source, archive, settings):
     started = timestamp()
     opened_at = time.perf_counter()
     cache_bytes = settings.get("index_cache_bytes", 1 << 20)
-    persistent = Archive(archive, index_cache_bytes=cache_bytes) if mode == "open_reader" else None
+    reader_options = {"index_cache_bytes": cache_bytes, "decoder_backend": settings.get("decoder_backend", "python"),
+                      "native_library": settings.get("native_library")}
+    persistent = Archive(archive, **reader_options) if mode == "open_reader" else None
     initial_open_s = time.perf_counter() - opened_at if persistent is not None else None
     # Use a separate unmeasured reader for the analytical block-work ledger.
     metadata = Archive(archive)
@@ -122,7 +124,7 @@ def range_trial(source, archive, settings):
             ledger = {k: 0 for k in ("requested_bytes", "chunk_decodes", "decoded_raw_bytes", "stored_payload_bytes")}
             for index, request in enumerate(plans[group]):
                 start = time.perf_counter()
-                reader = persistent if persistent is not None else Archive(archive, index_cache_bytes=cache_bytes)
+                reader = persistent if persistent is not None else Archive(archive, **reader_options)
                 after_open = time.perf_counter()
                 try:
                     actual = reader.read_range(request["path"], request["offset"], request["length"])

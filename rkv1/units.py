@@ -61,7 +61,7 @@ def validate_index(index, meta, unit_size, compression, transform):
     return tuple(offsets)
 
 
-def decode_unit(stream, body_start, meta, index, offsets, position):
+def decode_unit(stream, body_start, meta, index, offsets, position, csv_decoder=None):
     raw_size, stored_size, coded_size, codec, transform, _, checksum = ENTRY.unpack_from(index, position * ENTRY.size)
     stream.seek(body_start + meta["offset"] + offsets[position])
     stored = stream.read(stored_size)
@@ -69,7 +69,7 @@ def decode_unit(stream, body_start, meta, index, offsets, position):
         raise ValueError("Truncated unit")
     raw = decompress(stored, CODECS[codec], coded_size)
     if transform:
-        raw = csv_columns_decode(raw, raw_size)
+        raw = (csv_decoder or csv_columns_decode)(raw, raw_size)
     if len(raw) != raw_size or hashlib.sha256(raw).digest() != checksum:
         raise ValueError("Unit SHA-256 mismatch or size mismatch")
     return raw

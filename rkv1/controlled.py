@@ -132,7 +132,8 @@ def worker(phase, source, archive, destination, config):
                      compression=config["compression"], deduplicate=config["deduplicate"],
                      transform=config["transform"], base=config.get("base"), unit_size=config.get("unit_size"))
     elif phase == "decode":
-        stats = unpack(archive, destination)
+        stats = unpack(archive, destination, decoder_backend=config.get("decoder_backend", "python"),
+                       native_library=config.get("native_library"))
     else:
         raise ValueError("Unknown phase")
     return {"wall_s": time.perf_counter() - start, "cpu_s": time.process_time() - cpu,
