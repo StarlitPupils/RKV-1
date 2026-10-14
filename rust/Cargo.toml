@@ -1,0 +1,9 @@
+[package]
+name = "rkv1-core"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Rust boundary scaffold for the RKV1 archive format"
+
+[lib]
+path = "src/lib.rs"

@@ -1,0 +1,18 @@
+{
+  "recorded_at_utc": "2026-10-14T05:04:49.969652+00:00",
+  "client_date": "2026-10-14",
+  "client_timezone": "Asia/Shanghai",
+  "cpu": {
+    "Name": "Intel(R) Core(TM) i5-14600KF",
+    "NumberOfCores": 14,
+    "NumberOfLogicalProcessors": 20
+  },
+  "physical_memory_bytes": 34138931200,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.12",
+  "notes": [
+    "CPU only",
+    "no CPU affinity pinning or cold-cache simulation",
+    "background load uncontrolled"
+  ]
+}

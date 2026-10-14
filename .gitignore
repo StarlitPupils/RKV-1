@@ -1,0 +1,15 @@
+.venv/
+.research/
+.tools/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+data/
+target/
+*.rkv
+# User-supplied research exports are local inputs, not release artifacts.
+/固定硬件条件下迁移“人脑式记忆压缩”到计算机系统的可行性研究
+/类脑双保真记忆与极致压缩：面向未来 AGI 的理论边界、系统架构与研究路线
+/面向 AGI 科学推理的“类脑选择性保真记忆与极致压缩”架构设计路线

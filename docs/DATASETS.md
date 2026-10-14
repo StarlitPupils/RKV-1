@@ -1,0 +1,18 @@
+# 数据来源与固定版本
+
+下载后必须匹配 `rkv1/datasets.py` 的固定 SHA-256；URL 中的 `latest` 发生变化时
+下载会失败，必须审查变更后发布新版本。来源清单放在语料目录外，避免计入原始语料。
+仓库不分发用户研究文档或科学数据原文，仅保存下载器、哈希和实验统计。
+
+| 语料 | 作者与来源 | 许可 | 用途 |
+|---|---|---|---|
+| Iris | R. A. Fisher；[UCI](https://archive.ics.uci.edu/dataset/53/iris)，DOI 10.24432/C56C76 | CC BY 4.0 | 小型科学 CSV |
+| Wine Quality red | Cortez, Cerdeira, Almeida, Matos, Reis (2009)；[UCI](https://archive.ics.uci.edu/dataset/186/wine+quality)，DOI 10.24432/C56S3T | CC BY 4.0 | 科学测量 CSV |
+| SciFact | Wadden et al. (2020), [Fact or Fiction: Verifying Scientific Claims](https://aclanthology.org/2020.emnlp-main.609/)；[官方仓库](https://github.com/allenai/scifact) | [官方许可](https://github.com/allenai/scifact/blob/master/LICENSE.md)：claims 为 CC BY 4.0，corpus abstracts 为 ODC-By 1.0 | 科学文本压缩；未来证据检索 |
+
+v0.1.0 的 SciFact 包含 corpus、train/dev/test claims，只对文件字节做压缩；
+没有用 test 标签，也没有训练或推理评测。后续 E4 必须冻结数据分割，避免调参泄漏。
+下载器保留源字节，不清理空行、不规范化 CSV，也不修正数据集中既有数值。
+
+合成重复数据：固定种子 20261014，生成 1 MiB 伪随机字节，复制成 4 个文件。
+这只是跨文件去重机制对照，不代表真实科学数据分布，不能拿它的压缩率替代真实语料结果。

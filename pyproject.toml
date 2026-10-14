@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rkv1"
+version = "0.1.0"
+description = "Reversible Knowledge Vault: auditable lossless scientific memory experiments"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dependencies = []
+
+[project.optional-dependencies]
+bench = ["zstandard==0.24.0", "Brotli==1.1.0"]
+
+[project.scripts]
+rkv1 = "rkv1.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["rkv1*"]

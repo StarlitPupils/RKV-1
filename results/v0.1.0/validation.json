@@ -1,0 +1,14 @@
+{
+  "local_python_tests": {
+    "run": 21,
+    "passed": 20,
+    "skipped": 1,
+    "failed": 0,
+    "skip_reason": "Windows account lacks symlink creation permission"
+  },
+  "real_dataset_roundtrips": "passed for UCI and SciFact across all 6 methods, warmup and all 3 repetitions",
+  "range_reads": "32 verified reads per method per dataset",
+  "synthetic_dedup": "4 references, 1 unique block",
+  "local_rust": "not executed; no Rust toolchain installed; release CI required",
+  "cli_pack_verify_unpack_compare": "passed on pinned UCI bytes"
+}

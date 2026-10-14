@@ -1,0 +1,33 @@
+name: release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: read
+jobs:
+  tests:
+    uses: ./.github/workflows/ci.yml
+  publish:
+    needs: tests
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install build
+      - run: python -m build
+      - name: Package reproducibility records
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          test -f "docs/releases/${RELEASE_TAG}.md"
+          zip -r "dist/rkv1-${RELEASE_TAG}-experiments.zip" "results/${RELEASE_TAG}" docs/FORMAT.md docs/EXPERIMENTS.md docs/DATASETS.md
+      - name: Publish tested prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          gh release create "$RELEASE_TAG" --verify-tag --prerelease --title "RKV-1 ${RELEASE_TAG}" --notes-file "docs/releases/${RELEASE_TAG}.md" dist/*
