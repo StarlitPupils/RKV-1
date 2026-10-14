@@ -69,6 +69,23 @@ def main(argv=None):
     p = sub.add_parser("fetch")
     p.add_argument("destination")
     p.add_argument("--dataset", choices=("uci", "scifact", "qasper", "wine", "htru2", "superconductivity"), default="uci")
+    p = sub.add_parser("store-init")
+    p.add_argument("store")
+    p.add_argument("--codec", choices=("raw", "zlib", "zstd"), default="zstd")
+    p.add_argument("--chunker", choices=("fixed", "gear-v1"), default="fixed")
+    p.add_argument("--chunk-size", type=int, default=65536)
+    p = sub.add_parser("store-add")
+    p.add_argument("store"); p.add_argument("source"); p.add_argument("--label", default="")
+    p = sub.add_parser("store-stat")
+    p.add_argument("store")
+    p = sub.add_parser("store-verify")
+    p.add_argument("store"); p.add_argument("snapshot")
+    p = sub.add_parser("store-unpack")
+    p.add_argument("store"); p.add_argument("snapshot"); p.add_argument("destination")
+    p = sub.add_parser("store-read")
+    p.add_argument("store"); p.add_argument("snapshot"); p.add_argument("path")
+    p.add_argument("--offset", type=int, default=0); p.add_argument("--length", type=int)
+    p.add_argument("--out", required=True)
     args = parser.parse_args(argv)
     try:
         if args.command == "pack":
@@ -120,6 +137,24 @@ def main(argv=None):
                 json.dump(result, stream, ensure_ascii=False, indent=2)
                 stream.write("\n")
             result = {"report": str(path), "configurations": len(result["results"])}
+        elif args.command.startswith("store-"):
+            from .store import Store, unpack as store_unpack, verify as store_verify
+            if args.command == "store-init":
+                store = Store.create(args.store, compression=args.codec, chunker=args.chunker, chunk_size=args.chunk_size)
+                result = {"config": store.config, "config_sha256": store.config_sha256}
+            elif args.command == "store-add":
+                result = Store(args.store).add(args.source, label=args.label)
+            elif args.command == "store-stat":
+                result = Store(args.store).stats()
+            elif args.command == "store-verify":
+                result = store_verify(args.store, args.snapshot)
+            elif args.command == "store-unpack":
+                result = store_unpack(args.store, args.snapshot, args.destination)
+            else:
+                raw = Store(args.store).snapshot(args.snapshot).read_range(args.path, args.offset, args.length)
+                with Path(args.out).open("xb") as stream:
+                    stream.write(raw)
+                result = {"bytes": len(raw), "touched_objects_verified": True}
         else:
             from .datasets import fetch_public
             result = fetch_public(args.destination, args.dataset)

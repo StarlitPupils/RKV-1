@@ -84,6 +84,11 @@ def range_trial(source, archive, settings):
     from .experiments.decoder_policy import select_csv_decoder
     select_csv_decoder(settings.get("csv_decoder", "current"))
     mode = settings["mode"]
+    cas = settings.get("storage_kind", "archive") == "cas"
+    if settings.get("storage_kind", "archive") not in ("archive", "cas"):
+        raise ValueError("Unknown range storage kind")
+    if cas:
+        from .store import Store, OBJECT
     if mode not in MODES:
         raise ValueError("Invalid range-reader mode")
     files = [{"path": rel, "bytes": path.stat().st_size} for path, rel in files_in(source)]
@@ -102,18 +107,28 @@ def range_trial(source, archive, settings):
                 values.append(stream.read(request["length"]))
         expected[group] = values
     warmed = 0
-    with Path(archive).open("rb") as stream:
-        while data := stream.read(1 << 20):
-            warmed += len(data)
+    if cas:
+        selected = Store(archive).snapshot(settings["snapshot_id"])
+        keys = {r["id"] for e in selected.files.values() for r in e["chunks"]}
+        paths = [selected.store.root / "config.rkvc", selected.store.root / "snapshots" / (selected.snapshot_id + ".rkvs")]
+        paths.extend(selected.store.object_path(key) for key in sorted(keys))
+    else:
+        paths = [Path(archive)]
+    for path in paths:
+        with path.open("rb") as stream:
+            while data := stream.read(1 << 20):
+                warmed += len(data)
     started = timestamp()
     opened_at = time.perf_counter()
     cache_bytes = settings.get("index_cache_bytes", 1 << 20)
     reader_options = {"index_cache_bytes": cache_bytes, "decoder_backend": settings.get("decoder_backend", "python"),
                       "native_library": settings.get("native_library")}
-    persistent = Archive(archive, **reader_options) if mode == "open_reader" else None
+    def open_reader():
+        return Store(archive).snapshot(settings["snapshot_id"]) if cas else Archive(archive, **reader_options)
+    persistent = open_reader() if mode == "open_reader" else None
     initial_open_s = time.perf_counter() - opened_at if persistent is not None else None
     # Use a separate unmeasured reader for the analytical block-work ledger.
-    metadata = Archive(archive)
+    metadata = Store(archive).snapshot(settings["snapshot_id"]) if cas else Archive(archive)
     header = metadata.header
     group_order = list(plans)
     random.Random(settings["query_seed"] ^ 0x726B76).shuffle(group_order)
@@ -124,7 +139,7 @@ def range_trial(source, archive, settings):
             ledger = {k: 0 for k in ("requested_bytes", "chunk_decodes", "decoded_raw_bytes", "stored_payload_bytes")}
             for index, request in enumerate(plans[group]):
                 start = time.perf_counter()
-                reader = persistent if persistent is not None else Archive(archive, **reader_options)
+                reader = persistent if persistent is not None else open_reader()
                 after_open = time.perf_counter()
                 try:
                     actual = reader.read_range(request["path"], request["offset"], request["length"])
@@ -142,7 +157,11 @@ def range_trial(source, archive, settings):
                 if persistent is None:
                     open_times.append(after_open - start)
                     close_times.append(end - after_read)
-                work = touched_bytes(header, request, metadata)
+                if cas:
+                    from .store_benchmark import cas_touched_bytes
+                    work = cas_touched_bytes(metadata, request)
+                else:
+                    work = touched_bytes(header, request, metadata)
                 for key, value in work.items():
                     ledger[key] = ledger.get(key, 0) + value
             measured = plans[group][warmups:]
