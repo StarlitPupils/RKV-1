@@ -1,0 +1,25 @@
+{
+  "local_python_tests": {
+    "run": 56,
+    "passed": 55,
+    "skipped": 1,
+    "failed": 0,
+    "skip_reason": "Windows symlink permission"
+  },
+  "configurations": 53,
+  "measured_roundtrips": 265,
+  "warmup_roundtrips": 53,
+  "verified_range_reads": 101760,
+  "verified_warmup_range_reads": 6360,
+  "measurement_source_matches_release": true,
+  "v1_v2_compatibility": "passed; default v2 matches fixed v0.4 core archive bytes",
+  "scoped_unit_integrity": "touched corruption rejected; untouched corruption fails full verify",
+  "index_cost_accounting": "all indexes included; no double count",
+  "rust_candidate": "source + required Windows/Linux CI differential checks; not used in v0.5 timing",
+  "cold_os_cache": null,
+  "cross_machine": null,
+  "cross_day": null,
+  "inference_quality": null,
+  "installed_wheel": "v1/v2 fixtures, v3 Zstd/CSV and unit workers outside checkout passed",
+  "sdist_contents": "all protocols, baseline, native source and fixtures included; raw data/private research excluded"
+}

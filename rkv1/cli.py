@@ -14,6 +14,7 @@ def main(argv=None):
     p.add_argument("source")
     p.add_argument("archive")
     p.add_argument("--chunk-size", type=int, default=DEFAULT_CHUNK)
+    p.add_argument("--unit-size", type=int, help="RKV v3 independently verified unit size; divides chunk size, minimum 4096")
     p.add_argument("--base", help="Reuse verified compressed chunks from an earlier snapshot")
     p.add_argument("--overwrite", action="store_true")
     p.add_argument("--codec", choices=("raw", "zlib", "zstd"), default="zlib")
@@ -63,7 +64,7 @@ def main(argv=None):
     try:
         if args.command == "pack":
             result = pack(args.source, args.archive, args.chunk_size, base=args.base, overwrite=args.overwrite,
-                          compression=args.codec, deduplicate=not args.no_dedup, transform=args.transform)
+                          compression=args.codec, deduplicate=not args.no_dedup, transform=args.transform, unit_size=args.unit_size)
         elif args.command == "unpack":
             result = unpack(args.archive, args.destination)
         elif args.command == "verify":
@@ -77,9 +78,10 @@ def main(argv=None):
         elif args.command == "read":
             with Archive(args.archive) as reader:
                 raw = reader.read_range(args.path, args.offset, args.length)
+                segmented = reader.header["version"] == 3
             with Path(args.out).open("xb") as stream:
                 stream.write(raw)
-            result = {"bytes": len(raw), "touched_chunks_verified": True}
+            result = {"bytes": len(raw), "touched_units_verified" if segmented else "touched_chunks_verified": True}
         elif args.command == "bench":
             from .benchmark import benchmark
             result = benchmark(args.source, repeats=args.repeats, warmups=args.warmups, queries=args.queries, chunk_size=args.chunk_size)

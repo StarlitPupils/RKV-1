@@ -7,8 +7,37 @@ permissions:
 jobs:
   tests:
     uses: ./.github/workflows/ci.yml
-  publish:
+  native:
     needs: tests
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            suffix: linux-x86_64
+            library: librkv1_core.so
+          - os: windows-latest
+            suffix: windows-x86_64
+            library: rkv1_core.dll
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: cargo build --release --manifest-path rust/Cargo.toml
+      - name: Package native candidate with provenance
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+          NATIVE_SUFFIX: ${{ matrix.suffix }}
+          NATIVE_LIBRARY: ${{ matrix.library }}
+        run: |
+          python -c "import hashlib,json,os,pathlib,shutil,subprocess,zipfile; p=pathlib.Path('rust/target/release')/os.environ['NATIVE_LIBRARY']; out=pathlib.Path('native-dist'); out.mkdir(); meta={'abi':1,'library':p.name,'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'bytes':p.stat().st_size,'source_commit':os.environ['GITHUB_SHA'],'tag':os.environ['RELEASE_TAG'],'platform':os.environ['NATIVE_SUFFIX'],'rustc':subprocess.check_output(['rustc','--version'],text=True).strip(),'scope':'CSV inverse transform only; not an archive decoder; local performance unmeasured'}; z=zipfile.ZipFile(out/('rkv1-native-'+os.environ['RELEASE_TAG']+'-'+os.environ['NATIVE_SUFFIX']+'.zip'),'w',compression=zipfile.ZIP_DEFLATED); z.write(p,p.name); z.writestr('native.json',json.dumps(meta,indent=2)+'\n'); z.close()"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: native-${{ matrix.suffix }}
+          path: native-dist/*.zip
+  publish:
+    needs: [tests, native]
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -19,6 +48,11 @@ jobs:
           python-version: '3.13'
       - run: python -m pip install build
       - run: python -m build
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: native-*
+          merge-multiple: true
+          path: dist
       - name: Package reproducibility records
         env:
           RELEASE_TAG: ${{ github.ref_name }}

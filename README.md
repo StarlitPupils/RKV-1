@@ -6,7 +6,43 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.4.0 · E2 独立数值数据与 CSV 反变换优化
+## 当前版本：v0.5.0 · 独立校验单元与完整索引成本
+
+显式 `--unit-size` 生成 RKV v3：1 MiB 父块内含独立 16/64 KiB 单元，每个单元有
+大小、codec、变换标志和原始 SHA-256。二进制索引按需校验并缓存，范围请求只
+解码触及单元；完整恢复继续验证父块和文件。默认仍写 v2，CSV 仍关闭。
+
+四组科学输入、53 个条件；**265 次正式完整恢复 + 53 次预热恢复、101,760 次正式
+范围读取 + 6,360 次查询预热全部逐字节一致**。本地 56 项测试：55 通过、1 权限跳过。
+所有大小包括索引；对照包含整块、直接小块、普通编码及关闭索引缓存。
+
+Zstd、同源码/同请求、温缓存，各轮 p95 中位数：
+
+| 数据 / 变换 | 布局 | 总 bytes | 重开 p95 ms |
+|---|---|---:|---:|
+| 超导材料 / CSV | 1 MiB 整块 | 7,442,705 | 30.921 |
+| 超导材料 / CSV | 直接 16 KiB 块 | 8,761,101 | 13.645 |
+| 超导材料 / CSV | 1 MiB + 16 KiB 单元 | 8,423,479 | 1.378 |
+| QASPER / none | 1 MiB 整块 | 10,660,769 | 2.221 |
+| QASPER / none | 直接 64 KiB 块 | 12,415,158 | 5.208 |
+| QASPER / none | 1 MiB + 64 KiB 单元 | 12,299,774 | 0.870 |
+
+两层单元相对同大小直接小块改善了较大语料的打开成本并减少元数据；常驻读取并非
+全胜。超导材料/CSV/16 KiB 对直接小块节省 3.85%，配对重开 p95 加速中位约9.75倍；
+但对原1MiB CSV归档仍增大约13.18%，完整恢复也未必更快。不能只拿整块 CSV 作参照：
+普通 Zstd 的两层64KiB方案本组重开约0.703ms，优于相同CSV约2.463ms。
+
+![独立单元空间与重开延迟](results/v0.5.0/unit-tradeoffs.png)
+
+[本轮记录](results/v0.5.0/SUMMARY.md) · [协议](docs/UNITS.md) · [v3 格式](docs/FORMAT.md)。
+v0.5 读取器兼容 v1/v2/v3；旧读取器不支持 v3。局部读取只证明触及单元，完整 verify
+检测所有损坏；索引摘要的校验链不代表来源身份。单元哈希尚未实现跨父块 CAS/增量共享。
+
+Rust 新增精确 CSV 反变换 C ABI 候选，Windows/Linux CI 做函数及 Python 差分验证，
+Release 附带平台库/来源哈希；本轮时序实验全部使用 Python，尚无 Rust 加速结论。
+下一里程碑量化原生内核，再推进真实版本序列/共享块存储。冷缓存/跨机器继续未测。
+
+## 既有 CSV 反变换试验（v0.4.0）
 
 在首版无损核心之上加入 Zstd、可关闭的跨文件去重、可选数值 CSV 列重排，以及
 manifest version=2；新读取器仍能恢复首版归档。默认 Zlib/1 MiB、CSV 变换关闭；
@@ -111,6 +147,8 @@ python -m venv .venv
 .\.venv\Scripts\python.exe scripts/summarize_reading.py results/local-reading
 .\.venv\Scripts\python.exe scripts/run_csv_trials.py --out results/local-csv
 .\.venv\Scripts\python.exe scripts/summarize_csv.py results/local-csv
+.\.venv\Scripts\python.exe scripts/run_units.py --out results/local-units
+.\.venv\Scripts\python.exe scripts/summarize_units.py results/local-units
 ```
 
 Python 3.10+；Linux/macOS 使用 `.venv/bin/python`。核心 Zlib 模式可安装 `pip install -e .`，
@@ -128,16 +166,16 @@ python -m rkv1 pack data/wine data/columns.rkv --codec zlib --transform csv-colu
 | 阶段 | 状态 |
 |---|---|
 | E0 基准 | 完成首版、受控对照和多种子读取评测；仍是单机温缓存 |
-| E1 无损核心 | Python 原型、Zstd、格式 v2、旧格式读取兼容、扩展增量场景 |
-| E2 类型感知可逆编码 | 独立 CSV、热点诊断与精确反变换优化；数组、代码、数学文本待开展 |
+| E1 无损核心 | 可选 v3 单元/二进制索引；v1/v2 兼容，父块粒度复用 |
+| E2 类型感知可逆编码 | 独立 CSV、小单元访问、完整成本对照；Rust 反变换候选未测本机性能 |
 | E3 神经预测 + 熵编码 + 精确残差 | 后续，计入模型和解码成本 |
 | E4 科学记忆、检索、证据回溯与可验证推理 | 后续，尚无质量结果 |
 
-Rust 目前是格式前缀和块范围计算的边界骨架，尚未接入性能路径。增量编码可验证并
+Rust 已有格式边界与 CSV 反变换候选，本轮尚未接入性能路径。增量编码可验证并
 复用旧块，仍全量读源并写出独立完整快照；中间插入会改变固定块边界。
 
-[FORMAT Draft 0.2](docs/FORMAT.md) 只恢复普通文件路径和内容，不保留权限、时间戳、
-空子目录或链接；恢复合计上限 2 GiB。新归档需 v0.2.0+ 读取器，旧归档继续可读。
+[FORMAT Draft 0.3](docs/FORMAT.md) 只恢复普通文件路径和内容，不保留权限、时间戳、
+空子目录或链接；恢复合计上限 2 GiB。v3 需 v0.5.0+，默认 v2 仍可由 v0.2.0+ 读取。
 SHA-256 用于完整性检查，不能证明来源身份或科学结论正确。当前没有神经压缩、
 无限精确上下文或科学推理收益的验证。
 

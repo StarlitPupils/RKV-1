@@ -21,6 +21,7 @@ import time
 from .benchmark import peak_rss, summary
 from .controlled import implementation_checksums, inventory, request_groups
 from .core import Archive, files_in, pack, verify
+from .units import ENTRY
 
 MODES = ("open_reader", "open_and_read")
 
@@ -47,13 +48,33 @@ def file_digest(path):
     return result.hexdigest()
 
 
-def touched_bytes(header, request):
+def touched_bytes(header, request, reader=None):
     """Logical decode/IO work, not physical disk traffic or hardware cache hits."""
     entry = next(f for f in header["files"] if f["path"] == request["path"])
     chunk = header["chunk_size"]
     first = request["offset"] // chunk
     last = (request["offset"] + request["length"] + chunk - 1) // chunk
-    blocks = [header["blocks"][key] for key in entry["chunks"][first:last]] if request["length"] else []
+    keys = entry["chunks"][first:last] if request["length"] else []
+    blocks = [header["blocks"][key] for key in keys]
+    if header.get("version", 2) == 3:
+        if reader is None:
+            raise ValueError("Unit work ledger needs an unmeasured index reader")
+        raw_bytes = stored_bytes = unit_count = index_bytes = 0
+        unit = header["unit_size"]
+        for parent, key in enumerate(keys, start=first):
+            meta = header["blocks"][key]
+            index, _, _ = reader.unit_index(key)
+            index_bytes += len(index)
+            start = max(0, request["offset"] - parent * chunk)
+            end = min(meta["raw_size"], request["offset"] + request["length"] - parent * chunk)
+            for i in range(start // unit, (end + unit - 1) // unit):
+                raw, stored, *_ = ENTRY.unpack_from(index, i * ENTRY.size)
+                raw_bytes += raw
+                stored_bytes += stored
+                unit_count += 1
+        return {"requested_bytes": request["length"], "chunk_decodes": 0, "unit_decodes": unit_count,
+                "parent_chunks_touched": len(keys), "decoded_raw_bytes": raw_bytes,
+                "stored_payload_bytes": stored_bytes, "referenced_index_bytes": index_bytes}
     return {"requested_bytes": request["length"], "chunk_decodes": len(blocks),
             "decoded_raw_bytes": sum(b["raw_size"] for b in blocks),
             "stored_payload_bytes": sum(b["stored_size"] for b in blocks)}
@@ -67,7 +88,10 @@ def range_trial(source, archive, settings):
         raise ValueError("Invalid range-reader mode")
     files = [{"path": rel, "bytes": path.stat().st_size} for path, rel in files_in(source)]
     warmups, queries = settings["warmup_queries"], settings["queries"]
-    plans = request_groups(files, settings["chunk_size"], queries + warmups, settings["query_seed"])
+    plans = request_groups(files, settings.get("query_boundary_size", settings["chunk_size"]),
+                          queries + warmups, settings["query_seed"])
+    if settings.get("boundary_group") == "cross_unit":
+        plans["cross_unit"] = plans.pop("cross_chunk")
     # Prepare truth before warming the archive, and outside every timed request.
     expected = {}
     for group, requests in plans.items():
@@ -83,11 +107,12 @@ def range_trial(source, archive, settings):
             warmed += len(data)
     started = timestamp()
     opened_at = time.perf_counter()
-    persistent = Archive(archive) if mode == "open_reader" else None
+    cache_bytes = settings.get("index_cache_bytes", 1 << 20)
+    persistent = Archive(archive, index_cache_bytes=cache_bytes) if mode == "open_reader" else None
     initial_open_s = time.perf_counter() - opened_at if persistent is not None else None
     # Use a separate unmeasured reader for the analytical block-work ledger.
-    with Archive(archive) as metadata:
-        header = metadata.header
+    metadata = Archive(archive)
+    header = metadata.header
     group_order = list(plans)
     random.Random(settings["query_seed"] ^ 0x726B76).shuffle(group_order)
     groups = {}
@@ -97,7 +122,7 @@ def range_trial(source, archive, settings):
             ledger = {k: 0 for k in ("requested_bytes", "chunk_decodes", "decoded_raw_bytes", "stored_payload_bytes")}
             for index, request in enumerate(plans[group]):
                 start = time.perf_counter()
-                reader = persistent if persistent is not None else Archive(archive)
+                reader = persistent if persistent is not None else Archive(archive, index_cache_bytes=cache_bytes)
                 after_open = time.perf_counter()
                 try:
                     actual = reader.read_range(request["path"], request["offset"], request["length"])
@@ -115,9 +140,9 @@ def range_trial(source, archive, settings):
                 if persistent is None:
                     open_times.append(after_open - start)
                     close_times.append(end - after_read)
-                work = touched_bytes(header, request)
-                for key in ledger:
-                    ledger[key] += work[key]
+                work = touched_bytes(header, request, metadata)
+                for key, value in work.items():
+                    ledger[key] = ledger.get(key, 0) + value
             measured = plans[group][warmups:]
             groups[group] = {"requests": measured, "request_sha256": fingerprint(measured),
                              "latency_s": summary(latencies), "open_s": summary(open_times),
@@ -130,6 +155,7 @@ def range_trial(source, archive, settings):
     finally:
         if persistent is not None:
             persistent.close()
+        metadata.close()
     return {"session": settings["session"], "round": settings["round"], "query_seed": settings["query_seed"],
             "mode": mode, "started_utc": started, "finished_utc": timestamp(),
             "group_order": group_order, "initial_open_s": initial_open_s,
@@ -143,8 +169,12 @@ def aggregate_trials(trials):
     for mode in MODES:
         rows = [r for r in trials if r["mode"] == mode]
         groups = {}
-        for name in ("byte_weighted", "small_file", "large_file", "cross_chunk"):
-            available = [r["groups"][name] for r in rows if r["groups"][name]["latency_s"] is not None]
+        categories = ("byte_weighted", "small_file", "large_file", "cross_chunk")
+        if any("cross_unit" in r["groups"] for r in rows):
+            categories += ("cross_unit",)
+        for name in categories:
+            available = [r["groups"][name] for r in rows
+                         if name in r["groups"] and r["groups"][name]["latency_s"] is not None]
             if not available:
                 groups[name] = None
                 continue

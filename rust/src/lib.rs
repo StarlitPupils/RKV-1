@@ -1,5 +1,7 @@
-//! Format boundary scaffold. This is NOT a full decoder or integrity verifier.
-//! Python remains the reference implementation until profiling justifies migration.
+//! Format boundaries and an exact CSV inverse-transform candidate.
+//! Python owns archive/codec/hash validation; this is not a complete archive decoder.
+
+pub mod csv;
 
 pub const MAGIC: &[u8; 8] = b"RKV1\r\n\x1a\n";
 pub const PREFIX_SIZE: usize = 48;

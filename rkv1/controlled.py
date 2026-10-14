@@ -130,7 +130,7 @@ def worker(phase, source, archive, destination, config):
     if phase == "encode":
         stats = pack(source, archive, config["chunk_size"], overwrite=True,
                      compression=config["compression"], deduplicate=config["deduplicate"],
-                     transform=config["transform"], base=config.get("base"))
+                     transform=config["transform"], base=config.get("base"), unit_size=config.get("unit_size"))
     elif phase == "decode":
         stats = unpack(archive, destination)
     else:
