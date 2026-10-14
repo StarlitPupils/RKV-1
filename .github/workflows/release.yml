@@ -24,7 +24,7 @@ jobs:
           RELEASE_TAG: ${{ github.ref_name }}
         run: |
           test -f "docs/releases/${RELEASE_TAG}.md"
-          zip -r "dist/rkv1-${RELEASE_TAG}-experiments.zip" "results/${RELEASE_TAG}" docs/FORMAT.md docs/EXPERIMENTS.md docs/DATASETS.md
+          zip -r "dist/rkv1-${RELEASE_TAG}-experiments.zip" "results/${RELEASE_TAG}" docs scripts
       - name: Publish tested prerelease
         env:
           GH_TOKEN: ${{ github.token }}

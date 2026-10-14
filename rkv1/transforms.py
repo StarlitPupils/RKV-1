@@ -71,8 +71,11 @@ def csv_columns_decode(coded, expected_size):
         raise ValueError("CSV transform output length mismatch")
     delimiter = bytes([delim])
     result = bytearray(prefix)
-    for r in range(rows):
-        result.extend(delimiter.join(cells[c * rows + r] for c in range(columns)))
-        result.extend(b"\r\n" if endings[r] else b"\n")
+    # zip transposes column slices in C, avoiding a Python index/generator per
+    # cell. Validation above and every original numeric literal remain intact.
+    column_cells = [cells[start:start + rows] for start in range(0, len(cells), rows)]
+    for row, crlf in zip(zip(*column_cells), endings):
+        result.extend(delimiter.join(row))
+        result.extend(b"\r\n" if crlf else b"\n")
     result.extend(suffix)
     return bytes(result)

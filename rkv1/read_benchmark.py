@@ -60,6 +60,8 @@ def touched_bytes(header, request):
 
 
 def range_trial(source, archive, settings):
+    from .experiments.decoder_policy import select_csv_decoder
+    select_csv_decoder(settings.get("csv_decoder", "current"))
     mode = settings["mode"]
     if mode not in MODES:
         raise ValueError("Invalid range-reader mode")

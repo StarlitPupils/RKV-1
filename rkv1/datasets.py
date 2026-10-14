@@ -4,6 +4,7 @@ import io
 import json
 from pathlib import Path
 import tarfile
+import zipfile
 from urllib.request import Request, urlopen
 
 UCI = {
@@ -28,6 +29,19 @@ QASPER = {
     "qasper-train-v0.3.json": "9458bfe76074a8fa8d1685af02bcc73537aa6d338ad20591dfaff1946bc88bf4",
     "qasper-dev-v0.3.json": "2ae7ee62a65b1c4225791c70de80c2aad4e8998cf1fd4f09a53103db4f21af93",
 }
+ZIP_DATASETS = {
+    "htru2": {
+        "url": "https://archive.ics.uci.edu/static/public/372/htru2.zip",
+        "sha256": "ba442c076dd22a8952700f26e38499fc1806037dcf7bea0e125e6bfba393f379",
+        "files": {"HTRU_2.csv": "b13b4d8929e96ecd196e464c1c8a454c3ac2ffa631015f6388957531a9923f59"},
+    },
+    "superconductivity": {
+        "url": "https://archive.ics.uci.edu/static/public/464/superconductivty+data.zip",
+        "sha256": "87f4490d73390ff94ee01dbf0d7d32abc80b22f2c803d471765cfc46a9f6371e",
+        "files": {"train.csv": "4dfb6e3a1f6ffd969e5a5e42f093c4800d1e2a6c8b1e309f8fcd9f23d86952f3",
+                  "unique_m.csv": "b68ae6b55ea8581eff8b1ffba073a899db7e2d2f7f3b781bb0802f643f51e5f7"},
+    },
+}
 
 
 def _check(raw, expected):
@@ -51,7 +65,9 @@ def fetch_public(destination, dataset="uci"):
         raise ValueError("Dataset destination must not be a symlink")
     destination.mkdir(parents=True, exist_ok=True)
     direct = UCI if dataset == "uci" else WINE if dataset == "wine" else None
-    expected = {name: sha for name, (_, sha) in direct.items()} if direct else SCIFACT if dataset == "scifact" else QASPER if dataset == "qasper" else None
+    zipped = ZIP_DATASETS.get(dataset)
+    expected = ({name: sha for name, (_, sha) in direct.items()} if direct else zipped["files"] if zipped
+                else SCIFACT if dataset == "scifact" else QASPER if dataset == "qasper" else None)
     if expected is None:
         raise ValueError("Unknown dataset")
     content = {}
@@ -65,6 +81,15 @@ def fetch_public(destination, dataset="uci"):
         for name, (url, sha) in direct.items():
             if name not in content:
                 content[name] = _download(url, sha)
+    elif zipped and len(content) != len(expected):
+        raw = _download(zipped["url"], zipped["sha256"])
+        with zipfile.ZipFile(io.BytesIO(raw)) as archive:
+            for name, sha in expected.items():
+                member = archive.getinfo(name)
+                if member.is_dir() or member.file_size > 64 << 20:
+                    raise ValueError("Invalid scientific ZIP member")
+                with archive.open(member) as stream:
+                    content[name] = _check(stream.read((64 << 20) + 1), sha)
     elif len(content) != len(expected):
         url, sha = (SCIFACT_URL, SCIFACT_ARCHIVE_SHA256) if dataset == "scifact" else (QASPER_URL, QASPER_ARCHIVE_SHA256)
         raw = _download(url, sha)
@@ -82,7 +107,7 @@ def fetch_public(destination, dataset="uci"):
             with target.open("xb") as stream:
                 stream.write(raw)
     sources = [{"filename": name, "bytes": len(content[name]), "sha256": sha,
-                "url": direct[name][0] if direct else SCIFACT_URL if dataset == "scifact" else QASPER_URL,
+                "url": direct[name][0] if direct else zipped["url"] if zipped else SCIFACT_URL if dataset == "scifact" else QASPER_URL,
                 "license": "ODC-By 1.0" if dataset == "scifact" and name == "corpus.jsonl" else "CC BY 4.0"}
                for name, sha in expected.items()]
     # Outside the raw corpus: provenance metadata must not contaminate its size.

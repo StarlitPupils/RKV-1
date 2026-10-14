@@ -1,0 +1,188 @@
+[
+  {
+    "dataset": "wine",
+    "codec": "zlib",
+    "csv_saving_pct": 4.619597189094371,
+    "csv_saving_bytes": 4319,
+    "transformed_chunks": 2,
+    "inverse_transform_used": true,
+    "total_chunks": 2,
+    "restore_speedup_ratio_of_medians": 1.2056632847713866,
+    "current_csv_restore_time_vs_plain": 6.680844489631576,
+    "current_csv_read_p95_vs_plain": 24.78926825889582,
+    "paired_restore": {
+      "speedup": {
+        "samples": [
+          1.1841186429627109,
+          1.2007620057414368,
+          1.1809446874805842,
+          1.225039738892158,
+          1.2192153049707903
+        ],
+        "median": 1.2007620057414368,
+        "min": 1.1809446874805842,
+        "max": 1.225039738892158,
+        "stdev": 0.019948663776273527,
+        "p95": 1.225039738892158
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "basis": "calculated from raw v0.4 samples; no additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "codec": "zstd",
+    "csv_saving_pct": 0.4044016785717863,
+    "csv_saving_bytes": 398,
+    "transformed_chunks": 1,
+    "inverse_transform_used": true,
+    "total_chunks": 2,
+    "restore_speedup_ratio_of_medians": 1.0946132305963374,
+    "current_csv_restore_time_vs_plain": 2.1665006808504517,
+    "current_csv_read_p95_vs_plain": 14.058959633609353,
+    "paired_restore": {
+      "speedup": {
+        "samples": [
+          1.0591998960855318,
+          1.1442788236923755,
+          1.0981748668033628,
+          1.1399473443973704,
+          0.9728829170691374
+        ],
+        "median": 1.0981748668033628,
+        "min": 0.9728829170691374,
+        "max": 1.1442788236923755,
+        "stdev": 0.07057006175870219,
+        "p95": 1.1442788236923755
+      },
+      "faster_rounds": 4,
+      "rounds": 5
+    },
+    "basis": "calculated from raw v0.4 samples; no additional measurements"
+  },
+  {
+    "dataset": "htru2",
+    "codec": "zlib",
+    "csv_saving_pct": -0.00127878382543134,
+    "csv_saving_bytes": -10,
+    "transformed_chunks": 0,
+    "inverse_transform_used": false,
+    "total_chunks": 2,
+    "restore_speedup_ratio_of_medians": 1.027751551298961,
+    "current_csv_restore_time_vs_plain": 0.9483114193801135,
+    "current_csv_read_p95_vs_plain": 0.9898889605226691,
+    "paired_restore": {
+      "speedup": {
+        "samples": [
+          1.0488288540371336,
+          1.027751551298961,
+          1.0620666425876493,
+          1.0042703868440657,
+          0.9662219998002844
+        ],
+        "median": 1.027751551298961,
+        "min": 0.9662219998002844,
+        "max": 1.0620666425876493,
+        "stdev": 0.03802492594964143,
+        "p95": 1.0620666425876493
+      },
+      "faster_rounds": 4,
+      "rounds": 5
+    },
+    "basis": "calculated from raw v0.4 samples; no additional measurements"
+  },
+  {
+    "dataset": "htru2",
+    "codec": "zstd",
+    "csv_saving_pct": -0.0012679960337047547,
+    "csv_saving_bytes": -10,
+    "transformed_chunks": 0,
+    "inverse_transform_used": false,
+    "total_chunks": 2,
+    "restore_speedup_ratio_of_medians": 1.0257360057467875,
+    "current_csv_restore_time_vs_plain": 0.9632799658552206,
+    "current_csv_read_p95_vs_plain": 0.9526017241855609,
+    "paired_restore": {
+      "speedup": {
+        "samples": [
+          0.9392037538778479,
+          1.0092818277208386,
+          1.0266196979622,
+          0.938371410221723,
+          1.1203900121959591
+        ],
+        "median": 1.0092818277208386,
+        "min": 0.938371410221723,
+        "max": 1.1203900121959591,
+        "stdev": 0.07508893327582412,
+        "p95": 1.1203900121959591
+      },
+      "faster_rounds": 3,
+      "rounds": 5
+    },
+    "basis": "calculated from raw v0.4 samples; no additional measurements"
+  },
+  {
+    "dataset": "superconductivity",
+    "codec": "zlib",
+    "csv_saving_pct": 11.790385980623652,
+    "csv_saving_bytes": 973724,
+    "transformed_chunks": 23,
+    "inverse_transform_used": true,
+    "total_chunks": 28,
+    "restore_speedup_ratio_of_medians": 1.1516881109758113,
+    "current_csv_restore_time_vs_plain": 7.173951854998698,
+    "current_csv_read_p95_vs_plain": 10.148475354077174,
+    "paired_restore": {
+      "speedup": {
+        "samples": [
+          1.1496949923834332,
+          1.1484377751548769,
+          1.1497304223935128,
+          1.148865855080996,
+          1.1650911005766604
+        ],
+        "median": 1.1496949923834332,
+        "min": 1.1484377751548769,
+        "max": 1.1650911005766604,
+        "stdev": 0.007136012212007646,
+        "p95": 1.1650911005766604
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "basis": "calculated from raw v0.4 samples; no additional measurements"
+  },
+  {
+    "dataset": "superconductivity",
+    "codec": "zstd",
+    "csv_saving_pct": 1.3957760531548624,
+    "csv_saving_bytes": 105354,
+    "transformed_chunks": 14,
+    "inverse_transform_used": true,
+    "total_chunks": 28,
+    "restore_speedup_ratio_of_medians": 1.1579130487373563,
+    "current_csv_restore_time_vs_plain": 6.937350861923204,
+    "current_csv_read_p95_vs_plain": 18.72338536495301,
+    "paired_restore": {
+      "speedup": {
+        "samples": [
+          1.1362052974257526,
+          1.1459049950221745,
+          1.1702596901972329,
+          1.131461932018758,
+          1.1036803762639062
+        ],
+        "median": 1.1362052974257526,
+        "min": 1.1036803762639062,
+        "max": 1.1702596901972329,
+        "stdev": 0.024112977223275902,
+        "p95": 1.1702596901972329
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "basis": "calculated from raw v0.4 samples; no additional measurements"
+  }
+]

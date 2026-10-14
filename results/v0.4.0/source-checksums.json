@@ -1,0 +1,16 @@
+{
+  "__init__.py": "728d0bf413dfb56ed5e8ba8fa749d096986c0a15b9ac1bac92f651df619bf767",
+  "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+  "benchmark.py": "cf9e1297000e8398b1466e529e1913b2fcc32e257082aca1006973a2ef37adf7",
+  "cli.py": "56402fce0a3454e5353acf1632a4626de803a2b777d71b9346fd6aa8059dc447",
+  "codecs.py": "3e7abe9b02e6c93d1106898f2a6db4b45763616ba358df9eed54199cb065db6b",
+  "controlled.py": "736ccee89f2b58aa0dfaae90afe7988c3fade458c9f905775e4fdc56b043d429",
+  "core.py": "a0233d40b0ded1533f011158454ebc92f9479356996d528491658729d43613c5",
+  "csv_benchmark.py": "ba81ed7bf4acd378b83c350154d20e5e96e9e98b09fa1b7b47c3d4e5fe7504f4",
+  "datasets.py": "14da9aea56390dbd85795fe250c35ea9bb3322987f2292ae53f44de5f3c753eb",
+  "experiments/__init__.py": "c16d488b8e0c13033e57adf369e4c57044f65fc7f6ed57270376d94145584ce8",
+  "experiments/csv_v0_3.py": "3a50f14a7e6998bf35fa475e2f0e8394e0c34912fade5baaa90c383cb7292ad6",
+  "experiments/decoder_policy.py": "071693b9cb2ecdd11a22fa628de1eb7b614f2b7b9bf234ede8dd8ae35869b6dc",
+  "read_benchmark.py": "9ede1f8ad438b2b24bf23e99c109583a60ebe87ad6ec53302ee887fafbd21404",
+  "transforms.py": "d71ea7f53019d7fbf8c86d0679fdcc8feec0e190f73045a0d967082240286ad4"
+}

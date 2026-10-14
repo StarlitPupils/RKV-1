@@ -1,0 +1,26 @@
+{
+  "local_python_tests": {
+    "run": 44,
+    "passed": 43,
+    "skipped": 1,
+    "failed": 0,
+    "skip_reason": "Windows symlink permission"
+  },
+  "configurations": 18,
+  "measured_roundtrips": 90,
+  "warmup_roundtrips": 18,
+  "verified_range_reads": 15360,
+  "verified_warmup_range_reads": 1920,
+  "full_archives_verified": 12,
+  "measurement_source_matches_release": true,
+  "legacy_and_current_archive_sha256_match": true,
+  "wine_csv_archives_match_v0_2": true,
+  "paired_all_query_fingerprints": "passed",
+  "htru2_cr_only_fallback": "passed; original bytes unchanged",
+  "cold_os_cache": null,
+  "cross_machine": null,
+  "cross_day": null,
+  "rust": "required release CI scaffold; no acceleration claim",
+  "installed_wheel": "v1 fixture and paired current/legacy CSV workers passed outside checkout",
+  "sdist_contents": "frozen baseline, docs and reproduction included; raw data/private research excluded"
+}

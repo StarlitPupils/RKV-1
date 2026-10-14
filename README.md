@@ -6,13 +6,40 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.3.0 · 多轮读取与读取器生命周期评测
+## 当前版本：v0.4.0 · E2 独立数值数据与 CSV 反变换优化
 
 在首版无损核心之上加入 Zstd、可关闭的跨文件去重、可选数值 CSV 列重排，以及
 manifest version=2；新读取器仍能恢复首版归档。默认 Zlib/1 MiB、CSV 变换关闭；
 codec、块大小和变换策略由参数选择。
 
-本版沿用 RKV v2 格式和压缩核心，先补强 E0 读取协议。SciFact/QASPER × 三种 codec
+本版新增 HTRU2 脉冲星候选与 Superconductivity 超导材料数据，固定 ZIP/原始成员
+哈希。CSV 反变换保留全部校验，把按单元 Python 索引改为列切片 + zip；与冻结旧
+反变换读取同一归档、匹配同一查询。默认仍为 Zlib/1 MiB，CSV 关闭，格式仍为 v2。
+
+**18 个条件、90 次正式完整恢复 + 18 次预热恢复、15,360 次正式范围读取 + 1,920
+次预热读取全部逐字节一致。** 本地 44 项测试：43 通过、1 权限跳过。
+
+| 数据 / codec | CSV 对同 codec 归档节省 | 旧/新 CSV 完整恢复耗时 | 新 CSV/普通恢复耗时 |
+|---|---:|---:|---:|
+| Wine / Zlib | 4.62% | 1.21× | 6.68× |
+| Wine / Zstd | 0.40% | 1.09× | 2.17× |
+| Superconductivity / Zlib | 11.79% | 1.15× | 7.17× |
+| Superconductivity / Zstd | 1.40% | 1.16× | 6.94× |
+
+优化使有实际变换的条件恢复速度提高约 9–21%（耗时减少约 8.6–17.1%），但仍明显慢于普通编码，超导材料条件
+峰值内存增加约 1.5–1.9 MiB。与本轮最小普通归档 Zstd 比，超导材料的最小 CSV
+归档 Zlib 只再省约 3.49%，恢复慢约 11.1 倍，不能把同 codec 的 11.79% 当作全面优势。
+HTRU2 为 CR-only，当前 CSV v1 不适用，回退保留全部原文，启用策略仅多 10 bytes
+头部成本；不为获得正结果改换行。正则验证与整块重建仍是后续优化候选，尚无 Rust 加速。
+
+![CSV 空间收益与恢复代价](results/v0.4.0/csv-tradeoffs.png)
+
+[本轮完整结果](results/v0.4.0/SUMMARY.md) · [E2 配对协议](docs/CSV-TRIALS.md) ·
+[成本账本](results/v0.4.0/runtime-footprint.json)。发布前 CI 再运行跨平台 Python/Zstd 和 Rust 骨架测试。
+
+## 已完成的多轮读取评测（v0.3.0）
+
+上一版沿用 RKV v2 格式和压缩核心，补强 E0 读取协议。SciFact/QASPER × 三种 codec
 × 三种块大小，18 个配置；每配置两个连续批次、每批五轮不同查询种子。常驻读取器
 与每次重开分别使用独立 worker，配置/轮次/模式交错打乱，记录打开、读取和关闭
 阶段。非跨块请求完全配对；原始请求、样本、执行顺序和输入/源码指纹随版本保存。
@@ -21,7 +48,7 @@ codec、块大小和变换策略由参数选择。
 正式范围读取 **161,280 次**，另有 **10,080 次预热读取**，全部逐字节一致；
 共 360 个独立 worker，18 个完整校验的归档与 v0.2 对应条件字节完全相同。
 计时前预读完整归档，只报告本机温缓存结果；冷缓存、跨机器与跨日结果明确未测。
-本地 **38 项测试：37 通过、1 权限跳过**；
+该版本地 **38 项测试：37 通过、1 权限跳过**；
 发布流水线再运行 Windows/Linux、Python 3.10/3.13 和 Rust 骨架测试。
 
 读取统计报告十轮各自 p95 的中位数、最小/最大值和配对方向；范围不是置信区间。
@@ -39,7 +66,7 @@ Zstd、温缓存、按文件字节加权的短范围请求：
 QASPER 64 KiB 清单打开中位约 4.658 ms，说明只优化块解码不能解决重开成本。
 这些结果支持按读取器生命周期选候选配置，尚不改变默认策略。
 
-## 前一版压缩观察
+## 压缩观察（v0.2.0）
 
 以下为同容器、1 MiB、去重开启、无变换的归档大小，包含所有容器元数据。
 
@@ -58,7 +85,7 @@ E2 的列重排保留数值原文、表头、换行及跨块边界。Zlib 条件
 但 Python 解析、恢复和范围读取明显变慢，所以保留为可选试验。真实输入在本次三种
 固定分块下没有重复块收益；合成对照验证去重机制，但不代表自然科学语料。
 
-![多轮读取与打开方式](results/v0.3.0/reading.png)
+[多轮读取与打开方式图](results/v0.3.0/reading.png)
 
 [完整结果与原始样本](results/v0.2.0/SUMMARY.md) · [复现协议](docs/EXPERIMENTS.md) ·
 [数据署名/许可](docs/DATASETS.md) · [运行时成本记录](results/v0.2.0/runtime-footprint.json)
@@ -82,6 +109,8 @@ python -m venv .venv
 .\.venv\Scripts\python.exe scripts/summarize_controlled.py results/local-controlled
 .\.venv\Scripts\python.exe scripts/run_reading.py --out results/local-reading
 .\.venv\Scripts\python.exe scripts/summarize_reading.py results/local-reading
+.\.venv\Scripts\python.exe scripts/run_csv_trials.py --out results/local-csv
+.\.venv\Scripts\python.exe scripts/summarize_csv.py results/local-csv
 ```
 
 Python 3.10+；Linux/macOS 使用 `.venv/bin/python`。核心 Zlib 模式可安装 `pip install -e .`，
@@ -100,7 +129,7 @@ python -m rkv1 pack data/wine data/columns.rkv --codec zlib --transform csv-colu
 |---|---|
 | E0 基准 | 完成首版、受控对照和多种子读取评测；仍是单机温缓存 |
 | E1 无损核心 | Python 原型、Zstd、格式 v2、旧格式读取兼容、扩展增量场景 |
-| E2 类型感知可逆编码 | 已开始数值 CSV；数组、代码、数学文本待开展 |
+| E2 类型感知可逆编码 | 独立 CSV、热点诊断与精确反变换优化；数组、代码、数学文本待开展 |
 | E3 神经预测 + 熵编码 + 精确残差 | 后续，计入模型和解码成本 |
 | E4 科学记忆、检索、证据回溯与可验证推理 | 后续，尚无质量结果 |
 

@@ -19,8 +19,9 @@ from .core import Archive, MAX_OUTPUT, assert_tree_equal, files_in, pack, unpack
 
 
 def implementation_checksums():
-    return {path.name: hashlib.sha256(path.read_bytes()).hexdigest()
-            for path in sorted(Path(__file__).parent.glob("*.py"))}
+    root = Path(__file__).parent
+    return {path.relative_to(root).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
+            for path in sorted(root.rglob("*.py"))}
 
 
 def runtime_footprint():
@@ -38,8 +39,9 @@ def runtime_footprint():
                      "basis": "installed distribution files; includes metadata/backends; may exclude linked dependencies"}
     except importlib.metadata.PackageNotFoundError:
         pass
-    return {"zstandard": zstd_info, "rkv_source_bytes": sum(p.stat().st_size for p in root.glob("*.py")),
+    return {"zstandard": zstd_info, "rkv_source_bytes": sum(p.stat().st_size for p in root.rglob("*.py")),
             "transform_module_source_bytes": (root / "transforms.py").stat().st_size,
+            "experiment_source_bytes": sum(p.stat().st_size for p in (root / "experiments").glob("*.py")),
             "accounting": "RKV/transform source shared by all v2 conditions; Python/shared native dependencies not assigned per archive; optional Zstd distribution is a deployment cost",
             "not_a_complete_deployment_size": True}
 
@@ -120,6 +122,8 @@ def _range_worker(source, archive, config):
 
 
 def worker(phase, source, archive, destination, config):
+    from .experiments.decoder_policy import select_csv_decoder
+    select_csv_decoder(config.get("csv_decoder", "current"))
     if phase == "ranges":
         return _range_worker(source, archive, config)
     start, cpu = time.perf_counter(), time.process_time()

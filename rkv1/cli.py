@@ -58,7 +58,7 @@ def main(argv=None):
     p.add_argument("--seed", type=int, default=20261014)
     p = sub.add_parser("fetch")
     p.add_argument("destination")
-    p.add_argument("--dataset", choices=("uci", "scifact", "qasper", "wine"), default="uci")
+    p.add_argument("--dataset", choices=("uci", "scifact", "qasper", "wine", "htru2", "superconductivity"), default="uci")
     args = parser.parse_args(argv)
     try:
         if args.command == "pack":
