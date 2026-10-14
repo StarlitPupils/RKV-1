@@ -1,76 +1,91 @@
-# RKV1-FORMAT · Draft 0.1
+# RKV1-FORMAT · Draft 0.2
 
-状态：实验格式，首次实现于软件 v0.1.0。与原对话的未发布草案相比，增加
-32 字节 manifest SHA-256。旧草案归档不兼容；尚无已发布旧版需要迁移。
+首次实现于软件 v0.2.0。新写入器产生 manifest version=2；读取器支持 version=1/2。
+旧版 v0.1.0 不能读取新版，升级后仍可直接恢复旧归档。发布前使用 v0.1.0 实际生成
+的固定归档测试兼容性。[旧版规范](FORMAT-v1.md) 保留，旧 Release/tag 不改写。
 
-## 保真契约
+## 保真与布局
 
-恢复普通文件的相对路径和原始字节。不改变编码、换行、CSV 数值文本、浮点位模式。
-不保存空子目录、权限、时间戳、ACL、扩展属性、硬链接关系或符号链接。
-源目录必须在打包期间保持静止，输出所在父目录应由调用方独占管理。
-
-## 布局
-
-所有数值字段以字节计数。前缀数值为无符号小端整数。
+恢复普通文件相对路径和全部原始字节，不保留空子目录、权限、时间戳、ACL、扩展属性
+或链接关系。源目录在打包时必须保持稳定，输出父目录由调用方管理。
 
 | 偏移 | 长度 | 内容 |
 |---:|---:|---|
-| 0 | 8 | `52 4b 56 31 0d 0a 1a 0a` |
-| 8 | 8 | JSON manifest 字节长度 H |
+| 0 | 8 | Magic `52 4b 56 31 0d 0a 1a 0a` |
+| 8 | 8 | manifest 字节长度 H，unsigned little-endian |
 | 16 | 32 | SHA-256(manifest 原始 UTF-8 字节) |
 | 48 | H | UTF-8 JSON manifest |
-| 48+H | 其余 | 连续唯一块 payload |
+| 48+H | 其余 | 连续块 payload |
 
-Manifest 顶层严格只含 `version`、`chunk_size`、`files`、`blocks`。
-版本号为整数 1；chunk_size 默认 1 MiB，范围 1 byte–8 MiB。
-JSON 中不允许重复键；未知字段与非整数数值拒绝。写入器使用 UTF-8、键排序、
-无空白紧凑序列化。解码器接受同样语义的非规范键顺序/空白，但仍校验其原始字节哈希。
+JSON 不接受重复键/未知字段。写入器排序键、紧凑 UTF-8 序列化。清单先验哈希再解析。
+SHA-256 检测损坏、定位内容，不提供来源身份认证。
+
+## Version 2 清单
 
 ```json
 {
-  "version": 1,
-  "chunk_size": 1048576,
-  "files": [
-    {"path": "science/file.bin", "size": 3, "sha256": "<64 lowercase hex>",
-     "chunks": ["<chunk raw SHA-256>"]}
-  ],
-  "blocks": {
-    "<chunk raw SHA-256>": {"offset": 0, "stored_size": 3, "raw_size": 3, "codec": "raw"}
-  }
+  "version": 2, "chunk_size": 1048576,
+  "compression": "zstd", "deduplicate": true, "transform": "none",
+  "files": [{"path": "data.bin", "size": 3, "sha256": "<file hash>", "chunks": ["<block id>"]}],
+  "blocks": {"<block id>": {
+    "offset": 0, "stored_size": 3, "raw_size": 3, "codec": "raw",
+    "coded_size": 3, "transform": "none"
+  }}
 }
 ```
 
-上述哈希字符串是占位说明，不能作为有效归档输入。
+占位 hash 不是有效归档。实际 SHA-256 为 64 位小写十六进制。
 
-## 编码规则
+- compression 为 raw/zlib/zstd；固定 Zlib 6 / Zstd 3。Zstd 帧含 content size 和
+  checksum，不使用外部字典或额外线程。
+- deduplicate=true 时 block id 为原始块 SHA-256；重复引用共用 payload。
+  false 时 id 为 `<SHA-256>@<8位小写十六进制occurrence index>`，index 从 0 连续编号，
+  每块恰好引用一次。两模式均计算和验证原始哈希。
+- 顶层 transform 为 none/csv-columns-v1，表示允许的策略；每块记录实际采用的变换。
+  不符合条件或收益不足时回退 none。
+- raw_size 为原始块长；coded_size 为变换后、压缩前长度。none 时两者相等；
+  变换结果上限 `2*raw_size+256`。
+- offset 相对 payload 起点。所有范围无重叠、无间隙、无尾随数据，全部块均被引用。
+  文件除尾块外必须为完整 chunk_size；空文件不引用块。
+- stored_size 不大于 raw_size，压缩不缩小时保留原始字节。
 
-1. 路径按 Unicode 字符串排序；文件独立按固定块大小分块；最后一块可不足。
-2. 原始块 SHA-256 为内容地址。同一快照内重复块共用一个 payload。
-3. 首次遇到块按 zlib level 6 压缩。仅压缩结果严格小于原始块时使用 `zlib`，否则 `raw`。
-4. 块偏移相对 payload 起点；块范围无重叠、无间隙、无尾随数据。不得存在未引用块。
-5. 文件记录保存完整原始文件 SHA-256 和有序块引用。空文件引用列表为空。
-6. `--base` 复用旧快照中验证过的块，输出仍是完全独立的快照，不依赖旧文件。
-   文件删除通过新清单体现；所有输入仍需读取和哈希，所有有效块仍写入新容器。
+CSV 策略先做普通压缩，再尝试列重排压缩，仅当块 payload 的节省足以抵消更长的
+transform/coded_size 字段才选择变换。完整归档总大小仍需实测，顶层策略和后续偏移
+等开销无法仅靠单块估算完全预测。策略默认关闭。
 
-## 解码与限制
+## CSV-COLUMNS-V1
 
-前缀及清单校验成功后才解析块。每块解码输出限制为声明原长 + 1；拒绝未结束流、
-额外 zlib 流、剩余输入、错误长度或块哈希。完整恢复还必须通过文件哈希。
-`inspect` 只验证 manifest，`read` 只验证触及的块（完整文件读取时也验文件哈希），
-`verify`/`unpack` 验证全部块引用和文件。
+保留字节的列重排，不转换 float，不规范化字符串/换行。接受逗号/分号分隔且列数一致
+的数值行；支持整数、小数、正负号、科学计数法、空格/tab。带引号的数据、空值、
+NaN/Inf、混合列数等回退普通编码。
 
-最大 manifest 64 MiB；最多 100,000 文件、500,000 唯一块；全部恢复文件合计
-最多 2 GiB；单次内存 range read 最大 64 MiB。大文件使用流式 unpack。
-Python 元数据驻留内存，故实际内存不只等于 chunk_size。
+块内第一行和最后一个 LF 后的尾部按原样保存，保留表头与跨块不完整行；中间完整行
+按列重排，逐行保存 LF/CRLF。所有恢复仅依赖本块。
 
-路径必须为非空 POSIX 相对路径，拒绝绝对路径、`..`、反斜杠、控制字符、
-Windows 设备名/ADS/特殊字符/尾随点空格，拒绝 Unicode NFC+casefold 文件名冲突、
-文件/父目录冲突。输入拒绝符号链接、reparse point 和特殊文件。
-跨平台可创建性仍受目标文件系统的路径长度等限制；失败不发布部分恢复目录。
+| 字段 | 编码 |
+|---|---|
+| Magic | 8 bytes `RKVCSV1\n` |
+| delimiter / flags | 各 1 byte；flags=0 |
+| columns | u16 little-endian |
+| rows / prefix_size / suffix_size / original_size | 各 u32 little-endian |
+| prefix / suffix | 原始边界字节 |
+| endings | rows bytes，0=LF、1=CRLF |
+| cells | 列优先数值原文，以 LF 分隔，共 rows*columns 个单元 |
 
-写入先使用同目录临时文件；默认不覆盖，显式 `--overwrite` 才替换。
-恢复先写私有临时目录，全部验证后重命名到不存在的目标。不是多写者事务数据库，
-不承诺掉电目录元数据持久性或在恶意并发修改父目录时的隔离。
+最多 65,536 行、256 列、262,144 单元。解码器检查维度、语法、换行表与完整输出长度
+后重建原块，继续检查原始 SHA-256。
 
-SHA-256 用于损坏检测和内容定位，不提供身份认证、抗恶意重签、纠错或备份。
-本实现不声称具有成熟生产归档系统的长期可靠性。
+## 解码、增量与限制
+
+清单验证后按 codec 恢复 coded_size，必要时反变换至 raw_size，验证块/文件哈希。
+Zlib 限制输出、拒绝剩余输入和未结束流；Zstd 拒绝错误长度、过大窗口、外部字典、
+额外帧或尾随数据。inspect 只验清单；range read 验触及块，完整文件读也验文件；
+verify/unpack 验全部引用。
+
+写入同目录临时文件，flush/fsync 后原子发布；恢复在私有目录全部验证后发布。
+增量 base 需同块大小、compression、transform；v1 base 按 Zlib/none 解释。
+复用前验证块，输出完整独立快照，仍全量读取源数据并写新容器。
+
+限制：清单 64 MiB、100,000 文件、500,000 块、2 GiB 恢复总量、块 1 byte–8 MiB、
+单次 range read 64 MiB。拒绝越界/特殊路径、文件名冲突、链接/reparse point 和
+特殊文件。未承诺生产级多写者事务、掉电目录持久性、纠错或备份。

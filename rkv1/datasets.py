@@ -18,6 +18,16 @@ SCIFACT = {
     "claims_dev.jsonl": "86f0435d08fdb65d1aa41d1472684f57e6e71930626497bdf4d7a9ec1a632217",
     "claims_test.jsonl": "558930d75215c73f84a28fe538307d6d397c9de1ec7239514cf45f80d75d2ca3",
 }
+WINE = {
+    "winequality-red.csv": UCI["winequality-red.csv"],
+    "winequality-white.csv": ("https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-white.csv", "76c3f809815c17c07212622f776311faeb31e87610d52c26d87d6e361b169836"),
+}
+QASPER_URL = "https://qasper-dataset.s3-us-west-2.amazonaws.com/qasper-train-dev-v0.3.tgz"
+QASPER_ARCHIVE_SHA256 = "a28fdf966db827bcee3d873107d6b6669864fb7ca8fbf73a192f5e39191bdb5a"
+QASPER = {
+    "qasper-train-v0.3.json": "9458bfe76074a8fa8d1685af02bcc73537aa6d338ad20591dfaff1946bc88bf4",
+    "qasper-dev-v0.3.json": "2ae7ee62a65b1c4225791c70de80c2aad4e8998cf1fd4f09a53103db4f21af93",
+}
 
 
 def _check(raw, expected):
@@ -27,7 +37,8 @@ def _check(raw, expected):
 
 
 def _download(url, expected):
-    with urlopen(Request(url, headers={"User-Agent": "RKV1/0.1.0"}), timeout=60) as response:
+    from . import __version__
+    with urlopen(Request(url, headers={"User-Agent": f"RKV1/{__version__}"}), timeout=60) as response:
         raw = response.read((32 << 20) + 1)
     if len(raw) > 32 << 20:
         raise ValueError("Download exceeds size limit")
@@ -39,7 +50,8 @@ def fetch_public(destination, dataset="uci"):
     if destination.is_symlink():
         raise ValueError("Dataset destination must not be a symlink")
     destination.mkdir(parents=True, exist_ok=True)
-    expected = {name: sha for name, (_, sha) in UCI.items()} if dataset == "uci" else SCIFACT if dataset == "scifact" else None
+    direct = UCI if dataset == "uci" else WINE if dataset == "wine" else None
+    expected = {name: sha for name, (_, sha) in direct.items()} if direct else SCIFACT if dataset == "scifact" else QASPER if dataset == "qasper" else None
     if expected is None:
         raise ValueError("Unknown dataset")
     content = {}
@@ -49,19 +61,20 @@ def fetch_public(destination, dataset="uci"):
             if path.is_symlink():
                 raise ValueError("Dataset file must not be a symlink")
             content[name] = _check(path.read_bytes(), sha)
-    if dataset == "uci":
-        for name, (url, sha) in UCI.items():
+    if direct:
+        for name, (url, sha) in direct.items():
             if name not in content:
                 content[name] = _download(url, sha)
     elif len(content) != len(expected):
-        raw = _download(SCIFACT_URL, SCIFACT_ARCHIVE_SHA256)
+        url, sha = (SCIFACT_URL, SCIFACT_ARCHIVE_SHA256) if dataset == "scifact" else (QASPER_URL, QASPER_ARCHIVE_SHA256)
+        raw = _download(url, sha)
         with tarfile.open(fileobj=io.BytesIO(raw), mode="r:gz") as tar:
             for name, sha in expected.items():
-                member = tar.getmember(f"data/{name}")
-                if not member.isfile() or member.size > 16 << 20:
-                    raise ValueError("Invalid SciFact member")
+                member = tar.getmember(f"data/{name}" if dataset == "scifact" else name)
+                if not member.isfile() or member.size > 64 << 20:
+                    raise ValueError("Invalid scientific dataset member")
                 with tar.extractfile(member) as stream:
-                    content[name] = _check(stream.read((16 << 20) + 1), sha)
+                    content[name] = _check(stream.read((64 << 20) + 1), sha)
     # Validate all downloads before creating any new dataset files.
     for name, raw in content.items():
         target = destination / name
@@ -69,8 +82,8 @@ def fetch_public(destination, dataset="uci"):
             with target.open("xb") as stream:
                 stream.write(raw)
     sources = [{"filename": name, "bytes": len(content[name]), "sha256": sha,
-                "url": UCI[name][0] if dataset == "uci" else SCIFACT_URL,
-                "license": "CC BY 4.0" if dataset == "uci" or name.startswith("claims_") else "ODC-By 1.0"}
+                "url": direct[name][0] if direct else SCIFACT_URL if dataset == "scifact" else QASPER_URL,
+                "license": "ODC-By 1.0" if dataset == "scifact" and name == "corpus.jsonl" else "CC BY 4.0"}
                for name, sha in expected.items()]
     # Outside the raw corpus: provenance metadata must not contaminate its size.
     sidecar = destination.parent / f"{destination.name}.sources.json"

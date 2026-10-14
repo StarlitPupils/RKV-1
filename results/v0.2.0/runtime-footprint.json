@@ -1,0 +1,17 @@
+{
+  "zstandard": {
+    "package_version": "0.24.0",
+    "native_library_version": [
+      1,
+      5,
+      7
+    ],
+    "installed_distribution_bytes": 1130362,
+    "recorded_files": 15,
+    "basis": "installed distribution files; includes metadata/backends; may exclude linked dependencies"
+  },
+  "rkv_source_bytes": 64093,
+  "transform_module_source_bytes": 3742,
+  "accounting": "RKV/transform source shared by all v2 conditions; Python/shared native dependencies not assigned per archive; optional Zstd distribution is a deployment cost",
+  "not_a_complete_deployment_size": true
+}

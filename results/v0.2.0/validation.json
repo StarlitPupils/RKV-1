@@ -1,0 +1,18 @@
+{
+  "local_python_tests": {
+    "run": 33,
+    "passed": 32,
+    "skipped": 1,
+    "failed": 0,
+    "skip_reason": "Windows account lacks symlink permission"
+  },
+  "configurations": 102,
+  "measured_roundtrips": 560,
+  "warmup_roundtrips": 112,
+  "verified_range_reads": 75264,
+  "measurement_source_matches_release": true,
+  "v1_fixture_compatibility": "passed",
+  "local_rust": "not run; required release CI",
+  "installed_wheel_roundtrip": "v1 fixture and v2 transformed Zstd passed",
+  "sdist_contents": "fixture/reproduction included; raw datasets/research exports excluded"
+}

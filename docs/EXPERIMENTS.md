@@ -1,60 +1,82 @@
 # 复现实验
 
-Python 3.10+。核心只依赖标准库；完整 E0 对照安装锁定版本的可选依赖。
+Python 3.10+。Zlib 核心只依赖标准库；Zstd 安装固定版本的可选依赖。
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -e ".[bench]"
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
-.\.venv\Scripts\python.exe scripts/run_experiments.py --out results/local
+.\.venv\Scripts\python.exe scripts/run_controlled.py --out results/local-controlled
 ```
 
-Linux/macOS 将解释器路径替换为 `.venv/bin/python`。无网络时可预先放入与固定
-SHA-256 一致的数据文件；下载器会验明后复用。首次运行需从官方源获取数据。
+Linux/macOS 使用 `.venv/bin/python`。下载器复用 SHA-256 匹配的文件。重新实验使用
+新输出目录，保留已发布记录。
 
-单独执行：
+## 操作命令
 
 ```powershell
-python -m rkv1 fetch data/uci
 python -m rkv1 fetch data/scifact --dataset scifact
-python -m rkv1 pack data/uci data/uci.rkv
-python -m rkv1 verify data/uci.rkv
-python -m rkv1 unpack data/uci.rkv data/restored
-python -m rkv1 compare data/uci data/restored
-python -m rkv1 read data/uci.rkv winequality-red.csv --offset 0 --length 128 --out data/range.bin
-python -m rkv1 pack data/uci data/uci-next.rkv --base data/uci.rkv
-python -m rkv1 bench data/scifact --repeats 3 --warmups 1 --queries 32 --out results/local/scifact.json
+python -m rkv1 pack data/scifact data/scifact-v2.rkv --codec zstd
+python -m rkv1 verify data/scifact-v2.rkv
+python -m rkv1 unpack data/scifact-v2.rkv data/restored-v2
+python -m rkv1 compare data/scifact data/restored-v2
+python -m rkv1 read data/scifact-v2.rkv corpus.jsonl --offset 1048570 --length 128 --out data/range.bin
+python -m rkv1 pack data/scifact data/no-dedup.rkv --codec zstd --no-dedup
+python -m rkv1 fetch data/wine --dataset wine
+python -m rkv1 pack data/wine data/wine-columns.rkv --codec zstd --transform csv-columns-v1
+python -m rkv1 bench-controlled data/scifact --out results/local-controlled/scifact.json
 ```
 
-目标归档默认不能存在；已恢复目录也必须不存在。参数 `--chunk-size` 单位是字节，
-增量 base 必须使用相同块大小。`python rkv1.py` 兼容原对话命令。
+默认拒绝覆盖已有归档，恢复目录必须不存在。增量 --base 必须同块大小、codec、
+transform。旧归档可继续验证/恢复；新归档需 v0.2.0+ 读取器。
 
-## 测量定义
+## v0.2.0 受控协议
 
-每个方法在独立 Python 子进程执行，1 次预热、3 次记录、种子 20261014。
-报告原始样本、median、min/max、样本标准差；随机读取 32 个最多 4096 字节的窗口，
-报告 median 和 nearest-rank p95。顺序固定，不模拟冷缓存或独占 CPU。
+每个方法使用同一个 RKV1 v2 容器、同一套 manifest/块/文件 SHA-256、相同临时文件
+写入、flush、fsync、原子替换和归档摘要。可变量为 codec、块大小、去重与可逆变换。
 
-编码时间包含打包、压缩和写盘；恢复包含读盘、解码和写出文件。基线额外对 TAR
-字节流比较，RKV 内部验 SHA-256。所有方法在计时后再对恢复目录逐字节比较。
-因此不是纯 codec microbenchmark；RKV 含哈希/fsync，而 TAR baseline 没有相同校验语义。
+64 KiB、256 KiB、1 MiB × raw/Zlib 6/Zstd 3 × 去重开/关，共 18 配置。
+UCI 与 Wine 另加两 codec × 三块大小的 CSV 列重排，各 24 配置。执行顺序以种子
+20261014 打乱；每配置 1 次预热、5 次记录。每次归档字节必须相同，每次恢复由父进程
+在计时外逐字节比较源目录。
 
-TAR 方法用规范化 PAX TAR（mtime/uid/gid=0，mode=0644），统一存储文件组织信息。
-RKV 使用含哈希和引用的 JSON manifest；容器总开销都计入大小。两个容器不同，
-不能直接将差值归因为某一个编码器。随机读为温缓存模式：RKV 保持 manifest 打开，
-仅解码触及的块；传统整流 TAR 每次完整解码。seekable-Zstd、分块 TAR 等更强对照
-尚未加入，结果只说明这组具体实现的取舍。
+`runtime-footprint.json` 记录共享 RKV/transform 源码以及本机可选 Zstd distribution
+占用。所有 v2 条件部署同一份源码；codec 的安装开销须结合归档数量摊销，归档字节
+不能视为完整部署成本。Python 与共享原生依赖仍未全额分配到单个归档。
 
-峰值 RAM 使用 Windows PeakWorkingSetSize / POSIX ru_maxrss；它是工作进程整个
-生命周期峰值，包含解释器、输入、预热、校验、读写缓冲，不是纯 codec 内存，也不含
-操作系统文件缓存或所有外部进程。当前没有 GPU、能耗和科学推理质量指标。
+编码、恢复、随机读取各用新 Python 进程，分别测峰值 RSS，包含解释器、codec 和
+缓冲；恢复内存不含编码进程持有的原文。不计子进程启动时间；编码计时含归档摘要，
+恢复含内部哈希校验。
 
-增量实验追加一个固定探针到排序第一份文件，比较完整重压与验证后复用块。单次测量，
-仅做机制诊断，不用于宣称统计显著速度优势。两种方式都重新读源并写完整独立快照。
+随机读取每种可用类别 128 次：按文件字节加权、独立小文件/大文件组、跨块窗口。
+请求最多 4096 bytes。open_reader 已打开清单；open_and_read 计入每次打开/关闭。
+两者均温 OS 缓存，重新打开不等于冷磁盘。记录全部样本、median、样本标准差与
+nearest-rank p95；不存在的类别为空。
 
-## 发布前检查
+真实数据为原 UCI、SciFact、QASPER train/dev v0.3、Wine Quality red/white。
+合成重复仅做去重对照。来源与固定哈希随结果保存。受控实现支持 2 GiB 输入；
+旧 bench 的历史 TAR 基准仍为 64 MiB。
 
-单元测试、真实数据 bytewise compare、所有可选基线、格式文档、原始 JSON 和结果
-解释都完成后再打 tag。CI 在 Windows/Linux、Python 3.10/3.13 上运行核心测试，
-Linux 运行 Rust 骨架测试；Release 工作流只在这些测试通过后发布 wheel、源码包与
-实验记录 ZIP。首次实验格式使用 prerelease 标记。
+## 增量场景
+
+SciFact 最大文件 corpus：尾部追加、中间插入、等长替换、重命名；另测最小文件删除。
+Zstd/1 MiB 下比较完整编码与旧块复用，1 次预热 + 5 次测量，每次逐字节比较恢复。
+所有新快照独立，源文件仍全量读取。固定分块中间插入可能改变后续块地址，必须同时
+报告复用比例、完整写出量与时间。
+
+## 边界与发布
+
+单机器、温缓存、后台负载未隔离；尚无能耗或推理质量结果。CSV 仅覆盖受支持数值
+表格，净收益按完整归档字节比较，负结果也保存。受控对照不能代表所有成熟 seekable
+系统。v0.1.0 方法与结果在其 tag 保留，两版协议不同，不直接比较耗时作因果结论。
+
+本地测试、恢复验证、JSON、规范、README 和 Release 说明完成后打 tag。CI 运行
+Windows/Linux、Python 3.10/3.13 的核心与 Zstd 测试，以及 Rust 骨架测试；通过后发布
+wheel、源码包与实验记录 ZIP。
+
+摘要和图形可从 JSON 重新生成（绘图依赖另装）：
+
+```powershell
+python -m pip install -e ".[plots]"
+python scripts/summarize_controlled.py results/local-controlled --plot
+```

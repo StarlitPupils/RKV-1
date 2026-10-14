@@ -1,0 +1,1442 @@
+{
+  "dataset": "scifact",
+  "original_files": [
+    {
+      "path": "claims_dev.jsonl",
+      "bytes": 65007,
+      "sha256": "86f0435d08fdb65d1aa41d1472684f57e6e71930626497bdf4d7a9ec1a632217"
+    },
+    {
+      "path": "claims_test.jsonl",
+      "bytes": 33769,
+      "sha256": "558930d75215c73f84a28fe538307d6d397c9de1ec7239514cf45f80d75d2ca3"
+    },
+    {
+      "path": "claims_train.jsonl",
+      "bytes": 175616,
+      "sha256": "f4c8fa82d8bd0653a9cc8d61a6ea48c25eacea64e90af5dbf390ebb1b74372f0"
+    },
+    {
+      "path": "corpus.jsonl",
+      "bytes": 8307875,
+      "sha256": "b8d6c89624cb2ed74dee8938effc4f5d8bd2086887880af8110d64be4ceade62"
+    }
+  ],
+  "largest_file": "corpus.jsonl",
+  "smallest_file": "claims_test.jsonl",
+  "repeats": 5,
+  "warmups": 1,
+  "results": [
+    {
+      "case": "append_largest",
+      "files": [
+        {
+          "path": "claims_dev.jsonl",
+          "bytes": 65007,
+          "sha256": "86f0435d08fdb65d1aa41d1472684f57e6e71930626497bdf4d7a9ec1a632217"
+        },
+        {
+          "path": "claims_test.jsonl",
+          "bytes": 33769,
+          "sha256": "558930d75215c73f84a28fe538307d6d397c9de1ec7239514cf45f80d75d2ca3"
+        },
+        {
+          "path": "claims_train.jsonl",
+          "bytes": 175616,
+          "sha256": "f4c8fa82d8bd0653a9cc8d61a6ea48c25eacea64e90af5dbf390ebb1b74372f0"
+        },
+        {
+          "path": "corpus.jsonl",
+          "bytes": 8307910,
+          "sha256": "7e0fc4da6e560c3868914f9fcaf0361a69cee7435098b704f5ec0f7fcfbdbb8f"
+        }
+      ],
+      "runs": {
+        "full": {
+          "configuration": {
+            "compression": "zstd",
+            "chunk_size": 1048576,
+            "deduplicate": true,
+            "transform": "none",
+            "queries": 0,
+            "seed": 20261014
+          },
+          "implementation_checksums": {
+            "__init__.py": "7ca2a96250c51a3a23356ef772d734005eed0f255d29f2f52997bf5c3c703580",
+            "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+            "benchmark.py": "cf9e1297000e8398b1466e529e1913b2fcc32e257082aca1006973a2ef37adf7",
+            "cli.py": "e5cc180043e39d2df410625b19202c5df2e86ecea5adeae29c026095a987486f",
+            "codecs.py": "3e7abe9b02e6c93d1106898f2a6db4b45763616ba358df9eed54199cb065db6b",
+            "controlled.py": "e1feca7b4b2b665c7f125a43ffbd48630bc90ab99a31cab36d57481d2bc23bd3",
+            "core.py": "a0233d40b0ded1533f011158454ebc92f9479356996d528491658729d43613c5",
+            "datasets.py": "4ef54c7a98c4903e55aaada29b6df7d43329bf1a4c952862fa24ea10d3f377ea",
+            "transforms.py": "3a50f14a7e6998bf35fa475e2f0e8394e0c34912fade5baaa90c383cb7292ad6"
+          },
+          "encode_s": {
+            "samples": [
+              0.07278950000181794,
+              0.06750370000372641,
+              0.06828689999383641,
+              0.06307329999981448,
+              0.06505389999801992
+            ],
+            "median": 0.06750370000372641,
+            "min": 0.06307329999981448,
+            "max": 0.07278950000181794,
+            "stdev": 0.0036759841883503034,
+            "p95": 0.07278950000181794
+          },
+          "decode_s": {
+            "samples": [
+              0.023194499997771345,
+              0.024249599999166094,
+              0.022471099997346755,
+              0.023199700000986923,
+              0.02398850000463426
+            ],
+            "median": 0.023199700000986923,
+            "min": 0.022471099997346755,
+            "max": 0.024249599999166094,
+            "stdev": 0.0007090873813380266,
+            "p95": 0.024249599999166094
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.046875,
+              0.046875,
+              0.0625,
+              0.046875,
+              0.046875
+            ],
+            "median": 0.046875,
+            "min": 0.046875,
+            "max": 0.0625,
+            "stdev": 0.006987712429686843,
+            "p95": 0.0625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.03125,
+              0.03125,
+              0.015625,
+              0.015625
+            ],
+            "median": 0.015625,
+            "min": 0.015625,
+            "max": 0.03125,
+            "stdev": 0.00855816496101822,
+            "p95": 0.03125
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              29995008,
+              29679616,
+              29655040,
+              29949952,
+              29667328
+            ],
+            "median": 29679616,
+            "min": 29655040,
+            "max": 29995008,
+            "stdev": 168120.71792375858,
+            "p95": 29995008
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              29130752,
+              29097984,
+              29204480,
+              29347840,
+              29536256
+            ],
+            "median": 29204480,
+            "min": 29097984,
+            "max": 29536256,
+            "stdev": 180284.49893654196,
+            "p95": 29536256
+          },
+          "storage": {
+            "files": 4,
+            "raw_bytes": 8582302,
+            "chunk_references": 11,
+            "unique_chunks": 11,
+            "reused_chunks": 0,
+            "new_chunks": 11,
+            "unique_raw_bytes": 8582302,
+            "payload_bytes": 2742190,
+            "metadata_bytes": 3375,
+            "stored_bytes": 2745565,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "none",
+            "transformed_chunks": 0,
+            "transform_attempts": 0,
+            "archive_sha256": "564832dc945e58327324f30320f8ca3fde411c09d3c7299fccccdc6cfa3981c5"
+          },
+          "range_reads": null,
+          "bytewise_verified": true,
+          "verified_measured_roundtrips": 5,
+          "verified_warmup_roundtrips": 1,
+          "deterministic_archive_bytes": true
+        },
+        "reuse": {
+          "configuration": {
+            "compression": "zstd",
+            "chunk_size": 1048576,
+            "deduplicate": true,
+            "transform": "none",
+            "queries": 0,
+            "seed": 20261014
+          },
+          "implementation_checksums": {
+            "__init__.py": "7ca2a96250c51a3a23356ef772d734005eed0f255d29f2f52997bf5c3c703580",
+            "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+            "benchmark.py": "cf9e1297000e8398b1466e529e1913b2fcc32e257082aca1006973a2ef37adf7",
+            "cli.py": "e5cc180043e39d2df410625b19202c5df2e86ecea5adeae29c026095a987486f",
+            "codecs.py": "3e7abe9b02e6c93d1106898f2a6db4b45763616ba358df9eed54199cb065db6b",
+            "controlled.py": "e1feca7b4b2b665c7f125a43ffbd48630bc90ab99a31cab36d57481d2bc23bd3",
+            "core.py": "a0233d40b0ded1533f011158454ebc92f9479356996d528491658729d43613c5",
+            "datasets.py": "4ef54c7a98c4903e55aaada29b6df7d43329bf1a4c952862fa24ea10d3f377ea",
+            "transforms.py": "3a50f14a7e6998bf35fa475e2f0e8394e0c34912fade5baaa90c383cb7292ad6"
+          },
+          "encode_s": {
+            "samples": [
+              0.053744800003187265,
+              0.05246560000523459,
+              0.05065469999681227,
+              0.04918370000086725,
+              0.05140250000113156
+            ],
+            "median": 0.05140250000113156,
+            "min": 0.04918370000086725,
+            "max": 0.053744800003187265,
+            "stdev": 0.001736398580230818,
+            "p95": 0.053744800003187265
+          },
+          "decode_s": {
+            "samples": [
+              0.023387399996863678,
+              0.022712800004228484,
+              0.02387589999852935,
+              0.023211100000480656,
+              0.022753400000510737
+            ],
+            "median": 0.023211100000480656,
+            "min": 0.022712800004228484,
+            "max": 0.02387589999852935,
+            "stdev": 0.0004817137376817501,
+            "p95": 0.02387589999852935
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.03125,
+              0.03125,
+              0.03125,
+              0.03125,
+              0.0625
+            ],
+            "median": 0.03125,
+            "min": 0.03125,
+            "max": 0.0625,
+            "stdev": 0.013975424859373685,
+            "p95": 0.0625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.03125,
+              0.015625,
+              0.015625,
+              0.015625,
+              0.03125
+            ],
+            "median": 0.015625,
+            "min": 0.015625,
+            "max": 0.03125,
+            "stdev": 0.00855816496101822,
+            "p95": 0.03125
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              30097408,
+              30810112,
+              30691328,
+              30605312,
+              30179328
+            ],
+            "median": 30605312,
+            "min": 30097408,
+            "max": 30810112,
+            "stdev": 318615.0947033113,
+            "p95": 30810112
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              29388800,
+              29474816,
+              29360128,
+              29446144,
+              29470720
+            ],
+            "median": 29446144,
+            "min": 29360128,
+            "max": 29474816,
+            "stdev": 51208.19134474484,
+            "p95": 29474816
+          },
+          "storage": {
+            "files": 4,
+            "raw_bytes": 8582302,
+            "chunk_references": 11,
+            "unique_chunks": 11,
+            "reused_chunks": 10,
+            "new_chunks": 1,
+            "unique_raw_bytes": 8582302,
+            "payload_bytes": 2742190,
+            "metadata_bytes": 3375,
+            "stored_bytes": 2745565,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "none",
+            "transformed_chunks": 0,
+            "transform_attempts": 0,
+            "archive_sha256": "564832dc945e58327324f30320f8ca3fde411c09d3c7299fccccdc6cfa3981c5"
+          },
+          "range_reads": null,
+          "bytewise_verified": true,
+          "verified_measured_roundtrips": 5,
+          "verified_warmup_roundtrips": 1,
+          "deterministic_archive_bytes": true
+        }
+      }
+    },
+    {
+      "case": "insert_middle_largest",
+      "files": [
+        {
+          "path": "claims_dev.jsonl",
+          "bytes": 65007,
+          "sha256": "86f0435d08fdb65d1aa41d1472684f57e6e71930626497bdf4d7a9ec1a632217"
+        },
+        {
+          "path": "claims_test.jsonl",
+          "bytes": 33769,
+          "sha256": "558930d75215c73f84a28fe538307d6d397c9de1ec7239514cf45f80d75d2ca3"
+        },
+        {
+          "path": "claims_train.jsonl",
+          "bytes": 175616,
+          "sha256": "f4c8fa82d8bd0653a9cc8d61a6ea48c25eacea64e90af5dbf390ebb1b74372f0"
+        },
+        {
+          "path": "corpus.jsonl",
+          "bytes": 8307910,
+          "sha256": "c8b39e81220617c5416f7a14696b8814f5e0e1c85a8ef12900482004fba21754"
+        }
+      ],
+      "runs": {
+        "reuse": {
+          "configuration": {
+            "compression": "zstd",
+            "chunk_size": 1048576,
+            "deduplicate": true,
+            "transform": "none",
+            "queries": 0,
+            "seed": 20261014
+          },
+          "implementation_checksums": {
+            "__init__.py": "7ca2a96250c51a3a23356ef772d734005eed0f255d29f2f52997bf5c3c703580",
+            "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+            "benchmark.py": "cf9e1297000e8398b1466e529e1913b2fcc32e257082aca1006973a2ef37adf7",
+            "cli.py": "e5cc180043e39d2df410625b19202c5df2e86ecea5adeae29c026095a987486f",
+            "codecs.py": "3e7abe9b02e6c93d1106898f2a6db4b45763616ba358df9eed54199cb065db6b",
+            "controlled.py": "e1feca7b4b2b665c7f125a43ffbd48630bc90ab99a31cab36d57481d2bc23bd3",
+            "core.py": "a0233d40b0ded1533f011158454ebc92f9479356996d528491658729d43613c5",
+            "datasets.py": "4ef54c7a98c4903e55aaada29b6df7d43329bf1a4c952862fa24ea10d3f377ea",
+            "transforms.py": "3a50f14a7e6998bf35fa475e2f0e8394e0c34912fade5baaa90c383cb7292ad6"
+          },
+          "encode_s": {
+            "samples": [
+              0.0783651000019745,
+              0.06092060000082711,
+              0.06107390000397572,
+              0.06221170000208076,
+              0.06245900000067195
+            ],
+            "median": 0.06221170000208076,
+            "min": 0.06092060000082711,
+            "max": 0.0783651000019745,
+            "stdev": 0.007498546156617268,
+            "p95": 0.0783651000019745
+          },
+          "decode_s": {
+            "samples": [
+              0.023722300000372343,
+              0.023612299999513198,
+              0.02432960000442108,
+              0.022694400002365,
+              0.02277469999535242
+            ],
+            "median": 0.023612299999513198,
+            "min": 0.022694400002365,
+            "max": 0.02432960000442108,
+            "stdev": 0.0006889162544569264,
+            "p95": 0.02432960000442108
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.046875,
+              0.046875,
+              0.03125,
+              0.03125,
+              0.046875
+            ],
+            "median": 0.046875,
+            "min": 0.03125,
+            "max": 0.046875,
+            "stdev": 0.00855816496101822,
+            "p95": 0.046875
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.03125,
+              0.015625,
+              0.015625,
+              0.03125,
+              0.015625
+            ],
+            "median": 0.015625,
+            "min": 0.015625,
+            "max": 0.03125,
+            "stdev": 0.00855816496101822,
+            "p95": 0.03125
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              30797824,
+              29872128,
+              29966336,
+              29908992,
+              30851072
+            ],
+            "median": 29966336,
+            "min": 29872128,
+            "max": 30851072,
+            "stdev": 499162.7670217401,
+            "p95": 30851072
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              29102080,
+              29306880,
+              29331456,
+              29388800,
+              29483008
+            ],
+            "median": 29331456,
+            "min": 29102080,
+            "max": 29483008,
+            "stdev": 140594.86438415878,
+            "p95": 29483008
+          },
+          "storage": {
+            "files": 4,
+            "raw_bytes": 8582302,
+            "chunk_references": 11,
+            "unique_chunks": 11,
+            "reused_chunks": 6,
+            "new_chunks": 5,
+            "unique_raw_bytes": 8582302,
+            "payload_bytes": 2742217,
+            "metadata_bytes": 3375,
+            "stored_bytes": 2745592,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "none",
+            "transformed_chunks": 0,
+            "transform_attempts": 0,
+            "archive_sha256": "04bbd0b63b7059cad84373b689d55cce3f76e9369654224a6b6ddaea0efbafed"
+          },
+          "range_reads": null,
+          "bytewise_verified": true,
+          "verified_measured_roundtrips": 5,
+          "verified_warmup_roundtrips": 1,
+          "deterministic_archive_bytes": true
+        },
+        "full": {
+          "configuration": {
+            "compression": "zstd",
+            "chunk_size": 1048576,
+            "deduplicate": true,
+            "transform": "none",
+            "queries": 0,
+            "seed": 20261014
+          },
+          "implementation_checksums": {
+            "__init__.py": "7ca2a96250c51a3a23356ef772d734005eed0f255d29f2f52997bf5c3c703580",
+            "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+            "benchmark.py": "cf9e1297000e8398b1466e529e1913b2fcc32e257082aca1006973a2ef37adf7",
+            "cli.py": "e5cc180043e39d2df410625b19202c5df2e86ecea5adeae29c026095a987486f",
+            "codecs.py": "3e7abe9b02e6c93d1106898f2a6db4b45763616ba358df9eed54199cb065db6b",
+            "controlled.py": "e1feca7b4b2b665c7f125a43ffbd48630bc90ab99a31cab36d57481d2bc23bd3",
+            "core.py": "a0233d40b0ded1533f011158454ebc92f9479356996d528491658729d43613c5",
+            "datasets.py": "4ef54c7a98c4903e55aaada29b6df7d43329bf1a4c952862fa24ea10d3f377ea",
+            "transforms.py": "3a50f14a7e6998bf35fa475e2f0e8394e0c34912fade5baaa90c383cb7292ad6"
+          },
+          "encode_s": {
+            "samples": [
+              0.06612859999586362,
+              0.06714999999530846,
+              0.06559560000459896,
+              0.06545719999849098,
+              0.06758329999865964
+            ],
+            "median": 0.06612859999586362,
+            "min": 0.06545719999849098,
+            "max": 0.06758329999865964,
+            "stdev": 0.0009448323686296038,
+            "p95": 0.06758329999865964
+          },
+          "decode_s": {
+            "samples": [
+              0.023375999997369945,
+              0.023799700000381563,
+              0.02449740000156453,
+              0.023361399995337706,
+              0.023352199998043943
+            ],
+            "median": 0.023375999997369945,
+            "min": 0.023352199998043943,
+            "max": 0.02449740000156453,
+            "stdev": 0.0004959360544622833,
+            "p95": 0.02449740000156453
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.046875,
+              0.046875,
+              0.0625,
+              0.0625,
+              0.046875
+            ],
+            "median": 0.046875,
+            "min": 0.046875,
+            "max": 0.0625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.0625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.03125,
+              0.015625,
+              0.015625,
+              0.015625
+            ],
+            "median": 0.015625,
+            "min": 0.015625,
+            "max": 0.03125,
+            "stdev": 0.006987712429686843,
+            "p95": 0.03125
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              29978624,
+              30208000,
+              29970432,
+              29958144,
+              30167040
+            ],
+            "median": 29978624,
+            "min": 29958144,
+            "max": 30208000,
+            "stdev": 120745.18915468227,
+            "p95": 30208000
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              29433856,
+              29347840,
+              29134848,
+              29106176,
+              29462528
+            ],
+            "median": 29347840,
+            "min": 29106176,
+            "max": 29462528,
+            "stdev": 166898.80684055234,
+            "p95": 29462528
+          },
+          "storage": {
+            "files": 4,
+            "raw_bytes": 8582302,
+            "chunk_references": 11,
+            "unique_chunks": 11,
+            "reused_chunks": 0,
+            "new_chunks": 11,
+            "unique_raw_bytes": 8582302,
+            "payload_bytes": 2742217,
+            "metadata_bytes": 3375,
+            "stored_bytes": 2745592,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "none",
+            "transformed_chunks": 0,
+            "transform_attempts": 0,
+            "archive_sha256": "04bbd0b63b7059cad84373b689d55cce3f76e9369654224a6b6ddaea0efbafed"
+          },
+          "range_reads": null,
+          "bytewise_verified": true,
+          "verified_measured_roundtrips": 5,
+          "verified_warmup_roundtrips": 1,
+          "deterministic_archive_bytes": true
+        }
+      }
+    },
+    {
+      "case": "replace_equal_length_largest",
+      "files": [
+        {
+          "path": "claims_dev.jsonl",
+          "bytes": 65007,
+          "sha256": "86f0435d08fdb65d1aa41d1472684f57e6e71930626497bdf4d7a9ec1a632217"
+        },
+        {
+          "path": "claims_test.jsonl",
+          "bytes": 33769,
+          "sha256": "558930d75215c73f84a28fe538307d6d397c9de1ec7239514cf45f80d75d2ca3"
+        },
+        {
+          "path": "claims_train.jsonl",
+          "bytes": 175616,
+          "sha256": "f4c8fa82d8bd0653a9cc8d61a6ea48c25eacea64e90af5dbf390ebb1b74372f0"
+        },
+        {
+          "path": "corpus.jsonl",
+          "bytes": 8307875,
+          "sha256": "993b362319cbb2ba681af11552e5a01e9ffcefaff9cba9f0bb8a313d39363858"
+        }
+      ],
+      "runs": {
+        "full": {
+          "configuration": {
+            "compression": "zstd",
+            "chunk_size": 1048576,
+            "deduplicate": true,
+            "transform": "none",
+            "queries": 0,
+            "seed": 20261014
+          },
+          "implementation_checksums": {
+            "__init__.py": "7ca2a96250c51a3a23356ef772d734005eed0f255d29f2f52997bf5c3c703580",
+            "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+            "benchmark.py": "cf9e1297000e8398b1466e529e1913b2fcc32e257082aca1006973a2ef37adf7",
+            "cli.py": "e5cc180043e39d2df410625b19202c5df2e86ecea5adeae29c026095a987486f",
+            "codecs.py": "3e7abe9b02e6c93d1106898f2a6db4b45763616ba358df9eed54199cb065db6b",
+            "controlled.py": "e1feca7b4b2b665c7f125a43ffbd48630bc90ab99a31cab36d57481d2bc23bd3",
+            "core.py": "a0233d40b0ded1533f011158454ebc92f9479356996d528491658729d43613c5",
+            "datasets.py": "4ef54c7a98c4903e55aaada29b6df7d43329bf1a4c952862fa24ea10d3f377ea",
+            "transforms.py": "3a50f14a7e6998bf35fa475e2f0e8394e0c34912fade5baaa90c383cb7292ad6"
+          },
+          "encode_s": {
+            "samples": [
+              0.06703600000037113,
+              0.06546069999603787,
+              0.061480000003939494,
+              0.06378330000006827,
+              0.0628011000007973
+            ],
+            "median": 0.06378330000006827,
+            "min": 0.061480000003939494,
+            "max": 0.06703600000037113,
+            "stdev": 0.0021864751265798597,
+            "p95": 0.06703600000037113
+          },
+          "decode_s": {
+            "samples": [
+              0.023716399999102578,
+              0.022877399998833425,
+              0.024312200002896134,
+              0.023092800001904834,
+              0.022840899997390807
+            ],
+            "median": 0.023092800001904834,
+            "min": 0.022840899997390807,
+            "max": 0.024312200002896134,
+            "stdev": 0.0006338678883826235,
+            "p95": 0.024312200002896134
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.046875,
+              0.0625,
+              0.046875,
+              0.046875,
+              0.046875
+            ],
+            "median": 0.046875,
+            "min": 0.046875,
+            "max": 0.0625,
+            "stdev": 0.006987712429686843,
+            "p95": 0.0625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.03125,
+              0.015625,
+              0.015625,
+              0.03125
+            ],
+            "median": 0.015625,
+            "min": 0.015625,
+            "max": 0.03125,
+            "stdev": 0.00855816496101822,
+            "p95": 0.03125
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              29786112,
+              29949952,
+              29847552,
+              30093312,
+              30052352
+            ],
+            "median": 29949952,
+            "min": 29786112,
+            "max": 30093312,
+            "stdev": 130655.33774017807,
+            "p95": 30093312
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              29319168,
+              29114368,
+              29351936,
+              29212672,
+              29405184
+            ],
+            "median": 29319168,
+            "min": 29114368,
+            "max": 29405184,
+            "stdev": 116559.81089895437,
+            "p95": 29405184
+          },
+          "storage": {
+            "files": 4,
+            "raw_bytes": 8582267,
+            "chunk_references": 11,
+            "unique_chunks": 11,
+            "reused_chunks": 0,
+            "new_chunks": 11,
+            "unique_raw_bytes": 8582267,
+            "payload_bytes": 2742178,
+            "metadata_bytes": 3375,
+            "stored_bytes": 2745553,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "none",
+            "transformed_chunks": 0,
+            "transform_attempts": 0,
+            "archive_sha256": "13ee6a09d9281cd593d662633921b952fc8a21f4f5804505151d2b3d62c763bf"
+          },
+          "range_reads": null,
+          "bytewise_verified": true,
+          "verified_measured_roundtrips": 5,
+          "verified_warmup_roundtrips": 1,
+          "deterministic_archive_bytes": true
+        },
+        "reuse": {
+          "configuration": {
+            "compression": "zstd",
+            "chunk_size": 1048576,
+            "deduplicate": true,
+            "transform": "none",
+            "queries": 0,
+            "seed": 20261014
+          },
+          "implementation_checksums": {
+            "__init__.py": "7ca2a96250c51a3a23356ef772d734005eed0f255d29f2f52997bf5c3c703580",
+            "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+            "benchmark.py": "cf9e1297000e8398b1466e529e1913b2fcc32e257082aca1006973a2ef37adf7",
+            "cli.py": "e5cc180043e39d2df410625b19202c5df2e86ecea5adeae29c026095a987486f",
+            "codecs.py": "3e7abe9b02e6c93d1106898f2a6db4b45763616ba358df9eed54199cb065db6b",
+            "controlled.py": "e1feca7b4b2b665c7f125a43ffbd48630bc90ab99a31cab36d57481d2bc23bd3",
+            "core.py": "a0233d40b0ded1533f011158454ebc92f9479356996d528491658729d43613c5",
+            "datasets.py": "4ef54c7a98c4903e55aaada29b6df7d43329bf1a4c952862fa24ea10d3f377ea",
+            "transforms.py": "3a50f14a7e6998bf35fa475e2f0e8394e0c34912fade5baaa90c383cb7292ad6"
+          },
+          "encode_s": {
+            "samples": [
+              0.05359669999597827,
+              0.054468599999381695,
+              0.049760100002458785,
+              0.053977299998223316,
+              0.05443929999455577
+            ],
+            "median": 0.053977299998223316,
+            "min": 0.049760100002458785,
+            "max": 0.054468599999381695,
+            "stdev": 0.001982925603935916,
+            "p95": 0.054468599999381695
+          },
+          "decode_s": {
+            "samples": [
+              0.022117700005765073,
+              0.022799300000770018,
+              0.0227184000032139,
+              0.023787999998603482,
+              0.0229749999998603
+            ],
+            "median": 0.022799300000770018,
+            "min": 0.022117700005765073,
+            "max": 0.023787999998603482,
+            "stdev": 0.0006015016241645139,
+            "p95": 0.023787999998603482
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.046875,
+              0.046875,
+              0.0625,
+              0.03125,
+              0.046875
+            ],
+            "median": 0.046875,
+            "min": 0.03125,
+            "max": 0.0625,
+            "stdev": 0.011048543456039806,
+            "p95": 0.0625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.046875,
+              0.03125,
+              0.03125,
+              0.03125,
+              0.015625
+            ],
+            "median": 0.03125,
+            "min": 0.015625,
+            "max": 0.046875,
+            "stdev": 0.011048543456039806,
+            "p95": 0.046875
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              30621696,
+              30834688,
+              30687232,
+              30588928,
+              30691328
+            ],
+            "median": 30687232,
+            "min": 30588928,
+            "max": 30834688,
+            "stdev": 94456.9926940298,
+            "p95": 30834688
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              29175808,
+              29454336,
+              29356032,
+              29302784,
+              29196288
+            ],
+            "median": 29302784,
+            "min": 29175808,
+            "max": 29454336,
+            "stdev": 115220.70569476651,
+            "p95": 29454336
+          },
+          "storage": {
+            "files": 4,
+            "raw_bytes": 8582267,
+            "chunk_references": 11,
+            "unique_chunks": 11,
+            "reused_chunks": 10,
+            "new_chunks": 1,
+            "unique_raw_bytes": 8582267,
+            "payload_bytes": 2742178,
+            "metadata_bytes": 3375,
+            "stored_bytes": 2745553,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "none",
+            "transformed_chunks": 0,
+            "transform_attempts": 0,
+            "archive_sha256": "13ee6a09d9281cd593d662633921b952fc8a21f4f5804505151d2b3d62c763bf"
+          },
+          "range_reads": null,
+          "bytewise_verified": true,
+          "verified_measured_roundtrips": 5,
+          "verified_warmup_roundtrips": 1,
+          "deterministic_archive_bytes": true
+        }
+      }
+    },
+    {
+      "case": "rename_largest",
+      "files": [
+        {
+          "path": "claims_dev.jsonl",
+          "bytes": 65007,
+          "sha256": "86f0435d08fdb65d1aa41d1472684f57e6e71930626497bdf4d7a9ec1a632217"
+        },
+        {
+          "path": "claims_test.jsonl",
+          "bytes": 33769,
+          "sha256": "558930d75215c73f84a28fe538307d6d397c9de1ec7239514cf45f80d75d2ca3"
+        },
+        {
+          "path": "claims_train.jsonl",
+          "bytes": 175616,
+          "sha256": "f4c8fa82d8bd0653a9cc8d61a6ea48c25eacea64e90af5dbf390ebb1b74372f0"
+        },
+        {
+          "path": "renamed-corpus.jsonl",
+          "bytes": 8307875,
+          "sha256": "b8d6c89624cb2ed74dee8938effc4f5d8bd2086887880af8110d64be4ceade62"
+        }
+      ],
+      "runs": {
+        "reuse": {
+          "configuration": {
+            "compression": "zstd",
+            "chunk_size": 1048576,
+            "deduplicate": true,
+            "transform": "none",
+            "queries": 0,
+            "seed": 20261014
+          },
+          "implementation_checksums": {
+            "__init__.py": "7ca2a96250c51a3a23356ef772d734005eed0f255d29f2f52997bf5c3c703580",
+            "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+            "benchmark.py": "cf9e1297000e8398b1466e529e1913b2fcc32e257082aca1006973a2ef37adf7",
+            "cli.py": "e5cc180043e39d2df410625b19202c5df2e86ecea5adeae29c026095a987486f",
+            "codecs.py": "3e7abe9b02e6c93d1106898f2a6db4b45763616ba358df9eed54199cb065db6b",
+            "controlled.py": "e1feca7b4b2b665c7f125a43ffbd48630bc90ab99a31cab36d57481d2bc23bd3",
+            "core.py": "a0233d40b0ded1533f011158454ebc92f9479356996d528491658729d43613c5",
+            "datasets.py": "4ef54c7a98c4903e55aaada29b6df7d43329bf1a4c952862fa24ea10d3f377ea",
+            "transforms.py": "3a50f14a7e6998bf35fa475e2f0e8394e0c34912fade5baaa90c383cb7292ad6"
+          },
+          "encode_s": {
+            "samples": [
+              0.049765000003390014,
+              0.0527109999966342,
+              0.0518378999986453,
+              0.051915900003223214,
+              0.06012149999878602
+            ],
+            "median": 0.051915900003223214,
+            "min": 0.049765000003390014,
+            "max": 0.06012149999878602,
+            "stdev": 0.003981992437540361,
+            "p95": 0.06012149999878602
+          },
+          "decode_s": {
+            "samples": [
+              0.02320730000064941,
+              0.02301409999927273,
+              0.023305900002014823,
+              0.02332340000430122,
+              0.02373739999893587
+            ],
+            "median": 0.023305900002014823,
+            "min": 0.02301409999927273,
+            "max": 0.02373739999893587,
+            "stdev": 0.000264896634278019,
+            "p95": 0.02373739999893587
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.03125,
+              0.03125,
+              0.03125,
+              0.03125,
+              0.03125
+            ],
+            "median": 0.03125,
+            "min": 0.03125,
+            "max": 0.03125,
+            "stdev": 0.0,
+            "p95": 0.03125
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.015625,
+              0.015625,
+              0.03125,
+              0.015625
+            ],
+            "median": 0.015625,
+            "min": 0.015625,
+            "max": 0.03125,
+            "stdev": 0.006987712429686843,
+            "p95": 0.03125
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              29061120,
+              29384704,
+              29347840,
+              29646848,
+              29741056
+            ],
+            "median": 29384704,
+            "min": 29061120,
+            "max": 29741056,
+            "stdev": 268539.58280447224,
+            "p95": 29741056
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              29163520,
+              29331456,
+              29364224,
+              29425664,
+              29343744
+            ],
+            "median": 29343744,
+            "min": 29163520,
+            "max": 29425664,
+            "stdev": 97644.72260598624,
+            "p95": 29425664
+          },
+          "storage": {
+            "files": 4,
+            "raw_bytes": 8582267,
+            "chunk_references": 11,
+            "unique_chunks": 11,
+            "reused_chunks": 11,
+            "new_chunks": 0,
+            "unique_raw_bytes": 8582267,
+            "payload_bytes": 2742175,
+            "metadata_bytes": 3383,
+            "stored_bytes": 2745558,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "none",
+            "transformed_chunks": 0,
+            "transform_attempts": 0,
+            "archive_sha256": "547d6c0c30071d4d0bc97dd5756655ebaebe5468fb447d0714a05555fea0e970"
+          },
+          "range_reads": null,
+          "bytewise_verified": true,
+          "verified_measured_roundtrips": 5,
+          "verified_warmup_roundtrips": 1,
+          "deterministic_archive_bytes": true
+        },
+        "full": {
+          "configuration": {
+            "compression": "zstd",
+            "chunk_size": 1048576,
+            "deduplicate": true,
+            "transform": "none",
+            "queries": 0,
+            "seed": 20261014
+          },
+          "implementation_checksums": {
+            "__init__.py": "7ca2a96250c51a3a23356ef772d734005eed0f255d29f2f52997bf5c3c703580",
+            "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+            "benchmark.py": "cf9e1297000e8398b1466e529e1913b2fcc32e257082aca1006973a2ef37adf7",
+            "cli.py": "e5cc180043e39d2df410625b19202c5df2e86ecea5adeae29c026095a987486f",
+            "codecs.py": "3e7abe9b02e6c93d1106898f2a6db4b45763616ba358df9eed54199cb065db6b",
+            "controlled.py": "e1feca7b4b2b665c7f125a43ffbd48630bc90ab99a31cab36d57481d2bc23bd3",
+            "core.py": "a0233d40b0ded1533f011158454ebc92f9479356996d528491658729d43613c5",
+            "datasets.py": "4ef54c7a98c4903e55aaada29b6df7d43329bf1a4c952862fa24ea10d3f377ea",
+            "transforms.py": "3a50f14a7e6998bf35fa475e2f0e8394e0c34912fade5baaa90c383cb7292ad6"
+          },
+          "encode_s": {
+            "samples": [
+              0.06713439999293769,
+              0.06418919999850914,
+              0.06770759999926668,
+              0.06893549999949755,
+              0.06688109999959124
+            ],
+            "median": 0.06713439999293769,
+            "min": 0.06418919999850914,
+            "max": 0.06893549999949755,
+            "stdev": 0.0017446362267659313,
+            "p95": 0.06893549999949755
+          },
+          "decode_s": {
+            "samples": [
+              0.024072000000160187,
+              0.022805399996286724,
+              0.023603399997227825,
+              0.023051600001053885,
+              0.023254899999301415
+            ],
+            "median": 0.023254899999301415,
+            "min": 0.022805399996286724,
+            "max": 0.024072000000160187,
+            "stdev": 0.0004949477332163108,
+            "p95": 0.024072000000160187
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.046875,
+              0.046875,
+              0.0625,
+              0.046875,
+              0.046875
+            ],
+            "median": 0.046875,
+            "min": 0.046875,
+            "max": 0.0625,
+            "stdev": 0.006987712429686843,
+            "p95": 0.0625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.015625,
+              0.03125,
+              0.015625,
+              0.03125
+            ],
+            "median": 0.015625,
+            "min": 0.015625,
+            "max": 0.03125,
+            "stdev": 0.00855816496101822,
+            "p95": 0.03125
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              29782016,
+              30093312,
+              30076928,
+              29802496,
+              29945856
+            ],
+            "median": 29945856,
+            "min": 29782016,
+            "max": 30093312,
+            "stdev": 146760.3144613693,
+            "p95": 30093312
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              29429760,
+              29458432,
+              29253632,
+              29495296,
+              29507584
+            ],
+            "median": 29458432,
+            "min": 29253632,
+            "max": 29507584,
+            "stdev": 102702.65672902527,
+            "p95": 29507584
+          },
+          "storage": {
+            "files": 4,
+            "raw_bytes": 8582267,
+            "chunk_references": 11,
+            "unique_chunks": 11,
+            "reused_chunks": 0,
+            "new_chunks": 11,
+            "unique_raw_bytes": 8582267,
+            "payload_bytes": 2742175,
+            "metadata_bytes": 3383,
+            "stored_bytes": 2745558,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "none",
+            "transformed_chunks": 0,
+            "transform_attempts": 0,
+            "archive_sha256": "547d6c0c30071d4d0bc97dd5756655ebaebe5468fb447d0714a05555fea0e970"
+          },
+          "range_reads": null,
+          "bytewise_verified": true,
+          "verified_measured_roundtrips": 5,
+          "verified_warmup_roundtrips": 1,
+          "deterministic_archive_bytes": true
+        }
+      }
+    },
+    {
+      "case": "delete_smallest",
+      "files": [
+        {
+          "path": "claims_dev.jsonl",
+          "bytes": 65007,
+          "sha256": "86f0435d08fdb65d1aa41d1472684f57e6e71930626497bdf4d7a9ec1a632217"
+        },
+        {
+          "path": "claims_train.jsonl",
+          "bytes": 175616,
+          "sha256": "f4c8fa82d8bd0653a9cc8d61a6ea48c25eacea64e90af5dbf390ebb1b74372f0"
+        },
+        {
+          "path": "corpus.jsonl",
+          "bytes": 8307875,
+          "sha256": "b8d6c89624cb2ed74dee8938effc4f5d8bd2086887880af8110d64be4ceade62"
+        }
+      ],
+      "runs": {
+        "full": {
+          "configuration": {
+            "compression": "zstd",
+            "chunk_size": 1048576,
+            "deduplicate": true,
+            "transform": "none",
+            "queries": 0,
+            "seed": 20261014
+          },
+          "implementation_checksums": {
+            "__init__.py": "7ca2a96250c51a3a23356ef772d734005eed0f255d29f2f52997bf5c3c703580",
+            "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+            "benchmark.py": "cf9e1297000e8398b1466e529e1913b2fcc32e257082aca1006973a2ef37adf7",
+            "cli.py": "e5cc180043e39d2df410625b19202c5df2e86ecea5adeae29c026095a987486f",
+            "codecs.py": "3e7abe9b02e6c93d1106898f2a6db4b45763616ba358df9eed54199cb065db6b",
+            "controlled.py": "e1feca7b4b2b665c7f125a43ffbd48630bc90ab99a31cab36d57481d2bc23bd3",
+            "core.py": "a0233d40b0ded1533f011158454ebc92f9479356996d528491658729d43613c5",
+            "datasets.py": "4ef54c7a98c4903e55aaada29b6df7d43329bf1a4c952862fa24ea10d3f377ea",
+            "transforms.py": "3a50f14a7e6998bf35fa475e2f0e8394e0c34912fade5baaa90c383cb7292ad6"
+          },
+          "encode_s": {
+            "samples": [
+              0.0658255000016652,
+              0.07239709999703337,
+              0.06859049999911804,
+              0.06572109999979148,
+              0.06490660000417847
+            ],
+            "median": 0.0658255000016652,
+            "min": 0.06490660000417847,
+            "max": 0.07239709999703337,
+            "stdev": 0.00307669614580946,
+            "p95": 0.07239709999703337
+          },
+          "decode_s": {
+            "samples": [
+              0.02339209999627201,
+              0.023196299996925518,
+              0.023182899996754713,
+              0.023339899998973124,
+              0.02407629999652272
+            ],
+            "median": 0.023339899998973124,
+            "min": 0.023182899996754713,
+            "max": 0.02407629999652272,
+            "stdev": 0.00036832423190444796,
+            "p95": 0.02407629999652272
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.0625,
+              0.0625,
+              0.0625,
+              0.046875,
+              0.03125
+            ],
+            "median": 0.0625,
+            "min": 0.03125,
+            "max": 0.0625,
+            "stdev": 0.013975424859373685,
+            "p95": 0.0625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.03125,
+              0.03125,
+              0.03125,
+              0.015625,
+              0.015625
+            ],
+            "median": 0.03125,
+            "min": 0.015625,
+            "max": 0.03125,
+            "stdev": 0.00855816496101822,
+            "p95": 0.03125
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              29831168,
+              30117888,
+              29827072,
+              29941760,
+              29761536
+            ],
+            "median": 29831168,
+            "min": 29761536,
+            "max": 30117888,
+            "stdev": 139966.9786885464,
+            "p95": 30117888
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              29233152,
+              29110272,
+              29126656,
+              29310976,
+              29442048
+            ],
+            "median": 29233152,
+            "min": 29110272,
+            "max": 29442048,
+            "stdev": 137365.69744736128,
+            "p95": 29442048
+          },
+          "storage": {
+            "files": 3,
+            "raw_bytes": 8548498,
+            "chunk_references": 10,
+            "unique_chunks": 10,
+            "reused_chunks": 0,
+            "new_chunks": 10,
+            "unique_raw_bytes": 8548498,
+            "payload_bytes": 2730407,
+            "metadata_bytes": 3005,
+            "stored_bytes": 2733412,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "none",
+            "transformed_chunks": 0,
+            "transform_attempts": 0,
+            "archive_sha256": "c2953807858e71a16c9986e5d38800ed1ab1e1b2135d13311958e2315591a0ee"
+          },
+          "range_reads": null,
+          "bytewise_verified": true,
+          "verified_measured_roundtrips": 5,
+          "verified_warmup_roundtrips": 1,
+          "deterministic_archive_bytes": true
+        },
+        "reuse": {
+          "configuration": {
+            "compression": "zstd",
+            "chunk_size": 1048576,
+            "deduplicate": true,
+            "transform": "none",
+            "queries": 0,
+            "seed": 20261014
+          },
+          "implementation_checksums": {
+            "__init__.py": "7ca2a96250c51a3a23356ef772d734005eed0f255d29f2f52997bf5c3c703580",
+            "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+            "benchmark.py": "cf9e1297000e8398b1466e529e1913b2fcc32e257082aca1006973a2ef37adf7",
+            "cli.py": "e5cc180043e39d2df410625b19202c5df2e86ecea5adeae29c026095a987486f",
+            "codecs.py": "3e7abe9b02e6c93d1106898f2a6db4b45763616ba358df9eed54199cb065db6b",
+            "controlled.py": "e1feca7b4b2b665c7f125a43ffbd48630bc90ab99a31cab36d57481d2bc23bd3",
+            "core.py": "a0233d40b0ded1533f011158454ebc92f9479356996d528491658729d43613c5",
+            "datasets.py": "4ef54c7a98c4903e55aaada29b6df7d43329bf1a4c952862fa24ea10d3f377ea",
+            "transforms.py": "3a50f14a7e6998bf35fa475e2f0e8394e0c34912fade5baaa90c383cb7292ad6"
+          },
+          "encode_s": {
+            "samples": [
+              0.05344640000112122,
+              0.05187649999425048,
+              0.049955900001805276,
+              0.05309099999431055,
+              0.04703429999790387
+            ],
+            "median": 0.05187649999425048,
+            "min": 0.04703429999790387,
+            "max": 0.05344640000112122,
+            "stdev": 0.0026414800838821377,
+            "p95": 0.05344640000112122
+          },
+          "decode_s": {
+            "samples": [
+              0.02296339999884367,
+              0.02246719999675406,
+              0.02270390000194311,
+              0.022966399999859277,
+              0.022451799995906185
+            ],
+            "median": 0.02270390000194311,
+            "min": 0.022451799995906185,
+            "max": 0.022966399999859277,
+            "stdev": 0.00025278813016813413,
+            "p95": 0.022966399999859277
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.03125,
+              0.03125,
+              0.03125,
+              0.03125,
+              0.03125
+            ],
+            "median": 0.03125,
+            "min": 0.03125,
+            "max": 0.03125,
+            "stdev": 0.0,
+            "p95": 0.03125
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.03125,
+              0.03125,
+              0.03125,
+              0.015625
+            ],
+            "median": 0.03125,
+            "min": 0.015625,
+            "max": 0.03125,
+            "stdev": 0.00855816496101822,
+            "p95": 0.03125
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              29122560,
+              29339648,
+              29282304,
+              29798400,
+              29106176
+            ],
+            "median": 29282304,
+            "min": 29106176,
+            "max": 29798400,
+            "stdev": 280577.49488652864,
+            "p95": 29798400
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              29425664,
+              29364224,
+              29421568,
+              29106176,
+              29372416
+            ],
+            "median": 29372416,
+            "min": 29106176,
+            "max": 29425664,
+            "stdev": 132554.81249958448,
+            "p95": 29425664
+          },
+          "storage": {
+            "files": 3,
+            "raw_bytes": 8548498,
+            "chunk_references": 10,
+            "unique_chunks": 10,
+            "reused_chunks": 10,
+            "new_chunks": 0,
+            "unique_raw_bytes": 8548498,
+            "payload_bytes": 2730407,
+            "metadata_bytes": 3005,
+            "stored_bytes": 2733412,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "none",
+            "transformed_chunks": 0,
+            "transform_attempts": 0,
+            "archive_sha256": "c2953807858e71a16c9986e5d38800ed1ab1e1b2135d13311958e2315591a0ee"
+          },
+          "range_reads": null,
+          "bytewise_verified": true,
+          "verified_measured_roundtrips": 5,
+          "verified_warmup_roundtrips": 1,
+          "deterministic_archive_bytes": true
+        }
+      }
+    }
+  ],
+  "limitation": "fixed chunks; every mode reads/hashes source and writes a complete independent archive"
+}

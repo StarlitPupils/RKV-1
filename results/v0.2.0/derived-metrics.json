@@ -1,0 +1,1634 @@
+[
+  {
+    "dataset": "uci",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 262144,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 201192,
+    "compression_ratio": 3.528967354566782,
+    "encode_mib_s": 5.821807073543139,
+    "decode_mib_s": 29.218971753894635,
+    "basis": "uci.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "uci",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 1048576,
+      "deduplicate": true,
+      "transform": "csv-columns-v1",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 191688,
+    "compression_ratio": 3.703935561954843,
+    "encode_mib_s": 3.0609375204055933,
+    "decode_mib_s": 8.040296728823996,
+    "basis": "uci.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "uci",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 1048576,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 717360,
+    "compression_ratio": 0.9897401583584253,
+    "encode_mib_s": 8.797276326755254,
+    "decode_mib_s": 30.831486083730525,
+    "basis": "uci.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "uci",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 65536,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 719408,
+    "compression_ratio": 0.9869225807886485,
+    "encode_mib_s": 9.342936444033592,
+    "decode_mib_s": 30.110852627252807,
+    "basis": "uci.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "uci",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 65536,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 718968,
+    "compression_ratio": 0.987526565855504,
+    "encode_mib_s": 8.695954586255093,
+    "decode_mib_s": 30.438968419198694,
+    "basis": "uci.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "uci",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 65536,
+      "deduplicate": true,
+      "transform": "csv-columns-v1",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 214968,
+    "compression_ratio": 3.302817163484798,
+    "encode_mib_s": 4.3223754851549385,
+    "decode_mib_s": 8.051693374289178,
+    "basis": "uci.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "uci",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 65536,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 206560,
+    "compression_ratio": 3.4372579395817198,
+    "encode_mib_s": 6.155937158737731,
+    "decode_mib_s": 28.084612136944333,
+    "basis": "uci.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "uci",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 262144,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 717056,
+    "compression_ratio": 0.9901597643698679,
+    "encode_mib_s": 8.859340524873414,
+    "decode_mib_s": 28.054823005692857,
+    "basis": "uci.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "uci",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 262144,
+      "deduplicate": true,
+      "transform": "csv-columns-v1",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 191680,
+    "compression_ratio": 3.7040901502504173,
+    "encode_mib_s": 3.2212718438983536,
+    "decode_mib_s": 7.873211248068166,
+    "basis": "uci.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "uci",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 262144,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 717352,
+    "compression_ratio": 0.9897511960655299,
+    "encode_mib_s": 9.119948669305195,
+    "decode_mib_s": 30.502593196605186,
+    "basis": "uci.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "uci",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 1048576,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 717064,
+    "compression_ratio": 0.9901487175482244,
+    "encode_mib_s": 8.615316832404703,
+    "decode_mib_s": 30.73185270207022,
+    "basis": "uci.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "uci",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 65536,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 207000,
+    "compression_ratio": 3.429951690821256,
+    "encode_mib_s": 6.040867574425995,
+    "decode_mib_s": 27.394677534319825,
+    "basis": "uci.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "uci",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 1048576,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 201496,
+    "compression_ratio": 3.5236431492436573,
+    "encode_mib_s": 5.632322213700796,
+    "decode_mib_s": 27.304534349181388,
+    "basis": "uci.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "uci",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 262144,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 201488,
+    "compression_ratio": 3.5237830540776622,
+    "encode_mib_s": 5.979878023820981,
+    "decode_mib_s": 27.569575118227142,
+    "basis": "uci.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "uci",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 262144,
+      "deduplicate": true,
+      "transform": "csv-columns-v1",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 210256,
+    "compression_ratio": 3.376835857240697,
+    "encode_mib_s": 4.432337940339802,
+    "decode_mib_s": 7.0598643394373575,
+    "basis": "uci.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "uci",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 262144,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 213440,
+    "compression_ratio": 3.326461769115442,
+    "encode_mib_s": 7.717781610090409,
+    "decode_mib_s": 17.6624781839324,
+    "basis": "uci.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "uci",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 262144,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 213736,
+    "compression_ratio": 3.3218549986899726,
+    "encode_mib_s": 8.874202688040809,
+    "decode_mib_s": 17.05632379299619,
+    "basis": "uci.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "uci",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 1048576,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 213744,
+    "compression_ratio": 3.3217306684632084,
+    "encode_mib_s": 9.673424560172869,
+    "decode_mib_s": 17.9906039867741,
+    "basis": "uci.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "uci",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 65536,
+      "deduplicate": true,
+      "transform": "csv-columns-v1",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 198936,
+    "compression_ratio": 3.568987010897977,
+    "encode_mib_s": 3.2781007919476353,
+    "decode_mib_s": 7.891784127248637,
+    "basis": "uci.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "uci",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 1048576,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 201200,
+    "compression_ratio": 3.5288270377733597,
+    "encode_mib_s": 5.637611940955878,
+    "decode_mib_s": 27.34423012882864,
+    "basis": "uci.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "uci",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 65536,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 218072,
+    "compression_ratio": 3.255805422062438,
+    "encode_mib_s": 8.930100084232727,
+    "decode_mib_s": 18.590448843673457,
+    "basis": "uci.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "uci",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 65536,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 217632,
+    "compression_ratio": 3.2623878841346863,
+    "encode_mib_s": 7.303419269757924,
+    "decode_mib_s": 18.084783573009812,
+    "basis": "uci.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "uci",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 1048576,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 213448,
+    "compression_ratio": 3.326337093812076,
+    "encode_mib_s": 9.930261235706308,
+    "decode_mib_s": 18.764376250830445,
+    "basis": "uci.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "uci",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 1048576,
+      "deduplicate": true,
+      "transform": "csv-columns-v1",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 210264,
+    "compression_ratio": 3.376707377392231,
+    "encode_mib_s": 4.133955045064804,
+    "decode_mib_s": 6.851274970764284,
+    "basis": "uci.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "scifact",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 65536,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 68937896,
+    "compression_ratio": 0.9959418546803344,
+    "encode_mib_s": 114.15057591683383,
+    "decode_mib_s": 512.5777423025448,
+    "basis": "scifact.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "scifact",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 65536,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 24365464,
+    "compression_ratio": 2.817846440355086,
+    "encode_mib_s": 28.25509617261391,
+    "decode_mib_s": 217.12926421651727,
+    "basis": "scifact.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "scifact",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 1048576,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 68685128,
+    "compression_ratio": 0.9996070182762126,
+    "encode_mib_s": 111.9870784392541,
+    "decode_mib_s": 561.9035844754416,
+    "basis": "scifact.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "scifact",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 65536,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 24346448,
+    "compression_ratio": 2.8200473432510567,
+    "encode_mib_s": 28.47151892222561,
+    "decode_mib_s": 219.56518842001114,
+    "basis": "scifact.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "scifact",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 1048576,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 22906264,
+    "compression_ratio": 2.997351990704377,
+    "encode_mib_s": 24.858202956728036,
+    "decode_mib_s": 226.91813762696015,
+    "basis": "scifact.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "scifact",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 65536,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 68918880,
+    "compression_ratio": 0.9962166535497965,
+    "encode_mib_s": 106.94059330457624,
+    "decode_mib_s": 517.8805388703244,
+    "basis": "scifact.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "scifact",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 262144,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 68737024,
+    "compression_ratio": 0.9988523215669041,
+    "encode_mib_s": 118.44648451739376,
+    "decode_mib_s": 581.8319067949245,
+    "basis": "scifact.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "scifact",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 262144,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 23545064,
+    "compression_ratio": 2.916030977872899,
+    "encode_mib_s": 123.13633697630881,
+    "decode_mib_s": 324.2423537478827,
+    "basis": "scifact.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "scifact",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 1048576,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 22907856,
+    "compression_ratio": 2.9971436873009853,
+    "encode_mib_s": 24.910262154700956,
+    "decode_mib_s": 223.14552080569024,
+    "basis": "scifact.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "scifact",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 262144,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 23550112,
+    "compression_ratio": 2.915405922485634,
+    "encode_mib_s": 124.6436458932857,
+    "decode_mib_s": 327.1885739144862,
+    "basis": "scifact.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "scifact",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 1048576,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 21965992,
+    "compression_ratio": 3.1256560596034086,
+    "encode_mib_s": 129.07077503106282,
+    "decode_mib_s": 352.63474153023043,
+    "basis": "scifact.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "scifact",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 262144,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 23210224,
+    "compression_ratio": 2.9580988102484493,
+    "encode_mib_s": 25.458060759985134,
+    "decode_mib_s": 214.0274419299949,
+    "basis": "scifact.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "scifact",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 262144,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 23205176,
+    "compression_ratio": 2.9587423081815882,
+    "encode_mib_s": 25.589239711051363,
+    "decode_mib_s": 213.48481592933757,
+    "basis": "scifact.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "scifact",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 262144,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 68731976,
+    "compression_ratio": 0.9989256819853397,
+    "encode_mib_s": 109.03859346969952,
+    "decode_mib_s": 578.6562511210583,
+    "basis": "scifact.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "scifact",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 1048576,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 68686720,
+    "compression_ratio": 0.9995838496873922,
+    "encode_mib_s": 84.30443472054145,
+    "decode_mib_s": 555.7418173816135,
+    "basis": "scifact.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "scifact",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 65536,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 25148600,
+    "compression_ratio": 2.7300977390391514,
+    "encode_mib_s": 104.58835995370616,
+    "decode_mib_s": 333.65895831575284,
+    "basis": "scifact.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "scifact",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 65536,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 25129584,
+    "compression_ratio": 2.732163652211672,
+    "encode_mib_s": 100.5707329160846,
+    "decode_mib_s": 333.4509771017417,
+    "basis": "scifact.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "scifact",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 1048576,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 21964400,
+    "compression_ratio": 3.1258826100417036,
+    "encode_mib_s": 112.24755493135432,
+    "decode_mib_s": 352.7411257645183,
+    "basis": "scifact.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "qasper",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 65536,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 348328896,
+    "compression_ratio": 0.99602584793884,
+    "encode_mib_s": 131.0631782371833,
+    "decode_mib_s": 642.3085355021472,
+    "basis": "qasper.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "qasper",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 65536,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 95603680,
+    "compression_ratio": 3.6289877544462725,
+    "encode_mib_s": 37.754200959542,
+    "decode_mib_s": 267.05135224126246,
+    "basis": "qasper.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "qasper",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 1048576,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 347031536,
+    "compression_ratio": 0.9997494406387321,
+    "encode_mib_s": 121.5288950102006,
+    "decode_mib_s": 703.2925513600971,
+    "basis": "qasper.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "qasper",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 65536,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 95508344,
+    "compression_ratio": 3.6326101937229693,
+    "encode_mib_s": 37.66346328890799,
+    "decode_mib_s": 269.37351826652514,
+    "basis": "qasper.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "qasper",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 1048576,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 87219736,
+    "compression_ratio": 3.977821992031712,
+    "encode_mib_s": 33.97275311600972,
+    "decode_mib_s": 287.396218549793,
+    "basis": "qasper.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "qasper",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 65536,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 348233560,
+    "compression_ratio": 0.9962985302163295,
+    "encode_mib_s": 122.13291593236264,
+    "decode_mib_s": 662.7484744507833,
+    "basis": "qasper.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "qasper",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 262144,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 347298256,
+    "compression_ratio": 0.9989816476360307,
+    "encode_mib_s": 123.0707762218446,
+    "decode_mib_s": 751.5257529457377,
+    "basis": "qasper.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "qasper",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 262144,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 90961024,
+    "compression_ratio": 3.814211502280361,
+    "encode_mib_s": 171.47493662641813,
+    "decode_mib_s": 432.3887050654158,
+    "basis": "qasper.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "qasper",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 1048576,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 87225792,
+    "compression_ratio": 3.9775458158064074,
+    "encode_mib_s": 33.556658122098725,
+    "decode_mib_s": 285.7331576652451,
+    "basis": "qasper.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "qasper",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 262144,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 90984936,
+    "compression_ratio": 3.8132090789182946,
+    "encode_mib_s": 168.93967563322178,
+    "decode_mib_s": 426.4603197263731,
+    "basis": "qasper.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "qasper",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 1048576,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 85292208,
+    "compression_ratio": 4.067717229222159,
+    "encode_mib_s": 148.72240739163448,
+    "decode_mib_s": 473.9783309182437,
+    "basis": "qasper.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "qasper",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 262144,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 88986248,
+    "compression_ratio": 3.8988561918016815,
+    "encode_mib_s": 33.8670640073348,
+    "decode_mib_s": 261.88427791229304,
+    "basis": "qasper.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "qasper",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 262144,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 88962336,
+    "compression_ratio": 3.8999041571929944,
+    "encode_mib_s": 35.077389949543445,
+    "decode_mib_s": 264.48087917691436,
+    "basis": "qasper.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "qasper",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 262144,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 347274344,
+    "compression_ratio": 0.999050433740075,
+    "encode_mib_s": 116.25656593135858,
+    "decode_mib_s": 734.4462287760491,
+    "basis": "qasper.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "qasper",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 1048576,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 347037592,
+    "compression_ratio": 0.9997319944520593,
+    "encode_mib_s": 118.44086585378365,
+    "decode_mib_s": 692.1721663325499,
+    "basis": "qasper.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "qasper",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 65536,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 99416600,
+    "compression_ratio": 3.4898053644964726,
+    "encode_mib_s": 158.2596283801613,
+    "decode_mib_s": 436.86687784638974,
+    "basis": "qasper.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "qasper",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 65536,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 99321264,
+    "compression_ratio": 3.493155141481083,
+    "encode_mib_s": 160.1616267946218,
+    "decode_mib_s": 438.9137409256798,
+    "basis": "qasper.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "qasper",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 1048576,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 85286152,
+    "compression_ratio": 4.068006069730992,
+    "encode_mib_s": 168.64546005630064,
+    "decode_mib_s": 478.1450095934103,
+    "basis": "qasper.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 262144,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 751272,
+    "compression_ratio": 3.712370486321865,
+    "encode_mib_s": 10.832088504382872,
+    "decode_mib_s": 76.97242865865786,
+    "basis": "wine.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 1048576,
+      "deduplicate": true,
+      "transform": "csv-columns-v1",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 713392,
+    "compression_ratio": 3.90949155583466,
+    "encode_mib_s": 4.254412878971986,
+    "decode_mib_s": 9.776108857922518,
+    "basis": "wine.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 1048576,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 2796536,
+    "compression_ratio": 0.9973052376225444,
+    "encode_mib_s": 29.62466996409849,
+    "decode_mib_s": 103.33645442983554,
+    "basis": "wine.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 65536,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 2806824,
+    "compression_ratio": 0.9936497621511003,
+    "encode_mib_s": 31.66486111263168,
+    "decode_mib_s": 106.7060494043874,
+    "basis": "wine.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 65536,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 2805808,
+    "compression_ratio": 0.9940095687231628,
+    "encode_mib_s": 32.017363755237746,
+    "decode_mib_s": 96.26623881106104,
+    "basis": "wine.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 65536,
+      "deduplicate": true,
+      "transform": "csv-columns-v1",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 814152,
+    "compression_ratio": 3.4256502471283006,
+    "encode_mib_s": 7.596279219960743,
+    "decode_mib_s": 19.745381523020278,
+    "basis": "wine.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 65536,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 777496,
+    "compression_ratio": 3.587156718491156,
+    "encode_mib_s": 11.321255563137399,
+    "decode_mib_s": 83.42317174152721,
+    "basis": "wine.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 262144,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 2798136,
+    "compression_ratio": 0.996734969279549,
+    "encode_mib_s": 32.21747808474262,
+    "decode_mib_s": 104.88822901761752,
+    "basis": "wine.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 262144,
+      "deduplicate": true,
+      "transform": "csv-columns-v1",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 717672,
+    "compression_ratio": 3.8861764148524673,
+    "encode_mib_s": 4.056508825549504,
+    "decode_mib_s": 9.873570333706377,
+    "basis": "wine.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 262144,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 2798576,
+    "compression_ratio": 0.9965782598006987,
+    "encode_mib_s": 22.90622604604403,
+    "decode_mib_s": 109.09752529079293,
+    "basis": "wine.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 1048576,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 2796240,
+    "compression_ratio": 0.9974108088003891,
+    "encode_mib_s": 30.184909895770502,
+    "decode_mib_s": 103.33324270516617,
+    "basis": "wine.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 65536,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 778512,
+    "compression_ratio": 3.582475286186982,
+    "encode_mib_s": 12.796003051996887,
+    "decode_mib_s": 80.78401897751344,
+    "basis": "wine.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 1048576,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 748240,
+    "compression_ratio": 3.727413664065006,
+    "encode_mib_s": 10.446244361831248,
+    "decode_mib_s": 82.72984674120825,
+    "basis": "wine.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 262144,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 751712,
+    "compression_ratio": 3.7101975224554082,
+    "encode_mib_s": 11.917083356026637,
+    "decode_mib_s": 77.7973390834192,
+    "basis": "wine.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 262144,
+      "deduplicate": true,
+      "transform": "csv-columns-v1",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 793176,
+    "compression_ratio": 3.516243557545866,
+    "encode_mib_s": 7.914462752847929,
+    "decode_mib_s": 9.362214566634126,
+    "basis": "wine.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 262144,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 803656,
+    "compression_ratio": 3.470390316254716,
+    "encode_mib_s": 25.357101565867964,
+    "decode_mib_s": 63.01643457065185,
+    "basis": "wine.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 262144,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 804096,
+    "compression_ratio": 3.468491324418975,
+    "encode_mib_s": 25.270180329909916,
+    "decode_mib_s": 64.6561215710159,
+    "basis": "wine.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 1048576,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 787632,
+    "compression_ratio": 3.5409937635850244,
+    "encode_mib_s": 24.624837692756763,
+    "decode_mib_s": 64.15086897399033,
+    "basis": "wine.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 65536,
+      "deduplicate": true,
+      "transform": "csv-columns-v1",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 760112,
+    "compression_ratio": 3.6691961184667523,
+    "encode_mib_s": 4.293320100117774,
+    "decode_mib_s": 9.795810565796238,
+    "basis": "wine.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 1048576,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 747944,
+    "compression_ratio": 3.7288887938134407,
+    "encode_mib_s": 11.098731429171774,
+    "decode_mib_s": 81.78356044798393,
+    "basis": "wine.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 65536,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 819440,
+    "compression_ratio": 3.4035438836278433,
+    "encode_mib_s": 32.46664797267901,
+    "decode_mib_s": 63.88338881833534,
+    "basis": "wine.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 65536,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 818424,
+    "compression_ratio": 3.407769078130651,
+    "encode_mib_s": 26.18859654202942,
+    "decode_mib_s": 61.781047692439884,
+    "basis": "wine.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 1048576,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 787336,
+    "compression_ratio": 3.542325004826402,
+    "encode_mib_s": 32.0093492258625,
+    "decode_mib_s": 64.32213979194641,
+    "basis": "wine.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "wine",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 1048576,
+      "deduplicate": true,
+      "transform": "csv-columns-v1",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 784152,
+    "compression_ratio": 3.5567083932706924,
+    "encode_mib_s": 7.238411315653427,
+    "decode_mib_s": 25.55119532166723,
+    "basis": "wine.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "synthetic-duplicates",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 65536,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 33692624,
+    "compression_ratio": 0.9958984494647849,
+    "encode_mib_s": 101.266079159269,
+    "decode_mib_s": 395.9298409860307,
+    "basis": "synthetic-duplicates.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "synthetic-duplicates",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 65536,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 33692632,
+    "compression_ratio": 0.9958982129980228,
+    "encode_mib_s": 39.431049388841075,
+    "decode_mib_s": 418.24816765209243,
+    "basis": "synthetic-duplicates.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "synthetic-duplicates",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 1048576,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 8397408,
+    "compression_ratio": 3.995808230349174,
+    "encode_mib_s": 225.7884249586119,
+    "decode_mib_s": 445.80166281231857,
+    "basis": "synthetic-duplicates.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "synthetic-duplicates",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 65536,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 8450384,
+    "compression_ratio": 3.9707582519326934,
+    "encode_mib_s": 110.68252376298555,
+    "decode_mib_s": 453.25779014046566,
+    "basis": "synthetic-duplicates.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "synthetic-duplicates",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 1048576,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 8397416,
+    "compression_ratio": 3.9958044236465122,
+    "encode_mib_s": 115.88794794154343,
+    "decode_mib_s": 481.09882966489135,
+    "basis": "synthetic-duplicates.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "synthetic-duplicates",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 65536,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 8450376,
+    "compression_ratio": 3.9707620110631763,
+    "encode_mib_s": 199.68051117856234,
+    "decode_mib_s": 466.06466654100166,
+    "basis": "synthetic-duplicates.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "synthetic-duplicates",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 262144,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 33593280,
+    "compression_ratio": 0.9988435782394575,
+    "encode_mib_s": 105.16767671115741,
+    "decode_mib_s": 439.9810807078849,
+    "basis": "synthetic-duplicates.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "synthetic-duplicates",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 262144,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 8408064,
+    "compression_ratio": 3.990744123736451,
+    "encode_mib_s": 208.49187402460066,
+    "decode_mib_s": 483.0392830874873,
+    "basis": "synthetic-duplicates.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "synthetic-duplicates",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 1048576,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 33568168,
+    "compression_ratio": 0.9995908028105674,
+    "encode_mib_s": 37.68256022891374,
+    "decode_mib_s": 444.07931274590703,
+    "basis": "synthetic-duplicates.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "synthetic-duplicates",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 262144,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 33593288,
+    "compression_ratio": 0.998843340372041,
+    "encode_mib_s": 90.28142978159326,
+    "decode_mib_s": 450.69406881236586,
+    "basis": "synthetic-duplicates.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "synthetic-duplicates",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 1048576,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 33568168,
+    "compression_ratio": 0.9995908028105674,
+    "encode_mib_s": 80.4110613466873,
+    "decode_mib_s": 456.10034205612465,
+    "basis": "synthetic-duplicates.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "synthetic-duplicates",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 262144,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 33593288,
+    "compression_ratio": 0.998843340372041,
+    "encode_mib_s": 37.425184717166516,
+    "decode_mib_s": 453.483889982984,
+    "basis": "synthetic-duplicates.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "synthetic-duplicates",
+    "configuration": {
+      "compression": "zlib",
+      "chunk_size": 262144,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 8408064,
+    "compression_ratio": 3.990744123736451,
+    "encode_mib_s": 117.87379254274529,
+    "decode_mib_s": 483.82219527072385,
+    "basis": "synthetic-duplicates.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "synthetic-duplicates",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 262144,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 8408056,
+    "compression_ratio": 3.9907479208035723,
+    "encode_mib_s": 228.17245271480257,
+    "decode_mib_s": 484.3846497977077,
+    "basis": "synthetic-duplicates.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "synthetic-duplicates",
+    "configuration": {
+      "compression": "raw",
+      "chunk_size": 1048576,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 33568160,
+    "compression_ratio": 0.9995910410341228,
+    "encode_mib_s": 99.98575202878617,
+    "decode_mib_s": 457.35193233706826,
+    "basis": "synthetic-duplicates.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "synthetic-duplicates",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 65536,
+      "deduplicate": false,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 33692632,
+    "compression_ratio": 0.9958982129980228,
+    "encode_mib_s": 81.53165365268244,
+    "decode_mib_s": 410.85056341200936,
+    "basis": "synthetic-duplicates.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "synthetic-duplicates",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 65536,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 8450384,
+    "compression_ratio": 3.9707582519326934,
+    "encode_mib_s": 203.28715333503752,
+    "decode_mib_s": 465.451837114062,
+    "basis": "synthetic-duplicates.json medians; calculated, not additional measurements"
+  },
+  {
+    "dataset": "synthetic-duplicates",
+    "configuration": {
+      "compression": "zstd",
+      "chunk_size": 1048576,
+      "deduplicate": true,
+      "transform": "none",
+      "queries": 128,
+      "seed": 20261014
+    },
+    "stored_bits": 8397416,
+    "compression_ratio": 3.9958044236465122,
+    "encode_mib_s": 192.0399442995805,
+    "decode_mib_s": 488.32297663260476,
+    "basis": "synthetic-duplicates.json medians; calculated, not additional measurements"
+  }
+]

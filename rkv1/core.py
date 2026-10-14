@@ -1,4 +1,4 @@
-"""RKV1 draft 0.1: self-contained, content-addressed directory archives.
+"""RKV1 draft 0.2: self-contained, content-addressed directory archives.
 
 Only regular-file relative paths and bytes are preserved. No lossy transforms.
 The SHA-256 digest of the manifest detects accidental metadata damage, not forgery.
@@ -15,10 +15,12 @@ import stat
 import struct
 import tempfile
 import unicodedata
-import zlib
+
+from .codecs import compressor, decompress
+from .transforms import csv_columns_decode, csv_columns_encode
 
 MAGIC = b"RKV1\r\n\x1a\n"
-VERSION = 1
+VERSION = 2
 DEFAULT_CHUNK = 1 << 20
 MAX_CHUNK = 8 << 20
 MAX_HEADER = 64 << 20
@@ -34,6 +36,20 @@ def digest(data: bytes) -> str:
 
 def valid_hash(value):
     return isinstance(value, str) and len(value) == 64 and all(c in "0123456789abcdef" for c in value)
+
+
+def block_hash(key):
+    return key.split("@", 1)[0]
+
+
+def valid_block_id(key, version, deduplicate):
+    if not isinstance(key, str):
+        return False
+    if version == 1 or deduplicate:
+        return valid_hash(key)
+    parts = key.split("@")
+    return (len(parts) == 2 and valid_hash(parts[0]) and len(parts[1]) == 8
+            and all(c in "0123456789abcdef" for c in parts[1]))
 
 
 def valid_path(value):
@@ -116,10 +132,20 @@ def _unique_object(pairs):
 
 
 def validate_manifest(header, payload_size):
-    if not isinstance(header, dict) or set(header) != {"version", "chunk_size", "files", "blocks"}:
+    if not isinstance(header, dict):
         raise ValueError("Invalid manifest schema")
-    if type(header["version"]) is not int or header["version"] != VERSION:
+    version = header.get("version")
+    if type(version) is not int or version not in (1, VERSION):
         raise ValueError("Unsupported format version")
+    fields = {"version", "chunk_size", "files", "blocks"}
+    if version == 2:
+        fields.update(("compression", "deduplicate", "transform"))
+    if set(header) != fields:
+        raise ValueError("Invalid manifest schema")
+    deduplicate = header.get("deduplicate", True)
+    if version == 2 and (type(deduplicate) is not bool or header["compression"] not in ("raw", "zlib", "zstd")
+                         or header["transform"] not in ("none", "csv-columns-v1")):
+        raise ValueError("Invalid archive encoding policy")
     chunk_size = header["chunk_size"]
     if type(chunk_size) is not int or not 1 <= chunk_size <= MAX_CHUNK:
         raise ValueError("Invalid chunk size")
@@ -129,17 +155,37 @@ def validate_manifest(header, payload_size):
     if len(files) > MAX_FILES or len(blocks) > MAX_BLOCKS:
         raise ValueError("Manifest exceeds prototype limits")
     ranges = []
+    suffixes = set()
     for key, meta in blocks.items():
-        if not valid_hash(key) or not isinstance(meta, dict) or set(meta) != {"offset", "stored_size", "raw_size", "codec"}:
+        block_fields = {"offset", "stored_size", "raw_size", "codec"}
+        if version == 2:
+            block_fields.update(("coded_size", "transform"))
+        if not valid_block_id(key, version, deduplicate) or not isinstance(meta, dict) or set(meta) != block_fields:
             raise ValueError("Invalid block metadata")
         if any(type(meta[f]) is not int for f in ("offset", "stored_size", "raw_size")):
             raise ValueError("Invalid block number")
         offset, stored, raw, codec = (meta[f] for f in ("offset", "stored_size", "raw_size", "codec"))
+        allowed_codecs = ("raw", "zlib") if version == 1 else ("raw", "zlib", "zstd")
         if (offset < 0 or not 1 <= raw <= chunk_size or not 1 <= stored <= raw
-                or codec not in ("raw", "zlib") or (codec == "raw" and stored != raw)
-                or (codec == "zlib" and stored >= raw) or offset + stored > payload_size):
+                or codec not in allowed_codecs or (codec == "raw" and stored != raw)
+                or (codec != "raw" and stored >= raw) or offset + stored > payload_size):
             raise ValueError("Invalid block bounds or codec")
+        if version == 2:
+            coded, transform = meta["coded_size"], meta["transform"]
+            if (type(coded) is not int or not 1 <= coded <= 2 * raw + 256
+                    or transform not in ("none", "csv-columns-v1")
+                    or (transform == "none" and coded != raw)
+                    or (transform != "none" and (codec == "raw" or header["transform"] != transform))
+                    or (codec != "raw" and codec != header["compression"])):
+                raise ValueError("Invalid block transform or encoding policy")
+            if not deduplicate:
+                suffix = int(key.split("@")[1], 16)
+                if suffix in suffixes:
+                    raise ValueError("Duplicate block occurrence index")
+                suffixes.add(suffix)
         ranges.append((offset, offset + stored))
+    if version == 2 and not deduplicate and suffixes != set(range(len(blocks))):
+        raise ValueError("Non-canonical block occurrence indices")
     cursor = 0
     for start, end in sorted(ranges):
         if start != cursor:
@@ -147,7 +193,7 @@ def validate_manifest(header, payload_size):
         cursor = end
     if cursor != payload_size:
         raise ValueError("Unexpected trailing payload")
-    total, referenced, paths = 0, set(), []
+    total, referenced, paths, reference_count = 0, set(), [], 0
     for entry in files:
         if not isinstance(entry, dict) or set(entry) != {"path", "size", "sha256", "chunks"}:
             raise ValueError("Invalid file entry")
@@ -168,6 +214,7 @@ def validate_manifest(header, payload_size):
                 raise ValueError("Non-canonical chunk length")
             size += blocks[key]["raw_size"]
             referenced.add(key)
+            reference_count += 1
         if size != entry["size"]:
             raise ValueError("File length mismatch")
         total += size
@@ -176,6 +223,8 @@ def validate_manifest(header, payload_size):
     _check_paths(paths)
     if referenced != set(blocks):
         raise ValueError("Unreferenced blocks")
+    if version == 2 and not deduplicate and reference_count != len(blocks):
+        raise ValueError("Repeated references in no-dedup archive")
 
 
 def read_manifest(stream):
@@ -205,17 +254,10 @@ def decode_block(stream, body_start, key, meta):
     stored = stream.read(meta["stored_size"])
     if len(stored) != meta["stored_size"]:
         raise ValueError("Truncated block")
-    if meta["codec"] == "raw":
-        raw = stored
-    else:
-        try:
-            decoder = zlib.decompressobj()
-            raw = decoder.decompress(stored, meta["raw_size"] + 1)
-        except zlib.error as exc:
-            raise ValueError("Invalid compressed block") from exc
-        if not decoder.eof or decoder.unused_data or decoder.unconsumed_tail:
-            raise ValueError("Malformed compressed block")
-    if len(raw) != meta["raw_size"] or digest(raw) != key:
+    raw = decompress(stored, meta["codec"], meta.get("coded_size", meta["raw_size"]))
+    if meta.get("transform", "none") == "csv-columns-v1":
+        raw = csv_columns_decode(raw, meta["raw_size"])
+    if len(raw) != meta["raw_size"] or digest(raw) != block_hash(key):
         raise ValueError("Block SHA-256 mismatch or length mismatch")
     return raw
 
@@ -284,21 +326,31 @@ class Archive:
                 "raw_bytes": sum(e["size"] for e in self.header["files"])}
 
 
-def pack(source, archive, chunk_size=DEFAULT_CHUNK, *, base=None, overwrite=False):
+def pack(source, archive, chunk_size=DEFAULT_CHUNK, *, base=None, overwrite=False,
+         compression="zlib", deduplicate=True, transform="none"):
     source, archive = Path(source), Path(archive)
     if type(chunk_size) is not int or not 1 <= chunk_size <= MAX_CHUNK:
         raise ValueError("Invalid chunk size")
+    if type(deduplicate) is not bool or transform not in ("none", "csv-columns-v1"):
+        raise ValueError("Invalid encoding policy")
+    if compression == "raw" and transform != "none":
+        raise ValueError("Transforms require a compression profile")
+    compress = compressor(compression)
     if archive.resolve().is_relative_to(source.resolve()):
         raise ValueError("Archive must be outside source directory")
     if archive.exists() and not overwrite:
         raise FileExistsError(archive)
     if base is not None and Path(base).resolve() == archive.resolve():
         raise ValueError("Base and new archive must differ")
-    entries, blocks, total_raw, reused = [], {}, 0, 0
+    entries, blocks, total_raw, reused, transformed, attempts = [], {}, 0, 0, 0, 0
     with ExitStack() as stack:
         previous = stack.enter_context(Archive(base)) if base else None
         if previous and previous.header["chunk_size"] != chunk_size:
             raise ValueError("Incremental base chunk size must match")
+        if previous and (previous.header.get("compression", "zlib") != compression
+                         or previous.header.get("transform", "none") != transform):
+            raise ValueError("Incremental base compression and transform policy must match")
+        previous_ids = {block_hash(key): key for key in previous.header["blocks"]} if previous else {}
         spool = stack.enter_context(tempfile.TemporaryFile())
         for path, rel in files_in(source):
             file_hash, references, size = hashlib.sha256(), [], 0
@@ -309,26 +361,46 @@ def pack(source, archive, chunk_size=DEFAULT_CHUNK, *, base=None, overwrite=Fals
                         raise ValueError("Prototype 2 GiB output limit")
                     size += len(raw)
                     file_hash.update(raw)
-                    key = digest(raw)
+                    raw_hash = digest(raw)
+                    key = raw_hash if deduplicate else f"{raw_hash}@{len(blocks):08x}"
                     references.append(key)
                     if key in blocks:
                         continue
                     if len(blocks) >= MAX_BLOCKS:
                         raise ValueError("Too many unique blocks")
-                    if previous and key in previous.header["blocks"]:
-                        if previous.block(key) != raw:
+                    if previous and raw_hash in previous_ids:
+                        previous_key = previous_ids[raw_hash]
+                        if previous.block(previous_key) != raw:
                             raise ValueError("Base block mismatch")
-                        old = previous.header["blocks"][key]
+                        old = previous.header["blocks"][previous_key]
                         previous.stream.seek(previous.body_start + old["offset"])
                         payload, codec = previous.stream.read(old["stored_size"]), old["codec"]
+                        coded_size, chosen_transform = old.get("coded_size", len(raw)), old.get("transform", "none")
                         reused += 1
                     else:
-                        compressed = zlib.compress(raw, level=6)
+                        compressed = compress(raw)
                         codec, payload = ("zlib", compressed) if len(compressed) < len(raw) else ("raw", raw)
-                    blocks[key] = {"offset": spool.tell(), "stored_size": len(payload), "raw_size": len(raw), "codec": codec}
+                        if codec != "raw":
+                            codec = compression
+                        coded_size, chosen_transform = len(raw), "none"
+                        if transform == "csv-columns-v1":
+                            attempts += 1
+                            candidate = csv_columns_encode(raw)
+                            if candidate is not None:
+                                candidate_payload = compress(candidate)
+                                # Include the longer transform label and coded-size field
+                                # in local selection. Full archive size is also benchmarked.
+                                extra = len(transform) - len("none") + len(str(len(candidate))) - len(str(len(raw)))
+                                if len(candidate_payload) + extra < len(payload):
+                                    payload, codec, coded_size, chosen_transform = candidate_payload, compression, len(candidate), transform
+                    if chosen_transform != "none":
+                        transformed += 1
+                    blocks[key] = {"offset": spool.tell(), "stored_size": len(payload), "raw_size": len(raw), "codec": codec,
+                                   "coded_size": coded_size, "transform": chosen_transform}
                     spool.write(payload)
             entries.append({"path": rel, "size": size, "sha256": file_hash.hexdigest(), "chunks": references})
-        header = {"version": VERSION, "chunk_size": chunk_size, "files": entries, "blocks": blocks}
+        header = {"version": VERSION, "chunk_size": chunk_size, "files": entries, "blocks": blocks,
+                  "compression": compression, "deduplicate": deduplicate, "transform": transform}
         validate_manifest(header, spool.tell())
         encoded = _json_bytes(header)
         if len(encoded) > MAX_HEADER:
@@ -354,7 +426,18 @@ def pack(source, archive, chunk_size=DEFAULT_CHUNK, *, base=None, overwrite=Fals
             "unique_chunks": len(blocks), "reused_chunks": reused, "new_chunks": len(blocks) - reused,
             "unique_raw_bytes": sum(b["raw_size"] for b in blocks.values()),
             "payload_bytes": sum(b["stored_size"] for b in blocks.values()),
-            "metadata_bytes": PREFIX_SIZE + len(encoded), "stored_bytes": archive.stat().st_size}
+            "metadata_bytes": PREFIX_SIZE + len(encoded), "stored_bytes": archive.stat().st_size,
+            "compression": compression, "deduplicate": deduplicate, "transform": transform,
+            "transformed_chunks": transformed, "transform_attempts": attempts,
+            "archive_sha256": _file_digest(archive)}
+
+
+def _file_digest(path):
+    h = hashlib.sha256()
+    with Path(path).open("rb") as stream:
+        while raw := stream.read(1 << 20):
+            h.update(raw)
+    return h.hexdigest()
 
 
 def verify(archive):

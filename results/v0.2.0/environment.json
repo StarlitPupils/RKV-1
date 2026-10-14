@@ -1,0 +1,16 @@
+{
+  "recorded_at_utc": "2026-10-14T11:47:05.845085+00:00",
+  "client_date": "2026-10-14",
+  "client_timezone": "Asia/Shanghai",
+  "cpu": {
+    "Name": "Intel(R) Core(TM) i5-14600KF",
+    "NumberOfCores": 14,
+    "NumberOfLogicalProcessors": 20
+  },
+  "physical_memory_bytes": 34138931200,
+  "notes": [
+    "CPU only",
+    "OS cache warm",
+    "no CPU affinity or background-load isolation"
+  ]
+}

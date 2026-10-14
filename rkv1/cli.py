@@ -16,6 +16,9 @@ def main(argv=None):
     p.add_argument("--chunk-size", type=int, default=DEFAULT_CHUNK)
     p.add_argument("--base", help="Reuse verified compressed chunks from an earlier snapshot")
     p.add_argument("--overwrite", action="store_true")
+    p.add_argument("--codec", choices=("raw", "zlib", "zstd"), default="zlib")
+    p.add_argument("--no-dedup", action="store_true")
+    p.add_argument("--transform", choices=("none", "csv-columns-v1"), default="none")
     p = sub.add_parser("unpack")
     p.add_argument("archive")
     p.add_argument("destination")
@@ -38,13 +41,21 @@ def main(argv=None):
     p.add_argument("--warmups", type=int, default=1)
     p.add_argument("--queries", type=int, default=32)
     p.add_argument("--chunk-size", type=int, default=DEFAULT_CHUNK)
+    p = sub.add_parser("bench-controlled")
+    p.add_argument("source")
+    p.add_argument("--out", required=True)
+    p.add_argument("--repeats", type=int, default=5)
+    p.add_argument("--warmups", type=int, default=1)
+    p.add_argument("--queries", type=int, default=128)
+    p.add_argument("--csv-trials", action="store_true")
     p = sub.add_parser("fetch")
     p.add_argument("destination")
-    p.add_argument("--dataset", choices=("uci", "scifact"), default="uci")
+    p.add_argument("--dataset", choices=("uci", "scifact", "qasper", "wine"), default="uci")
     args = parser.parse_args(argv)
     try:
         if args.command == "pack":
-            result = pack(args.source, args.archive, args.chunk_size, base=args.base, overwrite=args.overwrite)
+            result = pack(args.source, args.archive, args.chunk_size, base=args.base, overwrite=args.overwrite,
+                          compression=args.codec, deduplicate=not args.no_dedup, transform=args.transform)
         elif args.command == "unpack":
             result = unpack(args.archive, args.destination)
         elif args.command == "verify":
@@ -68,6 +79,14 @@ def main(argv=None):
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", "utf-8")
             result = {"report": str(path), "methods": len(result["results"])}
+        elif args.command == "bench-controlled":
+            from .controlled import controlled_benchmark
+            result = controlled_benchmark(args.source, repeats=args.repeats, warmups=args.warmups,
+                                          queries=args.queries, csv_trials=args.csv_trials)
+            path = Path(args.out)
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", "utf-8")
+            result = {"report": str(path), "configurations": len(result["results"])}
         else:
             from .datasets import fetch_public
             result = fetch_public(args.destination, args.dataset)
