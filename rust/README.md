@@ -1,4 +1,4 @@
-# Rust format boundary and CSV candidate
+# Rust format boundary and exact CSV kernel
 
 `cargo test --manifest-path rust/Cargo.toml`
 
@@ -9,9 +9,13 @@ converts floating-point values or normalizes literals/newlines. Dimensions,
 numeric grammar, newline map and exact output length remain checked.
 
 It is not a complete archive decoder or hash verifier. Python owns codecs,
-index/unit/parent/file SHA-256 and restoration. v0.5 measurements use Python only;
-no local Rust speedup is claimed. Windows/Linux CI tests the Rust functions and
-compares the shared library's output against eight Python-generated tables.
+index/unit/parent/file SHA-256 and restoration. v0.5 measurements used Python only.
+v0.6 uses a frozen v0.5 Windows release binary with the same csv.rs source for
+matched local CPU measurements, including FFI/copies and binary deployment cost.
+See [NATIVE.md](../docs/NATIVE.md) and [results](../results/v0.6.0/SUMMARY.md).
+Windows/Linux CI tests functions, Python differential cases, malformed payloads,
+v1/v2/v3 archives, integrity and the matched benchmark protocol. Linux correctness
+CI is not a cross-machine timing result.
 
 `cargo build --release --manifest-path rust/Cargo.toml` creates cdylib and rlib.
 `rkv1_csv_abi_version()` returns 1. The C ABI `rkv1_csv_decode(input, input_len,
@@ -23,5 +27,6 @@ and [catch_unwind](https://doc.rust-lang.org/std/panic/fn.catch_unwind.html).
 
 Release native ZIPs contain the library and native.json with source commit,
 platform, ABI, compiler and binary SHA-256. These are platform/build candidates,
-not universal portable binaries. The next milestone must measure Python/native
-using identical archives, include binary deployment cost, and preserve hashes.
+not universal portable binaries. Readers select a trusted release library explicitly;
+the optional Python wrapper checks the adjacent metadata and caches the loaded
+library per process. A checksum establishes identity, not publisher trust.

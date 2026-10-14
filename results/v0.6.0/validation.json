@@ -1,0 +1,30 @@
+{
+  "configurations": 52,
+  "archives": 26,
+  "measured_roundtrips": 260,
+  "warmup_roundtrips": 52,
+  "verified_range_reads": 99840,
+  "verified_warmup_range_reads": 6240,
+  "local_python_tests": {
+    "run": 63,
+    "passed": 62,
+    "skipped": 1,
+    "failed": 0,
+    "skip_reason": "Windows symlink permission"
+  },
+  "matching_requests": "all conditions/modes share actual fingerprints within each dataset/round/category",
+  "measurement_source_matches_release": true,
+  "native_source_commit": "5418b305172d349a864f64f123070e3ee949d301",
+  "rust_kernel_source_sha256": "8e1b2f7c6b2284afc300e2922983b673781f6d159a5cd2b4ee917f9d26ed9199",
+  "frozen_kernel_matches_release_source": true,
+  "native_binary_unchanged": true,
+  "native_metadata_unchanged": true,
+  "native_backend_scope": "CSV inverse only; hashes/codecs and archive bytes unchanged",
+  "installed_wheel": "outside checkout: native v1/v2/v3, CLI verify/read/unpack, exact comparison and matched workers passed",
+  "sdist_contents": "native source/protocol/fixtures included; raw data/private research excluded",
+  "cross_platform_ci": "65ed2a4 Windows/Linux Python 3.10/3.13, Rust and native integration passed; final release CI required",
+  "cold_os_cache": null,
+  "cross_machine": null,
+  "cross_day": null,
+  "inference_quality": null
+}

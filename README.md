@@ -6,7 +6,42 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.5.0 · 独立校验单元与完整索引成本
+## 当前版本：v0.6.0 · Rust 精确反变换与本机配对
+
+新增读取器实例级 `--decoder-backend rust --native-library ...`，只替换 CSV v1 的
+字面量检查和精确反变换。保留原有受限解压、单元/父块/文件 SHA-256；两个后端
+读取同一个归档。默认仍为 Python、Zlib/1 MiB、v2，CSV 和独立单元须显式启用。
+
+Wine、超导材料、HTRU2；26 份确定性归档、52 个条件，**260 次正式完整恢复 +
+52 次预热恢复、99,840 次正式范围读取 + 6,240 次查询预热全部逐字节一致**。
+本机使用 v0.5 Release 的冻结 Windows DLL，库/元数据/源码/输入哈希前后一致。
+本地 63 项测试：62 通过、1 符号链接权限跳过；Windows/Linux CI 验证新后端。
+
+超导材料、Zstd、CSV：同归档 Python → Rust，恢复含库校验/加载、FFI 和复制；
+范围已预热。五轮配对，不做显著性结论。
+
+| 布局 | 总 bytes | 完整恢复 ms | 恢复配对加速 | 重开 p95 ms |
+|---|---:|---:|---:|---:|
+| 1 MiB 整块 | 7,442,705 | 427.17 → 91.94 | 4.63× | 30.997 → 4.496 |
+| 1 MiB + 64 KiB 单元 | 7,817,638 | 395.15 → 99.45 | 3.97× | 2.457 → 1.009 |
+| 1 MiB + 16 KiB 单元 | 8,423,479 | 626.74 → 120.09 | 5.22× | 1.491 → 0.924 |
+
+上述 CSV 恢复/重开均五轮更快，但普通 Zstd/1 MiB 本轮恢复 **61.08 ms**、重开
+**2.346 ms**；不能把 CSV 后端加速当作普通编码已被全面超过。额外 DLL+元数据
+**121,747 bytes** 单列部署成本：本轮体积最小的超导材料 CSV/Zlib 归档 7,284,903
+bytes，比最小普通 Zstd 的 7,548,059 bytes 减小 263,156 bytes；计入一次原生资源后
+净省 **141,409 bytes**，恢复却为 **136.34 ms**（普通约61.08 ms）。Wine 单份归档
+的节省不足抵消原生资源；HTRU2 CR-only 回退并无变换收益。默认策略保持不变。
+
+![原生后端空间与读取代价](results/v0.6.0/native-tradeoffs.png)
+
+[完整配对结果](results/v0.6.0/SUMMARY.md) · [原生协议与执行说明](docs/NATIVE.md) ·
+[库来源](results/v0.6.0/native-provenance.json)。归档格式不变，兼容 v1/v2/v3；
+Release 附 Windows/Linux 原生库 ZIP，复现实验须选协议指定的冻结二进制。
+冷缓存/跨机器/跨日、推理质量未测。下一优先项为真实版本序列、CDC 与共享 CAS；
+数组/代码/数学类型、E3/E4 仍待开展。
+
+## 既有独立单元与索引实验（v0.5.0）
 
 显式 `--unit-size` 生成 RKV v3：1 MiB 父块内含独立 16/64 KiB 单元，每个单元有
 大小、codec、变换标志和原始 SHA-256。二进制索引按需校验并缓存，范围请求只

@@ -64,6 +64,8 @@ def generate(root):
             saving = plain["storage"]["stored_bytes"] - rust["storage"]["stored_bytes"]
             record = {"dataset": name, "codec": config["compression"], "layout": config["layout"],
                       "archive_bytes": rust["storage"]["stored_bytes"], "archive_sha256": rust["storage"]["archive_sha256"],
+                      "transformed_chunks": rust["storage"]["transformed_chunks"],
+                      "transformed_units": rust["storage"].get("transformed_units"),
                       "csv_archive_saving_vs_plain_bytes": saving,
                       "csv_archive_saving_vs_plain_pct": 100 * saving / plain["storage"]["stored_bytes"],
                       "native_incremental_deployment_bytes": cost,
@@ -95,6 +97,19 @@ def generate(root):
                      f'{p95(plain,"open_and_read")*1000:.3f} / {p95(rust,"open_and_read")*1000:.3f}',
                      record["one_archive_net_saving_vs_plain_bytes"], record["same_size_archives_to_strict_net_saving"]])
     text += table(["数据", "codec", "布局", "none bytes", "CSV bytes", "归档节省", "恢复 none/CSV ms", "重开 none/CSV ms", "单份计入原生库后节省 bytes", "严格净节省所需同等归档数"], rows)
+    text += "\n## 跨 codec 的最小普通归档对照\n\n不能只引用相同 Zlib 的空间收益；在本轮候选集合中分别挑体积最小的 none/Python 与 CSV/Rust。\n\n"
+    rows = []
+    for name, report in reports.items():
+        plain = min((r for r in report["results"] if r["configuration"]["transform"] == "none"
+                     and r["configuration"]["decoder_backend"] == "python"), key=lambda r: r["storage"]["stored_bytes"])
+        csv = min((r for r in report["results"] if r["configuration"]["transform"] == "csv-columns-v1"
+                   and r["configuration"]["decoder_backend"] == "rust"), key=lambda r: r["storage"]["stored_bytes"])
+        saving = plain["storage"]["stored_bytes"] - csv["storage"]["stored_bytes"]
+        rows.append([name, plain["configuration"]["compression"], csv["configuration"]["compression"],
+                     plain["storage"]["stored_bytes"], csv["storage"]["stored_bytes"], saving - cost,
+                     f'{plain["decode_s"]["median"]*1000:.2f} / {csv["decode_s"]["median"]*1000:.2f}',
+                     f'{p95(plain,"open_and_read")*1000:.3f} / {p95(csv,"open_and_read")*1000:.3f}'])
+    text += table(["数据", "最小 none codec", "最小 CSV codec", "none bytes", "CSV bytes", "单份计入原生库后节省 bytes", "恢复 none/CSV ms", "重开 none/CSV ms"], rows)
     text += f"""
 
 DLL **{provenance['bytes']:,} bytes** + native.json **{provenance['metadata_bytes']:,} bytes**，

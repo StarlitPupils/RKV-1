@@ -6,6 +6,7 @@ v0.3.0 的多轮读取评测使用独立 [READING.md](READING.md) 协议与 run_
 下文保留 v0.2.0 的压缩/恢复矩阵。本机冷缓存与跨机器复测按用户选择保持未测。
 v0.4.0 独立数值数据、CSV 反变换诊断和旧/新配对使用 [CSV-TRIALS.md](CSV-TRIALS.md)。
 v0.5.0 的独立校验单元、直接小块与完整索引成本对照见 [UNITS.md](UNITS.md)。
+v0.6.0 的冻结 Rust 内核、同归档后端配对与部署成本见 [NATIVE.md](NATIVE.md)。
 
 ```powershell
 python -m venv .venv

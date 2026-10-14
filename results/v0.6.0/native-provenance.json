@@ -1,0 +1,13 @@
+{
+  "abi": 1,
+  "library": "rkv1_core.dll",
+  "sha256": "13bd00bb7eeb5ac3f9a62cbe7e416a10b52e1ff04a1ad3815649745f06a73217",
+  "bytes": 121344,
+  "source_commit": "5418b305172d349a864f64f123070e3ee949d301",
+  "tag": "v0.5.0",
+  "platform": "windows-x86_64",
+  "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+  "scope": "CSV inverse transform only; not an archive decoder; local performance unmeasured",
+  "metadata_bytes": 403,
+  "metadata_sha256": "9c6866bdfb8bc73f27e8970c5eff87cd5933b16106ad60878af223a5abbc0b74"
+}

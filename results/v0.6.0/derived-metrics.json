@@ -1,0 +1,1588 @@
+[
+  {
+    "dataset": "wine",
+    "codec": "zlib",
+    "layout": "flat-1024",
+    "archive_bytes": 89174,
+    "archive_sha256": "d8317a296089ebf0bc5af0354dd1a92790c7e5e55dc46f90023929e0fd1c0ad9",
+    "transformed_chunks": 2,
+    "transformed_units": null,
+    "csv_archive_saving_vs_plain_bytes": 4319,
+    "csv_archive_saving_vs_plain_pct": 4.619597189094371,
+    "native_incremental_deployment_bytes": 121747,
+    "one_archive_net_saving_vs_plain_bytes": -117428,
+    "same_size_archives_to_strict_net_saving": 29,
+    "csv_python_to_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          4.079440292317872,
+          4.3582375708715375,
+          4.79588563484006,
+          4.549740833940558,
+          4.2049104544767735
+        ],
+        "median": 4.3582375708715375,
+        "min": 4.079440292317872,
+        "max": 4.79588563484006,
+        "stdev": 0.28358531891595357,
+        "p95": 4.79588563484006
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          12.127560288463659,
+          11.579978899212152,
+          8.637860090742349,
+          11.038513432158231,
+          13.736958116750609
+        ],
+        "median": 11.579978899212152,
+        "min": 8.637860090742349,
+        "max": 13.736958116750609,
+        "stdev": 1.856089779793911,
+        "p95": 13.736958116750609
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          10.153111261463785,
+          12.19447817215288,
+          9.43656803806477,
+          9.415931753438985,
+          7.9772557081086095
+        ],
+        "median": 9.43656803806477,
+        "min": 7.9772557081086095,
+        "max": 12.19447817215288,
+        "stdev": 1.5373606438809286,
+        "p95": 12.19447817215288
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          0.6298448732704091,
+          0.6018089282841069,
+          0.688183363984638,
+          0.7196073037940067,
+          0.6312169069773073
+        ],
+        "median": 0.6312169069773073,
+        "min": 0.6018089282841069,
+        "max": 0.7196073037940067,
+        "stdev": 0.048216129672956146,
+        "p95": 0.7196073037940067
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.5101164166812256,
+          0.4573484660083114,
+          0.3809715495476376,
+          0.5260566250262149,
+          0.5144116260374425
+        ],
+        "median": 0.5101164166812256,
+        "min": 0.3809715495476376,
+        "max": 0.5260566250262149,
+        "stdev": 0.06022349219720035,
+        "p95": 0.5260566250262149
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.5858507576768567,
+          0.5413127041685917,
+          0.5366018410900807,
+          0.5484578362053288,
+          0.4650950445287154
+        ],
+        "median": 0.5413127041685917,
+        "min": 0.4650950445287154,
+        "max": 0.5858507576768567,
+        "stdev": 0.043860452131661246,
+        "p95": 0.5858507576768567
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    }
+  },
+  {
+    "dataset": "wine",
+    "codec": "zlib",
+    "layout": "units-16",
+    "archive_bytes": 101388,
+    "archive_sha256": "15baaf75af9ffc7db862a2d277c947a776af10177e4f252d1b8be1afe1c9d80d",
+    "transformed_chunks": 2,
+    "transformed_units": 14,
+    "csv_archive_saving_vs_plain_bytes": 1167,
+    "csv_archive_saving_vs_plain_pct": 1.1379259909316952,
+    "native_incremental_deployment_bytes": 121747,
+    "one_archive_net_saving_vs_plain_bytes": -120580,
+    "same_size_archives_to_strict_net_saving": 105,
+    "csv_python_to_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          3.1589188713819283,
+          3.518897479633946,
+          3.317338902324552,
+          3.4240014805722536,
+          3.5485397114534405
+        ],
+        "median": 3.4240014805722536,
+        "min": 3.1589188713819283,
+        "max": 3.5485397114534405,
+        "stdev": 0.15931179439067952,
+        "p95": 3.5485397114534405
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          13.23675594882257,
+          12.859601731544801,
+          12.947049167735587,
+          13.14501733763818,
+          12.973303629513097
+        ],
+        "median": 12.973303629513097,
+        "min": 12.859601731544801,
+        "max": 13.23675594882257,
+        "stdev": 0.15417554191006222,
+        "p95": 13.23675594882257
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          4.04399638011657,
+          4.288863399165171,
+          4.382953579513261,
+          4.187015341794109,
+          3.586624883259629
+        ],
+        "median": 4.187015341794109,
+        "min": 3.586624883259629,
+        "max": 4.382953579513261,
+        "stdev": 0.312238671516136,
+        "p95": 4.382953579513261
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          0.634255259594053,
+          0.8226361148490129,
+          0.7251968509571283,
+          0.8116918180472524,
+          0.8006490184021109
+        ],
+        "median": 0.8006490184021109,
+        "min": 0.634255259594053,
+        "max": 0.8226361148490129,
+        "stdev": 0.07947399179314617,
+        "p95": 0.8226361148490129
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.5329729859835961,
+          0.5809575316570685,
+          0.554881389047344,
+          0.5240761692578474,
+          0.5817574828650794
+        ],
+        "median": 0.554881389047344,
+        "min": 0.5240761692578474,
+        "max": 0.5817574828650794,
+        "stdev": 0.026604595167459704,
+        "p95": 0.5817574828650794
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.6451268011802213,
+          0.5892416747615038,
+          0.6523206559340254,
+          0.6300744964245256,
+          0.48229363711463785
+        ],
+        "median": 0.6300744964245256,
+        "min": 0.48229363711463785,
+        "max": 0.6523206559340254,
+        "stdev": 0.07008692144981997,
+        "p95": 0.6523206559340254
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    }
+  },
+  {
+    "dataset": "wine",
+    "codec": "zlib",
+    "layout": "units-64",
+    "archive_bytes": 94270,
+    "archive_sha256": "ddef89ef9fa9b8292ec02230960346c1b214f117e14f1d1552747520d0425ffb",
+    "transformed_chunks": 2,
+    "transformed_units": 6,
+    "csv_archive_saving_vs_plain_bytes": 2233,
+    "csv_archive_saving_vs_plain_pct": 2.313917702040351,
+    "native_incremental_deployment_bytes": 121747,
+    "one_archive_net_saving_vs_plain_bytes": -119514,
+    "same_size_archives_to_strict_net_saving": 55,
+    "csv_python_to_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          4.574888763493025,
+          4.751405156891791,
+          4.589065583369899,
+          4.274606414118638,
+          4.297064911967613
+        ],
+        "median": 4.574888763493025,
+        "min": 4.274606414118638,
+        "max": 4.751405156891791,
+        "stdev": 0.20536360229271963,
+        "p95": 4.751405156891791
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          14.287309409441445,
+          9.546593249076277,
+          11.439433844838641,
+          16.76115040481519,
+          12.660122316727273
+        ],
+        "median": 12.660122316727273,
+        "min": 9.546593249076277,
+        "max": 16.76115040481519,
+        "stdev": 2.7505302638637725,
+        "p95": 16.76115040481519
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          8.463443042136939,
+          6.508650782750005,
+          6.2711764619773875,
+          5.368452136862602,
+          8.653320550345352
+        ],
+        "median": 6.508650782750005,
+        "min": 5.368452136862602,
+        "max": 8.653320550345352,
+        "stdev": 1.4401077265892692,
+        "p95": 8.653320550345352
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          0.7184693783933681,
+          0.6978051325738673,
+          0.6757629921385059,
+          0.7250480718938587,
+          0.6894422883718327
+        ],
+        "median": 0.6978051325738673,
+        "min": 0.6757629921385059,
+        "max": 0.7250480718938587,
+        "stdev": 0.020394340585797758,
+        "p95": 0.7250480718938587
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.4736593741944128,
+          0.4743354547651297,
+          0.40509434541957745,
+          0.5454950821732097,
+          0.44012807873449156
+        ],
+        "median": 0.4736593741944128,
+        "min": 0.40509434541957745,
+        "max": 0.5454950821732097,
+        "stdev": 0.05198867189476316,
+        "p95": 0.5454950821732097
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.4999551510679261,
+          0.48766795502764515,
+          0.5220781729047228,
+          0.5226535708676919,
+          0.4914265863477957
+        ],
+        "median": 0.4999551510679261,
+        "min": 0.48766795502764515,
+        "max": 0.5226535708676919,
+        "stdev": 0.016681602264545906,
+        "p95": 0.5226535708676919
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    }
+  },
+  {
+    "dataset": "wine",
+    "codec": "zstd",
+    "layout": "flat-1024",
+    "archive_bytes": 98019,
+    "archive_sha256": "9befe63f5c7696404ec95021afad2f66f41ac97bae1cb7ec0787e102455ff4c0",
+    "transformed_chunks": 1,
+    "transformed_units": null,
+    "csv_archive_saving_vs_plain_bytes": 398,
+    "csv_archive_saving_vs_plain_pct": 0.40440167857179143,
+    "native_incremental_deployment_bytes": 121747,
+    "one_archive_net_saving_vs_plain_bytes": -121349,
+    "same_size_archives_to_strict_net_saving": 306,
+    "csv_python_to_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          1.7184833697410076,
+          1.8179025888017275,
+          1.7867404838429697,
+          1.8646564824690695,
+          1.708969313439839
+        ],
+        "median": 1.7867404838429697,
+        "min": 1.708969313439839,
+        "max": 1.8646564824690695,
+        "stdev": 0.0660989883144146,
+        "p95": 1.8646564824690695
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          14.354439487656194,
+          13.193225125657522,
+          12.262557703135217,
+          13.392083307495263,
+          13.132350098693497
+        ],
+        "median": 13.193225125657522,
+        "min": 12.262557703135217,
+        "max": 14.354439487656194,
+        "stdev": 0.7467677191000626,
+        "p95": 14.354439487656194
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          8.034056080831423,
+          5.783500383270656,
+          7.245558032051372,
+          7.14970193635579,
+          6.851411585971725
+        ],
+        "median": 7.14970193635579,
+        "min": 5.783500383270656,
+        "max": 8.034056080831423,
+        "stdev": 0.8144179181741611,
+        "p95": 8.034056080831423
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          0.8574166180579227,
+          0.9034037495719195,
+          0.8071467796280688,
+          0.8305261091829352,
+          0.8327640109653163
+        ],
+        "median": 0.8327640109653163,
+        "min": 0.8071467796280688,
+        "max": 0.9034037495719195,
+        "stdev": 0.03656986096686919,
+        "p95": 0.9034037495719195
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          1.1487740920623233,
+          0.9938218843750224,
+          0.8369021782210972,
+          0.8668730794617284,
+          1.0162725399195764
+        ],
+        "median": 0.9938218843750224,
+        "min": 0.8369021782210972,
+        "max": 1.1487740920623233,
+        "stdev": 0.12548607992133598,
+        "p95": 1.1487740920623233
+      },
+      "faster_rounds": 2,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          1.0091877972341878,
+          0.5608760117942895,
+          0.6965831390605705,
+          0.637668363554717,
+          0.6424326002068559
+        ],
+        "median": 0.6424326002068559,
+        "min": 0.5608760117942895,
+        "max": 1.0091877972341878,
+        "stdev": 0.17444656628885194,
+        "p95": 1.0091877972341878
+      },
+      "faster_rounds": 1,
+      "rounds": 5
+    }
+  },
+  {
+    "dataset": "wine",
+    "codec": "zstd",
+    "layout": "units-16",
+    "archive_bytes": 108536,
+    "archive_sha256": "67c6eeb7096df2d71a72a55c120b86defd4c6ad36353249e8af3687224f83479",
+    "transformed_chunks": 2,
+    "transformed_units": 14,
+    "csv_archive_saving_vs_plain_bytes": 1297,
+    "csv_archive_saving_vs_plain_pct": 1.1808837052616246,
+    "native_incremental_deployment_bytes": 121747,
+    "one_archive_net_saving_vs_plain_bytes": -120450,
+    "same_size_archives_to_strict_net_saving": 94,
+    "csv_python_to_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          2.7369609259311343,
+          3.030162547039238,
+          2.685927907267769,
+          2.917857336315654,
+          2.646375929874782
+        ],
+        "median": 2.7369609259311343,
+        "min": 2.646375929874782,
+        "max": 3.030162547039238,
+        "stdev": 0.1638536848107078,
+        "p95": 3.030162547039238
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          15.81168907322249,
+          14.121490016657413,
+          16.405517423961726,
+          16.447033701043235,
+          13.774805053813697
+        ],
+        "median": 15.81168907322249,
+        "min": 13.774805053813697,
+        "max": 16.447033701043235,
+        "stdev": 1.276132173270691,
+        "p95": 16.447033701043235
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          4.377709999187224,
+          4.823288776212599,
+          4.193329941089009,
+          4.158745588200839,
+          5.118418461381814
+        ],
+        "median": 4.377709999187224,
+        "min": 4.158745588200839,
+        "max": 5.118418461381814,
+        "stdev": 0.4202769965580947,
+        "p95": 5.118418461381814
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          0.7783293564700062,
+          0.8357342976020901,
+          0.7290800155226914,
+          0.8178956584701108,
+          0.7746315357491004
+        ],
+        "median": 0.7783293564700062,
+        "min": 0.7290800155226914,
+        "max": 0.8357342976020901,
+        "stdev": 0.0415703230454765,
+        "p95": 0.8357342976020901
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.4935064962335631,
+          0.382783875624653,
+          0.4255172754318306,
+          0.4427965862193775,
+          0.5713489171314654
+        ],
+        "median": 0.4427965862193775,
+        "min": 0.382783875624653,
+        "max": 0.5713489171314654,
+        "stdev": 0.07231478347479536,
+        "p95": 0.5713489171314654
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.5045768309111378,
+          0.6562500287600637,
+          0.5747418217534503,
+          0.4854510251596171,
+          0.5872709781853461
+        ],
+        "median": 0.5747418217534503,
+        "min": 0.4854510251596171,
+        "max": 0.6562500287600637,
+        "stdev": 0.06863057960363594,
+        "p95": 0.6562500287600637
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    }
+  },
+  {
+    "dataset": "wine",
+    "codec": "zstd",
+    "layout": "units-64",
+    "archive_bytes": 101055,
+    "archive_sha256": "d6d808b10ebe1e29c8b5eaf71ab936566d568930cb071aa27a4033694bb0ae27",
+    "transformed_chunks": 2,
+    "transformed_units": 3,
+    "csv_archive_saving_vs_plain_bytes": 564,
+    "csv_archive_saving_vs_plain_pct": 0.5550143181885278,
+    "native_incremental_deployment_bytes": 121747,
+    "one_archive_net_saving_vs_plain_bytes": -121183,
+    "same_size_archives_to_strict_net_saving": 216,
+    "csv_python_to_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          2.0697010847731456,
+          2.0923697518887128,
+          2.2517386871716996,
+          2.2078559467404264,
+          2.116747373061705
+        ],
+        "median": 2.116747373061705,
+        "min": 2.0697010847731456,
+        "max": 2.2517386871716996,
+        "stdev": 0.07833600239418224,
+        "p95": 2.2517386871716996
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          14.710621339105504,
+          10.206420346003348,
+          12.695836986747839,
+          14.473143366560562,
+          12.423984148707287
+        ],
+        "median": 12.695836986747839,
+        "min": 10.206420346003348,
+        "max": 14.710621339105504,
+        "stdev": 1.821864061868256,
+        "p95": 14.710621339105504
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          6.299524340000308,
+          6.596701442137734,
+          6.006651672034778,
+          6.590401348142862,
+          6.031539159758692
+        ],
+        "median": 6.299524340000308,
+        "min": 6.006651672034778,
+        "max": 6.596701442137734,
+        "stdev": 0.2873874532042908,
+        "p95": 6.596701442137734
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          0.8000329218192431,
+          0.7712007805847696,
+          0.9024056563133603,
+          0.8907072642933617,
+          0.7691955866683794
+        ],
+        "median": 0.8000329218192431,
+        "min": 0.7691955866683794,
+        "max": 0.9024056563133603,
+        "stdev": 0.06505061469893623,
+        "p95": 0.9024056563133603
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.5132769977212684,
+          0.26339288987339804,
+          0.3158313651008867,
+          0.5121808114099998,
+          0.4698946388019999
+        ],
+        "median": 0.4698946388019999,
+        "min": 0.26339288987339804,
+        "max": 0.5132769977212684,
+        "stdev": 0.1171910810484545,
+        "p95": 0.5132769977212684
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.5801516927259561,
+          0.6339389137562492,
+          0.4025418785853796,
+          0.55468269269481,
+          0.5697634453267625
+        ],
+        "median": 0.5697634453267625,
+        "min": 0.4025418785853796,
+        "max": 0.6339389137562492,
+        "stdev": 0.08674008095570546,
+        "p95": 0.6339389137562492
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    }
+  },
+  {
+    "dataset": "superconductivity",
+    "codec": "zlib",
+    "layout": "flat-1024",
+    "archive_bytes": 7284903,
+    "archive_sha256": "3236432f71f72af9693958fcc56bdcf94faa65e049a09c0ff94139b5dfc031d9",
+    "transformed_chunks": 23,
+    "transformed_units": null,
+    "csv_archive_saving_vs_plain_bytes": 973724,
+    "csv_archive_saving_vs_plain_pct": 11.790385980623656,
+    "native_incremental_deployment_bytes": 121747,
+    "one_archive_net_saving_vs_plain_bytes": 851977,
+    "same_size_archives_to_strict_net_saving": 1,
+    "csv_python_to_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          5.007804958996464,
+          4.891208749904439,
+          5.070629864130989,
+          4.907202760068244,
+          5.4529624837251855
+        ],
+        "median": 5.007804958996464,
+        "min": 4.891208749904439,
+        "max": 5.4529624837251855,
+        "stdev": 0.228536977018901,
+        "p95": 5.4529624837251855
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          5.824916014122297,
+          5.911924247393059,
+          7.858471152079011,
+          5.840103423512603,
+          5.883949485455171
+        ],
+        "median": 5.883949485455171,
+        "min": 5.824916014122297,
+        "max": 7.858471152079011,
+        "stdev": 0.8920786060357194,
+        "p95": 7.858471152079011
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          5.327348019138411,
+          5.592377601446986,
+          5.435277659169229,
+          5.510736689797301,
+          6.0394531530037225
+        ],
+        "median": 5.510736689797301,
+        "min": 5.327348019138411,
+        "max": 6.0394531530037225,
+        "stdev": 0.274235298889168,
+        "p95": 6.0394531530037225
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          0.7102732652356106,
+          0.6880549355094946,
+          0.6993236134087604,
+          0.6955311227740512,
+          0.7006426275907919
+        ],
+        "median": 0.6993236134087604,
+        "min": 0.6880549355094946,
+        "max": 0.7102732652356106,
+        "stdev": 0.008084570895892885,
+        "p95": 0.7102732652356106
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.5881237909795375,
+          0.6024271385189333,
+          0.6328294545291131,
+          0.5707865570896247,
+          0.5830161049992697
+        ],
+        "median": 0.5881237909795375,
+        "min": 0.5707865570896247,
+        "max": 0.6328294545291131,
+        "stdev": 0.023782681124801443,
+        "p95": 0.6328294545291131
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.6359353513099997,
+          0.6446377503766003,
+          0.6661425751238476,
+          0.625334207836498,
+          0.6326963212128419
+        ],
+        "median": 0.6359353513099997,
+        "min": 0.625334207836498,
+        "max": 0.6661425751238476,
+        "stdev": 0.015695446961070555,
+        "p95": 0.6661425751238476
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    }
+  },
+  {
+    "dataset": "superconductivity",
+    "codec": "zlib",
+    "layout": "units-16",
+    "archive_bytes": 9115274,
+    "archive_sha256": "3899d7a30d37c1ad878e44075b4a25b991b34cd1d7fb641d026156c6691787a9",
+    "transformed_chunks": 23,
+    "transformed_units": 531,
+    "csv_archive_saving_vs_plain_bytes": 53076,
+    "csv_archive_saving_vs_plain_pct": 0.5789046011550606,
+    "native_incremental_deployment_bytes": 121747,
+    "one_archive_net_saving_vs_plain_bytes": -68671,
+    "same_size_archives_to_strict_net_saving": 3,
+    "csv_python_to_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          2.436056413201332,
+          2.1520068547891946,
+          2.336683333991915,
+          2.2788539093081734,
+          2.4012609456712823
+        ],
+        "median": 2.336683333991915,
+        "min": 2.1520068547891946,
+        "max": 2.436056413201332,
+        "stdev": 0.11209453246469638,
+        "p95": 2.436056413201332
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          3.93676186188482,
+          3.1240045844327287,
+          3.0370369650448334,
+          3.7175990331810476,
+          5.037109659772223
+        ],
+        "median": 3.7175990331810476,
+        "min": 3.0370369650448334,
+        "max": 5.037109659772223,
+        "stdev": 0.8047772821100774,
+        "p95": 5.037109659772223
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          1.0322638886497304,
+          1.275069779141317,
+          1.181482679208976,
+          1.2449322546524326,
+          1.4910916932981697
+        ],
+        "median": 1.2449322546524326,
+        "min": 1.0322638886497304,
+        "max": 1.4910916932981697,
+        "stdev": 0.16640043248829292,
+        "p95": 1.4910916932981697
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          0.9548185909741601,
+          0.8477948640995376,
+          0.8853080542143617,
+          0.8718105083616663,
+          0.9286981581826207
+        ],
+        "median": 0.8853080542143617,
+        "min": 0.8477948640995376,
+        "max": 0.9548185909741601,
+        "stdev": 0.04341015709887051,
+        "p95": 0.9548185909741601
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.7998609933002533,
+          0.8805460759328539,
+          0.8737097876339293,
+          0.7762619146290924,
+          0.7701823281189915
+        ],
+        "median": 0.7998609933002533,
+        "min": 0.7701823281189915,
+        "max": 0.8805460759328539,
+        "stdev": 0.05327031482543103,
+        "p95": 0.8805460759328539
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.6760994928717844,
+          0.6588837202741765,
+          0.8488006097620495,
+          0.8112593216090026,
+          0.878198897451611
+        ],
+        "median": 0.8112593216090026,
+        "min": 0.6588837202741765,
+        "max": 0.878198897451611,
+        "stdev": 0.10084017488620224,
+        "p95": 0.878198897451611
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    }
+  },
+  {
+    "dataset": "superconductivity",
+    "codec": "zlib",
+    "layout": "units-64",
+    "archive_bytes": 8435613,
+    "archive_sha256": "6603394987fbae0dae68ffc726579fda2fe0425679ce2cc2de72cf1e800effbc",
+    "transformed_chunks": 23,
+    "transformed_units": 297,
+    "csv_archive_saving_vs_plain_bytes": 178737,
+    "csv_archive_saving_vs_plain_pct": 2.0748750631214197,
+    "native_incremental_deployment_bytes": 121747,
+    "one_archive_net_saving_vs_plain_bytes": 56990,
+    "same_size_archives_to_strict_net_saving": 1,
+    "csv_python_to_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          4.023590531245451,
+          3.9808071700145504,
+          3.8640100811270233,
+          3.963369458038678,
+          3.8149129692371426
+        ],
+        "median": 3.963369458038678,
+        "min": 3.8149129692371426,
+        "max": 4.023590531245451,
+        "stdev": 0.08667695756910533,
+        "p95": 4.023590531245451
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          4.530702734598744,
+          5.55427432144353,
+          6.06663261436767,
+          4.460283828617832,
+          6.322396631357637
+        ],
+        "median": 5.55427432144353,
+        "min": 4.460283828617832,
+        "max": 6.322396631357637,
+        "stdev": 0.8597813407102065,
+        "p95": 6.322396631357637
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          2.9006307980599484,
+          2.5435286415402745,
+          3.0164581439984652,
+          2.1542475256346116,
+          2.990008075668084
+        ],
+        "median": 2.9006307980599484,
+        "min": 2.1542475256346116,
+        "max": 3.0164581439984652,
+        "stdev": 0.36899611457904746,
+        "p95": 3.0164581439984652
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          0.8449706887907248,
+          0.8269053914373301,
+          0.7960540811277754,
+          0.8348314373677973,
+          0.806260907631635
+        ],
+        "median": 0.8269053914373301,
+        "min": 0.7960540811277754,
+        "max": 0.8449706887907248,
+        "stdev": 0.020230421581966283,
+        "p95": 0.8449706887907248
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.8168920347893679,
+          0.9029832302034579,
+          0.9629818520118887,
+          0.7955941387314435,
+          0.760546172201263
+        ],
+        "median": 0.8168920347893679,
+        "min": 0.760546172201263,
+        "max": 0.9629818520118887,
+        "stdev": 0.08307531621522489,
+        "p95": 0.9629818520118887
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.8222872314492179,
+          0.709649042334149,
+          0.7651356078057847,
+          0.7127017838493671,
+          0.7803384393240829
+        ],
+        "median": 0.7651356078057847,
+        "min": 0.709649042334149,
+        "max": 0.8222872314492179,
+        "stdev": 0.04762486713298481,
+        "p95": 0.8222872314492179
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    }
+  },
+  {
+    "dataset": "superconductivity",
+    "codec": "zstd",
+    "layout": "flat-1024",
+    "archive_bytes": 7442705,
+    "archive_sha256": "a9310fe23f3cca3665000d14a1ddcd0d0a2a4fe878acc4e3612bbf18282c89b8",
+    "transformed_chunks": 14,
+    "transformed_units": null,
+    "csv_archive_saving_vs_plain_bytes": 105354,
+    "csv_archive_saving_vs_plain_pct": 1.3957760531548575,
+    "native_incremental_deployment_bytes": 121747,
+    "one_archive_net_saving_vs_plain_bytes": -16393,
+    "same_size_archives_to_strict_net_saving": 2,
+    "csv_python_to_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          4.5730597978441265,
+          4.6303637757121745,
+          5.012103517855334,
+          4.555582114364886,
+          4.80290326347422
+        ],
+        "median": 4.6303637757121745,
+        "min": 4.555582114364886,
+        "max": 5.012103517855334,
+        "stdev": 0.192822238550275,
+        "p95": 5.012103517855334
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          7.624839492794409,
+          7.893645400065764,
+          7.676517530963798,
+          7.647189381661476,
+          7.630936594543727
+        ],
+        "median": 7.647189381661476,
+        "min": 7.624839492794409,
+        "max": 7.893645400065764,
+        "stdev": 0.1130413286895372,
+        "p95": 7.893645400065764
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          7.903627459322897,
+          7.021640573439641,
+          6.515853331883387,
+          6.8108372536798,
+          7.104444086070935
+        ],
+        "median": 7.021640573439641,
+        "min": 6.515853331883387,
+        "max": 7.903627459322897,
+        "stdev": 0.5178550545470979,
+        "p95": 7.903627459322897
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          0.6738272822989976,
+          0.6978632455082758,
+          0.6681874158689851,
+          0.6576825674268657,
+          0.6720298737181613
+        ],
+        "median": 0.6720298737181613,
+        "min": 0.6576825674268657,
+        "max": 0.6978632455082758,
+        "stdev": 0.014776475377258116,
+        "p95": 0.6978632455082758
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.3894071188760564,
+          0.40560354862167874,
+          0.42801793167119423,
+          0.4772806635923021,
+          0.46438055721142857
+        ],
+        "median": 0.42801793167119423,
+        "min": 0.3894071188760564,
+        "max": 0.4772806635923021,
+        "stdev": 0.037487408333960574,
+        "p95": 0.4772806635923021
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.5171015501952339,
+          0.5288652660765393,
+          0.4830459100001779,
+          0.5393050997607007,
+          0.515986339976998
+        ],
+        "median": 0.5171015501952339,
+        "min": 0.4830459100001779,
+        "max": 0.5393050997607007,
+        "stdev": 0.021166738200617173,
+        "p95": 0.5393050997607007
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    }
+  },
+  {
+    "dataset": "superconductivity",
+    "codec": "zstd",
+    "layout": "units-16",
+    "archive_bytes": 8423479,
+    "archive_sha256": "70ef33ccdd4a69719d1667144a280a49a170f4384f5690fce0576bca24c4a5fa",
+    "transformed_chunks": 23,
+    "transformed_units": 1360,
+    "csv_archive_saving_vs_plain_bytes": 428657,
+    "csv_archive_saving_vs_plain_pct": 4.842413175757806,
+    "native_incremental_deployment_bytes": 121747,
+    "one_archive_net_saving_vs_plain_bytes": 306910,
+    "same_size_archives_to_strict_net_saving": 1,
+    "csv_python_to_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          5.412998716935863,
+          5.06424876456554,
+          5.113677038469743,
+          5.218970723388982,
+          5.412265048198864
+        ],
+        "median": 5.218970723388982,
+        "min": 5.06424876456554,
+        "max": 5.412998716935863,
+        "stdev": 0.1633966072393429,
+        "p95": 5.412998716935863
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          6.748160247641947,
+          6.150229100011966,
+          5.997023570420549,
+          8.13693679827978,
+          8.353315629603646
+        ],
+        "median": 6.748160247641947,
+        "min": 5.997023570420549,
+        "max": 8.353315629603646,
+        "stdev": 1.1051964176588487,
+        "p95": 8.353315629603646
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          1.7009345835347633,
+          1.678822620469378,
+          1.6111049105793818,
+          1.3998994315607847,
+          1.7193083500684552
+        ],
+        "median": 1.678822620469378,
+        "min": 1.3998994315607847,
+        "max": 1.7193083500684552,
+        "stdev": 0.1307437935097382,
+        "p95": 1.7193083500684552
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          0.7764667701347924,
+          0.7705274745907593,
+          0.7828156905044619,
+          0.7650418609837849,
+          0.7912830780579181
+        ],
+        "median": 0.7764667701347924,
+        "min": 0.7650418609837849,
+        "max": 0.7912830780579181,
+        "stdev": 0.010280393899594625,
+        "p95": 0.7912830780579181
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.5044971724307957,
+          0.6479425671690705,
+          0.7001488106516551,
+          0.5774774111015643,
+          0.6448683547241651
+        ],
+        "median": 0.6448683547241651,
+        "min": 0.5044971724307957,
+        "max": 0.7001488106516551,
+        "stdev": 0.07557524398995259,
+        "p95": 0.7001488106516551
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.6678089240141599,
+          0.8447137755142935,
+          0.8852714938106335,
+          0.8781297079725473,
+          0.8311239080737649
+        ],
+        "median": 0.8447137755142935,
+        "min": 0.6678089240141599,
+        "max": 0.8852714938106335,
+        "stdev": 0.08877799864064129,
+        "p95": 0.8852714938106335
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    }
+  },
+  {
+    "dataset": "superconductivity",
+    "codec": "zstd",
+    "layout": "units-64",
+    "archive_bytes": 7817638,
+    "archive_sha256": "4addb31066d60f188d0cc61159acb92c0a95010d522cf86d3688e498c6adbb1b",
+    "transformed_chunks": 23,
+    "transformed_units": 205,
+    "csv_archive_saving_vs_plain_bytes": 82957,
+    "csv_archive_saving_vs_plain_pct": 1.0500095245990966,
+    "native_incremental_deployment_bytes": 121747,
+    "one_archive_net_saving_vs_plain_bytes": -38790,
+    "same_size_archives_to_strict_net_saving": 2,
+    "csv_python_to_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          3.807223523225753,
+          4.037218761995241,
+          4.032595414828296,
+          3.775833771728356,
+          3.9733616222255175
+        ],
+        "median": 3.9733616222255175,
+        "min": 3.775833771728356,
+        "max": 4.037218761995241,
+        "stdev": 0.12513016060694582,
+        "p95": 4.037218761995241
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          11.526647837277752,
+          8.651214046249391,
+          7.6684126229012435,
+          7.095564183302253,
+          11.510165734277619
+        ],
+        "median": 8.651214046249391,
+        "min": 7.095564183302253,
+        "max": 11.526647837277752,
+        "stdev": 2.108605599797981,
+        "p95": 11.526647837277752
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          2.6147046467415898,
+          2.3127176999672607,
+          2.378654279642476,
+          2.4668840211327496,
+          2.370233357396034
+        ],
+        "median": 2.378654279642476,
+        "min": 2.3127176999672607,
+        "max": 2.6147046467415898,
+        "stdev": 0.11771846254633865,
+        "p95": 2.6147046467415898
+      },
+      "faster_rounds": 5,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          0.819457647166957,
+          0.8666275882724236,
+          0.8315326817474534,
+          0.7823774948859143,
+          0.8226082323399974
+        ],
+        "median": 0.8226082323399974,
+        "min": 0.7823774948859143,
+        "max": 0.8666275882724236,
+        "stdev": 0.030114364105180137,
+        "p95": 0.8666275882724236
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.5932679024399204,
+          0.5927151871131067,
+          0.7074939549748965,
+          0.6939515847240338,
+          0.7692671662205112
+        ],
+        "median": 0.6939515847240338,
+        "min": 0.5927151871131067,
+        "max": 0.7692671662205112,
+        "stdev": 0.07695004178594153,
+        "p95": 0.7692671662205112
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.8028286162867438,
+          0.6964134316520253,
+          0.7569121057530135,
+          0.7354799162738497,
+          0.7075507572241384
+        ],
+        "median": 0.7354799162738497,
+        "min": 0.6964134316520253,
+        "max": 0.8028286162867438,
+        "stdev": 0.042445538334837926,
+        "p95": 0.8028286162867438
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    }
+  },
+  {
+    "dataset": "htru2",
+    "codec": "zstd",
+    "layout": "flat-1024",
+    "archive_bytes": 788656,
+    "archive_sha256": "b4cf3f209daaaff461ae5f18d779d252e9dd616c2d640616a3ef7d29889668d2",
+    "transformed_chunks": 0,
+    "transformed_units": null,
+    "csv_archive_saving_vs_plain_bytes": -10,
+    "csv_archive_saving_vs_plain_pct": -0.0012679960337084065,
+    "native_incremental_deployment_bytes": 121747,
+    "one_archive_net_saving_vs_plain_bytes": -121757,
+    "same_size_archives_to_strict_net_saving": null,
+    "csv_python_to_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          0.9089934102252788,
+          0.8981425455611055,
+          0.9236951483325149,
+          0.886695286881728,
+          0.9451860305485613
+        ],
+        "median": 0.9089934102252788,
+        "min": 0.886695286881728,
+        "max": 0.9451860305485613,
+        "stdev": 0.02279262382633365,
+        "p95": 0.9451860305485613
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.9501158970657336,
+          1.125950450897865,
+          0.9096777295103545,
+          1.0483164106847893,
+          1.2012227854366841
+        ],
+        "median": 1.0483164106847893,
+        "min": 0.9096777295103545,
+        "max": 1.2012227854366841,
+        "stdev": 0.1206891601459506,
+        "p95": 1.2012227854366841
+      },
+      "faster_rounds": 3,
+      "rounds": 5
+    },
+    "csv_python_to_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.8669128947910538,
+          0.9872786629654303,
+          0.9046753337336226,
+          0.9730611180373492,
+          0.9492309633384237
+        ],
+        "median": 0.9492309633384237,
+        "min": 0.8669128947910538,
+        "max": 0.9872786629654303,
+        "stdev": 0.049829911488468416,
+        "p95": 0.9872786629654303
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_restore": {
+      "paired_wall_speedup": {
+        "samples": [
+          0.9182297709320278,
+          0.9618090559120344,
+          0.9633286656868107,
+          0.9342821403532723,
+          0.9244812636648406
+        ],
+        "median": 0.9342821403532723,
+        "min": 0.9182297709320278,
+        "max": 0.9633286656868107,
+        "stdev": 0.021014408084291707,
+        "p95": 0.9633286656868107
+      },
+      "faster_rounds": 0,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_reader": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.8946783776930749,
+          1.052811258715907,
+          0.9363167771434087,
+          1.0105825789650813,
+          1.0482141024245055
+        ],
+        "median": 1.0105825789650813,
+        "min": 0.8946783776930749,
+        "max": 1.052811258715907,
+        "stdev": 0.07020494240797491,
+        "p95": 1.052811258715907
+      },
+      "faster_rounds": 3,
+      "rounds": 5
+    },
+    "plain_python_to_csv_rust_open_and_read": {
+      "paired_p95_speedup": {
+        "samples": [
+          0.9506162576373928,
+          0.9403902321076125,
+          0.8442081951132387,
+          0.9567994958213855,
+          1.0032928962434011
+        ],
+        "median": 0.9506162576373928,
+        "min": 0.8442081951132387,
+        "max": 1.0032928962434011,
+        "stdev": 0.05825104325270507,
+        "p95": 1.0032928962434011
+      },
+      "faster_rounds": 1,
+      "rounds": 5
+    }
+  }
+]
