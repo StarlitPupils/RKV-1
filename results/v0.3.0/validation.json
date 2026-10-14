@@ -1,0 +1,23 @@
+{
+  "local_python_tests": {
+    "run": 38,
+    "passed": 37,
+    "skipped": 1,
+    "failed": 0,
+    "skip_reason": "Windows symlink permission"
+  },
+  "configurations": 18,
+  "worker_trials": 360,
+  "verified_measured_range_reads": 161280,
+  "verified_warmup_range_reads": 10080,
+  "full_archives_verified": 18,
+  "measurement_source_matches_release": true,
+  "same_input_and_archive_hashes_as_v0_2": true,
+  "paired_non_crossing_query_fingerprints": "passed",
+  "cold_cache": null,
+  "cross_machine": null,
+  "cross_day": null,
+  "rust": "release CI; no local toolchain",
+  "installed_wheel": "v1 fixture, v2 transformed Zstd, and read workers outside checkout passed",
+  "sdist_contents": "reproduction/fixture included; raw data/private research excluded"
+}

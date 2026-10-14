@@ -2,6 +2,9 @@
 
 Python 3.10+。Zlib 核心只依赖标准库；Zstd 安装固定版本的可选依赖。
 
+v0.3.0 的多轮读取评测使用独立 [READING.md](READING.md) 协议与 run_reading.py；
+下文保留 v0.2.0 的压缩/恢复矩阵。本机冷缓存与跨机器复测按用户选择保持未测。
+
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -e ".[bench]"

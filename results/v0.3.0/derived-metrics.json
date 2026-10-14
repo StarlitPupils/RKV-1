@@ -1,0 +1,362 @@
+[
+  {
+    "dataset": "qasper",
+    "codec": "zstd",
+    "chunk_size": 65536,
+    "mode": "open_reader",
+    "archive_increase_pct": 16.456495774366743,
+    "baseline_chunk_size": 1048576,
+    "p95_speedup": {
+      "samples": [
+        11.053872367646653,
+        9.423698434153824,
+        15.73864702877733,
+        13.175585159455713,
+        10.661935854498116,
+        10.123479285030063,
+        13.826212519072387,
+        14.61340679043946,
+        9.664298053196768,
+        9.870336339260591
+      ],
+      "median": 10.857904111072385,
+      "min": 9.423698434153824,
+      "max": 15.73864702877733,
+      "stdev": 2.3098323039018043,
+      "p95": 15.73864702877733
+    },
+    "faster_rounds": 10,
+    "compared_rounds": 10,
+    "queries_identical": true
+  },
+  {
+    "dataset": "qasper",
+    "codec": "zstd",
+    "chunk_size": 65536,
+    "mode": "open_and_read",
+    "archive_increase_pct": 16.456495774366743,
+    "baseline_chunk_size": 1048576,
+    "p95_speedup": {
+      "samples": [
+        0.3982705228434263,
+        0.47894314780739666,
+        0.4491612529616968,
+        0.4680758631656564,
+        0.4054279742985835,
+        0.4068657055393234,
+        0.40484925633753416,
+        0.42831633589385865,
+        0.44945728417006076,
+        0.42205020037244634
+      ],
+      "median": 0.4251832681331525,
+      "min": 0.3982705228434263,
+      "max": 0.47894314780739666,
+      "stdev": 0.028717474856776684,
+      "p95": 0.47894314780739666
+    },
+    "faster_rounds": 0,
+    "compared_rounds": 10,
+    "queries_identical": true
+  },
+  {
+    "dataset": "qasper",
+    "codec": "zstd",
+    "chunk_size": 262144,
+    "mode": "open_reader",
+    "archive_increase_pct": 6.653919618744197,
+    "baseline_chunk_size": 1048576,
+    "p95_speedup": {
+      "samples": [
+        4.11094415909336,
+        3.0618316487126314,
+        3.9596344133324655,
+        3.5371492592389226,
+        3.393429117106178,
+        4.101281438148075,
+        4.768731270519395,
+        4.258496101813719,
+        3.8227166234485574,
+        3.8368996539232114
+      ],
+      "median": 3.8982670336278384,
+      "min": 3.0618316487126314,
+      "max": 4.768731270519395,
+      "stdev": 0.4796202154146103,
+      "p95": 4.768731270519395
+    },
+    "faster_rounds": 10,
+    "compared_rounds": 10,
+    "queries_identical": true
+  },
+  {
+    "dataset": "qasper",
+    "codec": "zstd",
+    "chunk_size": 262144,
+    "mode": "open_and_read",
+    "archive_increase_pct": 6.653919618744197,
+    "baseline_chunk_size": 1048576,
+    "p95_speedup": {
+      "samples": [
+        1.1529926208585977,
+        1.2159751816775617,
+        1.2091359924373495,
+        1.2404385289885846,
+        1.1399146186952298,
+        1.0927014714232155,
+        1.0964584403313067,
+        1.0481574912393266,
+        0.9662671641949427,
+        1.173636762376995
+      ],
+      "median": 1.1464536197769137,
+      "min": 0.9662671641949427,
+      "max": 1.2404385289885846,
+      "stdev": 0.08451008714703011,
+      "p95": 1.2404385289885846
+    },
+    "faster_rounds": 9,
+    "compared_rounds": 10,
+    "queries_identical": true
+  },
+  {
+    "dataset": "qasper",
+    "codec": "zstd",
+    "chunk_size": 1048576,
+    "mode": "open_reader",
+    "archive_increase_pct": 0.0,
+    "baseline_chunk_size": 1048576,
+    "p95_speedup": {
+      "samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "stdev": 0.0,
+      "p95": 1.0
+    },
+    "faster_rounds": 0,
+    "compared_rounds": 10,
+    "queries_identical": true
+  },
+  {
+    "dataset": "qasper",
+    "codec": "zstd",
+    "chunk_size": 1048576,
+    "mode": "open_and_read",
+    "archive_increase_pct": 0.0,
+    "baseline_chunk_size": 1048576,
+    "p95_speedup": {
+      "samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "stdev": 0.0,
+      "p95": 1.0
+    },
+    "faster_rounds": 0,
+    "compared_rounds": 10,
+    "queries_identical": true
+  },
+  {
+    "dataset": "scifact",
+    "codec": "zstd",
+    "chunk_size": 65536,
+    "mode": "open_reader",
+    "archive_increase_pct": 14.410518839576781,
+    "baseline_chunk_size": 1048576,
+    "p95_speedup": {
+      "samples": [
+        9.063736430588623,
+        10.785193251143443,
+        9.78387651955296,
+        13.28745278512044,
+        10.500000328856851,
+        15.451583547202912,
+        9.873660242005814,
+        9.625068589599437,
+        9.86719190864378,
+        13.742500336816214
+      ],
+      "median": 10.186830285431332,
+      "min": 9.063736430588623,
+      "max": 15.451583547202912,
+      "stdev": 2.1639661693368084,
+      "p95": 15.451583547202912
+    },
+    "faster_rounds": 10,
+    "compared_rounds": 10,
+    "queries_identical": true
+  },
+  {
+    "dataset": "scifact",
+    "codec": "zstd",
+    "chunk_size": 65536,
+    "mode": "open_and_read",
+    "archive_increase_pct": 14.410518839576781,
+    "baseline_chunk_size": 1048576,
+    "p95_speedup": {
+      "samples": [
+        1.5110407846998504,
+        1.3562957359881969,
+        1.4747657036846293,
+        1.538215429677655,
+        1.468821057681188,
+        1.4848130082395974,
+        1.404073904053896,
+        1.4000254552021572,
+        1.3713673518505236,
+        1.3885110587469562
+      ],
+      "median": 1.436447480867542,
+      "min": 1.3562957359881969,
+      "max": 1.538215429677655,
+      "stdev": 0.06324270016828516,
+      "p95": 1.538215429677655
+    },
+    "faster_rounds": 10,
+    "compared_rounds": 10,
+    "queries_identical": true
+  },
+  {
+    "dataset": "scifact",
+    "codec": "zstd",
+    "chunk_size": 262144,
+    "mode": "open_reader",
+    "archive_increase_pct": 7.196481579282832,
+    "baseline_chunk_size": 1048576,
+    "p95_speedup": {
+      "samples": [
+        3.8282664114931424,
+        4.010427486555449,
+        4.070409151119355,
+        3.36601815190955,
+        4.23059414479689,
+        3.3860436800038882,
+        4.258331290012236,
+        3.93526638198467,
+        3.481731531120821,
+        3.818244961529911
+      ],
+      "median": 3.8817663967389064,
+      "min": 3.36601815190955,
+      "max": 4.258331290012236,
+      "stdev": 0.32972300135909777,
+      "p95": 4.258331290012236
+    },
+    "faster_rounds": 10,
+    "compared_rounds": 10,
+    "queries_identical": true
+  },
+  {
+    "dataset": "scifact",
+    "codec": "zstd",
+    "chunk_size": 262144,
+    "mode": "open_and_read",
+    "archive_increase_pct": 7.196481579282832,
+    "baseline_chunk_size": 1048576,
+    "p95_speedup": {
+      "samples": [
+        2.0626859893526137,
+        2.148066748467942,
+        2.0519656087629543,
+        2.1252455751832096,
+        1.9515700791121007,
+        1.9953720895706482,
+        2.136546182722904,
+        2.2643062973870047,
+        1.808388520588374,
+        2.1641453118583485
+      ],
+      "median": 2.0939657822679116,
+      "min": 1.808388520588374,
+      "max": 2.2643062973870047,
+      "stdev": 0.12849580933011348,
+      "p95": 2.2643062973870047
+    },
+    "faster_rounds": 10,
+    "compared_rounds": 10,
+    "queries_identical": true
+  },
+  {
+    "dataset": "scifact",
+    "codec": "zstd",
+    "chunk_size": 1048576,
+    "mode": "open_reader",
+    "archive_increase_pct": 0.0,
+    "baseline_chunk_size": 1048576,
+    "p95_speedup": {
+      "samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "stdev": 0.0,
+      "p95": 1.0
+    },
+    "faster_rounds": 0,
+    "compared_rounds": 10,
+    "queries_identical": true
+  },
+  {
+    "dataset": "scifact",
+    "codec": "zstd",
+    "chunk_size": 1048576,
+    "mode": "open_and_read",
+    "archive_increase_pct": 0.0,
+    "baseline_chunk_size": 1048576,
+    "p95_speedup": {
+      "samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "stdev": 0.0,
+      "p95": 1.0
+    },
+    "faster_rounds": 0,
+    "compared_rounds": 10,
+    "queries_identical": true
+  }
+]

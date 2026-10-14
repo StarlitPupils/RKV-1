@@ -48,6 +48,14 @@ def main(argv=None):
     p.add_argument("--warmups", type=int, default=1)
     p.add_argument("--queries", type=int, default=128)
     p.add_argument("--csv-trials", action="store_true")
+    p = sub.add_parser("bench-reads")
+    p.add_argument("source")
+    p.add_argument("--out", required=True)
+    p.add_argument("--sessions", type=int, default=2)
+    p.add_argument("--rounds", type=int, default=5)
+    p.add_argument("--queries", type=int, default=128)
+    p.add_argument("--warmup-queries", type=int, default=8)
+    p.add_argument("--seed", type=int, default=20261014)
     p = sub.add_parser("fetch")
     p.add_argument("destination")
     p.add_argument("--dataset", choices=("uci", "scifact", "qasper", "wine"), default="uci")
@@ -86,6 +94,19 @@ def main(argv=None):
             path = Path(args.out)
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", "utf-8")
+            result = {"report": str(path), "configurations": len(result["results"])}
+        elif args.command == "bench-reads":
+            from .read_benchmark import read_benchmark
+            path = Path(args.out)
+            # Reject before doing work; released records must never be overwritten.
+            if path.exists():
+                raise ValueError("Reading report already exists; choose a new output path")
+            result = read_benchmark(args.source, sessions=args.sessions, rounds=args.rounds,
+                                    queries=args.queries, warmup_queries=args.warmup_queries, seed=args.seed)
+            path.parent.mkdir(parents=True, exist_ok=True)
+            with path.open("x", encoding="utf-8") as stream:
+                json.dump(result, stream, ensure_ascii=False, indent=2)
+                stream.write("\n")
             result = {"report": str(path), "configurations": len(result["results"])}
         else:
             from .datasets import fetch_public
