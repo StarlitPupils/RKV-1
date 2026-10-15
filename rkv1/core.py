@@ -1,4 +1,4 @@
-"""RKV1 versions 1/2/3: exact directory archives and optional independent units.
+"""RKV1 versions 1/2/3/4: exact directory archives and explicit transforms.
 
 Only regular-file relative paths and bytes are preserved. No lossy transforms.
 The SHA-256 digest of the manifest detects accidental metadata damage, not forgery.
@@ -19,11 +19,13 @@ import unicodedata
 
 from .codecs import compressor, decompress
 from .transforms import csv_columns_decode, csv_columns_encode
+from .numeric import POLICIES as NUMERIC_POLICIES, encode as numeric_encode, decode as numeric_decode
 from .units import ENTRY, MIN_UNIT, decode_unit, encode_units, validate_index
 
 MAGIC = b"RKV1\r\n\x1a\n"
 VERSION = 2
 UNIT_VERSION = 3
+ARRAY_VERSION = 4
 DEFAULT_CHUNK = 1 << 20
 MAX_CHUNK = 8 << 20
 MAX_HEADER = 64 << 20
@@ -138,7 +140,7 @@ def validate_manifest(header, payload_size):
     if not isinstance(header, dict):
         raise ValueError("Invalid manifest schema")
     version = header.get("version")
-    if type(version) is not int or version not in (1, VERSION, UNIT_VERSION):
+    if type(version) is not int or version not in (1, VERSION, UNIT_VERSION, ARRAY_VERSION):
         raise ValueError("Unsupported format version")
     fields = {"version", "chunk_size", "files", "blocks"}
     if version >= 2:
@@ -148,8 +150,9 @@ def validate_manifest(header, payload_size):
     if set(header) != fields:
         raise ValueError("Invalid manifest schema")
     deduplicate = header.get("deduplicate", True)
+    transforms = ("none", *NUMERIC_POLICIES) if version == ARRAY_VERSION else ("none", "csv-columns-v1")
     if version >= 2 and (type(deduplicate) is not bool or header["compression"] not in ("raw", "zlib", "zstd")
-                         or header["transform"] not in ("none", "csv-columns-v1")):
+                         or header["transform"] not in transforms):
         raise ValueError("Invalid archive encoding policy")
     chunk_size = header["chunk_size"]
     if type(chunk_size) is not int or not 1 <= chunk_size <= MAX_CHUNK:
@@ -167,7 +170,7 @@ def validate_manifest(header, payload_size):
     suffixes = set()
     for key, meta in blocks.items():
         block_fields = {"offset", "stored_size", "raw_size", "codec"}
-        if version == 2:
+        if version in (2, ARRAY_VERSION):
             block_fields.update(("coded_size", "transform"))
         elif version == UNIT_VERSION:
             block_fields.update(("unit_count", "index_size", "index_sha256"))
@@ -189,11 +192,12 @@ def validate_manifest(header, payload_size):
         elif (stored > raw or codec not in allowed_codecs or (codec == "raw" and stored != raw)
               or (codec != "raw" and stored >= raw)):
             raise ValueError("Invalid block bounds or codec")
-        if version == 2:
+        if version in (2, ARRAY_VERSION):
             coded, transform = meta["coded_size"], meta["transform"]
             if (type(coded) is not int or not 1 <= coded <= 2 * raw + 256
-                    or transform not in ("none", "csv-columns-v1")
+                    or transform not in transforms
                     or (transform == "none" and coded != raw)
+                    or (transform in NUMERIC_POLICIES and (coded != raw or raw < 2 * NUMERIC_POLICIES[transform][1]))
                     or (transform != "none" and (codec == "raw" or header["transform"] != transform))
                     or (codec != "raw" and codec != header["compression"])):
                 raise ValueError("Invalid block transform or encoding policy")
@@ -276,6 +280,8 @@ def decode_block(stream, body_start, key, meta, csv_decoder=None):
     raw = decompress(stored, meta["codec"], meta.get("coded_size", meta["raw_size"]))
     if meta.get("transform", "none") == "csv-columns-v1":
         raw = (csv_decoder or csv_columns_decode)(raw, meta["raw_size"])
+    elif meta.get("transform") in NUMERIC_POLICIES:
+        raw = numeric_decode(raw, meta["raw_size"], meta["transform"])
     if len(raw) != meta["raw_size"] or digest(raw) != block_hash(key):
         raise ValueError("Block SHA-256 mismatch or length mismatch")
     return raw
@@ -408,14 +414,20 @@ class Archive:
 
 
 def pack(source, archive, chunk_size=DEFAULT_CHUNK, *, base=None, overwrite=False,
-         compression="zlib", deduplicate=True, transform="none", unit_size=None):
+         compression="zlib", deduplicate=True, transform="none", unit_size=None, format_version=None):
     source, archive = Path(source), Path(archive)
     if type(chunk_size) is not int or not 1 <= chunk_size <= MAX_CHUNK:
         raise ValueError("Invalid chunk size")
     if unit_size is not None and (type(unit_size) is not int or not MIN_UNIT <= unit_size <= chunk_size or chunk_size % unit_size):
         raise ValueError("Invalid unit size")
-    if type(deduplicate) is not bool or transform not in ("none", "csv-columns-v1"):
+    if type(deduplicate) is not bool or transform not in ("none", "csv-columns-v1", *NUMERIC_POLICIES):
         raise ValueError("Invalid encoding policy")
+    version = (UNIT_VERSION if unit_size is not None else ARRAY_VERSION if transform in NUMERIC_POLICIES else VERSION) if format_version is None else format_version
+    if (type(version) is not int or version not in (VERSION, UNIT_VERSION, ARRAY_VERSION)
+            or (unit_size is not None) != (version == UNIT_VERSION)
+            or (transform in NUMERIC_POLICIES and version != ARRAY_VERSION)
+            or (transform == "csv-columns-v1" and version == ARRAY_VERSION)):
+        raise ValueError("Transform/layout does not match format version")
     if compression == "raw" and transform != "none":
         raise ValueError("Transforms require a compression profile")
     compress = compressor(compression)
@@ -481,9 +493,9 @@ def pack(source, archive, chunk_size=DEFAULT_CHUNK, *, base=None, overwrite=Fals
                         if codec != "raw":
                             codec = compression
                         coded_size, chosen_transform = len(raw), "none"
-                        if transform == "csv-columns-v1":
+                        if transform == "csv-columns-v1" or transform in NUMERIC_POLICIES:
                             attempts += 1
-                            candidate = csv_columns_encode(raw)
+                            candidate = csv_columns_encode(raw) if transform == "csv-columns-v1" else numeric_encode(raw, transform)
                             if candidate is not None:
                                 candidate_payload = compress(candidate)
                                 # Include the longer transform label and coded-size field
@@ -500,7 +512,7 @@ def pack(source, archive, chunk_size=DEFAULT_CHUNK, *, base=None, overwrite=Fals
                                        "coded_size": coded_size, "transform": chosen_transform}
                     spool.write(payload)
             entries.append({"path": rel, "size": size, "sha256": file_hash.hexdigest(), "chunks": references})
-        header = {"version": UNIT_VERSION if unit_size is not None else VERSION, "chunk_size": chunk_size, "files": entries, "blocks": blocks,
+        header = {"version": version, "chunk_size": chunk_size, "files": entries, "blocks": blocks,
                   "compression": compression, "deduplicate": deduplicate, "transform": transform}
         if unit_size is not None:
             header["unit_size"] = unit_size

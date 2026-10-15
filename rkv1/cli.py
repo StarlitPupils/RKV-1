@@ -4,6 +4,7 @@ from pathlib import Path
 
 from . import __version__
 from .core import Archive, DEFAULT_CHUNK, assert_tree_equal, pack, unpack, verify
+from .numeric import POLICIES as NUMERIC_POLICIES
 
 
 def decoder_options(parser):
@@ -24,7 +25,8 @@ def main(argv=None):
     p.add_argument("--overwrite", action="store_true")
     p.add_argument("--codec", choices=("raw", "zlib", "zstd"), default="zlib")
     p.add_argument("--no-dedup", action="store_true")
-    p.add_argument("--transform", choices=("none", "csv-columns-v1"), default="none")
+    p.add_argument("--transform", choices=("none", "csv-columns-v1", *NUMERIC_POLICIES), default="none")
+    p.add_argument("--format-version", type=int, choices=(2, 3, 4), help="Default auto: v2 flat, v3 units, v4 numeric; none may explicitly use v4 for controls")
     p = sub.add_parser("unpack")
     p.add_argument("archive")
     p.add_argument("destination")
@@ -97,7 +99,8 @@ def main(argv=None):
     try:
         if args.command == "pack":
             result = pack(args.source, args.archive, args.chunk_size, base=args.base, overwrite=args.overwrite,
-                          compression=args.codec, deduplicate=not args.no_dedup, transform=args.transform, unit_size=args.unit_size)
+                          compression=args.codec, deduplicate=not args.no_dedup, transform=args.transform,
+                          unit_size=args.unit_size, format_version=args.format_version)
         elif args.command == "unpack":
             result = unpack(args.archive, args.destination, decoder_backend=args.decoder_backend,
                             native_library=args.native_library)

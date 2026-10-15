@@ -54,7 +54,8 @@ def unit_benchmark(source, *, configs=None, rounds=5, queries=64, warmup_queries
             result = measure(source, config, repeats=rounds, warmups=1, ranges=False)
             archive = root / f"{index}.rkv"
             stats = pack(source, archive, config["chunk_size"], compression=config["compression"],
-                         transform=config["transform"], deduplicate=config["deduplicate"], unit_size=config["unit_size"])
+                         transform=config["transform"], deduplicate=config["deduplicate"], unit_size=config["unit_size"],
+                         format_version=config.get("format_version"))
             verify(archive)
             if stats["archive_sha256"] != result["storage"]["archive_sha256"]:
                 raise ValueError("Reading archive differs from measured encoding bytes")
