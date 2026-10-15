@@ -8,7 +8,7 @@ import re
 
 
 class NativeCSV:
-    def __init__(self, library):
+    def __init__(self, library, *, _require_gear=False):
         path = Path(library).resolve(strict=True)
         metadata = path.with_name("native.json")
         if not path.is_file() or not metadata.is_file() or metadata.stat().st_size > 65536:
@@ -24,6 +24,12 @@ class NativeCSV:
             raise ValueError("Invalid native release provenance")
         if hashlib.sha256(path.read_bytes()).hexdigest() != info["sha256"]:
             raise ValueError("Native library SHA-256 mismatch")
+        if _require_gear:
+            features = info.get("features")
+            if (type(info.get("gear_abi")) is not int or info["gear_abi"] != 1
+                    or type(features) is not list or any(type(f) is not str for f in features)
+                    or "gear-v1" not in features):
+                raise ValueError("Native metadata does not declare Gear ABI 1")
         # This executes a caller-selected trusted library; a digest checks identity,
         # not publisher trust. Releases supply its source commit and digest.
         self.library = ctypes.CDLL(str(path))
@@ -67,12 +73,9 @@ def select_decoder(backend, library):
 class NativeGear(NativeCSV):
     """Gear ABI 1 is additive; the existing CSV ABI remains unchanged."""
     def __init__(self, library):
-        super().__init__(library)
-        features = self.provenance.get("features")
-        if (type(self.provenance.get("gear_abi")) is not int or self.provenance["gear_abi"] != 1
-                or type(features) is not list or any(type(f) is not str for f in features)
-                or "gear-v1" not in features):
-            raise ValueError("Native metadata does not declare Gear ABI 1")
+        # Reject unsupported metadata before CDLL: Windows keeps loaded DLL files
+        # locked, and an unsupported candidate should not execute any code.
+        super().__init__(library, _require_gear=True)
         try:
             abi = self.library.rkv1_gear_abi_version
             abi.argtypes, abi.restype = [], ctypes.c_uint32
@@ -102,7 +105,8 @@ class NativeGear(NativeCSV):
         h, n = ctypes.c_uint64(rolling), ctypes.c_size_t(count)
         result = self.scan_function(ctypes.c_char_p(data), len(data), self.table, scale,
                                    ctypes.byref(h), ctypes.byref(n), cuts, capacity)
-        if not 0 <= result <= capacity or not 0 <= n.value < settings["max_size"]:
+        if (not 0 <= result <= capacity or not 0 <= n.value < settings["max_size"]
+                or (n.value == 0 and h.value != 0)):
             raise ValueError(f"Native Gear scan rejected input (status {result})")
         positions = list(cuts[:result])
         if any(not 0 < b <= len(data) or b <= a for a, b in zip([0] + positions, positions)):

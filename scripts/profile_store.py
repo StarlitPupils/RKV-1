@@ -19,6 +19,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--data", type=Path, default=Path("data/qasper-versions"))
     parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument("--backend", choices=("python", "rust"), default="python")
+    parser.add_argument("--native-library", type=Path)
     args = parser.parse_args()
     if args.out.exists():
         raise ValueError("Profile report already exists")
@@ -35,7 +37,8 @@ def main():
                 start, cpu = time.perf_counter(), time.process_time()
                 if profiled:
                     profiler.enable()
-                stats = store.add(source, label=source.name)
+                stats = store.add(source, label=source.name, chunker_backend=args.backend,
+                                  native_library=args.native_library)
                 if profiled:
                     profiler.disable()
                 wall, used_cpu = time.perf_counter() - start, time.process_time() - cpu
@@ -56,7 +59,16 @@ def main():
             raise ValueError("Profiling changed stored bytes")
     if inputs != [inventory(s) for s in sources] or checksums != implementation_checksums():
         raise ValueError("Input/source changed during profile")
+    native = None
+    if args.backend == "rust":
+        import hashlib
+        from rkv1.native import load_native_gear
+        native = load_native_gear(str(args.native_library.resolve())).provenance
+        if (hashlib.sha256(args.native_library.read_bytes()).hexdigest() != native["sha256"]
+                or hashlib.sha256(args.native_library.with_name("native.json").read_bytes()).hexdigest() != native["metadata_sha256"]):
+            raise ValueError("Native files changed during profile")
     save(args.out, {"schema_version": 1, "recorded_utc": timestamp(), "python": platform.python_version(),
+                    "chunker_backend": args.backend, "native_provenance": native,
                     "implementation_checksums": checksums, "inputs": inputs, "trials": rows,
                     "identical_store_tree_sha256": digest_map(trees[0]), "all_snapshots_verified": True,
                     "protocol": "Unprofiled sequence followed by cProfile sequence, each fresh shared Gear CAS; add only profiled. Verification/tree audit untimed.",
