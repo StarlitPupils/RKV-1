@@ -76,6 +76,8 @@ def main(argv=None):
     p.add_argument("--chunk-size", type=int, default=65536)
     p = sub.add_parser("store-add")
     p.add_argument("store"); p.add_argument("source"); p.add_argument("--label", default="")
+    p.add_argument("--chunker-backend", choices=("python", "rust"), default="python")
+    p.add_argument("--native-library", help="Trusted Gear ABI 1 DLL/SO with adjacent native.json")
     p = sub.add_parser("store-stat")
     p.add_argument("store")
     p = sub.add_parser("store-verify")
@@ -143,7 +145,8 @@ def main(argv=None):
                 store = Store.create(args.store, compression=args.codec, chunker=args.chunker, chunk_size=args.chunk_size)
                 result = {"config": store.config, "config_sha256": store.config_sha256}
             elif args.command == "store-add":
-                result = Store(args.store).add(args.source, label=args.label)
+                result = Store(args.store).add(args.source, label=args.label,
+                            chunker_backend=args.chunker_backend, native_library=args.native_library)
             elif args.command == "store-stat":
                 result = Store(args.store).stats()
             elif args.command == "store-verify":

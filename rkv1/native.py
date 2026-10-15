@@ -1,4 +1,4 @@
-"""Explicit, provenance-checked optional CSV inverse kernel (ABI 1)."""
+"""Explicit, provenance-checked optional CSV inverse and Gear scan kernels."""
 import ctypes
 from functools import lru_cache
 import hashlib
@@ -62,3 +62,62 @@ def select_decoder(backend, library):
     if backend == "rust" and library is not None:
         return load_native(str(Path(library).resolve())).decode
     raise ValueError("Use decoder_backend='python', or 'rust' with native_library")
+
+
+class NativeGear(NativeCSV):
+    """Gear ABI 1 is additive; the existing CSV ABI remains unchanged."""
+    def __init__(self, library):
+        super().__init__(library)
+        features = self.provenance.get("features")
+        if (type(self.provenance.get("gear_abi")) is not int or self.provenance["gear_abi"] != 1
+                or type(features) is not list or any(type(f) is not str for f in features)
+                or "gear-v1" not in features):
+            raise ValueError("Native metadata does not declare Gear ABI 1")
+        try:
+            abi = self.library.rkv1_gear_abi_version
+            abi.argtypes, abi.restype = [], ctypes.c_uint32
+            if abi() != 1:
+                raise ValueError("Unsupported native Gear ABI")
+            self.scan_function = self.library.rkv1_gear_scan
+        except AttributeError as exc:
+            raise ValueError("Native library lacks Gear ABI") from exc
+        self.scan_function.argtypes = [ctypes.c_void_p, ctypes.c_size_t,
+            ctypes.POINTER(ctypes.c_uint64), ctypes.c_size_t,
+            ctypes.POINTER(ctypes.c_uint64), ctypes.POINTER(ctypes.c_size_t),
+            ctypes.POINTER(ctypes.c_size_t), ctypes.c_size_t]
+        self.scan_function.restype = ctypes.c_ssize_t
+        from .chunking import GEAR
+        self.table = (ctypes.c_uint64 * 256)(*GEAR)
+
+    def scan(self, data, scale, rolling=0, count=0):
+        from .chunking import profile, MASK64, MAX_SIZE
+        settings = profile("gear-v1", scale)
+        if (type(data) is not bytes or len(data) > MAX_SIZE
+                or type(rolling) is not int or not 0 <= rolling <= MASK64
+                or type(count) is not int or not 0 <= count < settings["max_size"]
+                or (count == 0 and rolling != 0)):
+            raise ValueError("Invalid native Gear buffer/state")
+        capacity = len(data) // settings["min_size"] + 1
+        cuts = (ctypes.c_size_t * capacity)()
+        h, n = ctypes.c_uint64(rolling), ctypes.c_size_t(count)
+        result = self.scan_function(ctypes.c_char_p(data), len(data), self.table, scale,
+                                   ctypes.byref(h), ctypes.byref(n), cuts, capacity)
+        if not 0 <= result <= capacity or not 0 <= n.value < settings["max_size"]:
+            raise ValueError(f"Native Gear scan rejected input (status {result})")
+        positions = list(cuts[:result])
+        if any(not 0 < b <= len(data) or b <= a for a, b in zip([0] + positions, positions)):
+            raise ValueError("Invalid native Gear boundaries")
+        return positions, h.value, n.value
+
+
+@lru_cache(maxsize=4)
+def load_native_gear(library):
+    return NativeGear(library)
+
+
+def select_scanner(backend, library, mode):
+    if backend == "python" and library is None:
+        return None
+    if backend == "rust" and library is not None and mode == "gear-v1":
+        return load_native_gear(str(Path(library).resolve())).scan
+    raise ValueError("Use chunker_backend='python', or 'rust' with Gear profile and native_library")

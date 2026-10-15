@@ -65,7 +65,9 @@ def sequence_worker(sources, root, config, round_index):
             target = shared if config["kind"] == "shared" else root / f"cas-{index}"
             if config["kind"] == "isolated":
                 Store.create(target, compression=config["compression"], chunker=config["chunker"], chunk_size=config["chunk_size"])
-            stats = Store(target).add(source, label=source.name)
+            stats = Store(target).add(source, label=source.name,
+                                     chunker_backend=config.get("chunker_backend", "python"),
+                                     native_library=config.get("native_library"))
             kind, snapshot_id = "cas", stats["snapshot_id"]
         add = {"wall_s": time.perf_counter() - start, "cpu_s": time.process_time() - cpu, "stats": stats}
         # Tree/allocation scans are a separate untimed ledger, not add CPU time.

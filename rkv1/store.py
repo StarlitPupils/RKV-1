@@ -142,9 +142,11 @@ class Store:
             raise ValueError("CAS raw SHA-256 mismatch")
         return raw
 
-    def add(self, source, *, label=""):
+    def add(self, source, *, label="", chunker_backend="python", native_library=None):
         if type(label) is not str or len(label) > 256:
             raise ValueError("Invalid snapshot label")
+        from .native import select_scanner
+        select_scanner(chunker_backend, native_library, self.config["chunker"]["mode"])
         source_path, store_path = Path(source).resolve(), self.root.resolve()
         if source_path.is_relative_to(store_path) or store_path.is_relative_to(source_path):
             raise ValueError("Source and CAS store must not overlap")
@@ -154,7 +156,7 @@ class Store:
         for path, relative in files_in(source):
             references, h, file_size = [], hashlib.sha256(), 0
             with path.open("rb") as stream:
-                for raw in chunks(stream, self.config["chunker"]):
+                for raw in chunks(stream, self.config["chunker"], backend=chunker_backend, native_library=native_library):
                     total += len(raw); file_size += len(raw); h.update(raw); sizes.append(len(raw))
                     if total > MAX_OUTPUT or len(sizes) > MAX_BLOCKS:
                         raise ValueError("CAS snapshot prototype limits exceeded")

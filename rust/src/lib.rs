@@ -2,6 +2,7 @@
 //! Python owns archive/codec/hash validation; this is not a complete archive decoder.
 
 pub mod csv;
+pub mod gear;
 
 pub const MAGIC: &[u8; 8] = b"RKV1\r\n\x1a\n";
 pub const PREFIX_SIZE: usize = 48;

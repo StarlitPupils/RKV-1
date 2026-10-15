@@ -22,11 +22,13 @@ def profile(mode="fixed", size=65536):
     raise ValueError("Unsupported chunker or Gear scale (power of two, at most 2 MiB)")
 
 
-def chunks(stream, settings, *, read_size=1 << 20):
+def chunks(stream, settings, *, read_size=1 << 20, backend="python", native_library=None):
     if settings != profile(settings.get("mode"), settings.get("size")):
         raise ValueError("Invalid or unknown chunker profile")
     if type(read_size) is not int or not 1 <= read_size <= MAX_SIZE:
         raise ValueError("Invalid input buffer size")
+    from .native import select_scanner
+    scanner = select_scanner(backend, native_library, settings["mode"])
     if settings["mode"] == "fixed":
         # Buffered files fill reads, but generic streams may return short reads.
         buffer = bytearray()
@@ -41,6 +43,24 @@ def chunks(stream, settings, *, read_size=1 << 20):
         return
     minimum, maximum, mask = settings["min_size"], settings["max_size"], settings["size"] - 1
     buffer, rolling = bytearray(), 0
+    if scanner is not None:
+        count = 0
+        while data := stream.read(read_size):
+            cuts, rolling, count = scanner(data, settings["size"], rolling, count)
+            start = 0
+            for end in cuts:
+                buffer.extend(data[start:end])
+                if not minimum <= len(buffer) <= maximum:
+                    raise ValueError("Invalid native non-final Gear chunk size")
+                yield bytes(buffer)
+                buffer.clear()
+                start = end
+            buffer.extend(data[start:])
+            if len(buffer) != count:
+                raise ValueError("Native Gear pending byte count mismatch")
+        if buffer:
+            yield bytes(buffer)
+        return
     for_data = iter(lambda: stream.read(read_size), b"")
     for data in for_data:
         for byte in data:

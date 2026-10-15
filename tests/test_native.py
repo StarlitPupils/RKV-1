@@ -1,4 +1,5 @@
 import hashlib
+import io
 import json
 import os
 from pathlib import Path
@@ -10,6 +11,98 @@ import unittest
 from rkv1.core import Archive, assert_tree_equal, pack, unpack, verify
 from rkv1.native import NativeCSV, load_native, select_decoder
 from rkv1.transforms import csv_columns_decode, csv_columns_encode
+
+
+class GearConfigurationTests(unittest.TestCase):
+    def test_backend_configuration_rejected_before_empty_add(self):
+        from rkv1.chunking import chunks, profile
+        from rkv1.store import Store
+        for backend, library in (("rust", None), ("python", "unused.dll"), ("bad", None)):
+            with self.assertRaises(ValueError):
+                list(chunks(io.BytesIO(b""), profile("gear-v1"), backend=backend, native_library=library))
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp); source = root / "source"; source.mkdir()
+            store = Store.create(root / "cas", compression="zlib", chunker="gear-v1")
+            with self.assertRaises(ValueError):
+                store.add(source, chunker_backend="rust")
+            self.assertEqual(store.stats()["snapshot_count"], 0)
+
+
+@unittest.skipUnless(os.environ.get("RKV_NATIVE_LIBRARY"), "native release library not selected")
+class GearIntegrationTests(unittest.TestCase):
+    def test_exact_boundaries_across_buffers_and_profiles(self):
+        from rkv1.chunking import chunks, profile
+        rng = random.Random(20261016)
+        library = Path(os.environ["RKV_NATIVE_LIBRARY"]).resolve()
+        for raw in (b"", b"x", bytes(range(256)) * 320, b"\0" * 350000, rng.randbytes(200000)):
+            for scale in (4096, 65536):
+                settings = profile("gear-v1", scale)
+                expected = list(chunks(io.BytesIO(raw), settings))
+                for read_size in (17, 8192, 1 << 20):
+                    actual = list(chunks(io.BytesIO(raw), settings, read_size=read_size,
+                                         backend="rust", native_library=library))
+                    self.assertEqual(actual, expected)
+        # One-byte short reads, and the largest permitted chunk profile.
+        for raw, scale, buffer in ((rng.randbytes(4097), 4096, 1), (b"\0" * ((8 << 20) + 17), 2 << 20, 1 << 20)):
+            settings = profile("gear-v1", scale)
+            self.assertEqual(list(chunks(io.BytesIO(raw), settings)),
+                             list(chunks(io.BytesIO(raw), settings, read_size=buffer,
+                                         backend="rust", native_library=library)))
+
+    def test_native_state_bounds_and_missing_gear_provenance(self):
+        from rkv1.native import load_native_gear, NativeGear
+        native = load_native_gear(str(Path(os.environ["RKV_NATIVE_LIBRARY"]).resolve()))
+        for scale, rolling, count in ((True, 0, 0), (5000, 0, 0), (4096, -1, 1),
+                                       (4096, 1, 0), (4096, 0, 16384), (4096, 0, True)):
+            with self.assertRaises(ValueError):
+                native.scan(b"x", scale, rolling, count)
+        with self.assertRaises(ValueError):
+            native.scan(b"x" * ((8 << 20) + 1), 4096)
+        with tempfile.TemporaryDirectory() as temp:
+            original = native.provenance
+            root = Path(temp); copied = root / original["library"]
+            copied.write_bytes(Path(os.environ["RKV_NATIVE_LIBRARY"]).read_bytes())
+            metadata = {**original}; metadata.pop("gear_abi")
+            (root / "native.json").write_text(json.dumps(metadata), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "Gear"):
+                NativeGear(copied)
+
+    def test_store_tree_identical_and_old_objects_still_verified(self):
+        from rkv1.store import Store
+        from rkv1.store_benchmark import _fingerprint
+        library = Path(os.environ["RKV_NATIVE_LIBRARY"]).resolve()
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp); source = root / "source"; source.mkdir()
+            raw = random.Random(131).randbytes(200000)
+            stores = [Store.create(root / f"cas-{i}", compression="zlib", chunker="gear-v1", chunk_size=4096) for i in (0, 1)]
+            for version in range(2):
+                (source / "a").write_bytes(raw if version == 0 else raw[:7011] + b"insert" + raw[7011:])
+                left = stores[0].add(source, label=str(version))
+                right = stores[1].add(source, label=str(version), chunker_backend="rust", native_library=library)
+                self.assertEqual(left, right)
+                self.assertEqual(_fingerprint(stores[0].root), _fingerprint(stores[1].root))
+                for store, stats in zip(stores, (left, right)):
+                    self.assertTrue(store.snapshot(stats["snapshot_id"]).process()["verified"])
+            for store in stores:
+                ref = store.snapshot(left["snapshot_id"]).header["files"][0]["chunks"][0]
+                target = store.object_path(ref["id"])
+                changed = bytearray(target.read_bytes()); changed[-1] ^= 1; target.write_bytes(changed)
+                with self.assertRaisesRegex(ValueError, "SHA-256"):
+                    store.add(source, chunker_backend="rust", native_library=library)
+
+    def test_paired_version_campaign_smoke(self):
+        from rkv1.gear_benchmark import gear_benchmark
+        library = Path(os.environ["RKV_NATIVE_LIBRARY"]).resolve()
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp); sources = []
+            raw = random.Random(1).randbytes(40000)
+            for i in (0, 1):
+                source = root / f"v{i}"; source.mkdir(); sources.append(source)
+                (source / "a").write_bytes(raw if i == 0 else raw[:17] + b"new" + raw[17:])
+            result = gear_benchmark(sources, library, rounds=1, queries=2, warmup_queries=1,
+                                    include_controls=False, compression="zlib", scale=4096)
+            self.assertTrue(result["backend_encoding_equivalence"][0]["identical_complete_tree"])
+            self.assertEqual(len(result["results"]), 2)
 
 
 class NativeConfigurationTests(unittest.TestCase):
