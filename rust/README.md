@@ -1,4 +1,4 @@
-# Rust format boundary and exact CSV kernel
+# Rust format boundary, exact CSV kernel and streaming Gear scanner
 
 `cargo test --manifest-path rust/Cargo.toml`
 
@@ -30,3 +30,14 @@ platform, ABI, compiler and binary SHA-256. These are platform/build candidates,
 not universal portable binaries. Readers select a trusted release library explicitly;
 the optional Python wrapper checks the adjacent metadata and caches the loaded
 library per process. A checksum establishes identity, not publisher trust.
+
+v0.8 adds gear.rs after profiling the frozen v0.7 Python Gear loop. The scanner
+implements the same u64 recurrence, minimum/maximum bounds and single mask;
+Python supplies the validated 256-element table. It returns buffer-relative cut
+positions and carries rolling/pending-byte state across short reads. It does not
+compress, hash, publish objects or restore snapshots. CSV ABI 1 is unchanged;
+Gear has a separate ABI 1 export and requires gear_abi/features provenance.
+See [the frozen local experiment](../results/v0.8.0/SUMMARY.md). CI differential
+checks cover profiles, buffers, zero/random data, final residuals, complete CAS
+trees, existing-object corruption and matched campaign workers. Python remains
+the default; there is no automatic native selection.

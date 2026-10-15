@@ -20,7 +20,11 @@ def main():
     parser.add_argument("--rounds", type=int, default=5)
     parser.add_argument("--queries", type=int, default=64)
     args = parser.parse_args()
-    args.out.mkdir(parents=True, exist_ok=False)
+    planned = ("environment.json", "dataset-provenance.json", "native-provenance.json",
+               "qasper-gear.json", "source-checksums.json", "runtime-footprint.json")
+    if any((args.out / name).exists() for name in planned):
+        raise ValueError("Gear campaign report already exists; choose a fresh output path")
+    args.out.mkdir(parents=True, exist_ok=True)  # permits a separately frozen baseline profile
     records = fetch_versions(args.data)
     provenance = load_native_gear(str(args.native_library.resolve())).provenance
     checksums = implementation_checksums()

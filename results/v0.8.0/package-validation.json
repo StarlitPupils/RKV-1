@@ -1,0 +1,11 @@
+{
+  "wheel_python_sources_match_measurement": true,
+  "sdist_required_artifacts_present": true,
+  "private_research_excluded": true,
+  "installed_wheel_outside_checkout": true,
+  "all_CAS_CLI_commands_and_previous_snapshot_recovery": true,
+  "released_v0_7_reader_restores_native_v0_8_CAS": true,
+  "old_RKV_v1_v2_fixtures_verified": true,
+  "installed_paired_subprocess_campaign_smoke": true,
+  "wheel_sha256": "855de1ae805a82c2874e4d99a99bfdb429d7c30627640fb8b81828b7cb403539"
+}

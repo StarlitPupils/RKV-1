@@ -1,7 +1,12 @@
-# Shared CAS draft 0.1 / v0.7 protocol
+# Shared CAS draft 0.1 / v0.7–v0.8 protocols
 
 这是独立于 RKV 归档 v1/v2/v3 的可选目录存储。原有 pack/read/unpack 默认与格式
 保持不变。CAS 保留原始普通文件相对路径和字节，不保存权限、时间、链接或空目录。
+
+v0.8新增显式Gear Rust扫描后端，不改变本格式。`store-add`可选
+`--chunker-backend rust --native-library <DLL/SO>`；默认仍为Python。所有哈希、压缩、
+复用验证及发布流程继续由Python执行。后端不写入配置或快照，实测两个后端完整
+存储树相同，可由v0.7 Python恢复。原生ABI/冻结二进制/本机对照见[NATIVE.md](NATIVE.md)。
 
 ## 目录与格式
 

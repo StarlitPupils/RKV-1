@@ -1,0 +1,14 @@
+{
+  "source_commit": "96be8d0361407d6970bcb1101e2770151951483d",
+  "local_kernel_bytes_match_compiled_commit": true,
+  "checksums": {
+    "rust/Cargo.toml": "f19ba4ce59a6c3fea3efa3150cbda05a3ec18c2f0b05f313b811782945ea88d9",
+    "rust/src/lib.rs": "2d695f95be95fd53d8edd8e3a8fbfa2b0098e1ea6103889cd3c81f0151481fa8",
+    "rust/src/csv.rs": "8e1b2f7c6b2284afc300e2922983b673781f6d159a5cd2b4ee917f9d26ed9199",
+    "rust/src/gear.rs": "9ec284a605e4fe9124155ca87ef1770869d6637ac1dbfeb650c97132358bcda4"
+  },
+  "baseline_profile_python_bytes_match_v0_7_0": true,
+  "candidate_ci_run_id": 38663947226,
+  "candidate_ci_conclusion": "success",
+  "candidate_ci_scope": "Windows/Linux Python 3.10/3.13, Rust unit tests and native integration/differential checks; no cross-machine timing."
+}

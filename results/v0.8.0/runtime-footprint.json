@@ -1,0 +1,36 @@
+{
+  "zstandard": {
+    "package_version": "0.24.0",
+    "native_library_version": [
+      1,
+      5,
+      7
+    ],
+    "installed_distribution_bytes": 1130362,
+    "recorded_files": 15,
+    "basis": "installed distribution files; includes metadata/backends; may exclude linked dependencies"
+  },
+  "rkv_source_bytes": 183861,
+  "transform_module_source_bytes": 3970,
+  "experiment_source_bytes": 4232,
+  "accounting": "RKV/transform source shared by all v2 conditions; Python/shared native dependencies not assigned per archive; optional Zstd distribution is a deployment cost",
+  "not_a_complete_deployment_size": true,
+  "native": {
+    "abi": 1,
+    "library": "rkv1_core.dll",
+    "sha256": "7736879b67377038fdc2211fbdadfc12c71983ba96257dbb8a18c33c660196e2",
+    "bytes": 123904,
+    "source_commit": "96be8d0361407d6970bcb1101e2770151951483d",
+    "tag": "CI-candidate",
+    "platform": "Windows-2025Server-10.0.26100-SP0",
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+    "features": [
+      "csv-columns-v1",
+      "gear-v1"
+    ],
+    "gear_abi": 1,
+    "scope": "CSV inverse and Gear boundary scan; not a complete archive/CAS implementation",
+    "metadata_bytes": 515,
+    "metadata_sha256": "e6c916ce2efdb247cc8829ed38548116d9f7c81efce990484e95062998052ced"
+  }
+}

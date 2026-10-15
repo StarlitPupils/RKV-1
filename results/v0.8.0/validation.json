@@ -1,0 +1,70 @@
+{
+  "configurations": 6,
+  "versions": 3,
+  "measured_roundtrips": 90,
+  "warmup_roundtrips": 18,
+  "verified_range_reads": 34560,
+  "verified_warmup_range_reads": 2160,
+  "measurement_python_source_matches_current_release": true,
+  "inputs_identical_to_v0_7": true,
+  "historical_encoding_compatibility": [
+    {
+      "condition": "isolated-gear-v1-64-python",
+      "reference": "isolated-gear-v1-64",
+      "all_rounds_complete_tree_bytes_identical": true,
+      "tree_sha256": "3dcfe4732da814825d058aeefb3b40c72c90e40201773137aed3099b92f11508"
+    },
+    {
+      "condition": "archive-fixed-1024",
+      "reference": "archive-fixed-1024",
+      "all_rounds_complete_tree_bytes_identical": true,
+      "tree_sha256": "ec00ece936572b90098d08958dfcbe774c77c250473d97c34726c912a39f38d4"
+    },
+    {
+      "condition": "shared-gear-v1-64-python",
+      "reference": "shared-gear-v1-64",
+      "all_rounds_complete_tree_bytes_identical": true,
+      "tree_sha256": "4d7710ff0e003e7f2416bc2f926dd73525c2cc190c63927f88a67d6698ba9655"
+    },
+    {
+      "condition": "isolated-gear-v1-64-rust",
+      "reference": "isolated-gear-v1-64",
+      "all_rounds_complete_tree_bytes_identical": true,
+      "tree_sha256": "3dcfe4732da814825d058aeefb3b40c72c90e40201773137aed3099b92f11508"
+    },
+    {
+      "condition": "shared-gear-v1-64-rust",
+      "reference": "shared-gear-v1-64",
+      "all_rounds_complete_tree_bytes_identical": true,
+      "tree_sha256": "4d7710ff0e003e7f2416bc2f926dd73525c2cc190c63927f88a67d6698ba9655"
+    },
+    {
+      "condition": "shared-fixed-64",
+      "reference": "shared-fixed-64",
+      "all_rounds_complete_tree_bytes_identical": true,
+      "tree_sha256": "e4301a17592d0a186e01a9a01d9584dc6e740f12774b3d3ccd90c50972b1b62a"
+    }
+  ],
+  "actual_requests_match_all_conditions_and_modes": true,
+  "frozen_native_library_and_metadata_identity_verified": true,
+  "diagnostic_storage_trees_identical": true,
+  "all_backend_storage_trees_and_add_ledgers_identical": true,
+  "integrity": "Source scanning, raw/stored/object/file SHA and reuse verification retained; corruption tests include existing-object reuse.",
+  "native_scope": "Gear submission scan only; all restores/ranges use Python. No native CAS decoder speed result.",
+  "cost": "All logical store files and full measured DLL+metadata once. Allocated file data extents only; directories/MFT/journal/common runtime unallocated.",
+  "local_python_tests": {
+    "run": 75,
+    "passed": 74,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "ad1fe09431bbca019bd6d77735511feac578fb495e21364d260234e4026d9500",
+    "skip_reason": "See unittest log; local Windows symlink permission"
+  },
+  "native_build_source_commit": "96be8d0361407d6970bcb1101e2770151951483d",
+  "cross_platform_ci": "Recorded separately in native-source-verification.json; this raw-record audit does not rerun CI.",
+  "cold_os_cache": null,
+  "cross_machine": null,
+  "cross_day": null,
+  "rust_cas_decoder_speedup": null,
+  "inference_quality": null
+}

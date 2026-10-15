@@ -1,4 +1,53 @@
-# 精确 CSV Rust 内核与配对实验
+# 精确 CSV / Gear Rust 内核与配对实验
+
+## v0.8 Gear 边界扫描
+
+v0.7 的冻结Python源码经cProfile诊断后，逐字节Gear循环是主要热点。v0.8新增显式
+`store-add --chunker-backend rust --native-library ...`，只迁移边界扫描。Python仍组装
+原文字节、计算全部SHA-256、压缩、验证旧对象、fsync并发布对象和快照。
+默认仍为Python；固定边界不接受Rust扫描后端。CAS config和快照均不写后端名称，
+两个后端产生相同切点、对象、快照ID和完整存储树，CAS格式仍为version=1。
+
+```powershell
+python -m rkv1 store-init vault --chunker gear-v1 --chunk-size 65536 --codec zstd
+python -m rkv1 store-add vault data/qasper-versions/v0.1 --label v0.1 --chunker-backend rust --native-library .tools/native-v0.8-measured/rkv1_core.dll
+python -m scripts.run_gear --native-library .tools/native-v0.8-measured/rkv1_core.dll --out results/local-gear
+python -m scripts.profile_store --backend rust --native-library .tools/native-v0.8-measured/rkv1_core.dll --out results/local-gear/profiling-native.json
+python -m scripts.summarize_gear results/local-gear
+```
+
+API：`Store(root).add(source, label="...", chunker_backend="rust", native_library=library)`；
+`chunks(stream, settings, backend="rust", native_library=library)`也可直接使用。
+旧CSV ABI=1不变，Gear使用额外的`rkv1_gear_abi_version() == 1`及`rkv1_gear_scan`。
+库元数据必须声明`gear_abi=1`和features中的`gear-v1`，否则在加载DLL前拒绝。
+加载后还检查导出ABI；任何失败直接报错，不自动回退或跳过数据。
+
+Gear C ABI接受本缓冲区的字节、256项u64表、scale、rolling/count输入输出状态，
+返回缓冲区内从1开始的切点位置数组。h按u64溢出保持原递推，边界后h/count清零；
+Python跨短读取保留原文缓冲区与状态，最终残余字节不丢弃。缓冲区上限8MiB，
+scale仍为4096..2MiB的二次幂。输出容量不足或状态/尺寸不合法时不更新状态。
+FFI只检查声明的尺寸，调用者仍必须提供有效、互不重叠、存活的指针与缓冲区。
+
+本机测量使用通过Windows/Linux CI的冻结Windows二进制，源提交
+`96be8d0361407d6970bcb1101e2770151951483d`，DLL SHA-256
+`7736879b67377038fdc2211fbdadfc12c71983ba96257dbb8a18c33c660196e2`。
+DLL 123,904 bytes + 原始native.json 515 bytes，整份库全额计费124,419 bytes。
+发布资产`rkv1-native-measured-v0.8.0-windows-x86_64.zip`保留该库和元数据原字节；
+本机时序必须用此资产复现，不假定新Release构建与它二进制相同。源码内核指纹、
+编译器、完整树一致性及配对样本见[本轮记录](../results/v0.8.0/SUMMARY.md)。
+
+主实验六条件：旧独立1MiB RKV、共享固定64KiB CAS、独立/共享Gear × Python/Rust。
+一次完整序列预热，再五轮正式新进程序列；条件/轮次打乱，每序列依次添加三版。
+计时包含首次库身份检查/加载、FFI和复制，实际读源、压缩、复用验证与发布全部保留。
+每个版本均独立恢复，再比较全部文件名和原字节；各后端的所有轮次存储树和账本必须
+完全一致。范围请求指纹匹配，恢复/读取仍使用同一Python CAS实现；相应计时波动不能
+解释为原生解码收益。cProfile诊断与主实验分离，仪器化占比不视作正常运行CPU比例。
+
+共享原生资源全额加一次，不按符号大小推算所谓Gear专属成本。文件数据allocation、
+逻辑存储、文件数分别报告；目录/MFT/日志和公共Python/codec/OS未全额分配。
+本机温缓存、一个家族三版；冷缓存、跨机器、跨日与推理质量未测。
+
+## CSV 后端
 
 默认后端仍为 Python。Rust 只迁移 CSV v1 的数值字面量检查与列到行的精确反变换，
 不解析浮点数，不改写编码、codec、哈希、归档格式或完整性规则。它不是整个归档
@@ -62,3 +111,7 @@ python -m scripts.summarize_native results/local-native
 
 最后一条在数据完整后生成对比表与科学图。Linux CI 验证正确性，不提供本机或
 跨机器的性能复测结论。后续根据测得热点决定更广的 Rust 迁移。
+
+上述v0.6完整测试命令对应v0.6.0 tag。当前v0.8完整原生测试应将
+`RKV_NATIVE_LIBRARY`设为v0.8 measured库，覆盖CSV和Gear两个内核；重跑v0.6
+CSV性能矩阵时仍通过`run_native --native-library`明确选择冻结v0.5库。

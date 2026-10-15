@@ -8,6 +8,9 @@ v0.4.0 独立数值数据、CSV 反变换诊断和旧/新配对使用 [CSV-TRIAL
 v0.5.0 的独立校验单元、直接小块与完整索引成本对照见 [UNITS.md](UNITS.md)。
 v0.6.0 的冻结 Rust 内核、同归档后端配对与部署成本见 [NATIVE.md](NATIVE.md)。
 v0.7.0 的原始版本序列、独立/共享 CAS、Gear CDC 和完整存储账本见 [STORE.md](STORE.md)。
+v0.8.0 的冻结源码剖析、精确Rust Gear扫描、同存储树五轮提交配对与整份原生库
+成本见 [NATIVE.md](NATIVE.md)。复现性能时使用Release的measured原生资产，保留
+原始native.json；通用新构建资产只证明自身构建身份，不能替代已测二进制。
 
 ```powershell
 python -m venv .venv

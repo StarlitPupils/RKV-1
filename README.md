@@ -6,7 +6,52 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.7.0 · 真实版本序列与共享 CAS
+## 当前版本：v0.8.0 · 热点剖析与精确 Rust Gear 扫描
+
+冻结v0.7源码的cProfile诊断定位到逐字节Gear循环；v0.8新增显式Rust扫描后端。
+同一表、u64递推、最小/最大边界和流状态保持不变。Python仍组装原文字节，执行
+全部哈希、压缩、旧对象验证、fsync和发布。CAS格式与默认Python后端不变。
+
+原始QASPER三个发布，六条件、五轮本机温缓存；Python/Rust所有轮次的完整存储树、
+对象账本及快照ID相同，并与v0.7已发布的同表示存储树字节完全一致。
+**90次正式完整恢复、34,560次正式范围读取**，另18次恢复预热、2,160次查询预热
+全部逐字节一致。本机75项测试：74通过、1 Windows符号链接权限跳过；跨平台CI通过。
+
+| 三版存储/扫描方式 | 完整逻辑存储 bytes | 三版提交中位 s | 完整恢复中位 s | v0.3重开p95 ms |
+|---|---:|---:|---:|---:|
+| 独立RKV / 固定1MiB | 31,519,475 | 0.623 | 0.260 | 2.233 |
+| 共享CAS / 固定64KiB | 35,981,908 | 3.970 | 0.572 | 4.704 |
+| 共享CAS / Gear Python | 23,946,864 | 28.989 | 0.519 | 3.893 |
+| 共享CAS / Gear Rust | **23,946,864** | **2.971** | 0.517 | 3.793 |
+
+同轮提交配对加速中位：共享Gear **9.88倍**、独立Gear **10.54倍**，两者均5/5轮
+更快。配对比值中位与表内耗时中位之比不是同一统计量；结论使用本轮内部对照，
+不将历史版本耗时变化直接当作迁移收益。恢复/读取仍用同一Python实现，未获Rust解码收益。
+共享配对逐轮加速范围8.15–16.66倍，仅为观测范围；Rust三版提交wall为1.70–3.56秒，
+波动仍存在，不声称统计显著或固定倍率。
+
+实测冻结DLL 123,904 bytes + 原始native.json 515 bytes，整份共享资源 **124,419 bytes**。
+三版共享Gear加一次全额库成本为 **24,071,283 bytes**，相对旧独立1MiB归档节省
+**23.63%**；公共Python/codec/OS和目录/MFT/日志未全额分配，不是完整部署或物理卷成本。
+提交仍为旧1MiB归档 **4.77倍耗时**，完整恢复约 **1.99倍**，重开p95约 **1.70倍**。
+原生扫描解决了主要诊断热点，综合性能仍有明确取舍。
+
+![Gear同存储字节的提交与资源成本](results/v0.8.0/gear-tradeoffs.png)
+
+```powershell
+python -m rkv1 store-init vault --chunker gear-v1 --codec zstd
+python -m rkv1 store-add vault data/qasper-versions/v0.1 --label v0.1 --chunker-backend rust --native-library .tools/native-v0.8-measured/rkv1_core.dll
+python -m scripts.run_gear --native-library .tools/native-v0.8-measured/rkv1_core.dll --out results/local-gear
+```
+
+[完整记录](results/v0.8.0/SUMMARY.md) · [原生协议/复现](docs/NATIVE.md) ·
+[逐轮原始结果](results/v0.8.0/qasper-gear.json)。Release另附
+`rkv1-native-measured-v0.8.0-windows-x86_64.zip`，保留通过源CI的实测库和元数据原字节。
+通用新构建库须按自己的身份使用，不能假定与实测库相同。源/输入/库/元数据前后
+指纹一致；诊断树与主实验均保留。一个家族三版、温缓存五轮；冷缓存、跨机器、
+跨日和科学推理质量未测。后续优先对象发布/访问成本、独立版本家族及E2其他类型。
+
+## 既有真实版本序列与共享 CAS（v0.7.0）
 
 新增可选目录 CAS：不可变内容对象、独立快照、全量/局部恢复与逐层校验。支持固定
 分块和简单 Gear CDC；对象按原文字节 SHA-256 寻址，跨版本引用已有对象，实际只
@@ -46,7 +91,7 @@ CDC改善了这组真实修订的复用，Python扫描/大量对象也增加了�
 store-verify/store-unpack/store-read/store-stat。局部验证只证明触及对象；每次复用
 验证旧对象，完整恢复验证文件。失败提交可留下计费对象，无GC和断电耐久性证明。
 仅本机温缓存、一个语料家族；冷缓存/跨机器/跨日、E3/E4科学推理质量未测。
-后续需针对Gear扫描与对象IO做热点分析，补充其他真实版本序列和E2类型对照。
+Gear热点剖析与原生扫描已由v0.8补充；其他真实版本家族和E2类型仍待扩大。
 
 ## 既有 Rust 反变换与本机配对（v0.6.0）
 
@@ -80,8 +125,8 @@ bytes，比最小普通 Zstd 的 7,548,059 bytes 减小 263,156 bytes；计入�
 [完整配对结果](results/v0.6.0/SUMMARY.md) · [原生协议与执行说明](docs/NATIVE.md) ·
 [库来源](results/v0.6.0/native-provenance.json)。归档格式不变，兼容 v1/v2/v3；
 Release 附 Windows/Linux 原生库 ZIP，复现实验须选协议指定的冻结二进制。
-冷缓存/跨机器/跨日、推理质量未测。下一优先项为真实版本序列、CDC 与共享 CAS；
-数组/代码/数学类型、E3/E4 仍待开展。
+冷缓存/跨机器/跨日、推理质量未测。真实版本序列、CDC与共享CAS已由v0.7补充；
+数组/代码/数学类型、E3/E4仍待开展。
 
 ## 既有独立单元与索引实验（v0.5.0）
 
@@ -243,13 +288,13 @@ python -m rkv1 pack data/wine data/columns.rkv --codec zlib --transform csv-colu
 | 阶段 | 状态 |
 |---|---|
 | E0 基准 | 完成首版、受控对照和多种子读取评测；仍是单机温缓存 |
-| E1 无损核心 | 可选 v3 单元/二进制索引；v1/v2 兼容，父块粒度复用 |
-| E2 类型感知可逆编码 | 独立 CSV、小单元访问、完整成本对照；Rust 反变换候选未测本机性能 |
+| E1 无损核心 | v1/v2/v3兼容；共享CAS、真实版本复用与Gear分块；v0.8显式Rust扫描，格式不变 |
+| E2 类型感知可逆编码 | CSV、小单元访问与冻结Rust反变换已有本机配对；其余类型待开展 |
 | E3 神经预测 + 熵编码 + 精确残差 | 后续，计入模型和解码成本 |
 | E4 科学记忆、检索、证据回溯与可验证推理 | 后续，尚无质量结果 |
 
-Rust 已有格式边界与 CSV 反变换候选，本轮尚未接入性能路径。增量编码可验证并
-复用旧块，仍全量读源并写出独立完整快照；中间插入会改变固定块边界。
+Rust 已用于可选CSV反变换与Gear扫描。传统归档的`--base`复用编码结果，仍写独立
+完整快照；目录CAS可跨版本只存一份对象。两者仍全量读源、计算哈希并验证旧对象。
 
 [FORMAT Draft 0.3](docs/FORMAT.md) 只恢复普通文件路径和内容，不保留权限、时间戳、
 空子目录或链接；恢复合计上限 2 GiB。v3 需 v0.5.0+，默认 v2 仍可由 v0.2.0+ 读取。

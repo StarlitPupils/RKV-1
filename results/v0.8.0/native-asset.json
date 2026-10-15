@@ -1,0 +1,10 @@
+{
+  "filename": "rkv1-native-measured-v0.8.0-windows-x86_64.zip",
+  "bytes": 64777,
+  "sha256": "63119b167ea624fc3f0a125667c57870af1ddc61f10f68b1285dac9114765731",
+  "source_commit": "96be8d0361407d6970bcb1101e2770151951483d",
+  "source_workflow_run": 38663947226,
+  "source_artifact_id": 11940086547,
+  "release_asset_url": "https://github.com/StarlitPupils/RKV-1/releases/download/v0.8.0/rkv1-native-measured-v0.8.0-windows-x86_64.zip",
+  "scope": "Frozen measured Windows DLL and original adjacent metadata, retained unchanged from successful source CI."
+}
