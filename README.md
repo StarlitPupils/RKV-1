@@ -6,7 +6,49 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.6.0 · Rust 精确反变换与本机配对
+## 当前版本：v0.7.0 · 真实版本序列与共享 CAS
+
+新增可选目录 CAS：不可变内容对象、独立快照、全量/局部恢复与逐层校验。支持固定
+分块和简单 Gear CDC；对象按原文字节 SHA-256 寻址，跨版本引用已有对象，实际只
+存一份。旧归档 v1/v2/v3 和 pack/read/unpack 默认行为保持不变。
+
+使用 QASPER 官方原始 train/dev **v0.1→v0.2→v0.3**，保留原始文件名和全部字节，
+不重序列化 JSON。一个语料家族、三次真实发布，128,076,252 bytes 原文；八条件：
+独立 RKV、同格式独立 CAS、共享 CAS，固定64KiB/1MiB及 Gear scale64KiB。
+**120 次正式完整恢复 + 24 次预热恢复、46,080 次正式范围读取 + 2,880 次查询
+预热全部逐字节一致**。本地70项测试：69通过、1符号链接权限跳过；跨平台CI通过。
+
+所有方法 Zstd3，无CSV/模型/字典/原生后端。同边界的独立/共享 CAS 快照ID相同，
+对象文件字节并集相同，避免将不同编码表示的收益当成共享效果。
+
+| 三个版本的存储方式 | 完整逻辑文件 bytes | 分配文件数据 bytes | 文件数 | 三版提交 s |
+|---|---:|---:|---:|---:|
+| 独立 RKV / 固定1MiB | 31,519,475 | 31,522,816 | 3 | 0.650 |
+| 独立 CAS / Gear64 | 35,408,908 | 38,224,616 | 1,436 | 23.040 |
+| 共享 CAS / 固定64KiB | 35,981,908 | 39,780,480 | 1,928 | 3.100 |
+| 共享 CAS / Gear64 | **23,946,864** | **25,759,992** | 914 | 22.529 |
+
+共享 Gear 相对同格式独立 Gear 节省 **32.37%**；相对独立1MiB RKV逻辑字节减少
+**24.03%**，但提交约 **34.69倍耗时**，三版完整恢复约 **2.00倍耗时**。v0.3 的
+跨版本独特对象复用 **94.21%**（独特原文91.23%）；固定64KiB对应仅4.83%/4.84%。
+v0.3 新增对象+快照约1.05MB，固定1MiB约10.42MB。固定分块会受字节偏移影响，
+CDC改善了这组真实修订的复用，Python扫描/大量对象也增加了时间成本。
+
+![三版存储与累计增长](results/v0.7.0/version-storage.png)
+
+逻辑字节包含所有对象头/双摘要/payload、快照/config与未引用对象；额外报告文件
+数据分配空间和文件数。目录/MFT/日志/公共运行时未全额计入，不称为完整物理卷
+占用。Gear64是mask scale，实际平均块约89,500 bytes（约87.4KiB），
+不是与固定64KiB实际平均严格匹配，也不是FastCDC复现。
+
+[本轮完整记录](results/v0.7.0/SUMMARY.md) · [格式/协议/执行说明](docs/STORE.md) ·
+[固定数据来源](results/v0.7.0/dataset-provenance.json)。使用 store-init/store-add/
+store-verify/store-unpack/store-read/store-stat。局部验证只证明触及对象；每次复用
+验证旧对象，完整恢复验证文件。失败提交可留下计费对象，无GC和断电耐久性证明。
+仅本机温缓存、一个语料家族；冷缓存/跨机器/跨日、E3/E4科学推理质量未测。
+后续需针对Gear扫描与对象IO做热点分析，补充其他真实版本序列和E2类型对照。
+
+## 既有 Rust 反变换与本机配对（v0.6.0）
 
 新增读取器实例级 `--decoder-backend rust --native-library ...`，只替换 CSV v1 的
 字面量检查和精确反变换。保留原有受限解压、单元/父块/文件 SHA-256；两个后端

@@ -93,6 +93,7 @@ POSIX用st_blocks*512。它们是已分配文件数据空间，未包含目录/M
 日志等全部文件系统成本；报告文件数，不称为完整物理卷占用。参考
 [Microsoft FILE_STANDARD_INFO](https://learn.microsoft.com/en-us/windows/win32/api/winbase/ns-winbase-file_standard_info)。
 分配空间/完整树扫描在提交计时外；编码进程RSS仍包含这些未计时账本操作。
+范围RSS额外包含真值、预读对象清单/元数据与独立工作账本，不能当作生产读取器RAM。
 
 全部控制共享相同 v0.7 Python 部署；codec/系统/公共运行时未全额分配每个归档。
 只报告本机温缓存、五轮描述统计；冷缓存/跨机器/跨日/推理质量均未测。

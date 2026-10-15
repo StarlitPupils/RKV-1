@@ -1,0 +1,62 @@
+{
+  "configurations": 8,
+  "versions": 3,
+  "measured_roundtrips": 120,
+  "warmup_roundtrips": 24,
+  "verified_range_reads": 46080,
+  "verified_warmup_range_reads": 2880,
+  "local_python_tests": {
+    "run": 70,
+    "passed": 69,
+    "skipped": 1,
+    "failed": 0,
+    "skip_reason": "Windows symlink permission"
+  },
+  "measurement_source_matches_release": true,
+  "actual_requests_match_all_conditions": true,
+  "repeated_complete_tree_bytes_identical": true,
+  "stored_tree_unchanged_after_reads": true,
+  "isolated_shared_snapshot_ids_and_object_union_identical": [
+    {
+      "shared": "shared-fixed-1024",
+      "isolated": "isolated-fixed-1024",
+      "identical_snapshot_ids": true,
+      "identical_object_union": true,
+      "unique_objects": 124
+    },
+    {
+      "shared": "shared-fixed-64",
+      "isolated": "isolated-fixed-64",
+      "identical_snapshot_ids": true,
+      "identical_object_union": true,
+      "unique_objects": 1924
+    },
+    {
+      "shared": "shared-gear-v1-64",
+      "isolated": "isolated-gear-v1-64",
+      "identical_snapshot_ids": true,
+      "identical_object_union": true,
+      "unique_objects": 910
+    }
+  ],
+  "storage_growth_matches_new_object_snapshot_config_ledger": true,
+  "original_paths_bytes_preserved": true,
+  "dataset_families": 1,
+  "real_release_sequence": [
+    "0.1",
+    "0.2",
+    "0.3"
+  ],
+  "old_archive_compatibility": "v1/v2 fixtures and v3 tests passed; default v2 byte fixture unchanged",
+  "scoped_integrity": "untouched damage does not invalidate unrelated partial reads; full snapshot verifies stored/raw/file hashes",
+  "failed_publication": "previous snapshots retained; new orphan objects counted; no GC",
+  "allocated_space": "file data allocation only; directory/MFT/journal not fully counted; table uses formal round0 audit",
+  "installed_wheel": "outside checkout: old fixtures, all CAS CLI operations, previous version recovery and paired subprocess workers passed",
+  "sdist_contents": "formats, provenance pins, scripts and tests included; raw/private research excluded",
+  "cross_platform_ci": "1a0577d Windows/Linux Python 3.10/3.13 and existing Rust/native checks passed; final release CI required",
+  "rust_cas_speedup": null,
+  "cold_os_cache": null,
+  "cross_machine": null,
+  "cross_day": null,
+  "inference_quality": null
+}
