@@ -1,0 +1,9 @@
+{
+  "source_module": "rkv1/numeric.py",
+  "source_bytes": 1431,
+  "source_sha256": "5d2517f9638baa0b944dc7a43b684307dc0cce32d84b594765908106c4263cbe",
+  "native_library_bytes": 0,
+  "model_bytes": 0,
+  "dictionary_bytes": 0,
+  "scope": "Same-install archive cost plus a conservative separate scenario charging the entire dedicated numeric.py source once to candidate; not compiled module or full deployment cost. Python/codec/core shared allocation incomplete."
+}

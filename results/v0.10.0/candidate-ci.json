@@ -1,0 +1,34 @@
+{
+  "run_id": 38686535906,
+  "source_commit": "e5feff671550c7917efd58fe0ae231bbcca9ca77",
+  "status": "completed",
+  "conclusion": "success",
+  "url": "https://github.com/StarlitPupils/RKV-1/actions/runs/38686535906",
+  "jobs": [
+    {
+      "name": "rust (ubuntu-latest)",
+      "conclusion": "success"
+    },
+    {
+      "name": "python (windows-latest, 3.10)",
+      "conclusion": "success"
+    },
+    {
+      "name": "python (ubuntu-latest, 3.10)",
+      "conclusion": "success"
+    },
+    {
+      "name": "rust (windows-latest)",
+      "conclusion": "success"
+    },
+    {
+      "name": "python (windows-latest, 3.13)",
+      "conclusion": "success"
+    },
+    {
+      "name": "python (ubuntu-latest, 3.13)",
+      "conclusion": "success"
+    }
+  ],
+  "scope": "Candidate Windows/Linux Python and Rust/native correctness CI; timing results remain local Windows only."
+}

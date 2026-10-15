@@ -38,3 +38,22 @@ v1.2（2019-09-17）→v1.3（2019-10-09）→v1.4（2019-10-17）三个真实�
 annotations表三版摘要不同；同长度不代表内容相同，也不把净长度差当作编辑字节数。
 主表commit、原始路径和每文件SHA固定在`rkv1/evidence_versions.py`，随实验保存。
 许可见[官方v1.4 MIT LICENSE](https://github.com/jayded/evidence-inference/blob/411fd36aa28425253dd6063f382c41e3191f7b41/LICENSE)。
+
+v0.10.0数值原型固定两组独立数据库中的单条原始记录（不代表整库）：
+
+| 选择范围 | 官方来源与引用 | 原始 bytes | 许可 |
+|---|---|---:|---|
+| EEGMMIDB 1.0.0，S001/S001R01.edf | [官方数据页](https://physionet.org/content/eegmmidb/1.0.0/)，DOI 10.13026/C28G6P；Schalk等，BCI2000，IEEE TBME 51(6):1034–1043 (2004) | 1,275,936 | Open Data Commons Attribution License v1.0 |
+| PTBDB 1.0.0，patient001/s0010_re.dat/.xyz/.hea | [官方数据页](https://physionet.org/content/ptbdb/1.0.0/)，DOI 10.13026/C28C71；Bousseljot/Kreiseler/Schnabel，Biomedizinische Technik 40 Suppl 1:317 (1995) | 1,154,687 | Open Data Commons Attribution License v1.0 |
+
+PhysioNet平台引用：Pollard等，PhysioNet as a global platform for biomedical research，
+[Nature Health (2026)](https://doi.org/10.1038/s44360-026-00096-z)。
+EEG保留整个EDF+，包括16,896-byte嵌入头和注释通道；ECG保留两个WFDB format16
+信号文件及原始头文件。原始int16信号为little-endian，见
+[EDF原始规格](https://www.edfplus.info/specs/edf.html)和
+[WFDB signal格式](https://physionet.org/physiotools/wag/signal-5.htm)。
+数据按原路径/大小/SHA固定，字节不重排为新的“真值”，没有数值解析、滤波或采样
+转换；变换仅发生在编码容器内部，恢复后原文件字节完全相同。
+
+另有262,147-byte固定种子随机字节负对照，生成器与SHA随报告保存；它测试所测
+codec的回退与元数据成本，不是第三个真实科学数据库或普遍不可压缩性证明。

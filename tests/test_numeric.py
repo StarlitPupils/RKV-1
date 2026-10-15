@@ -18,7 +18,10 @@ class NumericTests(unittest.TestCase):
     def test_byte_exact_all_words_tails_and_float_bit_patterns(self):
         # NaN payloads, signed zero, infinities, subnormals, both byte orders:
         # these are input bit patterns, never Python floating-point values.
-        bits = bytes.fromhex("00000080000000000100c07f4523a17f0000807f01000000")
+        bits32 = bytes.fromhex("00000000 00000080 0000807f 000080ff 0100c07f 4523817f 01000000")
+        bits64 = bytes.fromhex("0000000000000000 0000000000000080 000000000000f07f 000000000000f0ff "
+                               "010000000000f87f 452301000000f07f 0100000000000000")
+        bits = bits32 + bits64
         rng = random.Random(19)
         for policy, (_, width) in POLICIES.items():
             for raw in (bits, bits[::-1], b"\0" * 193, b"\xff" * 201, rng.randbytes(65539)):

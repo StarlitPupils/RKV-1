@@ -1,0 +1,55 @@
+{
+  "datasets": {
+    "eeg": {
+      "formal_roundtrips": 60,
+      "warmup_roundtrips": 12,
+      "formal_range_reads": 11520,
+      "warmup_range_reads": 1440,
+      "conditions": 12,
+      "input_bytes_and_source_pins_verified": true,
+      "archive_cost_identity_verified": true,
+      "all_round_archives_and_selection_ledgers_identical": true,
+      "all_request_plans_match_across_configurations_and_modes": true
+    },
+    "ecg": {
+      "formal_roundtrips": 60,
+      "warmup_roundtrips": 12,
+      "formal_range_reads": 11520,
+      "warmup_range_reads": 1440,
+      "conditions": 12,
+      "input_bytes_and_source_pins_verified": true,
+      "archive_cost_identity_verified": true,
+      "all_round_archives_and_selection_ledgers_identical": true,
+      "all_request_plans_match_across_configurations_and_modes": true
+    },
+    "noise": {
+      "formal_roundtrips": 60,
+      "warmup_roundtrips": 12,
+      "formal_range_reads": 11520,
+      "warmup_range_reads": 1440,
+      "conditions": 12,
+      "input_bytes_and_source_pins_verified": true,
+      "archive_cost_identity_verified": true,
+      "all_round_archives_and_selection_ledgers_identical": true,
+      "all_request_plans_match_across_configurations_and_modes": true
+    }
+  },
+  "measured_python_modules_match_current": true,
+  "numeric_source_resource_identity_verified": true,
+  "no_native_numeric_library_used": true,
+  "synthetic_noise_all_conditions_fell_back_to_none": true,
+  "local_python_tests": {
+    "run": 90,
+    "passed": 89,
+    "skipped": 1,
+    "failed": 0,
+    "skip_reason": "Local Windows symlink privilege",
+    "log_sha256": "d9377d934060378d9ae26593a126e24df3a23c95e0ae7a0ed52f4b22dcc2e046"
+  },
+  "compatibility": "Default flat none/CSV remains v2; units remain v3; v4 requires explicit numeric policy or format_version=4. v4 rejects CSV/units. Existing v1/v2 fixtures pass.",
+  "scientific_scope": "Two original single-record int16 corpora; no real floating-point-array performance evidence",
+  "cold_os_cache": null,
+  "cross_machine": null,
+  "cross_day": null,
+  "inference_quality": null
+}

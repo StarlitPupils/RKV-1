@@ -1,4 +1,8 @@
-# RKV1-FORMAT · Draft 0.3
+# RKV1-FORMAT · Draft 0.4
+
+v0.10新增显式数值策略的**v4平块扩展**，字段/限制与兼容说明见
+[NUMERIC.md](NUMERIC.md)。v4只允许none及数值字节策略；旧读取器拒绝v4。
+默认写入、既有CSV v2和独立单元v3语义保持不变，以下历史v1/v2/v3规范仍有效。
 
 v0.5.0 读取器支持 manifest version=1/2/3。默认写 version=2；显式指定 unit_size
 才写 version=3。v0.4.0 及更早读取器不能读 v3；升级后仍恢复 v1/v2，默认 v2

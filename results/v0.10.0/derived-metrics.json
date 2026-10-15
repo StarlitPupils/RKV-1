@@ -1,0 +1,6219 @@
+{
+  "numeric_resource": {
+    "source_module": "rkv1/numeric.py",
+    "source_bytes": 1431,
+    "source_sha256": "5d2517f9638baa0b944dc7a43b684307dc0cce32d84b594765908106c4263cbe",
+    "native_library_bytes": 0,
+    "model_bytes": 0,
+    "dictionary_bytes": 0,
+    "scope": "Same-install archive cost plus a conservative separate scenario charging the entire dedicated numeric.py source once to candidate; not compiled module or full deployment cost. Python/codec/core shared allocation incomplete."
+  },
+  "datasets": {
+    "eeg": {
+      "raw_bytes": 1275936,
+      "counts": {
+        "configurations": 12,
+        "formal_roundtrips": 60,
+        "warmup_roundtrips": 12,
+        "formal_range_reads": 11520,
+        "warmup_range_reads": 1440
+      },
+      "conditions": {
+        "zlib/64KiB/none": {
+          "configuration": {
+            "layout": "flat-64",
+            "chunk_size": 65536,
+            "unit_size": null,
+            "compression": "zlib",
+            "transform": "none",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 1,
+            "raw_bytes": 1275936,
+            "chunk_references": 20,
+            "unique_chunks": 20,
+            "reused_chunks": 0,
+            "new_chunks": 20,
+            "unique_raw_bytes": 1275936,
+            "payload_bytes": 724061,
+            "metadata_bytes": 5122,
+            "stored_bytes": 729183,
+            "compression": "zlib",
+            "deduplicate": true,
+            "transform": "none",
+            "transformed_chunks": 0,
+            "transform_attempts": 0,
+            "archive_sha256": "3ea5e5ff6fa05329e43810867167cef2512717ccaa5c9ecdbeec1616f8ae99c9"
+          },
+          "actual_transforms": {
+            "none": 20,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.0657020999933593,
+              0.06489239999791607,
+              0.0693018000019947,
+              0.06395640000118874,
+              0.062167899988708086
+            ],
+            "median": 0.06489239999791607,
+            "min": 0.062167899988708086,
+            "max": 0.0693018000019947,
+            "stdev": 0.0026415701762699637,
+            "p95": 0.0693018000019947
+          },
+          "decode_s": {
+            "samples": [
+              0.008189300002413802,
+              0.008104199994704686,
+              0.008558999994420446,
+              0.00842729999567382,
+              0.008231400002841838
+            ],
+            "median": 0.008231400002841838,
+            "min": 0.008104199994704686,
+            "max": 0.008558999994420446,
+            "stdev": 0.00018611776460230125,
+            "p95": 0.008558999994420446
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.0625,
+              0.0625,
+              0.046875,
+              0.046875,
+              0.0625
+            ],
+            "median": 0.0625,
+            "min": 0.046875,
+            "max": 0.0625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.0625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.015625,
+              0.015625,
+              0.0,
+              0.0
+            ],
+            "median": 0.015625,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.015625
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              28196864,
+              28278784,
+              27959296,
+              28336128,
+              27848704
+            ],
+            "median": 28196864,
+            "min": 27848704,
+            "max": 28336128,
+            "stdev": 210464.2622470618,
+            "p95": 28336128
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              27115520,
+              26894336,
+              26935296,
+              27250688,
+              27131904
+            ],
+            "median": 27115520,
+            "min": 26894336,
+            "max": 27250688,
+            "stdev": 147865.0326858923,
+            "p95": 27250688
+          },
+          "resident_p95_s": 0.0002666999935172498,
+          "reopen_p95_s": 0.0007619999960297719
+        },
+        "zlib/64KiB/byte-shuffle-2-v1": {
+          "configuration": {
+            "layout": "flat-64",
+            "chunk_size": 65536,
+            "unit_size": null,
+            "compression": "zlib",
+            "transform": "byte-shuffle-2-v1",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 1,
+            "raw_bytes": 1275936,
+            "chunk_references": 20,
+            "unique_chunks": 20,
+            "reused_chunks": 0,
+            "new_chunks": 20,
+            "unique_raw_bytes": 1275936,
+            "payload_bytes": 647010,
+            "metadata_bytes": 5394,
+            "stored_bytes": 652404,
+            "compression": "zlib",
+            "deduplicate": true,
+            "transform": "byte-shuffle-2-v1",
+            "transformed_chunks": 20,
+            "transform_attempts": 20,
+            "archive_sha256": "137fa109a920bb071e8227f605c82ed6a409fa93ea34c0e37b4aa3420b51c817"
+          },
+          "actual_transforms": {
+            "none": 0,
+            "byte-shuffle-2-v1": 20,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.10748240000975784,
+              0.09498239999811631,
+              0.10514679999323562,
+              0.10787310000159778,
+              0.09319780000078026
+            ],
+            "median": 0.10514679999323562,
+            "min": 0.09319780000078026,
+            "max": 0.10787310000159778,
+            "stdev": 0.007085736324788841,
+            "p95": 0.10787310000159778
+          },
+          "decode_s": {
+            "samples": [
+              0.008104699998511933,
+              0.008142100006807595,
+              0.007198099992820062,
+              0.007518099999288097,
+              0.008142999999108724
+            ],
+            "median": 0.008104699998511933,
+            "min": 0.007198099992820062,
+            "max": 0.008142999999108724,
+            "stdev": 0.000437900540171781,
+            "p95": 0.008142999999108724
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.078125,
+              0.09375,
+              0.078125,
+              0.078125,
+              0.09375
+            ],
+            "median": 0.078125,
+            "min": 0.078125,
+            "max": 0.09375,
+            "stdev": 0.00855816496101822,
+            "p95": 0.09375
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.0,
+              0.015625,
+              0.0,
+              0.0
+            ],
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.015625
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              28143616,
+              28086272,
+              28008448,
+              28377088,
+              28336128
+            ],
+            "median": 28143616,
+            "min": 28008448,
+            "max": 28377088,
+            "stdev": 159864.7338620998,
+            "p95": 28377088
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              27353088,
+              27152384,
+              27418624,
+              27140096,
+              27156480
+            ],
+            "median": 27156480,
+            "min": 27140096,
+            "max": 27418624,
+            "stdev": 131570.25297839934,
+            "p95": 27418624
+          },
+          "resident_p95_s": 0.00025779999850783497,
+          "reopen_p95_s": 0.000709700005245395
+        },
+        "zlib/64KiB/xor-shuffle-2-v1": {
+          "configuration": {
+            "layout": "flat-64",
+            "chunk_size": 65536,
+            "unit_size": null,
+            "compression": "zlib",
+            "transform": "xor-shuffle-2-v1",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 1,
+            "raw_bytes": 1275936,
+            "chunk_references": 20,
+            "unique_chunks": 20,
+            "reused_chunks": 0,
+            "new_chunks": 20,
+            "unique_raw_bytes": 1275936,
+            "payload_bytes": 592697,
+            "metadata_bytes": 5373,
+            "stored_bytes": 598070,
+            "compression": "zlib",
+            "deduplicate": true,
+            "transform": "xor-shuffle-2-v1",
+            "transformed_chunks": 20,
+            "transform_attempts": 20,
+            "archive_sha256": "f852bf112f5c221c3f577ae22cacc2d758fcf4ff7042275dd3f55d7ad6c1c7cd"
+          },
+          "actual_transforms": {
+            "none": 0,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 20
+          },
+          "encode_s": {
+            "samples": [
+              0.1602959000010742,
+              0.16164900000148918,
+              0.16124149999814108,
+              0.1608319999941159,
+              0.15975540000363253
+            ],
+            "median": 0.1608319999941159,
+            "min": 0.15975540000363253,
+            "max": 0.16164900000148918,
+            "stdev": 0.0007503032593056233,
+            "p95": 0.16164900000148918
+          },
+          "decode_s": {
+            "samples": [
+              0.036927699999068864,
+              0.03703980000864249,
+              0.03944140000385232,
+              0.03820090000226628,
+              0.03820499998982996
+            ],
+            "median": 0.03820090000226628,
+            "min": 0.036927699999068864,
+            "max": 0.03944140000385232,
+            "stdev": 0.00102773674711929,
+            "p95": 0.03944140000385232
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.15625,
+              0.15625,
+              0.171875,
+              0.15625,
+              0.15625
+            ],
+            "median": 0.15625,
+            "min": 0.15625,
+            "max": 0.171875,
+            "stdev": 0.006987712429686843,
+            "p95": 0.171875
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.03125,
+              0.03125,
+              0.046875,
+              0.046875,
+              0.03125
+            ],
+            "median": 0.03125,
+            "min": 0.03125,
+            "max": 0.046875,
+            "stdev": 0.00855816496101822,
+            "p95": 0.046875
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              28278784,
+              28286976,
+              28536832,
+              28123136,
+              28246016
+            ],
+            "median": 28278784,
+            "min": 28123136,
+            "max": 28536832,
+            "stdev": 150619.2267779914,
+            "p95": 28536832
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              27287552,
+              27054080,
+              27406336,
+              27275264,
+              27594752
+            ],
+            "median": 27287552,
+            "min": 27054080,
+            "max": 27594752,
+            "stdev": 197892.33837417758,
+            "p95": 27594752
+          },
+          "resident_p95_s": 0.0029731999966315925,
+          "reopen_p95_s": 0.002772199994069524
+        },
+        "zstd/64KiB/none": {
+          "configuration": {
+            "layout": "flat-64",
+            "chunk_size": 65536,
+            "unit_size": null,
+            "compression": "zstd",
+            "transform": "none",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 1,
+            "raw_bytes": 1275936,
+            "chunk_references": 20,
+            "unique_chunks": 20,
+            "reused_chunks": 0,
+            "new_chunks": 20,
+            "unique_raw_bytes": 1275936,
+            "payload_bytes": 712619,
+            "metadata_bytes": 5122,
+            "stored_bytes": 717741,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "none",
+            "transformed_chunks": 0,
+            "transform_attempts": 0,
+            "archive_sha256": "87d0940fd739b2dda84be2d69c27f465c97d4a8cfa7e4655cc8eafc94d34d7d9"
+          },
+          "actual_transforms": {
+            "none": 20,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.015031299990369007,
+              0.01359670000965707,
+              0.01403310000023339,
+              0.014116100006503984,
+              0.0138299999962328
+            ],
+            "median": 0.01403310000023339,
+            "min": 0.01359670000965707,
+            "max": 0.015031299990369007,
+            "stdev": 0.0005468013822277051,
+            "p95": 0.015031299990369007
+          },
+          "decode_s": {
+            "samples": [
+              0.008451300003798679,
+              0.007934699999168515,
+              0.008072800002992153,
+              0.0079429000033997,
+              0.008127500012051314
+            ],
+            "median": 0.008072800002992153,
+            "min": 0.007934699999168515,
+            "max": 0.008451300003798679,
+            "stdev": 0.00021020332664210557,
+            "p95": 0.008451300003798679
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.015625,
+              0.015625,
+              0.0,
+              0.015625
+            ],
+            "median": 0.015625,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.006987712429686843,
+            "p95": 0.015625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.015625,
+              0.015625,
+              0.0,
+              0.015625
+            ],
+            "median": 0.015625,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.006987712429686843,
+            "p95": 0.015625
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              29073408,
+              29028352,
+              28893184,
+              29085696,
+              28995584
+            ],
+            "median": 29028352,
+            "min": 28893184,
+            "max": 29085696,
+            "stdev": 77141.93746076126,
+            "p95": 29085696
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              27455488,
+              27451392,
+              27181056,
+              27541504,
+              27119616
+            ],
+            "median": 27451392,
+            "min": 27119616,
+            "max": 27541504,
+            "stdev": 186882.66518647468,
+            "p95": 27541504
+          },
+          "resident_p95_s": 0.00022200000239536166,
+          "reopen_p95_s": 0.0005358000053092837
+        },
+        "zstd/64KiB/byte-shuffle-2-v1": {
+          "configuration": {
+            "layout": "flat-64",
+            "chunk_size": 65536,
+            "unit_size": null,
+            "compression": "zstd",
+            "transform": "byte-shuffle-2-v1",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 1,
+            "raw_bytes": 1275936,
+            "chunk_references": 20,
+            "unique_chunks": 20,
+            "reused_chunks": 0,
+            "new_chunks": 20,
+            "unique_raw_bytes": 1275936,
+            "payload_bytes": 657108,
+            "metadata_bytes": 5394,
+            "stored_bytes": 662502,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "byte-shuffle-2-v1",
+            "transformed_chunks": 20,
+            "transform_attempts": 20,
+            "archive_sha256": "d3f8623c93c8b316987e3e1176be1d76ab277432eb14ca7390b400ab90fbf1a7"
+          },
+          "actual_transforms": {
+            "none": 0,
+            "byte-shuffle-2-v1": 20,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.015604200001689605,
+              0.01614069999777712,
+              0.015333899995312095,
+              0.0243419000034919,
+              0.016271999993477948
+            ],
+            "median": 0.01614069999777712,
+            "min": 0.015333899995312095,
+            "max": 0.0243419000034919,
+            "stdev": 0.003822495793862382,
+            "p95": 0.0243419000034919
+          },
+          "decode_s": {
+            "samples": [
+              0.007578999997349456,
+              0.0081443999952171,
+              0.007951399995363317,
+              0.008862699993187562,
+              0.008728499989956617
+            ],
+            "median": 0.0081443999952171,
+            "min": 0.007578999997349456,
+            "max": 0.008862699993187562,
+            "stdev": 0.0005373236104904224,
+            "p95": 0.008862699993187562
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.015625,
+              0.015625,
+              0.015625,
+              0.015625
+            ],
+            "median": 0.015625,
+            "min": 0.015625,
+            "max": 0.015625,
+            "stdev": 0.0,
+            "p95": 0.015625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.015625,
+              0.0,
+              0.0,
+              0.015625
+            ],
+            "median": 0.015625,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.015625
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              29249536,
+              29294592,
+              29257728,
+              29147136,
+              29188096
+            ],
+            "median": 29249536,
+            "min": 29147136,
+            "max": 29294592,
+            "stdev": 58973.86604929339,
+            "p95": 29294592
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              27205632,
+              27766784,
+              27594752,
+              27222016,
+              27615232
+            ],
+            "median": 27594752,
+            "min": 27205632,
+            "max": 27766784,
+            "stdev": 252750.0847936554,
+            "p95": 27766784
+          },
+          "resident_p95_s": 0.0001382000045850873,
+          "reopen_p95_s": 0.00045769999269396067
+        },
+        "zstd/64KiB/xor-shuffle-2-v1": {
+          "configuration": {
+            "layout": "flat-64",
+            "chunk_size": 65536,
+            "unit_size": null,
+            "compression": "zstd",
+            "transform": "xor-shuffle-2-v1",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 1,
+            "raw_bytes": 1275936,
+            "chunk_references": 20,
+            "unique_chunks": 20,
+            "reused_chunks": 0,
+            "new_chunks": 20,
+            "unique_raw_bytes": 1275936,
+            "payload_bytes": 600843,
+            "metadata_bytes": 5373,
+            "stored_bytes": 606216,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "xor-shuffle-2-v1",
+            "transformed_chunks": 20,
+            "transform_attempts": 20,
+            "archive_sha256": "ed9e29edd908bf0b907c9b7e5a69d09121eed3442d5d73314165be268656138a"
+          },
+          "actual_transforms": {
+            "none": 0,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 20
+          },
+          "encode_s": {
+            "samples": [
+              0.07902459999604616,
+              0.08332499999960419,
+              0.07852129999082536,
+              0.08260090000112541,
+              0.08139479999954347
+            ],
+            "median": 0.08139479999954347,
+            "min": 0.07852129999082536,
+            "max": 0.08332499999960419,
+            "stdev": 0.002131136589347312,
+            "p95": 0.08332499999960419
+          },
+          "decode_s": {
+            "samples": [
+              0.03602320000936743,
+              0.037366800010204315,
+              0.03542100000777282,
+              0.03758380000363104,
+              0.03527939999185037
+            ],
+            "median": 0.03602320000936743,
+            "min": 0.03527939999185037,
+            "max": 0.03758380000363104,
+            "stdev": 0.0010806270377990129,
+            "p95": 0.03758380000363104
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.078125,
+              0.0625,
+              0.0625,
+              0.078125,
+              0.078125
+            ],
+            "median": 0.078125,
+            "min": 0.0625,
+            "max": 0.078125,
+            "stdev": 0.00855816496101822,
+            "p95": 0.078125
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.03125,
+              0.046875,
+              0.03125,
+              0.03125,
+              0.03125
+            ],
+            "median": 0.03125,
+            "min": 0.03125,
+            "max": 0.046875,
+            "stdev": 0.006987712429686843,
+            "p95": 0.046875
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              29433856,
+              29364224,
+              29163520,
+              29368320,
+              29048832
+            ],
+            "median": 29364224,
+            "min": 29048832,
+            "max": 29433856,
+            "stdev": 162389.7413902738,
+            "p95": 29433856
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              27295744,
+              27586560,
+              27340800,
+              27086848,
+              27082752
+            ],
+            "median": 27295744,
+            "min": 27082752,
+            "max": 27586560,
+            "stdev": 208642.8583853279,
+            "p95": 27586560
+          },
+          "resident_p95_s": 0.002135099988663569,
+          "reopen_p95_s": 0.0033856999943964183
+        },
+        "zlib/1024KiB/none": {
+          "configuration": {
+            "layout": "flat-1024",
+            "chunk_size": 1048576,
+            "unit_size": null,
+            "compression": "zlib",
+            "transform": "none",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 1,
+            "raw_bytes": 1275936,
+            "chunk_references": 2,
+            "unique_chunks": 2,
+            "reused_chunks": 0,
+            "new_chunks": 2,
+            "unique_raw_bytes": 1275936,
+            "payload_bytes": 704109,
+            "metadata_bytes": 779,
+            "stored_bytes": 704888,
+            "compression": "zlib",
+            "deduplicate": true,
+            "transform": "none",
+            "transformed_chunks": 0,
+            "transform_attempts": 0,
+            "archive_sha256": "7a0e37142f33ee3f6c9268625313e679a3d4773e37c4c3eb8946fd9daefc5710"
+          },
+          "actual_transforms": {
+            "none": 2,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.07426299998769537,
+              0.07425059999513905,
+              0.07624300000315998,
+              0.0760312999918824,
+              0.07716699999582488
+            ],
+            "median": 0.0760312999918824,
+            "min": 0.07425059999513905,
+            "max": 0.07716699999582488,
+            "stdev": 0.0012906394033117422,
+            "p95": 0.07716699999582488
+          },
+          "decode_s": {
+            "samples": [
+              0.007754200007184409,
+              0.008133099996484816,
+              0.008043000008910894,
+              0.008376500001759268,
+              0.007910000000265427
+            ],
+            "median": 0.008043000008910894,
+            "min": 0.007754200007184409,
+            "max": 0.008376500001759268,
+            "stdev": 0.00023475202252012787,
+            "p95": 0.008376500001759268
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.078125,
+              0.078125,
+              0.078125,
+              0.078125,
+              0.0625
+            ],
+            "median": 0.078125,
+            "min": 0.0625,
+            "max": 0.078125,
+            "stdev": 0.006987712429686843,
+            "p95": 0.078125
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.0,
+              0.015625,
+              0.015625,
+              0.0,
+              0.015625
+            ],
+            "median": 0.015625,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.015625
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              29450240,
+              29167616,
+              29335552,
+              29638656,
+              29138944
+            ],
+            "median": 29335552,
+            "min": 29138944,
+            "max": 29638656,
+            "stdev": 206951.3880233713,
+            "p95": 29638656
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              29405184,
+              29437952,
+              29515776,
+              29528064,
+              29048832
+            ],
+            "median": 29437952,
+            "min": 29048832,
+            "max": 29528064,
+            "stdev": 196065.38455525495,
+            "p95": 29528064
+          },
+          "resident_p95_s": 0.003965399999287911,
+          "reopen_p95_s": 0.004211599996779114
+        },
+        "zlib/1024KiB/byte-shuffle-2-v1": {
+          "configuration": {
+            "layout": "flat-1024",
+            "chunk_size": 1048576,
+            "unit_size": null,
+            "compression": "zlib",
+            "transform": "byte-shuffle-2-v1",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 1,
+            "raw_bytes": 1275936,
+            "chunk_references": 2,
+            "unique_chunks": 2,
+            "reused_chunks": 0,
+            "new_chunks": 2,
+            "unique_raw_bytes": 1275936,
+            "payload_bytes": 637930,
+            "metadata_bytes": 818,
+            "stored_bytes": 638748,
+            "compression": "zlib",
+            "deduplicate": true,
+            "transform": "byte-shuffle-2-v1",
+            "transformed_chunks": 2,
+            "transform_attempts": 2,
+            "archive_sha256": "c7f487c103885cda3cd39b5a80606364d6b43b5d4002b872cefdf9869404bc56"
+          },
+          "actual_transforms": {
+            "none": 0,
+            "byte-shuffle-2-v1": 2,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.12733400000433903,
+              0.10869580000871792,
+              0.11423019999347162,
+              0.10755430000426713,
+              0.11427459999686107
+            ],
+            "median": 0.11423019999347162,
+            "min": 0.10755430000426713,
+            "max": 0.12733400000433903,
+            "stdev": 0.007853865905480775,
+            "p95": 0.12733400000433903
+          },
+          "decode_s": {
+            "samples": [
+              0.008333799996762536,
+              0.008447200001683086,
+              0.008617900006356649,
+              0.008264799995231442,
+              0.008417300006840378
+            ],
+            "median": 0.008417300006840378,
+            "min": 0.008264799995231442,
+            "max": 0.008617900006356649,
+            "stdev": 0.0001335634911391637,
+            "p95": 0.008617900006356649
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.125,
+              0.109375,
+              0.125,
+              0.109375,
+              0.09375
+            ],
+            "median": 0.109375,
+            "min": 0.09375,
+            "max": 0.125,
+            "stdev": 0.01307281291459493,
+            "p95": 0.125
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.0,
+              0.0,
+              0.015625,
+              0.015625,
+              0.0
+            ],
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.015625
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              30720000,
+              31072256,
+              31117312,
+              30961664,
+              31080448
+            ],
+            "median": 31072256,
+            "min": 30720000,
+            "max": 31117312,
+            "stdev": 161908.61620062104,
+            "p95": 31117312
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              30613504,
+              31342592,
+              31531008,
+              31096832,
+              31416320
+            ],
+            "median": 31342592,
+            "min": 30613504,
+            "max": 31531008,
+            "stdev": 364456.5468134713,
+            "p95": 31531008
+          },
+          "resident_p95_s": 0.004696200005128048,
+          "reopen_p95_s": 0.005294800008414313
+        },
+        "zlib/1024KiB/xor-shuffle-2-v1": {
+          "configuration": {
+            "layout": "flat-1024",
+            "chunk_size": 1048576,
+            "unit_size": null,
+            "compression": "zlib",
+            "transform": "xor-shuffle-2-v1",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 1,
+            "raw_bytes": 1275936,
+            "chunk_references": 2,
+            "unique_chunks": 2,
+            "reused_chunks": 0,
+            "new_chunks": 2,
+            "unique_raw_bytes": 1275936,
+            "payload_bytes": 583087,
+            "metadata_bytes": 815,
+            "stored_bytes": 583902,
+            "compression": "zlib",
+            "deduplicate": true,
+            "transform": "xor-shuffle-2-v1",
+            "transformed_chunks": 2,
+            "transform_attempts": 2,
+            "archive_sha256": "5c5b0e13a7a11901cbf3a8284a41173b7b96d9f652dadce98cd9a9deaeb55f07"
+          },
+          "actual_transforms": {
+            "none": 0,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 2
+          },
+          "encode_s": {
+            "samples": [
+              0.1725917000003392,
+              0.1742547000030754,
+              0.17555280000669882,
+              0.1710187999997288,
+              0.17816170000878628
+            ],
+            "median": 0.1742547000030754,
+            "min": 0.1710187999997288,
+            "max": 0.17816170000878628,
+            "stdev": 0.0027462510271455925,
+            "p95": 0.17816170000878628
+          },
+          "decode_s": {
+            "samples": [
+              0.03598450000572484,
+              0.03565679999883287,
+              0.03695470000093337,
+              0.03626030001032632,
+              0.0344318999996176
+            ],
+            "median": 0.03598450000572484,
+            "min": 0.0344318999996176,
+            "max": 0.03695470000093337,
+            "stdev": 0.0009293600547386962,
+            "p95": 0.03695470000093337
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.171875,
+              0.15625,
+              0.1875,
+              0.171875,
+              0.171875
+            ],
+            "median": 0.171875,
+            "min": 0.15625,
+            "max": 0.1875,
+            "stdev": 0.011048543456039806,
+            "p95": 0.1875
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.046875,
+              0.03125,
+              0.03125,
+              0.03125,
+              0.03125
+            ],
+            "median": 0.03125,
+            "min": 0.03125,
+            "max": 0.046875,
+            "stdev": 0.006987712429686843,
+            "p95": 0.046875
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              32120832,
+              32391168,
+              32149504,
+              32600064,
+              32088064
+            ],
+            "median": 32149504,
+            "min": 32088064,
+            "max": 32600064,
+            "stdev": 219940.32575405538,
+            "p95": 32600064
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              31514624,
+              32006144,
+              30846976,
+              31285248,
+              30638080
+            ],
+            "median": 31285248,
+            "min": 30638080,
+            "max": 32006144,
+            "stdev": 543037.540312638,
+            "p95": 32006144
+          },
+          "resident_p95_s": 0.029733300005318597,
+          "reopen_p95_s": 0.0318905000021914
+        },
+        "zstd/1024KiB/none": {
+          "configuration": {
+            "layout": "flat-1024",
+            "chunk_size": 1048576,
+            "unit_size": null,
+            "compression": "zstd",
+            "transform": "none",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 1,
+            "raw_bytes": 1275936,
+            "chunk_references": 2,
+            "unique_chunks": 2,
+            "reused_chunks": 0,
+            "new_chunks": 2,
+            "unique_raw_bytes": 1275936,
+            "payload_bytes": 681769,
+            "metadata_bytes": 779,
+            "stored_bytes": 682548,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "none",
+            "transformed_chunks": 0,
+            "transform_attempts": 0,
+            "archive_sha256": "9d1eb74e83b4e10e550260f7cab8eddf52523d6ae9b1faa34356e1da6258afbf"
+          },
+          "actual_transforms": {
+            "none": 2,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.014943200003472157,
+              0.014215100003639236,
+              0.013723600000957958,
+              0.014267699996707961,
+              0.015310399990994483
+            ],
+            "median": 0.014267699996707961,
+            "min": 0.013723600000957958,
+            "max": 0.015310399990994483,
+            "stdev": 0.0006306311612944317,
+            "p95": 0.015310399990994483
+          },
+          "decode_s": {
+            "samples": [
+              0.007874300004914403,
+              0.008931499993195757,
+              0.008267199998954311,
+              0.007550599999376573,
+              0.007843300001695752
+            ],
+            "median": 0.007874300004914403,
+            "min": 0.007550599999376573,
+            "max": 0.008931499993195757,
+            "stdev": 0.000533339641763637,
+            "p95": 0.008931499993195757
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.0,
+              0.015625,
+              0.015625,
+              0.015625,
+              0.015625
+            ],
+            "median": 0.015625,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.006987712429686843,
+            "p95": 0.015625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.0,
+              0.015625,
+              0.015625,
+              0.0
+            ],
+            "median": 0.015625,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.015625
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              30277632,
+              30412800,
+              30253056,
+              30416896,
+              29962240
+            ],
+            "median": 30277632,
+            "min": 29962240,
+            "max": 30416896,
+            "stdev": 184987.80358499315,
+            "p95": 30416896
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              28594176,
+              28745728,
+              28553216,
+              28807168,
+              28676096
+            ],
+            "median": 28676096,
+            "min": 28553216,
+            "max": 28807168,
+            "stdev": 104684.6573820634,
+            "p95": 28807168
+          },
+          "resident_p95_s": 0.0021810000034747645,
+          "reopen_p95_s": 0.0024621999909868464
+        },
+        "zstd/1024KiB/byte-shuffle-2-v1": {
+          "configuration": {
+            "layout": "flat-1024",
+            "chunk_size": 1048576,
+            "unit_size": null,
+            "compression": "zstd",
+            "transform": "byte-shuffle-2-v1",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 1,
+            "raw_bytes": 1275936,
+            "chunk_references": 2,
+            "unique_chunks": 2,
+            "reused_chunks": 0,
+            "new_chunks": 2,
+            "unique_raw_bytes": 1275936,
+            "payload_bytes": 652139,
+            "metadata_bytes": 818,
+            "stored_bytes": 652957,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "byte-shuffle-2-v1",
+            "transformed_chunks": 2,
+            "transform_attempts": 2,
+            "archive_sha256": "52cff022a9c62fe73ac53024cdeec45cf19e87227d2ed288371e87dbf65dacad"
+          },
+          "actual_transforms": {
+            "none": 0,
+            "byte-shuffle-2-v1": 2,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.017077399999834597,
+              0.016706099995644763,
+              0.016474400006700307,
+              0.0175563999946462,
+              0.01834539999254048
+            ],
+            "median": 0.017077399999834597,
+            "min": 0.016474400006700307,
+            "max": 0.01834539999254048,
+            "stdev": 0.0007448698890400241,
+            "p95": 0.01834539999254048
+          },
+          "decode_s": {
+            "samples": [
+              0.009662000011303462,
+              0.009043099998962134,
+              0.00906820000091102,
+              0.01083949999883771,
+              0.01033189998997841
+            ],
+            "median": 0.009662000011303462,
+            "min": 0.009043099998962134,
+            "max": 0.01083949999883771,
+            "stdev": 0.0007890404102516657,
+            "p95": 0.01083949999883771
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.015625,
+              0.015625,
+              0.03125,
+              0.03125
+            ],
+            "median": 0.015625,
+            "min": 0.015625,
+            "max": 0.03125,
+            "stdev": 0.00855816496101822,
+            "p95": 0.03125
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.0,
+              0.015625,
+              0.0,
+              0.015625,
+              0.015625
+            ],
+            "median": 0.015625,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.015625
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              31846400,
+              32079872,
+              31617024,
+              31780864,
+              31821824
+            ],
+            "median": 31821824,
+            "min": 31617024,
+            "max": 32079872,
+            "stdev": 166239.07541610065,
+            "p95": 32079872
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              31272960,
+              31309824,
+              31371264,
+              31211520,
+              31879168
+            ],
+            "median": 31309824,
+            "min": 31211520,
+            "max": 31879168,
+            "stdev": 269176.08129103895,
+            "p95": 31879168
+          },
+          "resident_p95_s": 0.003048099999432452,
+          "reopen_p95_s": 0.004859799999394454
+        },
+        "zstd/1024KiB/xor-shuffle-2-v1": {
+          "configuration": {
+            "layout": "flat-1024",
+            "chunk_size": 1048576,
+            "unit_size": null,
+            "compression": "zstd",
+            "transform": "xor-shuffle-2-v1",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 1,
+            "raw_bytes": 1275936,
+            "chunk_references": 2,
+            "unique_chunks": 2,
+            "reused_chunks": 0,
+            "new_chunks": 2,
+            "unique_raw_bytes": 1275936,
+            "payload_bytes": 595873,
+            "metadata_bytes": 815,
+            "stored_bytes": 596688,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "xor-shuffle-2-v1",
+            "transformed_chunks": 2,
+            "transform_attempts": 2,
+            "archive_sha256": "6db2c2973f8865280525442b284ab98903f9f34d0f563dd4d554c63dcc7e4944"
+          },
+          "actual_transforms": {
+            "none": 0,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 2
+          },
+          "encode_s": {
+            "samples": [
+              0.07930100000521634,
+              0.08161599999584723,
+              0.07874480000464246,
+              0.08651259999896865,
+              0.07985629999893717
+            ],
+            "median": 0.07985629999893717,
+            "min": 0.07874480000464246,
+            "max": 0.08651259999896865,
+            "stdev": 0.003155801163642544,
+            "p95": 0.08651259999896865
+          },
+          "decode_s": {
+            "samples": [
+              0.03611539999837987,
+              0.04076199998962693,
+              0.049098299990873784,
+              0.052125600006547756,
+              0.04033230000641197
+            ],
+            "median": 0.04076199998962693,
+            "min": 0.03611539999837987,
+            "max": 0.052125600006547756,
+            "stdev": 0.006663912157320386,
+            "p95": 0.052125600006547756
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.078125,
+              0.0625,
+              0.078125,
+              0.09375,
+              0.0625
+            ],
+            "median": 0.078125,
+            "min": 0.0625,
+            "max": 0.09375,
+            "stdev": 0.01307281291459493,
+            "p95": 0.09375
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.03125,
+              0.046875,
+              0.03125,
+              0.03125,
+              0.046875
+            ],
+            "median": 0.03125,
+            "min": 0.03125,
+            "max": 0.046875,
+            "stdev": 0.00855816496101822,
+            "p95": 0.046875
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              33128448,
+              33177600,
+              32624640,
+              32669696,
+              33058816
+            ],
+            "median": 33058816,
+            "min": 32624640,
+            "max": 33177600,
+            "stdev": 263755.0495137487,
+            "p95": 33177600
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              31629312,
+              31789056,
+              31739904,
+              31920128,
+              32018432
+            ],
+            "median": 31789056,
+            "min": 31629312,
+            "max": 32018432,
+            "stdev": 152589.05715941757,
+            "p95": 32018432
+          },
+          "resident_p95_s": 0.02875659998971969,
+          "reopen_p95_s": 0.028870000009192154
+        }
+      },
+      "matched_comparisons": [
+        {
+          "baseline": "zlib/64KiB/none",
+          "candidate": "zlib/64KiB/byte-shuffle-2-v1",
+          "archive_saving_pct": 10.529455568766688,
+          "net_saved_bytes_with_source_once": 75348,
+          "paired": {
+            "encode": {
+              "metric": "encode",
+              "speedup_samples": [
+                0.6112824051881471,
+                0.6832044673455611,
+                0.6590956644087417,
+                0.5928855293881555,
+                0.6670532994146601
+              ],
+              "speedup_median": 0.6590956644087417,
+              "min": 0.5928855293881555,
+              "max": 0.6832044673455611,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "decode": {
+              "metric": "decode",
+              "speedup_samples": [
+                1.010438388085605,
+                0.995345179736036,
+                1.1890637811308333,
+                1.1209348101876562,
+                1.0108559503552486
+              ],
+              "speedup_median": 1.0108559503552486,
+              "min": 0.995345179736036,
+              "max": 1.1890637811308333,
+              "candidate_faster_rounds": 4,
+              "rounds": 5
+            },
+            "open_reader": {
+              "metric": "open_reader",
+              "speedup_samples": [
+                0.9592707243856515,
+                1.2270464566267816,
+                1.1931690979405414,
+                1.3144406574080907,
+                1.1837787552129013
+              ],
+              "speedup_median": 1.1931690979405414,
+              "min": 0.9592707243856515,
+              "max": 1.3144406574080907,
+              "candidate_faster_rounds": 4,
+              "rounds": 5
+            },
+            "open_and_read": {
+              "metric": "open_and_read",
+              "speedup_samples": [
+                0.8375369818458657,
+                1.0587097715879996,
+                1.0732191132659186,
+                1.4211115345694971,
+                0.8998594559046033
+              ],
+              "speedup_median": 1.0587097715879996,
+              "min": 0.8375369818458657,
+              "max": 1.4211115345694971,
+              "candidate_faster_rounds": 3,
+              "rounds": 5
+            }
+          }
+        },
+        {
+          "baseline": "zlib/64KiB/none",
+          "candidate": "zlib/64KiB/xor-shuffle-2-v1",
+          "archive_saving_pct": 17.98080865845748,
+          "net_saved_bytes_with_source_once": 129682,
+          "paired": {
+            "encode": {
+              "metric": "encode",
+              "speedup_samples": [
+                0.4098801029403685,
+                0.40144015736143285,
+                0.4298012608589828,
+                0.39765966973940886,
+                0.38914427923747497
+              ],
+              "speedup_median": 0.40144015736143285,
+              "min": 0.38914427923747497,
+              "max": 0.4298012608589828,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "decode": {
+              "metric": "decode",
+              "speedup_samples": [
+                0.2217657748145781,
+                0.21879707754398606,
+                0.2170054813871838,
+                0.22060475002353003,
+                0.21545347480782642
+              ],
+              "speedup_median": 0.21879707754398606,
+              "min": 0.21545347480782642,
+              "max": 0.2217657748145781,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "open_reader": {
+              "metric": "open_reader",
+              "speedup_samples": [
+                0.08926830734472874,
+                0.1318416831882979,
+                0.13474123546943115,
+                0.14009559974605965,
+                0.08492533367847065
+              ],
+              "speedup_median": 0.1318416831882979,
+              "min": 0.08492533367847065,
+              "max": 0.14009559974605965,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "open_and_read": {
+              "metric": "open_and_read",
+              "speedup_samples": [
+                0.25051629032544737,
+                0.217301313337893,
+                0.20752547060388188,
+                0.274871942017132,
+                0.3205256567020712
+              ],
+              "speedup_median": 0.25051629032544737,
+              "min": 0.20752547060388188,
+              "max": 0.3205256567020712,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            }
+          }
+        },
+        {
+          "baseline": "zstd/64KiB/none",
+          "candidate": "zstd/64KiB/byte-shuffle-2-v1",
+          "archive_saving_pct": 7.696230255760783,
+          "net_saved_bytes_with_source_once": 53808,
+          "paired": {
+            "encode": {
+              "metric": "encode",
+              "speedup_samples": [
+                0.9632855249702923,
+                0.8423860186689297,
+                0.9151683527689376,
+                0.5799095388806542,
+                0.849926253796464
+              ],
+              "speedup_median": 0.849926253796464,
+              "min": 0.5799095388806542,
+              "max": 0.9632855249702923,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "decode": {
+              "metric": "decode",
+              "speedup_samples": [
+                1.1150943405138258,
+                0.9742522474127334,
+                1.0152677525592508,
+                0.8962167296089365,
+                0.931145101839166
+              ],
+              "speedup_median": 0.9742522474127334,
+              "min": 0.8962167296089365,
+              "max": 1.1150943405138258,
+              "candidate_faster_rounds": 2,
+              "rounds": 5
+            },
+            "open_reader": {
+              "metric": "open_reader",
+              "speedup_samples": [
+                1.6693197411570266,
+                1.4885496104466565,
+                1.0877020566468025,
+                1.1184669126464255,
+                1.0298634590869566
+              ],
+              "speedup_median": 1.1184669126464255,
+              "min": 1.0298634590869566,
+              "max": 1.6693197411570266,
+              "candidate_faster_rounds": 5,
+              "rounds": 5
+            },
+            "open_and_read": {
+              "metric": "open_and_read",
+              "speedup_samples": [
+                1.2800622300565585,
+                0.9184093275131991,
+                0.9601811918070986,
+                1.3605855743064046,
+                0.945816068366851
+              ],
+              "speedup_median": 0.9601811918070986,
+              "min": 0.9184093275131991,
+              "max": 1.3605855743064046,
+              "candidate_faster_rounds": 2,
+              "rounds": 5
+            }
+          }
+        },
+        {
+          "baseline": "zstd/64KiB/none",
+          "candidate": "zstd/64KiB/xor-shuffle-2-v1",
+          "archive_saving_pct": 15.538334858953295,
+          "net_saved_bytes_with_source_once": 110094,
+          "paired": {
+            "encode": {
+              "metric": "encode",
+              "speedup_samples": [
+                0.19021039006994112,
+                0.16317671778843873,
+                0.17871711245067332,
+                0.17089523245281416,
+                0.1699125742223136
+              ],
+              "speedup_median": 0.17089523245281416,
+              "min": 0.16317671778843873,
+              "max": 0.19021039006994112,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "decode": {
+              "metric": "decode",
+              "speedup_samples": [
+                0.23460714210844713,
+                0.21234625381359032,
+                0.2279099969289588,
+                0.2113383958682284,
+                0.23037523353369918
+              ],
+              "speedup_median": 0.2279099969289588,
+              "min": 0.2113383958682284,
+              "max": 0.23460714210844713,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "open_reader": {
+              "metric": "open_reader",
+              "speedup_samples": [
+                0.13058243902519384,
+                0.09307558491805588,
+                0.0725585051699655,
+                0.07778047185863395,
+                0.05653131138567453
+              ],
+              "speedup_median": 0.07778047185863395,
+              "min": 0.05653131138567453,
+              "max": 0.13058243902519384,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "open_and_read": {
+              "metric": "open_and_read",
+              "speedup_samples": [
+                0.16422847840643634,
+                0.15825383412472221,
+                0.149629456815056,
+                0.2743913523974703,
+                0.17615463185478256
+              ],
+              "speedup_median": 0.16422847840643634,
+              "min": 0.149629456815056,
+              "max": 0.2743913523974703,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            }
+          }
+        },
+        {
+          "baseline": "zlib/1024KiB/none",
+          "candidate": "zlib/1024KiB/byte-shuffle-2-v1",
+          "archive_saving_pct": 9.38305092440217,
+          "net_saved_bytes_with_source_once": 64709,
+          "paired": {
+            "encode": {
+              "metric": "encode",
+              "speedup_samples": [
+                0.583214223892792,
+                0.6831045908782474,
+                0.6674504641287273,
+                0.7069108347027122,
+                0.6752769206625491
+              ],
+              "speedup_median": 0.6752769206625491,
+              "min": 0.583214223892792,
+              "max": 0.7069108347027122,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "decode": {
+              "metric": "decode",
+              "speedup_samples": [
+                0.9304518959174342,
+                0.962816080460308,
+                0.9332900129936872,
+                1.0135151493795704,
+                0.9397312670140436
+              ],
+              "speedup_median": 0.9397312670140436,
+              "min": 0.9304518959174342,
+              "max": 1.0135151493795704,
+              "candidate_faster_rounds": 1,
+              "rounds": 5
+            },
+            "open_reader": {
+              "metric": "open_reader",
+              "speedup_samples": [
+                0.7123891476760391,
+                0.7612496604169761,
+                0.835356243833691,
+                0.9797095155022187,
+                0.88545016238071
+              ],
+              "speedup_median": 0.835356243833691,
+              "min": 0.7123891476760391,
+              "max": 0.9797095155022187,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "open_and_read": {
+              "metric": "open_and_read",
+              "speedup_samples": [
+                0.9711750238609147,
+                1.5056160231732982,
+                0.6569640897098236,
+                0.7910780368686958,
+                0.7765751477587032
+              ],
+              "speedup_median": 0.7910780368686958,
+              "min": 0.6569640897098236,
+              "max": 1.5056160231732982,
+              "candidate_faster_rounds": 1,
+              "rounds": 5
+            }
+          }
+        },
+        {
+          "baseline": "zlib/1024KiB/none",
+          "candidate": "zlib/1024KiB/xor-shuffle-2-v1",
+          "archive_saving_pct": 17.163861492889655,
+          "net_saved_bytes_with_source_once": 119555,
+          "paired": {
+            "encode": {
+              "metric": "encode",
+              "speedup_samples": [
+                0.4302814097523196,
+                0.42610385828232245,
+                0.4343023865198998,
+                0.44457860768525437,
+                0.433129005796528
+              ],
+              "speedup_median": 0.433129005796528,
+              "min": 0.42610385828232245,
+              "max": 0.44457860768525437,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "decode": {
+              "metric": "decode",
+              "speedup_samples": [
+                0.21548722383111557,
+                0.22809393991471563,
+                0.21764484649334864,
+                0.23101022328479862,
+                0.22972882705727177
+              ],
+              "speedup_median": 0.22809393991471563,
+              "min": 0.21548722383111557,
+              "max": 0.23101022328479862,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "open_reader": {
+              "metric": "open_reader",
+              "speedup_samples": [
+                0.11800045780732023,
+                0.13120306201273618,
+                0.12097458076268686,
+                0.13841753978931032,
+                0.1396744662093673
+              ],
+              "speedup_median": 0.13120306201273618,
+              "min": 0.11800045780732023,
+              "max": 0.1396744662093673,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "open_and_read": {
+              "metric": "open_and_read",
+              "speedup_samples": [
+                0.13966855362714187,
+                0.21719181923689176,
+                0.1250803551532728,
+                0.13243370552075298,
+                0.13765917935579836
+              ],
+              "speedup_median": 0.13765917935579836,
+              "min": 0.1250803551532728,
+              "max": 0.21719181923689176,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            }
+          }
+        },
+        {
+          "baseline": "zstd/1024KiB/none",
+          "candidate": "zstd/1024KiB/byte-shuffle-2-v1",
+          "archive_saving_pct": 4.335372750341371,
+          "net_saved_bytes_with_source_once": 28160,
+          "paired": {
+            "encode": {
+              "metric": "encode",
+              "speedup_samples": [
+                0.8750278147503068,
+                0.8508927881040503,
+                0.8330257851804272,
+                0.8126779978275089,
+                0.8345634326436014
+              ],
+              "speedup_median": 0.8345634326436014,
+              "min": 0.8126779978275089,
+              "max": 0.8750278147503068,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "decode": {
+              "metric": "decode",
+              "speedup_samples": [
+                0.8149761949598789,
+                0.9876590985636358,
+                0.9116693498294879,
+                0.6965819456788784,
+                0.7591343324367721
+              ],
+              "speedup_median": 0.8149761949598789,
+              "min": 0.6965819456788784,
+              "max": 0.9876590985636358,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "open_reader": {
+              "metric": "open_reader",
+              "speedup_samples": [
+                0.7684856927743525,
+                0.7077523696847012,
+                0.6786781204283288,
+                0.8489688333592038,
+                0.7686567154322635
+              ],
+              "speedup_median": 0.7684856927743525,
+              "min": 0.6786781204283288,
+              "max": 0.8489688333592038,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "open_and_read": {
+              "metric": "open_and_read",
+              "speedup_samples": [
+                0.9976621504640995,
+                0.5037829877426274,
+                0.5066463622563983,
+                0.37589398653825906,
+                0.642046492004351
+              ],
+              "speedup_median": 0.5066463622563983,
+              "min": 0.37589398653825906,
+              "max": 0.9976621504640995,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            }
+          }
+        },
+        {
+          "baseline": "zstd/1024KiB/none",
+          "candidate": "zstd/1024KiB/xor-shuffle-2-v1",
+          "archive_saving_pct": 12.579335079730658,
+          "net_saved_bytes_with_source_once": 84429,
+          "paired": {
+            "encode": {
+              "metric": "encode",
+              "speedup_samples": [
+                0.1884364636321006,
+                0.1741705058366316,
+                0.17427944448584382,
+                0.1649204855348013,
+                0.19172438481620427
+              ],
+              "speedup_median": 0.17427944448584382,
+              "min": 0.1649204855348013,
+              "max": 0.19172438481620427,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "decode": {
+              "metric": "decode",
+              "speedup_samples": [
+                0.21803164315687054,
+                0.2191133898108198,
+                0.16838057530486775,
+                0.14485396807764522,
+                0.19446696569372032
+              ],
+              "speedup_median": 0.19446696569372032,
+              "min": 0.14485396807764522,
+              "max": 0.2191133898108198,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "open_reader": {
+              "metric": "open_reader",
+              "speedup_samples": [
+                0.06678016389282003,
+                0.07920533974592119,
+                0.07584345869311597,
+                0.09340619990979432,
+                0.06527044710584345
+              ],
+              "speedup_median": 0.07584345869311597,
+              "min": 0.06527044710584345,
+              "max": 0.09340619990979432,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "open_and_read": {
+              "metric": "open_and_read",
+              "speedup_samples": [
+                0.11093151667354047,
+                0.08510564630470514,
+                0.08735821376086549,
+                0.09534123646295134,
+                0.08393475933956211
+              ],
+              "speedup_median": 0.08735821376086549,
+              "min": 0.08393475933956211,
+              "max": 0.11093151667354047,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            }
+          }
+        }
+      ],
+      "minimum_archive_comparisons": [
+        {
+          "ordinary": "zstd/1024KiB/none",
+          "candidate": "zlib/1024KiB/byte-shuffle-2-v1",
+          "ordinary_bytes": 682548,
+          "candidate_bytes": 638748,
+          "source_bytes_once": 1431,
+          "net_saved_bytes_with_source_once": 42369,
+          "net_saving_pct_with_source_once": 6.207475518205308,
+          "archive_saving_pct": 6.41713110286749,
+          "ordinary_restore_s": 0.007874300004914403,
+          "candidate_restore_s": 0.008417300006840378,
+          "restore_medians_ratio": 1.06895851079932,
+          "ordinary_reopen_p95_s": 0.0024621999909868464,
+          "candidate_reopen_p95_s": 0.005294800008414313
+        },
+        {
+          "ordinary": "zstd/1024KiB/none",
+          "candidate": "zlib/1024KiB/xor-shuffle-2-v1",
+          "ordinary_bytes": 682548,
+          "candidate_bytes": 583902,
+          "source_bytes_once": 1431,
+          "net_saved_bytes_with_source_once": 97215,
+          "net_saving_pct_with_source_once": 14.242954341672675,
+          "archive_saving_pct": 14.452609926334848,
+          "ordinary_restore_s": 0.007874300004914403,
+          "candidate_restore_s": 0.03598450000572484,
+          "restore_medians_ratio": 4.56986652569329,
+          "ordinary_reopen_p95_s": 0.0024621999909868464,
+          "candidate_reopen_p95_s": 0.0318905000021914
+        }
+      ]
+    },
+    "ecg": {
+      "raw_bytes": 1154687,
+      "counts": {
+        "configurations": 12,
+        "formal_roundtrips": 60,
+        "warmup_roundtrips": 12,
+        "formal_range_reads": 11520,
+        "warmup_range_reads": 1440
+      },
+      "conditions": {
+        "zlib/64KiB/none": {
+          "configuration": {
+            "layout": "flat-64",
+            "chunk_size": 65536,
+            "unit_size": null,
+            "compression": "zlib",
+            "transform": "none",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 3,
+            "raw_bytes": 1154687,
+            "chunk_references": 20,
+            "unique_chunks": 20,
+            "reused_chunks": 0,
+            "new_chunks": 20,
+            "unique_raw_bytes": 1154687,
+            "payload_bytes": 863766,
+            "metadata_bytes": 5393,
+            "stored_bytes": 869159,
+            "compression": "zlib",
+            "deduplicate": true,
+            "transform": "none",
+            "transformed_chunks": 0,
+            "transform_attempts": 0,
+            "archive_sha256": "b862be595e2b728095def816a44a58552a6ad7ea1c1d057f36fb7c57d2a5508b"
+          },
+          "actual_transforms": {
+            "none": 20,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.03798800001095515,
+              0.03856989998894278,
+              0.04064700000162702,
+              0.03791759999876376,
+              0.04133969999384135
+            ],
+            "median": 0.03856989998894278,
+            "min": 0.03791759999876376,
+            "max": 0.04133969999384135,
+            "stdev": 0.001592161978410821,
+            "p95": 0.04133969999384135
+          },
+          "decode_s": {
+            "samples": [
+              0.009376599991810508,
+              0.00935330000356771,
+              0.009219100000336766,
+              0.010013099992647767,
+              0.009881199992378242
+            ],
+            "median": 0.009376599991810508,
+            "min": 0.009219100000336766,
+            "max": 0.010013099992647767,
+            "stdev": 0.00035378924590572365,
+            "p95": 0.010013099992647767
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.046875,
+              0.046875,
+              0.03125,
+              0.03125,
+              0.03125
+            ],
+            "median": 0.03125,
+            "min": 0.03125,
+            "max": 0.046875,
+            "stdev": 0.00855816496101822,
+            "p95": 0.046875
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.015625,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.015625
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              28274688,
+              28295168,
+              28336128,
+              28258304,
+              28319744
+            ],
+            "median": 28295168,
+            "min": 28258304,
+            "max": 28336128,
+            "stdev": 31806.699369786864,
+            "p95": 28336128
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              26959872,
+              27242496,
+              27340800,
+              27271168,
+              27209728
+            ],
+            "median": 27242496,
+            "min": 26959872,
+            "max": 27340800,
+            "stdev": 145203.05557115524,
+            "p95": 27340800
+          },
+          "resident_p95_s": 0.00036029999318998307,
+          "reopen_p95_s": 0.0007996000058483332
+        },
+        "zlib/64KiB/byte-shuffle-2-v1": {
+          "configuration": {
+            "layout": "flat-64",
+            "chunk_size": 65536,
+            "unit_size": null,
+            "compression": "zlib",
+            "transform": "byte-shuffle-2-v1",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 3,
+            "raw_bytes": 1154687,
+            "chunk_references": 20,
+            "unique_chunks": 20,
+            "reused_chunks": 0,
+            "new_chunks": 20,
+            "unique_raw_bytes": 1154687,
+            "payload_bytes": 629693,
+            "metadata_bytes": 5652,
+            "stored_bytes": 635345,
+            "compression": "zlib",
+            "deduplicate": true,
+            "transform": "byte-shuffle-2-v1",
+            "transformed_chunks": 19,
+            "transform_attempts": 20,
+            "archive_sha256": "3290804cf70383ef32e560c2a82bfbbf1406fcb2b8b9e36353ada9d8bfe08e42"
+          },
+          "actual_transforms": {
+            "none": 1,
+            "byte-shuffle-2-v1": 19,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.059521299990592524,
+              0.05872280000767205,
+              0.0550680000014836,
+              0.058590700005879626,
+              0.058262499995180406
+            ],
+            "median": 0.058590700005879626,
+            "min": 0.0550680000014836,
+            "max": 0.059521299990592524,
+            "stdev": 0.001720885341192883,
+            "p95": 0.059521299990592524
+          },
+          "decode_s": {
+            "samples": [
+              0.0068208000011509284,
+              0.007715899992035702,
+              0.007151300000259653,
+              0.0077200000087032095,
+              0.007598900003358722
+            ],
+            "median": 0.007598900003358722,
+            "min": 0.0068208000011509284,
+            "max": 0.0077200000087032095,
+            "stdev": 0.0003997089029521111,
+            "p95": 0.0077200000087032095
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.0625,
+              0.046875,
+              0.0625,
+              0.046875,
+              0.0625
+            ],
+            "median": 0.0625,
+            "min": 0.046875,
+            "max": 0.0625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.0625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.0,
+              0.0,
+              0.015625,
+              0.015625
+            ],
+            "median": 0.015625,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.015625
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              28430336,
+              27758592,
+              28053504,
+              28016640,
+              28082176
+            ],
+            "median": 28053504,
+            "min": 27758592,
+            "max": 28430336,
+            "stdev": 239827.70818402115,
+            "p95": 28430336
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              27418624,
+              27086848,
+              27262976,
+              27414528,
+              27140096
+            ],
+            "median": 27262976,
+            "min": 27086848,
+            "max": 27418624,
+            "stdev": 152726.43322228146,
+            "p95": 27418624
+          },
+          "resident_p95_s": 0.00018130001262761652,
+          "reopen_p95_s": 0.000677700008964166
+        },
+        "zlib/64KiB/xor-shuffle-2-v1": {
+          "configuration": {
+            "layout": "flat-64",
+            "chunk_size": 65536,
+            "unit_size": null,
+            "compression": "zlib",
+            "transform": "xor-shuffle-2-v1",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 3,
+            "raw_bytes": 1154687,
+            "chunk_references": 20,
+            "unique_chunks": 20,
+            "reused_chunks": 0,
+            "new_chunks": 20,
+            "unique_raw_bytes": 1154687,
+            "payload_bytes": 638733,
+            "metadata_bytes": 5632,
+            "stored_bytes": 644365,
+            "compression": "zlib",
+            "deduplicate": true,
+            "transform": "xor-shuffle-2-v1",
+            "transformed_chunks": 19,
+            "transform_attempts": 20,
+            "archive_sha256": "94fcb2d570b24bdc18a8c95d766bb1637780c086c0975873f380164580bfc429"
+          },
+          "actual_transforms": {
+            "none": 1,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 19
+          },
+          "encode_s": {
+            "samples": [
+              0.1160655000130646,
+              0.11880090000340715,
+              0.1256668999994872,
+              0.1132787999958964,
+              0.1140849000075832
+            ],
+            "median": 0.1160655000130646,
+            "min": 0.1132787999958964,
+            "max": 0.1256668999994872,
+            "stdev": 0.004997456909838474,
+            "p95": 0.1256668999994872
+          },
+          "decode_s": {
+            "samples": [
+              0.033784200000809506,
+              0.03260750000481494,
+              0.03271830000448972,
+              0.033027799989213236,
+              0.032324700005119666
+            ],
+            "median": 0.03271830000448972,
+            "min": 0.032324700005119666,
+            "max": 0.033784200000809506,
+            "stdev": 0.0005584358621189518,
+            "p95": 0.033784200000809506
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.109375,
+              0.109375,
+              0.109375,
+              0.125,
+              0.125
+            ],
+            "median": 0.109375,
+            "min": 0.109375,
+            "max": 0.125,
+            "stdev": 0.00855816496101822,
+            "p95": 0.125
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.03125,
+              0.03125,
+              0.03125,
+              0.046875,
+              0.046875
+            ],
+            "median": 0.03125,
+            "min": 0.03125,
+            "max": 0.046875,
+            "stdev": 0.00855816496101822,
+            "p95": 0.046875
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              28553216,
+              28028928,
+              28708864,
+              28057600,
+              27967488
+            ],
+            "median": 28057600,
+            "min": 27967488,
+            "max": 28708864,
+            "stdev": 341806.23028142715,
+            "p95": 28708864
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              27635712,
+              27246592,
+              27398144,
+              27582464,
+              27537408
+            ],
+            "median": 27537408,
+            "min": 27246592,
+            "max": 27635712,
+            "stdev": 157496.39315235126,
+            "p95": 27635712
+          },
+          "resident_p95_s": 0.002060299986624159,
+          "reopen_p95_s": 0.003428099997108802
+        },
+        "zstd/64KiB/none": {
+          "configuration": {
+            "layout": "flat-64",
+            "chunk_size": 65536,
+            "unit_size": null,
+            "compression": "zstd",
+            "transform": "none",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 3,
+            "raw_bytes": 1154687,
+            "chunk_references": 20,
+            "unique_chunks": 20,
+            "reused_chunks": 0,
+            "new_chunks": 20,
+            "unique_raw_bytes": 1154687,
+            "payload_bytes": 876866,
+            "metadata_bytes": 5394,
+            "stored_bytes": 882260,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "none",
+            "transformed_chunks": 0,
+            "transform_attempts": 0,
+            "archive_sha256": "fee61582f9a5fc12932fa85126f8acfaf49377580b4197d5820a0f795b2bf963"
+          },
+          "actual_transforms": {
+            "none": 20,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.009719800000311807,
+              0.009754600003361702,
+              0.010354800004279241,
+              0.009723499999381602,
+              0.010073800003738143
+            ],
+            "median": 0.009754600003361702,
+            "min": 0.009719800000311807,
+            "max": 0.010354800004279241,
+            "stdev": 0.0002822297307867494,
+            "p95": 0.010354800004279241
+          },
+          "decode_s": {
+            "samples": [
+              0.00745469999674242,
+              0.008249999998952262,
+              0.009156200001598336,
+              0.007919499999843538,
+              0.013063700011116453
+            ],
+            "median": 0.008249999998952262,
+            "min": 0.00745469999674242,
+            "max": 0.013063700011116453,
+            "stdev": 0.0022645908906488072,
+            "p95": 0.013063700011116453
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.0,
+              0.0,
+              0.015625,
+              0.015625
+            ],
+            "median": 0.015625,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.015625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.015625,
+              0.015625,
+              0.015625,
+              0.0
+            ],
+            "median": 0.015625,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.006987712429686843,
+            "p95": 0.015625
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              29388800,
+              29130752,
+              29372416,
+              29364224,
+              29106176
+            ],
+            "median": 29364224,
+            "min": 29106176,
+            "max": 29388800,
+            "stdev": 141136.77251800822,
+            "p95": 29388800
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              27291648,
+              27467776,
+              27516928,
+              27455488,
+              27447296
+            ],
+            "median": 27455488,
+            "min": 27291648,
+            "max": 27516928,
+            "stdev": 85005.57000102993,
+            "p95": 27516928
+          },
+          "resident_p95_s": 0.0001241000136360526,
+          "reopen_p95_s": 0.0006100000027799979
+        },
+        "zstd/64KiB/byte-shuffle-2-v1": {
+          "configuration": {
+            "layout": "flat-64",
+            "chunk_size": 65536,
+            "unit_size": null,
+            "compression": "zstd",
+            "transform": "byte-shuffle-2-v1",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 3,
+            "raw_bytes": 1154687,
+            "chunk_references": 20,
+            "unique_chunks": 20,
+            "reused_chunks": 0,
+            "new_chunks": 20,
+            "unique_raw_bytes": 1154687,
+            "payload_bytes": 653561,
+            "metadata_bytes": 5653,
+            "stored_bytes": 659214,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "byte-shuffle-2-v1",
+            "transformed_chunks": 19,
+            "transform_attempts": 20,
+            "archive_sha256": "45ebdae7b1e64fde5cd2220f3c5e75b263f7b4a6a35c6bd1e4901204ef981ae8"
+          },
+          "actual_transforms": {
+            "none": 1,
+            "byte-shuffle-2-v1": 19,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.011472899990621954,
+              0.011722200011718087,
+              0.011735799998859875,
+              0.011495300001115538,
+              0.011284299995168112
+            ],
+            "median": 0.011495300001115538,
+            "min": 0.011284299995168112,
+            "max": 0.011735799998859875,
+            "stdev": 0.00018933794354539663,
+            "p95": 0.011735799998859875
+          },
+          "decode_s": {
+            "samples": [
+              0.009697600005893037,
+              0.008602799993241206,
+              0.007672599997022189,
+              0.0077791000076103956,
+              0.007869299995945767
+            ],
+            "median": 0.007869299995945767,
+            "min": 0.007672599997022189,
+            "max": 0.009697600005893037,
+            "stdev": 0.0008503669913180736,
+            "p95": 0.009697600005893037
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.0,
+              0.015625,
+              0.0,
+              0.015625
+            ],
+            "median": 0.015625,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.015625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.015625,
+              0.015625,
+              0.0,
+              0.0
+            ],
+            "median": 0.015625,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.015625
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              29138944,
+              29421568,
+              28987392,
+              29229056,
+              29057024
+            ],
+            "median": 29138944,
+            "min": 28987392,
+            "max": 29421568,
+            "stdev": 168668.68461928552,
+            "p95": 29421568
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              27492352,
+              27480064,
+              27631616,
+              27414528,
+              27361280
+            ],
+            "median": 27480064,
+            "min": 27361280,
+            "max": 27631616,
+            "stdev": 101783.74565715295,
+            "p95": 27631616
+          },
+          "resident_p95_s": 0.00010630000906530768,
+          "reopen_p95_s": 0.0005445999995572492
+        },
+        "zstd/64KiB/xor-shuffle-2-v1": {
+          "configuration": {
+            "layout": "flat-64",
+            "chunk_size": 65536,
+            "unit_size": null,
+            "compression": "zstd",
+            "transform": "xor-shuffle-2-v1",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 3,
+            "raw_bytes": 1154687,
+            "chunk_references": 20,
+            "unique_chunks": 20,
+            "reused_chunks": 0,
+            "new_chunks": 20,
+            "unique_raw_bytes": 1154687,
+            "payload_bytes": 667877,
+            "metadata_bytes": 5633,
+            "stored_bytes": 673510,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "xor-shuffle-2-v1",
+            "transformed_chunks": 19,
+            "transform_attempts": 20,
+            "archive_sha256": "40e8a62d4ca69e1b20f1c0f22c2098e4824985e052ab37da70e9cdbb3b725c93"
+          },
+          "actual_transforms": {
+            "none": 1,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 19
+          },
+          "encode_s": {
+            "samples": [
+              0.07007850000809412,
+              0.06973640000796877,
+              0.0687469999975292,
+              0.07033390000287909,
+              0.0696009000093909
+            ],
+            "median": 0.06973640000796877,
+            "min": 0.0687469999975292,
+            "max": 0.07033390000287909,
+            "stdev": 0.0006050710836834987,
+            "p95": 0.07033390000287909
+          },
+          "decode_s": {
+            "samples": [
+              0.04101859999354929,
+              0.03358430000662338,
+              0.03499949999968521,
+              0.0352197000029264,
+              0.03346869999950286
+            ],
+            "median": 0.03499949999968521,
+            "min": 0.03346869999950286,
+            "max": 0.04101859999354929,
+            "stdev": 0.003100605886572661,
+            "p95": 0.04101859999354929
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.078125,
+              0.0625,
+              0.0625,
+              0.0625,
+              0.0625
+            ],
+            "median": 0.0625,
+            "min": 0.0625,
+            "max": 0.078125,
+            "stdev": 0.006987712429686843,
+            "p95": 0.078125
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.015625,
+              0.03125,
+              0.03125,
+              0.046875
+            ],
+            "median": 0.03125,
+            "min": 0.015625,
+            "max": 0.046875,
+            "stdev": 0.01307281291459493,
+            "p95": 0.046875
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              29241344,
+              29409280,
+              29143040,
+              29229056,
+              29077504
+            ],
+            "median": 29229056,
+            "min": 29077504,
+            "max": 29409280,
+            "stdev": 125092.4032993211,
+            "p95": 29409280
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              27484160,
+              27713536,
+              27422720,
+              27553792,
+              27496448
+            ],
+            "median": 27496448,
+            "min": 27422720,
+            "max": 27713536,
+            "stdev": 110569.24210285608,
+            "p95": 27713536
+          },
+          "resident_p95_s": 0.0021773999906145036,
+          "reopen_p95_s": 0.0025062000058824196
+        },
+        "zlib/1024KiB/none": {
+          "configuration": {
+            "layout": "flat-1024",
+            "chunk_size": 1048576,
+            "unit_size": null,
+            "compression": "zlib",
+            "transform": "none",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 3,
+            "raw_bytes": 1154687,
+            "chunk_references": 3,
+            "unique_chunks": 3,
+            "reused_chunks": 0,
+            "new_chunks": 3,
+            "unique_raw_bytes": 1154687,
+            "payload_bytes": 864098,
+            "metadata_bytes": 1291,
+            "stored_bytes": 865389,
+            "compression": "zlib",
+            "deduplicate": true,
+            "transform": "none",
+            "transformed_chunks": 0,
+            "transform_attempts": 0,
+            "archive_sha256": "516768caaf7116f6e7573abae4dacde8df8aa6ed435154a23da1fb8bc7130819"
+          },
+          "actual_transforms": {
+            "none": 3,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.041805100001511164,
+              0.04402919999847654,
+              0.04647610000392888,
+              0.0419833999912953,
+              0.045525800000177696
+            ],
+            "median": 0.04402919999847654,
+            "min": 0.041805100001511164,
+            "max": 0.04647610000392888,
+            "stdev": 0.0020819307310794032,
+            "p95": 0.04647610000392888
+          },
+          "decode_s": {
+            "samples": [
+              0.009264199994504452,
+              0.009643199999118224,
+              0.009292199989431538,
+              0.009306500011007302,
+              0.011076999988290481
+            ],
+            "median": 0.009306500011007302,
+            "min": 0.009264199994504452,
+            "max": 0.011076999988290481,
+            "stdev": 0.0007760539319508642,
+            "p95": 0.011076999988290481
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.046875,
+              0.046875,
+              0.046875,
+              0.046875,
+              0.03125
+            ],
+            "median": 0.046875,
+            "min": 0.03125,
+            "max": 0.046875,
+            "stdev": 0.006987712429686843,
+            "p95": 0.046875
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.015625,
+              0.0,
+              0.015625,
+              0.015625
+            ],
+            "median": 0.015625,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.006987712429686843,
+            "p95": 0.015625
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              29138944,
+              29495296,
+              29364224,
+              29597696,
+              29519872
+            ],
+            "median": 29495296,
+            "min": 29138944,
+            "max": 29597696,
+            "stdev": 179771.94214003475,
+            "p95": 29597696
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              29442048,
+              29474816,
+              29425664,
+              29216768,
+              29466624
+            ],
+            "median": 29442048,
+            "min": 29216768,
+            "max": 29474816,
+            "stdev": 107124.3004364556,
+            "p95": 29474816
+          },
+          "resident_p95_s": 0.004317700004321523,
+          "reopen_p95_s": 0.00473450000572484
+        },
+        "zlib/1024KiB/byte-shuffle-2-v1": {
+          "configuration": {
+            "layout": "flat-1024",
+            "chunk_size": 1048576,
+            "unit_size": null,
+            "compression": "zlib",
+            "transform": "byte-shuffle-2-v1",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 3,
+            "raw_bytes": 1154687,
+            "chunk_references": 3,
+            "unique_chunks": 3,
+            "reused_chunks": 0,
+            "new_chunks": 3,
+            "unique_raw_bytes": 1154687,
+            "payload_bytes": 626381,
+            "metadata_bytes": 1330,
+            "stored_bytes": 627711,
+            "compression": "zlib",
+            "deduplicate": true,
+            "transform": "byte-shuffle-2-v1",
+            "transformed_chunks": 2,
+            "transform_attempts": 3,
+            "archive_sha256": "a0283fba3bdb0447641837c7147cd664908b8e1dcf2ee7ba59ef9f00c70f5019"
+          },
+          "actual_transforms": {
+            "none": 1,
+            "byte-shuffle-2-v1": 2,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.06128539999190252,
+              0.06201080000028014,
+              0.06548520000069402,
+              0.06190880000940524,
+              0.06359780000639148
+            ],
+            "median": 0.06201080000028014,
+            "min": 0.06128539999190252,
+            "max": 0.06548520000069402,
+            "stdev": 0.00169862314392047,
+            "p95": 0.06548520000069402
+          },
+          "decode_s": {
+            "samples": [
+              0.008687599998665974,
+              0.007314800008316524,
+              0.008007399999769405,
+              0.007458899999619462,
+              0.012517499999376014
+            ],
+            "median": 0.008007399999769405,
+            "min": 0.007314800008316524,
+            "max": 0.012517499999376014,
+            "stdev": 0.0021485451417398178,
+            "p95": 0.012517499999376014
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.0625,
+              0.0625,
+              0.0625,
+              0.0625,
+              0.0625
+            ],
+            "median": 0.0625,
+            "min": 0.0625,
+            "max": 0.0625,
+            "stdev": 0.0,
+            "p95": 0.0625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.0,
+              0.015625,
+              0.0,
+              0.0,
+              0.015625
+            ],
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.015625
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              30789632,
+              30937088,
+              30932992,
+              30904320,
+              30601216
+            ],
+            "median": 30904320,
+            "min": 30601216,
+            "max": 30937088,
+            "stdev": 142761.90667261346,
+            "p95": 30937088
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              30642176,
+              31006720,
+              30969856,
+              31289344,
+              30863360
+            ],
+            "median": 30969856,
+            "min": 30642176,
+            "max": 31289344,
+            "stdev": 235019.04287780597,
+            "p95": 31289344
+          },
+          "resident_p95_s": 0.0025782000011531636,
+          "reopen_p95_s": 0.0032617000106256455
+        },
+        "zlib/1024KiB/xor-shuffle-2-v1": {
+          "configuration": {
+            "layout": "flat-1024",
+            "chunk_size": 1048576,
+            "unit_size": null,
+            "compression": "zlib",
+            "transform": "xor-shuffle-2-v1",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 3,
+            "raw_bytes": 1154687,
+            "chunk_references": 3,
+            "unique_chunks": 3,
+            "reused_chunks": 0,
+            "new_chunks": 3,
+            "unique_raw_bytes": 1154687,
+            "payload_bytes": 634941,
+            "metadata_bytes": 1327,
+            "stored_bytes": 636268,
+            "compression": "zlib",
+            "deduplicate": true,
+            "transform": "xor-shuffle-2-v1",
+            "transformed_chunks": 2,
+            "transform_attempts": 3,
+            "archive_sha256": "3c5ef79ea4567d4f2abf66345253383c13b1d3b3f8e2391d6f9a24383f919f1a"
+          },
+          "actual_transforms": {
+            "none": 1,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 2
+          },
+          "encode_s": {
+            "samples": [
+              0.12061979999998584,
+              0.12072980000812095,
+              0.12842810001166072,
+              0.11978500000259373,
+              0.11900669999886304
+            ],
+            "median": 0.12061979999998584,
+            "min": 0.11900669999886304,
+            "max": 0.12842810001166072,
+            "stdev": 0.0038175769947960056,
+            "p95": 0.12842810001166072
+          },
+          "decode_s": {
+            "samples": [
+              0.03133689999231137,
+              0.031478799995966256,
+              0.032509500000742264,
+              0.03361489999224432,
+              0.03222379999351688
+            ],
+            "median": 0.03222379999351688,
+            "min": 0.03133689999231137,
+            "max": 0.03361489999224432,
+            "stdev": 0.0009162419313352189,
+            "p95": 0.03361489999224432
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.109375,
+              0.125,
+              0.125,
+              0.125,
+              0.109375
+            ],
+            "median": 0.125,
+            "min": 0.109375,
+            "max": 0.125,
+            "stdev": 0.00855816496101822,
+            "p95": 0.125
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.03125,
+              0.03125,
+              0.03125,
+              0.03125,
+              0.03125
+            ],
+            "median": 0.03125,
+            "min": 0.03125,
+            "max": 0.03125,
+            "stdev": 0.0,
+            "p95": 0.03125
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              31997952,
+              31776768,
+              32075776,
+              32256000,
+              31977472
+            ],
+            "median": 31997952,
+            "min": 31776768,
+            "max": 32256000,
+            "stdev": 173358.08899731215,
+            "p95": 32256000
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              30982144,
+              30949376,
+              30736384,
+              30998528,
+              31453184
+            ],
+            "median": 30982144,
+            "min": 30736384,
+            "max": 31453184,
+            "stdev": 262150.3999218769,
+            "p95": 31453184
+          },
+          "resident_p95_s": 0.025837400011369027,
+          "reopen_p95_s": 0.024047500002779998
+        },
+        "zstd/1024KiB/none": {
+          "configuration": {
+            "layout": "flat-1024",
+            "chunk_size": 1048576,
+            "unit_size": null,
+            "compression": "zstd",
+            "transform": "none",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 3,
+            "raw_bytes": 1154687,
+            "chunk_references": 3,
+            "unique_chunks": 3,
+            "reused_chunks": 0,
+            "new_chunks": 3,
+            "unique_raw_bytes": 1154687,
+            "payload_bytes": 872774,
+            "metadata_bytes": 1292,
+            "stored_bytes": 874066,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "none",
+            "transformed_chunks": 0,
+            "transform_attempts": 0,
+            "archive_sha256": "926a1fd1068d87eb9248924a52b151d92c8bfb3bed2dafea7768d6c49e46dc3d"
+          },
+          "actual_transforms": {
+            "none": 3,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.012801599994418211,
+              0.012249400009750389,
+              0.01228629999968689,
+              0.012300099988351576,
+              0.012812799992389046
+            ],
+            "median": 0.012300099988351576,
+            "min": 0.012249400009750389,
+            "max": 0.012812799992389046,
+            "stdev": 0.000290145844132212,
+            "p95": 0.012812799992389046
+          },
+          "decode_s": {
+            "samples": [
+              0.007515400007832795,
+              0.008777399998507462,
+              0.008200500000384636,
+              0.008002599992323667,
+              0.007629000014276244
+            ],
+            "median": 0.008002599992323667,
+            "min": 0.007515400007832795,
+            "max": 0.008777399998507462,
+            "stdev": 0.0005034669569454136,
+            "p95": 0.008777399998507462
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.0,
+              0.015625,
+              0.0,
+              0.015625
+            ],
+            "median": 0.015625,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.015625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.015625,
+              0.0,
+              0.0,
+              0.015625
+            ],
+            "median": 0.015625,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.015625
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              30142464,
+              30060544,
+              30195712,
+              29839360,
+              30240768
+            ],
+            "median": 30142464,
+            "min": 29839360,
+            "max": 30240768,
+            "stdev": 158256.2101302821,
+            "p95": 30240768
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              28545024,
+              28823552,
+              28393472,
+              28872704,
+              28807168
+            ],
+            "median": 28807168,
+            "min": 28393472,
+            "max": 28872704,
+            "stdev": 208494.04465355838,
+            "p95": 28872704
+          },
+          "resident_p95_s": 0.0017268999945372343,
+          "reopen_p95_s": 0.0021998000011080876
+        },
+        "zstd/1024KiB/byte-shuffle-2-v1": {
+          "configuration": {
+            "layout": "flat-1024",
+            "chunk_size": 1048576,
+            "unit_size": null,
+            "compression": "zstd",
+            "transform": "byte-shuffle-2-v1",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 3,
+            "raw_bytes": 1154687,
+            "chunk_references": 3,
+            "unique_chunks": 3,
+            "reused_chunks": 0,
+            "new_chunks": 3,
+            "unique_raw_bytes": 1154687,
+            "payload_bytes": 631295,
+            "metadata_bytes": 1331,
+            "stored_bytes": 632626,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "byte-shuffle-2-v1",
+            "transformed_chunks": 2,
+            "transform_attempts": 3,
+            "archive_sha256": "aeae08e999ec72acb5148471c0e115f3c50c59dcd16f54537650f915a0c4aab3"
+          },
+          "actual_transforms": {
+            "none": 1,
+            "byte-shuffle-2-v1": 2,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.013531899996451102,
+              0.014337700005853549,
+              0.015164299999014474,
+              0.014854199995170347,
+              0.014444599990383722
+            ],
+            "median": 0.014444599990383722,
+            "min": 0.013531899996451102,
+            "max": 0.015164299999014474,
+            "stdev": 0.0006180174618139152,
+            "p95": 0.015164299999014474
+          },
+          "decode_s": {
+            "samples": [
+              0.00808070000493899,
+              0.008568100005504675,
+              0.008220699994126335,
+              0.008789499988779426,
+              0.008440300007350743
+            ],
+            "median": 0.008440300007350743,
+            "min": 0.00808070000493899,
+            "max": 0.008789499988779426,
+            "stdev": 0.0002800539343710249,
+            "p95": 0.008789499988779426
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.0,
+              0.015625,
+              0.015625,
+              0.0,
+              0.015625
+            ],
+            "median": 0.015625,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.015625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.015625,
+              0.0,
+              0.015625,
+              0.0
+            ],
+            "median": 0.015625,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.015625
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              31502336,
+              32780288,
+              31490048,
+              31674368,
+              31633408
+            ],
+            "median": 31633408,
+            "min": 31490048,
+            "max": 32780288,
+            "stdev": 544949.6719632007,
+            "p95": 32780288
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              31322112,
+              31199232,
+              31318016,
+              30908416,
+              31195136
+            ],
+            "median": 31199232,
+            "min": 30908416,
+            "max": 31322112,
+            "stdev": 168250.39838526386,
+            "p95": 31322112
+          },
+          "resident_p95_s": 0.0022797000128775835,
+          "reopen_p95_s": 0.002391800007899292
+        },
+        "zstd/1024KiB/xor-shuffle-2-v1": {
+          "configuration": {
+            "layout": "flat-1024",
+            "chunk_size": 1048576,
+            "unit_size": null,
+            "compression": "zstd",
+            "transform": "xor-shuffle-2-v1",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 3,
+            "raw_bytes": 1154687,
+            "chunk_references": 3,
+            "unique_chunks": 3,
+            "reused_chunks": 0,
+            "new_chunks": 3,
+            "unique_raw_bytes": 1154687,
+            "payload_bytes": 649992,
+            "metadata_bytes": 1328,
+            "stored_bytes": 651320,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "xor-shuffle-2-v1",
+            "transformed_chunks": 2,
+            "transform_attempts": 3,
+            "archive_sha256": "5830ba77117d0ab1912f3debe9b2c29e4b6daf14e5dfa2715fcf11d188dcb892"
+          },
+          "actual_transforms": {
+            "none": 1,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 2
+          },
+          "encode_s": {
+            "samples": [
+              0.06891439999162685,
+              0.08459289999154862,
+              0.07433640000817832,
+              0.07284520000393968,
+              0.07898949999071192
+            ],
+            "median": 0.07433640000817832,
+            "min": 0.06891439999162685,
+            "max": 0.08459289999154862,
+            "stdev": 0.006034907011959908,
+            "p95": 0.08459289999154862
+          },
+          "decode_s": {
+            "samples": [
+              0.03296109999064356,
+              0.0350929999985965,
+              0.034425899997586384,
+              0.03499839999130927,
+              0.03379879999556579
+            ],
+            "median": 0.034425899997586384,
+            "min": 0.03296109999064356,
+            "max": 0.0350929999985965,
+            "stdev": 0.0008897175203657183,
+            "p95": 0.0350929999985965
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.0625,
+              0.0625,
+              0.078125,
+              0.078125,
+              0.078125
+            ],
+            "median": 0.078125,
+            "min": 0.0625,
+            "max": 0.078125,
+            "stdev": 0.00855816496101822,
+            "p95": 0.078125
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.03125,
+              0.015625,
+              0.03125,
+              0.03125,
+              0.03125
+            ],
+            "median": 0.03125,
+            "min": 0.015625,
+            "max": 0.03125,
+            "stdev": 0.006987712429686843,
+            "p95": 0.03125
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              32886784,
+              33812480,
+              33804288,
+              33681408,
+              32907264
+            ],
+            "median": 33681408,
+            "min": 32886784,
+            "max": 33812480,
+            "stdev": 478867.772700565,
+            "p95": 33812480
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              31891456,
+              32264192,
+              32100352,
+              31834112,
+              32325632
+            ],
+            "median": 32100352,
+            "min": 31834112,
+            "max": 32325632,
+            "stdev": 218309.4993150779,
+            "p95": 32325632
+          },
+          "resident_p95_s": 0.025110500006121583,
+          "reopen_p95_s": 0.024798000013106503
+        }
+      },
+      "matched_comparisons": [
+        {
+          "baseline": "zlib/64KiB/none",
+          "candidate": "zlib/64KiB/byte-shuffle-2-v1",
+          "archive_saving_pct": 26.90117688478173,
+          "net_saved_bytes_with_source_once": 232383,
+          "paired": {
+            "encode": {
+              "metric": "encode",
+              "speedup_samples": [
+                0.6382253078638948,
+                0.6568130263526889,
+                0.7381237742524142,
+                0.6471607267869935,
+                0.7095421582881108
+              ],
+              "speedup_median": 0.6568130263526889,
+              "min": 0.6382253078638948,
+              "max": 0.7381237742524142,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "decode": {
+              "metric": "decode",
+              "speedup_samples": [
+                1.3747067778307998,
+                1.2122111501214532,
+                1.2891502244350026,
+                1.2970336763418926,
+                1.300346101147632
+              ],
+              "speedup_median": 1.2970336763418926,
+              "min": 1.2122111501214532,
+              "max": 1.3747067778307998,
+              "candidate_faster_rounds": 5,
+              "rounds": 5
+            },
+            "open_reader": {
+              "metric": "open_reader",
+              "speedup_samples": [
+                2.132052863805518,
+                1.7313843453508762,
+                1.9749117800859413,
+                2.080254067037785,
+                1.5690789977559414
+              ],
+              "speedup_median": 1.9749117800859413,
+              "min": 1.5690789977559414,
+              "max": 2.132052863805518,
+              "candidate_faster_rounds": 5,
+              "rounds": 5
+            },
+            "open_and_read": {
+              "metric": "open_and_read",
+              "speedup_samples": [
+                1.5172675314333097,
+                1.1078704884417565,
+                1.3066253192155923,
+                1.4770932113897997,
+                1.0548348159114616
+              ],
+              "speedup_median": 1.3066253192155923,
+              "min": 1.0548348159114616,
+              "max": 1.5172675314333097,
+              "candidate_faster_rounds": 5,
+              "rounds": 5
+            }
+          }
+        },
+        {
+          "baseline": "zlib/64KiB/none",
+          "candidate": "zlib/64KiB/xor-shuffle-2-v1",
+          "archive_saving_pct": 25.863392083611856,
+          "net_saved_bytes_with_source_once": 223363,
+          "paired": {
+            "encode": {
+              "metric": "encode",
+              "speedup_samples": [
+                0.32729794819889746,
+                0.3246599982646311,
+                0.32345032782532934,
+                0.3347281221211502,
+                0.3623590851295264
+              ],
+              "speedup_median": 0.32729794819889746,
+              "min": 0.32345032782532934,
+              "max": 0.3623590851295264,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "decode": {
+              "metric": "decode",
+              "speedup_samples": [
+                0.27754394040959485,
+                0.28684505105226005,
+                0.2817719746769144,
+                0.303171873267914,
+                0.30568574467244036
+              ],
+              "speedup_median": 0.28684505105226005,
+              "min": 0.27754394040959485,
+              "max": 0.30568574467244036,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "open_reader": {
+              "metric": "open_reader",
+              "speedup_samples": [
+                0.1724020845846482,
+                0.12381177941064302,
+                0.15582568109903755,
+                0.18716882723046294,
+                0.2410714259448555
+              ],
+              "speedup_median": 0.1724020845846482,
+              "min": 0.12381177941064302,
+              "max": 0.2410714259448555,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "open_and_read": {
+              "metric": "open_and_read",
+              "speedup_samples": [
+                0.23324874027090853,
+                0.3802203009419689,
+                0.2578625483294467,
+                0.18435754268309937,
+                0.33398263487889174
+              ],
+              "speedup_median": 0.2578625483294467,
+              "min": 0.18435754268309937,
+              "max": 0.3802203009419689,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            }
+          }
+        },
+        {
+          "baseline": "zstd/64KiB/none",
+          "candidate": "zstd/64KiB/byte-shuffle-2-v1",
+          "archive_saving_pct": 25.281209620746715,
+          "net_saved_bytes_with_source_once": 221615,
+          "paired": {
+            "encode": {
+              "metric": "encode",
+              "speedup_samples": [
+                0.847196437540365,
+                0.832147548549805,
+                0.882325875124423,
+                0.8458674413402003,
+                0.8927270639784213
+              ],
+              "speedup_median": 0.847196437540365,
+              "min": 0.832147548549805,
+              "max": 0.8927270639784213,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "decode": {
+              "metric": "decode",
+              "speedup_samples": [
+                0.7687159701588381,
+                0.958990096879374,
+                1.1933633976946467,
+                1.0180483593340859,
+                1.660084126649997
+              ],
+              "speedup_median": 1.0180483593340859,
+              "min": 0.7687159701588381,
+              "max": 1.660084126649997,
+              "candidate_faster_rounds": 3,
+              "rounds": 5
+            },
+            "open_reader": {
+              "metric": "open_reader",
+              "speedup_samples": [
+                1.0836159721181984,
+                0.9568235580813282,
+                0.978772153996496,
+                1.5371587846537131,
+                1.1579521619263566
+              ],
+              "speedup_median": 1.0836159721181984,
+              "min": 0.9568235580813282,
+              "max": 1.5371587846537131,
+              "candidate_faster_rounds": 3,
+              "rounds": 5
+            },
+            "open_and_read": {
+              "metric": "open_and_read",
+              "speedup_samples": [
+                1.2691883876357672,
+                1.08150729592451,
+                0.9981185409334336,
+                1.1826289346807464,
+                0.7034988229470842
+              ],
+              "speedup_median": 1.08150729592451,
+              "min": 0.7034988229470842,
+              "max": 1.2691883876357672,
+              "candidate_faster_rounds": 3,
+              "rounds": 5
+            }
+          }
+        },
+        {
+          "baseline": "zstd/64KiB/none",
+          "candidate": "zstd/64KiB/xor-shuffle-2-v1",
+          "archive_saving_pct": 23.660825606963932,
+          "net_saved_bytes_with_source_once": 207319,
+          "paired": {
+            "encode": {
+              "metric": "encode",
+              "speedup_samples": [
+                0.13869874496727472,
+                0.13987816982590218,
+                0.1506218453845462,
+                0.13824770130738626,
+                0.14473663418689894
+              ],
+              "speedup_median": 0.13987816982590218,
+              "min": 0.13824770130738626,
+              "max": 0.1506218453845462,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "decode": {
+              "metric": "decode",
+              "speedup_samples": [
+                0.18173950349145923,
+                0.24565049732539387,
+                0.2616094516116141,
+                0.22485995051591887,
+                0.39032588691256304
+              ],
+              "speedup_median": 0.24565049732539387,
+              "min": 0.18173950349145923,
+              "max": 0.39032588691256304,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "open_reader": {
+              "metric": "open_reader",
+              "speedup_samples": [
+                0.055245119169111546,
+                0.02611477313334229,
+                0.05864557925894754,
+                0.07504362700827993,
+                0.0648170786103865
+              ],
+              "speedup_median": 0.05864557925894754,
+              "min": 0.02611477313334229,
+              "max": 0.07504362700827993,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "open_and_read": {
+              "metric": "open_and_read",
+              "speedup_samples": [
+                0.32908017284299884,
+                0.21336511837075556,
+                0.19506066905948083,
+                0.24339637752303817,
+                0.171516235480418
+              ],
+              "speedup_median": 0.21336511837075556,
+              "min": 0.171516235480418,
+              "max": 0.32908017284299884,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            }
+          }
+        },
+        {
+          "baseline": "zlib/1024KiB/none",
+          "candidate": "zlib/1024KiB/byte-shuffle-2-v1",
+          "archive_saving_pct": 27.464874177970835,
+          "net_saved_bytes_with_source_once": 236247,
+          "paired": {
+            "encode": {
+              "metric": "encode",
+              "speedup_samples": [
+                0.6821379970928599,
+                0.7100247053461274,
+                0.7097191426984466,
+                0.6781491481811495,
+                0.7158392270739306
+              ],
+              "speedup_median": 0.7097191426984466,
+              "min": 0.6781491481811495,
+              "max": 0.7158392270739306,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "decode": {
+              "metric": "decode",
+              "speedup_samples": [
+                1.0663704585762488,
+                1.3183135544586915,
+                1.1604515809999667,
+                1.2477040865921383,
+                0.8849211095540371
+              ],
+              "speedup_median": 1.1604515809999667,
+              "min": 0.8849211095540371,
+              "max": 1.3183135544586915,
+              "candidate_faster_rounds": 4,
+              "rounds": 5
+            },
+            "open_reader": {
+              "metric": "open_reader",
+              "speedup_samples": [
+                1.470673859457017,
+                1.6108525273567342,
+                1.8175962971841564,
+                1.5835830322956217,
+                2.152080533671839
+              ],
+              "speedup_median": 1.6108525273567342,
+              "min": 1.470673859457017,
+              "max": 2.152080533671839,
+              "candidate_faster_rounds": 5,
+              "rounds": 5
+            },
+            "open_and_read": {
+              "metric": "open_and_read",
+              "speedup_samples": [
+                1.7076081683132838,
+                1.6221299498678543,
+                1.4497932519779217,
+                1.6272189261467351,
+                1.421046312185355
+              ],
+              "speedup_median": 1.6221299498678543,
+              "min": 1.421046312185355,
+              "max": 1.7076081683132838,
+              "candidate_faster_rounds": 5,
+              "rounds": 5
+            }
+          }
+        },
+        {
+          "baseline": "zlib/1024KiB/none",
+          "candidate": "zlib/1024KiB/xor-shuffle-2-v1",
+          "archive_saving_pct": 26.476070299021593,
+          "net_saved_bytes_with_source_once": 227690,
+          "paired": {
+            "encode": {
+              "metric": "encode",
+              "speedup_samples": [
+                0.3465857181119192,
+                0.3646920643910194,
+                0.3618841982378393,
+                0.3504896271685622,
+                0.38254820947570717
+              ],
+              "speedup_median": 0.3618841982378393,
+              "min": 0.3465857181119192,
+              "max": 0.38254820947570717,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "decode": {
+              "metric": "decode",
+              "speedup_samples": [
+                0.2956323055815176,
+                0.3063395046937596,
+                0.28583029542808647,
+                0.27685639443087773,
+                0.34375213322199955
+              ],
+              "speedup_median": 0.2956323055815176,
+              "min": 0.27685639443087773,
+              "max": 0.34375213322199955,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "open_reader": {
+              "metric": "open_reader",
+              "speedup_samples": [
+                0.1863032852874576,
+                0.154775258397189,
+                0.16711046786525113,
+                0.17087784006910425,
+                0.20809139443329608
+              ],
+              "speedup_median": 0.17087784006910425,
+              "min": 0.154775258397189,
+              "max": 0.20809139443329608,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "open_and_read": {
+              "metric": "open_and_read",
+              "speedup_samples": [
+                0.20671782604793443,
+                0.1925044956215597,
+                0.19204231474532446,
+                0.22070901291566636,
+                0.20088850075603823
+              ],
+              "speedup_median": 0.20088850075603823,
+              "min": 0.19204231474532446,
+              "max": 0.22070901291566636,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            }
+          }
+        },
+        {
+          "baseline": "zstd/1024KiB/none",
+          "candidate": "zstd/1024KiB/byte-shuffle-2-v1",
+          "archive_saving_pct": 27.622628039530195,
+          "net_saved_bytes_with_source_once": 240009,
+          "paired": {
+            "encode": {
+              "metric": "encode",
+              "speedup_samples": [
+                0.946031229744203,
+                0.8543490242332742,
+                0.8102121430257495,
+                0.8280553642976933,
+                0.8870304474280338
+              ],
+              "speedup_median": 0.8543490242332742,
+              "min": 0.8102121430257495,
+              "max": 0.946031229744203,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "decode": {
+              "metric": "decode",
+              "speedup_samples": [
+                0.9300431897285286,
+                1.0244278186375415,
+                0.9975427890865581,
+                0.9104727234245058,
+                0.9038778251521948
+              ],
+              "speedup_median": 0.9300431897285286,
+              "min": 0.9038778251521948,
+              "max": 1.0244278186375415,
+              "candidate_faster_rounds": 1,
+              "rounds": 5
+            },
+            "open_reader": {
+              "metric": "open_reader",
+              "speedup_samples": [
+                0.7663829962017044,
+                0.8134707530198216,
+                0.7640947729889312,
+                0.867309525471333,
+                0.749791637665394
+              ],
+              "speedup_median": 0.7663829962017044,
+              "min": 0.749791637665394,
+              "max": 0.867309525471333,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "open_and_read": {
+              "metric": "open_and_read",
+              "speedup_samples": [
+                0.8969957106395104,
+                0.8441241326740155,
+                0.9410506496478316,
+                0.9634156178707256,
+                2.0132536078853884
+              ],
+              "speedup_median": 0.9410506496478316,
+              "min": 0.8441241326740155,
+              "max": 2.0132536078853884,
+              "candidate_faster_rounds": 1,
+              "rounds": 5
+            }
+          }
+        },
+        {
+          "baseline": "zstd/1024KiB/none",
+          "candidate": "zstd/1024KiB/xor-shuffle-2-v1",
+          "archive_saving_pct": 25.483887944388638,
+          "net_saved_bytes_with_source_once": 221315,
+          "paired": {
+            "encode": {
+              "metric": "encode",
+              "speedup_samples": [
+                0.1857608859102541,
+                0.14480411489586223,
+                0.1652797283475549,
+                0.16885258037161474,
+                0.16220890110578817
+              ],
+              "speedup_median": 0.1652797283475549,
+              "min": 0.14480411489586223,
+              "max": 0.1857608859102541,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "decode": {
+              "metric": "decode",
+              "speedup_samples": [
+                0.22800816750551833,
+                0.2501182571697633,
+                0.23820728001183925,
+                0.2286561669765148,
+                0.2257180732829901
+              ],
+              "speedup_median": 0.2286561669765148,
+              "min": 0.2257180732829901,
+              "max": 0.2501182571697633,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "open_reader": {
+              "metric": "open_reader",
+              "speedup_samples": [
+                0.06785878174464907,
+                0.06695207223842278,
+                0.07514539432191816,
+                0.07602465307513386,
+                0.07304700883345719
+              ],
+              "speedup_median": 0.07304700883345719,
+              "min": 0.06695207223842278,
+              "max": 0.07602465307513386,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "open_and_read": {
+              "metric": "open_and_read",
+              "speedup_samples": [
+                0.07860559685066382,
+                0.07984741273591241,
+                0.09057930738374505,
+                0.10228654171346342,
+                0.19418098204284684
+              ],
+              "speedup_median": 0.09057930738374505,
+              "min": 0.07860559685066382,
+              "max": 0.19418098204284684,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            }
+          }
+        }
+      ],
+      "minimum_archive_comparisons": [
+        {
+          "ordinary": "zlib/1024KiB/none",
+          "candidate": "zlib/1024KiB/byte-shuffle-2-v1",
+          "ordinary_bytes": 865389,
+          "candidate_bytes": 627711,
+          "source_bytes_once": 1431,
+          "net_saved_bytes_with_source_once": 236247,
+          "net_saving_pct_with_source_once": 27.299515015790586,
+          "archive_saving_pct": 27.464874177970835,
+          "ordinary_restore_s": 0.009306500011007302,
+          "candidate_restore_s": 0.008007399999769405,
+          "restore_medians_ratio": 0.8604093902432299,
+          "ordinary_reopen_p95_s": 0.00473450000572484,
+          "candidate_reopen_p95_s": 0.0032617000106256455
+        },
+        {
+          "ordinary": "zlib/1024KiB/none",
+          "candidate": "zlib/1024KiB/xor-shuffle-2-v1",
+          "ordinary_bytes": 865389,
+          "candidate_bytes": 636268,
+          "source_bytes_once": 1431,
+          "net_saved_bytes_with_source_once": 227690,
+          "net_saving_pct_with_source_once": 26.31071113684135,
+          "archive_saving_pct": 26.476070299021593,
+          "ordinary_restore_s": 0.009306500011007302,
+          "candidate_restore_s": 0.03222379999351688,
+          "restore_medians_ratio": 3.4625046962235047,
+          "ordinary_reopen_p95_s": 0.00473450000572484,
+          "candidate_reopen_p95_s": 0.024047500002779998
+        }
+      ]
+    },
+    "noise": {
+      "raw_bytes": 262147,
+      "counts": {
+        "configurations": 12,
+        "formal_roundtrips": 60,
+        "warmup_roundtrips": 12,
+        "formal_range_reads": 11520,
+        "warmup_range_reads": 1440
+      },
+      "conditions": {
+        "zlib/64KiB/none": {
+          "configuration": {
+            "layout": "flat-64",
+            "chunk_size": 65536,
+            "unit_size": null,
+            "compression": "zlib",
+            "transform": "none",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 1,
+            "raw_bytes": 262147,
+            "chunk_references": 5,
+            "unique_chunks": 5,
+            "reused_chunks": 0,
+            "new_chunks": 5,
+            "unique_raw_bytes": 262147,
+            "payload_bytes": 262147,
+            "metadata_bytes": 1476,
+            "stored_bytes": 263623,
+            "compression": "zlib",
+            "deduplicate": true,
+            "transform": "none",
+            "transformed_chunks": 0,
+            "transform_attempts": 0,
+            "archive_sha256": "528a9be0fdcdbbf73ff328ccbdac21fde28da3707fbea02fd03105d680e06b89"
+          },
+          "actual_transforms": {
+            "none": 5,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.008268899997347035,
+              0.008137999990140088,
+              0.008180399992852472,
+              0.008298100001411512,
+              0.007761600005323999
+            ],
+            "median": 0.008180399992852472,
+            "min": 0.007761600005323999,
+            "max": 0.008298100001411512,
+            "stdev": 0.00021556422182327436,
+            "p95": 0.008298100001411512
+          },
+          "decode_s": {
+            "samples": [
+              0.003371099999640137,
+              0.003095400010352023,
+              0.002821100002620369,
+              0.003436699989833869,
+              0.002862899986212142
+            ],
+            "median": 0.003095400010352023,
+            "min": 0.002821100002620369,
+            "max": 0.003436699989833869,
+            "stdev": 0.0002825615465415995,
+            "p95": 0.003436699989833869
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.0,
+              0.0,
+              0.015625,
+              0.0
+            ],
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.015625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "stdev": 0.0,
+            "p95": 0.0
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              27668480,
+              27324416,
+              27529216,
+              27561984,
+              27586560
+            ],
+            "median": 27561984,
+            "min": 27324416,
+            "max": 27668480,
+            "stdev": 128041.77238385916,
+            "p95": 27668480
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              27176960,
+              26955776,
+              26914816,
+              26779648,
+              26681344
+            ],
+            "median": 26914816,
+            "min": 26681344,
+            "max": 27176960,
+            "stdev": 188625.13610651152,
+            "p95": 27176960
+          },
+          "resident_p95_s": 5.9300000430084765e-05,
+          "reopen_p95_s": 0.00029429999995045364
+        },
+        "zlib/64KiB/byte-shuffle-2-v1": {
+          "configuration": {
+            "layout": "flat-64",
+            "chunk_size": 65536,
+            "unit_size": null,
+            "compression": "zlib",
+            "transform": "byte-shuffle-2-v1",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 1,
+            "raw_bytes": 262147,
+            "chunk_references": 5,
+            "unique_chunks": 5,
+            "reused_chunks": 0,
+            "new_chunks": 5,
+            "unique_raw_bytes": 262147,
+            "payload_bytes": 262147,
+            "metadata_bytes": 1489,
+            "stored_bytes": 263636,
+            "compression": "zlib",
+            "deduplicate": true,
+            "transform": "byte-shuffle-2-v1",
+            "transformed_chunks": 0,
+            "transform_attempts": 5,
+            "archive_sha256": "44ceb5dd0c4987bad44294db016688ad01f0ceb58a076ed04db5cc48e5309cc3"
+          },
+          "actual_transforms": {
+            "none": 5,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.01221439999062568,
+              0.013341900004888885,
+              0.012595199994393624,
+              0.01213360000110697,
+              0.012839899995015003
+            ],
+            "median": 0.012595199994393624,
+            "min": 0.01213360000110697,
+            "max": 0.013341900004888885,
+            "stdev": 0.0004927174626019289,
+            "p95": 0.013341900004888885
+          },
+          "decode_s": {
+            "samples": [
+              0.0030254000012064353,
+              0.002984600010677241,
+              0.0038988000014796853,
+              0.002889700001105666,
+              0.004666000008000992
+            ],
+            "median": 0.0030254000012064353,
+            "min": 0.002889700001105666,
+            "max": 0.004666000008000992,
+            "stdev": 0.0007716368651536746,
+            "p95": 0.004666000008000992
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.015625,
+              0.015625,
+              0.015625,
+              0.015625
+            ],
+            "median": 0.015625,
+            "min": 0.015625,
+            "max": 0.015625,
+            "stdev": 0.0,
+            "p95": 0.015625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "stdev": 0.0,
+            "p95": 0.0
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              27652096,
+              27836416,
+              27508736,
+              27713536,
+              27832320
+            ],
+            "median": 27713536,
+            "min": 27508736,
+            "max": 27836416,
+            "stdev": 136753.65689881935,
+            "p95": 27836416
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              26988544,
+              26689536,
+              26955776,
+              27099136,
+              27090944
+            ],
+            "median": 26988544,
+            "min": 26689536,
+            "max": 27099136,
+            "stdev": 166112.87474244734,
+            "p95": 27099136
+          },
+          "resident_p95_s": 3.770001058001071e-05,
+          "reopen_p95_s": 0.00023379999038297683
+        },
+        "zlib/64KiB/xor-shuffle-2-v1": {
+          "configuration": {
+            "layout": "flat-64",
+            "chunk_size": 65536,
+            "unit_size": null,
+            "compression": "zlib",
+            "transform": "xor-shuffle-2-v1",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 1,
+            "raw_bytes": 262147,
+            "chunk_references": 5,
+            "unique_chunks": 5,
+            "reused_chunks": 0,
+            "new_chunks": 5,
+            "unique_raw_bytes": 262147,
+            "payload_bytes": 262147,
+            "metadata_bytes": 1488,
+            "stored_bytes": 263635,
+            "compression": "zlib",
+            "deduplicate": true,
+            "transform": "xor-shuffle-2-v1",
+            "transformed_chunks": 0,
+            "transform_attempts": 5,
+            "archive_sha256": "8cb4d0c626508f92d4e66c1ba279e37a50991b7a06f2609e873929c844a48f6c"
+          },
+          "actual_transforms": {
+            "none": 5,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.025134199997410178,
+              0.024840199999744073,
+              0.026117999994312413,
+              0.02487249999830965,
+              0.02548419999948237
+            ],
+            "median": 0.025134199997410178,
+            "min": 0.024840199999744073,
+            "max": 0.026117999994312413,
+            "stdev": 0.0005301408776978779,
+            "p95": 0.026117999994312413
+          },
+          "decode_s": {
+            "samples": [
+              0.004475800000363961,
+              0.0032023000094341114,
+              0.003041299991309643,
+              0.0028345000027911738,
+              0.002852399993571453
+            ],
+            "median": 0.003041299991309643,
+            "min": 0.0028345000027911738,
+            "max": 0.004475800000363961,
+            "stdev": 0.000684517475775874,
+            "p95": 0.004475800000363961
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.03125,
+              0.015625,
+              0.03125,
+              0.015625,
+              0.015625
+            ],
+            "median": 0.015625,
+            "min": 0.015625,
+            "max": 0.03125,
+            "stdev": 0.00855816496101822,
+            "p95": 0.03125
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "stdev": 0.0,
+            "p95": 0.0
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              27832320,
+              27889664,
+              27709440,
+              27635712,
+              27783168
+            ],
+            "median": 27783168,
+            "min": 27635712,
+            "max": 27889664,
+            "stdev": 100096.72020201261,
+            "p95": 27889664
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              26689536,
+              27029504,
+              27025408,
+              27049984,
+              26746880
+            ],
+            "median": 27025408,
+            "min": 26689536,
+            "max": 27049984,
+            "stdev": 174923.6591796547,
+            "p95": 27049984
+          },
+          "resident_p95_s": 4.9000009312294424e-05,
+          "reopen_p95_s": 0.0002535999956307933
+        },
+        "zstd/64KiB/none": {
+          "configuration": {
+            "layout": "flat-64",
+            "chunk_size": 65536,
+            "unit_size": null,
+            "compression": "zstd",
+            "transform": "none",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 1,
+            "raw_bytes": 262147,
+            "chunk_references": 5,
+            "unique_chunks": 5,
+            "reused_chunks": 0,
+            "new_chunks": 5,
+            "unique_raw_bytes": 262147,
+            "payload_bytes": 262147,
+            "metadata_bytes": 1476,
+            "stored_bytes": 263623,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "none",
+            "transformed_chunks": 0,
+            "transform_attempts": 0,
+            "archive_sha256": "c9b10b313fadcd36e6ffb41f83024e4f6c0bb024f54884e8339175cc316029c1"
+          },
+          "actual_transforms": {
+            "none": 5,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.006514699998660944,
+              0.006206200007000007,
+              0.0069844999961787835,
+              0.0061335999926086515,
+              0.006074299992178567
+            ],
+            "median": 0.006206200007000007,
+            "min": 0.006074299992178567,
+            "max": 0.0069844999961787835,
+            "stdev": 0.0003767959836177367,
+            "p95": 0.0069844999961787835
+          },
+          "decode_s": {
+            "samples": [
+              0.0032842000073287636,
+              0.004760199997690506,
+              0.0029108000017004088,
+              0.0036881000123685226,
+              0.0036549000069499016
+            ],
+            "median": 0.0036549000069499016,
+            "min": 0.0029108000017004088,
+            "max": 0.004760199997690506,
+            "stdev": 0.0006916974193072012,
+            "p95": 0.004760199997690506
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.0,
+              0.0,
+              0.015625,
+              0.015625,
+              0.0
+            ],
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.015625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.0,
+              0.0,
+              0.0,
+              0.015625,
+              0.0
+            ],
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.006987712429686843,
+            "p95": 0.015625
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              28585984,
+              28741632,
+              28520448,
+              28594176,
+              28545024
+            ],
+            "median": 28585984,
+            "min": 28520448,
+            "max": 28741632,
+            "stdev": 86035.50255098182,
+            "p95": 28741632
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              27074560,
+              27090944,
+              27041792,
+              27111424,
+              26861568
+            ],
+            "median": 27074560,
+            "min": 26861568,
+            "max": 27111424,
+            "stdev": 100814.86722106021,
+            "p95": 27111424
+          },
+          "resident_p95_s": 3.7999998312443495e-05,
+          "reopen_p95_s": 0.00021489999198820442
+        },
+        "zstd/64KiB/byte-shuffle-2-v1": {
+          "configuration": {
+            "layout": "flat-64",
+            "chunk_size": 65536,
+            "unit_size": null,
+            "compression": "zstd",
+            "transform": "byte-shuffle-2-v1",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 1,
+            "raw_bytes": 262147,
+            "chunk_references": 5,
+            "unique_chunks": 5,
+            "reused_chunks": 0,
+            "new_chunks": 5,
+            "unique_raw_bytes": 262147,
+            "payload_bytes": 262147,
+            "metadata_bytes": 1489,
+            "stored_bytes": 263636,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "byte-shuffle-2-v1",
+            "transformed_chunks": 0,
+            "transform_attempts": 5,
+            "archive_sha256": "c0697981c6194ef78405097aa2e3d760f7f0bae59a9c8a7b365a5a38389a4eb7"
+          },
+          "actual_transforms": {
+            "none": 5,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.006611499993596226,
+              0.00693979999050498,
+              0.006712100002914667,
+              0.006292200007010251,
+              0.0060286000079941005
+            ],
+            "median": 0.006611499993596226,
+            "min": 0.0060286000079941005,
+            "max": 0.00693979999050498,
+            "stdev": 0.0003587560288476702,
+            "p95": 0.00693979999050498
+          },
+          "decode_s": {
+            "samples": [
+              0.0028414999978849664,
+              0.002960400001029484,
+              0.00424110000312794,
+              0.0027861999988090247,
+              0.003016199989360757
+            ],
+            "median": 0.002960400001029484,
+            "min": 0.0027861999988090247,
+            "max": 0.00424110000312794,
+            "stdev": 0.000606228562472007,
+            "p95": 0.00424110000312794
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.006987712429686843,
+            "p95": 0.015625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.0,
+              0.0,
+              0.0,
+              0.015625,
+              0.0
+            ],
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.006987712429686843,
+            "p95": 0.015625
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              28377088,
+              28708864,
+              28348416,
+              28512256,
+              28688384
+            ],
+            "median": 28512256,
+            "min": 28348416,
+            "max": 28708864,
+            "stdev": 168599.0423128198,
+            "p95": 28708864
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              26894336,
+              27009024,
+              26697728,
+              26841088,
+              26931200
+            ],
+            "median": 26894336,
+            "min": 26697728,
+            "max": 27009024,
+            "stdev": 116264.36655828818,
+            "p95": 27009024
+          },
+          "resident_p95_s": 3.74000082956627e-05,
+          "reopen_p95_s": 0.00023119999968912452
+        },
+        "zstd/64KiB/xor-shuffle-2-v1": {
+          "configuration": {
+            "layout": "flat-64",
+            "chunk_size": 65536,
+            "unit_size": null,
+            "compression": "zstd",
+            "transform": "xor-shuffle-2-v1",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 1,
+            "raw_bytes": 262147,
+            "chunk_references": 5,
+            "unique_chunks": 5,
+            "reused_chunks": 0,
+            "new_chunks": 5,
+            "unique_raw_bytes": 262147,
+            "payload_bytes": 262147,
+            "metadata_bytes": 1488,
+            "stored_bytes": 263635,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "xor-shuffle-2-v1",
+            "transformed_chunks": 0,
+            "transform_attempts": 5,
+            "archive_sha256": "a2654da9f12e7fca9032b02fbf2403666e3452e9192322629f97264fd4be40c1"
+          },
+          "actual_transforms": {
+            "none": 5,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.02108770000631921,
+              0.020743599990964867,
+              0.019513999999617226,
+              0.019814600003883243,
+              0.02047570000286214
+            ],
+            "median": 0.02047570000286214,
+            "min": 0.019513999999617226,
+            "max": 0.02108770000631921,
+            "stdev": 0.0006515087159008584,
+            "p95": 0.02108770000631921
+          },
+          "decode_s": {
+            "samples": [
+              0.0030368000007001683,
+              0.0028986999968765303,
+              0.0030073999951127917,
+              0.003067500001634471,
+              0.003282499994384125
+            ],
+            "median": 0.0030368000007001683,
+            "min": 0.0028986999968765303,
+            "max": 0.003282499994384125,
+            "stdev": 0.00014042356193198264,
+            "p95": 0.003282499994384125
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.015625,
+              0.015625,
+              0.03125,
+              0.03125
+            ],
+            "median": 0.015625,
+            "min": 0.015625,
+            "max": 0.03125,
+            "stdev": 0.00855816496101822,
+            "p95": 0.03125
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.0,
+              0.0,
+              0.015625,
+              0.0
+            ],
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.015625
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              28893184,
+              28413952,
+              28823552,
+              28430336,
+              28794880
+            ],
+            "median": 28794880,
+            "min": 28413952,
+            "max": 28893184,
+            "stdev": 230204.67453811617,
+            "p95": 28893184
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              26976256,
+              27086848,
+              26816512,
+              26959872,
+              27009024
+            ],
+            "median": 26976256,
+            "min": 26816512,
+            "max": 27086848,
+            "stdev": 98585.19781792803,
+            "p95": 27086848
+          },
+          "resident_p95_s": 3.979999746661633e-05,
+          "reopen_p95_s": 0.0002808999997796491
+        },
+        "zlib/1024KiB/none": {
+          "configuration": {
+            "layout": "flat-1024",
+            "chunk_size": 1048576,
+            "unit_size": null,
+            "compression": "zlib",
+            "transform": "none",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 1,
+            "raw_bytes": 262147,
+            "chunk_references": 1,
+            "unique_chunks": 1,
+            "reused_chunks": 0,
+            "new_chunks": 1,
+            "unique_raw_bytes": 262147,
+            "payload_bytes": 262147,
+            "metadata_bytes": 530,
+            "stored_bytes": 262677,
+            "compression": "zlib",
+            "deduplicate": true,
+            "transform": "none",
+            "transformed_chunks": 0,
+            "transform_attempts": 0,
+            "archive_sha256": "b35c7ff5693a8d4635626a82f803a085b31a5701fbfc9264179c0fbcdab26e2c"
+          },
+          "actual_transforms": {
+            "none": 1,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.008613700003479607,
+              0.008318700012750924,
+              0.009190800003125332,
+              0.008587200005422346,
+              0.008494499998050742
+            ],
+            "median": 0.008587200005422346,
+            "min": 0.008318700012750924,
+            "max": 0.009190800003125332,
+            "stdev": 0.0003283516799926509,
+            "p95": 0.009190800003125332
+          },
+          "decode_s": {
+            "samples": [
+              0.0037078999885125086,
+              0.0036066000029677525,
+              0.0028234000055817887,
+              0.0028366999904392287,
+              0.002804199990350753
+            ],
+            "median": 0.0028366999904392287,
+            "min": 0.002804199990350753,
+            "max": 0.0037078999885125086,
+            "stdev": 0.00045933979012429554,
+            "p95": 0.0037078999885125086
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.0,
+              0.015625,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.006987712429686843,
+            "p95": 0.015625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "stdev": 0.0,
+            "p95": 0.0
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              28585984,
+              28573696,
+              28413952,
+              28729344,
+              27787264
+            ],
+            "median": 28573696,
+            "min": 27787264,
+            "max": 28729344,
+            "stdev": 369878.09866495203,
+            "p95": 28729344
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              26759168,
+              27238400,
+              27090944,
+              27160576,
+              27201536
+            ],
+            "median": 27160576,
+            "min": 26759168,
+            "max": 27238400,
+            "stdev": 192934.2093543807,
+            "p95": 27238400
+          },
+          "resident_p95_s": 0.00011629999789875001,
+          "reopen_p95_s": 0.00035829999251291156
+        },
+        "zlib/1024KiB/byte-shuffle-2-v1": {
+          "configuration": {
+            "layout": "flat-1024",
+            "chunk_size": 1048576,
+            "unit_size": null,
+            "compression": "zlib",
+            "transform": "byte-shuffle-2-v1",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 1,
+            "raw_bytes": 262147,
+            "chunk_references": 1,
+            "unique_chunks": 1,
+            "reused_chunks": 0,
+            "new_chunks": 1,
+            "unique_raw_bytes": 262147,
+            "payload_bytes": 262147,
+            "metadata_bytes": 543,
+            "stored_bytes": 262690,
+            "compression": "zlib",
+            "deduplicate": true,
+            "transform": "byte-shuffle-2-v1",
+            "transformed_chunks": 0,
+            "transform_attempts": 1,
+            "archive_sha256": "91d00d5cad1b72682be1d2491232f373bc22dffba52ed292bd73b206c8a860e8"
+          },
+          "actual_transforms": {
+            "none": 1,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.01648659999773372,
+              0.013273200005642138,
+              0.012671099990257062,
+              0.012691099997027777,
+              0.012936899991473183
+            ],
+            "median": 0.012936899991473183,
+            "min": 0.012671099990257062,
+            "max": 0.01648659999773372,
+            "stdev": 0.0016253630368675436,
+            "p95": 0.01648659999773372
+          },
+          "decode_s": {
+            "samples": [
+              0.002876400001696311,
+              0.0027765999984694645,
+              0.0028205999988131225,
+              0.0027605999930528924,
+              0.0027867000026162714
+            ],
+            "median": 0.0027867000026162714,
+            "min": 0.0027605999930528924,
+            "max": 0.002876400001696311,
+            "stdev": 4.596403160218744e-05,
+            "p95": 0.002876400001696311
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.015625,
+              0.015625,
+              0.015625,
+              0.015625
+            ],
+            "median": 0.015625,
+            "min": 0.015625,
+            "max": 0.015625,
+            "stdev": 0.0,
+            "p95": 0.015625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "stdev": 0.0,
+            "p95": 0.0
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              28332032,
+              28786688,
+              29224960,
+              29069312,
+              29241344
+            ],
+            "median": 29069312,
+            "min": 28332032,
+            "max": 29241344,
+            "stdev": 381262.5799461573,
+            "p95": 29241344
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              27136000,
+              27095040,
+              27168768,
+              27242496,
+              27209728
+            ],
+            "median": 27168768,
+            "min": 27095040,
+            "max": 27242496,
+            "stdev": 58330.26148407017,
+            "p95": 27242496
+          },
+          "resident_p95_s": 0.00014640000881627202,
+          "reopen_p95_s": 0.0003132999991066754
+        },
+        "zlib/1024KiB/xor-shuffle-2-v1": {
+          "configuration": {
+            "layout": "flat-1024",
+            "chunk_size": 1048576,
+            "unit_size": null,
+            "compression": "zlib",
+            "transform": "xor-shuffle-2-v1",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 1,
+            "raw_bytes": 262147,
+            "chunk_references": 1,
+            "unique_chunks": 1,
+            "reused_chunks": 0,
+            "new_chunks": 1,
+            "unique_raw_bytes": 262147,
+            "payload_bytes": 262147,
+            "metadata_bytes": 542,
+            "stored_bytes": 262689,
+            "compression": "zlib",
+            "deduplicate": true,
+            "transform": "xor-shuffle-2-v1",
+            "transformed_chunks": 0,
+            "transform_attempts": 1,
+            "archive_sha256": "9cc0dbd721727414db88cb5956cfb6fe051090495fc311989fd407b628714bc4"
+          },
+          "actual_transforms": {
+            "none": 1,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.0259613999951398,
+              0.026625200000125915,
+              0.02637269999831915,
+              0.025844000003417023,
+              0.026504099994781427
+            ],
+            "median": 0.02637269999831915,
+            "min": 0.025844000003417023,
+            "max": 0.026625200000125915,
+            "stdev": 0.00034200297705183326,
+            "p95": 0.026625200000125915
+          },
+          "decode_s": {
+            "samples": [
+              0.0029460000077961013,
+              0.003938599998946302,
+              0.0031233999907271937,
+              0.0029481999954441562,
+              0.003033999993931502
+            ],
+            "median": 0.003033999993931502,
+            "min": 0.0029460000077961013,
+            "max": 0.003938599998946302,
+            "stdev": 0.00042037291544566385,
+            "p95": 0.003938599998946302
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.03125,
+              0.03125,
+              0.03125,
+              0.03125,
+              0.03125
+            ],
+            "median": 0.03125,
+            "min": 0.03125,
+            "max": 0.03125,
+            "stdev": 0.0,
+            "p95": 0.03125
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.0,
+              0.0,
+              0.015625,
+              0.015625,
+              0.015625
+            ],
+            "median": 0.015625,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.015625
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              28954624,
+              29310976,
+              29143040,
+              29065216,
+              28803072
+            ],
+            "median": 29065216,
+            "min": 28803072,
+            "max": 29310976,
+            "stdev": 191651.66054276703,
+            "p95": 29310976
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              27090944,
+              27283456,
+              26882048,
+              26722304,
+              27144192
+            ],
+            "median": 27090944,
+            "min": 26722304,
+            "max": 27283456,
+            "stdev": 222156.5581008132,
+            "p95": 27283456
+          },
+          "resident_p95_s": 0.00011759999324567616,
+          "reopen_p95_s": 0.0003473999968264252
+        },
+        "zstd/1024KiB/none": {
+          "configuration": {
+            "layout": "flat-1024",
+            "chunk_size": 1048576,
+            "unit_size": null,
+            "compression": "zstd",
+            "transform": "none",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 1,
+            "raw_bytes": 262147,
+            "chunk_references": 1,
+            "unique_chunks": 1,
+            "reused_chunks": 0,
+            "new_chunks": 1,
+            "unique_raw_bytes": 262147,
+            "payload_bytes": 262147,
+            "metadata_bytes": 530,
+            "stored_bytes": 262677,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "none",
+            "transformed_chunks": 0,
+            "transform_attempts": 0,
+            "archive_sha256": "7d4ae80971efb6197b61ff2309167f333a821a9c231582e3546caf19f2f913bd"
+          },
+          "actual_transforms": {
+            "none": 1,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.00617170000623446,
+              0.006381300001521595,
+              0.006775099987862632,
+              0.0068786999909207225,
+              0.006427700005588122
+            ],
+            "median": 0.006427700005588122,
+            "min": 0.00617170000623446,
+            "max": 0.0068786999909207225,
+            "stdev": 0.00029264889441363827,
+            "p95": 0.0068786999909207225
+          },
+          "decode_s": {
+            "samples": [
+              0.002984099992318079,
+              0.003678699998999946,
+              0.0028997000044910237,
+              0.0031276999943656847,
+              0.003355399996507913
+            ],
+            "median": 0.0031276999943656847,
+            "min": 0.0028997000044910237,
+            "max": 0.003678699998999946,
+            "stdev": 0.00031420819834728327,
+            "p95": 0.003678699998999946
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.0,
+              0.0,
+              0.0,
+              0.015625,
+              0.0
+            ],
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.006987712429686843,
+            "p95": 0.015625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "stdev": 0.0,
+            "p95": 0.0
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              29204480,
+              29437952,
+              29466624,
+              29224960,
+              29511680
+            ],
+            "median": 29437952,
+            "min": 29204480,
+            "max": 29511680,
+            "stdev": 143576.3396218193,
+            "p95": 29511680
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              26857472,
+              26710016,
+              27217920,
+              27226112,
+              27021312
+            ],
+            "median": 27021312,
+            "min": 26710016,
+            "max": 27226112,
+            "stdev": 225421.45377226188,
+            "p95": 27226112
+          },
+          "resident_p95_s": 0.00012519999290816486,
+          "reopen_p95_s": 0.0003321999975014478
+        },
+        "zstd/1024KiB/byte-shuffle-2-v1": {
+          "configuration": {
+            "layout": "flat-1024",
+            "chunk_size": 1048576,
+            "unit_size": null,
+            "compression": "zstd",
+            "transform": "byte-shuffle-2-v1",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 1,
+            "raw_bytes": 262147,
+            "chunk_references": 1,
+            "unique_chunks": 1,
+            "reused_chunks": 0,
+            "new_chunks": 1,
+            "unique_raw_bytes": 262147,
+            "payload_bytes": 262147,
+            "metadata_bytes": 543,
+            "stored_bytes": 262690,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "byte-shuffle-2-v1",
+            "transformed_chunks": 0,
+            "transform_attempts": 1,
+            "archive_sha256": "9774d961a1787bba863bc31a23ee10ea2c1eac05ece102ccb8a199e24b5d2f7d"
+          },
+          "actual_transforms": {
+            "none": 1,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.006705300009343773,
+              0.0070247999974526465,
+              0.007236000004922971,
+              0.0070617000019410625,
+              0.007114799998817034
+            ],
+            "median": 0.0070617000019410625,
+            "min": 0.006705300009343773,
+            "max": 0.007236000004922971,
+            "stdev": 0.00019753360723322253,
+            "p95": 0.007236000004922971
+          },
+          "decode_s": {
+            "samples": [
+              0.002657399993040599,
+              0.003298199997516349,
+              0.0028348000050755218,
+              0.0029854000022169203,
+              0.003181899999617599
+            ],
+            "median": 0.0029854000022169203,
+            "min": 0.002657399993040599,
+            "max": 0.003298199997516349,
+            "stdev": 0.00025813366371110416,
+            "p95": 0.003298199997516349
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.0,
+              0.015625,
+              0.0,
+              0.015625
+            ],
+            "median": 0.015625,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.00855816496101822,
+            "p95": 0.015625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.015625
+            ],
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.006987712429686843,
+            "p95": 0.015625
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              29843456,
+              29728768,
+              29843456,
+              29483008,
+              29900800
+            ],
+            "median": 29843456,
+            "min": 29483008,
+            "max": 29900800,
+            "stdev": 166923.93576955944,
+            "p95": 29900800
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              26923008,
+              27295744,
+              27181056,
+              26779648,
+              27099136
+            ],
+            "median": 27099136,
+            "min": 26779648,
+            "max": 27295744,
+            "stdev": 205568.60572762563,
+            "p95": 27295744
+          },
+          "resident_p95_s": 0.00011700000322889537,
+          "reopen_p95_s": 0.00034159999631810933
+        },
+        "zstd/1024KiB/xor-shuffle-2-v1": {
+          "configuration": {
+            "layout": "flat-1024",
+            "chunk_size": 1048576,
+            "unit_size": null,
+            "compression": "zstd",
+            "transform": "xor-shuffle-2-v1",
+            "deduplicate": true,
+            "format_version": 4,
+            "index_cache_bytes": 0,
+            "queries": 32,
+            "seed": 20261015
+          },
+          "storage": {
+            "files": 1,
+            "raw_bytes": 262147,
+            "chunk_references": 1,
+            "unique_chunks": 1,
+            "reused_chunks": 0,
+            "new_chunks": 1,
+            "unique_raw_bytes": 262147,
+            "payload_bytes": 262147,
+            "metadata_bytes": 542,
+            "stored_bytes": 262689,
+            "compression": "zstd",
+            "deduplicate": true,
+            "transform": "xor-shuffle-2-v1",
+            "transformed_chunks": 0,
+            "transform_attempts": 1,
+            "archive_sha256": "2bc4fd6e2906b4c9408fe700228969fd62be5505e44ed6ccdad2413fdae07bf3"
+          },
+          "actual_transforms": {
+            "none": 1,
+            "byte-shuffle-2-v1": 0,
+            "xor-shuffle-2-v1": 0
+          },
+          "encode_s": {
+            "samples": [
+              0.022332599997753277,
+              0.021179200004553422,
+              0.020640599992475472,
+              0.0210640000004787,
+              0.0203239999973448
+            ],
+            "median": 0.0210640000004787,
+            "min": 0.0203239999973448,
+            "max": 0.022332599997753277,
+            "stdev": 0.0007648152283888696,
+            "p95": 0.022332599997753277
+          },
+          "decode_s": {
+            "samples": [
+              0.002807800003211014,
+              0.0029162999999243766,
+              0.002822900001774542,
+              0.003005299993674271,
+              0.0029513000044971704
+            ],
+            "median": 0.0029162999999243766,
+            "min": 0.002807800003211014,
+            "max": 0.003005299993674271,
+            "stdev": 8.430321206301e-05,
+            "p95": 0.003005299993674271
+          },
+          "encode_cpu_s": {
+            "samples": [
+              0.015625,
+              0.015625,
+              0.015625,
+              0.015625,
+              0.015625
+            ],
+            "median": 0.015625,
+            "min": 0.015625,
+            "max": 0.015625,
+            "stdev": 0.0,
+            "p95": 0.015625
+          },
+          "decode_cpu_s": {
+            "samples": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.015625
+            ],
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.015625,
+            "stdev": 0.006987712429686843,
+            "p95": 0.015625
+          },
+          "encode_peak_rss_bytes": {
+            "samples": [
+              29790208,
+              29720576,
+              29876224,
+              29577216,
+              29925376
+            ],
+            "median": 29790208,
+            "min": 29577216,
+            "max": 29925376,
+            "stdev": 137047.77747924262,
+            "p95": 29925376
+          },
+          "decode_peak_rss_bytes": {
+            "samples": [
+              26877952,
+              27308032,
+              27205632,
+              27275264,
+              26787840
+            ],
+            "median": 27205632,
+            "min": 26787840,
+            "max": 27308032,
+            "stdev": 240568.09138370783,
+            "p95": 27308032
+          },
+          "resident_p95_s": 0.00013550001312978566,
+          "reopen_p95_s": 0.0003508000081637874
+        }
+      },
+      "matched_comparisons": [
+        {
+          "baseline": "zlib/64KiB/none",
+          "candidate": "zlib/64KiB/byte-shuffle-2-v1",
+          "archive_saving_pct": -0.004931284447873274,
+          "net_saved_bytes_with_source_once": -1444,
+          "paired": {
+            "encode": {
+              "metric": "encode",
+              "speedup_samples": [
+                0.6769796309023168,
+                0.6099581009569907,
+                0.6494855180143017,
+                0.6838943100691025,
+                0.6044906898291562
+              ],
+              "speedup_median": 0.6494855180143017,
+              "min": 0.6044906898291562,
+              "max": 0.6838943100691025,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "decode": {
+              "metric": "decode",
+              "speedup_samples": [
+                1.1142658816341136,
+                1.0371239024587553,
+                0.7235816152533333,
+                1.189293002221306,
+                0.6135662197391777
+              ],
+              "speedup_median": 1.0371239024587553,
+              "min": 0.6135662197391777,
+              "max": 1.189293002221306,
+              "candidate_faster_rounds": 3,
+              "rounds": 5
+            },
+            "open_reader": {
+              "metric": "open_reader",
+              "speedup_samples": [
+                1.8416150457775264,
+                5.011975265234741,
+                0.9785603276030433,
+                0.9098140481911434,
+                0.8071431194733039
+              ],
+              "speedup_median": 0.9785603276030433,
+              "min": 0.8071431194733039,
+              "max": 5.011975265234741,
+              "candidate_faster_rounds": 2,
+              "rounds": 5
+            },
+            "open_and_read": {
+              "metric": "open_and_read",
+              "speedup_samples": [
+                1.3274695525624105,
+                0.5281173704734674,
+                1.008616713451678,
+                1.3100941063309361,
+                0.9733385625766112
+              ],
+              "speedup_median": 1.008616713451678,
+              "min": 0.5281173704734674,
+              "max": 1.3274695525624105,
+              "candidate_faster_rounds": 3,
+              "rounds": 5
+            }
+          }
+        },
+        {
+          "baseline": "zlib/64KiB/none",
+          "candidate": "zlib/64KiB/xor-shuffle-2-v1",
+          "archive_saving_pct": -0.0045519548749650696,
+          "net_saved_bytes_with_source_once": -1443,
+          "paired": {
+            "encode": {
+              "metric": "encode",
+              "speedup_samples": [
+                0.3289899817061637,
+                0.32761410899364474,
+                0.3132092807502059,
+                0.3336254900784182,
+                0.3045651817785785
+              ],
+              "speedup_median": 0.32761410899364474,
+              "min": 0.3045651817785785,
+              "max": 0.3336254900784182,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "decode": {
+              "metric": "decode",
+              "speedup_samples": [
+                0.7531837882313793,
+                0.9666177438818485,
+                0.9275967549013634,
+                1.2124536907566414,
+                1.003681108071923
+              ],
+              "speedup_median": 0.9666177438818485,
+              "min": 0.7531837882313793,
+              "max": 1.2124536907566414,
+              "candidate_faster_rounds": 2,
+              "rounds": 5
+            },
+            "open_reader": {
+              "metric": "open_reader",
+              "speedup_samples": [
+                1.1381957022974427,
+                4.796561328602224,
+                1.0062990310716602,
+                0.6999998515110973,
+                1.0398776032192765
+              ],
+              "speedup_median": 1.0398776032192765,
+              "min": 0.6999998515110973,
+              "max": 4.796561328602224,
+              "candidate_faster_rounds": 4,
+              "rounds": 5
+            },
+            "open_and_read": {
+              "metric": "open_and_read",
+              "speedup_samples": [
+                1.1604889787889192,
+                0.8107238641459733,
+                1.0159890253693271,
+                1.0591285767859822,
+                1.1678257488754986
+              ],
+              "speedup_median": 1.0591285767859822,
+              "min": 0.8107238641459733,
+              "max": 1.1678257488754986,
+              "candidate_faster_rounds": 4,
+              "rounds": 5
+            }
+          }
+        },
+        {
+          "baseline": "zstd/64KiB/none",
+          "candidate": "zstd/64KiB/byte-shuffle-2-v1",
+          "archive_saving_pct": -0.004931284447873274,
+          "net_saved_bytes_with_source_once": -1444,
+          "paired": {
+            "encode": {
+              "metric": "encode",
+              "speedup_samples": [
+                0.9853588451895878,
+                0.8942909039873363,
+                1.0405834229445075,
+                0.9747941873708876,
+                1.007580530160214
+              ],
+              "speedup_median": 0.9853588451895878,
+              "min": 0.8942909039873363,
+              "max": 1.0405834229445075,
+              "candidate_faster_rounds": 2,
+              "rounds": 5
+            },
+            "decode": {
+              "metric": "decode",
+              "speedup_samples": [
+                1.1557979974567358,
+                1.6079583826628627,
+                0.6863313761886316,
+                1.323702538922195,
+                1.2117565213984727
+              ],
+              "speedup_median": 1.2117565213984727,
+              "min": 0.6863313761886316,
+              "max": 1.6079583826628627,
+              "candidate_faster_rounds": 4,
+              "rounds": 5
+            },
+            "open_reader": {
+              "metric": "open_reader",
+              "speedup_samples": [
+                1.1838006795427707,
+                1.0057971454626287,
+                0.9505247961804604,
+                0.6940966346029943,
+                0.9224597089072876
+              ],
+              "speedup_median": 0.9505247961804604,
+              "min": 0.6940966346029943,
+              "max": 1.1838006795427707,
+              "candidate_faster_rounds": 2,
+              "rounds": 5
+            },
+            "open_and_read": {
+              "metric": "open_and_read",
+              "speedup_samples": [
+                0.9387111855181745,
+                0.6300059447139429,
+                0.9437715757162523,
+                1.0361620016924846,
+                1.5664363786274536
+              ],
+              "speedup_median": 0.9437715757162523,
+              "min": 0.6300059447139429,
+              "max": 1.5664363786274536,
+              "candidate_faster_rounds": 2,
+              "rounds": 5
+            }
+          }
+        },
+        {
+          "baseline": "zstd/64KiB/none",
+          "candidate": "zstd/64KiB/xor-shuffle-2-v1",
+          "archive_saving_pct": -0.0045519548749650696,
+          "net_saved_bytes_with_source_once": -1443,
+          "paired": {
+            "encode": {
+              "metric": "encode",
+              "speedup_samples": [
+                0.30893364362679326,
+                0.29918625550546646,
+                0.3579225169783636,
+                0.30954952365460797,
+                0.29665896605876657
+              ],
+              "speedup_median": 0.30893364362679326,
+              "min": 0.29665896605876657,
+              "max": 0.3579225169783636,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "decode": {
+              "metric": "decode",
+              "speedup_samples": [
+                1.0814673361998006,
+                1.6421844284747713,
+                0.9678792333679046,
+                1.202314591818541,
+                1.1134501182644017
+              ],
+              "speedup_median": 1.1134501182644017,
+              "min": 0.9678792333679046,
+              "max": 1.6421844284747713,
+              "candidate_faster_rounds": 4,
+              "rounds": 5
+            },
+            "open_reader": {
+              "metric": "open_reader",
+              "speedup_samples": [
+                0.8941175342689016,
+                0.8718594094773924,
+                0.8954802532773153,
+                1.1445430311771598,
+                1.0781246589396023
+              ],
+              "speedup_median": 0.8954802532773153,
+              "min": 0.8718594094773924,
+              "max": 1.1445430311771598,
+              "candidate_faster_rounds": 2,
+              "rounds": 5
+            },
+            "open_and_read": {
+              "metric": "open_and_read",
+              "speedup_samples": [
+                0.45047577902312463,
+                0.9101899282526499,
+                0.6962348056924641,
+                0.8045675142099092,
+                1.3723745487883134
+              ],
+              "speedup_median": 0.8045675142099092,
+              "min": 0.45047577902312463,
+              "max": 1.3723745487883134,
+              "candidate_faster_rounds": 1,
+              "rounds": 5
+            }
+          }
+        },
+        {
+          "baseline": "zlib/1024KiB/none",
+          "candidate": "zlib/1024KiB/byte-shuffle-2-v1",
+          "archive_saving_pct": -0.004949043882795934,
+          "net_saved_bytes_with_source_once": -1444,
+          "paired": {
+            "encode": {
+              "metric": "encode",
+              "speedup_samples": [
+                0.5224667308398131,
+                0.6267290487007527,
+                0.7253356070264012,
+                0.6766316558401909,
+                0.6566101619127872
+              ],
+              "speedup_median": 0.6566101619127872,
+              "min": 0.5224667308398131,
+              "max": 0.7253356070264012,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "decode": {
+              "metric": "decode",
+              "speedup_samples": [
+                1.2890766188033076,
+                1.2989267467247014,
+                1.0009926989895215,
+                1.0275664701796143,
+                1.0062798247813012
+              ],
+              "speedup_median": 1.0275664701796143,
+              "min": 1.0009926989895215,
+              "max": 1.2989267467247014,
+              "candidate_faster_rounds": 5,
+              "rounds": 5
+            },
+            "open_reader": {
+              "metric": "open_reader",
+              "speedup_samples": [
+                0.9789563115447778,
+                0.7875681922188608,
+                0.577722789466776,
+                0.8238410676441442,
+                1.0034752652848205
+              ],
+              "speedup_median": 0.8238410676441442,
+              "min": 0.577722789466776,
+              "max": 1.0034752652848205,
+              "candidate_faster_rounds": 1,
+              "rounds": 5
+            },
+            "open_and_read": {
+              "metric": "open_and_read",
+              "speedup_samples": [
+                0.9851583420703219,
+                2.785509088514103,
+                0.7528591265449537,
+                0.8877601339612674,
+                3.8856159326438933
+              ],
+              "speedup_median": 0.9851583420703219,
+              "min": 0.7528591265449537,
+              "max": 3.8856159326438933,
+              "candidate_faster_rounds": 2,
+              "rounds": 5
+            }
+          }
+        },
+        {
+          "baseline": "zlib/1024KiB/none",
+          "candidate": "zlib/1024KiB/xor-shuffle-2-v1",
+          "archive_saving_pct": -0.004568348199507355,
+          "net_saved_bytes_with_source_once": -1443,
+          "paired": {
+            "encode": {
+              "metric": "encode",
+              "speedup_samples": [
+                0.33178873269901343,
+                0.31243709015187054,
+                0.3484967410887434,
+                0.33227054652093213,
+                0.32049758338231754
+              ],
+              "speedup_median": 0.33178873269901343,
+              "min": 0.31243709015187054,
+              "max": 0.3484967410887434,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "decode": {
+              "metric": "decode",
+              "speedup_samples": [
+                1.2586218529192685,
+                0.915706089456312,
+                0.9039508272920375,
+                0.9621803116555091,
+                0.9242584034145067
+              ],
+              "speedup_median": 0.9242584034145067,
+              "min": 0.9039508272920375,
+              "max": 1.2586218529192685,
+              "candidate_faster_rounds": 1,
+              "rounds": 5
+            },
+            "open_reader": {
+              "metric": "open_reader",
+              "speedup_samples": [
+                0.6351720352717449,
+                0.9829495725917853,
+                0.7906503946812554,
+                1.0687285463949192,
+                0.982142967625699
+              ],
+              "speedup_median": 0.982142967625699,
+              "min": 0.6351720352717449,
+              "max": 1.0687285463949192,
+              "candidate_faster_rounds": 1,
+              "rounds": 5
+            },
+            "open_and_read": {
+              "metric": "open_and_read",
+              "speedup_samples": [
+                0.6258118721799757,
+                2.3491252105180385,
+                0.7769142366071066,
+                1.0337564976654379,
+                3.8256120395805517
+              ],
+              "speedup_median": 1.0337564976654379,
+              "min": 0.6258118721799757,
+              "max": 3.8256120395805517,
+              "candidate_faster_rounds": 3,
+              "rounds": 5
+            }
+          }
+        },
+        {
+          "baseline": "zstd/1024KiB/none",
+          "candidate": "zstd/1024KiB/byte-shuffle-2-v1",
+          "archive_saving_pct": -0.004949043882795934,
+          "net_saved_bytes_with_source_once": -1444,
+          "paired": {
+            "encode": {
+              "metric": "encode",
+              "speedup_samples": [
+                0.9204211590285675,
+                0.9083959691145087,
+                0.9363045858558916,
+                0.9740855585807895,
+                0.9034266608557998
+              ],
+              "speedup_median": 0.9204211590285675,
+              "min": 0.9034266608557998,
+              "max": 0.9740855585807895,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "decode": {
+              "metric": "decode",
+              "speedup_samples": [
+                1.1229397155614762,
+                1.115365957725464,
+                1.0228940310777843,
+                1.0476653018165385,
+                1.0545271683306092
+              ],
+              "speedup_median": 1.0545271683306092,
+              "min": 1.0228940310777843,
+              "max": 1.1229397155614762,
+              "candidate_faster_rounds": 5,
+              "rounds": 5
+            },
+            "open_reader": {
+              "metric": "open_reader",
+              "speedup_samples": [
+                0.9956785714420471,
+                0.596758793192589,
+                1.1085469614544652,
+                0.6292606131308793,
+                1.390138508813791
+              ],
+              "speedup_median": 0.9956785714420471,
+              "min": 0.596758793192589,
+              "max": 1.390138508813791,
+              "candidate_faster_rounds": 2,
+              "rounds": 5
+            },
+            "open_and_read": {
+              "metric": "open_and_read",
+              "speedup_samples": [
+                1.0378029137495053,
+                0.9724824387647009,
+                1.1037281393736145,
+                0.9109257156068662,
+                1.1611194737534418
+              ],
+              "speedup_median": 1.0378029137495053,
+              "min": 0.9109257156068662,
+              "max": 1.1611194737534418,
+              "candidate_faster_rounds": 3,
+              "rounds": 5
+            }
+          }
+        },
+        {
+          "baseline": "zstd/1024KiB/none",
+          "candidate": "zstd/1024KiB/xor-shuffle-2-v1",
+          "archive_saving_pct": -0.004568348199507355,
+          "net_saved_bytes_with_source_once": -1443,
+          "paired": {
+            "encode": {
+              "metric": "encode",
+              "speedup_samples": [
+                0.2763538507319054,
+                0.3013003324086673,
+                0.3282414266219244,
+                0.3265619061319976,
+                0.31626156300078034
+              ],
+              "speedup_median": 0.31626156300078034,
+              "min": 0.2763538507319054,
+              "max": 0.3282414266219244,
+              "candidate_faster_rounds": 0,
+              "rounds": 5
+            },
+            "decode": {
+              "metric": "decode",
+              "speedup_samples": [
+                1.0627893685110932,
+                1.2614271505316117,
+                1.0272060656304522,
+                1.040728047432552,
+                1.1369227091095373
+              ],
+              "speedup_median": 1.0627893685110932,
+              "min": 1.0272060656304522,
+              "max": 1.2614271505316117,
+              "candidate_faster_rounds": 5,
+              "rounds": 5
+            },
+            "open_reader": {
+              "metric": "open_reader",
+              "speedup_samples": [
+                0.8470588386352058,
+                0.867035913096854,
+                1.076348524767903,
+                0.8928570887205554,
+                1.1859777543658427
+              ],
+              "speedup_median": 0.8928570887205554,
+              "min": 0.8470588386352058,
+              "max": 1.1859777543658427,
+              "candidate_faster_rounds": 2,
+              "rounds": 5
+            },
+            "open_and_read": {
+              "metric": "open_and_read",
+              "speedup_samples": [
+                0.9156214184109848,
+                0.7688035092712976,
+                1.4079586407352884,
+                0.8272238523386016,
+                0.8778953244991792
+              ],
+              "speedup_median": 0.8778953244991792,
+              "min": 0.7688035092712976,
+              "max": 1.4079586407352884,
+              "candidate_faster_rounds": 1,
+              "rounds": 5
+            }
+          }
+        }
+      ],
+      "minimum_archive_comparisons": [
+        {
+          "ordinary": "zlib/1024KiB/none",
+          "candidate": "zlib/1024KiB/byte-shuffle-2-v1",
+          "ordinary_bytes": 262677,
+          "candidate_bytes": 262690,
+          "source_bytes_once": 1431,
+          "net_saved_bytes_with_source_once": -1444,
+          "net_saving_pct_with_source_once": -0.5497245666731487,
+          "archive_saving_pct": -0.004949043882795934,
+          "ordinary_restore_s": 0.0028366999904392287,
+          "candidate_restore_s": 0.0027867000026162714,
+          "restore_medians_ratio": 0.9823738893815079,
+          "ordinary_reopen_p95_s": 0.00035829999251291156,
+          "candidate_reopen_p95_s": 0.0003132999991066754
+        },
+        {
+          "ordinary": "zlib/1024KiB/none",
+          "candidate": "zlib/1024KiB/xor-shuffle-2-v1",
+          "ordinary_bytes": 262677,
+          "candidate_bytes": 262689,
+          "source_bytes_once": 1431,
+          "net_saved_bytes_with_source_once": -1443,
+          "net_saving_pct_with_source_once": -0.549343870989838,
+          "archive_saving_pct": -0.004568348199507355,
+          "ordinary_restore_s": 0.0028366999904392287,
+          "candidate_restore_s": 0.003033999993931502,
+          "restore_medians_ratio": 1.0695526506705857,
+          "ordinary_reopen_p95_s": 0.00035829999251291156,
+          "candidate_reopen_p95_s": 0.0003473999968264252
+        }
+      ]
+    }
+  },
+  "totals": {
+    "formal_roundtrips": 180,
+    "warmup_roundtrips": 36,
+    "formal_range_reads": 34560,
+    "warmup_range_reads": 4320,
+    "scientific_families": 2,
+    "synthetic_controls": 1
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "dataset": "eeg",
+  "source": "E:\\memorystorage\\data\\numeric\\eeg",
+  "source_page": "https://physionet.org/content/eegmmidb/1.0.0/",
+  "file_urls": {
+    "S001/S001R01.edf": "https://physionet.org/files/eegmmidb/1.0.0/S001/S001R01.edf"
+  },
+  "files": [
+    {
+      "path": "S001/S001R01.edf",
+      "bytes": 1275936,
+      "sha256": "4743b736131a7e147c150e8b37711029b6cda5e356c4b3e8261a03cdcaaf8b0c"
+    }
+  ],
+  "license": "Open Data Commons Attribution License v1.0",
+  "scope": "One original EDF+ recording S001R01; includes embedded header and annotation channel; not all EEGMMIDB",
+  "layout": "EDF+ int16 little-endian signal samples; original header and annotations also retained as bytes",
+  "original_paths_and_bytes": true,
+  "conversion": "None: no float/int conversion, filtering, resampling, channel transpose or numeric normalization"
+}

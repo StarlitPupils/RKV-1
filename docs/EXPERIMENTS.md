@@ -92,3 +92,7 @@ wheel、源码包与实验记录 ZIP。
 python -m pip install -e ".[plots]"
 python scripts/summarize_controlled.py results/local-controlled --plot
 ```
+## 数值字节实验
+
+v0.10协议见[NUMERIC.md](NUMERIC.md)：两个公开原始int16波形记录与随机字节负对照，
+同v4容器的普通codec/字节重排/XOR消融，完整归档与专用源模块成本分别记录。

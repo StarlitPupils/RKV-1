@@ -6,7 +6,63 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.9.0 · 同格式对象 IO 消融与第二个真实版本家族
+## 当前版本：v0.10.0 · 精确数值字节原型
+
+E2新增显式`byte-shuffle-{2,4,8}-v1`和`xor-shuffle-{2,4,8}-v1`策略。
+它们重排原始字节，或先对相邻字做XOR，再重排；不解析/舍入数值、不改端序，
+残尾原样保留。数值策略写新 **v4** 平块归档，旧读取器拒绝v4；默认none仍写v2，
+CSV/v3单元/CAS格式不变。块/文件/manifest SHA、有界解压和发布fsync均保留。
+
+实测两个公开数据库各一条原始int16记录：EEGMMIDB S001R01的完整EDF+，以及
+PTBDB s0010_re的dat/xyz/hea；另有固定种子随机字节负对照。无采样或文件转换，
+原始头和注释也计入；每组12条件、五轮、全部同v4容器。
+**180次正式完整恢复、34,560次正式范围读取**，另36次完整预热、4,320次查询预热
+全部逐字节一致。本机90项测试：89通过、1符号链接权限跳过；Windows/Linux CI通过。
+
+下表在本次Zlib6/Zstd3、64KiB/1MiB集合内，分别按体积选最小归档，包含全部
+容器成本；另给每个候选全额加专用numeric.py源文件 **1,431 bytes**。这不是完整
+部署成本；无额外DLL、模型或字典，公共Python/core/codec未全额分配。
+
+| 原始记录 | 策略 | 归档+专用源 bytes | 对最小普通净节省 | 编码 ms | 恢复 ms |
+|---|---|---:|---:|---:|---:|
+| EEG | 普通 Zstd/1MiB | 682,548 | 基线 | 14.268 | 7.874 |
+| EEG | 重排 Zlib/1MiB | 640,179 | **6.21%** | 114.230 | 8.417 |
+| EEG | XOR重排 Zlib/1MiB | 585,333 | **14.24%** | 174.255 | 35.985 |
+| ECG | 普通 Zlib/1MiB | 865,389 | 基线 | 44.029 | 9.307 |
+| ECG | 重排 Zlib/1MiB | 629,142 | **27.30%** | 62.011 | 8.007 |
+| ECG | XOR重排 Zlib/1MiB | 637,699 | **26.31%** | 120.620 | 32.224 |
+
+**字节重排有值得继续验证的空间收益；XOR不自动更优。** EEG的XOR进一步缩小存储，
+但恢复中位需普通最小归档约4.57倍时间；ECG中XOR既比单纯重排大，也恢复更慢。
+所有真实记录的候选编码均比相同codec/块的普通编码慢，五轮均如此。
+
+也存在有利的局部工作点：ECG/Zlib/64KiB重排归档减少26.90%，同轮恢复、常驻p95、
+重开p95配对加速分别1.30×/1.97×/1.31×，均5/5轮更快；编码加速倍率为0.657×（更慢）。
+大块虽能减少元数据，仍需整块反变换/校验，不能从压缩率直接推断随机读取改善。
+所有配对倍率逐轮相除再取中位，不用两个耗时中位之比替代。
+
+![数值字节策略的完整归档与专用源成本](results/v0.10.0/numeric-costs.png)
+
+噪声12条件全部回退普通块，但策略标签仍增加12/13bytes，专用源另计，编码尝试
+还需时间；因此默认保持none。v4数值本轮只测独立归档，未与共享CAS组合测量，
+不能将本轮收益与v0.9的共享节省比例叠加。
+
+```powershell
+python -m scripts.run_numeric --out results/local-numeric
+python -m scripts.summarize_numeric results/local-numeric
+python -m rkv1 pack data/numeric/eeg eeg.rkv --codec zstd --chunk-size 65536 --transform byte-shuffle-2-v1
+python -m rkv1 verify eeg.rkv
+python -m rkv1 unpack eeg.rkv restored
+python -m rkv1 compare data/numeric/eeg restored
+```
+
+运行器先下载并校验原始数据；[协议/格式/执行说明](docs/NUMERIC.md)、
+[完整记录](results/v0.10.0/SUMMARY.md)、[数据来源与引用](docs/DATASETS.md)、
+[独立核对](results/v0.10.0/validation.json)。首批仅两个int16单记录，4/8字节与浮点
+特殊位模式仅为正确性测试；真实浮点数组、专业压缩器广泛对照、冷缓存/跨机器/
+跨日和推理质量未测。本版没有数值Rust加速，E2仍待扩大，E3/E4尚未实测。
+
+## 既有同格式对象 IO 消融与第二个真实版本家族（v0.9.0）
 
 新增显式 `--io-backend bounded` 与 Windows `--publisher rename` 候选：减少重复的
 目录/对象长度查询，用有界读取检查精确 EOF；发布使用不覆盖已有目标的重命名。
