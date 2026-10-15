@@ -92,3 +92,26 @@ v0.12按预先固定规则增加同一Astropy commit的两份新验证记录，�
 文件，另加一个空文件。原始合成文件不打包；结果记录逐文件SHA与完整归档SHA。
 它用于观察逐文件同步成本，不是公开科学新语料，也不并入科学压缩收益。
 科学案例复用已列PTB ECG和M13完整原始文件，未更换或重新导出字节。
+
+## v0.14 新领域与文本对照
+
+完整原始文件按仓库相对路径保存，未转换或重写。提交、每文件SHA与下载上限固定于
+`rkv1/crossdomain_data.py`；结构与特殊位模式普查随各provenance记录，不参与编码。
+
+| 输入 | 固定官方来源 | 原始 bytes | 选择和范围 |
+|---|---|---:|---|
+| SAC地震波形 | [ObsPy](https://github.com/obspy/obspy/blob/a629e8c021052904b6b8d62699d03f2a3721ae63/obspy/signal/tests/data/CRLZ.HHZ.10.NZ.SAC) | 131,704 | 固定树中最大.sac，按尺寸选择；632B头、32,768个float32样本 |
+| DCD分子轨迹 | [MDAnalysis](https://github.com/MDAnalysis/mdanalysis/blob/51b8271d254ec5ce43e0daf8c33952147f2b2d3c/testsuite/MDAnalysisTests/data/adk_dims.dcd) | 3,931,724 | 典型adk_dims测试样例，3,341原子、98完整存储帧，原头500帧不修复 |
+| Python源码 | [SciPy](https://github.com/scipy/scipy/blob/e29dcb65a2040f04819b426a04b60d44a8f69c04/scipy/integrate/_ivp/rk.py) | 22,800 | 完整Runge-Kutta实现源码；非数值网格对照，不执行 |
+| LaTeX数学文档 | [LaTeX amsmath](https://github.com/latex3/latex2e/blob/04688cfadaddae62cdaf0530e4ffa7ec5a19cc82/required/amsmath/testmath.tex) | 81,184 | 完整testmath示例/测试源；非数值网格对照，不编译 |
+
+科学样例来自地球物理和分子动力学两个新领域，但每领域仅一份分发测试文件，不是
+完整原始数据库/模拟运行或严格盲测。DCD完整分发字节不等于头声明的500帧轨迹。
+文本对照不算新增科学数值样本，也不代表代码/数学语义压缩已实现。已见ECG/噪声
+另列，不混入新科学输入合计；DCD在合计中占主导。
+
+上游软件许可来源：[ObsPy LGPL v3](https://github.com/obspy/obspy/blob/a629e8c021052904b6b8d62699d03f2a3721ae63/LICENSE.txt)、
+[MDAnalysis LGPL v3+及组件许可](https://github.com/MDAnalysis/mdanalysis/blob/51b8271d254ec5ce43e0daf8c33952147f2b2d3c/LICENSE)、
+[SciPy BSD-3-Clause](https://github.com/scipy/scipy/blob/e29dcb65a2040f04819b426a04b60d44a8f69c04/LICENSE.txt)。
+testmath头列LPPL-1.3c和AMS/LaTeX署名。仓库许可不作为每个第三方科学样例独立授权
+的额外断言；RKV仅发布固定来源/哈希和评测记录，不再分发这些原始输入。

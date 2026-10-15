@@ -1,0 +1,15 @@
+{
+  "dataset": "noise",
+  "source": "E:\\memorystorage\\data\\numeric\\noise",
+  "files": [
+    {
+      "path": "seeded-noise.bin",
+      "bytes": 262147,
+      "sha256": "c7d107d47a21c3ad3186f7e19a1f59e8728a9e5e76e583c3fe6e05d3fcddf751"
+    }
+  ],
+  "scope": "Seeded random-byte negative control for the tested codecs, not an independent scientific corpus",
+  "generator": "random.Random(20261015).randbytes(262147)",
+  "license": "Project-generated test bytes",
+  "partition": "Synthetic fallback control"
+}

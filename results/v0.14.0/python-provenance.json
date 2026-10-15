@@ -1,0 +1,26 @@
+{
+  "dataset": "python",
+  "source": "E:\\memorystorage\\data\\crossdomain\\python",
+  "files": [
+    {
+      "path": "scipy/integrate/_ivp/rk.py",
+      "bytes": 22800,
+      "sha256": "fa5d6300917f4f949e699b116f59ae147159d5c6147d55d940dc9d3303891056"
+    }
+  ],
+  "repo": "scipy/scipy",
+  "commit": "e29dcb65a2040f04819b426a04b60d44a8f69c04",
+  "path": "scipy/integrate/_ivp/rk.py",
+  "bytes": 22800,
+  "sha256": "fa5d6300917f4f949e699b116f59ae147159d5c6147d55d940dc9d3303891056",
+  "role": "Non-numeric control: complete SciPy Runge-Kutta Python source; no AST transform or execution",
+  "license": "SciPy BSD-3-Clause; original repository license applies",
+  "file_url": "https://raw.githubusercontent.com/scipy/scipy/e29dcb65a2040f04819b426a04b60d44a8f69c04/scipy/integrate/_ivp/rk.py",
+  "source_page": "https://github.com/scipy/scipy/blob/e29dcb65a2040f04819b426a04b60d44a8f69c04/scipy/integrate/_ivp/rk.py",
+  "diagnostics": {
+    "format": "Original text bytes; no semantic parser, conversion or execution"
+  },
+  "conversion": "None; all original bytes retained",
+  "control_word_bytes": 4,
+  "partition": "Code/math text control"
+}

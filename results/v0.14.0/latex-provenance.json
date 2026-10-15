@@ -1,0 +1,26 @@
+{
+  "dataset": "latex",
+  "source": "E:\\memorystorage\\data\\crossdomain\\latex",
+  "files": [
+    {
+      "path": "required/amsmath/testmath.tex",
+      "bytes": 81184,
+      "sha256": "9b311f1835266833ad40130e7a7a6361a950c965d308c02d567361e72ce74aa5"
+    }
+  ],
+  "repo": "latex3/latex2e",
+  "commit": "04688cfadaddae62cdaf0530e4ffa7ec5a19cc82",
+  "path": "required/amsmath/testmath.tex",
+  "bytes": 81184,
+  "sha256": "9b311f1835266833ad40130e7a7a6361a950c965d308c02d567361e72ce74aa5",
+  "role": "Non-numeric control: complete amsmath example/test source; no token/AST transform or compilation",
+  "license": "LPPL-1.3c, as recorded in the original header",
+  "file_url": "https://raw.githubusercontent.com/latex3/latex2e/04688cfadaddae62cdaf0530e4ffa7ec5a19cc82/required/amsmath/testmath.tex",
+  "source_page": "https://github.com/latex3/latex2e/blob/04688cfadaddae62cdaf0530e4ffa7ec5a19cc82/required/amsmath/testmath.tex",
+  "diagnostics": {
+    "format": "Original text bytes; no semantic parser, conversion or execution"
+  },
+  "conversion": "None; all original bytes retained",
+  "control_word_bytes": 4,
+  "partition": "Code/math text control"
+}

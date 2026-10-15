@@ -104,14 +104,29 @@ SHA/flush/fsync/close/目录发布及其重试，未测目录/卷或掉电持久
             base=next(b for b in rows if b["configuration"]["transform"]=="none" and b["configuration"]["compression"]==c["compression"] and b["configuration"]["chunk_size"]==c["chunk_size"])
             allocated=r["storage"]["stored_bytes"]+cost["bytes"]
             comparisons={m:paired(base,r,m) for m in ("encode","decode","open_reader","open_and_read")}
+            a={t["round"]:t for t in base["decode_trials"] if t["round"]>=0}
+            b={t["round"]:t for t in r["decode_trials"] if t["round"]>=0}
+            first=[i for i in sorted(a) if a[i]["stats"]["publish_attempts"]==b[i]["stats"]["publish_attempts"]==1]
+            ratios=[a[i]["wall_s"]/b[i]["wall_s"] for i in first]
+            from rkv1.benchmark import summary
+            secondary={"rounds":first,"decode_speedup":summary(ratios),"candidate_faster_rounds":sum(v>1 for v in ratios),
+                       "scope":"Post-hoc diagnostic subset only; all original samples retained in primary gate"}
             passed=allocated<=base["storage"]["stored_bytes"] and all(comparisons[m]["speedup_median"]>=1 and comparisons[m]["candidate_faster_rounds"]>=4 for m in ("decode","open_reader","open_and_read"))
-            x={"candidate":label(r),"ordinary":label(base),"net_saving_pct":100*(1-allocated/base["storage"]["stored_bytes"]),"comparisons":comparisons,"gate_pass":passed}
+            x={"candidate":label(r),"ordinary":label(base),"net_saving_pct":100*(1-allocated/base["storage"]["stored_bytes"]),"comparisons":comparisons,"gate_pass":passed,
+               "secondary_decode_both_first_publish_attempt":secondary,
+               "ordinary_formal_decode_retry_rounds":[i for i in a if a[i]["stats"]["publish_attempts"]>1],
+               "candidate_formal_decode_retry_rounds":[i for i in b if b[i]["stats"]["publish_attempts"]>1]}
             rec["comparisons"].append(x)
             if name in ("seismic","molecular"):result["primary_new_scientific_gate"].append({"dataset":name,**x})
             def speed(m):
                 v=comparisons[m];return f"{v['speedup_median']:.3f}× ({v['candidate_faster_rounds']}/5)"
             tab.append([label(r),f"{x['net_saving_pct']:.3f}%",speed("encode"),speed("decode"),speed("open_reader"),speed("open_and_read"),passed])
         text+="同codec/块配对，大于1更快；括号为更快轮数，非置信区间。\n\n"+table(["候选","计源净省","编码","同步恢复","常驻p95","重开p95","联合通过"],tab)+"\n"
+        text+="发布重试敏感性：以下只看两策略均首次发布成功的配对作事后诊断，不替代主验收或增加正式轮数。\n\n"
+        text+=table(["候选","普通重试轮","候选重试轮","诊断配对轮","诊断恢复加速"],
+            [[x["candidate"],x["ordinary_formal_decode_retry_rounds"],x["candidate_formal_decode_retry_rounds"],
+              x["secondary_decode_both_first_publish_attempt"]["rounds"],
+              f"{x['secondary_decode_both_first_publish_attempt']['decode_speedup']['median']:.3f}×" if x["secondary_decode_both_first_publish_attempt"]["rounds"] else "无配对"] for x in rec["comparisons"]])+"\n"
         old=min((r for r in rows if r["configuration"]["transform"]=="none"),key=lambda r:r["storage"]["stored_bytes"])
         new=min((r for r in rows if r["configuration"]["transform"]!="none"),key=lambda r:r["storage"]["stored_bytes"])
         rec["minimum_archives"]={"ordinary":label(old),"ordinary_bytes":old["storage"]["stored_bytes"],"shuffle":label(new),"shuffle_bytes":new["storage"]["stored_bytes"],

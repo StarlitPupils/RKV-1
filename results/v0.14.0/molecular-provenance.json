@@ -1,0 +1,38 @@
+{
+  "dataset": "molecular",
+  "source": "E:\\memorystorage\\data\\crossdomain\\molecular",
+  "files": [
+    {
+      "path": "testsuite/MDAnalysisTests/data/adk_dims.dcd",
+      "bytes": 3931724,
+      "sha256": "859a5bd9e7de45a0f2401f7971c5ffc296168e7c23f6f65382bde7c1686c19f1"
+    }
+  ],
+  "repo": "MDAnalysis/mdanalysis",
+  "commit": "51b8271d254ec5ce43e0daf8c33952147f2b2d3c",
+  "path": "testsuite/MDAnalysisTests/data/adk_dims.dcd",
+  "bytes": 3931724,
+  "sha256": "859a5bd9e7de45a0f2401f7971c5ffc296168e7c23f6f65382bde7c1686c19f1",
+  "role": "New molecular-dynamics example; canonical adk_dims test trajectory, not a full simulation campaign",
+  "license": "Upstream MDAnalysis LGPL-3.0-or-later library distribution with component licenses; fixture grant not separately asserted; raw file not redistributed",
+  "file_url": "https://raw.githubusercontent.com/MDAnalysis/mdanalysis/51b8271d254ec5ce43e0daf8c33952147f2b2d3c/testsuite/MDAnalysisTests/data/adk_dims.dcd",
+  "source_page": "https://github.com/MDAnalysis/mdanalysis/blob/51b8271d254ec5ce43e0daf8c33952147f2b2d3c/testsuite/MDAnalysisTests/data/adk_dims.dcd",
+  "diagnostics": {
+    "format": "Little-endian DCD CORD; three float32 coordinate axes per stored frame",
+    "atoms": 3341,
+    "header_declared_frames": 500,
+    "stored_complete_frames": 98,
+    "record_count": 297,
+    "header_frame_discrepancy_preserved": true,
+    "payload_float32_census": {
+      "words": 982254,
+      "nan_words": 0,
+      "infinity_words": 0,
+      "positive_zero_words": 0,
+      "negative_zero_words": 0
+    }
+  },
+  "conversion": "None; all original bytes retained",
+  "control_word_bytes": 4,
+  "partition": "New independent-domain example"
+}

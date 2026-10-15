@@ -1,0 +1,29 @@
+{
+  "frozen_source_and_resources_verified": true,
+  "original_files_sha_verified": true,
+  "matched_requests_verified": true,
+  "all_roundtrips_and_ranges_bytewise_verified": true,
+  "append_only_journals_match_final_records": true,
+  "formal_sync_policy_files_every_trial": true,
+  "primary_gate_passes": 2,
+  "primary_gate_total": 8,
+  "totals": {
+    "formal_roundtrips": 240,
+    "warmup_roundtrips": 48,
+    "formal_range_reads": 43520,
+    "warmup_range_reads": 5440,
+    "formal_file_syncs": 320,
+    "formal_publish_retries": 20
+  },
+  "tests": {
+    "run": 120,
+    "passed": 119,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "d2f43593ba54a443e4708ddb455f54cfbac64edf605011f86ec20c6f28ab493e"
+  },
+  "cold_os_cache": null,
+  "cross_machine_performance": null,
+  "inference_quality": null,
+  "power_failure": null
+}

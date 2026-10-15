@@ -1,0 +1,9 @@
+{
+  "name": "numeric.py",
+  "bytes": 1431,
+  "sha256": "5d2517f9638baa0b944dc7a43b684307dc0cce32d84b594765908106c4263cbe",
+  "native_bytes": 0,
+  "model_bytes": 0,
+  "dictionary_bytes": 0,
+  "basis": "Whole dedicated transform source once, including candidate fallback; common Python/core/codecs/pyc not fully allocated"
+}

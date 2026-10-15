@@ -1,0 +1,57 @@
+{
+  "original_tag": "v0.10.0",
+  "previous_report_sha256": "2c38dc857c3c574dedb84313e248750a9e65abceda0f0a9cc0c84ee9e8228463",
+  "all_eight_ECG_storage_ledgers_and_archive_sha_identical": true,
+  "matches": [
+    {
+      "compression": "zlib",
+      "chunk_size": 65536,
+      "transform": "none",
+      "archive_sha256": "b862be595e2b728095def816a44a58552a6ad7ea1c1d057f36fb7c57d2a5508b"
+    },
+    {
+      "compression": "zlib",
+      "chunk_size": 65536,
+      "transform": "byte-shuffle-2-v1",
+      "archive_sha256": "3290804cf70383ef32e560c2a82bfbbf1406fcb2b8b9e36353ada9d8bfe08e42"
+    },
+    {
+      "compression": "zstd",
+      "chunk_size": 65536,
+      "transform": "none",
+      "archive_sha256": "fee61582f9a5fc12932fa85126f8acfaf49377580b4197d5820a0f795b2bf963"
+    },
+    {
+      "compression": "zstd",
+      "chunk_size": 65536,
+      "transform": "byte-shuffle-2-v1",
+      "archive_sha256": "45ebdae7b1e64fde5cd2220f3c5e75b263f7b4a6a35c6bd1e4901204ef981ae8"
+    },
+    {
+      "compression": "zlib",
+      "chunk_size": 1048576,
+      "transform": "none",
+      "archive_sha256": "516768caaf7116f6e7573abae4dacde8df8aa6ed435154a23da1fb8bc7130819"
+    },
+    {
+      "compression": "zlib",
+      "chunk_size": 1048576,
+      "transform": "byte-shuffle-2-v1",
+      "archive_sha256": "a0283fba3bdb0447641837c7147cd664908b8e1dcf2ee7ba59ef9f00c70f5019"
+    },
+    {
+      "compression": "zstd",
+      "chunk_size": 1048576,
+      "transform": "none",
+      "archive_sha256": "926a1fd1068d87eb9248924a52b151d92c8bfb3bed2dafea7768d6c49e46dc3d"
+    },
+    {
+      "compression": "zstd",
+      "chunk_size": 1048576,
+      "transform": "byte-shuffle-2-v1",
+      "archive_sha256": "aeae08e999ec72acb5148471c0e115f3c50c59dcd16f54537650f915a0c4aab3"
+    }
+  ],
+  "historical_timing_comparison": false,
+  "scope": "Same existing v4 encoding; new domains/synced workloads, no new compression algorithm"
+}

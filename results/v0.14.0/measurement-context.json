@@ -1,0 +1,37 @@
+{
+  "source_commit": "ff73852caaf66c4b47167e9b3fe3ed279f9e51c1",
+  "candidate_CI_run": 38714013612,
+  "candidate_CI_url": "https://github.com/StarlitPupils/RKV-1/actions/runs/38714013612",
+  "hardware": {
+    "cpu": "Intel Core i5-14600KF",
+    "physical_cores": 14,
+    "logical_processors": 20,
+    "memory_gib_approx": 32
+  },
+  "scratch": {
+    "volume": "E:",
+    "filesystem": "NTFS",
+    "drive_type": "Fixed",
+    "path": "E:\\memorystorage\\.tools\\crossdomain-scratch"
+  },
+  "local_full_test_log_sha256": "d2f43593ba54a443e4708ddb455f54cfbac64edf605011f86ec20c6f28ab493e",
+  "local_focused_test_log_sha256": "fd088ea754f18b5f408567dbb6c36675465dff5418c49620abf608399c6f1f51",
+  "full_tests": {
+    "run": 120,
+    "passed": 119,
+    "skipped": 1
+  },
+  "post_metadata_edit_focused_tests": {
+    "run": 5,
+    "passed": 5
+  },
+  "aborted_formal_attempts": 0,
+  "automatic_whole_job_retries": 0,
+  "posthoc_analysis_addition": "Both-first-publish decode subsets; primary protocol, samples and gate unchanged",
+  "data_order": "seismic, molecular, python, latex, ecg, noise; shuffled conditions/rounds within each dataset",
+  "background_load_isolated": false,
+  "cold_os_cache": null,
+  "cross_machine_performance": null,
+  "power_failure": null,
+  "inference_quality": null
+}

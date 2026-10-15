@@ -179,3 +179,10 @@ v0.12及以前归档解包没有逐文件fsync，历史时序不包含该成本�
 限制：清单 64 MiB、100,000 文件、500,000 块、2 GiB 恢复总量、块 1 byte–8 MiB、
 单次 range read 64 MiB。拒绝越界/特殊路径、文件名冲突、链接/reparse point 和
 特殊文件。未承诺生产级多写者事务、掉电目录持久性、纠错或备份。
+
+## v0.14兼容说明
+
+本版没有新格式，跨域实验全部显式v4平块，仅用既有none/byte-shuffle策略。默认
+none仍写v2，既有v1–v6读取、CAS1与v0.13归档恢复files语义保持不变。SAC/DCD
+结构扫描只作计时外provenance，不影响编码路由，解码不需要ObsPy/MDAnalysis。
+新增scratch/JSONL是评测选项，不是归档字段。输入源码/TeX不执行或语义规范化。

@@ -1,0 +1,35 @@
+{
+  "dataset": "seismic",
+  "source": "E:\\memorystorage\\data\\crossdomain\\seismic",
+  "files": [
+    {
+      "path": "obspy/signal/tests/data/CRLZ.HHZ.10.NZ.SAC",
+      "bytes": 131704,
+      "sha256": "c9011fd76050172e06ec067da99e06b40abad173dcdf2f80e3e343b64639127a"
+    }
+  ],
+  "repo": "obspy/obspy",
+  "commit": "a629e8c021052904b6b8d62699d03f2a3721ae63",
+  "path": "obspy/signal/tests/data/CRLZ.HHZ.10.NZ.SAC",
+  "bytes": 131704,
+  "sha256": "c9011fd76050172e06ec067da99e06b40abad173dcdf2f80e3e343b64639127a",
+  "role": "New geophysics example; largest .sac in pinned ObsPy tree, chosen by size before compression",
+  "license": "Upstream ObsPy LGPL-3.0 repository; retain original provenance; raw file not redistributed",
+  "file_url": "https://raw.githubusercontent.com/obspy/obspy/a629e8c021052904b6b8d62699d03f2a3721ae63/obspy/signal/tests/data/CRLZ.HHZ.10.NZ.SAC",
+  "source_page": "https://github.com/obspy/obspy/blob/a629e8c021052904b6b8d62699d03f2a3721ae63/obspy/signal/tests/data/CRLZ.HHZ.10.NZ.SAC",
+  "diagnostics": {
+    "format": "SAC v6 little-endian",
+    "header_bytes": 632,
+    "stored_samples": 32768,
+    "payload_float32_census": {
+      "words": 32768,
+      "nan_words": 0,
+      "infinity_words": 0,
+      "positive_zero_words": 26,
+      "negative_zero_words": 0
+    }
+  },
+  "conversion": "None; all original bytes retained",
+  "control_word_bytes": 4,
+  "partition": "New independent-domain example"
+}
