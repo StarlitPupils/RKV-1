@@ -45,6 +45,34 @@ def _publish(path, data):
         os.unlink(temporary)
 
 
+def _publish_rename(path, data):
+    """Windows-only no-replace rename; retain the per-file flush/fsync barrier."""
+    if os.name != "nt":
+        raise ValueError("Rename publication is supported only on Windows")
+    # A temporary sibling guarantees the rename remains on the same volume.
+    fd, temporary = tempfile.mkstemp(prefix=".pending-", dir=path.parent)
+    moved = False
+    try:
+        with os.fdopen(fd, "wb") as stream:
+            stream.write(data)
+            stream.flush()
+            os.fsync(stream.fileno())
+        # On Windows os.rename refuses an existing destination. Never use replace,
+        # or this code on POSIX where rename may silently replace an existing file.
+        os.rename(temporary, path)
+        moved = True
+    finally:
+        if not moved:
+            os.unlink(temporary)
+
+
+def _options(io_backend, publisher):
+    if io_backend not in ("reference", "bounded") or publisher not in ("link", "rename"):
+        raise ValueError("Unknown CAS IO backend or publisher")
+    if publisher == "rename" and os.name != "nt":
+        raise ValueError("Rename publication is supported only on Windows")
+
+
 def _record(magic, value):
     raw = _json_bytes(value)
     if len(raw) > MAX_HEADER:
@@ -82,7 +110,9 @@ def _load_record(path, magic, limit=MAX_HEADER):
 
 
 class Store:
-    def __init__(self, root):
+    def __init__(self, root, *, io_backend="reference", publisher="link"):
+        _options(io_backend, publisher)
+        self.io_backend, self.publisher = io_backend, publisher
         self.root = Path(root)
         for path in (self.root, self.root / "objects", self.root / "snapshots"):
             _directory(path)
@@ -95,7 +125,9 @@ class Store:
             raise ValueError("Invalid CAS configuration")
 
     @classmethod
-    def create(cls, root, *, compression="zstd", chunker="fixed", chunk_size=65536):
+    def create(cls, root, *, compression="zstd", chunker="fixed", chunk_size=65536,
+               io_backend="reference", publisher="link"):
+        _options(io_backend, publisher)
         if compression not in CODECS:
             raise ValueError("Unknown CAS compression")
         settings = profile(chunker, chunk_size)
@@ -103,13 +135,27 @@ class Store:
         root = Path(root)
         root.mkdir(parents=True, exist_ok=False)
         (root / "objects").mkdir(); (root / "snapshots").mkdir()
-        _publish(root / "config.rkvc", _record(CONFIG_MAGIC, {"version": 1, "compression": compression, "chunker": settings}))
-        return cls(root)
+        publish = _publish if publisher == "link" else _publish_rename
+        publish(root / "config.rkvc", _record(CONFIG_MAGIC, {"version": 1, "compression": compression, "chunker": settings}))
+        return cls(root, io_backend=io_backend, publisher=publisher)
+
+    def _publish(self, path, data):
+        publish = _publish if self.publisher == "link" else _publish_rename
+        publish(path, data)
 
     def object_path(self, key, create=False):
         if not valid_hash(key):
             raise ValueError("Invalid CAS object ID")
         shard = self.root / "objects" / key[:2]
+        if create and self.io_backend == "bounded":
+            # Validate the shard on every lookup, rather than caching trust. Only
+            # avoid mkdir(exist_ok=True) when the validated directory already exists.
+            try:
+                _directory(shard)
+            except FileNotFoundError:
+                shard.mkdir(exist_ok=True)
+                _directory(shard)
+            return shard / key[2:]
         if create:
             shard.mkdir(exist_ok=True)
         _directory(shard)
@@ -128,13 +174,18 @@ class Store:
             if (magic != OBJECT_MAGIC or codec >= len(CODECS) or flags != 0 or reserved != 0
                     or type(expected_size) is not int or raw_size != expected_size or not 1 <= raw_size <= maximum
                     or not 1 <= stored_size <= raw_size or raw_sha.hex() != key
-                    or path.stat().st_size != OBJECT.size + stored_size):
+                    or (self.io_backend == "reference" and path.stat().st_size != OBJECT.size + stored_size)):
                 raise ValueError("Invalid CAS object bounds or ID")
             name = CODECS[codec]
             if ((name == "raw" and stored_size != raw_size)
                     or (name != "raw" and (stored_size >= raw_size or name != self.config["compression"]))):
                 raise ValueError("Invalid CAS codec policy")
-            payload = stream.read(stored_size)
+            # Exact EOF of the opened stream replaces the separate path-size stat.
+            # At most one extra byte is read; truncation and any trailing data fail
+            # before stored/raw hashes, and before decompressing any input.
+            payload = stream.read(stored_size + (self.io_backend == "bounded"))
+            if self.io_backend == "bounded" and len(payload) != stored_size:
+                raise ValueError("Invalid CAS object size")
         if hashlib.sha256(payload).digest() != stored_sha:
             raise ValueError("CAS stored SHA-256 mismatch")
         raw = decompress(payload, name, raw_size)
@@ -176,7 +227,7 @@ class Store:
                         data = OBJECT.pack(OBJECT_MAGIC, CODECS.index(codec), 0, 0, len(raw), len(payload),
                                            bytes.fromhex(key), hashlib.sha256(payload).digest()) + payload
                         try:
-                            _publish(target, data)
+                            self._publish(target, data)
                             new += 1; new_raw += len(raw); new_bytes += len(data)
                         except FileExistsError:
                             # Concurrent writers may race to add exactly the same object.
@@ -191,7 +242,7 @@ class Store:
         target = self.root / "snapshots" / (snapshot_id + ".rkvs")
         published = True
         try:
-            _publish(target, encoded)
+            self._publish(target, encoded)
         except FileExistsError:
             _, actual = _load_record(target, SNAPSHOT_MAGIC)
             if actual != snapshot_id:
@@ -322,11 +373,11 @@ def _output(destination, path):
             yield stream
 
 
-def verify(root, snapshot_id):
-    return Store(root).snapshot(snapshot_id).process()
+def verify(root, snapshot_id, *, io_backend="reference"):
+    return Store(root, io_backend=io_backend).snapshot(snapshot_id).process()
 
 
-def unpack(root, snapshot_id, destination):
+def unpack(root, snapshot_id, destination, *, io_backend="reference"):
     destination = Path(destination)
     if destination.resolve().is_relative_to(Path(root).resolve()):
         raise ValueError("Destination must be outside the CAS store")
@@ -335,7 +386,7 @@ def unpack(root, snapshot_id, destination):
     destination.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix=".rkv-cas-extract-", dir=destination.parent) as temp:
         stage = Path(temp) / "data"; stage.mkdir()
-        result = Store(root).snapshot(snapshot_id).process(stage)
+        result = Store(root, io_backend=io_backend).snapshot(snapshot_id).process(stage)
         if destination.exists() or destination.is_symlink():
             raise FileExistsError(destination)
         stage.rename(destination)

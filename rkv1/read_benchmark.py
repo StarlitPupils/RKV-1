@@ -89,6 +89,7 @@ def range_trial(source, archive, settings):
         raise ValueError("Unknown range storage kind")
     if cas:
         from .store import Store, OBJECT
+        from .store_policy import open_store
     if mode not in MODES:
         raise ValueError("Invalid range-reader mode")
     files = [{"path": rel, "bytes": path.stat().st_size} for path, rel in files_in(source)]
@@ -108,7 +109,7 @@ def range_trial(source, archive, settings):
         expected[group] = values
     warmed = 0
     if cas:
-        selected = Store(archive).snapshot(settings["snapshot_id"])
+        selected = open_store(archive, settings).snapshot(settings["snapshot_id"])
         keys = {r["id"] for e in selected.files.values() for r in e["chunks"]}
         paths = [selected.store.root / "config.rkvc", selected.store.root / "snapshots" / (selected.snapshot_id + ".rkvs")]
         paths.extend(selected.store.object_path(key) for key in sorted(keys))
@@ -124,11 +125,11 @@ def range_trial(source, archive, settings):
     reader_options = {"index_cache_bytes": cache_bytes, "decoder_backend": settings.get("decoder_backend", "python"),
                       "native_library": settings.get("native_library")}
     def open_reader():
-        return Store(archive).snapshot(settings["snapshot_id"]) if cas else Archive(archive, **reader_options)
+        return open_store(archive, settings).snapshot(settings["snapshot_id"]) if cas else Archive(archive, **reader_options)
     persistent = open_reader() if mode == "open_reader" else None
     initial_open_s = time.perf_counter() - opened_at if persistent is not None else None
     # Use a separate unmeasured reader for the analytical block-work ledger.
-    metadata = Store(archive).snapshot(settings["snapshot_id"]) if cas else Archive(archive)
+    metadata = open_store(archive, settings).snapshot(settings["snapshot_id"]) if cas else Archive(archive)
     header = metadata.header
     group_order = list(plans)
     random.Random(settings["query_seed"] ^ 0x726B76).shuffle(group_order)

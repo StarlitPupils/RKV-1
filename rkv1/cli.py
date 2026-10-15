@@ -78,16 +78,21 @@ def main(argv=None):
     p.add_argument("store"); p.add_argument("source"); p.add_argument("--label", default="")
     p.add_argument("--chunker-backend", choices=("python", "rust"), default="python")
     p.add_argument("--native-library", help="Trusted Gear ABI 1 DLL/SO with adjacent native.json")
+    p.add_argument("--io-backend", choices=("reference", "bounded"), default="reference")
+    p.add_argument("--publisher", choices=("link", "rename"), default="link", help="rename is Windows-only, never replaces an existing file")
     p = sub.add_parser("store-stat")
     p.add_argument("store")
     p = sub.add_parser("store-verify")
     p.add_argument("store"); p.add_argument("snapshot")
+    p.add_argument("--io-backend", choices=("reference", "bounded"), default="reference")
     p = sub.add_parser("store-unpack")
     p.add_argument("store"); p.add_argument("snapshot"); p.add_argument("destination")
+    p.add_argument("--io-backend", choices=("reference", "bounded"), default="reference")
     p = sub.add_parser("store-read")
     p.add_argument("store"); p.add_argument("snapshot"); p.add_argument("path")
     p.add_argument("--offset", type=int, default=0); p.add_argument("--length", type=int)
     p.add_argument("--out", required=True)
+    p.add_argument("--io-backend", choices=("reference", "bounded"), default="reference")
     args = parser.parse_args(argv)
     try:
         if args.command == "pack":
@@ -145,16 +150,16 @@ def main(argv=None):
                 store = Store.create(args.store, compression=args.codec, chunker=args.chunker, chunk_size=args.chunk_size)
                 result = {"config": store.config, "config_sha256": store.config_sha256}
             elif args.command == "store-add":
-                result = Store(args.store).add(args.source, label=args.label,
+                result = Store(args.store, io_backend=args.io_backend, publisher=args.publisher).add(args.source, label=args.label,
                             chunker_backend=args.chunker_backend, native_library=args.native_library)
             elif args.command == "store-stat":
                 result = Store(args.store).stats()
             elif args.command == "store-verify":
-                result = store_verify(args.store, args.snapshot)
+                result = store_verify(args.store, args.snapshot, io_backend=args.io_backend)
             elif args.command == "store-unpack":
-                result = store_unpack(args.store, args.snapshot, args.destination)
+                result = store_unpack(args.store, args.snapshot, args.destination, io_backend=args.io_backend)
             else:
-                raw = Store(args.store).snapshot(args.snapshot).read_range(args.path, args.offset, args.length)
+                raw = Store(args.store, io_backend=args.io_backend).snapshot(args.snapshot).read_range(args.path, args.offset, args.length)
                 with Path(args.out).open("xb") as stream:
                     stream.write(raw)
                 result = {"bytes": len(raw), "touched_objects_verified": True}

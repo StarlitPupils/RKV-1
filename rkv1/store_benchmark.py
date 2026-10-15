@@ -15,6 +15,7 @@ from .controlled import implementation_checksums, inventory
 from .core import assert_tree_equal, pack, unpack as archive_unpack
 from .read_benchmark import aggregate_trials, file_digest, round_seed, timestamp
 from .store import Store, OBJECT, _allocated, unpack as store_unpack
+from .store_policy import create_store, open_store
 
 
 def matrix():
@@ -53,7 +54,7 @@ def sequence_worker(sources, root, config, round_index):
     setup = 0
     if config["kind"] == "shared":
         start = time.perf_counter()
-        Store.create(shared, compression=config["compression"], chunker=config["chunker"], chunk_size=config["chunk_size"])
+        create_store(shared, config)
         setup = time.perf_counter() - start
     for index, source in enumerate(map(Path, sources)):
         start, cpu = time.perf_counter(), time.process_time()
@@ -64,8 +65,8 @@ def sequence_worker(sources, root, config, round_index):
         else:
             target = shared if config["kind"] == "shared" else root / f"cas-{index}"
             if config["kind"] == "isolated":
-                Store.create(target, compression=config["compression"], chunker=config["chunker"], chunk_size=config["chunk_size"])
-            stats = Store(target).add(source, label=source.name,
+                create_store(target, config)
+            stats = open_store(target, config).add(source, label=source.name,
                                      chunker_backend=config.get("chunker_backend", "python"),
                                      native_library=config.get("native_library"))
             kind, snapshot_id = "cas", stats["snapshot_id"]
@@ -87,9 +88,15 @@ def sequence_worker(sources, root, config, round_index):
             "encode_peak_rss_bytes": encoding_rss, "bytewise_source_hashed": True}
 
 
-def restore_worker(source, target, destination, kind, snapshot_id):
+def restore_worker(source, target, destination, kind, snapshot_id, config=None):
     start, cpu = time.perf_counter(), time.process_time()
-    stats = (store_unpack(target, snapshot_id, destination) if kind == "cas" else archive_unpack(target, destination))
+    if kind == "cas" and (config or {}).get("store_implementation") == "v0.8":
+        from .store_v0_8 import unpack as frozen_unpack
+        stats = frozen_unpack(target, snapshot_id, destination)
+    elif kind == "cas":
+        stats = store_unpack(target, snapshot_id, destination, io_backend=(config or {}).get("io_backend", "reference"))
+    else:
+        stats = archive_unpack(target, destination)
     return {"wall_s": time.perf_counter() - start, "cpu_s": time.process_time() - cpu,
             "peak_rss_bytes": peak_rss(), "stats": stats}
 
@@ -138,7 +145,7 @@ def version_benchmark(sources, *, configs=None, rounds=5, queries=64, warmup_que
             for version_index, record in enumerate(trial["versions"]):
                 destination = root / "restored"
                 restored = _child("restore", {"source": sources[version_index], "target": record["target"],
-                                              "destination": str(destination), "kind": record["storage_kind"], "snapshot_id": record["snapshot_id"]})
+                                              "destination": str(destination), "kind": record["storage_kind"], "snapshot_id": record["snapshot_id"], "config": config})
                 assert_tree_equal(sources[version_index], destination)
                 if not destination.resolve().is_relative_to(root.resolve()):
                     raise ValueError("Invalid temporary restored path")
