@@ -1,0 +1,15 @@
+{
+  "wheel_python_sources_match_measurement": true,
+  "private_research_and_raw_recordings_excluded": true,
+  "sdist_scientific_records_and_protocol_present": true,
+  "installed_wheel_outside_checkout": true,
+  "v4_numeric_CLI_pack_verify_inspect_read_unpack_compare": true,
+  "explicit_v4_and_v5_none_CLI": true,
+  "all_nine_v5_professional_profiles_CLI": true,
+  "released_v0_10_reader_recovers_default_v2_v3_and_v4": true,
+  "released_v0_10_reader_rejects_v5": true,
+  "v1_v2_fixtures_verified": true,
+  "installed_v5_professional_campaign_fresh_subprocess_smoke": true,
+  "wheel_scope": "Local Windows build; CI ZIP SHA differs, measured Python source bytes must be identical",
+  "wheel_sha256": "6463ce04cc6a9c7abd0e5ae2a05e0d083e7de19ae2c56286585003a4818b3515"
+}

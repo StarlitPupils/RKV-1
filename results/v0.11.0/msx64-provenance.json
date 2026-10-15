@@ -1,0 +1,35 @@
+{
+  "dataset": "msx64",
+  "source": "E:\\memorystorage\\data\\scientific\\msx64",
+  "files": [
+    {
+      "path": "gc_msx_e.fits",
+      "bytes": 181440,
+      "sha256": "3687fb3763911825f981e74b6a9b82c0e618f7e592b1e0cb17e2c63164e28cd6"
+    }
+  ],
+  "source_commit": "1b964d39b378390b24c58fb5633cef238d22a35a",
+  "url": "https://raw.githubusercontent.com/astropy/astropy-data/1b964d39b378390b24c58fb5633cef238d22a35a/galactic_center/gc_msx_e.fits",
+  "repository_path": "galactic_center/gc_msx_e.fits",
+  "layout": {
+    "bitpix": -64,
+    "fits_axes": [
+      149,
+      149
+    ],
+    "byteorder": "big",
+    "word_bytes": 8,
+    "header_bytes": 2880,
+    "image_bytes": 177608,
+    "image_words": 22201,
+    "padding_bytes": 952,
+    "nan_words": 0,
+    "infinite_words": 0,
+    "positive_zero_words": 0,
+    "negative_zero_words": 0,
+    "scope": "Bit-pattern census of the primary image only; entire original FITS remains the benchmark truth"
+  },
+  "source_page": "https://www.astropy.org/astropy-data/",
+  "rights": "Public Astropy example mirror; provider attribution retained in original FITS header. No blanket repository data license assumed; raw files not redistributed by RKV releases.",
+  "scope": "One complete original FITS example file; headers/padding/NaN payloads retained, no float conversion or scaling"
+}

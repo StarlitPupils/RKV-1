@@ -1,0 +1,205 @@
+{
+  "dependencies": [
+    {
+      "name": "blosc",
+      "version": "1.11.4",
+      "installed_bytes": 4876827,
+      "files": [
+        {
+          "path": "../../bin/blosc.dll",
+          "bytes": 588800,
+          "sha256": "051fa24fe150e336161234be2d8a9d1a02704a371e900eadfedbb5a442665a49"
+        },
+        {
+          "path": "../../bin/concrt140.dll",
+          "bytes": 324208,
+          "sha256": "2405355f0a58067b258f8df33c327e3a3d716eaac5a3a5aebb757842d85bd376"
+        },
+        {
+          "path": "../../bin/msvcp140.dll",
+          "bytes": 557728,
+          "sha256": "0f885b509a685d2bbfa652fed26b5fb31d88fbdab0a978c641d1c7b8aa460aa9"
+        },
+        {
+          "path": "../../bin/msvcp140_1.dll",
+          "bytes": 35952,
+          "sha256": "bfad5aef4c63a669e3c140655cdfdf395b6c979b400a447bd5dcb65ed8826c3d"
+        },
+        {
+          "path": "../../bin/msvcp140_2.dll",
+          "bytes": 280200,
+          "sha256": "3ea06f0ee098b4823cb79599df3780e7f23cce52c19aac31d2a0d47efe33a5e9"
+        },
+        {
+          "path": "../../bin/msvcp140_atomic_wait.dll",
+          "bytes": 50304,
+          "sha256": "640b2aefced484d0368eea5bdd06addd0658a3a70a49256e560d6923b404a479"
+        },
+        {
+          "path": "../../bin/msvcp140_codecvt_ids.dll",
+          "bytes": 31872,
+          "sha256": "f2069a52880ec885ee7f0511186100eb7fada0411a2b4948fafea7735b878a18"
+        },
+        {
+          "path": "../../bin/vcruntime140.dll",
+          "bytes": 124544,
+          "sha256": "d5e4d9a3e835fa679450145d6a7d94e36573a509317111904d9b3712c30d9066"
+        },
+        {
+          "path": "../../bin/vcruntime140_1.dll",
+          "bytes": 49792,
+          "sha256": "1f2d41c4aa5db0bc33ebf7b66d72943a817d7ce6cbe880502a9403823633093f"
+        },
+        {
+          "path": "../../include/blosc-export.h",
+          "bytes": 1677,
+          "sha256": "92e93daab4b04cb6c3e094086b1b1233741a53d5b5ea2a8fcbbaf59f7541acf5"
+        },
+        {
+          "path": "../../include/blosc.h",
+          "bytes": 20019,
+          "sha256": "4dd819fd572cefb3521253e1cc87455db8dead787eb42c4c64b23981ed2a88af"
+        },
+        {
+          "path": "../blosc.lib",
+          "bytes": 7022,
+          "sha256": "456452f57a02b5be918e3568bcec9c87fd029647d70c35a6b9c8d84e26e9a05f"
+        },
+        {
+          "path": "../libblosc.lib",
+          "bytes": 2074224,
+          "sha256": "365f714ed3eecc81c7d8d4d1c5965e3d1b09f6f0ee43864f9cc07875652aac5a"
+        },
+        {
+          "path": "../pkgconfig/blosc.pc",
+          "bytes": 394,
+          "sha256": "ef41f8d390663fe56a17b3e667eacc0619024c98136f0d73902c8d7941051743"
+        },
+        {
+          "path": "blosc-1.11.4.dist-info/INSTALLER",
+          "bytes": 4,
+          "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+        },
+        {
+          "path": "blosc-1.11.4.dist-info/METADATA",
+          "bytes": 17241,
+          "sha256": "1061abee2f7c9bae3e14636073a7d190c40783b86d39d42c0a6a4be36a675647"
+        },
+        {
+          "path": "blosc-1.11.4.dist-info/RECORD",
+          "bytes": 2525,
+          "sha256": "4b8c9cc10717eee517f1863b1b15f2649af51824daf2e229f85ad89a7b968a04"
+        },
+        {
+          "path": "blosc-1.11.4.dist-info/REQUESTED",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "blosc-1.11.4.dist-info/WHEEL",
+          "bytes": 96,
+          "sha256": "e1d53d6ef94fc3c77ff7a6974e8469efe325dac8198fbbdb426cd357968d34e1"
+        },
+        {
+          "path": "blosc-1.11.4.dist-info/direct_url.json",
+          "bytes": 272,
+          "sha256": "663b036103c112ec238c75f1ffa910204ea68af821027279d0b1bd15aa27cb2c"
+        },
+        {
+          "path": "blosc-1.11.4.dist-info/licenses/LICENSE.txt",
+          "bytes": 1775,
+          "sha256": "8fafd0064c2bf54c9bce704242924c9d0669e968dd5fadef8c7a295a4167206b"
+        },
+        {
+          "path": "blosc-1.11.4.dist-info/top_level.txt",
+          "bytes": 6,
+          "sha256": "289ea9d54ac1560368d0074c2fb8a4b966b9ff71b19d68e9a6f6dafff0fe6613"
+        },
+        {
+          "path": "blosc/__init__.py",
+          "bytes": 2312,
+          "sha256": "f2ec8221df605874c40f63a8ebaf159252177da4fdb54d9c2bac4f164e6e1f09"
+        },
+        {
+          "path": "blosc/__pycache__/__init__.cpython-313.pyc",
+          "bytes": 2042,
+          "sha256": "47172403b6d7113cd1c4f326bdf9fc526bb71ea4ecb16f4f956dbeb1c7082c46"
+        },
+        {
+          "path": "blosc/__pycache__/_version.cpython-313.pyc",
+          "bytes": 9762,
+          "sha256": "06eaec92078193481171d421abd05a18486829bef0d0f18de03f2663818b81a5"
+        },
+        {
+          "path": "blosc/__pycache__/test.cpython-313.pyc",
+          "bytes": 24913,
+          "sha256": "a77de4d30c051df8dc7b76b4b3ee847c4697498b218d373648b32466dedaf549"
+        },
+        {
+          "path": "blosc/__pycache__/toplevel.cpython-313.pyc",
+          "bytes": 26340,
+          "sha256": "eb044f3091778a950a3e72efa68aa5e7ea6be7c290fa2283ecb4f0961db9cd76"
+        },
+        {
+          "path": "blosc/__pycache__/version.cpython-313.pyc",
+          "bytes": 198,
+          "sha256": "0403f5ccb8dbc9b2d7e48e5a553a7afcded68440adb4226de7d8a622f0ee4fc8"
+        },
+        {
+          "path": "blosc/_version.py",
+          "bytes": 15608,
+          "sha256": "e1694e351c4ac0033bb0b862c2fb3c0a2b7984714d57aff891e72730320015d9"
+        },
+        {
+          "path": "blosc/blosc_extension.cp313-win_amd64.pyd",
+          "bytes": 587264,
+          "sha256": "0d93661a4c1a6882ed2a5bc225cb01c7613262bbe0e517ceb1ea487d96dafdba"
+        },
+        {
+          "path": "blosc/test.py",
+          "bytes": 15544,
+          "sha256": "4d73fc3e3762a36550302435cd13412cc65245d6f2c3db9d028b37888dff0782"
+        },
+        {
+          "path": "blosc/toplevel.py",
+          "bytes": 24165,
+          "sha256": "51c6966fa47a5880233c3c4a30b031957ece8206b93b88f25c77114703e704fc"
+        },
+        {
+          "path": "blosc/version.py",
+          "bytes": 24,
+          "sha256": "7fc7c8085b1222fac3bcc66efcb995922bf7eb6dfd30a91630a7a579a9df945a"
+        }
+      ]
+    }
+  ],
+  "total_recorded_dependency_bytes": 4876827,
+  "dedicated_sources": [
+    {
+      "name": "numeric.py",
+      "bytes": 1431,
+      "sha256": "5d2517f9638baa0b944dc7a43b684307dc0cce32d84b594765908106c4263cbe"
+    },
+    {
+      "name": "blosc_codec.py",
+      "bytes": 2690,
+      "sha256": "63101b29dde7eb6a2c21db2cc617bf1e62a13038cac9991960700e9739305307"
+    }
+  ],
+  "dedicated_source_bytes": 4121,
+  "blosc_version": "1.11.4",
+  "c_blosc_version": "1.21.7.dev ($Date:: 2024-06-24 #$)",
+  "embedded_codec_versions": {
+    "BloscLZ": "2.5.1",
+    "LZ4": "1.10.0",
+    "Zlib": "1.3.1",
+    "Zstd": "1.5.6"
+  },
+  "numpy_imported": false,
+  "threads": 1,
+  "internal_block_bytes": 65536,
+  "clevel": 3,
+  "model_bytes": 0,
+  "dictionary_bytes": 0,
+  "basis": "Entire installed Blosc distribution, including unused embedded codecs and metadata; optional NumPy if imported. Separate dedicated Python source scenario. Not a complete deployment: shared Python/core/Zstd and external linked/OS libraries not fully allocated."
+}

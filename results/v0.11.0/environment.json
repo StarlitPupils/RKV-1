@@ -1,0 +1,8 @@
+{
+  "python": "3.13.12",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "logical_cpus": 20,
+  "recorded_utc": "2026-10-15T06:27:59.895221+00:00",
+  "executable": "E:\\memorystorage\\.tools\\scientific-venv\\Scripts\\python.exe",
+  "numpy_imported": false
+}

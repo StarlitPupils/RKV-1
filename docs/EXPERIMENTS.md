@@ -96,3 +96,10 @@ python scripts/summarize_controlled.py results/local-controlled --plot
 
 v0.10协议见[NUMERIC.md](NUMERIC.md)：两个公开原始int16波形记录与随机字节负对照，
 同v4容器的普通codec/字节重排/XOR消融，完整归档与专用源模块成本分别记录。
+
+v0.11协议见[SCIENTIFIC.md](SCIENTIFIC.md)：三个完整原始浮点FITS示例、前版同一ECG、
+同一随机负对照，每组18条件、五轮、统一v5容器；新增单线程固定python-blosc1.11.4
+无过滤/字节重排/位重排消融。完整恢复计入首次导入，正式范围读在查询预热之后；
+依赖已安装的归档增量与整个专用库/适配源分配一次的成本分别报告。
+所有请求跨条件/生命周期逐字节匹配；条件与轮次打乱，数据/源码/依赖SHA前后核对。
+CI的Python矩阵安装scientific extra以覆盖专业codec，Rust仍只用于既有CSV/Gear。

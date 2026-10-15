@@ -1,0 +1,72 @@
+{
+  "datasets": {
+    "spitzer32": {
+      "formal_roundtrips": 90,
+      "warmup_roundtrips": 18,
+      "formal_range_reads": 17280,
+      "warmup_range_reads": 2160,
+      "conditions": 18,
+      "input_pins_and_layout_verified": true,
+      "deterministic_archive_and_complete_cost_verified": true,
+      "all_request_plans_identical_across_conditions_and_modes": true
+    },
+    "bolocam32": {
+      "formal_roundtrips": 90,
+      "warmup_roundtrips": 18,
+      "formal_range_reads": 17280,
+      "warmup_range_reads": 2160,
+      "conditions": 18,
+      "input_pins_and_layout_verified": true,
+      "deterministic_archive_and_complete_cost_verified": true,
+      "all_request_plans_identical_across_conditions_and_modes": true
+    },
+    "msx64": {
+      "formal_roundtrips": 90,
+      "warmup_roundtrips": 18,
+      "formal_range_reads": 17280,
+      "warmup_range_reads": 2160,
+      "conditions": 18,
+      "input_pins_and_layout_verified": true,
+      "deterministic_archive_and_complete_cost_verified": true,
+      "all_request_plans_identical_across_conditions_and_modes": true
+    },
+    "ecg": {
+      "formal_roundtrips": 90,
+      "warmup_roundtrips": 18,
+      "formal_range_reads": 17280,
+      "warmup_range_reads": 2160,
+      "conditions": 18,
+      "input_pins_and_layout_verified": true,
+      "deterministic_archive_and_complete_cost_verified": true,
+      "all_request_plans_identical_across_conditions_and_modes": true
+    },
+    "noise": {
+      "formal_roundtrips": 90,
+      "warmup_roundtrips": 18,
+      "formal_range_reads": 17280,
+      "warmup_range_reads": 2160,
+      "conditions": 18,
+      "input_pins_and_layout_verified": true,
+      "deterministic_archive_and_complete_cost_verified": true,
+      "all_request_plans_identical_across_conditions_and_modes": true
+    }
+  },
+  "measured_implementation_and_entire_installed_dependency_identity_verified": true,
+  "blosc_threads": 1,
+  "numpy_imported": false,
+  "no_RKV_numeric_Rust_library": true,
+  "local_python_tests": {
+    "run": 97,
+    "passed": 96,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "250a4e48fb5d7314aa4262786b8e1f609616e7e9920af2bf70fc001623fb495b",
+    "skip_reason": "Windows symlink privilege"
+  },
+  "compatibility": "Defaults remain v2, units v3, numeric v4; v5 explicit or professional codec; older released reader rejects v5. Local wheel compatibility verified separately.",
+  "cold_os_cache": null,
+  "cross_machine": null,
+  "cross_day": null,
+  "inference_quality": null,
+  "CAS_numeric_integration": null
+}

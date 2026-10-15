@@ -57,3 +57,19 @@ EEG保留整个EDF+，包括16,896-byte嵌入头和注释通道；ECG保留两�
 
 另有262,147-byte固定种子随机字节负对照，生成器与SHA随报告保存；它测试所测
 codec的回退与元数据成本，不是第三个真实科学数据库或普遍不可压缩性证明。
+
+v0.11.0 增加 [Astropy 官方示例数据项目](https://www.astropy.org/astropy-data/)
+固定 commit `1b964d39b378390b24c58fb5633cef238d22a35a` 的三个完整 FITS 示例：
+
+| 名称 | 固定原始来源 | 文件 bytes | 图像位模式 | 图像字数 / NaN |
+|---|---|---:|---|---:|
+| Spitzer | [photometry/spitzer_example_image.fits](https://github.com/astropy/astropy-data/blob/1b964d39b378390b24c58fb5633cef238d22a35a/photometry/spitzer_example_image.fits) | 2,113,920 | float32，大端，1025×513 | 525,825 / 3 |
+| Bolocam | [galactic_center/gc_bolocam_gps.fits](https://github.com/astropy/astropy-data/blob/1b964d39b378390b24c58fb5633cef238d22a35a/galactic_center/gc_bolocam_gps.fits) | 1,644,480 | float32，大端，640×638 | 408,320 / 20,399 |
+| MSX | [galactic_center/gc_msx_e.fits](https://github.com/astropy/astropy-data/blob/1b964d39b378390b24c58fb5633cef238d22a35a/galactic_center/gc_msx_e.fits) | 181,440 | float64，大端，149×149 | 22,201 / 0 |
+
+原文件 SHA、尺寸/头/填充、特殊值整数位模式普查随 provenance 保存。没有浮点解析、
+重采样、精度或端序转换；原始提供者署名与科学元数据保留。公开示例可能是既有处理后
+产品，不称原始探测器字流。Bolocam约4.996% NaN；不能把这类分布的压缩收益外推
+所有科学数组。三份均为天文示例且来自同一托管项目，不代表三个独立科学领域。
+不假设示例数据统一受软件仓库许可证覆盖；仅记录公开来源和原头署名。
+RKV发布物不再分发原始FITS/信号文件，运行器从固定官方URL下载并核对SHA。

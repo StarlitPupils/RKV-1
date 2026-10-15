@@ -1,4 +1,11 @@
-# RKV1-FORMAT · Draft 0.4
+# RKV1-FORMAT · Draft 0.5
+
+v0.11新增显式专业codec的 **v5平块扩展**。字段沿用v4，允许原有none/数值变换，
+另允许九个 `blosc-zstd-{none,shuffle,bitshuffle}-{2,4,8}` codec（只许外层transform=none）。
+专业codec自动写v5；也可显式选择v5做普通/数值对照。v4拒绝专业codec，v5拒绝
+CSV/独立单元。默认none仍写v2，普通数值策略自动写v4，单元仍v3，CAS格式1不变。
+Blosc固定参数、16-byte帧头、解码上界/结构验证及兼容规则见
+[SCIENTIFIC.md](SCIENTIFIC.md)。v0.10及更早读取器拒绝v5；新读取器继续读v1–v4。
 
 v0.10新增显式数值策略的**v4平块扩展**，字段/限制与兼容说明见
 [NUMERIC.md](NUMERIC.md)。v4只允许none及数值字节策略；旧读取器拒绝v4。

@@ -6,7 +6,64 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.10.0 · 精确数值字节原型
+## 当前版本：v0.11.0 · 完整浮点 FITS 与 Blosc 对照
+
+E2 增加三个完整公开 FITS 示例（两个 float32、一个 float64），复测同一 ECG int16，
+并保留随机字节负对照。完整文件、头、填充和 NaN payload 均逐字节恢复，不转换
+数值/端序。新增固定 python-blosc **1.11.4** / C-Blosc 的 Zstd 无过滤、字节重排和
+位重排，单线程、内部块 64KiB；不是 Blosc2 或 NDArray 子块随机读。
+
+每组 18 条件、五轮、全部同 **v5 平块容器**；普通 Zlib6/Zstd3 与 Python 字节重排/
+XOR 为对照。**450 次正式完整恢复、86,400 次正式范围读取**，另 90 次恢复预热、
+10,800 次查询预热全部逐字节一致。源/源码/整份专用依赖冻结，各轮归档确定性一致。
+本机 97 项测试：96 通过、1 Windows 符号链接权限跳过；Windows/Linux CI 通过。
+
+下表在本次有限矩阵内分别按最小完整归档选参，不按速度选。Python 重排列为
+Zlib/1MiB，净节省另计整个 numeric.py **1,431 bytes**；Blosc 列仅为依赖已安装
+情景的归档增量。跨后端 Zstd 版本、级别映射与分块不同，不把差异归因于单个过滤器。
+
+| 科学输入 | 最小普通归档 B | Python 字节重排归档 B | 加源后净省 | 最小 Blosc 过滤器 / 归档 B | 已安装情景节省 |
+|---|---:|---:|---:|---|---:|
+| Spitzer float32 | 1,838,171 | 1,631,953 | 11.14% | shuffle / 1,649,920 | 10.24% |
+| Bolocam float32 | 1,455,509 | 1,333,725 | 8.27% | shuffle / 1,358,357 | 6.67% |
+| MSX float64 | 109,110 | 92,840 | 13.60% | bitshuffle / 94,400 | 13.48% |
+| ECG int16 | 865,389 | 627,711 | 27.30% | shuffle / 650,199 | 24.87% |
+
+**归档收益没有覆盖本次小语料的整份专业库成本。** 实测 Blosc 发行包 4,876,827 B，
+适配源 2,690 B；合计专用资源 **4,879,517 B**，独立环境没有 NumPy。
+四组科学输入均选 Blosc shuffle、共用资源一次时：归档共 3,756,343 B，较各组最小
+普通归档合计少 11.99%；加资源后共 8,635,860 B，反而多 **102.33%**。
+同样四组 Python 字节重排加源一次共 3,687,660 B，净省 **13.60%**。
+这些仍未完整分配公共 Python/core/Zstd/OS 成本，不称完整部署占用。
+
+**速度取舍也分场景。** 完整恢复计入首次 Blosc 导入/设置，三个 FITS 的最小
+Blosc 过滤归档恢复均慢于各自最小普通归档；正式范围读在查询预热后测量。
+同 Blosc/64KiB 的 ECG 位重排相对无过滤：归档少 22.59%，编码/完整恢复/常驻 p95/
+重开 p95 逐轮配对加速中位为 1.27×/1.10×/1.43×/1.27×，均 5/5 轮更快；
+这只支持该工作点的同后端消融，不代表比所有普通 codec 更优或跨机器稳定。
+Python XOR 在两个 float32 上恢复明显较慢，位重排也并非普遍比字节重排更省空间。
+
+![完整归档、专用依赖成本与首次恢复时间](results/v0.11.0/scientific-costs.png)
+
+默认 none 仍写 v2，数值策略仍自动写 v4，专业 codec 自动写新 v5；旧读取器拒绝 v5。
+既有 v3 单元/CAS 格式不变，未组合数值与共享 CAS 的收益。噪声全部回退 raw，
+仍有策略标签与编码尝试成本，默认不启用新策略。
+
+```powershell
+python -m pip install -e ".[scientific]"
+python -m scripts.run_scientific --out results/local-scientific
+python -m rkv1 pack data/scientific/spitzer32 spitzer.rkv --codec blosc-zstd-bitshuffle-4 --chunk-size 65536
+python -m rkv1 verify spitzer.rkv
+```
+
+正式复现请使用不含 NumPy 的独立环境，完整步骤见 [SCIENTIFIC.md](docs/SCIENTIFIC.md)。
+[原始结果与完整比较](results/v0.11.0/SUMMARY.md) · [独立核对](results/v0.11.0/validation.json) ·
+[数据来源](docs/DATASETS.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.11.0)。
+三个 FITS 同属天文领域且同一托管项目，float64 很小，Bolocam 约 5% NaN；不外推
+全部科学数组。冷缓存/跨机器/跨日、数值 Rust、代码/数学、CAS+数值、推理质量
+尚未实测，E2 未完成，E3/E4 待开展。下一步优先按成本和读取工作点筛选类型/布局策略。
+
+## 精确数值字节原型（v0.10.0）
 
 E2新增显式`byte-shuffle-{2,4,8}-v1`和`xor-shuffle-{2,4,8}-v1`策略。
 它们重排原始字节，或先对相邻字做XOR，再重排；不解析/舍入数值、不改端序，
@@ -397,16 +454,16 @@ python -m rkv1 pack data/wine data/columns.rkv --codec zlib --transform csv-colu
 | 阶段 | 状态 |
 |---|---|
 | E0 基准 | 完成首版、受控对照和多种子读取评测；仍是单机温缓存 |
-| E1 无损核心 | v1/v2/v3兼容；共享CAS、真实版本复用与Gear分块；v0.8显式Rust扫描，格式不变 |
-| E2 类型感知可逆编码 | CSV、小单元访问与冻结Rust反变换已有本机配对；其余类型待开展 |
+| E1 无损核心 | v1–v5兼容；共享CAS、真实版本复用与Gear分块；默认v2、CAS1保持不变 |
+| E2 类型感知可逆编码 | CSV/小单元/Rust配对、int16及float32/64字节变换与Blosc基线已测；布局、代码/数学待开展 |
 | E3 神经预测 + 熵编码 + 精确残差 | 后续，计入模型和解码成本 |
 | E4 科学记忆、检索、证据回溯与可验证推理 | 后续，尚无质量结果 |
 
 Rust 已用于可选CSV反变换与Gear扫描。传统归档的`--base`复用编码结果，仍写独立
 完整快照；目录CAS可跨版本只存一份对象。两者仍全量读源、计算哈希并验证旧对象。
 
-[FORMAT Draft 0.3](docs/FORMAT.md) 只恢复普通文件路径和内容，不保留权限、时间戳、
-空子目录或链接；恢复合计上限 2 GiB。v3 需 v0.5.0+，默认 v2 仍可由 v0.2.0+ 读取。
+[FORMAT Draft 0.5](docs/FORMAT.md) 只恢复普通文件路径和内容，不保留权限、时间戳、
+空子目录或链接；恢复合计上限 2 GiB。v3需v0.5+，v4需v0.10+，v5需v0.11+；默认v2仍可由v0.2+读取。
 SHA-256 用于完整性检查，不能证明来源身份或科学结论正确。当前没有神经压缩、
 无限精确上下文或科学推理收益的验证。
 

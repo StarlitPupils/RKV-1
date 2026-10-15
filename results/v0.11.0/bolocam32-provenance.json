@@ -1,0 +1,35 @@
+{
+  "dataset": "bolocam32",
+  "source": "E:\\memorystorage\\data\\scientific\\bolocam32",
+  "files": [
+    {
+      "path": "gc_bolocam_gps.fits",
+      "bytes": 1644480,
+      "sha256": "f442e8a6499c461048f8e74fa780dd2098e6e6c9522e8571fffcc8063d0708a9"
+    }
+  ],
+  "source_commit": "1b964d39b378390b24c58fb5633cef238d22a35a",
+  "url": "https://raw.githubusercontent.com/astropy/astropy-data/1b964d39b378390b24c58fb5633cef238d22a35a/galactic_center/gc_bolocam_gps.fits",
+  "repository_path": "galactic_center/gc_bolocam_gps.fits",
+  "layout": {
+    "bitpix": -32,
+    "fits_axes": [
+      640,
+      638
+    ],
+    "byteorder": "big",
+    "word_bytes": 4,
+    "header_bytes": 8640,
+    "image_bytes": 1633280,
+    "image_words": 408320,
+    "padding_bytes": 2560,
+    "nan_words": 20399,
+    "infinite_words": 0,
+    "positive_zero_words": 0,
+    "negative_zero_words": 0,
+    "scope": "Bit-pattern census of the primary image only; entire original FITS remains the benchmark truth"
+  },
+  "source_page": "https://www.astropy.org/astropy-data/",
+  "rights": "Public Astropy example mirror; provider attribution retained in original FITS header. No blanket repository data license assumed; raw files not redistributed by RKV releases.",
+  "scope": "One complete original FITS example file; headers/padding/NaN payloads retained, no float conversion or scaling"
+}
