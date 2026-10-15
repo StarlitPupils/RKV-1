@@ -15,7 +15,7 @@ class MemoryIndexTests(unittest.TestCase):
         self.docs=[{"doc_id":i,"title":f"Calibration {i}","abstract":["silver beacon "*(i%3+1)+("rare variants" if i%2 else "common variants"),"café 雪"]} for i in range(16)]
         self.write()
         self.reference=Memory.create(self.root/"reference",index_profile="full-v1")
-        self.candidate=Memory.create(self.root/"candidate")
+        self.candidate=Memory.create(self.root/"candidate",index_profile="compact-delta-v2")
 
     def write(self):
         (self.source/"corpus.jsonl").write_bytes(b"".join(json.dumps(d,ensure_ascii=True).encode()+b"\r\n" for d in self.docs))

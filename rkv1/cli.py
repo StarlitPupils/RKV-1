@@ -106,8 +106,11 @@ def main(argv=None):
     p.add_argument("--io-backend", choices=("reference", "bounded"), default="reference")
     p=sub.add_parser("memory-init")
     p.add_argument("memory");p.add_argument("source");p.add_argument("--codec",choices=("zlib","zstd"),default="zlib")
+    p.add_argument("--chunker",choices=("fixed","gear-v1"),default="fixed");p.add_argument("--chunk-size",type=int,default=65536)
+    p.add_argument("--chunker-backend",choices=("python","rust"),default="python");p.add_argument("--native-library")
     p=sub.add_parser("memory-add")
     p.add_argument("memory");p.add_argument("source");p.add_argument("--label",default="evidence")
+    p.add_argument("--chunker-backend",choices=("python","rust"),default="python");p.add_argument("--native-library")
     p=sub.add_parser("memory-search")
     p.add_argument("memory");p.add_argument("question");p.add_argument("--top-k",type=int,default=5);p.add_argument("--snapshot")
     p=sub.add_parser("memory-answer")
@@ -171,8 +174,8 @@ def main(argv=None):
         elif args.command.startswith("memory-"):
             from .memory import Memory
             if args.command=="memory-init":
-                result=Memory.create(args.memory,compression=args.codec).add(args.source)
-            elif args.command=="memory-add":result=Memory(args.memory).add(args.source,label=args.label)
+                result=Memory.create(args.memory,compression=args.codec,chunker=args.chunker,chunk_size=args.chunk_size).add(args.source,chunker_backend=args.chunker_backend,native_library=args.native_library)
+            elif args.command=="memory-add":result=Memory(args.memory).add(args.source,label=args.label,chunker_backend=args.chunker_backend,native_library=args.native_library)
             elif args.command=="memory-search":result=Memory(args.memory).search(args.question,top_k=args.top_k,snapshot=args.snapshot)
             elif args.command=="memory-answer":
                 from .memory_model import answer

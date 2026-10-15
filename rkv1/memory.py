@@ -59,22 +59,22 @@ class Memory:
             if not path.is_dir() or path.is_symlink():raise ValueError("Invalid memory directories")
 
     @classmethod
-    def create(cls,root,*,compression="zlib",index_profile="compact-delta-v2"):
+    def create(cls,root,*,compression="zlib",index_profile="compact-base-v3",chunker="fixed",chunk_size=65536):
         from .memory_index import PROFILES
         if index_profile not in PROFILES:raise ValueError("Unknown memory index profile")
         root=Path(root).resolve();root.mkdir(parents=True,exist_ok=False)
         for name in ("indexes","manifests","answers"):(root/name).mkdir()
-        Store.create(root/"cas",compression=compression,chunk_size=65536)
-        if index_profile!="full-v1":_publish(root/"indexes/config.json",_json({"version":2,"profile":index_profile}))
+        Store.create(root/"cas",compression=compression,chunker=chunker,chunk_size=chunk_size)
+        if index_profile!="full-v1":_publish(root/"indexes/config.json",_json({"version":3 if index_profile=="compact-base-v3" else 2,"profile":index_profile}))
         return cls(root)
 
-    def add(self,source,*,label="evidence"):
+    def add(self,source,*,label="evidence",chunker_backend="python",native_library=None):
         """Replace current evidence snapshot; old snapshots/indexes remain addressable."""
         source=Path(source).resolve()
         if source.is_relative_to(self.root) or self.root.is_relative_to(source):
             raise ValueError("Evidence source and memory root must not overlap; answers are derived records")
         started=time.perf_counter()
-        added=self.store.add(source,label=label);sid=added["snapshot_id"]
+        added=self.store.add(source,label=label,chunker_backend=chunker_backend,native_library=native_library);sid=added["snapshot_id"]
         target=self.root/"indexes"/(sid+".sqlite")
         manifest_path=self.root/"manifests"/(sid+".json")
         if manifest_path.exists():
@@ -129,8 +129,8 @@ class Memory:
         path=self.root/"manifests"/(sid+".json")
         if path.is_symlink():raise ValueError("Linked memory manifest")
         value=json.loads(path.read_bytes())
-        if value.get("version") not in (1,2) or value.get("snapshot_id")!=sid:raise ValueError("Memory manifest identity mismatch")
-        if value["version"]==2:
+        if value.get("version") not in (1,2,3) or value.get("snapshot_id")!=sid:raise ValueError("Memory manifest identity mismatch")
+        if value["version"] in (2,3):
             from .memory_index import validate
             validate(self,sid,value)
             return value
@@ -148,7 +148,7 @@ class Memory:
         tokens=list(dict.fromkeys(t.lower() for t in re.findall(r"[\w]+",question,re.UNICODE) if t.lower() not in STOP and len(t)>1))[:64]
         if not tokens:return {"snapshot_id":sid,"question":question,"hits":[],"wall_s":time.perf_counter()-started}
         query=" OR ".join('"'+t+'"' for t in tokens)
-        if manifest["version"]==2:
+        if manifest["version"] in (2,3):
             from .memory_index import search
             rows=[(*r[:6],None,None,r[6]) for r in search(self,manifest,query,top_k)]
         else:
