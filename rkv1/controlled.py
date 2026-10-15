@@ -146,7 +146,8 @@ def worker(phase, source, archive, destination, config):
 
 def _child(phase, source, archive, destination, config):
     result = subprocess.run([sys.executable, "-m", "rkv1.controlled", phase, str(source), str(archive),
-                             str(destination), json.dumps(config)], capture_output=True, text=True, encoding="utf-8")
+                             str(destination), json.dumps(config)], capture_output=True, text=True, encoding="utf-8",
+                            errors="backslashreplace", env={**os.environ,"PYTHONIOENCODING":"utf-8"})
     if result.returncode:
         raise ValueError(f"{phase} worker failed: {result.stderr[-4000:]}")
     return json.loads(result.stdout)

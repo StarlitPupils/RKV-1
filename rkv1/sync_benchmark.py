@@ -28,12 +28,24 @@ def measure(cases,scratch,*,rounds=10,seed=20261016):
             row=prepared[i];archive=row["archive"];destination=root/"restored"
             assert _file_digest(archive)==row["storage"]["archive_sha256"]
             print(f"restore {order+1}/{len(warmups+jobs)} {row['case']} {policy} round {r}",flush=True)
-            trial=_child("decode",row["source"],archive,destination,{"restore_sync":policy})
+            try:
+                trial=_child("decode",row["source"],archive,destination,{"restore_sync":policy})
+            except ValueError as error:
+                complete=destination.exists()
+                if complete:assert_tree_equal(row["source"],destination)
+                row["trials"].append({"policy":policy,"round":r,"execution_index":order,"success":False,
+                    "error":str(error),"target_present":complete,"target_bytewise_verified":complete,
+                    "archive_sha256":_file_digest(archive)})
+                assert _file_digest(archive)==row["storage"]["archive_sha256"]
+                if complete:
+                    if not destination.resolve().is_relative_to(root.resolve()):raise ValueError("Invalid failed output")
+                    shutil.rmtree(destination)
+                continue  # Never retry/relabel an entire failed restore as a timing success.
             assert_tree_equal(row["source"],destination)
             assert trial["stats"]["sync_policy"]==policy
             assert trial["stats"]["files_synced"]==(len(row["files"]) if policy=="files" else 0)
             assert _file_digest(archive)==row["storage"]["archive_sha256"]
-            trial.update(policy=policy,round=r,execution_index=order,bytewise_verified=True,
+            trial.update(policy=policy,round=r,execution_index=order,bytewise_verified=True,success=True,
                          archive_sha256=row["storage"]["archive_sha256"])
             row["trials"].append(trial)
             if not destination.resolve().is_relative_to(root.resolve()):raise ValueError("Invalid benchmark output")
@@ -41,7 +53,7 @@ def measure(cases,scratch,*,rounds=10,seed=20261016):
         for row in prepared:
             assert row["files"]==inventory(row["source"])
             row.pop("archive");row["trials"].sort(key=lambda t:(t["policy"],t["round"]))
-            row["summaries"]={p:{metric:summary([t[metric] for t in row["trials"] if t["policy"]==p and t["round"]>=0])
+            row["summaries"]={p:{metric:summary([t[metric] for t in row["trials"] if t["policy"]==p and t["round"]>=0 and t["success"]])
                                    for metric in ("wall_s","cpu_s","peak_rss_bytes")} for p in ("close","files")}
             records.append(row)
         volume=root.anchor
@@ -50,7 +62,8 @@ def measure(cases,scratch,*,rounds=10,seed=20261016):
             "implementation_checksums":checks,"execution_order":[list(x) for x in warmups+jobs],
             "protocol":{"rounds":rounds,"warmups_per_case_policy":1,"seed":seed,"scratch_volume":volume,
                 "same_archive":"One frozen archive per case, same SHA for both policies and every restore",
-                "timing":"Fresh phase process; excludes Python startup and external byte comparison. Includes unpack/verification/file sync/publish/temp cleanup.",
+                "timing":"Fresh phase process; excludes Python startup and external byte comparison. Includes unpack/verification/file sync/publish (including bounded Windows rename retries)/temp cleanup.",
+                "failures":"All failed jobs retained; no whole-restore retries. Timing summaries use successful jobs only; paired statistics require both policies succeed in the round.",
                 "ordering":"All case/policy/round jobs shuffled after shuffled warmups; independent staging directory per restore",
                 "cache":"Archive hash pre-read outside timing, warm OS cache; no device cache eviction or background-load isolation",
                 "persistence":"files: file SHA, flush, fsync, close, all-files-complete then directory rename. close: file SHA then close; same remaining path.",

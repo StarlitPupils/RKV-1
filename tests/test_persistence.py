@@ -114,3 +114,53 @@ class PersistenceTests(unittest.TestCase):
             self.assertEqual(len(result["records"]),66)
             self.assertEqual({r["format"] for r in result["records"]},set(range(1,7)))
             self.assertTrue(result["all_expected_outcomes_verified"])
+
+    def test_worker_failure_preserves_unicode_diagnostic(self):
+        from rkv1.controlled import _child
+        with tempfile.TemporaryDirectory() as t:
+            root=Path(t)
+            with self.assertRaises(ValueError) as failure:
+                _child("decode",root,root/"不存在.rkv",root/"out",{"restore_sync":"files"})
+            self.assertIn("不存在",str(failure.exception))
+
+    def test_windows_publish_retries_are_bounded_and_do_not_overwrite(self):
+        with tempfile.TemporaryDirectory() as t:
+            root=Path(t);stage=root/"stage";stage.mkdir();dest=root/"final";original=Path.rename;count=0
+            def temporary(path,target):
+                nonlocal count
+                count+=1
+                if count<=2:raise PermissionError("transient")
+                return original(path,target)
+            with patch.object(Path,"rename",temporary),patch.object(persistence,"_transient_windows_rename",return_value=True),patch.object(persistence.time,"sleep") as sleep:
+                self.assertEqual(persistence.publish_directory(stage,dest),3)
+                self.assertEqual([c.args[0] for c in sleep.call_args_list],[.01,.05])
+            stage.mkdir()
+            with patch.object(Path,"rename") as renamed:
+                with self.assertRaises(FileExistsError):persistence.publish_directory(stage,dest)
+                renamed.assert_not_called()
+            dest.rmdir()
+            with patch.object(Path,"rename",side_effect=PermissionError("persistent")) as renamed,patch.object(persistence,"_transient_windows_rename",return_value=True),patch.object(persistence.time,"sleep") as sleep:
+                with self.assertRaises(PermissionError):persistence.publish_directory(stage,dest)
+                self.assertEqual(renamed.call_count,4);self.assertEqual(sleep.call_count,3)
+                self.assertFalse(dest.exists())
+            with patch.object(Path,"rename",side_effect=OSError("other error")) as renamed,patch.object(persistence,"_transient_windows_rename",return_value=False):
+                with self.assertRaises(OSError):persistence.publish_directory(stage,dest)
+                self.assertEqual(renamed.call_count,1)
+
+    def test_benchmark_retains_failed_job_without_retry(self):
+        from contextlib import redirect_stdout
+        from rkv1.sync_benchmark import measure,_child
+        count=0
+        def fail_once(*args,**kwargs):
+            nonlocal count
+            count+=1
+            if count==3:raise ValueError("Injected worker failure")
+            return _child(*args,**kwargs)
+        with tempfile.TemporaryDirectory() as t:
+            root=Path(t);s=root/"s";s.mkdir();(s/"data").write_bytes(b"value")
+            with redirect_stdout(io.StringIO()),patch("rkv1.sync_benchmark._child",fail_once):
+                report=measure([{"name":"x","source":s,"pack":{}}],root/"scratch",rounds=1)
+            trials=report["cases"][0]["trials"]
+            self.assertEqual(count,4);self.assertEqual(sum(not x["success"] for x in trials),1)
+            failure=next(x for x in trials if not x["success"])
+            self.assertFalse(failure["target_present"]);self.assertIn("Injected",failure["error"])

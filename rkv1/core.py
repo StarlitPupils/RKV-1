@@ -631,7 +631,7 @@ def unpack(archive, destination, *, decoder_backend="python", native_library=Non
         stage.mkdir()
         with Archive(archive, decoder_backend=decoder_backend, native_library=native_library) as reader:
             result = reader.process(stage, sync_policy=sync_policy)
-        persistence.publish_directory(stage, destination)
+        result["publish_attempts"] = persistence.publish_directory(stage, destination)
     return result
 
 

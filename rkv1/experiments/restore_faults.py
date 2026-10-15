@@ -69,7 +69,7 @@ def injected(archive,source,root,case):
         return real_sync(fd)
     def published(stage,destination):
         events.append(["publish-attempt"]);failure("publish-before")
-        real_publish(stage,destination);events.append(["published"])
+        attempts=real_publish(stage,destination);events.append(["published"]);return attempts
     with ExitStack() as stack:
         stack.enter_context(patch.object(Path,"open",opened))
         stack.enter_context(patch.object(persistence.os,"fsync",synced))
