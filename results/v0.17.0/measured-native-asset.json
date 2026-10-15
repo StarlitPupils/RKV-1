@@ -1,0 +1,9 @@
+{
+  "name": "rkv1-measured-gear-v0.17.0-windows-x86_64.zip",
+  "bytes": 63527,
+  "sha256": "427bf1aaa2de10ef36579cc1195504da75b7f49df6e2a6f6f4ad653d281dc186",
+  "library_sha256": "7736879b67377038fdc2211fbdadfc12c71983ba96257dbb8a18c33c660196e2",
+  "metadata_sha256": "e6c916ce2efdb247cc8829ed38548116d9f7c81efce990484e95062998052ced",
+  "source_commit": "96be8d0361407d6970bcb1101e2770151951483d",
+  "scope": "Exact older validated Gear scan binary used by this experiment, not the current release build"
+}

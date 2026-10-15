@@ -1,0 +1,17 @@
+{
+  "measured_Python_modules": 46,
+  "formal_queries_audited": 8070,
+  "old_snapshot_queries_audited": 1815,
+  "historical_snapshots_fully_reopened": 165,
+  "all_cases_rankings_and_original_evidence_identity_match": true,
+  "all_Gear_Python_Rust_persistent_trees_identical": true,
+  "original_rankings_match_v016": true,
+  "generation_calls": 0,
+  "tests": {
+    "run": 149,
+    "passed": 148,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "d040bd1bd206b07728039aab67c7442164320ff54c81598bab5d477f12dd489e"
+  }
+}

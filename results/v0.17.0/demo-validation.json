@@ -1,0 +1,11 @@
+{
+  "scope": "Separate local fixed/v3 demo reconstruction, not automatic migration or formal timing",
+  "original_and_updated_snapshot_IDs_equal_v015": true,
+  "all_25_existing_derived_records_byte_identical": true,
+  "generation_calls": 0,
+  "profile": "fixed/compact-base-v3",
+  "logical_file_bytes": 8474614,
+  "URL": "http://127.0.0.1:8767",
+  "HTTP_verified_sources": 5,
+  "model_configured": false
+}

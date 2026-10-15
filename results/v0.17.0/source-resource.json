@@ -1,0 +1,18 @@
+{
+  "files": {
+    "rkv1/memory.py": {
+      "bytes": 11321,
+      "sha256": "4da9fcdafa83b889db6c245f83ddf3c718023bce3f9db3b8b291b0807f33097a"
+    },
+    "rkv1/memory_index.py": {
+      "bytes": 14231,
+      "sha256": "ff0d4e712f135e4e8721224e6f43fc22d5aba2604f584d196c17c26b60c27134"
+    },
+    "rkv1/chunking.py": {
+      "bytes": 3204,
+      "sha256": "3d3fee9413d1e6d2ff03da0ac0bbf1fb169e7451c8ba346e2a53439233f89c26"
+    }
+  },
+  "total_bytes": 28756,
+  "allocation": "Whole three source files once for each condition; common Store/core/Python/SQLite/OS excluded"
+}

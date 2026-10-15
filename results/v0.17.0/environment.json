@@ -1,0 +1,9 @@
+{
+  "python": "3.13.12",
+  "sqlite": "3.51.1",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "logical_cpus": 20,
+  "work": "E:\\memorystorage\\.tools\\memory-updates-v017",
+  "generation_calls": 0,
+  "scope": "One local Windows host, warm cache; new query subprocess per stage; RSS includes interpreter/input loading"
+}

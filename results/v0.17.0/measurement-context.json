@@ -1,0 +1,16 @@
+{
+  "frozen_candidate_commit": "d7de9e7cb686b0406440c739382f9b050b29f7c1",
+  "candidate_CI_run": 38744994036,
+  "candidate_CI_conclusion": "success",
+  "candidate_CI_url": "https://github.com/StarlitPupils/RKV-1/actions/runs/38744994036",
+  "generation_calls": 0,
+  "unique_scientific_claims": 188,
+  "formal_queries": 8070,
+  "old_snapshot_queries": 1815,
+  "historical_snapshots_reopened": 165,
+  "warmups_excluded": 165,
+  "source_scope": "All three source files once for every condition; Rust adds measured binary and original metadata; shared Store/core/Python/SQLite/OS and filesystem metadata excluded",
+  "native_scope": "Exact old candidate binary measured; separately published measured archive, current CI binaries tested functionally only",
+  "model_scope": "No API or new answers; all later corpus edits are controlled work-copy changes, not new science or model quality",
+  "analysis_portability": "Optional native-library path override verifies the same bytes and leaves timing/scoring unchanged"
+}

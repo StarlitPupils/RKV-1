@@ -6,7 +6,58 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.16.0 · 记忆索引成本下降，保留全库排序和原文校验
+## 当前版本：v0.17.0 · 降低短插入与连续版本的重写放大
+
+新v3应用索引用单份基础相对差异与偏移区间表示每个快照，未改写记录仅更新位置，
+不再因为整批偏移变化重建索引。复用已有Gear-v1和可选Rust扫描，分别对照CAS复用
+与索引更新。新建库默认固定分块＋v3；Gear/Rust显式选择，既有库不自动迁移。
+
+5条件×3轮、每组11个连续快照，包含追加、等长改写、短插入/撤销、删除。全部
+原文/历史/索引保留，**8,070次正式查询＋1,815次旧快照查询**的排序及来源身份
+匹配固定/v2；165个历史快照最终重开核对整源SHA/大小。初始188条主张排名保持
+v0.16水平，无新模型调用，不作新科学推理质量结论。
+
+| 条件 | 11快照＋源码/原生分配 | 对固定/v2净省 | 11次提交总wall中位 |
+|---|---:|---:|---:|
+| 固定/v2 | 39.29 MB | — | 6.923s |
+| Gear Python/v2 | 30.47 MB | 22.45% | 24.563s |
+| 固定/v3 | 17.47 MB | 55.53% | 5.569s |
+| Gear Python/v3 | 8.65 MB | 77.98% | 23.142s |
+| Gear Rust/v3 | **8.78 MB** | **77.66%** | **4.097s** |
+
+统一计整份memory.py/memory_index.py/chunking.py源28,756B一次，Rust另计完整实测
+DLL＋元数据124,419B；公共Python/SQLite/Store/core/OS、文件系统元数据未全额分配。
+不是完整部署净压缩，也不与v0.16不同阶段/回答账本直接算版本提升。
+
+![多版本更新成本](results/v0.17.0/update-costs.png)
+
+13B插入时，固定分块新增127个CAS对象，Gear仅1个；v2新写5,455,872B索引，v3
+只需387B（固定）/385B（Gear）差异。11快照中v2完整建基础索引5次，v3仅初始1次。
+Python/Rust Gear的整个持久树逐阶段逐字节一致；Rust只加速扫描，不加速查询。
+
+查询有代价：13B插入后固定/v2中位/p95为16.37/20.83ms，Gear Rust/v3为
+36.70/44.73ms；新查询进程峰值36.21→40.21MiB。位置重放使v3查询更慢，不称
+全流程支配；Python Gear提交也明显更慢。仅本机温缓存，启动时间另列。
+
+本机149测试：148通过、1项Windows权限跳过。新v3清单需v0.17；旧v1/v2继续原
+策略，归档v1–v6/CAS1不变。累计非位置改动超过25%或偏移区间超过256仍建检查点，
+无自动迁移或GC，不声称任意更新恒定成本。E3、长期对话、多跳/形式验证仍未实现。
+
+```powershell
+python -m pip install -e .
+python -m rkv1 memory-init data/new-memory data/memory-source
+# 可选Gear；每次Rust提交都显式指定已核验库和相邻native.json。
+python -m rkv1 memory-init data/gear-memory data/memory-source --chunker gear-v1 --chunker-backend rust --native-library measured/rkv1_core.dll
+python -m rkv1 memory-add data/gear-memory data/updated-source --chunker-backend rust --native-library measured/rkv1_core.dll
+```
+
+[冻结协议/复现](docs/MEMORY-UPDATES.md) · [全部成本与原始记录](results/v0.17.0/SUMMARY.md) ·
+[核验](results/v0.17.0/validation.json) ·
+[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.17.0)。
+Release另附**实际参与测量的旧Gear库及原始元数据**，区别于本次CI新编译的原生库。
+下一步剖析查询定位重放，扩真实更新家族与更长历史；新问答评测需另定API预算。
+
+## 记忆索引成本对照（v0.16.0）
 
 新建库使用紧凑FTS5基础索引与增量重放：去掉索引中的正文副本，小幅更新复用基础
 索引；每次查询核验完整基础/增量SHA，在内存中重放当前完整视图，再用SQLite全库
@@ -719,7 +770,7 @@ python -m rkv1 pack data/wine data/columns.rkv --codec zlib --transform csv-colu
 | E1 无损核心 | v1–v6兼容；共享CAS、真实版本复用与Gear分块；默认v2、CAS1保持不变；归档默认逐文件fsync已测，目录/掉电持久性未验证 |
 | E2 类型感知可逆编码 | CSV/小单元/Rust配对、int16/float字节变换、Blosc、FITS布局已测；新布局0/8联合通过，代码/数学待开展 |
 | E3 神经预测 + 熵编码 + 精确残差 | 后续，计入模型和解码成本 |
-| E4 科学记忆、检索、证据回溯与可验证推理 | v0.15首个检索/API/引用与写回基线；v0.16索引成本对照；长会话/多跳/形式证明未测 |
+| E4 科学记忆、检索、证据回溯与可验证推理 | v0.15首个检索/API/引用与写回基线；v0.16索引成本、v0.17多版本更新对照；长会话/多跳/形式证明未测 |
 
 Rust 已用于可选CSV反变换与Gear扫描。传统归档的`--base`复用编码结果，仍写独立
 完整快照；目录CAS可跨版本只存一份对象。两者仍全量读源、计算哈希并验证旧对象。

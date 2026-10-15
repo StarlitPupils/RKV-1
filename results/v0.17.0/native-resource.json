@@ -1,0 +1,24 @@
+{
+  "library": "E:\\memorystorage\\.tools\\native-v0.8-measured\\rkv1_core.dll",
+  "bytes": 123904,
+  "sha256": "7736879b67377038fdc2211fbdadfc12c71983ba96257dbb8a18c33c660196e2",
+  "metadata_bytes": 515,
+  "metadata_sha256": "e6c916ce2efdb247cc8829ed38548116d9f7c81efce990484e95062998052ced",
+  "metadata": {
+    "abi": 1,
+    "library": "rkv1_core.dll",
+    "sha256": "7736879b67377038fdc2211fbdadfc12c71983ba96257dbb8a18c33c660196e2",
+    "bytes": 123904,
+    "source_commit": "96be8d0361407d6970bcb1101e2770151951483d",
+    "tag": "CI-candidate",
+    "platform": "Windows-2025Server-10.0.26100-SP0",
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+    "features": [
+      "csv-columns-v1",
+      "gear-v1"
+    ],
+    "gear_abi": 1,
+    "scope": "CSV inverse and Gear boundary scan; not a complete archive/CAS implementation"
+  },
+  "scope": "Existing measured Gear scan only; not a new native codec or query engine"
+}

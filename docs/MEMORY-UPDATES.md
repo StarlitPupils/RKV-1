@@ -66,3 +66,6 @@ abstract插入13B固定标记；删除该标记；追加88B note2；末条title�
 python -m scripts.run_memory_updates --out results/local-memory-updates --work .tools/local-memory-updates --native-library .tools/native-v0.8-measured/rkv1_core.dll
 python -m scripts.analyze_memory_updates results/local-memory-updates --test-log path/to/test.log --plot
 ```
+
+离线复核可用analyze_memory_updates的--native-library指定已解压的精确实测库位置，
+库及原native.json的SHA仍须匹配，不允许替换CI新二进制后沿用原计时。

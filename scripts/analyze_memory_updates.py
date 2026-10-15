@@ -13,7 +13,7 @@ from scripts.run_units import save
 from scripts.summarize_units import table
 
 
-def analyze(root,test_log):
+def analyze(root,test_log,native_library=None):
     read=lambda name:json.loads((root/name).read_text("utf-8"))
     checks=read("source-checksums.json");assert checks==implementation_checksums()
     trial=read("trials.json");rows=[json.loads(s) for s in (root/"trials.jsonl").read_text("utf-8").splitlines()]
@@ -23,7 +23,8 @@ def analyze(root,test_log):
     assert sum(v["bytes"] for v in source["files"].values())==source["total_bytes"]
     for name,v in source["files"].items():
         raw=Path(name).read_bytes();assert len(raw)==v["bytes"] and hashlib.sha256(raw).hexdigest()==v["sha256"]
-    raw=Path(native["library"]).read_bytes();meta=Path(native["library"]).with_name("native.json").read_bytes()
+    library=Path(native["library"]) if native_library is None else native_library
+    raw=library.read_bytes();meta=library.with_name("native.json").read_bytes()
     assert len(raw)==native["bytes"] and hashlib.sha256(raw).hexdigest()==native["sha256"]
     assert len(meta)==native["metadata_bytes"] and hashlib.sha256(meta).hexdigest()==native["metadata_sha256"]
     old=json.loads(Path("results/v0.16.0/trials.json").read_text("utf-8"))
@@ -153,5 +154,6 @@ def plot(root,result):
 
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("root",type=Path);p.add_argument("--test-log",type=Path,required=True);p.add_argument("--plot",action="store_true")
-    a=p.parse_args();r=analyze(a.root,a.test_log)
+    p.add_argument("--native-library",type=Path,help="Optional local path to the exact published measured library; hashes must match")
+    a=p.parse_args();r=analyze(a.root,a.test_log,a.native_library)
     if a.plot:plot(a.root,r)

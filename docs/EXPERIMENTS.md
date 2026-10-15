@@ -1,5 +1,14 @@
 # 复现实验
 
+## v0.17：连续更新的CAS/索引消融
+
+[MEMORY-UPDATES.md](MEMORY-UPDATES.md)与实现/runner于d7de9e7冻结，5条件三轮
+各11快照。8070正式查询、1815旧快照查询，165历史快照整源重读核验；0次模型生成。
+固定/Gear、v2/v3、Gear Python/Rust分别对照；原文/历史全部保留计费。统一计三份
+源，Rust加完整实测库/原始元数据，公共运行时未全额分配。旧实测库随Release另附，
+与CI新库区分。离线分析可用--native-library覆盖本机文件路径，SHA须完全匹配。
+[结果](../results/v0.17.0/SUMMARY.md)。
+
 ## v0.16：索引消融与增量成本
 
 [MEMORY-INDEX.md](MEMORY-INDEX.md)于5126566冻结三个策略、四阶段和三轮协议。
