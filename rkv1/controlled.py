@@ -131,14 +131,17 @@ def worker(phase, source, archive, destination, config):
         stats = pack(source, archive, config["chunk_size"], overwrite=True,
                      compression=config["compression"], deduplicate=config["deduplicate"],
                      transform=config["transform"], base=config.get("base"), unit_size=config.get("unit_size"),
-                     format_version=config.get("format_version"))
+                     format_version=config.get("format_version"), layout=config.get("file_layout", "fixed"))
     elif phase == "decode":
         stats = unpack(archive, destination, decoder_backend=config.get("decoder_backend", "python"),
                        native_library=config.get("native_library"))
     else:
         raise ValueError("Unknown phase")
-    return {"wall_s": time.perf_counter() - start, "cpu_s": time.process_time() - cpu,
-            "peak_rss_bytes": peak_rss(), "stats": stats}
+    result = {"wall_s": time.perf_counter() - start, "cpu_s": time.process_time() - cpu,
+              "peak_rss_bytes": peak_rss(), "stats": stats}
+    if config.get("format_version") == 6:
+        result["blosc_loaded"] = "blosc" in sys.modules
+    return result
 
 
 def _child(phase, source, archive, destination, config):

@@ -1,4 +1,4 @@
-"""RKV1 versions 1/2/3/4: exact directory archives and explicit transforms.
+"""RKV1 versions 1 through 6: exact archives and explicit transforms/layouts.
 
 Only regular-file relative paths and bytes are preserved. No lossy transforms.
 The SHA-256 digest of the manifest detects accidental metadata damage, not forgery.
@@ -7,6 +7,8 @@ from __future__ import annotations
 
 from contextlib import ExitStack
 from collections import OrderedDict
+from array import array
+from bisect import bisect_left, bisect_right
 import hashlib
 import json
 import os
@@ -22,12 +24,14 @@ from .blosc_codec import PROFILES as BLOSC_PROFILES
 from .transforms import csv_columns_decode, csv_columns_encode
 from .numeric import POLICIES as NUMERIC_POLICIES, encode as numeric_encode, decode as numeric_decode
 from .units import ENTRY, MIN_UNIT, decode_unit, encode_units, validate_index
+from .layouts import LAYOUTS, FITS_POLICY, chunks as layout_chunks
 
 MAGIC = b"RKV1\r\n\x1a\n"
 VERSION = 2
 UNIT_VERSION = 3
 ARRAY_VERSION = 4
 EXPERT_VERSION = 5
+LAYOUT_VERSION = 6
 DEFAULT_CHUNK = 1 << 20
 MAX_CHUNK = 8 << 20
 MAX_HEADER = 64 << 20
@@ -142,23 +146,28 @@ def validate_manifest(header, payload_size):
     if not isinstance(header, dict):
         raise ValueError("Invalid manifest schema")
     version = header.get("version")
-    if type(version) is not int or version not in (1, VERSION, UNIT_VERSION, ARRAY_VERSION, EXPERT_VERSION):
+    if type(version) is not int or version not in (1, VERSION, UNIT_VERSION, ARRAY_VERSION, EXPERT_VERSION, LAYOUT_VERSION):
         raise ValueError("Unsupported format version")
     fields = {"version", "chunk_size", "files", "blocks"}
     if version >= 2:
         fields.update(("compression", "deduplicate", "transform"))
     if version == UNIT_VERSION:
         fields.add("unit_size")
+    if version == LAYOUT_VERSION:
+        fields.add("layout")
     if set(header) != fields:
         raise ValueError("Invalid manifest schema")
     deduplicate = header.get("deduplicate", True)
-    transforms = ("none", *NUMERIC_POLICIES) if version in (ARRAY_VERSION, EXPERT_VERSION) else ("none", "csv-columns-v1")
+    transforms = (("none", *NUMERIC_POLICIES, FITS_POLICY) if version == LAYOUT_VERSION else
+                  ("none", *NUMERIC_POLICIES) if version in (ARRAY_VERSION, EXPERT_VERSION) else ("none", "csv-columns-v1"))
     codecs = ("raw", "zlib", "zstd", *BLOSC_PROFILES) if version == EXPERT_VERSION else ("raw", "zlib", "zstd")
     if version >= 2 and (type(deduplicate) is not bool or header["compression"] not in codecs
                          or header["transform"] not in transforms):
         raise ValueError("Invalid archive encoding policy")
     if version == EXPERT_VERSION and header["compression"] in BLOSC_PROFILES and header["transform"] != "none":
         raise ValueError("Blosc filters cannot be stacked with outer transforms")
+    if version == LAYOUT_VERSION and header["layout"] not in LAYOUTS:
+        raise ValueError("Invalid archive layout")
     chunk_size = header["chunk_size"]
     if type(chunk_size) is not int or not 1 <= chunk_size <= MAX_CHUNK:
         raise ValueError("Invalid chunk size")
@@ -175,7 +184,7 @@ def validate_manifest(header, payload_size):
     suffixes = set()
     for key, meta in blocks.items():
         block_fields = {"offset", "stored_size", "raw_size", "codec"}
-        if version in (2, ARRAY_VERSION, EXPERT_VERSION):
+        if version in (2, ARRAY_VERSION, EXPERT_VERSION, LAYOUT_VERSION):
             block_fields.update(("coded_size", "transform"))
         elif version == UNIT_VERSION:
             block_fields.update(("unit_count", "index_size", "index_sha256"))
@@ -197,13 +206,15 @@ def validate_manifest(header, payload_size):
         elif (stored > raw or codec not in allowed_codecs or (codec == "raw" and stored != raw)
               or (codec != "raw" and stored >= raw)):
             raise ValueError("Invalid block bounds or codec")
-        if version in (2, ARRAY_VERSION, EXPERT_VERSION):
+        if version in (2, ARRAY_VERSION, EXPERT_VERSION, LAYOUT_VERSION):
             coded, transform = meta["coded_size"], meta["transform"]
             if (type(coded) is not int or not 1 <= coded <= 2 * raw + 256
-                    or transform not in transforms
+                    or transform not in transforms or transform == FITS_POLICY
                     or (transform == "none" and coded != raw)
                     or (transform in NUMERIC_POLICIES and (coded != raw or raw < 2 * NUMERIC_POLICIES[transform][1]))
-                    or (transform != "none" and (codec == "raw" or header["transform"] != transform))
+                    or (transform != "none" and (codec == "raw" or
+                        (header["transform"] != transform and not (version == LAYOUT_VERSION and
+                         header["transform"] == FITS_POLICY and transform in ("byte-shuffle-4-v1", "byte-shuffle-8-v1")))))
                     or (codec != "raw" and codec != header["compression"])):
                 raise ValueError("Invalid block transform or encoding policy")
         if version >= 2 and not deduplicate:
@@ -230,19 +241,22 @@ def validate_manifest(header, payload_size):
         if (type(entry["size"]) is not int or not 0 <= entry["size"] <= MAX_OUTPUT
                 or not valid_hash(entry["sha256"]) or not isinstance(entry["chunks"], list)):
             raise ValueError("Invalid file metadata")
+        segmented = version == LAYOUT_VERSION and header["layout"] != "fixed"
         expected_count = (entry["size"] + chunk_size - 1) // chunk_size
-        if len(entry["chunks"]) != expected_count:
+        if not segmented and len(entry["chunks"]) != expected_count:
             raise ValueError("Non-canonical chunk count")
         size = 0
         for i, key in enumerate(entry["chunks"]):
             if not isinstance(key, str) or key not in blocks:
                 raise ValueError("Missing referenced chunk")
             expected = min(chunk_size, entry["size"] - i * chunk_size)
-            if blocks[key]["raw_size"] != expected:
+            if not segmented and blocks[key]["raw_size"] != expected:
                 raise ValueError("Non-canonical chunk length")
             size += blocks[key]["raw_size"]
             referenced.add(key)
             reference_count += 1
+            if version == LAYOUT_VERSION and reference_count > MAX_BLOCKS:
+                raise ValueError("Too many layout chunk references")
         if size != entry["size"]:
             raise ValueError("File length mismatch")
         total += size
@@ -307,6 +321,14 @@ class Archive:
         try:
             self.header, self.body_start = read_manifest(self.stream)
             self.files = {entry["path"]: entry for entry in self.header["files"]}
+            self._file_offsets = {}
+            if self.header["version"] == LAYOUT_VERSION and self.header["layout"] != "fixed":
+                for entry in self.header["files"]:
+                    offsets = array("Q", [0])
+                    for key in entry["chunks"]:
+                        offsets.append(offsets[-1] + self.header["blocks"][key]["raw_size"])
+                    self._file_offsets[entry["path"]] = offsets
+            self.layout_offset_bytes = sum(len(v)*v.itemsize for v in self._file_offsets.values())
         except BaseException:
             self.stream.close()
             raise
@@ -321,6 +343,7 @@ class Archive:
         self.stream.close()
         self._indexes.clear()
         self._index_bytes = 0
+        self._file_offsets.clear()
 
     def unit_index(self, key):
         """Authenticate/validate a block's fixed-width index; cache is bounded."""
@@ -386,12 +409,16 @@ class Archive:
             raise ValueError("Use streaming unpack for reads larger than 64 MiB")
         chunk_size = self.header["chunk_size"]
         result = bytearray()
-        for i in range(offset // chunk_size, (offset + length + chunk_size - 1) // chunk_size):
+        offsets = self._file_offsets.get(path)
+        first = bisect_right(offsets, offset)-1 if offsets is not None else offset//chunk_size
+        last = bisect_left(offsets, offset+length) if offsets is not None else (offset+length+chunk_size-1)//chunk_size
+        for i in range(first, last):
             if not length:
                 break
             key = entry["chunks"][i]
-            start = max(0, offset - i * chunk_size)
-            end = min(self.header["blocks"][key]["raw_size"], offset + length - i * chunk_size)
+            logical_start = offsets[i] if offsets is not None else i*chunk_size
+            start = max(0, offset - logical_start)
+            end = min(self.header["blocks"][key]["raw_size"], offset + length - logical_start)
             result.extend(self.block_range(key, start, end - start))
         data = bytes(result)
         if offset == 0 and length == entry["size"] and digest(data) != entry["sha256"]:
@@ -419,20 +446,21 @@ class Archive:
 
 
 def pack(source, archive, chunk_size=DEFAULT_CHUNK, *, base=None, overwrite=False,
-         compression="zlib", deduplicate=True, transform="none", unit_size=None, format_version=None):
+         compression="zlib", deduplicate=True, transform="none", unit_size=None, format_version=None, layout="fixed"):
     source, archive = Path(source), Path(archive)
     if type(chunk_size) is not int or not 1 <= chunk_size <= MAX_CHUNK:
         raise ValueError("Invalid chunk size")
     if unit_size is not None and (type(unit_size) is not int or not MIN_UNIT <= unit_size <= chunk_size or chunk_size % unit_size):
         raise ValueError("Invalid unit size")
-    if type(deduplicate) is not bool or transform not in ("none", "csv-columns-v1", *NUMERIC_POLICIES):
+    if type(deduplicate) is not bool or transform not in ("none", "csv-columns-v1", *NUMERIC_POLICIES, FITS_POLICY) or layout not in LAYOUTS:
         raise ValueError("Invalid encoding policy")
     if not isinstance(compression,str):raise ValueError("Invalid compression profile")
-    version = (UNIT_VERSION if unit_size is not None else EXPERT_VERSION if compression in BLOSC_PROFILES else ARRAY_VERSION if transform in NUMERIC_POLICIES else VERSION) if format_version is None else format_version
-    if (type(version) is not int or version not in (VERSION, UNIT_VERSION, ARRAY_VERSION, EXPERT_VERSION)
+    version = (LAYOUT_VERSION if layout != "fixed" or transform == FITS_POLICY else UNIT_VERSION if unit_size is not None else EXPERT_VERSION if compression in BLOSC_PROFILES else ARRAY_VERSION if transform in NUMERIC_POLICIES else VERSION) if format_version is None else format_version
+    if (type(version) is not int or version not in (VERSION, UNIT_VERSION, ARRAY_VERSION, EXPERT_VERSION, LAYOUT_VERSION)
             or (unit_size is not None) != (version == UNIT_VERSION)
-            or (transform in NUMERIC_POLICIES and version not in (ARRAY_VERSION, EXPERT_VERSION))
-            or (transform == "csv-columns-v1" and version in (ARRAY_VERSION, EXPERT_VERSION))
+            or (transform in NUMERIC_POLICIES and version not in (ARRAY_VERSION, EXPERT_VERSION, LAYOUT_VERSION))
+            or (transform == "csv-columns-v1" and version in (ARRAY_VERSION, EXPERT_VERSION, LAYOUT_VERSION))
+            or ((layout != "fixed" or transform == FITS_POLICY) and version != LAYOUT_VERSION)
             or (compression in BLOSC_PROFILES and (version != EXPERT_VERSION or transform != "none"))):
         raise ValueError("Transform/layout does not match format version")
     if compression == "raw" and transform != "none":
@@ -446,6 +474,7 @@ def pack(source, archive, chunk_size=DEFAULT_CHUNK, *, base=None, overwrite=Fals
         raise ValueError("Base and new archive must differ")
     entries, blocks, total_raw, reused, transformed, attempts = [], {}, 0, 0, 0, 0
     transformed_units = unit_attempts = 0
+    layout_references = 0
     with ExitStack() as stack:
         previous = stack.enter_context(Archive(base)) if base else None
         if previous and previous.header["chunk_size"] != chunk_size:
@@ -455,12 +484,19 @@ def pack(source, archive, chunk_size=DEFAULT_CHUNK, *, base=None, overwrite=Fals
         if previous and (previous.header.get("compression", "zlib") != compression
                          or previous.header.get("transform", "none") != transform):
             raise ValueError("Incremental base compression and transform policy must match")
+        if previous and (version == LAYOUT_VERSION or previous.header["version"] == LAYOUT_VERSION) and (
+                version != previous.header["version"] or previous.header["layout"] != layout):
+            raise ValueError("Incremental base layout and version must match")
         previous_ids = {block_hash(key): key for key in previous.header["blocks"]} if previous else {}
         spool = stack.enter_context(tempfile.TemporaryFile())
         for path, rel in files_in(source):
             file_hash, references, size = hashlib.sha256(), [], 0
             with path.open("rb") as stream:
-                while raw := stream.read(chunk_size):
+                for raw, block_policy in layout_chunks(stream, path.stat().st_size, chunk_size, layout, transform):
+                    if version == LAYOUT_VERSION:
+                        layout_references += 1
+                        if layout_references > MAX_BLOCKS:
+                            raise ValueError("Too many layout chunk references")
                     total_raw += len(raw)
                     if total_raw > MAX_OUTPUT:
                         raise ValueError("Prototype 2 GiB output limit")
@@ -500,16 +536,16 @@ def pack(source, archive, chunk_size=DEFAULT_CHUNK, *, base=None, overwrite=Fals
                         if codec != "raw":
                             codec = compression
                         coded_size, chosen_transform = len(raw), "none"
-                        if transform == "csv-columns-v1" or transform in NUMERIC_POLICIES:
+                        if block_policy == "csv-columns-v1" or block_policy in NUMERIC_POLICIES:
                             attempts += 1
-                            candidate = csv_columns_encode(raw) if transform == "csv-columns-v1" else numeric_encode(raw, transform)
+                            candidate = csv_columns_encode(raw) if block_policy == "csv-columns-v1" else numeric_encode(raw, block_policy)
                             if candidate is not None:
                                 candidate_payload = compress(candidate)
                                 # Include the longer transform label and coded-size field
                                 # in local selection. Full archive size is also benchmarked.
-                                extra = len(transform) - len("none") + len(str(len(candidate))) - len(str(len(raw)))
+                                extra = len(block_policy) - len("none") + len(str(len(candidate))) - len(str(len(raw)))
                                 if len(candidate_payload) + extra < len(payload):
-                                    payload, codec, coded_size, chosen_transform = candidate_payload, compression, len(candidate), transform
+                                    payload, codec, coded_size, chosen_transform = candidate_payload, compression, len(candidate), block_policy
                     if chosen_transform != "none":
                         transformed += 1
                     if unit_size is not None:
@@ -523,6 +559,8 @@ def pack(source, archive, chunk_size=DEFAULT_CHUNK, *, base=None, overwrite=Fals
                   "compression": compression, "deduplicate": deduplicate, "transform": transform}
         if unit_size is not None:
             header["unit_size"] = unit_size
+        if version == LAYOUT_VERSION:
+            header["layout"] = layout
         validate_manifest(header, spool.tell())
         encoded = _json_bytes(header)
         if len(encoded) > MAX_HEADER:

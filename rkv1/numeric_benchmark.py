@@ -67,6 +67,15 @@ def numeric_benchmark(source, *, configs=None, rounds=5, queries=32, warmup_quer
                                              for name in ("none", *NUMERIC_POLICIES)}
                 row["actual_codecs"] = {name: sum(m["codec"] == name for m in reader.header["blocks"].values())
                                         for name in sorted({m["codec"] for m in reader.header["blocks"].values()})}
+                if reader.header["version"] == 6:
+                    row["layout_offset_bytes"] = reader.layout_offset_bytes
+                    row["file_chunk_spans"] = {}
+                    for entry in reader.header["files"]:
+                        spans=[];cursor=0
+                        for key in entry["chunks"]:
+                            meta=reader.header["blocks"][key];end=cursor+meta["raw_size"]
+                            spans.append([cursor,end,meta["transform"],meta["codec"]]);cursor=end
+                        row["file_chunk_spans"][entry["path"]]=spans
             for phase in ("encode", "decode"):
                 row[f"{phase}_trials"].sort(key=lambda t: t["round"])
                 formal = [t for t in row[f"{phase}_trials"] if t["round"] >= 0]
