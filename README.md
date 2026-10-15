@@ -6,7 +6,60 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.14.0 · 跨领域字节重排与代码/数学对照
+## 当前版本：v0.15.0 · 可运行的证据记忆与模型回答
+
+已打通原始资料CAS保存 → SQLite FTS5/BM25检索 → 原记录SHA校验 → 模型判断 →
+句子引用绑定 → 派生回答写回。新增CLI与本机中文演示页，支持资料更新及读取旧快照。
+这是E4最小基线；E2尚未完成，E3神经压缩尚未实施，不宣称无限上下文。
+
+SciFact 5,183篇摘要（8,307,875B）逐字节保存，索引不含主张/gold标签。188条有标注
+主张三轮共564次查询，重复轮次不是独立样本。gold文档宏平均召回@1/@5/@10分别
+**70.70% / 88.34% / 94.21%**；含索引和CAS校验的本机温缓存检索中位43.58ms、p95
+57.47ms。冷缓存、跨机器未测，词法基线不代表跨语言语义检索。
+
+| 同一个证据约束模型，两种输入 | 格式/引用绑定有效 | 标注判定正确 | 8条有证据主张判定与完整依据同时正确 |
+|---|---:|---:|---:|
+| 空证据 | 12/12 | 4/12 | 0/8 |
+| top5检索证据 | 12/12 | **10/12** | **6/8** |
+
+真实DeepSeek `deepseek-flash` 官方API共24次生成，12条预定平衡dev主张每条件一次，
+关闭thinking、JSON模式、最多256输出token，无重试。资料/检索本机CPU，模型远程。
+空证据仍被要求仅据所给证据回答，不是无约束闭卷或成熟RAG对照；公开dev小样本、
+模型可能见过数据，不据此宣称通用推理提升。引用绑定不证明科学蕴含。两条错误的
+完整gold依据都已提供，失败在模型判断/引用选择，原始记录全部保留。
+
+![首个证据记忆基线](results/v0.15.0/memory-baseline.png)
+
+资源成本尚未达标：初始库加一个完整索引为**19,319,447B，原文2.325倍**；保留两个
+索引快照和派生记录后**35,728,598B，原文4.301倍**，索引占32,710,656B。不能称整个
+记忆系统净压缩；公共运行时、文件系统元数据和远程模型成本未完整分配。服务报告
+输入30,634、输出1,029token，实际账单未知。派生回答不会自升格为原始证据。
+
+本机132项测试：131通过、1项Windows权限跳过。旧归档v1–v6/CAS1保持兼容。
+
+```powershell
+python -m pip install -e .
+python -m rkv1 fetch data/scifact --dataset scifact
+New-Item -ItemType Directory -Force data/memory-source
+Copy-Item data/scifact/corpus.jsonl data/memory-source/corpus.jsonl
+python -m rkv1 memory-init data/my-memory data/memory-source
+python -m rkv1 memory-search data/my-memory "rare genetic variants"
+$env:RKV_LLM_BASE_URL="https://api.deepseek.com"
+$env:RKV_LLM_MODEL="deepseek-flash"
+# RKV_LLM_API_KEY只在本机环境配置；未配置模型时页面仅检索。
+python -m rkv1 memory-serve data/my-memory
+```
+
+浏览器打开 http://127.0.0.1:8765 。手动回答每次会调用API，正式评测不会自动重跑。
+`memory-add`的source为完整新版资料树，旧快照仍保留；当前每快照一份完整索引。
+
+[协议/执行说明](docs/MEMORY.md) · [原始结果与失败分析](results/v0.15.0/SUMMARY.md) ·
+[独立核验](results/v0.15.0/validation.json) ·
+[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.15.0)。
+下一步优先扩大独立问题、诊断弃答/引用选择和检索误差，并降低索引重复成本；
+之后再测长会话、多跳与语义检索，不把存储无损等同于推理无损。
+
+## 跨领域字节重排与代码/数学对照（v0.14.0）
 
 E2复测既有简单字节重排：新增地球物理SAC样例和分子动力学DCD样例，加入完整
 Python源码、LaTeX数学文档作为非数值对照，另保留已见ECG与固定噪声。输入、规则、
@@ -613,10 +666,10 @@ python -m rkv1 pack data/wine data/columns.rkv --codec zlib --transform csv-colu
 | 阶段 | 状态 |
 |---|---|
 | E0 基准 | 完成首版、受控对照和多种子读取评测；仍是单机温缓存 |
-| E1 无损核心 | v1–v6兼容；共享CAS、真实版本复用与Gear分块；默认v2、CAS1保持不变；恢复fsync/掉电持久性未验证 |
+| E1 无损核心 | v1–v6兼容；共享CAS、真实版本复用与Gear分块；默认v2、CAS1保持不变；归档默认逐文件fsync已测，目录/掉电持久性未验证 |
 | E2 类型感知可逆编码 | CSV/小单元/Rust配对、int16/float字节变换、Blosc、FITS布局已测；新布局0/8联合通过，代码/数学待开展 |
 | E3 神经预测 + 熵编码 + 精确残差 | 后续，计入模型和解码成本 |
-| E4 科学记忆、检索、证据回溯与可验证推理 | 后续，尚无质量结果 |
+| E4 科学记忆、检索、证据回溯与可验证推理 | v0.15首个词法检索/API/引用与写回基线；12条配对问题；长会话/多跳/形式证明未测 |
 
 Rust 已用于可选CSV反变换与Gear扫描。传统归档的`--base`复用编码结果，仍写独立
 完整快照；目录CAS可跨版本只存一份对象。两者仍全量读源、计算哈希并验证旧对象。

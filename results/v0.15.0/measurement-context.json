@@ -1,0 +1,30 @@
+{
+  "frozen_candidate_commit": "864e43d079a2114dfdd859d35845ed18f32093be",
+  "candidate_CI_run": 38732541793,
+  "local_test_log_sha256": "5a7f6350b727ea9983f2037f994e7bf5cc504d747e572489143ac755a455d7a7",
+  "fresh_OS_process_CLI_update_and_old_snapshot_isolation": {
+    "current": [
+      "file:memory-update.txt"
+    ],
+    "old": []
+  },
+  "mechanics_field_note": "fresh_process_object_reopen_retrieves_update in original runner is a new Memory instance; separate CLI subprocesses are verified here",
+  "browser_QA": {
+    "url": "http://127.0.0.1:8765",
+    "search_returns_five_verified_sources": true,
+    "locator_expansion_and_Chinese_layout_checked": true,
+    "model_button_disabled_without_env": true,
+    "additional_generation_calls": 0
+  },
+  "UI_QA_credentials": "No key persisted or configured in the running search-only demonstration",
+  "scopes": {
+    "warm_cache_single_host": true,
+    "model_compute": "remote official DeepSeek API",
+    "cold_cache": null,
+    "cross_machine": null,
+    "actual_billed_cost": null
+  },
+  "analysis_editorial_correction": "Both failed claims have gold documents in top5 and complete gold rationale exposed; no retrieval-miss attribution.",
+  "candidate_CI_conclusion": "success",
+  "candidate_CI_url": "https://github.com/StarlitPupils/RKV-1/actions/runs/38732541793"
+}

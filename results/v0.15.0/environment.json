@@ -1,0 +1,8 @@
+{
+  "python": "3.13.12",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "sqlite": "3.51.1",
+  "logical_cpus": 20,
+  "work": "E:\\memorystorage\\.tools\\memory-v015-demo",
+  "model_compute": "Remote user-selected API if enabled; local CPU for storage/retrieval"
+}

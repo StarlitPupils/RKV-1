@@ -186,3 +186,9 @@ v0.12及以前归档解包没有逐文件fsync，历史时序不包含该成本�
 none仍写v2，既有v1–v6读取、CAS1与v0.13归档恢复files语义保持不变。SAC/DCD
 结构扫描只作计时外provenance，不影响编码路由，解码不需要ObsPy/MDAnalysis。
 新增scratch/JSONL是评测选项，不是归档字段。输入源码/TeX不执行或语义规范化。
+
+## v0.15应用层记忆元数据
+
+原始证据沿用CAS1，归档v1–v6无变更。memory/目录的SQLite FTS5索引、版本1清单、
+HEAD及派生answers是应用层元数据，详见[MEMORY.md](MEMORY.md)。每个清单绑定
+CAS快照、源文件和索引SHA；句子引用绑定原记录定位与句子SHA，不是科学蕴含证明。

@@ -1,0 +1,15 @@
+{
+  "source": "SciFact original pinned corpus/dev",
+  "files": {
+    "corpus.jsonl": "b8d6c89624cb2ed74dee8938effc4f5d8bd2086887880af8110d64be4ceade62",
+    "claims_dev.jsonl": "86f0435d08fdb65d1aa41d1472684f57e6e71930626497bdf4d7a9ec1a632217"
+  },
+  "corpus_records": 5183,
+  "dev_claims": 300,
+  "index_contains_only": "corpus.jsonl; no claims or gold labels",
+  "licenses": {
+    "claims_and_annotations": "CC-BY-4.0",
+    "abstracts": "ODC-By-1.0"
+  },
+  "license_source": "https://github.com/allenai/scifact/blob/master/LICENSE.md"
+}

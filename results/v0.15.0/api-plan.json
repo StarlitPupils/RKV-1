@@ -1,0 +1,128 @@
+{
+  "seed": 20261018,
+  "max_generation_calls": 24,
+  "max_output_tokens_per_call": 256,
+  "jobs": [
+    {
+      "claim_id": 49,
+      "retrieval_enabled": true,
+      "gold_verdict": "SUPPORT"
+    },
+    {
+      "claim_id": 13,
+      "retrieval_enabled": false,
+      "gold_verdict": "INSUFFICIENT"
+    },
+    {
+      "claim_id": 72,
+      "retrieval_enabled": false,
+      "gold_verdict": "INSUFFICIENT"
+    },
+    {
+      "claim_id": 51,
+      "retrieval_enabled": false,
+      "gold_verdict": "CONTRADICT"
+    },
+    {
+      "claim_id": 13,
+      "retrieval_enabled": true,
+      "gold_verdict": "INSUFFICIENT"
+    },
+    {
+      "claim_id": 72,
+      "retrieval_enabled": true,
+      "gold_verdict": "INSUFFICIENT"
+    },
+    {
+      "claim_id": 54,
+      "retrieval_enabled": true,
+      "gold_verdict": "CONTRADICT"
+    },
+    {
+      "claim_id": 3,
+      "retrieval_enabled": false,
+      "gold_verdict": "SUPPORT"
+    },
+    {
+      "claim_id": 48,
+      "retrieval_enabled": true,
+      "gold_verdict": "CONTRADICT"
+    },
+    {
+      "claim_id": 42,
+      "retrieval_enabled": false,
+      "gold_verdict": "CONTRADICT"
+    },
+    {
+      "claim_id": 36,
+      "retrieval_enabled": true,
+      "gold_verdict": "INSUFFICIENT"
+    },
+    {
+      "claim_id": 36,
+      "retrieval_enabled": false,
+      "gold_verdict": "INSUFFICIENT"
+    },
+    {
+      "claim_id": 51,
+      "retrieval_enabled": true,
+      "gold_verdict": "CONTRADICT"
+    },
+    {
+      "claim_id": 49,
+      "retrieval_enabled": false,
+      "gold_verdict": "SUPPORT"
+    },
+    {
+      "claim_id": 42,
+      "retrieval_enabled": true,
+      "gold_verdict": "CONTRADICT"
+    },
+    {
+      "claim_id": 3,
+      "retrieval_enabled": true,
+      "gold_verdict": "SUPPORT"
+    },
+    {
+      "claim_id": 50,
+      "retrieval_enabled": true,
+      "gold_verdict": "SUPPORT"
+    },
+    {
+      "claim_id": 5,
+      "retrieval_enabled": true,
+      "gold_verdict": "SUPPORT"
+    },
+    {
+      "claim_id": 1,
+      "retrieval_enabled": true,
+      "gold_verdict": "INSUFFICIENT"
+    },
+    {
+      "claim_id": 1,
+      "retrieval_enabled": false,
+      "gold_verdict": "INSUFFICIENT"
+    },
+    {
+      "claim_id": 54,
+      "retrieval_enabled": false,
+      "gold_verdict": "CONTRADICT"
+    },
+    {
+      "claim_id": 5,
+      "retrieval_enabled": false,
+      "gold_verdict": "SUPPORT"
+    },
+    {
+      "claim_id": 48,
+      "retrieval_enabled": false,
+      "gold_verdict": "CONTRADICT"
+    },
+    {
+      "claim_id": 50,
+      "retrieval_enabled": false,
+      "gold_verdict": "SUPPORT"
+    }
+  ],
+  "baseline": "Same evidence-only responder with empty evidence; not unconstrained closed-book model or mature RAG comparison"
+}

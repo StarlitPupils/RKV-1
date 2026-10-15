@@ -1,5 +1,20 @@
 # 复现实验
 
+## v0.15：证据记忆与真实模型基线
+
+[MEMORY.md](MEMORY.md)及45个Python模块在864e43d冻结后，执行188条主张三轮
+检索及预定12条主张×两条件共24次真实API调用，无重试。分析脚本重建全部请求SHA，
+核对追加日志、原始记录、派生回答身份及gold评分；不保存密钥或完整摘要提示词。
+模型判定与字节引用绑定分开。资源计全部保留快照与完整索引，不称系统净压缩。
+[结果](../results/v0.15.0/SUMMARY.md)。分析不会调用模型：
+
+```powershell
+python -m scripts.analyze_memory results/local-memory --work .tools/local-memory --test-log path/to/test.log --plot
+```
+
+生成结果目录须不存在；分析派生文件须尚未生成，不覆盖正式已发布结果。真实API
+重跑需显式--api，每个新运行最多24次生成；不把合同测试当真实模型实验。
+
 ## v0.14：跨领域与文本对照
 
 [CROSSDOMAIN.md](CROSSDOMAIN.md)于ff73852冻结输入、矩阵与门槛。六组各8条件，

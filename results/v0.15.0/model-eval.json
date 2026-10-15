@@ -1,0 +1,2303 @@
+{
+  "enabled": true,
+  "planned_generation_calls": 24,
+  "completed_generation_calls": 24,
+  "complete": true,
+  "records": [
+    {
+      "order": 0,
+      "claim_id": 49,
+      "record": {
+        "question": "ADAR1 binds to Dicer to cleave pre-miRNA.",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "retrieval_wall_s": 0.02972629999567289,
+        "retrieved_keys": [
+          "doc:5953485",
+          "doc:5702790",
+          "doc:15590539",
+          "doc:7029990",
+          "doc:6913227"
+        ],
+        "prompt_sha256": "a726540d80cfc05af813f480f96ba005f3b926a6b455bf03e5a6b6c492ddf969",
+        "exposed_sentences": {
+          "doc:5953485": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "doc:5702790": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "doc:15590539": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "doc:7029990": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "doc:6913227": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        "model": "deepseek-flash",
+        "endpoint_sha256": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+        "max_tokens": 256,
+        "model_weights_and_runtime_bytes": null,
+        "api_calls": 1,
+        "accepted": true,
+        "answer": {
+          "verdict": "SUPPORT",
+          "explanation": "D0 states ADAR1 forms a complex with Dicer and increases pre-miRNA cleavage rate, supporting the claim.",
+          "evidence": [
+            {
+              "citation_id": "D0",
+              "sentence": 1,
+              "key": "doc:5953485",
+              "locator": {
+                "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+                "path": "corpus.jsonl",
+                "offset": 1752633,
+                "length": 1152,
+                "sha256": "9fb3ceec04fde73840b24b8ab61db03ad50e9f728a6d9c5eea3cdf9c30bc5058"
+              },
+              "sentence_sha256": "90e4566b630a6d93bd0225facef6658ef32fbc76ab31d8d7a0adad889ebb9074"
+            },
+            {
+              "citation_id": "D0",
+              "sentence": 2,
+              "key": "doc:5953485",
+              "locator": {
+                "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+                "path": "corpus.jsonl",
+                "offset": 1752633,
+                "length": 1152,
+                "sha256": "9fb3ceec04fde73840b24b8ab61db03ad50e9f728a6d9c5eea3cdf9c30bc5058"
+              },
+              "sentence_sha256": "e658ccb5d34560a290227015b7f7116d5cefd8fcbaef9fbe29b0289d171aa482"
+            }
+          ],
+          "citation_binding_valid": true,
+          "scientific_entailment_verified": false
+        },
+        "usage": {
+          "prompt_tokens": 1841,
+          "completion_tokens": 61,
+          "total_tokens": 1902,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 1841
+        },
+        "retrieval_enabled": true,
+        "request_extra_body": {
+          "thinking": {
+            "type": "disabled"
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "raw_model_content": "{\"verdict\":\"SUPPORT\",\"evidence\":[{\"citation_id\":\"D0\",\"sentence\":1},{\"citation_id\":\"D0\",\"sentence\":2}],\"explanation\":\"D0 states ADAR1 forms a complex with Dicer and increases pre-miRNA cleavage rate, supporting the claim.\"}",
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "model_wall_s": 0.7565411000105087,
+        "writeback": {
+          "answer_id": "823827cb9fcfc6fed096692b10c83a8005e971b370e5e2e83e62855b9802dd21",
+          "bytes": 2389,
+          "primary_evidence": false
+        }
+      },
+      "score": {
+        "gold_verdict": "SUPPORT",
+        "verdict_correct": true,
+        "complete_gold_rationale_cited": true,
+        "grounded_correct": true
+      }
+    },
+    {
+      "order": 1,
+      "claim_id": 13,
+      "record": {
+        "question": "5% of perinatal mortality is due to low birth weight.",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "retrieval_wall_s": 0,
+        "retrieved_keys": [],
+        "prompt_sha256": "28ed21a8d10ee3285d5a31112a8482efe609772448ec00b3af0dc28d804d4bd7",
+        "exposed_sentences": {},
+        "model": "deepseek-flash",
+        "endpoint_sha256": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+        "max_tokens": 256,
+        "model_weights_and_runtime_bytes": null,
+        "api_calls": 1,
+        "accepted": true,
+        "answer": {
+          "verdict": "INSUFFICIENT",
+          "explanation": "No evidence provided to support or contradict the claim.",
+          "evidence": [],
+          "citation_binding_valid": true,
+          "scientific_entailment_verified": false
+        },
+        "usage": {
+          "prompt_tokens": 162,
+          "completion_tokens": 28,
+          "total_tokens": 190,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 162
+        },
+        "retrieval_enabled": false,
+        "request_extra_body": {
+          "thinking": {
+            "type": "disabled"
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "raw_model_content": "{\"verdict\":\"INSUFFICIENT\",\"evidence\":[],\"explanation\":\"No evidence provided to support or contradict the claim.\"}",
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "model_wall_s": 0.6429065999982413,
+        "writeback": {
+          "answer_id": "37c5c07a18a3ec600668ccdd7da1d8ba47d72200208a323f31843e0dc4270302",
+          "bytes": 1279,
+          "primary_evidence": false
+        }
+      },
+      "score": {
+        "gold_verdict": "INSUFFICIENT",
+        "verdict_correct": true,
+        "complete_gold_rationale_cited": false,
+        "grounded_correct": true
+      }
+    },
+    {
+      "order": 2,
+      "claim_id": 72,
+      "record": {
+        "question": "Activator-inhibitor pairs are provided dorsally by Admpchordin.",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "retrieval_wall_s": 0,
+        "retrieved_keys": [],
+        "prompt_sha256": "e3e79094f277732cb28b94cd88dc8698f4abb990615e2c8f031b67e6386632ae",
+        "exposed_sentences": {},
+        "model": "deepseek-flash",
+        "endpoint_sha256": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+        "max_tokens": 256,
+        "model_weights_and_runtime_bytes": null,
+        "api_calls": 1,
+        "accepted": true,
+        "answer": {
+          "verdict": "INSUFFICIENT",
+          "explanation": "No evidence supplied to support or contradict the claim.",
+          "evidence": [],
+          "citation_binding_valid": true,
+          "scientific_entailment_verified": false
+        },
+        "usage": {
+          "prompt_tokens": 166,
+          "completion_tokens": 28,
+          "total_tokens": 194,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 166
+        },
+        "retrieval_enabled": false,
+        "request_extra_body": {
+          "thinking": {
+            "type": "disabled"
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "raw_model_content": "{\"verdict\":\"INSUFFICIENT\",\"evidence\":[],\"explanation\":\"No evidence supplied to support or contradict the claim.\"}",
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "model_wall_s": 0.8623143000004347,
+        "writeback": {
+          "answer_id": "778be3e69c1f94a2006aca5f413e84c1959e07acc2613b1988bc57409380f002",
+          "bytes": 1289,
+          "primary_evidence": false
+        }
+      },
+      "score": {
+        "gold_verdict": "INSUFFICIENT",
+        "verdict_correct": true,
+        "complete_gold_rationale_cited": false,
+        "grounded_correct": true
+      }
+    },
+    {
+      "order": 3,
+      "claim_id": 51,
+      "record": {
+        "question": "ALDH1 expression is associated with better breast cancer outcomes.",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "retrieval_wall_s": 0,
+        "retrieved_keys": [],
+        "prompt_sha256": "b9645144236644b602eccf0f684e3444bbf40d3884d0a20ce66a498ce2a9b69c",
+        "exposed_sentences": {},
+        "model": "deepseek-flash",
+        "endpoint_sha256": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+        "max_tokens": 256,
+        "model_weights_and_runtime_bytes": null,
+        "api_calls": 1,
+        "accepted": true,
+        "answer": {
+          "verdict": "INSUFFICIENT",
+          "explanation": "No evidence supplied to establish whether ALDH1 expression is associated with better or worse breast cancer outcomes.",
+          "evidence": [],
+          "citation_binding_valid": true,
+          "scientific_entailment_verified": false
+        },
+        "usage": {
+          "prompt_tokens": 162,
+          "completion_tokens": 38,
+          "total_tokens": 200,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 162
+        },
+        "retrieval_enabled": false,
+        "request_extra_body": {
+          "thinking": {
+            "type": "disabled"
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "raw_model_content": "{\"verdict\":\"INSUFFICIENT\",\"evidence\":[],\"explanation\":\"No evidence supplied to establish whether ALDH1 expression is associated with better or worse breast cancer outcomes.\"}",
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "model_wall_s": 0.6037973999918904,
+        "writeback": {
+          "answer_id": "02dd7f000ce4e3f8070038081a0ce7199e32ee153f1cce9e628e5066c2c69b45",
+          "bytes": 1414,
+          "primary_evidence": false
+        }
+      },
+      "score": {
+        "gold_verdict": "CONTRADICT",
+        "verdict_correct": false,
+        "complete_gold_rationale_cited": false,
+        "grounded_correct": false
+      }
+    },
+    {
+      "order": 4,
+      "claim_id": 13,
+      "record": {
+        "question": "5% of perinatal mortality is due to low birth weight.",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "retrieval_wall_s": 0.030705900004249997,
+        "retrieved_keys": [
+          "doc:7662395",
+          "doc:1263446",
+          "doc:17450673",
+          "doc:30786800",
+          "doc:8842332"
+        ],
+        "prompt_sha256": "f5d374ee589ca5d7347f2e839e0a661e3d827fed6de98cd75800dd137db7d737",
+        "exposed_sentences": {
+          "doc:7662395": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "doc:1263446": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "doc:17450673": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "doc:30786800": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "doc:8842332": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        "model": "deepseek-flash",
+        "endpoint_sha256": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+        "max_tokens": 256,
+        "model_weights_and_runtime_bytes": null,
+        "api_calls": 1,
+        "accepted": true,
+        "answer": {
+          "verdict": "INSUFFICIENT",
+          "explanation": "No supplied sentence states that 5% of perinatal mortality is due to low birth weight; evidence does not establish this claim.",
+          "evidence": [],
+          "citation_binding_valid": true,
+          "scientific_entailment_verified": false
+        },
+        "usage": {
+          "prompt_tokens": 3648,
+          "completion_tokens": 43,
+          "total_tokens": 3691,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 3520
+        },
+        "retrieval_enabled": true,
+        "request_extra_body": {
+          "thinking": {
+            "type": "disabled"
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "raw_model_content": "{\"verdict\":\"INSUFFICIENT\",\"evidence\":[],\"explanation\":\"No supplied sentence states that 5% of perinatal mortality is due to low birth weight; evidence does not establish this claim.\"}",
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "model_wall_s": 0.6019410000008065,
+        "writeback": {
+          "answer_id": "bbdc8050d37904e1bcf812779bf570ae3804e6de8b5246066c1cc6eb00ca9346",
+          "bytes": 1729,
+          "primary_evidence": false
+        }
+      },
+      "score": {
+        "gold_verdict": "INSUFFICIENT",
+        "verdict_correct": true,
+        "complete_gold_rationale_cited": false,
+        "grounded_correct": true
+      }
+    },
+    {
+      "order": 5,
+      "claim_id": 72,
+      "record": {
+        "question": "Activator-inhibitor pairs are provided dorsally by Admpchordin.",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "retrieval_wall_s": 0.04432559999986552,
+        "retrieved_keys": [
+          "doc:1031534",
+          "doc:6076903",
+          "doc:10666475",
+          "doc:38380061",
+          "doc:1275505"
+        ],
+        "prompt_sha256": "4963cfae61a6fd206fe5d584589f79d7df739a098e2920866d3bea3663a3fc65",
+        "exposed_sentences": {
+          "doc:1031534": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "doc:6076903": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "doc:10666475": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "doc:38380061": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "doc:1275505": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        "model": "deepseek-flash",
+        "endpoint_sha256": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+        "max_tokens": 256,
+        "model_weights_and_runtime_bytes": null,
+        "api_calls": 1,
+        "accepted": true,
+        "answer": {
+          "verdict": "INSUFFICIENT",
+          "explanation": "No supplied sentence mentions Admpchordin or states that activator-inhibitor pairs are provided dorsally by it.",
+          "evidence": [],
+          "citation_binding_valid": true,
+          "scientific_entailment_verified": false
+        },
+        "usage": {
+          "prompt_tokens": 2121,
+          "completion_tokens": 41,
+          "total_tokens": 2162,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1993
+        },
+        "retrieval_enabled": true,
+        "request_extra_body": {
+          "thinking": {
+            "type": "disabled"
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "raw_model_content": "{\"verdict\":\"INSUFFICIENT\",\"evidence\":[],\"explanation\":\"No supplied sentence mentions Admpchordin or states that activator-inhibitor pairs are provided dorsally by it.\"}",
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "model_wall_s": 0.8143987999937963,
+        "writeback": {
+          "answer_id": "d2eda0e0d2cec0adc3d48b6d07a5a899c77c43dc275e7bba8d5b346555ca1a98",
+          "bytes": 1659,
+          "primary_evidence": false
+        }
+      },
+      "score": {
+        "gold_verdict": "INSUFFICIENT",
+        "verdict_correct": true,
+        "complete_gold_rationale_cited": false,
+        "grounded_correct": true
+      }
+    },
+    {
+      "order": 6,
+      "claim_id": 54,
+      "record": {
+        "question": "AMP-activated protein kinase (AMPK) activation increases inflammation-related fibrosis in the lungs.",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "retrieval_wall_s": 0.05250960000557825,
+        "retrieved_keys": [
+          "doc:49556906",
+          "doc:3973445",
+          "doc:3419709",
+          "doc:9899292",
+          "doc:1590744"
+        ],
+        "prompt_sha256": "092730d9326da200b3173e790a363e436f60649090373f85ae50306e6c389ec4",
+        "exposed_sentences": {
+          "doc:49556906": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "doc:3973445": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "doc:3419709": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "doc:9899292": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "doc:1590744": [
+            0,
+            1,
+            2
+          ]
+        },
+        "model": "deepseek-flash",
+        "endpoint_sha256": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+        "max_tokens": 256,
+        "model_weights_and_runtime_bytes": null,
+        "api_calls": 1,
+        "accepted": true,
+        "answer": {
+          "verdict": "CONTRADICT",
+          "explanation": "Evidence shows AMPK activation reduces fibrosis and suppresses inflammation, contradicting the claim that it increases inflammation-related fibrosis.",
+          "evidence": [
+            {
+              "citation_id": "D0",
+              "sentence": 4,
+              "key": "doc:49556906",
+              "locator": {
+                "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+                "path": "corpus.jsonl",
+                "offset": 8044760,
+                "length": 1431,
+                "sha256": "dc35397b94deac3f3c10225c27842a20233cbe4a09d066a9ef262bb3a6865c98"
+              },
+              "sentence_sha256": "0bb37b013d67200551fe6c8cb056ee9fb29e322efceb9b5cb20452c88d5f39f5"
+            },
+            {
+              "citation_id": "D0",
+              "sentence": 5,
+              "key": "doc:49556906",
+              "locator": {
+                "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+                "path": "corpus.jsonl",
+                "offset": 8044760,
+                "length": 1431,
+                "sha256": "dc35397b94deac3f3c10225c27842a20233cbe4a09d066a9ef262bb3a6865c98"
+              },
+              "sentence_sha256": "8bcc6637dce6c9798a8528b5db6abaeedbfe63b23cde0d78daac733df7bd3b82"
+            },
+            {
+              "citation_id": "D0",
+              "sentence": 6,
+              "key": "doc:49556906",
+              "locator": {
+                "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+                "path": "corpus.jsonl",
+                "offset": 8044760,
+                "length": 1431,
+                "sha256": "dc35397b94deac3f3c10225c27842a20233cbe4a09d066a9ef262bb3a6865c98"
+              },
+              "sentence_sha256": "1b1fee6d1e7ecc3e77a4ab9a1475c2718d87b600ba09b7ea9034157c058ff6ec"
+            },
+            {
+              "citation_id": "D1",
+              "sentence": 1,
+              "key": "doc:3973445",
+              "locator": {
+                "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+                "path": "corpus.jsonl",
+                "offset": 1127769,
+                "length": 1693,
+                "sha256": "1f6f1f73e8fb7436c71a2e9a3cf48353b221b0fad599aacbc67295147ce2dbaa"
+              },
+              "sentence_sha256": "fe591c5c1d0ddc416122dc1e783b709faf60d930779a4730f5ce850f0d8f9373"
+            }
+          ],
+          "citation_binding_valid": true,
+          "scientific_entailment_verified": false
+        },
+        "usage": {
+          "prompt_tokens": 1966,
+          "completion_tokens": 83,
+          "total_tokens": 2049,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1838
+        },
+        "retrieval_enabled": true,
+        "request_extra_body": {
+          "thinking": {
+            "type": "disabled"
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "raw_model_content": "{\"verdict\":\"CONTRADICT\",\"evidence\":[{\"citation_id\":\"D0\",\"sentence\":4},{\"citation_id\":\"D0\",\"sentence\":5},{\"citation_id\":\"D0\",\"sentence\":6},{\"citation_id\":\"D1\",\"sentence\":1}],\"explanation\":\"Evidence shows AMPK activation reduces fibrosis and suppresses inflammation, contradicting the claim that it increases inflammation-related fibrosis.\"}",
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "model_wall_s": 1.0666294999973616,
+        "writeback": {
+          "answer_id": "7271e827399317de7bf8cef14ef8225582610e55d6ca3e8c6ae1cab244626998",
+          "bytes": 3361,
+          "primary_evidence": false
+        }
+      },
+      "score": {
+        "gold_verdict": "CONTRADICT",
+        "verdict_correct": true,
+        "complete_gold_rationale_cited": true,
+        "grounded_correct": true
+      }
+    },
+    {
+      "order": 7,
+      "claim_id": 3,
+      "record": {
+        "question": "1,000 genomes project enables mapping of genetic sequence variation consisting of rare variants with larger penetrance effects than common variants.",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "retrieval_wall_s": 0,
+        "retrieved_keys": [],
+        "prompt_sha256": "aa3e39c56e1011cb17560a22944d0d516729d977e4147507b856edc82bdca874",
+        "exposed_sentences": {},
+        "model": "deepseek-flash",
+        "endpoint_sha256": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+        "max_tokens": 256,
+        "model_weights_and_runtime_bytes": null,
+        "api_calls": 1,
+        "accepted": true,
+        "answer": {
+          "verdict": "INSUFFICIENT",
+          "explanation": "No evidence supplied to support or contradict the claim about the 1,000 Genomes Project and rare versus common variant penetrance.",
+          "evidence": [],
+          "citation_binding_valid": true,
+          "scientific_entailment_verified": false
+        },
+        "usage": {
+          "prompt_tokens": 174,
+          "completion_tokens": 44,
+          "total_tokens": 218,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 174
+        },
+        "retrieval_enabled": false,
+        "request_extra_body": {
+          "thinking": {
+            "type": "disabled"
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "raw_model_content": "{\"verdict\":\"INSUFFICIENT\",\"evidence\":[],\"explanation\":\"No evidence supplied to support or contradict the claim about the 1,000 Genomes Project and rare versus common variant penetrance.\"}",
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "model_wall_s": 0.8824693000060506,
+        "writeback": {
+          "answer_id": "12679426685a11a4be278133458d0677cae22a9e10a4f678960e0456f89a5b7b",
+          "bytes": 1522,
+          "primary_evidence": false
+        }
+      },
+      "score": {
+        "gold_verdict": "SUPPORT",
+        "verdict_correct": false,
+        "complete_gold_rationale_cited": false,
+        "grounded_correct": false
+      }
+    },
+    {
+      "order": 8,
+      "claim_id": 48,
+      "record": {
+        "question": "A total of 1,000 people in the UK are asymptomatic carriers of vCJD infection.",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "retrieval_wall_s": 0.029568099998869002,
+        "retrieved_keys": [
+          "doc:18617259",
+          "doc:13734012",
+          "doc:11349166",
+          "doc:18340282",
+          "doc:18344910"
+        ],
+        "prompt_sha256": "a9ec1840463a52355e7743d0d4fd9034e59302aec7236c81931283e79c91530f",
+        "exposed_sentences": {
+          "doc:18617259": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "doc:13734012": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "doc:11349166": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "doc:18340282": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "doc:18344910": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        "model": "deepseek-flash",
+        "endpoint_sha256": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+        "max_tokens": 256,
+        "model_weights_and_runtime_bytes": null,
+        "api_calls": 1,
+        "accepted": true,
+        "answer": {
+          "verdict": "INSUFFICIENT",
+          "explanation": "Evidence gives prevalence 493 per million, not a total of 1,000 people; no supplied sentence states that figure.",
+          "evidence": [
+            {
+              "citation_id": "D1",
+              "sentence": 4,
+              "key": "doc:13734012",
+              "locator": {
+                "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+                "path": "corpus.jsonl",
+                "offset": 3579212,
+                "length": 2230,
+                "sha256": "735f4f04e4c24a6d08558ed4bfb9f14464215f5ec787eeb561be413219d8bb93"
+              },
+              "sentence_sha256": "a1d8bd2633b294cb499a35a7fa529158688ea54edf9560e29db5bae8715e3a83"
+            }
+          ],
+          "citation_binding_valid": true,
+          "scientific_entailment_verified": false
+        },
+        "usage": {
+          "prompt_tokens": 2453,
+          "completion_tokens": 54,
+          "total_tokens": 2507,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 2325
+        },
+        "retrieval_enabled": true,
+        "request_extra_body": {
+          "thinking": {
+            "type": "disabled"
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "raw_model_content": "{\"verdict\":\"INSUFFICIENT\",\"evidence\":[{\"citation_id\":\"D1\",\"sentence\":4}],\"explanation\":\"Evidence gives prevalence 493 per million, not a total of 1,000 people; no supplied sentence states that figure.\"}",
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "model_wall_s": 1.11059500000556,
+        "writeback": {
+          "answer_id": "a99789fe174b67935d84a82887c5e6d22375ba26ebfdd67ed63d7f5810839598",
+          "bytes": 2085,
+          "primary_evidence": false
+        }
+      },
+      "score": {
+        "gold_verdict": "CONTRADICT",
+        "verdict_correct": false,
+        "complete_gold_rationale_cited": true,
+        "grounded_correct": false
+      }
+    },
+    {
+      "order": 9,
+      "claim_id": 42,
+      "record": {
+        "question": "A high microerythrocyte count raises vulnerability to severe anemia in homozygous alpha (+)- thalassemia trait subjects.",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "retrieval_wall_s": 0,
+        "retrieved_keys": [],
+        "prompt_sha256": "2d97968fe98e85a8818d68c2153d52cf51adf2d12f9a55c7dbb905fbd9d8c02e",
+        "exposed_sentences": {},
+        "model": "deepseek-flash",
+        "endpoint_sha256": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+        "max_tokens": 256,
+        "model_weights_and_runtime_bytes": null,
+        "api_calls": 1,
+        "accepted": true,
+        "answer": {
+          "verdict": "INSUFFICIENT",
+          "explanation": "No evidence supplied to evaluate the claim.",
+          "evidence": [],
+          "citation_binding_valid": true,
+          "scientific_entailment_verified": false
+        },
+        "usage": {
+          "prompt_tokens": 173,
+          "completion_tokens": 26,
+          "total_tokens": 199,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 173
+        },
+        "retrieval_enabled": false,
+        "request_extra_body": {
+          "thinking": {
+            "type": "disabled"
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "raw_model_content": "{\"verdict\":\"INSUFFICIENT\",\"evidence\":[],\"explanation\":\"No evidence supplied to evaluate the claim.\"}",
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "model_wall_s": 1.0164440000080504,
+        "writeback": {
+          "answer_id": "b9a9dd7b451b71207c62378c80a0d9d27ccbdb7fd58bb4df9208ab0375346729",
+          "bytes": 1320,
+          "primary_evidence": false
+        }
+      },
+      "score": {
+        "gold_verdict": "CONTRADICT",
+        "verdict_correct": false,
+        "complete_gold_rationale_cited": false,
+        "grounded_correct": false
+      }
+    },
+    {
+      "order": 10,
+      "claim_id": 36,
+      "record": {
+        "question": "A deficiency of vitamin B12 increases blood levels of homocysteine.",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "retrieval_wall_s": 0.0355066999909468,
+        "retrieved_keys": [
+          "doc:42441846",
+          "doc:33409100",
+          "doc:16252863",
+          "doc:18557974",
+          "doc:37424881"
+        ],
+        "prompt_sha256": "54355ecadd607bc8727ec18f90f9d37fdb701d5b7c03fb5627dfa25a2ef2816c",
+        "exposed_sentences": {
+          "doc:42441846": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "doc:33409100": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "doc:16252863": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "doc:18557974": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "doc:37424881": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        "model": "deepseek-flash",
+        "endpoint_sha256": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+        "max_tokens": 256,
+        "model_weights_and_runtime_bytes": null,
+        "api_calls": 1,
+        "accepted": true,
+        "answer": {
+          "verdict": "INSUFFICIENT",
+          "explanation": "No supplied sentence directly states that vitamin B12 deficiency increases homocysteine levels.",
+          "evidence": [],
+          "citation_binding_valid": true,
+          "scientific_entailment_verified": false
+        },
+        "usage": {
+          "prompt_tokens": 3341,
+          "completion_tokens": 34,
+          "total_tokens": 3375,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 3213
+        },
+        "retrieval_enabled": true,
+        "request_extra_body": {
+          "thinking": {
+            "type": "disabled"
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "raw_model_content": "{\"verdict\":\"INSUFFICIENT\",\"evidence\":[],\"explanation\":\"No supplied sentence directly states that vitamin B12 deficiency increases homocysteine levels.\"}",
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "model_wall_s": 1.5425003999989713,
+        "writeback": {
+          "answer_id": "d58e3f528c46323345c22bc8e036a542d9fab790c81cf7e61afba3dd3602d0ad",
+          "bytes": 1671,
+          "primary_evidence": false
+        }
+      },
+      "score": {
+        "gold_verdict": "INSUFFICIENT",
+        "verdict_correct": true,
+        "complete_gold_rationale_cited": false,
+        "grounded_correct": true
+      }
+    },
+    {
+      "order": 11,
+      "claim_id": 36,
+      "record": {
+        "question": "A deficiency of vitamin B12 increases blood levels of homocysteine.",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "retrieval_wall_s": 0,
+        "retrieved_keys": [],
+        "prompt_sha256": "a73a50b5529867a6389970551c292f5caa91ecbf060043471fb046216515a7f5",
+        "exposed_sentences": {},
+        "model": "deepseek-flash",
+        "endpoint_sha256": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+        "max_tokens": 256,
+        "model_weights_and_runtime_bytes": null,
+        "api_calls": 1,
+        "accepted": true,
+        "answer": {
+          "verdict": "INSUFFICIENT",
+          "explanation": "No evidence supplied to establish whether vitamin B12 deficiency affects homocysteine levels.",
+          "evidence": [],
+          "citation_binding_valid": true,
+          "scientific_entailment_verified": false
+        },
+        "usage": {
+          "prompt_tokens": 164,
+          "completion_tokens": 34,
+          "total_tokens": 198,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 164
+        },
+        "retrieval_enabled": false,
+        "request_extra_body": {
+          "thinking": {
+            "type": "disabled"
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "raw_model_content": "{\"verdict\":\"INSUFFICIENT\",\"evidence\":[],\"explanation\":\"No evidence supplied to establish whether vitamin B12 deficiency affects homocysteine levels.\"}",
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "model_wall_s": 1.0588250000000698,
+        "writeback": {
+          "answer_id": "f6ef437e1d554df74451ffc5989171d23ea6a080c8c034d5385c515860f78632",
+          "bytes": 1367,
+          "primary_evidence": false
+        }
+      },
+      "score": {
+        "gold_verdict": "INSUFFICIENT",
+        "verdict_correct": true,
+        "complete_gold_rationale_cited": false,
+        "grounded_correct": true
+      }
+    },
+    {
+      "order": 12,
+      "claim_id": 51,
+      "record": {
+        "question": "ALDH1 expression is associated with better breast cancer outcomes.",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "retrieval_wall_s": 0.05016769999929238,
+        "retrieved_keys": [
+          "doc:45638119",
+          "doc:8963413",
+          "doc:24341590",
+          "doc:7821634",
+          "doc:313403"
+        ],
+        "prompt_sha256": "b034d3f90182168e4ede055fa400924d8b33ece1292f9d61f2ee9d2c2b73f07b",
+        "exposed_sentences": {
+          "doc:45638119": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "doc:8963413": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "doc:24341590": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "doc:7821634": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "doc:313403": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        "model": "deepseek-flash",
+        "endpoint_sha256": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+        "max_tokens": 256,
+        "model_weights_and_runtime_bytes": null,
+        "api_calls": 1,
+        "accepted": true,
+        "answer": {
+          "verdict": "CONTRADICT",
+          "explanation": "Evidence states ALDH1 expression correlated with poor prognosis in 577 breast carcinomas, contradicting the claim that it is associated with better outcomes.",
+          "evidence": [
+            {
+              "citation_id": "D0",
+              "sentence": 4,
+              "key": "doc:45638119",
+              "locator": {
+                "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+                "path": "corpus.jsonl",
+                "offset": 7976675,
+                "length": 1216,
+                "sha256": "5d1acbb560b7f59bfc5019f41bc18332c249dbf5c5878015cd95fc7edcb6355d"
+              },
+              "sentence_sha256": "dadb76b5a6380749869898c8e6164f6977e845bc7df78d1c9892d2e197400ab6"
+            }
+          ],
+          "citation_binding_valid": true,
+          "scientific_entailment_verified": false
+        },
+        "usage": {
+          "prompt_tokens": 2575,
+          "completion_tokens": 56,
+          "total_tokens": 2631,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 2447
+        },
+        "retrieval_enabled": true,
+        "request_extra_body": {
+          "thinking": {
+            "type": "disabled"
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "raw_model_content": "{\"verdict\":\"CONTRADICT\",\"evidence\":[{\"citation_id\":\"D0\",\"sentence\":4}],\"explanation\":\"Evidence states ALDH1 expression correlated with poor prognosis in 577 breast carcinomas, contradicting the claim that it is associated with better outcomes.\"}",
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "model_wall_s": 0.813445399995544,
+        "writeback": {
+          "answer_id": "88bb2e233d2094b3e237f48604543b3314492938db6cf49a570ad032432a46e5",
+          "bytes": 2168,
+          "primary_evidence": false
+        }
+      },
+      "score": {
+        "gold_verdict": "CONTRADICT",
+        "verdict_correct": true,
+        "complete_gold_rationale_cited": true,
+        "grounded_correct": true
+      }
+    },
+    {
+      "order": 13,
+      "claim_id": 49,
+      "record": {
+        "question": "ADAR1 binds to Dicer to cleave pre-miRNA.",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "retrieval_wall_s": 0,
+        "retrieved_keys": [],
+        "prompt_sha256": "62d40a67278cbf21792cfa5e990a483b9042edd20a978f4a361b5b3f95b7d995",
+        "exposed_sentences": {},
+        "model": "deepseek-flash",
+        "endpoint_sha256": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+        "max_tokens": 256,
+        "model_weights_and_runtime_bytes": null,
+        "api_calls": 1,
+        "accepted": true,
+        "answer": {
+          "verdict": "INSUFFICIENT",
+          "explanation": "No evidence provided to support or contradict the claim.",
+          "evidence": [],
+          "citation_binding_valid": true,
+          "scientific_entailment_verified": false
+        },
+        "usage": {
+          "prompt_tokens": 164,
+          "completion_tokens": 28,
+          "total_tokens": 192,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 164
+        },
+        "retrieval_enabled": false,
+        "request_extra_body": {
+          "thinking": {
+            "type": "disabled"
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "raw_model_content": "{\"verdict\":\"INSUFFICIENT\",\"evidence\":[],\"explanation\":\"No evidence provided to support or contradict the claim.\"}",
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "model_wall_s": 0.8550795000046492,
+        "writeback": {
+          "answer_id": "6521e027fcd57af7e383ea5320dd8885bd445be0bced17b05a2325b2cd66b653",
+          "bytes": 1267,
+          "primary_evidence": false
+        }
+      },
+      "score": {
+        "gold_verdict": "SUPPORT",
+        "verdict_correct": false,
+        "complete_gold_rationale_cited": false,
+        "grounded_correct": false
+      }
+    },
+    {
+      "order": 14,
+      "claim_id": 42,
+      "record": {
+        "question": "A high microerythrocyte count raises vulnerability to severe anemia in homozygous alpha (+)- thalassemia trait subjects.",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "retrieval_wall_s": 0.04186130000744015,
+        "retrieved_keys": [
+          "doc:40913091",
+          "doc:18174210",
+          "doc:4449524",
+          "doc:17821387",
+          "doc:45218443"
+        ],
+        "prompt_sha256": "dc0f2d321951b484d71498b65d57159c745e62b6ad51a4dff91a73ba0587da5f",
+        "exposed_sentences": {
+          "doc:40913091": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "doc:18174210": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "doc:4449524": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "doc:17821387": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "doc:45218443": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "model": "deepseek-flash",
+        "endpoint_sha256": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+        "max_tokens": 256,
+        "model_weights_and_runtime_bytes": null,
+        "api_calls": 1,
+        "accepted": true,
+        "answer": {
+          "verdict": "CONTRADICT",
+          "explanation": "Evidence shows homozygous alpha(+)-thalassaemia with increased microerythrocyte count protects against severe malarial anaemia, contradicting the claim that it raises vulnerability.",
+          "evidence": [
+            {
+              "citation_id": "D1",
+              "sentence": 2,
+              "key": "doc:18174210",
+              "locator": {
+                "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+                "path": "corpus.jsonl",
+                "offset": 4512224,
+                "length": 2916,
+                "sha256": "219fb8a1900bc11a62ff20fa091f2767055606b7d722bc1d4a3ffbcc62a30221"
+              },
+              "sentence_sha256": "741ea8269ae3568af3c04de0afdd0b5aaa800f59bd2dcf90a295b930aa3d3182"
+            },
+            {
+              "citation_id": "D1",
+              "sentence": 10,
+              "key": "doc:18174210",
+              "locator": {
+                "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+                "path": "corpus.jsonl",
+                "offset": 4512224,
+                "length": 2916,
+                "sha256": "219fb8a1900bc11a62ff20fa091f2767055606b7d722bc1d4a3ffbcc62a30221"
+              },
+              "sentence_sha256": "296a2e6c378e768335acb5cefaf5d6db7ab792be03db4d3db5451dfe952324cc"
+            }
+          ],
+          "citation_binding_valid": true,
+          "scientific_entailment_verified": false
+        },
+        "usage": {
+          "prompt_tokens": 3053,
+          "completion_tokens": 72,
+          "total_tokens": 3125,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 2925
+        },
+        "retrieval_enabled": true,
+        "request_extra_body": {
+          "thinking": {
+            "type": "disabled"
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "raw_model_content": "{\"verdict\":\"CONTRADICT\",\"evidence\":[{\"citation_id\":\"D1\",\"sentence\":2},{\"citation_id\":\"D1\",\"sentence\":10}],\"explanation\":\"Evidence shows homozygous alpha(+)-thalassaemia with increased microerythrocyte count protects against severe malarial anaemia, contradicting the claim that it raises vulnerability.\"}",
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "model_wall_s": 0.7859633000043686,
+        "writeback": {
+          "answer_id": "bd4fc12bc5508fb4f6080c253aedbbaecd1ee52e2738d4b1525539e9ea641eab",
+          "bytes": 2689,
+          "primary_evidence": false
+        }
+      },
+      "score": {
+        "gold_verdict": "CONTRADICT",
+        "verdict_correct": true,
+        "complete_gold_rationale_cited": true,
+        "grounded_correct": true
+      }
+    },
+    {
+      "order": 15,
+      "claim_id": 3,
+      "record": {
+        "question": "1,000 genomes project enables mapping of genetic sequence variation consisting of rare variants with larger penetrance effects than common variants.",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "retrieval_wall_s": 0.04164239999954589,
+        "retrieved_keys": [
+          "doc:4378885",
+          "doc:14717500",
+          "doc:19058822",
+          "doc:2739854",
+          "doc:3672261"
+        ],
+        "prompt_sha256": "5d5834f70cfc9bc251f03e8b706d9e5fab8c750b9ccfbd41519643e0c42bea3b",
+        "exposed_sentences": {
+          "doc:4378885": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "doc:14717500": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "doc:19058822": [
+            0,
+            1,
+            2
+          ],
+          "doc:2739854": [
+            0,
+            1,
+            2
+          ],
+          "doc:3672261": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        "model": "deepseek-flash",
+        "endpoint_sha256": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+        "max_tokens": 256,
+        "model_weights_and_runtime_bytes": null,
+        "api_calls": 1,
+        "accepted": true,
+        "answer": {
+          "verdict": "INSUFFICIENT",
+          "explanation": "No supplied evidence mentions the 1,000 Genomes Project or compares penetrance effects of rare versus common variants.",
+          "evidence": [],
+          "citation_binding_valid": true,
+          "scientific_entailment_verified": false
+        },
+        "usage": {
+          "prompt_tokens": 1695,
+          "completion_tokens": 41,
+          "total_tokens": 1736,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1567
+        },
+        "retrieval_enabled": true,
+        "request_extra_body": {
+          "thinking": {
+            "type": "disabled"
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "raw_model_content": "{\"verdict\":\"INSUFFICIENT\",\"evidence\":[],\"explanation\":\"No supplied evidence mentions the 1,000 Genomes Project or compares penetrance effects of rare versus common variants.\"}",
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "model_wall_s": 0.8646496000001207,
+        "writeback": {
+          "answer_id": "5bdfafcd7744fd796703aa8a3c1ee00c664ddafbc6161d42cc88b621fbe2a117",
+          "bytes": 1732,
+          "primary_evidence": false
+        }
+      },
+      "score": {
+        "gold_verdict": "SUPPORT",
+        "verdict_correct": false,
+        "complete_gold_rationale_cited": false,
+        "grounded_correct": false
+      }
+    },
+    {
+      "order": 16,
+      "claim_id": 50,
+      "record": {
+        "question": "AIRE is expressed in some skin tumors.",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "retrieval_wall_s": 0.03966530000616331,
+        "retrieved_keys": [
+          "doc:12580014",
+          "doc:18488986",
+          "doc:45276789",
+          "doc:6333347",
+          "doc:39559521"
+        ],
+        "prompt_sha256": "34a3b56c0b86df1851b6adbe7ab7b827a413c4afd38121dabff265ec9c68a990",
+        "exposed_sentences": {
+          "doc:12580014": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "doc:18488986": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "doc:45276789": [
+            0,
+            1,
+            2
+          ],
+          "doc:6333347": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "doc:39559521": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "model": "deepseek-flash",
+        "endpoint_sha256": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+        "max_tokens": 256,
+        "model_weights_and_runtime_bytes": null,
+        "api_calls": 1,
+        "accepted": true,
+        "answer": {
+          "verdict": "SUPPORT",
+          "explanation": "Evidence states Aire is inducibly expressed in human and mouse tumor keratinocytes, which are skin tumor cells.",
+          "evidence": [
+            {
+              "citation_id": "D0",
+              "sentence": 1,
+              "key": "doc:12580014",
+              "locator": {
+                "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+                "path": "corpus.jsonl",
+                "offset": 3299877,
+                "length": 1229,
+                "sha256": "b2c66384591aaf51d289718bdfe52830d94a591c053eb4636c6fe556c8273d89"
+              },
+              "sentence_sha256": "80226a777ebe50b8c7289ceaff8b31b34abd920b64984adeb37c54cbcadcf97c"
+            }
+          ],
+          "citation_binding_valid": true,
+          "scientific_entailment_verified": false
+        },
+        "usage": {
+          "prompt_tokens": 1943,
+          "completion_tokens": 49,
+          "total_tokens": 1992,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1815
+        },
+        "retrieval_enabled": true,
+        "request_extra_body": {
+          "thinking": {
+            "type": "disabled"
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "raw_model_content": "{\"verdict\":\"SUPPORT\",\"evidence\":[{\"citation_id\":\"D0\",\"sentence\":1}],\"explanation\":\"Evidence states Aire is inducibly expressed in human and mouse tumor keratinocytes, which are skin tumor cells.\"}",
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "model_wall_s": 0.9640701000025729,
+        "writeback": {
+          "answer_id": "94257d44f5f5c8f926bc56d07236161ec8df83d17ba5839470b2ed6b25005c65",
+          "bytes": 2023,
+          "primary_evidence": false
+        }
+      },
+      "score": {
+        "gold_verdict": "SUPPORT",
+        "verdict_correct": true,
+        "complete_gold_rationale_cited": true,
+        "grounded_correct": true
+      }
+    },
+    {
+      "order": 17,
+      "claim_id": 5,
+      "record": {
+        "question": "1/2000 in UK have abnormal PrP positivity.",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "retrieval_wall_s": 0.039668400000664406,
+        "retrieved_keys": [
+          "doc:13734012",
+          "doc:18617259",
+          "doc:17333231",
+          "doc:42240424",
+          "doc:695938"
+        ],
+        "prompt_sha256": "d7ad088fcc6f749fb590c1334a2f2a1225d4f680296cd96cec057b5c42d137b9",
+        "exposed_sentences": {
+          "doc:13734012": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "doc:18617259": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "doc:17333231": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "doc:42240424": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "doc:695938": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        "model": "deepseek-flash",
+        "endpoint_sha256": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+        "max_tokens": 256,
+        "model_weights_and_runtime_bytes": null,
+        "api_calls": 1,
+        "accepted": true,
+        "answer": {
+          "verdict": "SUPPORT",
+          "explanation": "D0 reports 16 positives among 32,441 appendix samples, a prevalence of 493 per million, which is approximately 1 in 2000.",
+          "evidence": [
+            {
+              "citation_id": "D0",
+              "sentence": 4,
+              "key": "doc:13734012",
+              "locator": {
+                "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+                "path": "corpus.jsonl",
+                "offset": 3579212,
+                "length": 2230,
+                "sha256": "735f4f04e4c24a6d08558ed4bfb9f14464215f5ec787eeb561be413219d8bb93"
+              },
+              "sentence_sha256": "a1d8bd2633b294cb499a35a7fa529158688ea54edf9560e29db5bae8715e3a83"
+            }
+          ],
+          "citation_binding_valid": true,
+          "scientific_entailment_verified": false
+        },
+        "usage": {
+          "prompt_tokens": 1982,
+          "completion_tokens": 58,
+          "total_tokens": 2040,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1854
+        },
+        "retrieval_enabled": true,
+        "request_extra_body": {
+          "thinking": {
+            "type": "disabled"
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "raw_model_content": "{\"verdict\":\"SUPPORT\",\"evidence\":[{\"citation_id\":\"D0\",\"sentence\":4}],\"explanation\":\"D0 reports 16 positives among 32,441 appendix samples, a prevalence of 493 per million, which is approximately 1 in 2000.\"}",
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "model_wall_s": 1.0801924999977928,
+        "writeback": {
+          "answer_id": "9a9c7320ad67d26d6718d06b4744086fa1cde053548c497386e38c493e77e761",
+          "bytes": 2039,
+          "primary_evidence": false
+        }
+      },
+      "score": {
+        "gold_verdict": "SUPPORT",
+        "verdict_correct": true,
+        "complete_gold_rationale_cited": true,
+        "grounded_correct": true
+      }
+    },
+    {
+      "order": 18,
+      "claim_id": 1,
+      "record": {
+        "question": "0-dimensional biomaterials show inductive properties.",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "retrieval_wall_s": 0.034711599990259856,
+        "retrieved_keys": [
+          "doc:43385013",
+          "doc:18953920",
+          "doc:21257564",
+          "doc:34386619",
+          "doc:40212412"
+        ],
+        "prompt_sha256": "cb8a7b3a6b98cf13a632c088d78c8962a2d19a9147f726f5dad9a229dffa5bc5",
+        "exposed_sentences": {
+          "doc:43385013": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "doc:18953920": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "doc:21257564": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "doc:34386619": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "doc:40212412": [
+            0,
+            1,
+            2
+          ]
+        },
+        "model": "deepseek-flash",
+        "endpoint_sha256": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+        "max_tokens": 256,
+        "model_weights_and_runtime_bytes": null,
+        "api_calls": 1,
+        "accepted": true,
+        "answer": {
+          "verdict": "INSUFFICIENT",
+          "explanation": "No supplied evidence mentions 0-dimensional biomaterials or their inductive properties; all citations concern unrelated topics.",
+          "evidence": [],
+          "citation_binding_valid": true,
+          "scientific_entailment_verified": false
+        },
+        "usage": {
+          "prompt_tokens": 2035,
+          "completion_tokens": 38,
+          "total_tokens": 2073,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1907
+        },
+        "retrieval_enabled": true,
+        "request_extra_body": {
+          "thinking": {
+            "type": "disabled"
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "raw_model_content": "{\"verdict\":\"INSUFFICIENT\",\"evidence\":[],\"explanation\":\"No supplied evidence mentions 0-dimensional biomaterials or their inductive properties; all citations concern unrelated topics.\"}",
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "model_wall_s": 1.0349850000056904,
+        "writeback": {
+          "answer_id": "56e32136e6e53ad328385cbea0765f4e8cee4ab785383a8b14ea11144cc26519",
+          "bytes": 1672,
+          "primary_evidence": false
+        }
+      },
+      "score": {
+        "gold_verdict": "INSUFFICIENT",
+        "verdict_correct": true,
+        "complete_gold_rationale_cited": false,
+        "grounded_correct": true
+      }
+    },
+    {
+      "order": 19,
+      "claim_id": 1,
+      "record": {
+        "question": "0-dimensional biomaterials show inductive properties.",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "retrieval_wall_s": 0,
+        "retrieved_keys": [],
+        "prompt_sha256": "2d2a9074f7821846bb385e4d15003890a5fb3ca4d414b674cc19004b22cd7c55",
+        "exposed_sentences": {},
+        "model": "deepseek-flash",
+        "endpoint_sha256": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+        "max_tokens": 256,
+        "model_weights_and_runtime_bytes": null,
+        "api_calls": 1,
+        "accepted": true,
+        "answer": {
+          "verdict": "INSUFFICIENT",
+          "explanation": "No evidence provided to support or contradict the claim.",
+          "evidence": [],
+          "citation_binding_valid": true,
+          "scientific_entailment_verified": false
+        },
+        "usage": {
+          "prompt_tokens": 158,
+          "completion_tokens": 28,
+          "total_tokens": 186,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 158
+        },
+        "retrieval_enabled": false,
+        "request_extra_body": {
+          "thinking": {
+            "type": "disabled"
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "raw_model_content": "{\"verdict\":\"INSUFFICIENT\",\"evidence\":[],\"explanation\":\"No evidence provided to support or contradict the claim.\"}",
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "model_wall_s": 0.568501700006891,
+        "writeback": {
+          "answer_id": "86c4bad92c4dad428106de9451306d5c79e5c30c60e876ff3e4d460e7e5f8487",
+          "bytes": 1278,
+          "primary_evidence": false
+        }
+      },
+      "score": {
+        "gold_verdict": "INSUFFICIENT",
+        "verdict_correct": true,
+        "complete_gold_rationale_cited": false,
+        "grounded_correct": true
+      }
+    },
+    {
+      "order": 20,
+      "claim_id": 54,
+      "record": {
+        "question": "AMP-activated protein kinase (AMPK) activation increases inflammation-related fibrosis in the lungs.",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "retrieval_wall_s": 0,
+        "retrieved_keys": [],
+        "prompt_sha256": "30fb71e6b03c22e65ac7216d15b9b2020cc203bfe1359c2f05742eb502822021",
+        "exposed_sentences": {},
+        "model": "deepseek-flash",
+        "endpoint_sha256": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+        "max_tokens": 256,
+        "model_weights_and_runtime_bytes": null,
+        "api_calls": 1,
+        "accepted": true,
+        "answer": {
+          "verdict": "INSUFFICIENT",
+          "explanation": "No evidence provided to support or contradict the claim about AMPK activation and lung fibrosis.",
+          "evidence": [],
+          "citation_binding_valid": true,
+          "scientific_entailment_verified": false
+        },
+        "usage": {
+          "prompt_tokens": 167,
+          "completion_tokens": 35,
+          "total_tokens": 202,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 167
+        },
+        "retrieval_enabled": false,
+        "request_extra_body": {
+          "thinking": {
+            "type": "disabled"
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "raw_model_content": "{\"verdict\":\"INSUFFICIENT\",\"evidence\":[],\"explanation\":\"No evidence provided to support or contradict the claim about AMPK activation and lung fibrosis.\"}",
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "model_wall_s": 0.8511945999925956,
+        "writeback": {
+          "answer_id": "76ec7f75d135e55c80a192378788f2f17108011e928ef059fd72e61b05924f7b",
+          "bytes": 1406,
+          "primary_evidence": false
+        }
+      },
+      "score": {
+        "gold_verdict": "CONTRADICT",
+        "verdict_correct": false,
+        "complete_gold_rationale_cited": false,
+        "grounded_correct": false
+      }
+    },
+    {
+      "order": 21,
+      "claim_id": 5,
+      "record": {
+        "question": "1/2000 in UK have abnormal PrP positivity.",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "retrieval_wall_s": 0,
+        "retrieved_keys": [],
+        "prompt_sha256": "c1679e75ca0cddb44d223b01b663a47f274d21981be62d752f26eac55896b48a",
+        "exposed_sentences": {},
+        "model": "deepseek-flash",
+        "endpoint_sha256": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+        "max_tokens": 256,
+        "model_weights_and_runtime_bytes": null,
+        "api_calls": 1,
+        "accepted": true,
+        "answer": {
+          "verdict": "INSUFFICIENT",
+          "explanation": "No evidence supplied to support or contradict the claim about abnormal PrP positivity prevalence in the UK.",
+          "evidence": [],
+          "citation_binding_valid": true,
+          "scientific_entailment_verified": false
+        },
+        "usage": {
+          "prompt_tokens": 162,
+          "completion_tokens": 37,
+          "total_tokens": 199,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 162
+        },
+        "retrieval_enabled": false,
+        "request_extra_body": {
+          "thinking": {
+            "type": "disabled"
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "raw_model_content": "{\"verdict\":\"INSUFFICIENT\",\"evidence\":[],\"explanation\":\"No evidence supplied to support or contradict the claim about abnormal PrP positivity prevalence in the UK.\"}",
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "model_wall_s": 0.9940701000014087,
+        "writeback": {
+          "answer_id": "f04e960883729fa897caf588d755e93e0dc86e85a01cdd37a6e7b2ac20f00816",
+          "bytes": 1370,
+          "primary_evidence": false
+        }
+      },
+      "score": {
+        "gold_verdict": "SUPPORT",
+        "verdict_correct": false,
+        "complete_gold_rationale_cited": false,
+        "grounded_correct": false
+      }
+    },
+    {
+      "order": 22,
+      "claim_id": 48,
+      "record": {
+        "question": "A total of 1,000 people in the UK are asymptomatic carriers of vCJD infection.",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "retrieval_wall_s": 0,
+        "retrieved_keys": [],
+        "prompt_sha256": "c7a5da59aa7ed58fee331212fe73ca65564a135ac1d994ee9465da0d84527f61",
+        "exposed_sentences": {},
+        "model": "deepseek-flash",
+        "endpoint_sha256": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+        "max_tokens": 256,
+        "model_weights_and_runtime_bytes": null,
+        "api_calls": 1,
+        "accepted": true,
+        "answer": {
+          "verdict": "INSUFFICIENT",
+          "explanation": "No evidence supplied to support or contradict the claim about 1,000 asymptomatic vCJD carriers in the UK.",
+          "evidence": [],
+          "citation_binding_valid": true,
+          "scientific_entailment_verified": false
+        },
+        "usage": {
+          "prompt_tokens": 170,
+          "completion_tokens": 41,
+          "total_tokens": 211,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 170
+        },
+        "retrieval_enabled": false,
+        "request_extra_body": {
+          "thinking": {
+            "type": "disabled"
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "raw_model_content": "{\"verdict\":\"INSUFFICIENT\",\"evidence\":[],\"explanation\":\"No evidence supplied to support or contradict the claim about 1,000 asymptomatic vCJD carriers in the UK.\"}",
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "model_wall_s": 0.9066921000048751,
+        "writeback": {
+          "answer_id": "e8d99f96a0bc2b88b091a4f049dfbd7a075f8ae5a142b6ee77ad909c11b54adf",
+          "bytes": 1402,
+          "primary_evidence": false
+        }
+      },
+      "score": {
+        "gold_verdict": "CONTRADICT",
+        "verdict_correct": false,
+        "complete_gold_rationale_cited": false,
+        "grounded_correct": false
+      }
+    },
+    {
+      "order": 23,
+      "claim_id": 50,
+      "record": {
+        "question": "AIRE is expressed in some skin tumors.",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "retrieval_wall_s": 0,
+        "retrieved_keys": [],
+        "prompt_sha256": "3ef54ccfa5a9d9d099a99e9c18fb5b6e59ffaaf06d1d7813f4ad9a22f9984ba7",
+        "exposed_sentences": {},
+        "model": "deepseek-flash",
+        "endpoint_sha256": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+        "max_tokens": 256,
+        "model_weights_and_runtime_bytes": null,
+        "api_calls": 1,
+        "accepted": true,
+        "answer": {
+          "verdict": "INSUFFICIENT",
+          "explanation": "No evidence provided to establish whether AIRE is expressed in skin tumors.",
+          "evidence": [],
+          "citation_binding_valid": true,
+          "scientific_entailment_verified": false
+        },
+        "usage": {
+          "prompt_tokens": 159,
+          "completion_tokens": 32,
+          "total_tokens": 191,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 159
+        },
+        "retrieval_enabled": false,
+        "request_extra_body": {
+          "thinking": {
+            "type": "disabled"
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "raw_model_content": "{\"verdict\":\"INSUFFICIENT\",\"evidence\":[],\"explanation\":\"No evidence provided to establish whether AIRE is expressed in skin tumors.\"}",
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "model_wall_s": 0.9138555999961682,
+        "writeback": {
+          "answer_id": "4c54291fe066466b8b6b7e9e9f96ccaea1ce2c97c1cb0bf1e969780c222325e7",
+          "bytes": 1302,
+          "primary_evidence": false
+        }
+      },
+      "score": {
+        "gold_verdict": "SUPPORT",
+        "verdict_correct": false,
+        "complete_gold_rationale_cited": false,
+        "grounded_correct": false
+      }
+    }
+  ],
+  "scope": "12 balanced dev claims, one API sample per condition; annotation correctness and citation byte binding are distinct; no automatic entailment proof"
+}

@@ -1,0 +1,26 @@
+{
+  "frozen_python_sources_verified": 45,
+  "all_retrieval_records_match_append_journal": 564,
+  "unique_annotated_claims": 188,
+  "original_record_hashes_and_index_bindings_verified": true,
+  "retrieval_ranking_stable_across_three_rounds": true,
+  "real_API_calls": 24,
+  "planned_API_order_and_no_retries_verified": true,
+  "all_24_request_hashes_reconstructed_without_keys": true,
+  "all_derived_answer_records_reconstructed_and_not_primary": true,
+  "all_scores_recomputed_from_pinned_annotations": true,
+  "model_scientific_entailment_proof": false,
+  "tests": {
+    "run": 132,
+    "passed": 131,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "5a7f6350b727ea9983f2037f994e7bf5cc504d747e572489143ac755a455d7a7"
+  },
+  "cold_cache": null,
+  "cross_machine": null,
+  "long_conversation": null,
+  "multi_hop": null,
+  "formal_proof": null,
+  "neural_compression": null
+}
