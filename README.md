@@ -6,7 +6,60 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.8.0 · 热点剖析与精确 Rust Gear 扫描
+## 当前版本：v0.9.0 · 同格式对象 IO 消融与第二个真实版本家族
+
+新增显式 `--io-backend bounded` 与 Windows `--publisher rename` 候选：减少重复的
+目录/对象长度查询，用有界读取检查精确 EOF；发布使用不覆盖已有目标的重命名。
+每个新文件仍 flush/fsync，复用仍验证旧对象，全部原文/存储摘要保留；CAS 格式不变。
+**默认仍为 reference/link**，Gear 默认仍为 Python，Rust 扫描须显式选择。
+
+QASPER v0.1→v0.2→v0.3，加 Evidence Inference v1.2→v1.3→v1.4 的两张原始主 CSV 表；
+每家族八条件、五轮本机温缓存。冻结 v0.8 Store 与当前 reference 作对照，全部 Gear
+条件使用同一个实测 Rust 库。**240 次正式完整恢复、92,160 次正式范围读取**，另
+48 次恢复预热、5,760 次查询预热全部逐字节一致。同表示完整存储树、快照与账本
+完全相同；QASPER 结果也与 v0.8 同表示的字节相同。
+
+| 三版指标 | QASPER | Evidence Inference 两表 |
+|---|---:|---:|
+| 独立 1 MiB 归档 bytes | 31,519,475 | 3,760,981 |
+| 共享 Gear CAS bytes | 23,946,864 | 2,608,262 |
+| 共享 Gear + 整份原生库 bytes | 24,071,283 | 2,732,681 |
+| 含库后相对独立归档节省 | 23.63% | 27.34% |
+| reference 提交中位 s | 2.397 | 0.223 |
+| 组合候选提交中位 s | 2.124 | 0.214 |
+| 组合提交配对加速中位 | **0.974×，2/5 轮更快** | **1.026×，4/5 轮更快** |
+
+**IO 候选未证明稳定、全面提速，因此不升级默认。** 配对倍率先按同轮 reference/
+candidate 计算，再取中位；它与两个耗时中位之比不同。单独 bounded 的提交配对
+为 0.889×/0.766×，单独 rename 为 0.760×/0.929×；负结果和全部波动均保留。
+bounded 常驻范围 p95 配对为 1.103×/1.081×，重开为 0.991×/1.036×；收益依赖指标。
+
+![同字节 IO 消融的中位与五轮观测](results/v0.9.0/io-ablation.png)
+
+原生库继续复用 v0.8 实测 DLL 123,904 bytes + 原始元数据 515 bytes，各家族上表全额
+加一次。Evidence Inference 的 prompts 三版完全相同，约占每版原文 17.9%；较高共享
+收益不能直接推广到全文或独立科学数据。逻辑字节包含所有对象/头/双摘要/快照/
+配置/未引用对象；文件数据分配另记，目录/MFT/日志与公共运行时未全额分配。
+
+本机 82 项测试：81 通过、1 Windows 符号链接权限跳过；Windows/Linux CI 通过。
+覆盖损坏与尾部多字节、复用验证、并发发布、同步/快照失败、不覆盖已有文件和旧版
+读取兼容。冷缓存、跨机器、跨日、断电耐久性和推理质量未测，E3/E4 尚未实测。
+
+```powershell
+python -m rkv1 store-init vault --chunker gear-v1 --codec zstd
+python -m rkv1 store-add vault data/qasper-versions/v0.1 --io-backend bounded --publisher rename --chunker-backend rust --native-library native/rkv1_core.dll
+python -m scripts.run_io --native-library native/rkv1_core.dll --out results/local-io
+python -m scripts.summarize_io results/local-io
+```
+
+先从 [v0.9 Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.9.0) 解压
+`rkv1-native-measured-v0.9.0-windows-x86_64.zip` 到 `native/`，保留原始 `native.json`。
+该冻结实测库与通用平台新构建资产分开标识，不能假定其二进制相同。
+[完整记录](results/v0.9.0/SUMMARY.md) · [IO 协议与复现](docs/IO.md) ·
+[数据来源](docs/DATASETS.md) · [独立核对](results/v0.9.0/validation.json)。下一优先项
+转向 E2 数组/数值类型，先做完整成本基线和负对照，再决定编码方案。
+
+## 既有热点剖析与精确 Rust Gear 扫描（v0.8.0）
 
 冻结v0.7源码的cProfile诊断定位到逐字节Gear循环；v0.8新增显式Rust扫描后端。
 同一表、u64递推、最小/最大边界和流状态保持不变。Python仍组装原文字节，执行
@@ -49,7 +102,7 @@ python -m scripts.run_gear --native-library .tools/native-v0.8-measured/rkv1_cor
 `rkv1-native-measured-v0.8.0-windows-x86_64.zip`，保留通过源CI的实测库和元数据原字节。
 通用新构建库须按自己的身份使用，不能假定与实测库相同。源/输入/库/元数据前后
 指纹一致；诊断树与主实验均保留。一个家族三版、温缓存五轮；冷缓存、跨机器、
-跨日和科学推理质量未测。后续优先对象发布/访问成本、独立版本家族及E2其他类型。
+跨日和科学推理质量未测。对象 IO 消融和第二个版本家族由 v0.9 补充；E2 其他类型待开展。
 
 ## 既有真实版本序列与共享 CAS（v0.7.0）
 

@@ -1,0 +1,80 @@
+[
+  {
+    "version": "v1.2",
+    "source": "E:\\memorystorage\\data\\evidence-versions\\v1.2",
+    "source_commit": "7960e549a381f86ea848dee7beb11ecec1aa71af",
+    "release_url": "https://github.com/jayded/evidence-inference/releases/tag/v1.2",
+    "file_urls": {
+      "annotations/annotations_merged.csv": "https://raw.githubusercontent.com/jayded/evidence-inference/7960e549a381f86ea848dee7beb11ecec1aa71af/annotations/annotations_merged.csv",
+      "annotations/prompts_merged.csv": "https://raw.githubusercontent.com/jayded/evidence-inference/7960e549a381f86ea848dee7beb11ecec1aa71af/annotations/prompts_merged.csv"
+    },
+    "files": [
+      {
+        "path": "annotations/annotations_merged.csv",
+        "bytes": 5129349,
+        "sha256": "0740089bd7328373cc85fcb97577929ad80a7972853e62c378526e3a513c7510"
+      },
+      {
+        "path": "annotations/prompts_merged.csv",
+        "bytes": 1119110,
+        "sha256": "6c429854720c375248cdb87913ce2df3c3bc5c26d3276134349f61d4445f3dda"
+      }
+    ],
+    "license": "MIT (official repository LICENSE)",
+    "license_url": "https://github.com/jayded/evidence-inference/blob/7960e549a381f86ea848dee7beb11ecec1aa71af/LICENSE",
+    "scope": "Two original main merged annotation/prompt CSV tables; not full articles, supplementary tables or the whole repository",
+    "original_paths_and_bytes": true
+  },
+  {
+    "version": "v1.3",
+    "source": "E:\\memorystorage\\data\\evidence-versions\\v1.3",
+    "source_commit": "ee792854566dd1d57ea44ff2248f5f6fa57da246",
+    "release_url": "https://github.com/jayded/evidence-inference/releases/tag/v1.3",
+    "file_urls": {
+      "annotations/annotations_merged.csv": "https://raw.githubusercontent.com/jayded/evidence-inference/ee792854566dd1d57ea44ff2248f5f6fa57da246/annotations/annotations_merged.csv",
+      "annotations/prompts_merged.csv": "https://raw.githubusercontent.com/jayded/evidence-inference/ee792854566dd1d57ea44ff2248f5f6fa57da246/annotations/prompts_merged.csv"
+    },
+    "files": [
+      {
+        "path": "annotations/annotations_merged.csv",
+        "bytes": 5130282,
+        "sha256": "4575992073fce48e9d85fe22ba59e3fe3949245c12ad9ca2287338a765312cc2"
+      },
+      {
+        "path": "annotations/prompts_merged.csv",
+        "bytes": 1119110,
+        "sha256": "6c429854720c375248cdb87913ce2df3c3bc5c26d3276134349f61d4445f3dda"
+      }
+    ],
+    "license": "MIT (official repository LICENSE)",
+    "license_url": "https://github.com/jayded/evidence-inference/blob/ee792854566dd1d57ea44ff2248f5f6fa57da246/LICENSE",
+    "scope": "Two original main merged annotation/prompt CSV tables; not full articles, supplementary tables or the whole repository",
+    "original_paths_and_bytes": true
+  },
+  {
+    "version": "v1.4",
+    "source": "E:\\memorystorage\\data\\evidence-versions\\v1.4",
+    "source_commit": "411fd36aa28425253dd6063f382c41e3191f7b41",
+    "release_url": "https://github.com/jayded/evidence-inference/releases/tag/v1.4",
+    "file_urls": {
+      "annotations/annotations_merged.csv": "https://raw.githubusercontent.com/jayded/evidence-inference/411fd36aa28425253dd6063f382c41e3191f7b41/annotations/annotations_merged.csv",
+      "annotations/prompts_merged.csv": "https://raw.githubusercontent.com/jayded/evidence-inference/411fd36aa28425253dd6063f382c41e3191f7b41/annotations/prompts_merged.csv"
+    },
+    "files": [
+      {
+        "path": "annotations/annotations_merged.csv",
+        "bytes": 5130282,
+        "sha256": "d0b113693ca87b650ea4461cb6194e381c8b898f9382ca73bcb7df139801d6be"
+      },
+      {
+        "path": "annotations/prompts_merged.csv",
+        "bytes": 1119110,
+        "sha256": "6c429854720c375248cdb87913ce2df3c3bc5c26d3276134349f61d4445f3dda"
+      }
+    ],
+    "license": "MIT (official repository LICENSE)",
+    "license_url": "https://github.com/jayded/evidence-inference/blob/411fd36aa28425253dd6063f382c41e3191f7b41/LICENSE",
+    "scope": "Two original main merged annotation/prompt CSV tables; not full articles, supplementary tables or the whole repository",
+    "original_paths_and_bytes": true
+  }
+]

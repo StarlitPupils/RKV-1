@@ -11,6 +11,8 @@ v0.7.0 的原始版本序列、独立/共享 CAS、Gear CDC 和完整存储账�
 v0.8.0 的冻结源码剖析、精确Rust Gear扫描、同存储树五轮提交配对与整份原生库
 成本见 [NATIVE.md](NATIVE.md)。复现性能时使用Release的measured原生资产，保留
 原始native.json；通用新构建资产只证明自身构建身份，不能替代已测二进制。
+v0.9.0的同格式对象IO/Windows发布消融、冻结v0.8控制及第二个真实版本家族见
+[IO.md](IO.md)，候选显式启用，默认保持reference/link。
 
 ```powershell
 python -m venv .venv

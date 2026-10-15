@@ -1,0 +1,34 @@
+{
+  "run_id": 38671126401,
+  "source_commit": "3f670e546329fcfe1f8e909a0ae55de1a091c338",
+  "status": "completed",
+  "conclusion": "success",
+  "url": "https://github.com/StarlitPupils/RKV-1/actions/runs/38671126401",
+  "jobs": [
+    {
+      "name": "rust (windows-latest)",
+      "conclusion": "success"
+    },
+    {
+      "name": "python (windows-latest, 3.10)",
+      "conclusion": "success"
+    },
+    {
+      "name": "rust (ubuntu-latest)",
+      "conclusion": "success"
+    },
+    {
+      "name": "python (windows-latest, 3.13)",
+      "conclusion": "success"
+    },
+    {
+      "name": "python (ubuntu-latest, 3.13)",
+      "conclusion": "success"
+    },
+    {
+      "name": "python (ubuntu-latest, 3.10)",
+      "conclusion": "success"
+    }
+  ],
+  "scope": "Candidate CI; local benchmark remains Windows-only. Release tag will run separate CI."
+}

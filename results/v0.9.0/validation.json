@@ -1,0 +1,50 @@
+{
+  "datasets": {
+    "qasper": {
+      "conditions": 8,
+      "measured_roundtrips": 120,
+      "warmup_roundtrips": 24,
+      "verified_range_reads": 46080,
+      "verified_warmup_range_reads": 2880,
+      "same_representation_trees_and_ledgers_identical": true,
+      "requests_match_across_all_conditions_and_lifecycle_modes": true,
+      "all_qasper_trees_match_v0_8": true
+    },
+    "evidence": {
+      "conditions": 8,
+      "measured_roundtrips": 120,
+      "warmup_roundtrips": 24,
+      "verified_range_reads": 46080,
+      "verified_warmup_range_reads": 2880,
+      "same_representation_trees_and_ledgers_identical": true,
+      "requests_match_across_all_conditions_and_lifecycle_modes": true,
+      "all_qasper_trees_match_v0_8": null
+    }
+  },
+  "all_measured_python_modules_match_current": true,
+  "frozen_v0_8_store_byte_identical_to_tag": true,
+  "frozen_native_binary_and_metadata_verified": true,
+  "rust_kernel_sources_match_measured_build_commit": {
+    "rust/src/csv.rs": "8e1b2f7c6b2284afc300e2922983b673781f6d159a5cd2b4ee917f9d26ed9199",
+    "rust/src/gear.rs": "9ec284a605e4fe9124155ca87ef1770869d6637ac1dbfeb650c97132358bcda4",
+    "rust/src/lib.rs": "2d695f95be95fd53d8edd8e3a8fbfa2b0098e1ea6103889cd3c81f0151481fa8"
+  },
+  "native_build_source_commit": "96be8d0361407d6970bcb1101e2770151951483d",
+  "local_python_tests": {
+    "run": 82,
+    "passed": 81,
+    "skipped": 1,
+    "failed": 0,
+    "skip_reason": "Local Windows symlink permission",
+    "log_sha256": "a80c664f676450b073e8f56faf02d36d85239b08ad1b4c420f3810e31f5f24db"
+  },
+  "defaults": {
+    "io_backend": "reference",
+    "publisher": "link"
+  },
+  "cold_os_cache": null,
+  "cross_machine": null,
+  "cross_day": null,
+  "power_loss_durability": null,
+  "inference_quality": null
+}

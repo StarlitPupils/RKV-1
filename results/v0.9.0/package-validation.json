@@ -1,0 +1,12 @@
+{
+  "wheel_python_sources_match_measurement": true,
+  "sdist_required_artifacts_present": true,
+  "private_research_excluded": true,
+  "installed_wheel_outside_checkout": true,
+  "all_CAS_CLI_commands_and_previous_snapshot_recovery": true,
+  "released_v0_7_reader_restores_bounded_rename_v0_9_CAS": true,
+  "old_RKV_v1_v2_fixtures_verified": true,
+  "installed_IO_subprocess_campaign_smoke": true,
+  "wheel_scope": "Local Windows-built wheel; CI wheel ZIP hash may differ, all measured Python bytes must match",
+  "wheel_sha256": "2ca8cb2fe31cae0565e1571be9fa71be72dd66edb0faf6a0b222b9056add0f96"
+}

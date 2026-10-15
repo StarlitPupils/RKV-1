@@ -1,0 +1,10 @@
+{
+  "filename": "rkv1-native-measured-v0.9.0-windows-x86_64.zip",
+  "bytes": 64777,
+  "sha256": "63119b167ea624fc3f0a125667c57870af1ddc61f10f68b1285dac9114765731",
+  "library_sha256": "7736879b67377038fdc2211fbdadfc12c71983ba96257dbb8a18c33c660196e2",
+  "source_commit": "96be8d0361407d6970bcb1101e2770151951483d",
+  "original_CI_run": 38663947226,
+  "original_CI_artifact": 11940086547,
+  "byte_identity": "Whole ZIP bytes copied unchanged from v0.8 measured asset; original DLL and native.json preserved."
+}

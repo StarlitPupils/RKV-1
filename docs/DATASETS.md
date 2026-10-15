@@ -27,3 +27,14 @@ v0.7.0 增加 QASPER 官方原始 train/dev v0.1、v0.2、v0.3：分别41,339,48
 官方S3 URL、压缩包和成员SHA固定在 rkv1/version_data.py，随结果保存；许可沿用
 [官方数据卡 CC BY 4.0](https://huggingface.co/datasets/allenai/qasper)。仅存储/恢复，
 没有用这些发布版本进行模型调参或问答评测。
+
+v0.9.0增加独立家族Evidence Inference：[官方仓库](https://github.com/jayded/evidence-inference)、
+[官方发布历史](https://github.com/jayded/evidence-inference/releases)。选择在测量前固定为
+v1.2（2019-09-17）→v1.3（2019-10-09）→v1.4（2019-10-17）三个真实发布中的
+`annotations/annotations_merged.csv`及`annotations/prompts_merged.csv`两张原始主表，
+分别6,248,459 / 6,249,392 / 6,249,392 bytes，总计18,747,243 bytes。
+这是临床试验论文结果/证据标注数据，不进行医疗建议、模型训练或推理评估。
+范围不含论文全文、补充表和整仓库；不解析或重写CSV。prompts表三版原字节相同，
+annotations表三版摘要不同；同长度不代表内容相同，也不把净长度差当作编辑字节数。
+主表commit、原始路径和每文件SHA固定在`rkv1/evidence_versions.py`，随实验保存。
+许可见[官方v1.4 MIT LICENSE](https://github.com/jayded/evidence-inference/blob/411fd36aa28425253dd6063f382c41e3191f7b41/LICENSE)。

@@ -1,0 +1,1017 @@
+{
+  "native_resource_bytes": 124419,
+  "datasets": {
+    "qasper": {
+      "counts": {
+        "configurations": 8,
+        "versions": 3,
+        "measured_roundtrips": 120,
+        "warmup_roundtrips": 24,
+        "verified_range_reads": 46080,
+        "verified_warmup_range_reads": 2880
+      },
+      "raw_bytes_all_versions": 128076252,
+      "conditions": {
+        "archive-fixed-1024": {
+          "logical_file_bytes": 31519475,
+          "files": 3,
+          "allocated_file_data_bytes": 31522816,
+          "filesystem_directory_metadata_journal_unmeasured": true,
+          "sequence_add_s": {
+            "samples": [
+              0.9901157000131207,
+              0.5450241999787977,
+              0.680965900013689,
+              0.6712828000163427,
+              0.5421913000172935
+            ],
+            "median": 0.6712828000163427,
+            "min": 0.5421913000172935,
+            "max": 0.9901157000131207,
+            "stdev": 0.18253998207107958,
+            "p95": 0.9901157000131207
+          },
+          "three_snapshot_restore_s": {
+            "samples": [
+              0.2596122000104515,
+              0.2602008000103524,
+              0.25769350002519786,
+              0.2582964999746764,
+              0.26359729999967385
+            ],
+            "median": 0.2596122000104515,
+            "min": 0.25769350002519786,
+            "max": 0.26359729999967385,
+            "stdev": 0.0023065777257999897,
+            "p95": 0.26359729999967385
+          },
+          "last_snapshot_open_reader_p95_s": 0.0016730999923311174,
+          "last_snapshot_open_and_read_p95_s": 0.002287299997988157
+        },
+        "isolated-gear-v08": {
+          "logical_file_bytes": 35408908,
+          "files": 1436,
+          "allocated_file_data_bytes": 38224616,
+          "filesystem_directory_metadata_journal_unmeasured": true,
+          "sequence_add_s": {
+            "samples": [
+              3.522961900001974,
+              2.9274538999889046,
+              3.0838688000221737,
+              2.788992900008452,
+              3.763341199985007
+            ],
+            "median": 3.0838688000221737,
+            "min": 2.788992900008452,
+            "max": 3.763341199985007,
+            "stdev": 0.4113550185357774,
+            "p95": 3.763341199985007
+          },
+          "three_snapshot_restore_s": {
+            "samples": [
+              0.5252279999986058,
+              0.5267409000080079,
+              0.5157603999978164,
+              0.5115888000000268,
+              0.5184245999844279
+            ],
+            "median": 0.5184245999844279,
+            "min": 0.5115888000000268,
+            "max": 0.5267409000080079,
+            "stdev": 0.00638273090186472,
+            "p95": 0.5267409000080079
+          },
+          "last_snapshot_open_reader_p95_s": 0.0005505000008270144,
+          "last_snapshot_open_and_read_p95_s": 0.0037462999898707494
+        },
+        "shared-fixed-v08": {
+          "logical_file_bytes": 35981908,
+          "files": 1928,
+          "allocated_file_data_bytes": 39780480,
+          "filesystem_directory_metadata_journal_unmeasured": true,
+          "sequence_add_s": {
+            "samples": [
+              5.82525659998646,
+              4.501847399995313,
+              5.282684400008293,
+              4.106138000002829,
+              3.4836059999943245
+            ],
+            "median": 4.501847399995313,
+            "min": 3.4836059999943245,
+            "max": 5.82525659998646,
+            "stdev": 0.9299486896159498,
+            "p95": 5.82525659998646
+          },
+          "three_snapshot_restore_s": {
+            "samples": [
+              0.5723153000144521,
+              0.5826298000029055,
+              0.5826398000062909,
+              0.5790598000166938,
+              0.5752913000178523
+            ],
+            "median": 0.5790598000166938,
+            "min": 0.5723153000144521,
+            "max": 0.5826398000062909,
+            "stdev": 0.004554920924521486,
+            "p95": 0.5826398000062909
+          },
+          "last_snapshot_open_reader_p95_s": 0.0004091000009793788,
+          "last_snapshot_open_and_read_p95_s": 0.0045332000008784235
+        },
+        "shared-gear-bounded": {
+          "logical_file_bytes": 23946864,
+          "files": 914,
+          "allocated_file_data_bytes": 25759992,
+          "filesystem_directory_metadata_journal_unmeasured": true,
+          "sequence_add_s": {
+            "samples": [
+              1.650009900011355,
+              1.945392699999502,
+              3.9334715000004508,
+              2.491269400008605,
+              2.7526030000008177
+            ],
+            "median": 2.491269400008605,
+            "min": 1.650009900011355,
+            "max": 3.9334715000004508,
+            "stdev": 0.8851439624345018,
+            "p95": 3.9334715000004508
+          },
+          "three_snapshot_restore_s": {
+            "samples": [
+              0.5113374999928055,
+              0.5066322999919066,
+              0.5044848000106867,
+              0.520618700014893,
+              0.515924500010442
+            ],
+            "median": 0.5113374999928055,
+            "min": 0.5044848000106867,
+            "max": 0.520618700014893,
+            "stdev": 0.006618386318332802,
+            "p95": 0.520618700014893
+          },
+          "last_snapshot_open_reader_p95_s": 0.0005103000003146008,
+          "last_snapshot_open_and_read_p95_s": 0.0038144999998621643
+        },
+        "shared-gear-combined": {
+          "logical_file_bytes": 23946864,
+          "files": 914,
+          "allocated_file_data_bytes": 25759992,
+          "filesystem_directory_metadata_journal_unmeasured": true,
+          "sequence_add_s": {
+            "samples": [
+              2.124049699996249,
+              2.0240734000108205,
+              1.7411780999973416,
+              2.573143400004483,
+              2.1855563999997685
+            ],
+            "median": 2.124049699996249,
+            "min": 1.7411780999973416,
+            "max": 2.573143400004483,
+            "stdev": 0.3007906697045945,
+            "p95": 2.573143400004483
+          },
+          "three_snapshot_restore_s": {
+            "samples": [
+              0.511862100000144,
+              0.5129769999912241,
+              0.5051661000034073,
+              0.5109525000152644,
+              0.5070775999920443
+            ],
+            "median": 0.5109525000152644,
+            "min": 0.5051661000034073,
+            "max": 0.5129769999912241,
+            "stdev": 0.0033306231926082354,
+            "p95": 0.5129769999912241
+          },
+          "last_snapshot_open_reader_p95_s": 0.0005282999918563291,
+          "last_snapshot_open_and_read_p95_s": 0.0038218999980017543
+        },
+        "shared-gear-reference": {
+          "logical_file_bytes": 23946864,
+          "files": 914,
+          "allocated_file_data_bytes": 25759992,
+          "filesystem_directory_metadata_journal_unmeasured": true,
+          "sequence_add_s": {
+            "samples": [
+              2.556495700002415,
+              1.7291785999987042,
+              2.5522028999839677,
+              2.3969632999942405,
+              2.129032199998619
+            ],
+            "median": 2.3969632999942405,
+            "min": 1.7291785999987042,
+            "max": 2.556495700002415,
+            "stdev": 0.35005683802788296,
+            "p95": 2.556495700002415
+          },
+          "three_snapshot_restore_s": {
+            "samples": [
+              0.5179158999962965,
+              0.5306508999929065,
+              0.5086838999995962,
+              0.5150178000039887,
+              0.5153997000161326
+            ],
+            "median": 0.5153997000161326,
+            "min": 0.5086838999995962,
+            "max": 0.5306508999929065,
+            "stdev": 0.008084084382929516,
+            "p95": 0.5306508999929065
+          },
+          "last_snapshot_open_reader_p95_s": 0.0005315999878803268,
+          "last_snapshot_open_and_read_p95_s": 0.0038010999996913597
+        },
+        "shared-gear-rename": {
+          "logical_file_bytes": 23946864,
+          "files": 914,
+          "allocated_file_data_bytes": 25759992,
+          "filesystem_directory_metadata_journal_unmeasured": true,
+          "sequence_add_s": {
+            "samples": [
+              2.241451199981384,
+              2.6316608999914024,
+              1.8393834000016795,
+              3.15244679999887,
+              3.1180328000045847
+            ],
+            "median": 2.6316608999914024,
+            "min": 1.8393834000016795,
+            "max": 3.15244679999887,
+            "stdev": 0.5660377076753565,
+            "p95": 3.15244679999887
+          },
+          "three_snapshot_restore_s": {
+            "samples": [
+              0.5161140000127489,
+              0.5165127999789547,
+              0.7816624999977648,
+              0.5196750999893993,
+              0.5172454999992624
+            ],
+            "median": 0.5172454999992624,
+            "min": 0.5161140000127489,
+            "max": 0.7816624999977648,
+            "stdev": 0.11819574392277678,
+            "p95": 0.7816624999977648
+          },
+          "last_snapshot_open_reader_p95_s": 0.0005482999986270443,
+          "last_snapshot_open_and_read_p95_s": 0.0038530000019818544
+        },
+        "shared-gear-v08": {
+          "logical_file_bytes": 23946864,
+          "files": 914,
+          "allocated_file_data_bytes": 25759992,
+          "filesystem_directory_metadata_journal_unmeasured": true,
+          "sequence_add_s": {
+            "samples": [
+              2.011393200009479,
+              2.482957400017767,
+              2.313194400005159,
+              2.4628509000031045,
+              3.1800578000111273
+            ],
+            "median": 2.4628509000031045,
+            "min": 2.011393200009479,
+            "max": 3.1800578000111273,
+            "stdev": 0.42932827976366283,
+            "p95": 3.1800578000111273
+          },
+          "three_snapshot_restore_s": {
+            "samples": [
+              1.096094999986235,
+              0.5130317999864928,
+              0.5338017000030959,
+              0.5178836000122828,
+              0.5171005000011064
+            ],
+            "median": 0.5178836000122828,
+            "min": 0.5130317999864928,
+            "max": 1.096094999986235,
+            "stdev": 0.2575561993757076,
+            "p95": 1.096094999986235
+          },
+          "last_snapshot_open_reader_p95_s": 0.000524500006577,
+          "last_snapshot_open_and_read_p95_s": 0.0037727000017184764
+        }
+      },
+      "paired": [
+        {
+          "reference": "shared-gear-reference",
+          "candidate": "shared-gear-v08",
+          "metric": "add",
+          "speedup_samples": [
+            1.2710074290747164,
+            0.69641895587348,
+            1.1033240007749783,
+            0.9732474263834725,
+            0.6694948123242191
+          ],
+          "speedup_median": 0.9732474263834725,
+          "min": 0.6694948123242191,
+          "max": 1.2710074290747164,
+          "candidate_faster_rounds": 2,
+          "rounds": 5
+        },
+        {
+          "reference": "shared-gear-reference",
+          "candidate": "shared-gear-bounded",
+          "metric": "add",
+          "speedup_samples": [
+            1.5493820370319122,
+            0.8888583780535143,
+            0.6488423521013627,
+            0.9621453625151746,
+            0.7734614108892516
+          ],
+          "speedup_median": 0.8888583780535143,
+          "min": 0.6488423521013627,
+          "max": 1.5493820370319122,
+          "candidate_faster_rounds": 1,
+          "rounds": 5
+        },
+        {
+          "reference": "shared-gear-reference",
+          "candidate": "shared-gear-rename",
+          "metric": "add",
+          "speedup_samples": [
+            1.1405538072939745,
+            0.6570674056085088,
+            1.3875317674290402,
+            0.7603501191503373,
+            0.6828126375051246
+          ],
+          "speedup_median": 0.7603501191503373,
+          "min": 0.6570674056085088,
+          "max": 1.3875317674290402,
+          "candidate_faster_rounds": 2,
+          "rounds": 5
+        },
+        {
+          "reference": "shared-gear-reference",
+          "candidate": "shared-gear-combined",
+          "metric": "add",
+          "speedup_samples": [
+            1.2035950477085964,
+            0.8543062716942281,
+            1.465790834371202,
+            0.9315311769993326,
+            0.9741373867079544
+          ],
+          "speedup_median": 0.9741373867079544,
+          "min": 0.8543062716942281,
+          "max": 1.465790834371202,
+          "candidate_faster_rounds": 2,
+          "rounds": 5
+        },
+        {
+          "reference": "shared-gear-reference",
+          "candidate": "shared-gear-bounded",
+          "metric": "restore",
+          "speedup_samples": [
+            1.0128650842224236,
+            1.0474083472399678,
+            1.0083235411430047,
+            0.9892418385840845,
+            0.998982796912535
+          ],
+          "speedup_median": 1.0083235411430047,
+          "min": 0.9892418385840845,
+          "max": 1.0474083472399678,
+          "candidate_faster_rounds": 3,
+          "rounds": 5
+        },
+        {
+          "reference": "shared-gear-reference",
+          "candidate": "shared-gear-bounded",
+          "metric": "open_reader",
+          "speedup_samples": [
+            1.1033623622596895,
+            1.0750589847200833,
+            0.9188938416175809,
+            1.1380031212450659,
+            1.1171859772691841
+          ],
+          "speedup_median": 1.1033623622596895,
+          "min": 0.9188938416175809,
+          "max": 1.1380031212450659,
+          "candidate_faster_rounds": 4,
+          "rounds": 5
+        },
+        {
+          "reference": "shared-gear-reference",
+          "candidate": "shared-gear-bounded",
+          "metric": "open_and_read",
+          "speedup_samples": [
+            1.0358369362087527,
+            1.166192785633897,
+            0.9909170041416685,
+            0.9665730232552139,
+            0.9893802532521858
+          ],
+          "speedup_median": 0.9909170041416685,
+          "min": 0.9665730232552139,
+          "max": 1.166192785633897,
+          "candidate_faster_rounds": 2,
+          "rounds": 5
+        },
+        {
+          "reference": "shared-gear-rename",
+          "candidate": "shared-gear-combined",
+          "metric": "restore",
+          "speedup_samples": [
+            1.0083067295128976,
+            1.0068927066667532,
+            1.547337598450277,
+            1.0170712541261162,
+            1.020051960503437
+          ],
+          "speedup_median": 1.0170712541261162,
+          "min": 1.0068927066667532,
+          "max": 1.547337598450277,
+          "candidate_faster_rounds": 5,
+          "rounds": 5
+        },
+        {
+          "reference": "shared-gear-rename",
+          "candidate": "shared-gear-combined",
+          "metric": "open_reader",
+          "speedup_samples": [
+            1.0208222135102374,
+            1.0150390629385382,
+            0.9217033016456057,
+            1.0378572914613144,
+            1.032153799552971
+          ],
+          "speedup_median": 1.0208222135102374,
+          "min": 0.9217033016456057,
+          "max": 1.0378572914613144,
+          "candidate_faster_rounds": 4,
+          "rounds": 5
+        },
+        {
+          "reference": "shared-gear-rename",
+          "candidate": "shared-gear-combined",
+          "metric": "open_and_read",
+          "speedup_samples": [
+            1.0543373903318438,
+            0.9207039949513959,
+            0.9952214915764614,
+            1.0235746623859716,
+            1.0007728574402932
+          ],
+          "speedup_median": 1.0007728574402932,
+          "min": 0.9207039949513959,
+          "max": 1.0543373903318438,
+          "candidate_faster_rounds": 3,
+          "rounds": 5
+        }
+      ],
+      "cost": {
+        "shared_gear_bytes": 23946864,
+        "isolated_gear_bytes": 35408908,
+        "archive_1MiB_bytes": 31519475,
+        "native_resource_bytes_once": 124419,
+        "shared_plus_full_native_bytes": 24071283,
+        "shared_saving_vs_isolated_pct": 32.37050970337747,
+        "saving_with_native_vs_archive_pct": 23.63044435226158
+      },
+      "whole_file_reuse_context": [
+        {
+          "version_index": 0,
+          "unchanged_whole_file_raw_bytes": 0,
+          "raw_bytes": 41339485
+        },
+        {
+          "version_index": 1,
+          "unchanged_whole_file_raw_bytes": 0,
+          "raw_bytes": 43368694
+        },
+        {
+          "version_index": 2,
+          "unchanged_whole_file_raw_bytes": 0,
+          "raw_bytes": 43368073
+        }
+      ]
+    },
+    "evidence": {
+      "counts": {
+        "configurations": 8,
+        "versions": 3,
+        "measured_roundtrips": 120,
+        "warmup_roundtrips": 24,
+        "verified_range_reads": 46080,
+        "verified_warmup_range_reads": 2880
+      },
+      "raw_bytes_all_versions": 18747243,
+      "conditions": {
+        "archive-fixed-1024": {
+          "logical_file_bytes": 3760981,
+          "files": 3,
+          "allocated_file_data_bytes": 3764224,
+          "filesystem_directory_metadata_journal_unmeasured": true,
+          "sequence_add_s": {
+            "samples": [
+              0.08741059999738354,
+              0.0797974000161048,
+              0.08135370002128184,
+              0.08266810001805425,
+              0.08364379998238292
+            ],
+            "median": 0.08266810001805425,
+            "min": 0.0797974000161048,
+            "max": 0.08741059999738354,
+            "stdev": 0.002869746645559698,
+            "p95": 0.08741059999738354
+          },
+          "three_snapshot_restore_s": {
+            "samples": [
+              0.04952519999642391,
+              0.04904059998807497,
+              0.05197189998580143,
+              0.04814849999092985,
+              0.048533599998336285
+            ],
+            "median": 0.04904059998807497,
+            "min": 0.04814849999092985,
+            "max": 0.05197189998580143,
+            "stdev": 0.0015055523717046539,
+            "p95": 0.05197189998580143
+          },
+          "last_snapshot_open_reader_p95_s": 0.0013814999983878806,
+          "last_snapshot_open_and_read_p95_s": 0.0017311999981757253
+        },
+        "isolated-gear-v08": {
+          "logical_file_bytes": 4370481,
+          "files": 177,
+          "allocated_file_data_bytes": 4715240,
+          "filesystem_directory_metadata_journal_unmeasured": true,
+          "sequence_add_s": {
+            "samples": [
+              0.28281790000619367,
+              0.30179949999728706,
+              0.28472969999711495,
+              0.28403910000633914,
+              0.2855857999966247
+            ],
+            "median": 0.28472969999711495,
+            "min": 0.28281790000619367,
+            "max": 0.30179949999728706,
+            "stdev": 0.007894316883799171,
+            "p95": 0.30179949999728706
+          },
+          "three_snapshot_restore_s": {
+            "samples": [
+              0.08021350001217797,
+              0.08161580000887625,
+              0.08533600000373553,
+              0.08336309998412617,
+              0.08279489999404177
+            ],
+            "median": 0.08279489999404177,
+            "min": 0.08021350001217797,
+            "max": 0.08533600000373553,
+            "stdev": 0.0019202298592819373,
+            "p95": 0.08533600000373553
+          },
+          "last_snapshot_open_reader_p95_s": 0.0004920000064885244,
+          "last_snapshot_open_and_read_p95_s": 0.001371100006508641
+        },
+        "shared-fixed-v08": {
+          "logical_file_bytes": 2768755,
+          "files": 181,
+          "allocated_file_data_bytes": 3100800,
+          "filesystem_directory_metadata_journal_unmeasured": true,
+          "sequence_add_s": {
+            "samples": [
+              0.5487728000152856,
+              0.31398239999543875,
+              0.2813246000005165,
+              0.27792809999664314,
+              0.27762360000633635
+            ],
+            "median": 0.2813246000005165,
+            "min": 0.27762360000633635,
+            "max": 0.5487728000152856,
+            "stdev": 0.11773859710081007,
+            "p95": 0.5487728000152856
+          },
+          "three_snapshot_restore_s": {
+            "samples": [
+              0.09245650000229944,
+              0.09517260000575334,
+              0.09484479999809992,
+              0.09793679999711458,
+              0.09363770001800731
+            ],
+            "median": 0.09484479999809992,
+            "min": 0.09245650000229944,
+            "max": 0.09793679999711458,
+            "stdev": 0.0020507813755350685,
+            "p95": 0.09793679999711458
+          },
+          "last_snapshot_open_reader_p95_s": 0.0003429999924264848,
+          "last_snapshot_open_and_read_p95_s": 0.001495400007115677
+        },
+        "shared-gear-bounded": {
+          "logical_file_bytes": 2608262,
+          "files": 104,
+          "allocated_file_data_bytes": 2818296,
+          "filesystem_directory_metadata_journal_unmeasured": true,
+          "sequence_add_s": {
+            "samples": [
+              0.29084359999978915,
+              0.29133409999485593,
+              0.21238339999399614,
+              0.20840540000062902,
+              0.3195158000016818
+            ],
+            "median": 0.29084359999978915,
+            "min": 0.20840540000062902,
+            "max": 0.3195158000016818,
+            "stdev": 0.050753168659515825,
+            "p95": 0.3195158000016818
+          },
+          "three_snapshot_restore_s": {
+            "samples": [
+              0.08083400000759866,
+              0.08101350000652019,
+              0.08063900000706781,
+              0.07900929998140782,
+              0.08137580001493916
+            ],
+            "median": 0.08083400000759866,
+            "min": 0.07900929998140782,
+            "max": 0.08137580001493916,
+            "stdev": 0.0009159904694822081,
+            "p95": 0.08137580001493916
+          },
+          "last_snapshot_open_reader_p95_s": 0.0004920999926980585,
+          "last_snapshot_open_and_read_p95_s": 0.0013655999937327579
+        },
+        "shared-gear-combined": {
+          "logical_file_bytes": 2608262,
+          "files": 104,
+          "allocated_file_data_bytes": 2818296,
+          "filesystem_directory_metadata_journal_unmeasured": true,
+          "sequence_add_s": {
+            "samples": [
+              0.21709849998296704,
+              0.2127042999927653,
+              0.21401779999723658,
+              0.20753549999790266,
+              0.21795710000151303
+            ],
+            "median": 0.21401779999723658,
+            "min": 0.20753549999790266,
+            "max": 0.21795710000151303,
+            "stdev": 0.004142279545630665,
+            "p95": 0.21795710000151303
+          },
+          "three_snapshot_restore_s": {
+            "samples": [
+              0.07975639999494888,
+              0.08010669999930542,
+              0.07983729998522904,
+              0.07872980000684038,
+              0.082639600004768
+            ],
+            "median": 0.07983729998522904,
+            "min": 0.07872980000684038,
+            "max": 0.082639600004768,
+            "stdev": 0.0014533752914100604,
+            "p95": 0.082639600004768
+          },
+          "last_snapshot_open_reader_p95_s": 0.0004915000026812777,
+          "last_snapshot_open_and_read_p95_s": 0.0014265999925555661
+        },
+        "shared-gear-reference": {
+          "logical_file_bytes": 2608262,
+          "files": 104,
+          "allocated_file_data_bytes": 2818296,
+          "filesystem_directory_metadata_journal_unmeasured": true,
+          "sequence_add_s": {
+            "samples": [
+              0.22281390000716783,
+              0.2143940000096336,
+              0.33908469998277724,
+              0.2380721999652451,
+              0.2128171999938786
+            ],
+            "median": 0.22281390000716783,
+            "min": 0.2128171999938786,
+            "max": 0.33908469998277724,
+            "stdev": 0.0533002247742518,
+            "p95": 0.33908469998277724
+          },
+          "three_snapshot_restore_s": {
+            "samples": [
+              0.08331729999918025,
+              0.08055090000561904,
+              0.08338960001128726,
+              0.08819860000221524,
+              0.08446949999779463
+            ],
+            "median": 0.08338960001128726,
+            "min": 0.08055090000561904,
+            "max": 0.08819860000221524,
+            "stdev": 0.002765073790768821,
+            "p95": 0.08819860000221524
+          },
+          "last_snapshot_open_reader_p95_s": 0.0005107000033603981,
+          "last_snapshot_open_and_read_p95_s": 0.0014506000006804243
+        },
+        "shared-gear-rename": {
+          "logical_file_bytes": 2608262,
+          "files": 104,
+          "allocated_file_data_bytes": 2818296,
+          "filesystem_directory_metadata_journal_unmeasured": true,
+          "sequence_add_s": {
+            "samples": [
+              0.4679401999892434,
+              0.21486689998710062,
+              0.2120957000006456,
+              0.2562090999854263,
+              0.25870569999096915
+            ],
+            "median": 0.2562090999854263,
+            "min": 0.2120957000006456,
+            "max": 0.4679401999892434,
+            "stdev": 0.10627206892017606,
+            "p95": 0.4679401999892434
+          },
+          "three_snapshot_restore_s": {
+            "samples": [
+              0.0800032000115607,
+              0.08113849999790546,
+              0.08540389998233877,
+              0.08145199999853503,
+              0.08049300001584925
+            ],
+            "median": 0.08113849999790546,
+            "min": 0.0800032000115607,
+            "max": 0.08540389998233877,
+            "stdev": 0.002146603294904462,
+            "p95": 0.08540389998233877
+          },
+          "last_snapshot_open_reader_p95_s": 0.000564800007850863,
+          "last_snapshot_open_and_read_p95_s": 0.0013663999998243526
+        },
+        "shared-gear-v08": {
+          "logical_file_bytes": 2608262,
+          "files": 104,
+          "allocated_file_data_bytes": 2818296,
+          "filesystem_directory_metadata_journal_unmeasured": true,
+          "sequence_add_s": {
+            "samples": [
+              0.2106805999937933,
+              0.21793739998247474,
+              0.2161620000115363,
+              0.2540964000072563,
+              0.21219549998932052
+            ],
+            "median": 0.2161620000115363,
+            "min": 0.2106805999937933,
+            "max": 0.2540964000072563,
+            "stdev": 0.018060959963676654,
+            "p95": 0.2540964000072563
+          },
+          "three_snapshot_restore_s": {
+            "samples": [
+              0.08306530000118073,
+              0.08254199998918921,
+              0.08309729998291004,
+              0.08208610001020133,
+              0.08187770002405159
+            ],
+            "median": 0.08254199998918921,
+            "min": 0.08187770002405159,
+            "max": 0.08309729998291004,
+            "stdev": 0.000554750869563193,
+            "p95": 0.08309729998291004
+          },
+          "last_snapshot_open_reader_p95_s": 0.0004998999938834459,
+          "last_snapshot_open_and_read_p95_s": 0.0015235000028042123
+        }
+      },
+      "paired": [
+        {
+          "reference": "shared-gear-reference",
+          "candidate": "shared-gear-v08",
+          "metric": "add",
+          "speedup_samples": [
+            1.057590969523212,
+            0.9837412028723566,
+            1.5686600788514202,
+            0.9369365325854534,
+            1.0029298453765012
+          ],
+          "speedup_median": 1.0029298453765012,
+          "min": 0.9369365325854534,
+          "max": 1.5686600788514202,
+          "candidate_faster_rounds": 3,
+          "rounds": 5
+        },
+        {
+          "reference": "shared-gear-reference",
+          "candidate": "shared-gear-bounded",
+          "metric": "add",
+          "speedup_samples": [
+            0.766095248468006,
+            0.7359042419456533,
+            1.5965687525124979,
+            1.1423513976342576,
+            0.6660615844122839
+          ],
+          "speedup_median": 0.766095248468006,
+          "min": 0.6660615844122839,
+          "max": 1.5965687525124979,
+          "candidate_faster_rounds": 2,
+          "rounds": 5
+        },
+        {
+          "reference": "shared-gear-reference",
+          "candidate": "shared-gear-rename",
+          "metric": "add",
+          "speedup_samples": [
+            0.47615891947793687,
+            0.9977991027119794,
+            1.598734439131699,
+            0.9292105548896863,
+            0.8226227717491635
+          ],
+          "speedup_median": 0.9292105548896863,
+          "min": 0.47615891947793687,
+          "max": 1.598734439131699,
+          "candidate_faster_rounds": 1,
+          "rounds": 5
+        },
+        {
+          "reference": "shared-gear-reference",
+          "candidate": "shared-gear-combined",
+          "metric": "add",
+          "speedup_samples": [
+            1.0263262990055169,
+            1.0079438921400543,
+            1.5843761593061676,
+            1.1471396458324048,
+            0.9764178363191713
+          ],
+          "speedup_median": 1.0263262990055169,
+          "min": 0.9764178363191713,
+          "max": 1.5843761593061676,
+          "candidate_faster_rounds": 4,
+          "rounds": 5
+        },
+        {
+          "reference": "shared-gear-reference",
+          "candidate": "shared-gear-bounded",
+          "metric": "restore",
+          "speedup_samples": [
+            1.0307209836374316,
+            0.9942898405714613,
+            1.0341100460568504,
+            1.1163065616702061,
+            1.0380174447721253
+          ],
+          "speedup_median": 1.0341100460568504,
+          "min": 0.9942898405714613,
+          "max": 1.1163065616702061,
+          "candidate_faster_rounds": 4,
+          "rounds": 5
+        },
+        {
+          "reference": "shared-gear-reference",
+          "candidate": "shared-gear-bounded",
+          "metric": "open_reader",
+          "speedup_samples": [
+            0.7725029759991696,
+            1.1248647547320492,
+            1.0813414843471059,
+            0.9235927741829563,
+            1.1489314065265979
+          ],
+          "speedup_median": 1.0813414843471059,
+          "min": 0.7725029759991696,
+          "max": 1.1489314065265979,
+          "candidate_faster_rounds": 3,
+          "rounds": 5
+        },
+        {
+          "reference": "shared-gear-reference",
+          "candidate": "shared-gear-bounded",
+          "metric": "open_and_read",
+          "speedup_samples": [
+            0.9878462030193059,
+            1.010505355722287,
+            1.1736233279136967,
+            1.0359845606317617,
+            1.0510832535935617
+          ],
+          "speedup_median": 1.0359845606317617,
+          "min": 0.9878462030193059,
+          "max": 1.1736233279136967,
+          "candidate_faster_rounds": 4,
+          "rounds": 5
+        },
+        {
+          "reference": "shared-gear-rename",
+          "candidate": "shared-gear-combined",
+          "metric": "restore",
+          "speedup_samples": [
+            1.003094422725041,
+            1.0128803208546724,
+            1.0697243017754812,
+            1.0345764880827608,
+            0.9740245597897993
+          ],
+          "speedup_median": 1.0128803208546724,
+          "min": 0.9740245597897993,
+          "max": 1.0697243017754812,
+          "candidate_faster_rounds": 4,
+          "rounds": 5
+        },
+        {
+          "reference": "shared-gear-rename",
+          "candidate": "shared-gear-combined",
+          "metric": "open_reader",
+          "speedup_samples": [
+            1.0569460384908351,
+            1.172682076789453,
+            1.1400040142011811,
+            1.1491353098061285,
+            1.1603400694584958
+          ],
+          "speedup_median": 1.1491353098061285,
+          "min": 1.0569460384908351,
+          "max": 1.172682076789453,
+          "candidate_faster_rounds": 5,
+          "rounds": 5
+        },
+        {
+          "reference": "shared-gear-rename",
+          "candidate": "shared-gear-combined",
+          "metric": "open_and_read",
+          "speedup_samples": [
+            0.8519723992927326,
+            1.0946963608588642,
+            0.9963549726855776,
+            0.8312925967072367,
+            1.015856085528788
+          ],
+          "speedup_median": 0.9963549726855776,
+          "min": 0.8312925967072367,
+          "max": 1.0946963608588642,
+          "candidate_faster_rounds": 2,
+          "rounds": 5
+        }
+      ],
+      "cost": {
+        "shared_gear_bytes": 2608262,
+        "isolated_gear_bytes": 4370481,
+        "archive_1MiB_bytes": 3760981,
+        "native_resource_bytes_once": 124419,
+        "shared_plus_full_native_bytes": 2732681,
+        "shared_saving_vs_isolated_pct": 40.3209395029975,
+        "saving_with_native_vs_archive_pct": 27.341270801421224
+      },
+      "whole_file_reuse_context": [
+        {
+          "version_index": 0,
+          "unchanged_whole_file_raw_bytes": 0,
+          "raw_bytes": 6248459
+        },
+        {
+          "version_index": 1,
+          "unchanged_whole_file_raw_bytes": 1119110,
+          "raw_bytes": 6249392
+        },
+        {
+          "version_index": 2,
+          "unchanged_whole_file_raw_bytes": 1119110,
+          "raw_bytes": 6249392
+        }
+      ]
+    }
+  },
+  "totals": {
+    "measured_roundtrips": 240,
+    "warmup_roundtrips": 48,
+    "verified_range_reads": 92160,
+    "verified_warmup_range_reads": 5760,
+    "dataset_families": 2
+  },
+  "two_independent_stores_one_native_library": {
+    "shared_store_bytes_sum": 26555126,
+    "native_bytes_once": 124419,
+    "total_bytes": 26679545,
+    "independent_archive_bytes_sum": 35280456,
+    "saving_pct": 24.378684334465518
+  }
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "version": "0.1",
+    "source": "E:\\memorystorage\\data\\qasper-versions\\v0.1",
+    "url": "https://qasper-dataset.s3-us-west-2.amazonaws.com/qasper-train-dev-v0.1.tgz",
+    "archive_sha256": "cd0cb8911342966fcc3eb91947af149cb7cf80b4f253ff9a6f0333f4752080dd",
+    "files": [
+      {
+        "path": "qasper-dev-v0.1.json",
+        "bytes": 10925710,
+        "sha256": "bc30979b6caf991bdb45e483478e75699bd16fcdcf66b957fe433bb63bdd833a"
+      },
+      {
+        "path": "qasper-train-v0.1.json",
+        "bytes": 30413775,
+        "sha256": "706d426159900f216d68173d595975610392c8cb944f5eab714985e08f10e768"
+      }
+    ],
+    "license": "CC BY 4.0",
+    "dataset_card": "https://huggingface.co/datasets/allenai/qasper",
+    "original_paths_and_bytes": true
+  },
+  {
+    "version": "0.2",
+    "source": "E:\\memorystorage\\data\\qasper-versions\\v0.2",
+    "url": "https://qasper-dataset.s3-us-west-2.amazonaws.com/qasper-train-dev-v0.2.tgz",
+    "archive_sha256": "3efc2682f5449a12cd9aec813ad09601eda772b9fe4b1d06cd55080f9d97c41f",
+    "files": [
+      {
+        "path": "qasper-dev-v0.2.json",
+        "bytes": 11398928,
+        "sha256": "1b2e2ac60314246698867d382c08104439658cb723482a042bf123f223c191a7"
+      },
+      {
+        "path": "qasper-train-v0.2.json",
+        "bytes": 31969766,
+        "sha256": "9e7dd7c249e5b46214632975a780399802a2ff9db7d120fe7fc66de405e630a8"
+      }
+    ],
+    "license": "CC BY 4.0",
+    "dataset_card": "https://huggingface.co/datasets/allenai/qasper",
+    "original_paths_and_bytes": true
+  },
+  {
+    "version": "0.3",
+    "source": "E:\\memorystorage\\data\\qasper-versions\\v0.3",
+    "url": "https://qasper-dataset.s3-us-west-2.amazonaws.com/qasper-train-dev-v0.3.tgz",
+    "archive_sha256": "a28fdf966db827bcee3d873107d6b6669864fb7ca8fbf73a192f5e39191bdb5a",
+    "files": [
+      {
+        "path": "qasper-dev-v0.3.json",
+        "bytes": 11398686,
+        "sha256": "2ae7ee62a65b1c4225791c70de80c2aad4e8998cf1fd4f09a53103db4f21af93"
+      },
+      {
+        "path": "qasper-train-v0.3.json",
+        "bytes": 31969387,
+        "sha256": "9458bfe76074a8fa8d1685af02bcc73537aa6d338ad20591dfaff1946bc88bf4"
+      }
+    ],
+    "license": "CC BY 4.0",
+    "dataset_card": "https://huggingface.co/datasets/allenai/qasper",
+    "original_paths_and_bytes": true
+  }
+]
