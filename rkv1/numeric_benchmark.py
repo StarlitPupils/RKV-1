@@ -1,5 +1,6 @@
 """Interleaved full-cost numeric-word controls with exact original-byte truth."""
 import json
+import os
 from pathlib import Path
 import random
 import shutil
@@ -22,7 +23,8 @@ def matrix():
             for transform in ("none", "byte-shuffle-2-v1", "xor-shuffle-2-v1")]
 
 
-def numeric_benchmark(source, *, configs=None, rounds=5, queries=32, warmup_queries=4, seed=20261015):
+def numeric_benchmark(source, *, configs=None, rounds=5, queries=32, warmup_queries=4, seed=20261015,
+                      scratch=None, journal=None):
     if (any(type(v) is not int for v in (rounds, queries, warmup_queries, seed))
             or not 1 <= rounds <= 100 or not 1 <= queries <= 10000 or not 0 <= warmup_queries <= 128):
         raise ValueError("Invalid numeric benchmark counts")
@@ -31,6 +33,28 @@ def numeric_benchmark(source, *, configs=None, rounds=5, queries=32, warmup_quer
     configs = list(matrix() if configs is None else configs)
     if not configs or not any(f["bytes"] for f in files):
         raise ValueError("Numeric benchmark needs configurations and nonempty input")
+    if scratch is not None:
+        scratch = Path(scratch).resolve()
+        scratch.mkdir(parents=True, exist_ok=True)
+    if journal is not None:
+        journal = Path(journal).resolve()
+        with journal.open("x", encoding="utf-8", newline="\n") as stream:
+            stream.write(json.dumps({"event":"started", "files":files, "implementation_checksums":checksums})+"\n")
+    def event(**record):
+        if journal is not None:
+            with journal.open("a", encoding="utf-8", newline="\n") as stream:
+                stream.write(json.dumps(record, ensure_ascii=False)+"\n")
+                stream.flush()
+                os.fsync(stream.fileno())
+    def phase_job(phase, archive, destination, row, round_index, order):
+        fields={"phase":phase,"round":round_index,"configuration":row["configuration"],"execution_index":order}
+        try:
+            result = _child(phase, source, archive, destination, row["configuration"])
+        except Exception as error:
+            event(event="worker_failed", **fields, error=str(error))
+            raise
+        event(event="worker_returned", **fields, result=result)
+        return result
     started = timestamp()
     warmups = [(i, -1) for i in range(len(configs))]
     jobs = [(i, r) for i in range(len(configs)) for r in range(rounds)]
@@ -38,15 +62,20 @@ def numeric_benchmark(source, *, configs=None, rounds=5, queries=32, warmup_quer
     random.Random(seed ^ 0x110).shuffle(jobs)
     rows = [{"configuration": {**c, "queries": queries, "seed": seed},
              "encode_trials": [], "decode_trials": [], "range_trials": []} for c in configs]
-    with tempfile.TemporaryDirectory(prefix="rkv-numeric-") as temp:
+    with tempfile.TemporaryDirectory(prefix="rkv-numeric-", dir=scratch) as temp:
         root = Path(temp)
         for order, (index, round_index) in enumerate(warmups + jobs):
             row = rows[index]
             archive, destination = root / f"{index}.rkv", root / "restored"
             print(f"{source.name} full {order+1}/{len(warmups+jobs)} round {round_index} {row['configuration']}", file=sys.stderr, flush=True)
-            encoded = _child("encode", source, archive, destination, row["configuration"])
-            decoded = _child("decode", source, archive, destination, row["configuration"])
-            assert_tree_equal(source, destination)
+            encoded = phase_job("encode", archive, destination, row, round_index, order)
+            decoded = phase_job("decode", archive, destination, row, round_index, order)
+            try:
+                assert_tree_equal(source, destination)
+            except Exception as error:
+                event(event="truth_failed", configuration=row["configuration"], round=round_index, error=str(error))
+                raise
+            event(event="roundtrip_verified", configuration=row["configuration"], round=round_index, execution_index=order)
             if not destination.resolve().is_relative_to(root.resolve()):
                 raise ValueError("Invalid restored numeric path")
             shutil.rmtree(destination)
@@ -95,10 +124,13 @@ def numeric_benchmark(source, *, configs=None, rounds=5, queries=32, warmup_quer
                 "query_boundary_size": 65536, "boundary_group": "cross_chunk"}
             print(f"{source.name} ranges {order+1}/{len(range_jobs)} {index} round {r} {mode}", file=sys.stderr, flush=True)
             child = subprocess.run([sys.executable, "-m", "rkv1.read_benchmark", str(source),
-                str(root / f"{index}.rkv"), json.dumps(settings)], capture_output=True, text=True, encoding="utf-8")
+                str(root / f"{index}.rkv"), json.dumps(settings)], capture_output=True, text=True, encoding="utf-8",
+                errors="backslashreplace", env={**os.environ,"PYTHONIOENCODING":"utf-8"})
             if child.returncode:
+                event(event="range_failed", configuration=row["configuration"], round=r, mode=mode, error=child.stderr[-4000:])
                 raise ValueError(f"Numeric range worker failed: {child.stderr[-4000:]}")
             trial = json.loads(child.stdout)
+            event(event="range_returned", configuration=row["configuration"], round=r, mode=mode, result=trial)
             trial["execution_index"] = order
             row["range_trials"].append(trial)
             for category, group in trial["groups"].items():
@@ -112,6 +144,7 @@ def numeric_benchmark(source, *, configs=None, rounds=5, queries=32, warmup_quer
                 raise ValueError("Numeric archive changed during reads")
     if checksums != implementation_checksums() or files != inventory(source):
         raise ValueError("Numeric input/source changed during campaign")
+    event(event="completed")
     from . import __version__
     return {"schema_version": 10, "rkv1_version": __version__, "dataset": source.name,
         "started_utc": started, "finished_utc": timestamp(), "files": files,
