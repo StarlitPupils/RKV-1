@@ -1,0 +1,27 @@
+{
+  "initial_source_commit": "a1fa875a1ba409326fa87e9e9e61c41b99369489",
+  "initial_attempt_aborted": true,
+  "initial_jobs_advanced_after_verification": 15,
+  "initial_failed_job": {
+    "attempt_index_one_based": 16,
+    "case": "ecg-v4",
+    "policy": "close",
+    "round": 5
+  },
+  "initial_log_sha256": "37ac1a032c4a86a4c6c4bb816e722908bb1ed300ccc381e68e81d1e16d48832f",
+  "initial_log": "restore 1/88 ecg-v4 close round -1\r\nrestore 2/88 ecg-v4 files round -1\r\nrestore 3/88 fanout-v2 files round -1\r\nrestore 4/88 m13-v4 files round -1\r\nrestore 5/88 fanout-v2 close round -1\r\nrestore 6/88 m13-v6 close round -1\r\nrestore 7/88 m13-v6 files round -1\r\nrestore 8/88 m13-v4 close round -1\r\nrestore 9/88 m13-v4 close round 6\r\nrestore 10/88 ecg-v4 close round 9\r\nrestore 11/88 ecg-v4 files round 2\r\nrestore 12/88 ecg-v4 close round 6\r\nrestore 13/88 fanout-v2 files round 2\r\nrestore 14/88 m13-v4 files round 7\r\nrestore 15/88 ecg-v4 files round 4\r\nrestore 16/88 ecg-v4 close round 5\r\nException in thread Thread-32 (_readerthread):\r\nTraceback (most recent call last):\r\n  File \"E:\\miniconda\\Lib\\threading.py\", line 1044, in _bootstrap_inner\r\n    self.run()\r\n    ~~~~~~~~^^\r\n  File \"E:\\miniconda\\Lib\\threading.py\", line 995, in run\r\n    self._target(*self._args, **self._kwargs)\r\n    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"E:\\miniconda\\Lib\\subprocess.py\", line 1615, in _readerthread\r\n    buffer.append(fh.read())\r\n                  ~~~~~~~^^\r\n  File \"<frozen codecs>\", line 325, in decode\r\nUnicodeDecodeError: 'utf-8' codec can't decode byte 0xbe in position 1135: invalid start byte\r\nTraceback (most recent call last):\r\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\r\n  File \"<frozen runpy>\", line 88, in _run_code\r\n  File \"E:\\memorystorage\\scripts\\run_sync.py\", line 56, in <module>\r\n    if __name__==\"__main__\":main()\r\n                            ~~~~^^\r\n  File \"E:\\memorystorage\\scripts\\run_sync.py\", line 45, in main\r\n    save(args.out/\"restore-sync.json\",measure(cases,args.scratch,rounds=args.rounds))\r\n                                      ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"E:\\memorystorage\\rkv1\\sync_benchmark.py\", line 31, in measure\r\n    trial=_child(\"decode\",row[\"source\"],archive,destination,{\"restore_sync\":policy})\r\n  File \"E:\\memorystorage\\rkv1\\controlled.py\", line 151, in _child\r\n    raise ValueError(f\"{phase} worker failed: {result.stderr[-4000:]}\")\r\n                                               ~~~~~~~~~~~~~^^^^^^^^\r\nTypeError: 'NoneType' object is not subscriptable\r\n",
+  "initial_limit": "Localized child stderr decoding failed and masked original error; per-job timing records were lost when collector aborted. Not part of final formal samples.",
+  "separate_diagnostic": {
+    "iteration_zero_based": 8,
+    "policy": "close",
+    "reproduced": "PermissionError WinError 5 at staging-directory rename",
+    "included_in_formal_cost_results": false,
+    "root_cause": "Unknown; antivirus or device causes not established"
+  },
+  "protocol_amendment": "UTF-8 diagnostics, bounded Windows rename retries (5/32/33 only), all failed jobs retained; no whole restore or fsync retries.",
+  "final_source_commit": "f893e666ea102cfd0e44a7cd010fedf2ff72f4b1",
+  "final_candidate_CI_run": 38705450533,
+  "final_records": "restore-sync.json",
+  "discarded_final_jobs": 0,
+  "historical_results_overwritten": false
+}

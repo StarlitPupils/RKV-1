@@ -6,7 +6,56 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.12.0 · FITS 类型分流与区域分块
+## 当前版本：v0.13.0 · 恢复文件同步、故障边界与账本更正
+
+归档 `unpack` 默认在每个完整文件 SHA 验证后执行 **flush → fsync → close**，
+空文件同样处理，全部文件完成后再发布目录。同步错误直接失败；显式
+`--sync-policy close` 保留历史关闭边界作为对照。编码与 v1–v6 格式不变，
+不宣称压缩率改善；CAS 恢复不在本次同步策略变更范围内。
+
+同归档、同 SHA、十轮配对，本机 Windows/E: NTFS 温缓存，80 次正式恢复和 8 次
+预热全部逐字节一致；正式完成 1,350 次文件 fsync 请求。以下耗时包含校验、关闭、
+发布和实际 Windows 重命名重试等待，不含进程启动与外部真值比较：
+
+| 案例 | 文件数 | close 中位 ms | files 中位 ms | 配对额外 ms | files/close 配对中位 |
+|---|---:|---:|---:|---:|---:|
+| ECG / v4 | 3 | 7.038 | 22.231 | 15.298 | 3.135× |
+| M13 / v4 | 1 | 29.660 | 87.844 | 58.733 | 3.003× |
+| M13 / v6 | 1 | 27.365 | 88.260 | 61.207 | 3.257× |
+| 合成文件数对照 / v2 | 130 | 40.273 | 553.017 | 512.846 | 13.716× |
+
+差值和倍率先逐轮计算再取中位。130 文件案例不是科学语料；同步成本依文件数、
+设备和缓存变化，不能将这些倍率推广到其他机器或解释为纯 fsync 内核延迟。
+
+![同归档的恢复同步成本](results/v0.13.0/restore-sync-costs.png)
+
+v1–v6 ×11 情形×3轮的 **198 条故障审计**均符合预期：写/flush/fsync/关闭/发布前
+失败不发布；发布前强杀留下私有暂存，目标不存在；发布后强杀目标完整存在，但
+客户端可能未收到成功。没有自动孤儿恢复，也没有目录/卷同步或真实掉电证明。
+本机115项测试：114通过、1 Windows符号链接权限跳过。
+
+首轮实验因 Windows rename 拒绝及诊断编码问题中止，记录单独保留。修订版仅对
+Windows rename 的5/32/33错误最多尝试4次，等待10/50/100ms，所有等待计时；
+最终正式样本有1次发布重试、0失败，不重试同步或整次恢复。
+
+**历史更正：** v0.12 分段读取的分析性工作量误用固定块偏移。本版按真实前缀定位，
+重编码100个归档确认完整SHA不变，再以独立线性扫描核对96,000次原请求；24个
+分段配置、720组账本需更正。旧标签/结果不覆盖，原延迟和0/8联合验收计算不变。
+
+```powershell
+python -m pip install -e ".[scientific]"
+python -m rkv1 unpack evidence.rkv restored
+python -m rkv1 unpack evidence.rkv close-control --sync-policy close
+python -m scripts.run_sync --out results/local-sync
+```
+
+[协议与边界](docs/PERSISTENCE.md) · [原始结果与分析](results/v0.13.0/SUMMARY.md) ·
+[中止记录](results/v0.13.0/attempt-history.json) ·
+[账本更正](results/v0.13.0/v012-work-ledger-correction.json) ·
+[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.13.0)。
+后续继续 E2 类型候选、代码/数学与热点筛选；E3/E4、冷缓存、跨机器性能及推理未测。
+
+## FITS 类型分流与区域分块（v0.12.0，历史实验）
 
 E2新增显式FITS白名单和区域分块：识别一个完整2D float32/64主图像，头、图像、
 填充按原始边界分块，只对图像字节重排；不转换数值/端序，不重写文件。未知格式

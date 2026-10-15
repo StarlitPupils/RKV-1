@@ -1,0 +1,24 @@
+{
+  "source_commit": "f893e666ea102cfd0e44a7cd010fedf2ff72f4b1",
+  "candidate_CI": "https://github.com/StarlitPupils/RKV-1/actions/runs/38705450533",
+  "hardware": {
+    "cpu": "Intel Core i5-14600KF",
+    "physical_cores": 14,
+    "logical_processors": 20,
+    "memory_gib_approx": 32
+  },
+  "scratch": {
+    "path": "E:\\memorystorage\\.tools\\sync-scratch",
+    "volume": "E:",
+    "filesystem": "NTFS",
+    "drive_type": "Fixed",
+    "health": "Healthy"
+  },
+  "power_failure": null,
+  "cold_os_cache": null,
+  "cross_machine_performance": null,
+  "background_load_isolated": false,
+  "filesystem_and_health_are_not_durability_proof": true,
+  "formal_runtime": "environment.json",
+  "initial_aborted_run": "attempt-history.json"
+}

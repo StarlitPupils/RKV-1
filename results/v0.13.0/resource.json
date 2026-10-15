@@ -1,0 +1,8 @@
+{
+  "persistence_source_bytes": 1252,
+  "persistence_source_sha256": "d3bf681d1635b05040b5c05cc08f6f5d7e4329704342fb1747953d43213259ac",
+  "extra_native_bytes": 0,
+  "model_bytes": 0,
+  "dictionary_bytes": 0,
+  "basis": "Whole persistence.py source; archive bytes unchanged. Common Python/core/codecs incomplete, not full deployment size."
+}

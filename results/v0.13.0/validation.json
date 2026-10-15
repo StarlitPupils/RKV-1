@@ -1,0 +1,23 @@
+{
+  "same_archive_every_policy_and_round": true,
+  "all_successful_outputs_bytewise_verified": true,
+  "all_failed_jobs_retained": true,
+  "fsync_counters_verified": true,
+  "frozen_source_verified": true,
+  "fault_records_expected_states_verified": 198,
+  "historical_archives_byte_identity_verified": 100,
+  "historical_ledger_independent_overlap_verified": 96000,
+  "local_tests": {
+    "run": 115,
+    "passed": 114,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "4a01c2bdc055a099f4c272bc76610f628af56a5069d2ea742cdcb2c8852b4e0b"
+  },
+  "power_failure": null,
+  "directory_fsync": false,
+  "automatic_orphan_recovery": false,
+  "cold_os_cache": null,
+  "cross_machine": null,
+  "inference_quality": null
+}
