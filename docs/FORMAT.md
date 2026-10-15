@@ -192,3 +192,11 @@ none仍写v2，既有v1–v6读取、CAS1与v0.13归档恢复files语义保持�
 原始证据沿用CAS1，归档v1–v6无变更。memory/目录的SQLite FTS5索引、版本1清单、
 HEAD及派生answers是应用层元数据，详见[MEMORY.md](MEMORY.md)。每个清单绑定
 CAS快照、源文件和索引SHA；句子引用绑定原记录定位与句子SHA，不是科学蕴含证明。
+
+## v0.16应用层记忆清单v2
+
+归档v1–v6和CAS1未改。新索引为contentless FTS5与原记录定位表，清单v2绑定基础
+索引SHA/基础CAS快照、不可变增量链和当前完整来源树；HEAD仍在验证完当前视图后
+发布。增量含父/新快照、删除key和新定位，Zlib压缩并绑定SHA/原长度。查询在内存
+复制/重放以保持全库BM25，不存完整查询视图。详见[MEMORY-INDEX.md](MEMORY-INDEX.md)。
+v0.16兼容旧v1应用清单；v0.15不读新v2清单。无自动迁移、GC或掉电验证。

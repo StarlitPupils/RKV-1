@@ -6,7 +6,57 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.15.0 · 可运行的证据记忆与模型回答
+## 当前版本：v0.16.0 · 记忆索引成本下降，保留全库排序和原文校验
+
+新建库使用紧凑FTS5基础索引与增量重放：去掉索引中的正文副本，小幅更新复用基础
+索引；每次查询核验完整基础/增量SHA，在内存中重放当前完整视图，再用SQLite全库
+BM25排序。命中仍回CAS读精确原记录，保留所有旧快照和旧索引，不删除历史。
+
+三策略×三轮，**4,275次正式查询＋1,764次旧快照检查**的排序与来源身份全部匹配
+旧完整索引，BM25误差<=1e-10。初始188条主张排名与v0.15一致，gold文档召回@5仍
+**88.34%**。本轮**0次模型生成**；已有模型请求SHA/响应引用的离线重放不算新推理结果。
+
+| 同轮同来源成本 | 旧完整索引 | 紧凑完整索引，计专用源 | 紧凑增量，计专用源 | 增量相对旧策略净省 |
+|---|---:|---:|---:|---:|
+| 初始一快照 | 19.32 MB | 8.43 MB | 8.43 MB | 56.36% |
+| 追加88B，保留两快照 | 35.69 MB | 13.90 MB | **8.44 MB** | **76.34%** |
+| 定位大幅变化，保留三快照 | 55.01 MB | 22.32 MB | 16.86 MB | 69.34% |
+| 删除控制，保留四快照 | 74.32 MB | 30.73 MB | 25.28 MB | 65.99% |
+
+一份索引从16,355,328B降至5,455,872B；88B追加只新写**234B**索引增量。仍全量
+读取/哈希提交来源。超过25%记录定位改变或已有8层增量时完整建紧凑检查点，旧文件
+全部保留。改写/删除是合成机制控制，不代表新科学数据或推理提升。
+
+![索引成本对照](results/v0.16.0/index-costs.png)
+
+追加场景查询中位/p95：旧索引37.09/54.46ms，紧凑完整16.82/24.55ms，紧凑增量
+25.61/36.37ms。增量相对旧策略配对加速中位1.393倍，但比紧凑完整更慢；查询进程
+峰值RSS分别48.35/38.01/46.76MiB（含解释器/加载）。增量完整提交中位298.37ms，
+旧策略666.44ms。空间、速度、内存分别衡量，不称全流程支配；本机温缓存。
+
+计入整个memory_index.py源10,731B一次后，初始库仍为原文8.31MB的**1.015倍**。
+公共Python/SQLite/core、文件系统元数据未全额分配，尚无整个记忆系统净压缩结论。
+本轮没有回答写回，不能直接用v0.15含回答的35.73MB计算配对节省。
+
+本机141项测试：140通过、1项Windows权限跳过。归档v1–v6/CAS1不变；旧v1记忆库
+继续原策略，新v2应用清单需v0.16读取器，v0.15拒绝新清单。无自动迁移或GC。
+
+```powershell
+python -m pip install -e .
+python -m rkv1 memory-init data/new-memory data/memory-source
+python -m rkv1 memory-search data/new-memory "rare genetic variants"
+python -m rkv1 memory-add data/new-memory data/updated-source --label revision-2
+python -m rkv1 memory-serve data/new-memory
+```
+
+模型仍按本机RKV_LLM_BASE_URL/MODEL/API_KEY配置，未配置时仅检索，密钥不写仓库。
+[冻结协议](docs/MEMORY-INDEX.md) · [全部时序/资源与结果](results/v0.16.0/SUMMARY.md) ·
+[核验](results/v0.16.0/validation.json) ·
+[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.16.0)。
+下一步压低单份索引/定位元数据，扩大更新负载和独立问题评测，再测长会话；
+E3神经压缩、多跳及形式化验证仍未实施。新增模型评测需另定调用预算。
+
+## 首个证据记忆与模型回答（v0.15.0）
 
 已打通原始资料CAS保存 → SQLite FTS5/BM25检索 → 原记录SHA校验 → 模型判断 →
 句子引用绑定 → 派生回答写回。新增CLI与本机中文演示页，支持资料更新及读取旧快照。
@@ -669,7 +719,7 @@ python -m rkv1 pack data/wine data/columns.rkv --codec zlib --transform csv-colu
 | E1 无损核心 | v1–v6兼容；共享CAS、真实版本复用与Gear分块；默认v2、CAS1保持不变；归档默认逐文件fsync已测，目录/掉电持久性未验证 |
 | E2 类型感知可逆编码 | CSV/小单元/Rust配对、int16/float字节变换、Blosc、FITS布局已测；新布局0/8联合通过，代码/数学待开展 |
 | E3 神经预测 + 熵编码 + 精确残差 | 后续，计入模型和解码成本 |
-| E4 科学记忆、检索、证据回溯与可验证推理 | v0.15首个词法检索/API/引用与写回基线；12条配对问题；长会话/多跳/形式证明未测 |
+| E4 科学记忆、检索、证据回溯与可验证推理 | v0.15首个检索/API/引用与写回基线；v0.16索引成本对照；长会话/多跳/形式证明未测 |
 
 Rust 已用于可选CSV反变换与Gear扫描。传统归档的`--base`复用编码结果，仍写独立
 完整快照；目录CAS可跨版本只存一份对象。两者仍全量读源、计算哈希并验证旧对象。

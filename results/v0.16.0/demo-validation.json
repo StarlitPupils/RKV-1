@@ -1,0 +1,13 @@
+{
+  "scope": "Separate local demo reconstruction, not an automatic migration tool or timing campaign",
+  "original_and_updated_snapshot_IDs_equal_v015": true,
+  "all_25_existing_derived_records_byte_identical": true,
+  "derived_records": 25,
+  "generation_calls": 0,
+  "new_demo_logical_bytes": 8474595,
+  "old_demo_logical_bytes": 35728598,
+  "dedicated_source_allocation_excluded_here": true,
+  "new_demo_HTTP_search_exact_verified_sources": 5,
+  "new_demo_URL": "http://127.0.0.1:8766",
+  "model_configured_or_generation_calls": false
+}

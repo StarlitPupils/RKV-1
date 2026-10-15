@@ -1,0 +1,22 @@
+{
+  "wheel_python_sources_match_measurement": true,
+  "packaged_HTML_identical_to_measured_UI": true,
+  "installed_memory_CLI_exact_bytes_update_old_snapshot_and_derived_isolation": true,
+  "additional_real_model_calls": 0,
+  "legacy_v1_memory_read_update_and_old_reader_verified": true,
+  "v015_rejects_v2_memory_manifest_as_documented": true,
+  "private_research_and_raw_recordings_excluded": true,
+  "sdist_scientific_records_and_protocol_present": true,
+  "installed_wheel_outside_checkout": true,
+  "v4_numeric_CLI_pack_verify_inspect_read_unpack_compare": true,
+  "explicit_v4_and_v5_none_CLI": true,
+  "all_nine_v5_professional_profiles_CLI": true,
+  "released_v0_15_reader_recovers_v2_v3_v4_v5_v6": true,
+  "default_files_and_explicit_close_sync_counts": true,
+  "all_five_v6_methods_CLI_and_region_ranges": true,
+  "installed_crossdomain_fresh_process_sync_and_journal_smoke": true,
+  "v1_v2_fixtures_verified": true,
+  "installed_v6_layout_fresh_subprocess_smoke": true,
+  "wheel_scope": "Local Windows build; CI ZIP SHA differs, measured Python source bytes must be identical",
+  "wheel_sha256": "26c2a51d28124dd4c1d7495c7777a80065d84c5115a23268963159d7bdeb938f"
+}

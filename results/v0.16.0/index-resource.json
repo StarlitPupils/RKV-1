@@ -1,0 +1,6 @@
+{
+  "path": "rkv1/memory_index.py",
+  "bytes": 10731,
+  "sha256": "5c255c92cd50a478c4c5be13ea9d603d7677fe803deab065b0b7ce9ae0b4e0f2",
+  "allocation": "Whole dedicated source once; common Python/SQLite/core runtime excluded"
+}

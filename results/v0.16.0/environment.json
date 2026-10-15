@@ -1,0 +1,10 @@
+{
+  "python": "3.13.12",
+  "sqlite": "3.51.1",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "logical_cpus": 20,
+  "work": "E:\\memorystorage\\.tools\\memory-index-v016",
+  "old_release_commit": "7310ec8ebe57bfd615c1394fe5208d0db8b80d30",
+  "generation_calls": 0,
+  "scope": "One local Windows host, warm OS cache; fresh query subprocess per stage; peak RSS includes interpreter and whole query worker"
+}

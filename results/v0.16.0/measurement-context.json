@@ -1,0 +1,17 @@
+{
+  "frozen_candidate_commit": "5126566b8c93ec92bb02c8af7945f65aa04addb1",
+  "candidate_CI_run": 38739370753,
+  "candidate_CI_conclusion": "success",
+  "candidate_CI_url": "https://github.com/StarlitPupils/RKV-1/actions/runs/38739370753",
+  "generation_calls": 0,
+  "scientific_claims": 188,
+  "query_counts": {
+    "formal": 4275,
+    "old_snapshot": 1764,
+    "offline_existing_request_checks": 108,
+    "warmups_excluded": 36
+  },
+  "metrics_scope": "Local Windows/E: warm cache, full file bytes incl all retained snapshots, source once; common runtime and filesystem metadata excluded",
+  "model_quality_scope": "No new model outputs; original 12 retrieval-condition requests and raw responses checked offline",
+  "baseline_scope": "full-v1 reproduces v0.15 full-content strategy; compare same-run stores without answer writebacks, not v0.15 model experiment total"
+}

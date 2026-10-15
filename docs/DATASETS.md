@@ -8,7 +8,7 @@
 |---|---|---|---|
 | Iris | R. A. Fisher；[UCI](https://archive.ics.uci.edu/dataset/53/iris)，DOI 10.24432/C56C76 | CC BY 4.0 | 小型科学 CSV |
 | Wine Quality red | Cortez, Cerdeira, Almeida, Matos, Reis (2009)；[UCI](https://archive.ics.uci.edu/dataset/186/wine+quality)，DOI 10.24432/C56S3T | CC BY 4.0 | 科学测量 CSV |
-| SciFact | Wadden et al. (2020), [Fact or Fiction: Verifying Scientific Claims](https://aclanthology.org/2020.emnlp-main.609/)；[官方仓库](https://github.com/allenai/scifact) | [官方许可](https://github.com/allenai/scifact/blob/master/LICENSE.md)：claims 为 CC BY 4.0，corpus abstracts 为 ODC-By 1.0 | 科学文本压缩；未来证据检索 |
+| SciFact | Wadden et al. (2020), [Fact or Fiction: Verifying Scientific Claims](https://aclanthology.org/2020.emnlp-main.609/)；[官方仓库](https://github.com/allenai/scifact) | [官方许可](https://github.com/allenai/scifact/blob/master/LICENSE.md)：claims 为 CC BY 4.0，corpus abstracts 为 ODC-By 1.0 | 科学文本压缩；v0.15证据检索/判断，v0.16索引成本对照 |
 | QASPER train/dev v0.3 | Dasigi, Lo, Beltagy, Cohan, Smith, Gardner (2021)，[原论文](https://aclanthology.org/2021.naacl-main.365/)，[官方数据页](https://allenai.org/data/qasper) | 官方数据卡 CC BY 4.0；文本来源 S2ORC | 43,368,073 bytes 科学论文 JSON；本版仅压缩，不训练或问答 |
 | Wine Quality red/white | 同上 UCI Wine Quality 作者与来源，两个原始 CSV | CC BY 4.0 | E2 数值 CSV 列重排，348,625 bytes |
 | HTRU2 | Robert Lyon (2015)；[UCI 官方数据页](https://archive.ics.uci.edu/dataset/372/htru2)，DOI 10.24432/C5DK6R | CC BY 4.0 | 脉冲星候选特征，原 CSV 1,730,114 bytes；17,898 行；CR-only 原换行保留，CSV v1 回退 |

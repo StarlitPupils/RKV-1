@@ -1,0 +1,16 @@
+{
+  "measured_Python_modules": 46,
+  "formal_queries_audited": 4275,
+  "old_snapshot_queries_audited": 1764,
+  "all_global_BM25_rankings_and_source_identities_match_full_v1": true,
+  "original_queries_match_v015_records": true,
+  "offline_existing_model_input_and_citation_checks": 108,
+  "new_model_generation_calls": 0,
+  "tests": {
+    "run": 141,
+    "passed": 140,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "fc0e57ab0c6420621b4b61a46a24cf486ff1bd902d7d17af5d376c4f6959514d"
+  }
+}
