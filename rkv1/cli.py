@@ -7,6 +7,7 @@ from .core import Archive, DEFAULT_CHUNK, assert_tree_equal, pack, unpack, verif
 from .numeric import POLICIES as NUMERIC_POLICIES
 from .blosc_codec import PROFILES as BLOSC_PROFILES
 from .layouts import LAYOUTS, FITS_POLICY
+from .persistence import POLICIES as SYNC_POLICIES
 
 
 def decoder_options(parser):
@@ -33,6 +34,7 @@ def main(argv=None):
     p = sub.add_parser("unpack")
     p.add_argument("archive")
     p.add_argument("destination")
+    p.add_argument("--sync-policy", choices=SYNC_POLICIES, default="files", help="files: flush/fsync each verified restored file; close: historical close-only behavior. No directory durability guarantee.")
     decoder_options(p)
     for name in ("verify", "inspect"):
         p = sub.add_parser(name)
@@ -106,7 +108,7 @@ def main(argv=None):
                           unit_size=args.unit_size, format_version=args.format_version, layout=args.layout)
         elif args.command == "unpack":
             result = unpack(args.archive, args.destination, decoder_backend=args.decoder_backend,
-                            native_library=args.native_library)
+                            native_library=args.native_library, sync_policy=args.sync_policy)
         elif args.command == "verify":
             result = verify(args.archive, decoder_backend=args.decoder_backend, native_library=args.native_library)
         elif args.command == "inspect":

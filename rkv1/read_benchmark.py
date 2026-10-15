@@ -6,6 +6,7 @@ trial uses a fresh process. Reopening a file does not evict the OS page cache.
 from __future__ import annotations
 
 from datetime import datetime, timezone
+from bisect import bisect_left, bisect_right
 import hashlib
 import importlib.metadata
 import json
@@ -54,6 +55,12 @@ def touched_bytes(header, request, reader=None):
     chunk = header["chunk_size"]
     first = request["offset"] // chunk
     last = (request["offset"] + request["length"] + chunk - 1) // chunk
+    if header.get("version") == 6 and header["layout"] != "fixed":
+        if reader is None:
+            raise ValueError("Segmented work ledger needs an unmeasured offset reader")
+        offsets = reader._file_offsets[request["path"]]
+        first = bisect_right(offsets, request["offset"])-1
+        last = bisect_left(offsets, request["offset"]+request["length"])
     keys = entry["chunks"][first:last] if request["length"] else []
     blocks = [header["blocks"][key] for key in keys]
     if header.get("version", 2) == 3:

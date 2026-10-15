@@ -25,6 +25,7 @@ from .transforms import csv_columns_decode, csv_columns_encode
 from .numeric import POLICIES as NUMERIC_POLICIES, encode as numeric_encode, decode as numeric_decode
 from .units import ENTRY, MIN_UNIT, decode_unit, encode_units, validate_index
 from .layouts import LAYOUTS, FITS_POLICY, chunks as layout_chunks
+from . import persistence
 
 MAGIC = b"RKV1\r\n\x1a\n"
 VERSION = 2
@@ -425,7 +426,9 @@ class Archive:
             raise ValueError("File SHA-256 mismatch")
         return data
 
-    def process(self, output_dir=None):
+    def process(self, output_dir=None, *, sync_policy="files"):
+        persistence.validate_policy(sync_policy)
+        synced = 0
         for entry in self.header["files"]:
             file_hash = hashlib.sha256()
             with ExitStack() as stack:
@@ -439,10 +442,15 @@ class Archive:
                     file_hash.update(raw)
                     if output is not None:
                         output.write(raw)
-            if file_hash.hexdigest() != entry["sha256"]:
-                raise ValueError(f"File SHA-256 mismatch: {entry['path']}")
-        return {"verified_files": len(self.files), "unique_chunks": len(self.header["blocks"]),
-                "raw_bytes": sum(e["size"] for e in self.header["files"])}
+                if file_hash.hexdigest() != entry["sha256"]:
+                    raise ValueError(f"File SHA-256 mismatch: {entry['path']}")
+                if output is not None:
+                    synced += persistence.finish_file(output, sync_policy)
+        result = {"verified_files": len(self.files), "unique_chunks": len(self.header["blocks"]),
+                  "raw_bytes": sum(e["size"] for e in self.header["files"])}
+        if output_dir is not None:
+            result.update(sync_policy=sync_policy, files_synced=synced)
+        return result
 
 
 def pack(source, archive, chunk_size=DEFAULT_CHUNK, *, base=None, overwrite=False,
@@ -612,7 +620,8 @@ def verify(archive, *, decoder_backend="python", native_library=None):
         return reader.process()
 
 
-def unpack(archive, destination, *, decoder_backend="python", native_library=None):
+def unpack(archive, destination, *, decoder_backend="python", native_library=None, sync_policy="files"):
+    persistence.validate_policy(sync_policy)
     destination = Path(destination)
     if destination.exists() or destination.is_symlink():
         raise FileExistsError("Destination must not already exist")
@@ -621,11 +630,8 @@ def unpack(archive, destination, *, decoder_backend="python", native_library=Non
         stage = Path(temporary) / "data"
         stage.mkdir()
         with Archive(archive, decoder_backend=decoder_backend, native_library=native_library) as reader:
-            result = reader.process(stage)
-        # Check again just before publish; extraction parents must be trusted.
-        if destination.exists() or destination.is_symlink():
-            raise FileExistsError(destination)
-        stage.rename(destination)
+            result = reader.process(stage, sync_policy=sync_policy)
+        persistence.publish_directory(stage, destination)
     return result
 
 

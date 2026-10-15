@@ -134,7 +134,7 @@ def worker(phase, source, archive, destination, config):
                      format_version=config.get("format_version"), layout=config.get("file_layout", "fixed"))
     elif phase == "decode":
         stats = unpack(archive, destination, decoder_backend=config.get("decoder_backend", "python"),
-                       native_library=config.get("native_library"))
+                       native_library=config.get("native_library"), sync_policy=config.get("restore_sync", "files"))
     else:
         raise ValueError("Unknown phase")
     result = {"wall_s": time.perf_counter() - start, "cpu_s": time.process_time() - cpu,
