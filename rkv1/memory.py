@@ -59,10 +59,13 @@ class Memory:
             if not path.is_dir() or path.is_symlink():raise ValueError("Invalid memory directories")
 
     @classmethod
-    def create(cls,root,*,compression="zlib"):
+    def create(cls,root,*,compression="zlib",index_profile="compact-delta-v2"):
+        from .memory_index import PROFILES
+        if index_profile not in PROFILES:raise ValueError("Unknown memory index profile")
         root=Path(root).resolve();root.mkdir(parents=True,exist_ok=False)
         for name in ("indexes","manifests","answers"):(root/name).mkdir()
         Store.create(root/"cas",compression=compression,chunk_size=65536)
+        if index_profile!="full-v1":_publish(root/"indexes/config.json",_json({"version":2,"profile":index_profile}))
         return cls(root)
 
     def add(self,source,*,label="evidence"):
@@ -77,7 +80,16 @@ class Memory:
         if manifest_path.exists():
             manifest=self._manifest(sid)
             _head(self.root/"HEAD.json",{"version":1,"snapshot_id":sid})
-            return {**added,"indexed_records":manifest["records"],"index_bytes":target.stat().st_size,"index_reused":True,"wall_s":time.perf_counter()-started}
+            base=manifest.get("base_snapshot_id",sid)
+            size=(self.root/"indexes"/(base+".sqlite")).stat().st_size
+            size+=sum((self.root/"indexes"/(d["sha256"]+".delta")).stat().st_size for d in manifest.get("deltas",[]))
+            return {**added,"indexed_records":manifest["records"],"index_bytes":size,"new_index_bytes":0,"index_reused":True,"wall_s":time.perf_counter()-started}
+        from .memory_index import profile,build
+        selected=profile(self)
+        if selected!="full-v1":
+            result=build(self,sid,selected)
+            _head(self.root/"HEAD.json",{"version":1,"snapshot_id":sid})
+            return {**added,**result,"wall_s":time.perf_counter()-started}
         fd,temp=tempfile.mkstemp(prefix=".memory-index-",suffix=".sqlite",dir=target.parent);os.close(fd)
         db=None;count=0
         try:
@@ -117,7 +129,11 @@ class Memory:
         path=self.root/"manifests"/(sid+".json")
         if path.is_symlink():raise ValueError("Linked memory manifest")
         value=json.loads(path.read_bytes())
-        if value.get("version")!=1 or value.get("snapshot_id")!=sid:raise ValueError("Memory manifest identity mismatch")
+        if value.get("version") not in (1,2) or value.get("snapshot_id")!=sid:raise ValueError("Memory manifest identity mismatch")
+        if value["version"]==2:
+            from .memory_index import validate
+            validate(self,sid,value)
+            return value
         index=self.root/"indexes"/(sid+".sqlite")
         if index.is_symlink() or digest(index.read_bytes())!=value["index_sha256"]:raise ValueError("Memory index SHA mismatch")
         snap=self.store.snapshot(sid)
@@ -128,14 +144,18 @@ class Memory:
     def search(self,question,*,top_k=5,snapshot=None):
         if not isinstance(question,str) or not 1<=len(question)<=4096 or type(top_k) is not int or not 1<=top_k<=20:
             raise ValueError("Invalid memory query or top_k")
-        started=time.perf_counter();sid=snapshot or self.current();self._manifest(sid)
+        started=time.perf_counter();sid=snapshot or self.current();manifest=self._manifest(sid)
         tokens=list(dict.fromkeys(t.lower() for t in re.findall(r"[\w]+",question,re.UNICODE) if t.lower() not in STOP and len(t)>1))[:64]
         if not tokens:return {"snapshot_id":sid,"question":question,"hits":[],"wall_s":time.perf_counter()-started}
         query=" OR ".join('"'+t+'"' for t in tokens)
-        db=sqlite3.connect((self.root/"indexes"/(sid+".sqlite")).as_uri()+"?mode=ro",uri=True)
-        try:
-            rows=db.execute("SELECT key,path,offset,length,record_sha256,kind,title,body,bm25(evidence) FROM evidence WHERE evidence MATCH ? ORDER BY bm25(evidence),key LIMIT ?",(query,top_k)).fetchall()
-        finally:db.close()
+        if manifest["version"]==2:
+            from .memory_index import search
+            rows=[(*r[:6],None,None,r[6]) for r in search(self,manifest,query,top_k)]
+        else:
+            db=sqlite3.connect((self.root/"indexes"/(sid+".sqlite")).as_uri()+"?mode=ro",uri=True)
+            try:
+                rows=db.execute("SELECT key,path,offset,length,record_sha256,kind,title,body,bm25(evidence) FROM evidence WHERE evidence MATCH ? ORDER BY bm25(evidence),key LIMIT ?",(query,top_k)).fetchall()
+            finally:db.close()
         hits=[]
         with self.store.snapshot(sid) as snap:
             for key,path,offset,length,sha,kind,title,body,rank in rows:
@@ -144,8 +164,9 @@ class Memory:
                 parsed=list(records(path,raw))
                 if len(parsed)!=1:raise ValueError("Evidence locator is not one record")
                 actual_key,actual_title,sentences,_,_,actual_kind=parsed[0]
-                if (actual_key,title,body,kind)!=(key,actual_title,"\n".join(sentences),actual_kind):
+                if actual_key!=key or kind!=actual_kind or (manifest["version"]==1 and (title,body)!=(actual_title,"\n".join(sentences))):
                     raise ValueError("Index text differs from immutable evidence")
+                title=actual_title
                 hits.append({"citation_id":f"D{len(hits)}","key":key,"title":title,"sentences":sentences,"rank":rank,
                     "source_bytes_verified":True,"locator":{"snapshot_id":sid,"path":path,"offset":int(offset),"length":int(length),"sha256":sha}})
         return {"snapshot_id":sid,"question":question,"hits":hits,"wall_s":time.perf_counter()-started}
