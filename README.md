@@ -6,7 +6,60 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.11.0 · 完整浮点 FITS 与 Blosc 对照
+## 当前版本：v0.12.0 · FITS 类型分流与区域分块
+
+E2新增显式FITS白名单和区域分块：识别一个完整2D float32/64主图像，头、图像、
+填充按原始边界分块，只对图像字节重排；不转换数值/端序，不重写文件。未知格式
+保守回退普通编码。新v6保存实际块配方，解码不依赖外部FITS解析器，支持精确范围读。
+默认none/v2、数值/v4、Blosc/v5、单元/v3、CAS1保持不变，旧读取器拒绝v6。
+
+规则与验收先固定，再测新验证记录：11,586,240 B的M13叠加float64图像及478,080 B
+的ROSAT float32图像。另保留已见Spitzer开发记录、ECG和噪声回退对照。
+全部20条件/组、五轮、统一v6：Zlib6/Zstd3 ×64KiB/1MiB ×普通固定、整文件重排、
+固定块类型分流、仅分段、分段类型分流。**500次正式完整恢复、96,000次正式范围
+读取**，另100次恢复预热、12,000次查询预热全部逐字节一致。本机104项测试：
+103通过、1符号链接权限跳过；Windows/Linux CI通过。
+
+**新增布局未超过已有整文件重排的联合收益。** 两份新验证输入各自按最小归档
+选参，专用源共用一次（不是预先固定的部署策略或速度最优）：
+
+| 方法 | 合计完整归档 B | 专用源一次 B | 对最小普通归档加总净省 |
+|---|---:|---:|---:|
+| 普通固定块 | 2,921,262 | 0 | 基线 |
+| 整文件字节重排 | 1,961,771 | 1,431 | **32.80%** |
+| 固定块仅图像重排 | 2,068,709 | 4,824 | 29.02% |
+| 仅区域分块 | 2,921,393 | 3,393 | −0.12% |
+| 分段且仅图像重排 | 1,960,598 | 4,824 | **32.72%** |
+
+分段类型归档合计比整文件重排少1,173 B，但新增整个layouts.py计3,393 B后，
+反而多2,220 B。M13/ROSAT整文件重排单组计源后分别净省35.70%/8.92%，分段类型
+为35.56%/8.31%；这些是新数据上的观察，不能把32.80%与v0.11的13.60%当成升级收益。
+两个新记录的四种codec/块工作点共 **0/8通过预定联合验收**：须同时相对普通固定
+和整文件重排，在计源后不增大，恢复/常驻p95/重开p95配对中位均>=1且各至少4/5轮更快。
+编码成本另列，空间单项收益不冒充联合通过。规则没有按结果回调，默认不切换。
+
+![新增验证记录的完整归档与专用源成本](results/v0.12.0/layout-costs.png)
+
+分段读取器额外建立unsigned-64前缀偏移数组，其逻辑字节和进程RSS均报告。
+识别与分段也有成本；ECG不在本次FITS白名单内，回退会错过人工声明int16重排的收益。
+M13大文件主导合计，ROSAT约22.66%正零；两个新样本仍是同一项目的天文数据，
+不是跨科学领域验证。专用源4,824 B不是完整部署大小，公共Python/core/Zstd/pyc未全额分配。
+
+```powershell
+python -m pip install -e ".[zstd]"
+python -m scripts.run_layout --out results/local-layout
+python -m rkv1 pack data/layout/m13_64 m13.rkv --codec zstd --chunk-size 65536 --layout fits-segments-v1 --transform fits-byte-shuffle-v1
+python -m rkv1 verify m13.rkv
+```
+
+[冻结协议与执行说明](docs/LAYOUT.md) · [全部原始结果与对照](results/v0.12.0/SUMMARY.md) ·
+[独立核对](results/v0.12.0/validation.json) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.12.0)。
+持久性描述同步校正：归档写入flush/fsync；既有归档解包关闭文件、校验后发布目录，
+没有逐文件fsync。此前部分说明对此描述过强，不把未执行操作计入成本，不声称掉电持久性。
+冷缓存/跨机器、数值Rust、代码/数学、CAS+布局和推理收益仍未测。下一步先补持久性
+语义的明确对照，再按热点与新领域数据筛选类型方案；E2未完成，E3/E4待开展。
+
+## 完整浮点 FITS 与 Blosc 对照（v0.11.0）
 
 E2 增加三个完整公开 FITS 示例（两个 float32、一个 float64），复测同一 ECG int16，
 并保留随机字节负对照。完整文件、头、填充和 NaN payload 均逐字节恢复，不转换
@@ -454,16 +507,16 @@ python -m rkv1 pack data/wine data/columns.rkv --codec zlib --transform csv-colu
 | 阶段 | 状态 |
 |---|---|
 | E0 基准 | 完成首版、受控对照和多种子读取评测；仍是单机温缓存 |
-| E1 无损核心 | v1–v5兼容；共享CAS、真实版本复用与Gear分块；默认v2、CAS1保持不变 |
-| E2 类型感知可逆编码 | CSV/小单元/Rust配对、int16及float32/64字节变换与Blosc基线已测；布局、代码/数学待开展 |
+| E1 无损核心 | v1–v6兼容；共享CAS、真实版本复用与Gear分块；默认v2、CAS1保持不变；恢复fsync/掉电持久性未验证 |
+| E2 类型感知可逆编码 | CSV/小单元/Rust配对、int16/float字节变换、Blosc、FITS布局已测；新布局0/8联合通过，代码/数学待开展 |
 | E3 神经预测 + 熵编码 + 精确残差 | 后续，计入模型和解码成本 |
 | E4 科学记忆、检索、证据回溯与可验证推理 | 后续，尚无质量结果 |
 
 Rust 已用于可选CSV反变换与Gear扫描。传统归档的`--base`复用编码结果，仍写独立
 完整快照；目录CAS可跨版本只存一份对象。两者仍全量读源、计算哈希并验证旧对象。
 
-[FORMAT Draft 0.5](docs/FORMAT.md) 只恢复普通文件路径和内容，不保留权限、时间戳、
-空子目录或链接；恢复合计上限 2 GiB。v3需v0.5+，v4需v0.10+，v5需v0.11+；默认v2仍可由v0.2+读取。
+[FORMAT Draft 0.6](docs/FORMAT.md) 只恢复普通文件路径和内容，不保留权限、时间戳、
+空子目录或链接；恢复合计上限 2 GiB。v3需v0.5+，v4需v0.10+，v5需v0.11+，v6需v0.12+；默认v2仍可由v0.2+读取。
 SHA-256 用于完整性检查，不能证明来源身份或科学结论正确。当前没有神经压缩、
 无限精确上下文或科学推理收益的验证。
 

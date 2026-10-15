@@ -1,0 +1,35 @@
+{
+  "dataset": "m13_64",
+  "source": "E:\\memorystorage\\data\\layout\\m13_64",
+  "files": [
+    {
+      "path": "stacked_M13_blue.fits",
+      "bytes": 11586240,
+      "sha256": "951a62d97211b90e85fb0379686043a0d090a6973dd14af185d3474b986710f0"
+    }
+  ],
+  "source_commit": "1b964d39b378390b24c58fb5633cef238d22a35a",
+  "url": "https://raw.githubusercontent.com/astropy/astropy-data/1b964d39b378390b24c58fb5633cef238d22a35a/tutorials/FITS-images/stacked_M13_blue.fits",
+  "repository_path": "tutorials/FITS-images/stacked_M13_blue.fits",
+  "layout": {
+    "bitpix": -64,
+    "fits_axes": [
+      1392,
+      1040
+    ],
+    "byteorder": "big",
+    "word_bytes": 8,
+    "header_bytes": 2880,
+    "image_bytes": 11581440,
+    "image_words": 1447680,
+    "padding_bytes": 1920,
+    "nan_words": 0,
+    "infinite_words": 0,
+    "positive_zero_words": 1,
+    "negative_zero_words": 0,
+    "scope": "Bit-pattern census of the primary image only; entire original FITS remains the benchmark truth"
+  },
+  "partition": "New record validation; not used to choose routing rules or compression parameters",
+  "rights": "Public Astropy example mirror; provider attribution retained in original FITS. No blanket data license assumed; raw file excluded from releases.",
+  "limits": "Astronomy examples from the same hosting project; not cross-domain or strict blind evaluation"
+}

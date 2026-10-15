@@ -57,3 +57,23 @@ fixed/none和fixed/global-shuffle，分配一次专用资源后成本都不增�
 通过。编码成本独立报告，不据此宣称综合支配。仅空间收益单列，不冒充联合通过。
 阈值是预定工程筛选规则，不是统计显著性。无论结果是否通过，保留原始记录，
 不回调规则/删除失败数据，不据单机小样本切换默认策略。
+
+## 执行与持久性口径
+
+```powershell
+python -m pip install -e ".[zstd]"
+python -m scripts.run_layout --out results/local-layout
+python -m unittest discover -s tests -v *> tests-local.log
+python -m scripts.analyze_layout results/local-layout --test-log tests-local.log
+python -m rkv1 pack data/layout/m13_64 m13.rkv --codec zstd --chunk-size 65536 --layout fits-segments-v1 --transform fits-byte-shuffle-v1
+python -m rkv1 verify m13.rkv
+python -m rkv1 unpack m13.rkv restored
+python -m rkv1 compare data/layout/m13_64 restored
+```
+
+结果目录须不存在。分析绘图可另装plots extra并加--plot；分析器会核对源码身份，
+因此不能修改rkv1模块后复用旧结果。专用成本查dedicated-resources.json；通用
+runtime-footprint.json中的历史transform字段不是本轮layouts/numeric专用计费依据。
+打包沿用临时文件flush/fsync后发布；归档解包沿用关闭文件、校验后发布目录，
+未逐文件fsync。此前部分说明对此描述过强，本版校正文字，不把未执行的持久性
+操作计入实测语义。没有掉电持久性证明，当前比较是这些相同写入/恢复语义下的结果。

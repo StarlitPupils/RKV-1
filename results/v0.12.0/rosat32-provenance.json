@@ -1,0 +1,35 @@
+{
+  "dataset": "rosat32",
+  "source": "E:\\memorystorage\\data\\layout\\rosat32",
+  "files": [
+    {
+      "path": "allsky_rosat.fits",
+      "bytes": 478080,
+      "sha256": "22b77adc0bcb3c344593777b7d998361c0ea9355552bd7deb82f814e709a91b3"
+    }
+  ],
+  "source_commit": "1b964d39b378390b24c58fb5633cef238d22a35a",
+  "url": "https://raw.githubusercontent.com/astropy/astropy-data/1b964d39b378390b24c58fb5633cef238d22a35a/allsky/allsky_rosat.fits",
+  "repository_path": "allsky/allsky_rosat.fits",
+  "layout": {
+    "bitpix": -32,
+    "fits_axes": [
+      480,
+      240
+    ],
+    "byteorder": "big",
+    "word_bytes": 4,
+    "header_bytes": 17280,
+    "image_bytes": 460800,
+    "image_words": 115200,
+    "padding_bytes": 0,
+    "nan_words": 0,
+    "infinite_words": 0,
+    "positive_zero_words": 26100,
+    "negative_zero_words": 0,
+    "scope": "Bit-pattern census of the primary image only; entire original FITS remains the benchmark truth"
+  },
+  "partition": "New record validation; not used to choose routing rules or compression parameters",
+  "rights": "Public Astropy example mirror; provider attribution retained in original FITS. No blanket data license assumed; raw file excluded from releases.",
+  "limits": "Astronomy examples from the same hosting project; not cross-domain or strict blind evaluation"
+}

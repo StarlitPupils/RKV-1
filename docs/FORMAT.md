@@ -1,4 +1,8 @@
-# RKV1-FORMAT · Draft 0.5
+# RKV1-FORMAT · Draft 0.6
+
+v0.12新增显式 **v6布局扩展**：顶层layout=fixed/fits-segments-v1，允许较短区域块并
+记录实际数值变换，分段读取器构建原始长度前缀数组做范围定位。默认格式不变。
+布局规则、引用上限、v6严格校验及v1–v5兼容见[LAYOUT.md](LAYOUT.md)。
 
 v0.11新增显式专业codec的 **v5平块扩展**。字段沿用v4，允许原有none/数值变换，
 另允许九个 `blosc-zstd-{none,shuffle,bitshuffle}-{2,4,8}` codec（只许外层transform=none）。
@@ -162,6 +166,9 @@ Zlib 限制输出、拒绝剩余输入和未结束流；Zstd 拒绝错误长度�
 verify/unpack 验全部引用。
 
 写入同目录临时文件，flush/fsync 后原子发布；恢复在私有目录全部验证后发布。
+这里flush/fsync指归档写入路径；既有归档解包路径关闭恢复文件并在校验后发布目录，
+没有逐文件fsync。此前部分版本说明对此描述过强，本版明确校正；不声称恢复文件或
+父目录具备掉电持久性。当前时序不包含恢复文件逐个fsync，不能据此估计该持久性成本。
 增量 base 需同块大小、compression、transform；v1 base 按 Zlib/none 解释。
 复用前验证块，输出完整独立快照，仍全量读取源数据并写新容器。
 

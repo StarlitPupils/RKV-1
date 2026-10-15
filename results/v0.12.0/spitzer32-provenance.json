@@ -1,0 +1,36 @@
+{
+  "dataset": "spitzer32",
+  "source": "E:\\memorystorage\\data\\scientific\\spitzer32",
+  "files": [
+    {
+      "path": "spitzer_example_image.fits",
+      "bytes": 2113920,
+      "sha256": "4b9cf15419de311fc683a9c378327a0b28bfee29d01e4fdbb9dc5780417f7ebc"
+    }
+  ],
+  "source_commit": "1b964d39b378390b24c58fb5633cef238d22a35a",
+  "url": "https://raw.githubusercontent.com/astropy/astropy-data/1b964d39b378390b24c58fb5633cef238d22a35a/photometry/spitzer_example_image.fits",
+  "repository_path": "photometry/spitzer_example_image.fits",
+  "layout": {
+    "bitpix": -32,
+    "fits_axes": [
+      1025,
+      513
+    ],
+    "byteorder": "big",
+    "word_bytes": 4,
+    "header_bytes": 8640,
+    "image_bytes": 2103300,
+    "image_words": 525825,
+    "padding_bytes": 1980,
+    "nan_words": 3,
+    "infinite_words": 0,
+    "positive_zero_words": 0,
+    "negative_zero_words": 0,
+    "scope": "Bit-pattern census of the primary image only; entire original FITS remains the benchmark truth"
+  },
+  "source_page": "https://www.astropy.org/astropy-data/",
+  "rights": "Public Astropy example mirror; provider attribution retained in original FITS header. No blanket repository data license assumed; raw files not redistributed by RKV releases.",
+  "scope": "One complete original FITS example file; headers/padding/NaN payloads retained, no float conversion or scaling",
+  "partition": "Development"
+}

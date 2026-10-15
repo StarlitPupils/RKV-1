@@ -73,3 +73,15 @@ v0.11.0 增加 [Astropy 官方示例数据项目](https://www.astropy.org/astrop
 所有科学数组。三份均为天文示例且来自同一托管项目，不代表三个独立科学领域。
 不假设示例数据统一受软件仓库许可证覆盖；仅记录公开来源和原头署名。
 RKV发布物不再分发原始FITS/信号文件，运行器从固定官方URL下载并核对SHA。
+
+v0.12按预先固定规则增加同一Astropy commit的两份新验证记录，原始文件与SHA
+见rkv1/layout_data.py。此前只检查头/尺寸确认类型，未测新文件压缩率：
+
+| 新记录 | 固定来源 | 原始 bytes | 类型/形状 | 特殊分布 |
+|---|---|---:|---|---|
+| M13叠加蓝光图像产品 | [stacked_M13_blue.fits](https://github.com/astropy/astropy-data/blob/1b964d39b378390b24c58fb5633cef238d22a35a/tutorials/FITS-images/stacked_M13_blue.fits) | 11,586,240 | float64，1392×1040，大端 | 1,447,680像素；无NaN，1个正零 |
+| ROSAT全天示例产品 | [allsky_rosat.fits](https://github.com/astropy/astropy-data/blob/1b964d39b378390b24c58fb5633cef238d22a35a/allsky/allsky_rosat.fits) | 478,080 | float32，480×240，大端 | 115,200像素，26,100正零，约22.66%；无NaN |
+
+这些仍是同一托管项目的天文图像，不算跨科学领域验证，也不称严格盲测；ROSAT
+零值比例必须随结果披露。头/图像/填充不重新序列化，未读取数值后重写真值。
+提供者署名保留于原始FITS，不假设统一数据许可证；原文件不进入发行包。

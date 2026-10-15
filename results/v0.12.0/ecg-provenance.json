@@ -1,0 +1,33 @@
+{
+  "dataset": "ecg",
+  "source": "E:\\memorystorage\\data\\numeric\\ecg",
+  "source_page": "https://physionet.org/content/ptbdb/1.0.0/",
+  "file_urls": {
+    "patient001/s0010_re.dat": "https://physionet.org/files/ptbdb/1.0.0/patient001/s0010_re.dat",
+    "patient001/s0010_re.xyz": "https://physionet.org/files/ptbdb/1.0.0/patient001/s0010_re.xyz",
+    "patient001/s0010_re.hea": "https://physionet.org/files/ptbdb/1.0.0/patient001/s0010_re.hea"
+  },
+  "files": [
+    {
+      "path": "patient001/s0010_re.dat",
+      "bytes": 921600,
+      "sha256": "4e26a62c96e50eebd0eca7a11a4ad62ac8d7654e4de47acf2e0ce64be9565f20"
+    },
+    {
+      "path": "patient001/s0010_re.hea",
+      "bytes": 2687,
+      "sha256": "30d2d5db5b7b735f7dc39e5cf3e60a433a868b53d24587c9820cf51aa1729b87"
+    },
+    {
+      "path": "patient001/s0010_re.xyz",
+      "bytes": 230400,
+      "sha256": "0caffd208e17c5c597fb39c8416f85ce55726f3e8e9d5486a6331c9ec4451265"
+    }
+  ],
+  "license": "Open Data Commons Attribution License v1.0",
+  "scope": "One original PTB record s0010_re, 12-lead dat, 3-lead xyz and unchanged header; not all PTBDB",
+  "layout": "WFDB format16 little-endian int16, multiplexed channels; 15 channels x 38400 samples; original header retained",
+  "original_paths_and_bytes": true,
+  "conversion": "None: no float/int conversion, filtering, resampling, channel transpose or numeric normalization",
+  "partition": "Unrecognized-format control"
+}

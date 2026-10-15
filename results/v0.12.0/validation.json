@@ -1,0 +1,70 @@
+{
+  "datasets": {
+    "spitzer32": {
+      "formal_roundtrips": 100,
+      "warmup_roundtrips": 20,
+      "formal_range_reads": 19200,
+      "warmup_range_reads": 2400,
+      "conditions": 20,
+      "input_sha_and_complete_cost_verified": true,
+      "same_requests_and_exact_bytes_verified": true,
+      "layout_spans_and_typed_boundaries_verified": true
+    },
+    "m13_64": {
+      "formal_roundtrips": 100,
+      "warmup_roundtrips": 20,
+      "formal_range_reads": 19200,
+      "warmup_range_reads": 2400,
+      "conditions": 20,
+      "input_sha_and_complete_cost_verified": true,
+      "same_requests_and_exact_bytes_verified": true,
+      "layout_spans_and_typed_boundaries_verified": true
+    },
+    "rosat32": {
+      "formal_roundtrips": 100,
+      "warmup_roundtrips": 20,
+      "formal_range_reads": 19200,
+      "warmup_range_reads": 2400,
+      "conditions": 20,
+      "input_sha_and_complete_cost_verified": true,
+      "same_requests_and_exact_bytes_verified": true,
+      "layout_spans_and_typed_boundaries_verified": true
+    },
+    "ecg": {
+      "formal_roundtrips": 100,
+      "warmup_roundtrips": 20,
+      "formal_range_reads": 19200,
+      "warmup_range_reads": 2400,
+      "conditions": 20,
+      "input_sha_and_complete_cost_verified": true,
+      "same_requests_and_exact_bytes_verified": true,
+      "layout_spans_and_typed_boundaries_verified": true
+    },
+    "noise": {
+      "formal_roundtrips": 100,
+      "warmup_roundtrips": 20,
+      "formal_range_reads": 19200,
+      "warmup_range_reads": 2400,
+      "conditions": 20,
+      "input_sha_and_complete_cost_verified": true,
+      "same_requests_and_exact_bytes_verified": true,
+      "layout_spans_and_typed_boundaries_verified": true
+    }
+  },
+  "frozen_python_source_identity_verified": true,
+  "dedicated_source_cost_verified": true,
+  "no_Blosc_loaded_in_any_formal_or_warmup_encode_decode_worker": true,
+  "local_python_tests": {
+    "run": 104,
+    "passed": 103,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "1c2d3302f0c5b7bc45920252febd4349dd9513708af4719a2497f3a309663027"
+  },
+  "acceptance_rule": "Predeclared docs/LAYOUT.md at 38473b2, all successes and failures retained",
+  "persistence_scope": "Archive encode flush/fsync; unpack closes files and verifies before directory publish, without per-file fsync. Historical wording corrected; no crash-durability claim.",
+  "cold_os_cache": null,
+  "cross_machine": null,
+  "inference_quality": null,
+  "CAS_layout_integration": null
+}

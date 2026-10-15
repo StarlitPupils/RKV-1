@@ -1,0 +1,13 @@
+{
+  "cpu": {
+    "Name": "Intel(R) Core(TM) i5-14600KF",
+    "NumberOfCores": 14,
+    "NumberOfLogicalProcessors": 20
+  },
+  "physical_memory_bytes": 34138931200,
+  "cache": "warm OS cache",
+  "background_load": "not isolated",
+  "measured_source_commit": "30d787ea8690d2cbb0e97088699063aac849f221",
+  "protocol_commit": "38473b22019632dc12021e7b3ab979f8fe4e8d0e",
+  "candidate_ci_run": 38699566855
+}

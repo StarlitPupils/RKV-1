@@ -1,0 +1,18 @@
+{
+  "sources": [
+    {
+      "name": "layouts.py",
+      "bytes": 3393,
+      "sha256": "88c03fdeca17830a605c03be451154f1a76852a46226adac2b0603c3474321ed"
+    },
+    {
+      "name": "numeric.py",
+      "bytes": 1431,
+      "sha256": "5d2517f9638baa0b944dc7a43b684307dc0cce32d84b594765908106c4263cbe"
+    }
+  ],
+  "native_bytes": 0,
+  "model_bytes": 0,
+  "dictionary_bytes": 0,
+  "basis": "Whole dedicated source allocation once; no Blosc/RKV Rust. Common Python/core/Zstd and pyc not fully allocated; not complete deployment size."
+}
