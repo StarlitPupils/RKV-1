@@ -5,6 +5,7 @@ from pathlib import Path
 from . import __version__
 from .core import Archive, DEFAULT_CHUNK, assert_tree_equal, pack, unpack, verify
 from .numeric import POLICIES as NUMERIC_POLICIES
+from .blosc_codec import PROFILES as BLOSC_PROFILES
 
 
 def decoder_options(parser):
@@ -23,10 +24,10 @@ def main(argv=None):
     p.add_argument("--unit-size", type=int, help="RKV v3 independently verified unit size; divides chunk size, minimum 4096")
     p.add_argument("--base", help="Reuse verified compressed chunks from an earlier snapshot")
     p.add_argument("--overwrite", action="store_true")
-    p.add_argument("--codec", choices=("raw", "zlib", "zstd"), default="zlib")
+    p.add_argument("--codec", choices=("raw", "zlib", "zstd", *BLOSC_PROFILES), default="zlib")
     p.add_argument("--no-dedup", action="store_true")
     p.add_argument("--transform", choices=("none", "csv-columns-v1", *NUMERIC_POLICIES), default="none")
-    p.add_argument("--format-version", type=int, choices=(2, 3, 4), help="Default auto: v2 flat, v3 units, v4 numeric; none may explicitly use v4 for controls")
+    p.add_argument("--format-version", type=int, choices=(2, 3, 4, 5), help="Auto: v2 flat, v3 units, v4 numeric, v5 Blosc; explicit v4/v5 controls supported")
     p = sub.add_parser("unpack")
     p.add_argument("archive")
     p.add_argument("destination")

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rkv1"
-version = "0.10.0"
+version = "0.11.0"
 description = "Reversible Knowledge Vault: auditable lossless scientific memory experiments"
 requires-python = ">=3.10"
 license = "MIT"
@@ -14,6 +14,7 @@ dependencies = []
 [project.optional-dependencies]
 bench = ["zstandard==0.24.0", "Brotli==1.1.0"]
 zstd = ["zstandard==0.24.0"]
+scientific = ["zstandard==0.24.0", "blosc==1.11.4"]
 plots = ["matplotlib==3.10.9"]
 
 [project.scripts]

@@ -1,5 +1,6 @@
 """Fixed lossless codec profiles with bounded, single-frame decoding."""
 import zlib
+from .blosc_codec import PROFILES as BLOSC_PROFILES
 
 
 def zstd_module():
@@ -11,6 +12,10 @@ def zstd_module():
 
 
 def compressor(name):
+    if not isinstance(name,str):raise ValueError("Unsupported compression profile")
+    if name in BLOSC_PROFILES:
+        from .blosc_codec import compressor as blosc_compressor
+        return blosc_compressor(name)
     if name == "raw":
         return lambda raw: raw
     if name == "zlib":
@@ -21,7 +26,11 @@ def compressor(name):
 
 
 def decompress(stored, name, expected_size):
-    if name == "raw":
+    if not isinstance(name,str):raise ValueError("Unsupported block codec")
+    if name in BLOSC_PROFILES:
+        from .blosc_codec import decompress as blosc_decompress
+        raw = blosc_decompress(stored, expected_size, name)
+    elif name == "raw":
         raw = stored
     elif name == "zlib":
         try:

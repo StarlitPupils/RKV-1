@@ -18,6 +18,7 @@ import tempfile
 import unicodedata
 
 from .codecs import compressor, decompress
+from .blosc_codec import PROFILES as BLOSC_PROFILES
 from .transforms import csv_columns_decode, csv_columns_encode
 from .numeric import POLICIES as NUMERIC_POLICIES, encode as numeric_encode, decode as numeric_decode
 from .units import ENTRY, MIN_UNIT, decode_unit, encode_units, validate_index
@@ -26,6 +27,7 @@ MAGIC = b"RKV1\r\n\x1a\n"
 VERSION = 2
 UNIT_VERSION = 3
 ARRAY_VERSION = 4
+EXPERT_VERSION = 5
 DEFAULT_CHUNK = 1 << 20
 MAX_CHUNK = 8 << 20
 MAX_HEADER = 64 << 20
@@ -140,7 +142,7 @@ def validate_manifest(header, payload_size):
     if not isinstance(header, dict):
         raise ValueError("Invalid manifest schema")
     version = header.get("version")
-    if type(version) is not int or version not in (1, VERSION, UNIT_VERSION, ARRAY_VERSION):
+    if type(version) is not int or version not in (1, VERSION, UNIT_VERSION, ARRAY_VERSION, EXPERT_VERSION):
         raise ValueError("Unsupported format version")
     fields = {"version", "chunk_size", "files", "blocks"}
     if version >= 2:
@@ -150,10 +152,13 @@ def validate_manifest(header, payload_size):
     if set(header) != fields:
         raise ValueError("Invalid manifest schema")
     deduplicate = header.get("deduplicate", True)
-    transforms = ("none", *NUMERIC_POLICIES) if version == ARRAY_VERSION else ("none", "csv-columns-v1")
-    if version >= 2 and (type(deduplicate) is not bool or header["compression"] not in ("raw", "zlib", "zstd")
+    transforms = ("none", *NUMERIC_POLICIES) if version in (ARRAY_VERSION, EXPERT_VERSION) else ("none", "csv-columns-v1")
+    codecs = ("raw", "zlib", "zstd", *BLOSC_PROFILES) if version == EXPERT_VERSION else ("raw", "zlib", "zstd")
+    if version >= 2 and (type(deduplicate) is not bool or header["compression"] not in codecs
                          or header["transform"] not in transforms):
         raise ValueError("Invalid archive encoding policy")
+    if version == EXPERT_VERSION and header["compression"] in BLOSC_PROFILES and header["transform"] != "none":
+        raise ValueError("Blosc filters cannot be stacked with outer transforms")
     chunk_size = header["chunk_size"]
     if type(chunk_size) is not int or not 1 <= chunk_size <= MAX_CHUNK:
         raise ValueError("Invalid chunk size")
@@ -170,7 +175,7 @@ def validate_manifest(header, payload_size):
     suffixes = set()
     for key, meta in blocks.items():
         block_fields = {"offset", "stored_size", "raw_size", "codec"}
-        if version in (2, ARRAY_VERSION):
+        if version in (2, ARRAY_VERSION, EXPERT_VERSION):
             block_fields.update(("coded_size", "transform"))
         elif version == UNIT_VERSION:
             block_fields.update(("unit_count", "index_size", "index_sha256"))
@@ -179,7 +184,7 @@ def validate_manifest(header, payload_size):
         if any(type(meta[f]) is not int for f in ("offset", "stored_size", "raw_size")):
             raise ValueError("Invalid block number")
         offset, stored, raw, codec = (meta[f] for f in ("offset", "stored_size", "raw_size", "codec"))
-        allowed_codecs = ("raw", "zlib") if version == 1 else ("raw", "zlib", "zstd")
+        allowed_codecs = ("raw", "zlib") if version == 1 else codecs
         if offset < 0 or not 1 <= raw <= chunk_size or stored < 1 or offset + stored > payload_size:
             raise ValueError("Invalid block bounds or codec")
         if version == UNIT_VERSION:
@@ -192,7 +197,7 @@ def validate_manifest(header, payload_size):
         elif (stored > raw or codec not in allowed_codecs or (codec == "raw" and stored != raw)
               or (codec != "raw" and stored >= raw)):
             raise ValueError("Invalid block bounds or codec")
-        if version in (2, ARRAY_VERSION):
+        if version in (2, ARRAY_VERSION, EXPERT_VERSION):
             coded, transform = meta["coded_size"], meta["transform"]
             if (type(coded) is not int or not 1 <= coded <= 2 * raw + 256
                     or transform not in transforms
@@ -422,11 +427,13 @@ def pack(source, archive, chunk_size=DEFAULT_CHUNK, *, base=None, overwrite=Fals
         raise ValueError("Invalid unit size")
     if type(deduplicate) is not bool or transform not in ("none", "csv-columns-v1", *NUMERIC_POLICIES):
         raise ValueError("Invalid encoding policy")
-    version = (UNIT_VERSION if unit_size is not None else ARRAY_VERSION if transform in NUMERIC_POLICIES else VERSION) if format_version is None else format_version
-    if (type(version) is not int or version not in (VERSION, UNIT_VERSION, ARRAY_VERSION)
+    if not isinstance(compression,str):raise ValueError("Invalid compression profile")
+    version = (UNIT_VERSION if unit_size is not None else EXPERT_VERSION if compression in BLOSC_PROFILES else ARRAY_VERSION if transform in NUMERIC_POLICIES else VERSION) if format_version is None else format_version
+    if (type(version) is not int or version not in (VERSION, UNIT_VERSION, ARRAY_VERSION, EXPERT_VERSION)
             or (unit_size is not None) != (version == UNIT_VERSION)
-            or (transform in NUMERIC_POLICIES and version != ARRAY_VERSION)
-            or (transform == "csv-columns-v1" and version == ARRAY_VERSION)):
+            or (transform in NUMERIC_POLICIES and version not in (ARRAY_VERSION, EXPERT_VERSION))
+            or (transform == "csv-columns-v1" and version in (ARRAY_VERSION, EXPERT_VERSION))
+            or (compression in BLOSC_PROFILES and (version != EXPERT_VERSION or transform != "none"))):
         raise ValueError("Transform/layout does not match format version")
     if compression == "raw" and transform != "none":
         raise ValueError("Transforms require a compression profile")

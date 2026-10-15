@@ -10,6 +10,7 @@ import tempfile
 from .benchmark import summary
 from .controlled import _child, implementation_checksums, inventory
 from .core import Archive, assert_tree_equal, verify
+from .numeric import POLICIES as NUMERIC_POLICIES
 from .read_benchmark import aggregate_trials, file_digest, round_seed, timestamp
 
 
@@ -60,10 +61,12 @@ def numeric_benchmark(source, *, configs=None, rounds=5, queries=32, warmup_quer
             archive = root / f"{index}.rkv"
             verify(archive)
             with Archive(archive) as reader:
-                if reader.header["version"] != 4:
-                    raise ValueError("Numeric matrix must use same-format v4 controls")
+                if reader.header["version"] != row["configuration"].get("format_version", 4):
+                    raise ValueError("Numeric matrix format differs from its declared control")
                 row["actual_transforms"] = {name: sum(m["transform"] == name for m in reader.header["blocks"].values())
-                                             for name in ("none", "byte-shuffle-2-v1", "xor-shuffle-2-v1")}
+                                             for name in ("none", *NUMERIC_POLICIES)}
+                row["actual_codecs"] = {name: sum(m["codec"] == name for m in reader.header["blocks"].values())
+                                        for name in sorted({m["codec"] for m in reader.header["blocks"].values()})}
             for phase in ("encode", "decode"):
                 row[f"{phase}_trials"].sort(key=lambda t: t["round"])
                 formal = [t for t in row[f"{phase}_trials"] if t["round"] >= 0]
