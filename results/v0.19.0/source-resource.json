@@ -1,0 +1,22 @@
+{
+  "files": {
+    "rkv1/memory.py": {
+      "bytes": 11842,
+      "sha256": "bbeb69ae8af78ee581d91dd12b5c98d386612aa48122f4e952573350d605c783"
+    },
+    "rkv1/memory_index.py": {
+      "bytes": 17670,
+      "sha256": "321d2b2168c1339d4bacca8527ac43246f034f9af45a32f4005286ae9c0855b2"
+    },
+    "rkv1/memory_qasper.py": {
+      "bytes": 3317,
+      "sha256": "7310de3264cd5c2671c9c386c7e99190b07102342ab598c4fd5aa985c85ff2a0"
+    },
+    "rkv1/chunking.py": {
+      "bytes": 3204,
+      "sha256": "3d3fee9413d1e6d2ff03da0ac0bbf1fb169e7451c8ba346e2a53439233f89c26"
+    }
+  },
+  "total_bytes": 36033,
+  "scope": "Four complete source modules once in each condition; common Store/core/Python/SQLite/OS excluded"
+}

@@ -1,4 +1,4 @@
-> 当前v0.18查询见[MEMORY-QUERIES.md](MEMORY-QUERIES.md)，更新见[MEMORY-UPDATES.md](MEMORY-UPDATES.md)。新建库默认
+> 当前v0.19原始QASPER及长历史见[MEMORY-HISTORY.md](MEMORY-HISTORY.md)，v0.18查询见[MEMORY-QUERIES.md](MEMORY-QUERIES.md)。新建库默认
 > 固定分块＋基础相对v3，旧v1/v2库继续原策略。v0.16协议见[MEMORY-INDEX.md](MEMORY-INDEX.md)。
 > 下文为v0.15冻结协议，复现旧实验使用对应标签，不覆盖旧结果。
 

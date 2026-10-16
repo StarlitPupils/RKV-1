@@ -1,0 +1,48 @@
+{
+  "official_QASPER_dev_releases": [
+    {
+      "version": "0.1",
+      "filename": "qasper-dev-v0.1.json",
+      "path": "E:\\memorystorage\\data\\qasper-versions\\v0.1\\qasper-dev-v0.1.json",
+      "bytes": 10925710,
+      "sha256": "bc30979b6caf991bdb45e483478e75699bd16fcdcf66b957fe433bb63bdd833a"
+    },
+    {
+      "version": "0.2",
+      "filename": "qasper-dev-v0.2.json",
+      "path": "E:\\memorystorage\\data\\qasper-versions\\v0.2\\qasper-dev-v0.2.json",
+      "bytes": 11398928,
+      "sha256": "1b2e2ac60314246698867d382c08104439658cb723482a042bf123f223c191a7"
+    },
+    {
+      "version": "0.3",
+      "filename": "qasper-dev-v0.3.json",
+      "path": "E:\\memorystorage\\data\\qasper-versions\\v0.3\\qasper-dev-v0.3.json",
+      "bytes": 11398686,
+      "sha256": "2ae7ee62a65b1c4225791c70de80c2aad4e8998cf1fd4f09a53103db4f21af93"
+    }
+  ],
+  "changes": [
+    {
+      "version": "0.1",
+      "records": 281,
+      "raw_members_changed": null,
+      "projected_paper_text_changed": null
+    },
+    {
+      "version": "0.2",
+      "records": 281,
+      "raw_members_changed": 281,
+      "projected_paper_text_changed": 0
+    },
+    {
+      "version": "0.3",
+      "records": 281,
+      "raw_members_changed": 9,
+      "projected_paper_text_changed": 0
+    }
+  ],
+  "questions": 64,
+  "question_rule": "Sorted v0.1 paper IDs, first unseen question per paper; first 64; no question/answer annotations in FTS",
+  "stress_control": "Synthetic 2048 JSONL records and four notes, 100 updates; not real scientific samples"
+}

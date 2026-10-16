@@ -1,0 +1,26 @@
+{
+  "formal_queries_audited": 1800,
+  "historical_queries_with_full_identity_audited": 2496,
+  "original_snapshot_future_probe_checks": 606,
+  "historical_snapshots_fully_reopened": 624,
+  "query_processes_and_warmups": 72,
+  "all_keys_BM25_and_complete_source_identities_match_full_rebuild": true,
+  "all_same_representation_CAS_trees_byte_identical": true,
+  "stress_checkpoint_versions": [
+    0,
+    43,
+    80
+  ],
+  "real_releases_checkpoint_every_version": true,
+  "current_modules": 47,
+  "different_QASPER_questions": 64,
+  "synthetic_control_queries": 12,
+  "generation_calls": 0,
+  "tests": {
+    "run": 159,
+    "passed": 158,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "3b081b8a78c7d55ea59a74b8b24381440b6245f564abfde16b0fa9f43f0a3f83"
+  }
+}
