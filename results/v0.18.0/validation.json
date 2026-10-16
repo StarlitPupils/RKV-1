@@ -1,0 +1,22 @@
+{
+  "formal_queries_audited": 17190,
+  "warmup_queries": 90,
+  "fresh_query_processes": 90,
+  "different_scientific_claims": 188,
+  "synthetic_probes": 3,
+  "all_keys_ranks_and_complete_evidence_identity_match_v017": true,
+  "all_22_historical_snapshots_fully_reopened": true,
+  "all_persistent_fixture_files_byte_identical_before_after": true,
+  "all_46_current_modules_match_measurement": true,
+  "all_reference_modules_match_v017_release": true,
+  "no_cross_query_cache": true,
+  "no_native_query_module_loaded": true,
+  "generation_calls": 0,
+  "tests": {
+    "run": 155,
+    "passed": 154,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "eab7167a4acc3417b13cdbe41990ca65485f39d17ef973fa186b128eca705008"
+  }
+}

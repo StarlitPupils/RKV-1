@@ -1,4 +1,4 @@
-> 本页保留v0.16冻结协议；复现使用v0.16.0标签。当前v0.17见[MEMORY-UPDATES.md](MEMORY-UPDATES.md)。
+> 本页保留v0.16冻结协议；复现使用v0.16.0标签。当前v0.18见[MEMORY-QUERIES.md](MEMORY-QUERIES.md)，v0.17更新见[MEMORY-UPDATES.md](MEMORY-UPDATES.md)。
 
 # v0.16 证据记忆索引成本对照（结果前冻结）
 

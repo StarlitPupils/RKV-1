@@ -1,0 +1,10 @@
+{
+  "scope": "Separate byte-identical copy of the v0.17 v3 demo, served by v0.18; no format migration or performance timing",
+  "all_persistent_files_and_25_derived_records_byte_identical": true,
+  "generation_calls": 0,
+  "model_configured": false,
+  "URL": "http://127.0.0.1:8768",
+  "HTTP_verified_sources": 5,
+  "logical_file_bytes": 8474614,
+  "unchanged_HTML_sha256": "5796cfc2d3af9bdbf1d5860509f8e24e18535245791a60c4d7adff7f378e866f"
+}

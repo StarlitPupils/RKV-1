@@ -1,0 +1,8 @@
+{
+  "frozen_commit": "4926af69447f512c1f8ee6cef13ba9f1f3dcce45",
+  "measured_modules": 46,
+  "all_module_bytes_equal_frozen_commit": true,
+  "protocol": "docs/MEMORY-QUERIES.md",
+  "reference_tag": "v0.17.0",
+  "generation_calls": 0
+}

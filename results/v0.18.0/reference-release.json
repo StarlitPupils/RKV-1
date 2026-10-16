@@ -1,0 +1,9 @@
+{
+  "tag": "v0.17.0",
+  "commit": "6982766637d645507b0054eea29d41bc61403a56",
+  "release_url": "https://github.com/StarlitPupils/RKV-1/releases/tag/v0.17.0",
+  "wheel_name": "rkv1-0.17.0-py3-none-any.whl",
+  "wheel_sha256": "c1a8246bd042e1938518b08eb4ee2fdfed8ba760f76b75c2707d4dd16222629e",
+  "all_46_measured_reference_modules_identical_to_actual_release_wheel": true,
+  "diagnostic_before_after_checksums_match_the_respective_frozen_modules": true
+}

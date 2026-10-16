@@ -1,0 +1,31 @@
+{
+  "implementations": {
+    "v017": {
+      "files": {
+        "rkv1/memory.py": {
+          "bytes": 11321,
+          "sha256": "4da9fcdafa83b889db6c245f83ddf3c718023bce3f9db3b8b291b0807f33097a"
+        },
+        "rkv1/memory_index.py": {
+          "bytes": 14231,
+          "sha256": "ff0d4e712f135e4e8721224e6f43fc22d5aba2604f584d196c17c26b60c27134"
+        }
+      },
+      "total_bytes": 25552
+    },
+    "v018": {
+      "files": {
+        "rkv1/memory.py": {
+          "bytes": 11683,
+          "sha256": "0ee59c152a82fc9e48a3ae43260c8f56d4813049f535988fa9f87441060b5b52"
+        },
+        "rkv1/memory_index.py": {
+          "bytes": 17670,
+          "sha256": "321d2b2168c1339d4bacca8527ac43246f034f9af45a32f4005286ae9c0855b2"
+        }
+      },
+      "total_bytes": 29353
+    }
+  },
+  "allocation": "Two complete query source modules once; common Store/core/Python/SQLite/OS excluded; no query native library"
+}

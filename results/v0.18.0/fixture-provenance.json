@@ -1,0 +1,376 @@
+{
+  "fixed": {
+    "root": "E:\\memorystorage\\.tools\\memory-updates-v017\\0-fixed-v3\\memory",
+    "inventory_before": {
+      "files": 549,
+      "logical_bytes": 17443161,
+      "sha256": "d7f99f098d2bc99a21cd1fef21e2503c8063fcc0594cab06155ac395f9f7071b"
+    },
+    "stages": [
+      {
+        "index": 0,
+        "stage": "original",
+        "snapshot_id": "a570fda299cf9102ce2e0aaeed47bb93309c2c13d0b646c55016db680024b92b",
+        "source_truth": {
+          "corpus.jsonl": {
+            "bytes": 8307875,
+            "sha256": "b8d6c89624cb2ed74dee8938effc4f5d8bd2086887880af8110d64be4ceade62"
+          }
+        }
+      },
+      {
+        "index": 1,
+        "stage": "append-1",
+        "snapshot_id": "0d1e7cb1697f7c9c0a8b016862b5109278ffdaa7ea4a3f9b8664780109356916",
+        "source_truth": {
+          "corpus.jsonl": {
+            "bytes": 8307875,
+            "sha256": "b8d6c89624cb2ed74dee8938effc4f5d8bd2086887880af8110d64be4ceade62"
+          },
+          "note-1.txt": {
+            "bytes": 88,
+            "sha256": "806f339f83ff0253b80cc63bbaeedceb31114b391b35da6a441cd646fd9eb4b0"
+          }
+        }
+      },
+      {
+        "index": 2,
+        "stage": "equal-1",
+        "snapshot_id": "fd07d7870da343af7997aed6a3952a5196f3732190684d16175133d3e25dbad7",
+        "source_truth": {
+          "corpus.jsonl": {
+            "bytes": 8307875,
+            "sha256": "49e74b0f3ca2fcd69690a679f33c28b53a1fe632ae355eb9e804281284510331"
+          },
+          "note-1.txt": {
+            "bytes": 88,
+            "sha256": "806f339f83ff0253b80cc63bbaeedceb31114b391b35da6a441cd646fd9eb4b0"
+          }
+        }
+      },
+      {
+        "index": 3,
+        "stage": "insert-1",
+        "snapshot_id": "40117d8f564544af28c4e45cc8f43086d074b692e6c8607dff7d632a8f915147",
+        "source_truth": {
+          "corpus.jsonl": {
+            "bytes": 8307888,
+            "sha256": "73ad09d21f8516f9f60ed232c33e2a8ec8c36be78aab78a8d1cd7ff2c7ffdc85"
+          },
+          "note-1.txt": {
+            "bytes": 88,
+            "sha256": "806f339f83ff0253b80cc63bbaeedceb31114b391b35da6a441cd646fd9eb4b0"
+          }
+        }
+      },
+      {
+        "index": 4,
+        "stage": "undo-insert",
+        "snapshot_id": "9f57f1cd17aff3ed3939d004d2379fffc05de61330cd3f73e5b56d0b3486dba7",
+        "source_truth": {
+          "corpus.jsonl": {
+            "bytes": 8307875,
+            "sha256": "49e74b0f3ca2fcd69690a679f33c28b53a1fe632ae355eb9e804281284510331"
+          },
+          "note-1.txt": {
+            "bytes": 88,
+            "sha256": "806f339f83ff0253b80cc63bbaeedceb31114b391b35da6a441cd646fd9eb4b0"
+          }
+        }
+      },
+      {
+        "index": 5,
+        "stage": "append-2",
+        "snapshot_id": "6057a37cdb9a0fb54a219be0618fcd2851852be87e50023fc42431015e024110",
+        "source_truth": {
+          "corpus.jsonl": {
+            "bytes": 8307875,
+            "sha256": "49e74b0f3ca2fcd69690a679f33c28b53a1fe632ae355eb9e804281284510331"
+          },
+          "note-1.txt": {
+            "bytes": 88,
+            "sha256": "806f339f83ff0253b80cc63bbaeedceb31114b391b35da6a441cd646fd9eb4b0"
+          },
+          "note-2.txt": {
+            "bytes": 88,
+            "sha256": "cb80a1d778430200d7fa5914c728972dd121ed8eace57a4ff8961c937199b831"
+          }
+        }
+      },
+      {
+        "index": 6,
+        "stage": "equal-2",
+        "snapshot_id": "b1e101a65015fb9da27c131278f2dd31f1955d75be2ddb751a95779918491927",
+        "source_truth": {
+          "corpus.jsonl": {
+            "bytes": 8307875,
+            "sha256": "ccf3b414f6ef5e5f7dadd59da2f8549d3312236ed5a7c5325139fc227ca7d714"
+          },
+          "note-1.txt": {
+            "bytes": 88,
+            "sha256": "806f339f83ff0253b80cc63bbaeedceb31114b391b35da6a441cd646fd9eb4b0"
+          },
+          "note-2.txt": {
+            "bytes": 88,
+            "sha256": "cb80a1d778430200d7fa5914c728972dd121ed8eace57a4ff8961c937199b831"
+          }
+        }
+      },
+      {
+        "index": 7,
+        "stage": "insert-2",
+        "snapshot_id": "1aa5dae3abd8ba6cde9b38412d2f8149b7f1d3168b9653fb7983a9735ab7ba6d",
+        "source_truth": {
+          "corpus.jsonl": {
+            "bytes": 8307896,
+            "sha256": "0f014cae287a281d91abf762e82a5b3fe4a2ba801a7dce08d47f92c951327346"
+          },
+          "note-1.txt": {
+            "bytes": 88,
+            "sha256": "806f339f83ff0253b80cc63bbaeedceb31114b391b35da6a441cd646fd9eb4b0"
+          },
+          "note-2.txt": {
+            "bytes": 88,
+            "sha256": "cb80a1d778430200d7fa5914c728972dd121ed8eace57a4ff8961c937199b831"
+          }
+        }
+      },
+      {
+        "index": 8,
+        "stage": "delete-note",
+        "snapshot_id": "e1b5d51df9917c252fc5fc6d8765be68d6696027f2f701eb5f5e3f7f7db3f5d5",
+        "source_truth": {
+          "corpus.jsonl": {
+            "bytes": 8307896,
+            "sha256": "0f014cae287a281d91abf762e82a5b3fe4a2ba801a7dce08d47f92c951327346"
+          },
+          "note-2.txt": {
+            "bytes": 88,
+            "sha256": "cb80a1d778430200d7fa5914c728972dd121ed8eace57a4ff8961c937199b831"
+          }
+        }
+      },
+      {
+        "index": 9,
+        "stage": "delete-record",
+        "snapshot_id": "fd3f67dc7b811afc83adac36a1997a51a658ff82741e19bbcbe36b6e73dc5708",
+        "source_truth": {
+          "corpus.jsonl": {
+            "bytes": 8305827,
+            "sha256": "a666a47b804dac0250d16a8698862666cd0133f2a0c1621f15060348bdcc6792"
+          },
+          "note-2.txt": {
+            "bytes": 88,
+            "sha256": "cb80a1d778430200d7fa5914c728972dd121ed8eace57a4ff8961c937199b831"
+          }
+        }
+      },
+      {
+        "index": 10,
+        "stage": "append-3",
+        "snapshot_id": "42f0a02c625b4bb47524efb30d32751528c53eba37c73d7a17294e43871fac96",
+        "source_truth": {
+          "corpus.jsonl": {
+            "bytes": 8305827,
+            "sha256": "a666a47b804dac0250d16a8698862666cd0133f2a0c1621f15060348bdcc6792"
+          },
+          "note-2.txt": {
+            "bytes": 88,
+            "sha256": "cb80a1d778430200d7fa5914c728972dd121ed8eace57a4ff8961c937199b831"
+          },
+          "note-3.txt": {
+            "bytes": 88,
+            "sha256": "1bf0fb17da9bce03142ecbbde90f877e9252f8cd6476a79685abcccf40c5568e"
+          }
+        }
+      }
+    ]
+  },
+  "gear": {
+    "root": "E:\\memorystorage\\.tools\\memory-updates-v017\\0-gear-rust-v3\\memory",
+    "inventory_before": {
+      "files": 166,
+      "logical_bytes": 8622846,
+      "sha256": "b31bd6a93e1dddb2293ae31e37b742c84691974cd3bdd39128dc60627b9e1ddc"
+    },
+    "stages": [
+      {
+        "index": 0,
+        "stage": "original",
+        "snapshot_id": "88898f38303b61b3baf600e33704c19eedbac0c036776d504da8d6d6103fcafc",
+        "source_truth": {
+          "corpus.jsonl": {
+            "bytes": 8307875,
+            "sha256": "b8d6c89624cb2ed74dee8938effc4f5d8bd2086887880af8110d64be4ceade62"
+          }
+        }
+      },
+      {
+        "index": 1,
+        "stage": "append-1",
+        "snapshot_id": "b2d4d29efc083a47213abb5b4d9bff831fb44dc557cda34a6081b86f1bbce780",
+        "source_truth": {
+          "corpus.jsonl": {
+            "bytes": 8307875,
+            "sha256": "b8d6c89624cb2ed74dee8938effc4f5d8bd2086887880af8110d64be4ceade62"
+          },
+          "note-1.txt": {
+            "bytes": 88,
+            "sha256": "806f339f83ff0253b80cc63bbaeedceb31114b391b35da6a441cd646fd9eb4b0"
+          }
+        }
+      },
+      {
+        "index": 2,
+        "stage": "equal-1",
+        "snapshot_id": "8c8eac635766f2e78579c8db8d5196a67658b574ad99ef85e1185369d761a10d",
+        "source_truth": {
+          "corpus.jsonl": {
+            "bytes": 8307875,
+            "sha256": "49e74b0f3ca2fcd69690a679f33c28b53a1fe632ae355eb9e804281284510331"
+          },
+          "note-1.txt": {
+            "bytes": 88,
+            "sha256": "806f339f83ff0253b80cc63bbaeedceb31114b391b35da6a441cd646fd9eb4b0"
+          }
+        }
+      },
+      {
+        "index": 3,
+        "stage": "insert-1",
+        "snapshot_id": "69da32568936849daaa20689b3eac9b753f3522f0a7caaadb0165e297c0661e3",
+        "source_truth": {
+          "corpus.jsonl": {
+            "bytes": 8307888,
+            "sha256": "73ad09d21f8516f9f60ed232c33e2a8ec8c36be78aab78a8d1cd7ff2c7ffdc85"
+          },
+          "note-1.txt": {
+            "bytes": 88,
+            "sha256": "806f339f83ff0253b80cc63bbaeedceb31114b391b35da6a441cd646fd9eb4b0"
+          }
+        }
+      },
+      {
+        "index": 4,
+        "stage": "undo-insert",
+        "snapshot_id": "d997d9a1cc3dc3df8ef39a71c673e152a2e2f7f7f22aaee16c4b4d024100454d",
+        "source_truth": {
+          "corpus.jsonl": {
+            "bytes": 8307875,
+            "sha256": "49e74b0f3ca2fcd69690a679f33c28b53a1fe632ae355eb9e804281284510331"
+          },
+          "note-1.txt": {
+            "bytes": 88,
+            "sha256": "806f339f83ff0253b80cc63bbaeedceb31114b391b35da6a441cd646fd9eb4b0"
+          }
+        }
+      },
+      {
+        "index": 5,
+        "stage": "append-2",
+        "snapshot_id": "4cb6bf055023a565f8e438334cb9de35f43c15e79ac59cb81ec808835cfd1a0a",
+        "source_truth": {
+          "corpus.jsonl": {
+            "bytes": 8307875,
+            "sha256": "49e74b0f3ca2fcd69690a679f33c28b53a1fe632ae355eb9e804281284510331"
+          },
+          "note-1.txt": {
+            "bytes": 88,
+            "sha256": "806f339f83ff0253b80cc63bbaeedceb31114b391b35da6a441cd646fd9eb4b0"
+          },
+          "note-2.txt": {
+            "bytes": 88,
+            "sha256": "cb80a1d778430200d7fa5914c728972dd121ed8eace57a4ff8961c937199b831"
+          }
+        }
+      },
+      {
+        "index": 6,
+        "stage": "equal-2",
+        "snapshot_id": "faa1cc3db91f7bd526d910cf45267fee43bd2d6e66d948b3d540d004948054df",
+        "source_truth": {
+          "corpus.jsonl": {
+            "bytes": 8307875,
+            "sha256": "ccf3b414f6ef5e5f7dadd59da2f8549d3312236ed5a7c5325139fc227ca7d714"
+          },
+          "note-1.txt": {
+            "bytes": 88,
+            "sha256": "806f339f83ff0253b80cc63bbaeedceb31114b391b35da6a441cd646fd9eb4b0"
+          },
+          "note-2.txt": {
+            "bytes": 88,
+            "sha256": "cb80a1d778430200d7fa5914c728972dd121ed8eace57a4ff8961c937199b831"
+          }
+        }
+      },
+      {
+        "index": 7,
+        "stage": "insert-2",
+        "snapshot_id": "34933a53feee21affa9be81a6fae455e3dceab9ba32a50cb0da1c4b43ad3ba9d",
+        "source_truth": {
+          "corpus.jsonl": {
+            "bytes": 8307896,
+            "sha256": "0f014cae287a281d91abf762e82a5b3fe4a2ba801a7dce08d47f92c951327346"
+          },
+          "note-1.txt": {
+            "bytes": 88,
+            "sha256": "806f339f83ff0253b80cc63bbaeedceb31114b391b35da6a441cd646fd9eb4b0"
+          },
+          "note-2.txt": {
+            "bytes": 88,
+            "sha256": "cb80a1d778430200d7fa5914c728972dd121ed8eace57a4ff8961c937199b831"
+          }
+        }
+      },
+      {
+        "index": 8,
+        "stage": "delete-note",
+        "snapshot_id": "400b4f07be6c84a9d9916b9f5685764122998f507f572de27bd8d862f45c318f",
+        "source_truth": {
+          "corpus.jsonl": {
+            "bytes": 8307896,
+            "sha256": "0f014cae287a281d91abf762e82a5b3fe4a2ba801a7dce08d47f92c951327346"
+          },
+          "note-2.txt": {
+            "bytes": 88,
+            "sha256": "cb80a1d778430200d7fa5914c728972dd121ed8eace57a4ff8961c937199b831"
+          }
+        }
+      },
+      {
+        "index": 9,
+        "stage": "delete-record",
+        "snapshot_id": "fbb7d395e38eddf27906e9df42db3c4bfd968e1750e9ecc73dcb5eaead6d2cb4",
+        "source_truth": {
+          "corpus.jsonl": {
+            "bytes": 8305827,
+            "sha256": "a666a47b804dac0250d16a8698862666cd0133f2a0c1621f15060348bdcc6792"
+          },
+          "note-2.txt": {
+            "bytes": 88,
+            "sha256": "cb80a1d778430200d7fa5914c728972dd121ed8eace57a4ff8961c937199b831"
+          }
+        }
+      },
+      {
+        "index": 10,
+        "stage": "append-3",
+        "snapshot_id": "2ce3fed6556495e629af4c60bf47b5a791352ff535fd6bc3d842633726df247d",
+        "source_truth": {
+          "corpus.jsonl": {
+            "bytes": 8305827,
+            "sha256": "a666a47b804dac0250d16a8698862666cd0133f2a0c1621f15060348bdcc6792"
+          },
+          "note-2.txt": {
+            "bytes": 88,
+            "sha256": "cb80a1d778430200d7fa5914c728972dd121ed8eace57a4ff8961c937199b831"
+          },
+          "note-3.txt": {
+            "bytes": 88,
+            "sha256": "1bf0fb17da9bce03142ecbbde90f877e9252f8cd6476a79685abcccf40c5568e"
+          }
+        }
+      }
+    ]
+  }
+}
