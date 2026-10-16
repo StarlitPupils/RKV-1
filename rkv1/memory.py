@@ -124,7 +124,7 @@ class Memory:
         if head.get("version")!=1 or not valid_hash(head.get("snapshot_id")):raise ValueError("Invalid memory HEAD")
         return head["snapshot_id"]
 
-    def _manifest(self,sid):
+    def _manifest(self,sid,query=None):
         if not valid_hash(sid):raise ValueError("Invalid memory snapshot")
         path=self.root/"manifests"/(sid+".json")
         if path.is_symlink():raise ValueError("Linked memory manifest")
@@ -132,11 +132,11 @@ class Memory:
         if value.get("version") not in (1,2,3) or value.get("snapshot_id")!=sid:raise ValueError("Memory manifest identity mismatch")
         if value["version"] in (2,3):
             from .memory_index import validate
-            validate(self,sid,value)
+            validate(self,sid,value,query)
             return value
         index=self.root/"indexes"/(sid+".sqlite")
         if index.is_symlink() or digest(index.read_bytes())!=value["index_sha256"]:raise ValueError("Memory index SHA mismatch")
-        snap=self.store.snapshot(sid)
+        snap=self.store.snapshot(sid) if query is None else query.snapshot(sid)
         if value["source_files"]!={p:{"bytes":e["size"],"sha256":e["sha256"]} for p,e in snap.files.items()}:
             raise ValueError("Memory manifest does not bind current CAS snapshot")
         return value
@@ -144,20 +144,26 @@ class Memory:
     def search(self,question,*,top_k=5,snapshot=None):
         if not isinstance(question,str) or not 1<=len(question)<=4096 or type(top_k) is not int or not 1<=top_k<=20:
             raise ValueError("Invalid memory query or top_k")
-        started=time.perf_counter();sid=snapshot or self.current();manifest=self._manifest(sid)
+        from .memory_index import QueryResources
+        with QueryResources(self) as query:
+            return self._search(question,top_k,snapshot,query)
+
+    def _search(self,question,top_k,snapshot,resources):
+        started=time.perf_counter();sid=snapshot or self.current();manifest=self._manifest(sid,resources)
         tokens=list(dict.fromkeys(t.lower() for t in re.findall(r"[\w]+",question,re.UNICODE) if t.lower() not in STOP and len(t)>1))[:64]
         if not tokens:return {"snapshot_id":sid,"question":question,"hits":[],"wall_s":time.perf_counter()-started}
         query=" OR ".join('"'+t+'"' for t in tokens)
         if manifest["version"] in (2,3):
             from .memory_index import search
-            rows=[(*r[:6],None,None,r[6]) for r in search(self,manifest,query,top_k)]
+            rows=[(*r[:6],None,None,r[6]) for r in search(self,manifest,query,top_k,resources)]
         else:
             db=sqlite3.connect((self.root/"indexes"/(sid+".sqlite")).as_uri()+"?mode=ro",uri=True)
             try:
                 rows=db.execute("SELECT key,path,offset,length,record_sha256,kind,title,body,bm25(evidence) FROM evidence WHERE evidence MATCH ? ORDER BY bm25(evidence),key LIMIT ?",(query,top_k)).fetchall()
             finally:db.close()
         hits=[]
-        with self.store.snapshot(sid) as snap:
+        from .memory_index import snapshot as open_snapshot
+        with open_snapshot(self,sid,resources) as snap:
             for key,path,offset,length,sha,kind,title,body,rank in rows:
                 raw=snap.read_range(path,int(offset),int(length))
                 if digest(raw)!=sha:raise ValueError("Retrieved original record SHA mismatch")

@@ -1,5 +1,5 @@
-"""Contentless FTS5 bases and exact CAS-backed delta replay, memory metadata v2."""
-from contextlib import contextmanager,closing
+"""Contentless FTS5 bases, exact replay and query-local evidence resources."""
+from contextlib import contextmanager,closing,ExitStack,nullcontext
 import json
 import os
 from pathlib import Path
@@ -17,6 +17,31 @@ MAX_DELTA_BYTES=64<<20
 LOCATORS="key,path,offset,length,lower(hex(sha)),kind"
 
 
+class QueryResources:
+    """Verify each immutable snapshot/delta once per request, never across queries.
+
+    Decoded CAS blocks and SQLite views are deliberately not cached. Every range
+    read still verifies stored/raw object hashes, and every hit its record hash.
+    """
+    def __init__(self,memory):
+        self.memory=memory;self.stack=ExitStack();self.snapshots={};self.deltas={}
+
+    def snapshot(self,sid):
+        if sid not in self.snapshots:
+            self.snapshots[sid]=self.stack.enter_context(self.memory.store.snapshot(sid))
+        return self.snapshots[sid]
+
+    def __enter__(self):return self
+
+    def __exit__(self,*args):
+        try:return self.stack.__exit__(*args)
+        finally:self.snapshots.clear();self.deltas.clear()
+
+
+def snapshot(memory,sid,query=None):
+    return memory.store.snapshot(sid) if query is None else nullcontext(query.snapshot(sid))
+
+
 def profile(memory):
     path=memory.root/"indexes/config.json"
     if not path.exists():return "full-v1"
@@ -28,15 +53,15 @@ def profile(memory):
     return value["profile"]
 
 
-def source_files(memory,sid):
-    with memory.store.snapshot(sid) as snap:
+def source_files(memory,sid,query=None):
+    with snapshot(memory,sid,query) as snap:
         return {p:{"bytes":e["size"],"sha256":e["sha256"]} for p,e in snap.files.items()}
 
 
-def parse_record(memory,sid,meta):
+def parse_record(memory,sid,meta,query=None):
     from .memory import records
     key,path,offset,length,sha,kind=meta
-    with memory.store.snapshot(sid) as snap:raw=snap.read_range(path,offset,length)
+    with snapshot(memory,sid,query) as snap:raw=snap.read_range(path,offset,length)
     if digest(raw)!=sha:raise ValueError("Retrieved original record SHA mismatch")
     parsed=list(records(path,raw))
     if len(parsed)!=1 or parsed[0][0]!=key or parsed[0][5]!=kind:
@@ -44,10 +69,14 @@ def parse_record(memory,sid,meta):
     return parsed[0]
 
 
-def load_delta(memory,desc):
+def load_delta(memory,desc,query=None):
     sha=desc.get("sha256");size=desc.get("raw_bytes")
     if not valid_hash(sha) or type(size) is not int or not 0<size<=MAX_DELTA_BYTES:
         raise ValueError("Invalid memory delta descriptor")
+    # The complete descriptor is part of the key: an alias with different
+    # identity fields must be checked rather than reusing a different overlay.
+    key=json.dumps(desc,sort_keys=True,separators=(",",":"))
+    if query is not None and key in query.deltas:return query.deltas[key]
     path=memory.root/"indexes"/(sha+".delta")
     raw=path.read_bytes() if not path.is_symlink() else b""
     if digest(raw)!=sha:raise ValueError("Memory index delta SHA mismatch")
@@ -57,10 +86,11 @@ def load_delta(memory,desc):
     value=json.loads(content)
     if value.get("version")!=desc.get("version",2) or any(value.get(k)!=desc.get(k) for k in ("parent_snapshot","snapshot_id")):
         raise ValueError("Memory delta identity mismatch")
+    if query is not None:query.deltas[key]=value
     return value
 
 
-def validate(memory,sid,value):
+def validate(memory,sid,value,query=None):
     base=value.get("base_snapshot_id")
     if not valid_hash(base) or not valid_hash(value.get("index_sha256")):
         raise ValueError("Invalid compact memory base")
@@ -70,7 +100,7 @@ def validate(memory,sid,value):
     limit=1 if value["version"]==3 else MAX_DELTAS
     if not isinstance(value.get("deltas"),list) or len(value["deltas"])>limit:
         raise ValueError("Invalid memory delta chain")
-    previous=source_files(memory,base)
+    previous=source_files(memory,base,query)
     for desc in value["deltas"]:
         if desc.get("version",2)!=value["version"] or (value["version"]==3 and desc.get("parent_snapshot")!=base):
             raise ValueError("Memory overlay format/base mismatch")
@@ -78,11 +108,11 @@ def validate(memory,sid,value):
         # must equal that view before the next delta can be applied.
         if not valid_hash(desc.get("parent_snapshot")) or not valid_hash(desc.get("snapshot_id")):
             raise ValueError("Invalid memory delta snapshot")
-        if source_files(memory,desc["parent_snapshot"])!=previous:
+        if source_files(memory,desc["parent_snapshot"],query)!=previous:
             raise ValueError("Memory delta parent source mismatch")
-        load_delta(memory,desc)
-        previous=source_files(memory,desc["snapshot_id"])
-    if previous!=value["source_files"] or previous!=source_files(memory,sid):
+        load_delta(memory,desc,query)
+        previous=source_files(memory,desc["snapshot_id"],query)
+    if previous!=value["source_files"] or previous!=source_files(memory,sid,query):
         raise ValueError("Memory manifest does not bind current CAS snapshot")
 
 
@@ -112,14 +142,43 @@ def relocate(db,moves):
     db.execute("DROP TABLE offset_moves")
 
 
-def replay(memory,db,delta):
+def relocation_ranges(db,moves):
+    """Validate old-row membership without rewriting every unchanged locator."""
+    if not isinstance(moves,list) or len(moves)>MAX_RELOCATIONS:raise ValueError("Invalid relocation ranges")
+    result={}
+    for path,start,end,shift,count in moves:
+        if any(type(x) is not int for x in (start,end,shift,count)) or not 0<=start<end or not count>0:
+            raise ValueError("Invalid relocation interval")
+        actual,lowest=db.execute("SELECT count(*),min(offset) FROM locators WHERE path=? AND offset>=? AND offset<?",(path,start,end)).fetchone()
+        if actual!=count:raise ValueError("Memory relocation record count mismatch")
+        if lowest+shift<0:raise ValueError("Negative memory relocation offset")
+        ranges=result.setdefault(path,[])
+        for old_start,old_end,_ in ranges:
+            left,right=max(start,old_start),min(end,old_end)
+            if left<right and db.execute("SELECT 1 FROM locators WHERE path=? AND offset>=? AND offset<? LIMIT 1",(path,left,right)).fetchone():
+                raise ValueError("Overlapping memory relocation rows")
+        ranges.append((start,end,shift))
+    return result
+
+
+def moved(meta,ranges):
+    key,path,offset,length,sha,kind=meta
+    for start,end,shift in ranges.get(path,()):
+        if start<=offset<end:return key,path,offset+shift,length,sha,kind
+    return tuple(meta)
+
+
+def replay(memory,db,delta,*,query=None,deferred=False):
     for key in delta["removed"]:
         old=db.execute("SELECT rowid,"+LOCATORS+" FROM locators WHERE key=?",(key,)).fetchone()
         if old is None:raise ValueError("Memory delta removes absent record")
-        rowid,*meta=old;_,title,sentences,_,_,_=parse_record(memory,delta["parent_snapshot"],meta)
+        rowid,*meta=old;_,title,sentences,_,_,_=parse_record(memory,delta["parent_snapshot"],meta,query)
         db.execute("INSERT INTO evidence(evidence,rowid,title,body) VALUES('delete',?,?,?)",(rowid,title,"\n".join(sentences)))
         db.execute("DELETE FROM locators WHERE rowid=?",(rowid,))
-    if delta["version"]==3:relocate(db,delta["relocations"])
+    ranges={}
+    if delta["version"]==3:
+        if deferred:ranges=relocation_ranges(db,delta["relocations"])
+        else:relocate(db,delta["relocations"])
     for meta in delta["upserted"]:
         old=db.execute("SELECT rowid,"+LOCATORS+" FROM locators WHERE key=?",(meta[0],)).fetchone()
         if old and old[5]==meta[4]:
@@ -128,25 +187,28 @@ def replay(memory,db,delta):
             continue
         rowid=old[0] if old else None
         if old:
-            _,title,sentences,_,_,_=parse_record(memory,delta["parent_snapshot"],old[1:])
+            _,title,sentences,_,_,_=parse_record(memory,delta["parent_snapshot"],moved(old[1:],ranges),query)
             db.execute("INSERT INTO evidence(evidence,rowid,title,body) VALUES('delete',?,?,?)",(rowid,title,"\n".join(sentences)))
             db.execute("DELETE FROM locators WHERE rowid=?",(rowid,))
-        _,title,sentences,_,_,_=parse_record(memory,delta["snapshot_id"],meta)
+        _,title,sentences,_,_,_=parse_record(memory,delta["snapshot_id"],meta,query)
         insert(db,meta,title,sentences,rowid)
     db.commit()
+    return ranges,{meta[0] for meta in delta["upserted"]}
 
 
 @contextmanager
-def view(memory,value,*,writable=False):
+def view(memory,value,*,writable=False,query=None,deferred=False):
+    if deferred and (value["version"]!=3 or writable):raise ValueError("Deferred locators require a read-only v3 query")
     path=memory.root/"indexes"/(value["base_snapshot_id"]+".sqlite")
     source=sqlite3.connect(path.as_uri()+"?mode=ro",uri=True);db=source
     try:
+        projection=({},set())
         if value["deltas"] or writable:
             db=sqlite3.connect(":memory:");source.backup(db)
-            for desc in value["deltas"]:replay(memory,db,load_delta(memory,desc))
+            for desc in value["deltas"]:projection=replay(memory,db,load_delta(memory,desc,query),query=query,deferred=deferred)
         if db.execute("SELECT count(*) FROM locators").fetchone()[0]!=value["records"]:
             raise ValueError("Memory index record count mismatch")
-        yield db
+        yield (db,projection) if deferred else db
     finally:
         if db is not source:db.close()
         source.close()
@@ -250,6 +312,9 @@ def build(memory,sid,selected):
             "relocation_ranges":len(ops.get("relocations",[])) if ops else 0,"overlay_upserts":len(ops["upserted"]) if ops else 0}
 
 
-def search(memory,value,query,top_k):
-    with view(memory,value) as db:
-        return db.execute("SELECT l.key,l.path,l.offset,l.length,lower(hex(l.sha)),l.kind,bm25(evidence) FROM evidence JOIN locators l ON l.rowid=evidence.rowid WHERE evidence MATCH ? ORDER BY bm25(evidence),l.key LIMIT ?",(query,top_k)).fetchall()
+def search(memory,value,match,top_k,query=None):
+    deferred=value["version"]==3
+    with view(memory,value,query=query,deferred=deferred) as prepared:
+        db,(ranges,upserted)=prepared if deferred else (prepared,({},set()))
+        rows=db.execute("SELECT l.key,l.path,l.offset,l.length,lower(hex(l.sha)),l.kind,bm25(evidence) FROM evidence JOIN locators l ON l.rowid=evidence.rowid WHERE evidence MATCH ? ORDER BY bm25(evidence),l.key LIMIT ?",(match,top_k)).fetchall()
+        return [(*moved(row[:6],ranges),row[6]) if row[0] not in upserted else row for row in rows]
