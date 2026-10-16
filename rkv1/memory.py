@@ -43,12 +43,15 @@ def records(path,raw):
                 key="doc:"+str(obj["doc_id"])
                 yield key,obj["title"],obj["abstract"],offset,line,"scifact-jsonl"
             offset+=len(line)
+    elif path.lower().endswith(".json"):
+        from .memory_qasper import records as qasper_records
+        yield from qasper_records(raw,MAX_RECORD)
     elif path.lower().endswith((".txt",".md")):
         if len(raw)>MAX_RECORD:raise ValueError("Text evidence file exceeds 1 MiB")
         text=raw.decode("utf-8",errors="strict")
         yield "file:"+path,path,[text],0,raw,"text"
     else:
-        raise ValueError("Memory evidence supports .txt/.md or SciFact-format .jsonl only")
+        raise ValueError("Memory evidence supports .txt/.md, SciFact .jsonl or QASPER .json only")
 
 
 class Memory:
