@@ -248,3 +248,11 @@ projection=qasper-paper-text-v1标识精确title/段落列表的确定性JSON SH
 读取校验基础/overlay、原源树绑定和重绑定指纹；每个命中仍验证当前CAS原字节SHA、
 key/kind及投影SHA。新应用v4需v0.21，v0.20明确拒绝。旧应用v1/v2/v3保持兼容，
 不自动迁移或降级；详见[MEMORY-PROJECTION.md](MEMORY-PROJECTION.md)。
+
+## v0.22读取路径优化，无格式变更
+
+记忆v1/v2/v3/v4、归档v1–v6/CAS1及writer配置不变。v4先以每批256个key核对
+全部重绑定，读请求内映射只应用命中locator；纯定位/位移overlay无需复制基础
+SQLite，FTS删除/upsert仍复制并完整重放。基础/overlay/源树/CAS/原记录/投影SHA
+与全部位移检查保留，不跨查询缓存。旧v0.21可读新v4，旧v0.20仍拒绝；不迁移。
+详见[PROJECTION-QUERIES.md](PROJECTION-QUERIES.md)。

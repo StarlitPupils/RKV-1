@@ -1,0 +1,374 @@
+{
+  "official-gear": {
+    "projection-v4": {
+      "root": "E:\\memorystorage\\.tools\\projection-v021-workers\\0-official-gear-projection-v4\\memory",
+      "tree": {
+        "files": 250,
+        "bytes": 8964004,
+        "sha256": "28813511192acc7e191fca8e74f92e567f01f244f1ab9985a02de0e94641be3b"
+      },
+      "logical_file_bytes": 8964004,
+      "stages": [
+        {
+          "index": 0,
+          "snapshot_id": "737a71223ad435f2a3415d683591351b3b1ba9a5e0ca823036cd54a3a222c008",
+          "source_truth": {
+            "qasper-dev-v0.1.json": {
+              "bytes": 10925710,
+              "sha256": "bc30979b6caf991bdb45e483478e75699bd16fcdcf66b957fe433bb63bdd833a"
+            }
+          }
+        },
+        {
+          "index": 1,
+          "snapshot_id": "d22f855193c30c5a9a96ecc816f97c1a355257785e4a6fb9e14451b7c066f499",
+          "source_truth": {
+            "qasper-dev-v0.2.json": {
+              "bytes": 11398928,
+              "sha256": "1b2e2ac60314246698867d382c08104439658cb723482a042bf123f223c191a7"
+            }
+          }
+        },
+        {
+          "index": 2,
+          "snapshot_id": "89e35aff0d3da4168bd3fa46ff3015c330be76db38f867057ecbcb9460023275",
+          "source_truth": {
+            "qasper-dev-v0.3.json": {
+              "bytes": 11398686,
+              "sha256": "2ae7ee62a65b1c4225791c70de80c2aad4e8998cf1fd4f09a53103db4f21af93"
+            }
+          }
+        }
+      ]
+    },
+    "budget-v3": {
+      "root": "E:\\memorystorage\\.tools\\projection-v021-workers\\0-official-gear-budget-v3\\memory",
+      "tree": {
+        "files": 250,
+        "bytes": 15241700,
+        "sha256": "6a77b82a6559c8d97c19592054101fc3fe5411bf21550a27124b1818351e83ea"
+      },
+      "logical_file_bytes": 15241700,
+      "stages": [
+        {
+          "index": 0,
+          "snapshot_id": "737a71223ad435f2a3415d683591351b3b1ba9a5e0ca823036cd54a3a222c008",
+          "source_truth": {
+            "qasper-dev-v0.1.json": {
+              "bytes": 10925710,
+              "sha256": "bc30979b6caf991bdb45e483478e75699bd16fcdcf66b957fe433bb63bdd833a"
+            }
+          }
+        },
+        {
+          "index": 1,
+          "snapshot_id": "d22f855193c30c5a9a96ecc816f97c1a355257785e4a6fb9e14451b7c066f499",
+          "source_truth": {
+            "qasper-dev-v0.2.json": {
+              "bytes": 11398928,
+              "sha256": "1b2e2ac60314246698867d382c08104439658cb723482a042bf123f223c191a7"
+            }
+          }
+        },
+        {
+          "index": 2,
+          "snapshot_id": "89e35aff0d3da4168bd3fa46ff3015c330be76db38f867057ecbcb9460023275",
+          "source_truth": {
+            "qasper-dev-v0.3.json": {
+              "bytes": 11398686,
+              "sha256": "2ae7ee62a65b1c4225791c70de80c2aad4e8998cf1fd4f09a53103db4f21af93"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "official-fixed": {
+    "projection-v4": {
+      "root": "E:\\memorystorage\\.tools\\projection-v021-workers\\0-official-fixed-projection-v4\\memory",
+      "tree": {
+        "files": 509,
+        "bytes": 11499077,
+        "sha256": "83fcabac6b1dee94ab0fa2f56c15aa8cdd64ae3c283bf472215a1fdd84db040d"
+      },
+      "logical_file_bytes": 11499077,
+      "stages": [
+        {
+          "index": 0,
+          "snapshot_id": "2c615281896d8b7f09880ae0fa1e4b390a8c593633a5fe47df390a73e7a6f6b8",
+          "source_truth": {
+            "qasper-dev-v0.1.json": {
+              "bytes": 10925710,
+              "sha256": "bc30979b6caf991bdb45e483478e75699bd16fcdcf66b957fe433bb63bdd833a"
+            }
+          }
+        },
+        {
+          "index": 1,
+          "snapshot_id": "7e331431b5222b99bf9d2b383018367375c516f2954c87688b81ea77cb324680",
+          "source_truth": {
+            "qasper-dev-v0.2.json": {
+              "bytes": 11398928,
+              "sha256": "1b2e2ac60314246698867d382c08104439658cb723482a042bf123f223c191a7"
+            }
+          }
+        },
+        {
+          "index": 2,
+          "snapshot_id": "2689479b2b6711bd2958a059d7740e7f6ce7d6394bc8a8292a0309c737ba911d",
+          "source_truth": {
+            "qasper-dev-v0.3.json": {
+              "bytes": 11398686,
+              "sha256": "2ae7ee62a65b1c4225791c70de80c2aad4e8998cf1fd4f09a53103db4f21af93"
+            }
+          }
+        }
+      ]
+    },
+    "budget-v3": {
+      "root": "E:\\memorystorage\\.tools\\projection-v021-workers\\0-official-fixed-budget-v3\\memory",
+      "tree": {
+        "files": 509,
+        "bytes": 17776771,
+        "sha256": "c9c307b1bf4357c4f119ce688071a0c1d0d5a62048f427c880906a9e533e8d92"
+      },
+      "logical_file_bytes": 17776771,
+      "stages": [
+        {
+          "index": 0,
+          "snapshot_id": "2c615281896d8b7f09880ae0fa1e4b390a8c593633a5fe47df390a73e7a6f6b8",
+          "source_truth": {
+            "qasper-dev-v0.1.json": {
+              "bytes": 10925710,
+              "sha256": "bc30979b6caf991bdb45e483478e75699bd16fcdcf66b957fe433bb63bdd833a"
+            }
+          }
+        },
+        {
+          "index": 1,
+          "snapshot_id": "7e331431b5222b99bf9d2b383018367375c516f2954c87688b81ea77cb324680",
+          "source_truth": {
+            "qasper-dev-v0.2.json": {
+              "bytes": 11398928,
+              "sha256": "1b2e2ac60314246698867d382c08104439658cb723482a042bf123f223c191a7"
+            }
+          }
+        },
+        {
+          "index": 2,
+          "snapshot_id": "2689479b2b6711bd2958a059d7740e7f6ce7d6394bc8a8292a0309c737ba911d",
+          "source_truth": {
+            "qasper-dev-v0.3.json": {
+              "bytes": 11398686,
+              "sha256": "2ae7ee62a65b1c4225791c70de80c2aad4e8998cf1fd4f09a53103db4f21af93"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "synthetic-fixed": {
+    "projection-v4": {
+      "root": "E:\\memorystorage\\.tools\\projection-v021-workers\\0-synthetic-fixed-projection-v4\\memory",
+      "tree": {
+        "files": 46,
+        "bytes": 332873,
+        "sha256": "98fd91aa0268dbae60348d2888748109e8d1603cd0070311d8f203547574b63e"
+      },
+      "logical_file_bytes": 332873,
+      "stages": [
+        {
+          "index": 0,
+          "snapshot_id": "e0f76f8b93aa42bec521b076816f3178710b97351273504c72938c5aee05198c",
+          "source_truth": {
+            "control-v1.json": {
+              "bytes": 123414,
+              "sha256": "4dea78e2be9daee11cf40463138df1b4d97dc24def4ffdd7a47a2db27dd156e4"
+            }
+          }
+        },
+        {
+          "index": 1,
+          "snapshot_id": "306dd865675f1f90ade16ff1db18141445bec15ced0b59f0070bd37178c029f8",
+          "source_truth": {
+            "control-v2.json": {
+              "bytes": 142934,
+              "sha256": "f025c155c333fd92429da76fa693c1e631a7e10671e8202b1a65ea491cb4c5c0"
+            }
+          }
+        },
+        {
+          "index": 2,
+          "snapshot_id": "962b961f16611f2a28e89b0d09e3ea7072db4c984b6d85ffd9a9e049bd6ef823",
+          "source_truth": {
+            "control-v2.json": {
+              "bytes": 132054,
+              "sha256": "52f7ca27abbb2c60689c589c979fb597af4f811babc4571d7d460f8a0ed67578"
+            }
+          }
+        },
+        {
+          "index": 3,
+          "snapshot_id": "00d7773751dadd2d282c7834f86100f7738ae03b20d0cb3b205d44014d1300d4",
+          "source_truth": {
+            "control-v2.json": {
+              "bytes": 132066,
+              "sha256": "6464a8e4c55fa1b8ca4c968513b84cf3e7ac3d0f46c4d15556ce88126d37d38b"
+            }
+          }
+        },
+        {
+          "index": 4,
+          "snapshot_id": "2a21c6ac5fe7103f5ad2ee3c92d732a5c236877ec9e90ca9f329b9916df51936",
+          "source_truth": {
+            "control-v2.json": {
+              "bytes": 131921,
+              "sha256": "c166005f18365f2baa0ba04eb151061fc4c5bc06499d97be5f90b063290ba69b"
+            }
+          }
+        },
+        {
+          "index": 5,
+          "snapshot_id": "5dc1ea9bfb33bfb28dba7ef7e17bf70846bebbdd5fc8838cce26434866f7d908",
+          "source_truth": {
+            "control-v2.json": {
+              "bytes": 132350,
+              "sha256": "192c6c2e1d5abbc2a1785d3674632939092c99d97c149006003265bdf74f2636"
+            }
+          }
+        },
+        {
+          "index": 6,
+          "snapshot_id": "aec63959c5793ede92dbbcb6ba833291b79758ba6bc550906f8af4e925649066",
+          "source_truth": {
+            "control-restored.json": {
+              "bytes": 114134,
+              "sha256": "1759caac1ae5537a70253412e48a0e871f0ab5d127b0d2312e615b844977cf53"
+            }
+          }
+        },
+        {
+          "index": 7,
+          "snapshot_id": "52ea1879b6cf59df4678771a5e9735af83e6e20300daa2676c06e630379c6459",
+          "source_truth": {
+            "control-restored.json": {
+              "bytes": 114134,
+              "sha256": "1759caac1ae5537a70253412e48a0e871f0ab5d127b0d2312e615b844977cf53"
+            }
+          }
+        },
+        {
+          "index": 8,
+          "snapshot_id": "aeb3c174843420c53ab6a8fc7c0694da1f9c077893070cd0fde138d901b32cfa",
+          "source_truth": {
+            "control-restored.json": {
+              "bytes": 114188,
+              "sha256": "d92305a0563022ced263b8cd3ce0bd03e2bc02e07098574cd19a9e9558dd6923"
+            }
+          }
+        }
+      ]
+    },
+    "budget-v3": {
+      "root": "E:\\memorystorage\\.tools\\projection-v021-workers\\0-synthetic-fixed-budget-v3\\memory",
+      "tree": {
+        "files": 46,
+        "bytes": 357093,
+        "sha256": "99ac264226e94aaa972b4f6f09c8ebbdefc33475eff6ed092531ba58b8845d27"
+      },
+      "logical_file_bytes": 357093,
+      "stages": [
+        {
+          "index": 0,
+          "snapshot_id": "e0f76f8b93aa42bec521b076816f3178710b97351273504c72938c5aee05198c",
+          "source_truth": {
+            "control-v1.json": {
+              "bytes": 123414,
+              "sha256": "4dea78e2be9daee11cf40463138df1b4d97dc24def4ffdd7a47a2db27dd156e4"
+            }
+          }
+        },
+        {
+          "index": 1,
+          "snapshot_id": "306dd865675f1f90ade16ff1db18141445bec15ced0b59f0070bd37178c029f8",
+          "source_truth": {
+            "control-v2.json": {
+              "bytes": 142934,
+              "sha256": "f025c155c333fd92429da76fa693c1e631a7e10671e8202b1a65ea491cb4c5c0"
+            }
+          }
+        },
+        {
+          "index": 2,
+          "snapshot_id": "962b961f16611f2a28e89b0d09e3ea7072db4c984b6d85ffd9a9e049bd6ef823",
+          "source_truth": {
+            "control-v2.json": {
+              "bytes": 132054,
+              "sha256": "52f7ca27abbb2c60689c589c979fb597af4f811babc4571d7d460f8a0ed67578"
+            }
+          }
+        },
+        {
+          "index": 3,
+          "snapshot_id": "00d7773751dadd2d282c7834f86100f7738ae03b20d0cb3b205d44014d1300d4",
+          "source_truth": {
+            "control-v2.json": {
+              "bytes": 132066,
+              "sha256": "6464a8e4c55fa1b8ca4c968513b84cf3e7ac3d0f46c4d15556ce88126d37d38b"
+            }
+          }
+        },
+        {
+          "index": 4,
+          "snapshot_id": "2a21c6ac5fe7103f5ad2ee3c92d732a5c236877ec9e90ca9f329b9916df51936",
+          "source_truth": {
+            "control-v2.json": {
+              "bytes": 131921,
+              "sha256": "c166005f18365f2baa0ba04eb151061fc4c5bc06499d97be5f90b063290ba69b"
+            }
+          }
+        },
+        {
+          "index": 5,
+          "snapshot_id": "5dc1ea9bfb33bfb28dba7ef7e17bf70846bebbdd5fc8838cce26434866f7d908",
+          "source_truth": {
+            "control-v2.json": {
+              "bytes": 132350,
+              "sha256": "192c6c2e1d5abbc2a1785d3674632939092c99d97c149006003265bdf74f2636"
+            }
+          }
+        },
+        {
+          "index": 6,
+          "snapshot_id": "aec63959c5793ede92dbbcb6ba833291b79758ba6bc550906f8af4e925649066",
+          "source_truth": {
+            "control-restored.json": {
+              "bytes": 114134,
+              "sha256": "1759caac1ae5537a70253412e48a0e871f0ab5d127b0d2312e615b844977cf53"
+            }
+          }
+        },
+        {
+          "index": 7,
+          "snapshot_id": "52ea1879b6cf59df4678771a5e9735af83e6e20300daa2676c06e630379c6459",
+          "source_truth": {
+            "control-restored.json": {
+              "bytes": 114134,
+              "sha256": "1759caac1ae5537a70253412e48a0e871f0ab5d127b0d2312e615b844977cf53"
+            }
+          }
+        },
+        {
+          "index": 8,
+          "snapshot_id": "aeb3c174843420c53ab6a8fc7c0694da1f9c077893070cd0fde138d901b32cfa",
+          "source_truth": {
+            "control-restored.json": {
+              "bytes": 114188,
+              "sha256": "d92305a0563022ced263b8cd3ce0bd03e2bc02e07098574cd19a9e9558dd6923"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

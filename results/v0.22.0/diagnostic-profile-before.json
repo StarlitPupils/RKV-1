@@ -1,0 +1,215 @@
+{
+  "scope": "Diagnostic cProfile of 64 existing questions on retained v0.21 fixed/v4 final snapshot; not formal timing",
+  "rows": [
+    {
+      "function": "('E:\\\\memorystorage\\\\rkv1\\\\memory.py', 167, 'search')",
+      "calls": 64,
+      "self_s": 0.0006558,
+      "cumulative_s": 2.1407217000000003
+    },
+    {
+      "function": "('E:\\\\memorystorage\\\\rkv1\\\\memory.py', 174, '_search')",
+      "calls": 64,
+      "self_s": 0.0083291,
+      "cumulative_s": 2.1348231
+    },
+    {
+      "function": "('E:\\\\memorystorage\\\\rkv1\\\\memory_index.py', 344, 'search')",
+      "calls": 64,
+      "self_s": 0.0006252,
+      "cumulative_s": 0.8843935
+    },
+    {
+      "function": "('E:\\\\memorystorage\\\\rkv1\\\\memory_projection.py', 163, 'search')",
+      "calls": 64,
+      "self_s": 0.0008683,
+      "cumulative_s": 0.8837208000000001
+    },
+    {
+      "function": "('~', 0, '<built-in method builtins.next>')",
+      "calls": 128,
+      "self_s": 0.000563,
+      "cumulative_s": 0.8075451
+    },
+    {
+      "function": "('E:\\\\memorystorage\\\\rkv1\\\\memory_projection.py', 74, 'view')",
+      "calls": 128,
+      "self_s": 0.0012231,
+      "cumulative_s": 0.8069821
+    },
+    {
+      "function": "('E:\\\\miniconda\\\\Lib\\\\contextlib.py', 136, '__enter__')",
+      "calls": 64,
+      "self_s": 8.65e-05,
+      "cumulative_s": 0.7606656
+    },
+    {
+      "function": "('E:\\\\memorystorage\\\\rkv1\\\\core.py', 49, 'valid_hash')",
+      "calls": 59641,
+      "self_s": 0.0325043,
+      "cumulative_s": 0.6145145000000001
+    },
+    {
+      "function": "('~', 0, '<built-in method builtins.all>')",
+      "calls": 69027,
+      "self_s": 0.3121707,
+      "cumulative_s": 0.5873710000000001
+    },
+    {
+      "function": "('E:\\\\memorystorage\\\\rkv1\\\\memory.py', 150, '_manifest')",
+      "calls": 64,
+      "self_s": 0.0005692000000000001,
+      "cumulative_s": 0.5610049
+    },
+    {
+      "function": "('E:\\\\memorystorage\\\\rkv1\\\\memory_index.py', 102, 'validate')",
+      "calls": 64,
+      "self_s": 0.0090291,
+      "cumulative_s": 0.5508155
+    },
+    {
+      "function": "('E:\\\\memorystorage\\\\rkv1\\\\memory_projection.py', 28, 'replay')",
+      "calls": 64,
+      "self_s": 0.0399196,
+      "cumulative_s": 0.5395106000000001
+    },
+    {
+      "function": "('E:\\\\memorystorage\\\\rkv1\\\\store.py', 331, 'read_range')",
+      "calls": 640,
+      "self_s": 0.0108836,
+      "cumulative_s": 0.4346238
+    },
+    {
+      "function": "('E:\\\\memorystorage\\\\rkv1\\\\store.py', 164, 'block')",
+      "calls": 1081,
+      "self_s": 0.0116904,
+      "cumulative_s": 0.41883570000000003
+    },
+    {
+      "function": "('E:\\\\memorystorage\\\\rkv1\\\\memory_index.py', 65, 'source_files')",
+      "calls": 256,
+      "self_s": 0.0008065,
+      "cumulative_s": 0.35055040000000004
+    },
+    {
+      "function": "('E:\\\\memorystorage\\\\rkv1\\\\memory_index.py', 42, 'snapshot')",
+      "calls": 320,
+      "self_s": 0.0004803,
+      "cumulative_s": 0.34986700000000004
+    },
+    {
+      "function": "('E:\\\\memorystorage\\\\rkv1\\\\memory_index.py', 30, 'snapshot')",
+      "calls": 320,
+      "self_s": 0.0003322,
+      "cumulative_s": 0.34933060000000005
+    },
+    {
+      "function": "('E:\\\\memorystorage\\\\rkv1\\\\store.py', 259, 'snapshot')",
+      "calls": 128,
+      "self_s": 0.00032680000000000003,
+      "cumulative_s": 0.3484588
+    },
+    {
+      "function": "('E:\\\\memorystorage\\\\rkv1\\\\store.py', 281, '__init__')",
+      "calls": 128,
+      "self_s": 0.032481800000000005,
+      "cumulative_s": 0.348132
+    },
+    {
+      "function": "('E:\\\\memorystorage\\\\rkv1\\\\core.py', 50, '<genexpr>')",
+      "calls": 3876665,
+      "self_s": 0.2675193,
+      "cumulative_s": 0.2675193
+    },
+    {
+      "function": "('~', 0, \"<method 'backup' of 'sqlite3.Connection' objects>\")",
+      "calls": 64,
+      "self_s": 0.19583920000000002,
+      "cumulative_s": 0.19583920000000002
+    },
+    {
+      "function": "('~', 0, \"<method 'execute' of 'sqlite3.Connection' objects>\")",
+      "calls": 36224,
+      "self_s": 0.17082930000000002,
+      "cumulative_s": 0.17082930000000002
+    },
+    {
+      "function": "('~', 0, '<built-in method _hashlib.openssl_sha256>')",
+      "calls": 3832,
+      "self_s": 0.16965760000000002,
+      "cumulative_s": 0.16965760000000002
+    },
+    {
+      "function": "('~', 0, \"<method 'decompress' of 'zlib.Decompress' objects>\")",
+      "calls": 1145,
+      "self_s": 0.16746380000000002,
+      "cumulative_s": 0.16746380000000002
+    },
+    {
+      "function": "('E:\\\\memorystorage\\\\rkv1\\\\core.py', 45, 'digest')",
+      "calls": 2623,
+      "self_s": 0.0017770000000000002,
+      "cumulative_s": 0.1632546
+    },
+    {
+      "function": "('E:\\\\memorystorage\\\\rkv1\\\\codecs.py', 28, 'decompress')",
+      "calls": 1081,
+      "self_s": 0.0022253,
+      "cumulative_s": 0.1587837
+    },
+    {
+      "function": "('E:\\\\memorystorage\\\\rkv1\\\\memory.py', 31, 'records')",
+      "calls": 1280,
+      "self_s": 0.0055231,
+      "cumulative_s": 0.11183560000000001
+    },
+    {
+      "function": "('E:\\\\memorystorage\\\\rkv1\\\\memory_projection.py', 18, 'fingerprint')",
+      "calls": 640,
+      "self_s": 0.0019133000000000002,
+      "cumulative_s": 0.1085976
+    },
+    {
+      "function": "('E:\\\\miniconda\\\\Lib\\\\json\\\\__init__.py', 185, 'dumps')",
+      "calls": 896,
+      "self_s": 0.0027871000000000003,
+      "cumulative_s": 0.10673800000000001
+    },
+    {
+      "function": "('E:\\\\miniconda\\\\Lib\\\\json\\\\decoder.py', 351, 'raw_decode')",
+      "calls": 1601,
+      "self_s": 0.09235950000000001,
+      "cumulative_s": 0.1050649
+    },
+    {
+      "function": "('E:\\\\memorystorage\\\\rkv1\\\\memory_qasper.py', 57, 'records')",
+      "calls": 1280,
+      "self_s": 0.0115653,
+      "cumulative_s": 0.10458310000000001
+    },
+    {
+      "function": "('E:\\\\miniconda\\\\Lib\\\\json\\\\encoder.py', 185, 'encode')",
+      "calls": 896,
+      "self_s": 0.0017560000000000002,
+      "cumulative_s": 0.1031692
+    },
+    {
+      "function": "('E:\\\\miniconda\\\\Lib\\\\json\\\\encoder.py', 207, 'iterencode')",
+      "calls": 896,
+      "self_s": 0.1006317,
+      "cumulative_s": 0.1006317
+    },
+    {
+      "function": "('E:\\\\miniconda\\\\Lib\\\\pathlib\\\\_local.py', 529, 'open')",
+      "calls": 1469,
+      "self_s": 0.0008403000000000001,
+      "cumulative_s": 0.0987976
+    },
+    {
+      "function": "('E:\\\\miniconda\\\\Lib\\\\pathlib\\\\_abc.py', 621, 'read_bytes')",
+      "calls": 260,
+      "self_s": 0.0005600000000000001,
+      "cumulative_s": 0.0983647
+    }
+  ]
+}

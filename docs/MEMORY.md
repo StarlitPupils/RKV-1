@@ -103,3 +103,9 @@ memory-init可显式--index-profile compact-projection-v4，默认继续预算v3
 QASPER投影指纹与当前原始成员locator分开，标注/路径变化不重写FTS，但仍保存
 所有原始字段和历史、验证当前命中原文/投影；新应用清单v4需新读取器，旧v0.20
 拒绝。空间省、官方发布查询更慢，完整说明见[MEMORY-PROJECTION.md](MEMORY-PROJECTION.md)。
+
+## v0.22 v4查询准备
+
+v4批量检查全部重绑定、仅投影命中定位，纯定位/位移直接读基础，FTS变化仍复制
+完整重放。旧库直接读，无格式/持久字节变更；默认v3不变。官方组有改善但v4仍慢
+于v3，小基础/单条更新收益不稳定；见[PROJECTION-QUERIES.md](PROJECTION-QUERIES.md)。
