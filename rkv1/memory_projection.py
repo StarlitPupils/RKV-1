@@ -25,8 +25,7 @@ def update_locator(db,meta,rowid):
                (*meta[1:4],bytes.fromhex(meta[4]),meta[5],rowid))
 
 
-def replay(memory,db,delta,*,query=None,deferred=False):
-    from .memory_index import LOCATORS,parse_record,insert,relocate,relocation_ranges,moved
+def rebinding_items(delta):
     if (set(delta)!={'version','parent_snapshot','snapshot_id','removed','upserted','relocations','rebound'}
             or delta['version']!=4 or not isinstance(delta['rebound'],list) or len(delta['rebound'])>MAX_REBINDINGS):
         raise ValueError('Invalid projection overlay')
@@ -39,6 +38,25 @@ def replay(memory,db,delta,*,query=None,deferred=False):
         keys.append(meta[0])
     all_keys=delta['removed']+[m[0] for m in delta['upserted']]+keys
     if len(set(all_keys))!=len(all_keys):raise ValueError('Overlapping projection operations')
+    return delta['rebound']
+
+
+def check_rebindings(db,items):
+    """Check every binding, including non-hits, in bounded SQL batches."""
+    found={}
+    for start in range(0,len(items),256):
+        keys=[meta[0] for meta,_ in items[start:start+256]]
+        rows=db.execute('SELECT l.key,l.rowid,l.kind,lower(hex(p.sha)) FROM locators l JOIN projections p ON p.key=l.key WHERE l.key IN ('+','.join('?' for _ in keys)+')',keys)
+        found.update((key,(rowid,kind,sha)) for key,rowid,kind,sha in rows)
+    for meta,sha in items:
+        old=found.get(meta[0])
+        if old is None or old[1]!=KIND or old[2]!=sha:raise ValueError('Projection rebinding fingerprint mismatch')
+    return found
+
+
+def replay(memory,db,delta,*,query=None,deferred=False,lazy_bindings=False):
+    from .memory_index import LOCATORS,parse_record,insert,relocate,relocation_ranges,moved
+    items=rebinding_items(delta)
     for key in delta['removed']:
         old=db.execute('SELECT rowid,'+LOCATORS+' FROM locators WHERE key=?',(key,)).fetchone()
         if old is None:raise ValueError('Projection overlay removes absent record')
@@ -63,24 +81,30 @@ def replay(memory,db,delta,*,query=None,deferred=False):
     # Equality is checked against the fingerprint bound by the full base SHA.
     # Original bytes are scanned and verified at commit, and checked again for
     # each query hit. No FTS delete/insert or old/new CAS replay for these rows.
-    for meta,sha in delta['rebound']:
-        old=db.execute('SELECT l.rowid,l.kind,lower(hex(p.sha)) FROM locators l JOIN projections p ON p.key=l.key WHERE l.key=?',(meta[0],)).fetchone()
-        if old is None or old[1]!=KIND or old[2]!=sha:raise ValueError('Projection rebinding fingerprint mismatch')
-        update_locator(db,meta,old[0])
+    found=check_rebindings(db,items)
+    bindings={meta[0]:tuple(meta) for meta,_ in items} if lazy_bindings else {}
+    if not lazy_bindings:
+        for meta,_ in items:update_locator(db,meta,found[meta[0]][0])
     db.commit()
-    return ranges,{m[0] for m in delta['upserted']}|set(keys)
+    return ranges,{m[0] for m in delta['upserted']}|{meta[0] for meta,_ in items},bindings
 
 
 @contextmanager
-def view(memory,value,*,writable=False,query=None,deferred=False):
+def view(memory,value,*,writable=False,query=None,deferred=False,copy_base=False):
     from .memory_index import load_delta
+    if deferred and writable:raise ValueError('Deferred projection locators require a read-only query')
     path=memory.root/'indexes'/(value['base_snapshot_id']+'.sqlite')
     source=sqlite3.connect(path.as_uri()+'?mode=ro',uri=True);db=source
     try:
-        projection=({},set())
-        if value['deltas'] or writable:
+        projection=({},set(),{})
+        deltas=[load_delta(memory,desc,query) for desc in value['deltas']]
+        # A read-only metadata/range overlay leaves FTS unchanged. Validate all
+        # operations against the base, then project only the returned locators.
+        # Real FTS mutations still use an isolated, fully replayed SQLite copy.
+        needs_copy=writable or copy_base or (deltas and (not deferred or any(d['removed'] or d['upserted'] for d in deltas)))
+        if needs_copy:
             db=sqlite3.connect(':memory:');source.backup(db)
-            for desc in value['deltas']:projection=replay(memory,db,load_delta(memory,desc,query),query=query,deferred=deferred)
+        for delta in deltas:projection=replay(memory,db,delta,query=query,deferred=deferred,lazy_bindings=deferred)
         count=db.execute('SELECT count(*) FROM locators l JOIN projections p ON p.key=l.key').fetchone()[0]
         if count!=value['records'] or db.execute('SELECT count(*) FROM projections').fetchone()[0]!=count or db.execute('SELECT count(*) FROM locators').fetchone()[0]!=count:
             raise ValueError('Projection index record count mismatch')
@@ -162,6 +186,6 @@ def build(memory,sid):
 
 def search(memory,value,match,top_k,query=None):
     from .memory_index import moved
-    with view(memory,value,query=query,deferred=True) as (db,(ranges,updated)):
+    with view(memory,value,query=query,deferred=True) as (db,(ranges,updated,bindings)):
         rows=db.execute('SELECT l.key,l.path,l.offset,l.length,lower(hex(l.sha)),l.kind,bm25(evidence),lower(hex(p.sha)) FROM evidence JOIN locators l ON l.rowid=evidence.rowid JOIN projections p ON p.key=l.key WHERE evidence MATCH ? ORDER BY bm25(evidence),l.key LIMIT ?',(match,top_k)).fetchall()
-        return [(*moved(r[:6],ranges),*r[6:]) if r[0] not in updated else r for r in rows]
+        return [(*bindings[r[0]],*r[6:]) if r[0] in bindings else (*moved(r[:6],ranges),*r[6:]) if r[0] not in updated else r for r in rows]
