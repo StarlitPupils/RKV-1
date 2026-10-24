@@ -62,14 +62,34 @@ class Memory:
             if not path.is_dir() or path.is_symlink():raise ValueError("Invalid memory directories")
 
     @classmethod
-    def create(cls,root,*,compression="zlib",index_profile="compact-base-v3",chunker="fixed",chunk_size=65536):
-        from .memory_index import PROFILES
+    def create(cls,root,*,compression="zlib",index_profile="compact-budget-v3",chunker="fixed",chunk_size=65536,replay_budget=None):
+        from .memory_index import PROFILES,V3_PROFILES
         if index_profile not in PROFILES:raise ValueError("Unknown memory index profile")
+        settings=None
+        if index_profile=="compact-budget-v3":
+            from .memory_budget import budget
+            settings=budget(replay_budget)
+        elif replay_budget is not None:raise ValueError("Replay budget requires compact-budget-v3")
         root=Path(root).resolve();root.mkdir(parents=True,exist_ok=False)
         for name in ("indexes","manifests","answers"):(root/name).mkdir()
         Store.create(root/"cas",compression=compression,chunker=chunker,chunk_size=chunk_size)
-        if index_profile!="full-v1":_publish(root/"indexes/config.json",_json({"version":3 if index_profile=="compact-base-v3" else 2,"profile":index_profile}))
+        if index_profile!="full-v1":
+            config={"version":3 if index_profile in V3_PROFILES else 2,"profile":index_profile}
+            if settings is not None:config["replay_budget"]=settings
+            _publish(root/"indexes/config.json",_json(config))
         return cls(root)
+
+    def enable_replay_budget(self,limits=None):
+        """Change only future writer policy; retained views and HEAD stay intact."""
+        from .memory_budget import budget
+        from .memory_index import configuration,V3_PROFILES
+        settings=budget(limits);old=configuration(self)
+        if old["profile"] not in V3_PROFILES:raise ValueError("Replay budget requires an existing v3 base profile")
+        sid=self.current() if (self.root/"HEAD.json").exists() else None
+        if sid:self._manifest(sid)
+        _head(self.root/"indexes/config.json",{"version":3,"profile":"compact-budget-v3","replay_budget":settings})
+        return {"index_profile":"compact-budget-v3","replay_budget":settings,"snapshot_id":sid,
+                "scope":"Future newly-built views only; retained snapshots and current HEAD unchanged"}
 
     def add(self,source,*,label="evidence",chunker_backend="python",native_library=None):
         """Replace current evidence snapshot; old snapshots/indexes remain addressable."""
@@ -77,6 +97,8 @@ class Memory:
         if source.is_relative_to(self.root) or self.root.is_relative_to(source):
             raise ValueError("Evidence source and memory root must not overlap; answers are derived records")
         started=time.perf_counter()
+        from .memory_index import profile,build
+        selected=profile(self)
         added=self.store.add(source,label=label,chunker_backend=chunker_backend,native_library=native_library);sid=added["snapshot_id"]
         target=self.root/"indexes"/(sid+".sqlite")
         manifest_path=self.root/"manifests"/(sid+".json")
@@ -87,8 +109,6 @@ class Memory:
             size=(self.root/"indexes"/(base+".sqlite")).stat().st_size
             size+=sum((self.root/"indexes"/(d["sha256"]+".delta")).stat().st_size for d in manifest.get("deltas",[]))
             return {**added,"indexed_records":manifest["records"],"index_bytes":size,"new_index_bytes":0,"index_reused":True,"wall_s":time.perf_counter()-started}
-        from .memory_index import profile,build
-        selected=profile(self)
         if selected!="full-v1":
             result=build(self,sid,selected)
             _head(self.root/"HEAD.json",{"version":1,"snapshot_id":sid})

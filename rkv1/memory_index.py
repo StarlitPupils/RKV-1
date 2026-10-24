@@ -10,7 +10,8 @@ import zlib
 from .core import digest,valid_hash
 from .store import _publish
 
-PROFILES=("full-v1","compact-full-v2","compact-delta-v2","compact-base-v3")
+PROFILES=("full-v1","compact-full-v2","compact-delta-v2","compact-base-v3","compact-budget-v3")
+V3_PROFILES=("compact-base-v3","compact-budget-v3")
 MAX_DELTAS=8
 MAX_RELOCATIONS=256
 MAX_DELTA_BYTES=64<<20
@@ -42,15 +43,23 @@ def snapshot(memory,sid,query=None):
     return memory.store.snapshot(sid) if query is None else nullcontext(query.snapshot(sid))
 
 
-def profile(memory):
+def configuration(memory):
     path=memory.root/"indexes/config.json"
-    if not path.exists():return "full-v1"
+    if not path.exists():return {"version":1,"profile":"full-v1"}
     if path.is_symlink():raise ValueError("Linked memory index configuration")
     value=json.loads(path.read_bytes())
-    expected=3 if value.get("profile")=="compact-base-v3" else 2
+    if type(value) is not dict:raise ValueError("Invalid memory index configuration")
+    expected=3 if value.get("profile") in V3_PROFILES else 2
     if value.get("version")!=expected or value.get("profile") not in PROFILES[1:]:
         raise ValueError("Invalid memory index profile")
-    return value["profile"]
+    if value["profile"]=="compact-budget-v3":
+        from .memory_budget import budget
+        if type(value.get("replay_budget")) is not dict:raise ValueError("Invalid memory replay budget")
+        value["replay_budget"]=budget(value["replay_budget"])
+    return value
+
+
+def profile(memory):return configuration(memory)["profile"]
 
 
 def source_files(memory,sid,query=None):
@@ -249,7 +258,8 @@ def differences(prior,current):
 
 def build(memory,sid,selected):
     from .memory import _json
-    current=scan(memory,sid);previous=None;ops=None;version=3 if selected=="compact-base-v3" else 2
+    current=scan(memory,sid);previous=None;ops=None;version=3 if selected in V3_PROFILES else 2
+    replay_budget=None;checkpoint_reason="initial" if not (memory.root/"HEAD.json").exists() else "full-profile"
     if version==3 and (memory.root/"HEAD.json").exists():
         old_sid=memory.current();old=memory._manifest(old_sid)
         if old["version"]==3:
@@ -257,8 +267,16 @@ def build(memory,sid,selected):
             with closing(sqlite3.connect((memory.root/"indexes"/(base_sid+".sqlite")).as_uri()+"?mode=ro",uri=True)) as db:
                 prior={r[0]:list(r) for r in db.execute("SELECT "+LOCATORS+" FROM locators")}
             removed,upserted,moves=differences(prior,current)
-            if len(removed)+len(upserted)<=max(1,len(prior)//4) and len(moves)<=MAX_RELOCATIONS:
+            allowed=len(removed)+len(upserted)<=max(1,len(prior)//4) and len(moves)<=MAX_RELOCATIONS
+            checkpoint_reason="legacy-change-limit" if len(removed)+len(upserted)>max(1,len(prior)//4) else "relocation-limit"
+            if allowed and selected=="compact-budget-v3":
+                from .memory_budget import evaluate
+                replay_budget=evaluate(memory,base_sid,sid,prior,removed,upserted,configuration(memory)["replay_budget"])
+                allowed=replay_budget["reason"] is None
+                if not allowed:checkpoint_reason="budget-"+replay_budget["reason"]
+            if allowed:
                 previous={**old,"deltas":[]}
+                checkpoint_reason=None
                 if removed or upserted or moves or source_files(memory,base_sid)!=source_files(memory,sid):
                     ops={"version":3,"parent_snapshot":base_sid,"snapshot_id":sid,"removed":removed,"upserted":upserted,"relocations":moves}
     if selected=="compact-delta-v2" and (memory.root/"HEAD.json").exists():
@@ -309,7 +327,8 @@ def build(memory,sid,selected):
     _publish(memory.root/"manifests"/(sid+".json"),_json(value))
     active=(memory.root/"indexes"/(base+".sqlite")).stat().st_size+sum((memory.root/"indexes"/(d["sha256"]+".delta")).stat().st_size for d in deltas)
     return {"indexed_records":len(current),"index_bytes":active,"new_index_bytes":new_bytes,"index_reused":new_bytes==0,"delta_depth":len(deltas),"index_profile":selected,
-            "relocation_ranges":len(ops.get("relocations",[])) if ops else 0,"overlay_upserts":len(ops["upserted"]) if ops else 0}
+            "relocation_ranges":len(ops.get("relocations",[])) if ops else 0,"overlay_upserts":len(ops["upserted"]) if ops else 0,
+            "checkpoint_reason":checkpoint_reason if previous is None else None,"replay_budget":replay_budget}
 
 
 def search(memory,value,match,top_k,query=None):
