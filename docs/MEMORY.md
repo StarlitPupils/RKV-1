@@ -96,3 +96,10 @@ python -m scripts.run_memory --out results/local-memory --work .tools/local-memo
 新建库默认compact-budget-v3，旧v3库可memory-budget显式启用未来写入；历史视图
 不重建。默认32变化/256KiB原记录/2MiB逐次CAS工作，超限完整检查点，并保留原
 25%/256区间规则。预算不保证总wall/RSS上限，详见[REPLAY-BUDGET.md](REPLAY-BUDGET.md)。
+
+## v0.21显式论文投影候选
+
+memory-init可显式--index-profile compact-projection-v4，默认继续预算v3。v4将
+QASPER投影指纹与当前原始成员locator分开，标注/路径变化不重写FTS，但仍保存
+所有原始字段和历史、验证当前命中原文/投影；新应用清单v4需新读取器，旧v0.20
+拒绝。空间省、官方发布查询更慢，完整说明见[MEMORY-PROJECTION.md](MEMORY-PROJECTION.md)。

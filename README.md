@@ -6,7 +6,54 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.20.0 · 为增量索引增加回放预算
+## 当前版本：v0.21.0 · 分离论文文本与精确字节定位
+
+新增显式候选 compact-projection-v4：论文title/abstract/full_text段落指纹与当前
+原始成员定位分开。仅路径、标注、JSON排版改变时保留FTS，更新当前SID/原路径/
+偏移/长度/原SHA；正文变化仍完整重放。每个命中验证当前原文与完整论文投影SHA。
+所有原始字段/全部历史保留；归档v1–v6/CAS1不变，新应用清单v4需v0.21读取器。
+
+实现/协议于419b6b8冻结；三策略、三组、各三轮。QASPER官方dev原始三次发布
+每版281论文、正文投影相同，复用既有64问题；固定/Gear单列，非真实论文正文修订。
+
+| 官方发布组，全部历史 | v0.20预算v3 | 投影v4候选 |
+|---|---:|---:|
+| Gear：最终计入空间 | 15.718 MB | **9.441 MB，省39.94%** |
+| 固定64KiB：最终计入空间 | 18.129 MB | **11.851 MB，省34.63%** |
+| Gear：末版查询中位/p95 | **13.79 / 16.14ms** | 24.17 / 26.92ms |
+| 固定：末版查询中位/p95 | **12.29 / 13.87ms** | 22.90 / 27.32ms |
+| Gear：三次提交wall总中位 | 1.716s | 1.635s |
+| 固定：三次提交wall总中位 | 2.168s | 2.114s |
+
+每版新写索引由3182592B变成约27000B定位overlay，但首份基础多32768B指纹表；
+真实组三份完整基础减至一份。空间收益明确，查询准备变慢；小幅提交差异不证明
+普遍提速。**默认继续compact-budget-v3；v4显式选择，不迁移现有库。**
+
+![空间收益与查询代价](results/v0.21.0/projection-costs.png)
+
+160篇合成论文9状态另测标注/改名/重排、正文增删、33篇标题改写、恢复和label别名。
+v4在0/5/6建基础，预算v3建5份；最终计入685095B/709315B。正文变化不被当作标注
+跳过，三预算/25%/256位移规则保留，重绑定另限4096条；并非所有控制阶段更快。
+
+4752正式、540历史完整身份查询均匹配重建的排序/BM25/精确来源；135历史快照
+实例全源核验，81未来探针阴性。同表示CAS树一致，查询不改持久树。170项测试
+通过，1项Windows权限跳过；0新增科学问题或模型调用，仅本机温缓存。
+
+成本含全部49个RKV Python模块/HTML共352222B一次，Gear另计整个实测库/元数据
+124419B；公共运行时未全额分配，非完整部署净压缩。不与旧版不同成本口径混比。
+旧v0.20读取器拒绝v4，v1/v2/v3继续兼容。新库显式启用候选：
+
+```powershell
+python -m rkv1 memory-init path/to/new-memory path/to/evidence --index-profile compact-projection-v4
+```
+
+下一步优先减少v4查询定位准备，再补独立真实论文正文修订。E3、长期对话、多跳、
+冷缓存/跨机器、并发/掉电、GC仍未验证，新问答实验需另定API预算。
+
+[冻结协议/复现](docs/MEMORY-PROJECTION.md) · [全矩阵](results/v0.21.0/SUMMARY.md) ·
+[核验](results/v0.21.0/validation.json) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.21.0)。
+
+## v0.20.0 · 为增量索引增加回放预算
 
 新建记忆库默认 compact-budget-v3：相对基础的累计变化最多32条、重放原记录
 最多256KiB、逐次CAS解码工作最多2MiB，超过任一项则建立完整索引检查点。

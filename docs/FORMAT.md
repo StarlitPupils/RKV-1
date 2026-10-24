@@ -237,3 +237,14 @@ v0.19读取器可读新视图，旧writer拒绝新profile且可能留下未引�
 提交前验证配置。memory-budget只原子替换旧base-v3/新budget-v3未来写配置，
 不改HEAD/历史，不迁移其他profile。同输入/标签复用旧视图不会重新建索引。
 物理归档v1–v6、CAS1及旧应用清单仍兼容；详见REPLAY-BUDGET.md。
+
+## v0.21应用层记忆v4，显式候选
+
+归档v1–v6/CAS1不变，默认仍预算v3；compact-projection-v4显式写新应用清单4。
+基础SQLite保留原FTS/locators并新增projections(key,32B sha)，完整基础SHA绑定两表。
+projection=qasper-paper-text-v1标识精确title/段落列表的确定性JSON SHA；仅QASPER
+同key/kind、投影一致可rebound原定位，不改postings。单份基础相对overlay4最多
+4096重绑定，与删除/upsert不交叉；仍受32/256KiB/2MiB FTS重放及25%/256区间门槛。
+读取校验基础/overlay、原源树绑定和重绑定指纹；每个命中仍验证当前CAS原字节SHA、
+key/kind及投影SHA。新应用v4需v0.21，v0.20明确拒绝。旧应用v1/v2/v3保持兼容，
+不自动迁移或降级；详见[MEMORY-PROJECTION.md](MEMORY-PROJECTION.md)。

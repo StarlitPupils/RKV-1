@@ -1,0 +1,22 @@
+{
+  "formal_queries_audited": 4752,
+  "historical_identity_queries_audited": 540,
+  "historical_snapshot_instances_fully_reopened": 135,
+  "original_future_probes": 81,
+  "fresh_query_processes_and_warmups": 135,
+  "all_keys_BM25_and_complete_source_identity_match_rebuild": true,
+  "all_CAS_trees_match_within_representation": true,
+  "official_Gear_rebuild_persistent_bytes_match_v019": true,
+  "all_official_projection_overlays_zero_FTS_replay_work": true,
+  "all_retained_FTS_overlays_within_v020_budgets": true,
+  "current_modules": 49,
+  "new_scientific_questions": 0,
+  "generation_calls": 0,
+  "tests": {
+    "run": 171,
+    "passed": 170,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "cc04d63bff1455e030d54393c6d8d2d96385bb42958e9cfb56df6cdf94a24943"
+  }
+}
