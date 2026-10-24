@@ -226,3 +226,14 @@ JSON中一个完整key、冒号和值，不含外层逗号/花括号，成员包
 这种来源需v0.19解码，旧v0.18不支持，不能将物理格式不变称为所有来源向后可读。
 旧SciFact/文本来源兼容。重复key、未知模式、非法/截断成员拒绝，既有文件/记录
 上限不变。详见MEMORY-HISTORY.md。
+
+## v0.20 writer预算配置，无清单格式变更
+
+新profile compact-budget-v3仅是indexes/config.json中的写入策略，沿用v3清单/overlay。
+配置version=3，replay_budget含version=1、max_changes=32、max_record_bytes=262144、
+max_cas_bytes=2097152默认值。字段严格验证，未知/缺失/null/非法整数拒绝；合法
+上界分别100000/64MiB/1GiB。旧比例/位移门槛保留，超预算写完整基础索引。
+v0.19读取器可读新视图，旧writer拒绝新profile且可能留下未引用CAS；本版在CAS
+提交前验证配置。memory-budget只原子替换旧base-v3/新budget-v3未来写配置，
+不改HEAD/历史，不迁移其他profile。同输入/标签复用旧视图不会重新建索引。
+物理归档v1–v6、CAS1及旧应用清单仍兼容；详见REPLAY-BUDGET.md。

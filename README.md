@@ -6,7 +6,52 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.19.0 · 原始QASPER与100更新边界
+## 当前版本：v0.20.0 · 为增量索引增加回放预算
+
+新建记忆库默认 compact-budget-v3：相对基础的累计变化最多32条、重放原记录
+最多256KiB、逐次CAS解码工作最多2MiB，超过任一项则建立完整索引检查点。
+保留既有25%变化/256位移区间门槛；原文、全部历史和全部校验继续保留。
+预算约束重放工作量，不能保证总查询时延或RSS上限。
+
+实现与协议于7df94f7冻结。四组合成控制×四策略×三轮，包含上一版100更新原样
+回归、默认固定分块复测，以及大记录/大分块定向控制。同轮同源码对照：
+
+| 场景 | 旧策略查询中位/p95 | 新三预算查询中位/p95 |
+|---|---:|---:|
+| 固定64KiB，第42次更新 | 534.47 / 684.67ms | **2.36 / 8.18ms** |
+| Gear64KiB，第42次更新 | 589.44 / 780.32ms | **2.19 / 9.03ms** |
+| 大记录，第2次更新 | 11.14 / 21.66ms | 2.61 / 13.49ms |
+| 固定1MiB，第2次更新 | 29.77 / 66.21ms | 7.91 / 45.90ms |
+
+第42次更新提前检查点，保留全部101个状态的Gear总计成本由旧策略9.162MB变为
+9.140MB（完整重建83.739MB），检查点从0/43/80变为0/42/80，数量仍为3。
+大记录/大分块组则各从1个基础增至3个：总计成本1.159→2.461MB、5.620→10.977MB。
+这是读写与空间取舍；第43/79次更新新策略约5ms、旧策略约2–3ms，不能称处处更快。
+
+![回放预算与检查点附近的查询](results/v0.20.0/replay-costs.png)
+
+4032正式查询、10176历史身份查询均匹配完整重建的排序、BM25和精确来源；2544
+历史快照实例全源核验通过，2544未来探针阴性。同表示CAS树一致，查询不改持久树。
+164项测试通过、1项Windows权限跳过。0次新模型调用，0条新增科学问题；这些是
+合成定向控制与已见回归，本机温缓存，不能推出新科学推理质量或真实修订泛化收益。
+
+成本统一计入全部48个RKV Python模块及HTML一次，Gear另计完整实测DLL/元数据
+124419B；公共运行时未全额分配，不是完整部署占用。口径与v0.19不同，不跨版算
+压缩提升。物理归档v1–v6、CAS1、记忆清单v1–v3不变；v0.19能读新v3视图，但其
+writer拒绝新策略。旧库不自动切换，显式启用只影响未来新建视图：
+
+```powershell
+python -m rkv1 memory-budget path/to/existing-v3-memory
+```
+
+该命令不改HEAD、不修复旧慢快照；复用同一输入/标签仍返回原视图。新库可显式
+`--index-profile compact-base-v3` 保留旧策略。QASPER路径/标注耦合仍待修正；冷缓存、
+跨机器、并发/掉电、E3、长期对话和多跳验证仍未完成。
+
+[冻结协议/复现](docs/REPLAY-BUDGET.md) · [全矩阵](results/v0.20.0/SUMMARY.md) ·
+[核验](results/v0.20.0/validation.json) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.20.0)。
+
+## v0.19.0 · 原始QASPER与100更新边界
 
 新增QASPER原始JSON成员字节定位，只索引论文title/abstract/full_text，不索引问答
 标注。原文件名、空白/转义/全部原字段仍在CAS原样保存。单个成员可独立恢复ID与

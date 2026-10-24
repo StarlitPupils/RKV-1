@@ -1,0 +1,25 @@
+{
+  "python": "3.13.12",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "sqlite": "3.51.1",
+  "rounds": 3,
+  "logical_cpus": 20,
+  "seed": 20261024,
+  "default_limits": {
+    "version": 1,
+    "max_changes": 32,
+    "max_record_bytes": 262144,
+    "max_cas_bytes": 2097152
+  },
+  "count_only_limits": {
+    "version": 1,
+    "max_changes": 32,
+    "max_record_bytes": 67108864,
+    "max_cas_bytes": 1073741824
+  },
+  "generation_calls": 0,
+  "scope": "Same-source writer-policy comparison, not whole-version performance; synthetic controls only; local warm cache",
+  "cold_cache": null,
+  "cross_machine": null,
+  "new_model_quality": null
+}

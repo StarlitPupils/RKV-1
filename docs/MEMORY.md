@@ -90,3 +90,9 @@ python -m scripts.run_memory --out results/local-memory --work .tools/local-memo
 浏览器仅绑定127.0.0.1，不对外部署；页面原文用textContent展示，不执行证据HTML。
 模型服务配置缺失时仅能检索，不以模板回答冒充LLM。HTTP合同测试使用本机明确
 标记的测试服务，不计入真实模型评测。发行包应包含memory_demo.html。
+
+## v0.20回放预算
+
+新建库默认compact-budget-v3，旧v3库可memory-budget显式启用未来写入；历史视图
+不重建。默认32变化/256KiB原记录/2MiB逐次CAS工作，超限完整检查点，并保留原
+25%/256区间规则。预算不保证总wall/RSS上限，详见[REPLAY-BUDGET.md](REPLAY-BUDGET.md)。
