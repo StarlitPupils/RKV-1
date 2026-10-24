@@ -10,7 +10,7 @@ import zlib
 from .core import digest,valid_hash
 from .store import _publish
 
-PROFILES=("full-v1","compact-full-v2","compact-delta-v2","compact-base-v3","compact-budget-v3")
+PROFILES=("full-v1","compact-full-v2","compact-delta-v2","compact-base-v3","compact-budget-v3","compact-projection-v4")
 V3_PROFILES=("compact-base-v3","compact-budget-v3")
 MAX_DELTAS=8
 MAX_RELOCATIONS=256
@@ -49,10 +49,10 @@ def configuration(memory):
     if path.is_symlink():raise ValueError("Linked memory index configuration")
     value=json.loads(path.read_bytes())
     if type(value) is not dict:raise ValueError("Invalid memory index configuration")
-    expected=3 if value.get("profile") in V3_PROFILES else 2
+    expected=4 if value.get("profile")=="compact-projection-v4" else 3 if value.get("profile") in V3_PROFILES else 2
     if value.get("version")!=expected or value.get("profile") not in PROFILES[1:]:
         raise ValueError("Invalid memory index profile")
-    if value["profile"]=="compact-budget-v3":
+    if value["profile"] in ("compact-budget-v3","compact-projection-v4"):
         from .memory_budget import budget
         if type(value.get("replay_budget")) is not dict:raise ValueError("Invalid memory replay budget")
         value["replay_budget"]=budget(value["replay_budget"])
@@ -106,12 +106,15 @@ def validate(memory,sid,value,query=None):
     path=memory.root/"indexes"/(base+".sqlite")
     if path.is_symlink() or digest(path.read_bytes())!=value["index_sha256"]:
         raise ValueError("Memory index SHA mismatch")
-    limit=1 if value["version"]==3 else MAX_DELTAS
+    if value['version']==4:
+        from .memory_projection import PROJECTION
+        if value.get('projection')!=PROJECTION:raise ValueError('Invalid memory projection version')
+    limit=1 if value["version"] in (3,4) else MAX_DELTAS
     if not isinstance(value.get("deltas"),list) or len(value["deltas"])>limit:
         raise ValueError("Invalid memory delta chain")
     previous=source_files(memory,base,query)
     for desc in value["deltas"]:
-        if desc.get("version",2)!=value["version"] or (value["version"]==3 and desc.get("parent_snapshot")!=base):
+        if desc.get("version",2)!=value["version"] or (value["version"] in (3,4) and desc.get("parent_snapshot")!=base):
             raise ValueError("Memory overlay format/base mismatch")
         # A label-only snapshot may alias an existing view, but its source tree
         # must equal that view before the next delta can be applied.
@@ -207,6 +210,10 @@ def replay(memory,db,delta,*,query=None,deferred=False):
 
 @contextmanager
 def view(memory,value,*,writable=False,query=None,deferred=False):
+    if value['version']==4:
+        from .memory_projection import view as projection_view
+        with projection_view(memory,value,writable=writable,query=query,deferred=deferred) as db:yield db
+        return
     if deferred and (value["version"]!=3 or writable):raise ValueError("Deferred locators require a read-only v3 query")
     path=memory.root/"indexes"/(value["base_snapshot_id"]+".sqlite")
     source=sqlite3.connect(path.as_uri()+"?mode=ro",uri=True);db=source
@@ -257,6 +264,9 @@ def differences(prior,current):
 
 
 def build(memory,sid,selected):
+    if selected=='compact-projection-v4':
+        from .memory_projection import build as projection_build
+        return projection_build(memory,sid)
     from .memory import _json
     current=scan(memory,sid);previous=None;ops=None;version=3 if selected in V3_PROFILES else 2
     replay_budget=None;checkpoint_reason="initial" if not (memory.root/"HEAD.json").exists() else "full-profile"
@@ -332,6 +342,9 @@ def build(memory,sid,selected):
 
 
 def search(memory,value,match,top_k,query=None):
+    if value['version']==4:
+        from .memory_projection import search as projection_search
+        return projection_search(memory,value,match,top_k,query)
     deferred=value["version"]==3
     with view(memory,value,query=query,deferred=deferred) as prepared:
         db,(ranges,upserted)=prepared if deferred else (prepared,({},set()))

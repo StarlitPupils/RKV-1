@@ -106,7 +106,7 @@ def main(argv=None):
     p.add_argument("--io-backend", choices=("reference", "bounded"), default="reference")
     p=sub.add_parser("memory-init")
     p.add_argument("memory");p.add_argument("source");p.add_argument("--codec",choices=("zlib","zstd"),default="zlib")
-    p.add_argument("--index-profile",choices=("full-v1","compact-full-v2","compact-delta-v2","compact-base-v3","compact-budget-v3"),default="compact-budget-v3")
+    p.add_argument("--index-profile",choices=("full-v1","compact-full-v2","compact-delta-v2","compact-base-v3","compact-budget-v3","compact-projection-v4"),default="compact-budget-v3")
     p.add_argument("--chunker",choices=("fixed","gear-v1"),default="fixed");p.add_argument("--chunk-size",type=int,default=65536)
     p.add_argument("--chunker-backend",choices=("python","rust"),default="python");p.add_argument("--native-library")
     p=sub.add_parser("memory-add")

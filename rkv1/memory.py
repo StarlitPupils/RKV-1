@@ -66,15 +66,15 @@ class Memory:
         from .memory_index import PROFILES,V3_PROFILES
         if index_profile not in PROFILES:raise ValueError("Unknown memory index profile")
         settings=None
-        if index_profile=="compact-budget-v3":
+        if index_profile in ("compact-budget-v3","compact-projection-v4"):
             from .memory_budget import budget
             settings=budget(replay_budget)
-        elif replay_budget is not None:raise ValueError("Replay budget requires compact-budget-v3")
+        elif replay_budget is not None:raise ValueError("Replay budget requires a budget profile")
         root=Path(root).resolve();root.mkdir(parents=True,exist_ok=False)
         for name in ("indexes","manifests","answers"):(root/name).mkdir()
         Store.create(root/"cas",compression=compression,chunker=chunker,chunk_size=chunk_size)
         if index_profile!="full-v1":
-            config={"version":3 if index_profile in V3_PROFILES else 2,"profile":index_profile}
+            config={"version":4 if index_profile=='compact-projection-v4' else 3 if index_profile in V3_PROFILES else 2,"profile":index_profile}
             if settings is not None:config["replay_budget"]=settings
             _publish(root/"indexes/config.json",_json(config))
         return cls(root)
@@ -152,8 +152,8 @@ class Memory:
         path=self.root/"manifests"/(sid+".json")
         if path.is_symlink():raise ValueError("Linked memory manifest")
         value=json.loads(path.read_bytes())
-        if value.get("version") not in (1,2,3) or value.get("snapshot_id")!=sid:raise ValueError("Memory manifest identity mismatch")
-        if value["version"] in (2,3):
+        if value.get("version") not in (1,2,3,4) or value.get("snapshot_id")!=sid:raise ValueError("Memory manifest identity mismatch")
+        if value["version"] in (2,3,4):
             from .memory_index import validate
             validate(self,sid,value,query)
             return value
@@ -176,9 +176,9 @@ class Memory:
         tokens=list(dict.fromkeys(t.lower() for t in re.findall(r"[\w]+",question,re.UNICODE) if t.lower() not in STOP and len(t)>1))[:64]
         if not tokens:return {"snapshot_id":sid,"question":question,"hits":[],"wall_s":time.perf_counter()-started}
         query=" OR ".join('"'+t+'"' for t in tokens)
-        if manifest["version"] in (2,3):
+        if manifest["version"] in (2,3,4):
             from .memory_index import search
-            rows=[(*r[:6],None,None,r[6]) for r in search(self,manifest,query,top_k,resources)]
+            rows=[(*r[:6],r[7] if manifest['version']==4 else None,None,r[6]) for r in search(self,manifest,query,top_k,resources)]
         else:
             db=sqlite3.connect((self.root/"indexes"/(sid+".sqlite")).as_uri()+"?mode=ro",uri=True)
             try:
@@ -195,6 +195,9 @@ class Memory:
                 actual_key,actual_title,sentences,_,_,actual_kind=parsed[0]
                 if actual_key!=key or kind!=actual_kind or (manifest["version"]==1 and (title,body)!=(actual_title,"\n".join(sentences))):
                     raise ValueError("Index text differs from immutable evidence")
+                if manifest['version']==4:
+                    from .memory_projection import fingerprint
+                    if title!=fingerprint(actual_title,sentences):raise ValueError('Index projection differs from immutable evidence')
                 title=actual_title
                 hits.append({"citation_id":f"D{len(hits)}","key":key,"title":title,"sentences":sentences,"rank":rank,
                     "source_bytes_verified":True,"locator":{"snapshot_id":sid,"path":path,"offset":int(offset),"length":int(length),"sha256":sha}})
