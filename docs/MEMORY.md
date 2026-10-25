@@ -129,3 +129,9 @@ DTD而被跳过的未知实体现在拒绝。片段identity/预算负结果见JA
 独立`fragments(raw, mode="content")`按父论文/角色/text SHA/重复序号构键，仍
 分别验证完整父原文与原range。Memory不自动使用；旧两模式输出与真实v0.24
 发行一致，旧v0.24拒绝新mode。可行性不足，暂缓集成，见JATS-ANCHORS.md。
+
+## v0.26 离线QASPER评分器
+
+`rkv1.qasper_audit.cases/score`将人工问题/参考标注放在索引外评分；Memory原
+成员定位不变。上下文预算只扣正文UTF8，不等于完整API token预算；同查原文
+身份不等于科学蕴含。无非空可答证据保持null，未映射图表不从分母删去。

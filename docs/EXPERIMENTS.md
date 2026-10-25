@@ -230,3 +230,9 @@ results/v0.24.0/SUMMARY.md。9进程162解析、1854范围审计、26历史CAS�
 协议docs/JATS-ANCHORS.md，51模块冻结d0fdcdd，183测试通过/1权限跳过。
 复用六篇18文件，1854范围/144规划/162解析/26历史CAS审计；固定/Gear content/v4
 乐观仅3/12和2/12，完整父校验0/12，暂缓生产集成。完整报告results/v0.25.0/SUMMARY.md。
+
+## v0.26 全QASPER dev覆盖
+
+协议docs/QASPER-COVERAGE.md，52模块冻结8bc803c；3轮3015 top20正式查询/3预热，
+1005问题/281论文，三轮完整身份/分数一致，187测试通过/1权限跳过。论文召回、
+参考证据映射和上下文预算分别评分，无新API/官方F1。报告results/v0.26.0/SUMMARY.md。

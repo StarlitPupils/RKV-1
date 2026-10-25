@@ -1,0 +1,23 @@
+{
+  "formal_queries": 3015,
+  "question_id_instances": 1005,
+  "corpus_papers": 281,
+  "warmups_excluded": 3,
+  "all_rounds_keys_BM25_identity_and_context_scores_identical": true,
+  "all_original_hit_records_verified": true,
+  "persistent_tree_unchanged": true,
+  "original_source_full_bytewise_verified_at_start_and_end": true,
+  "generation_calls": 0,
+  "new_model_answer_quality": null,
+  "not_official_QASPER_F1": true,
+  "measured_modules": 52,
+  "frozen_commit": "8bc803cfc3624b01385eb09698b0e51db7a19642",
+  "all_measured_modules_equal_frozen_commit": true,
+  "tests": {
+    "run": 188,
+    "passed": 187,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "63104c1a70113ddff245f5d3f90259d9e1688608c929e5b0352d0ac5cb5bea18"
+  }
+}

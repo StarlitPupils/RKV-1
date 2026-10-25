@@ -275,3 +275,8 @@ JATS原始XML整文件为精确记录，新kind需v0.23，旧v0.22来源解码�
 
 新增显式content键不改变Memory来源kind/清单，也不修改CAS/归档格式。已有
 position/xml-id描述保持，默认仍xml-id；内容模式重复序号不等于永久语义ID。
+
+## v0.26 离线任务诊断
+
+独立QASPER覆盖评分器不改变归档/CAS/Memory清单或来源kind。标注不进入FTS，
+context JSON仅为派生计费对象，不替代原证据。默认格式与选择器保持。

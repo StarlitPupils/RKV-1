@@ -1,0 +1,26 @@
+{
+  "input_path": "qasper-dev-v0.3.json",
+  "bytes": 11398686,
+  "sha256": "2ae7ee62a65b1c4225791c70de80c2aad4e8998cf1fd4f09a53103db4f21af93",
+  "version": "0.3",
+  "license": "CC BY 4.0",
+  "archive_url": "https://qasper-dataset.s3-us-west-2.amazonaws.com/qasper-train-dev-v0.3.tgz",
+  "archive_sha256": "a28fdf966db827bcee3d873107d6b6669864fb7ca8fbf73a192f5e39191bdb5a",
+  "paper_instances": 281,
+  "new_independent_papers": 0,
+  "question_id_instances": 1005,
+  "unique_question_strings": 948,
+  "previous_64_unique_question_strings": 64,
+  "overlap_question_strings": 64,
+  "new_question_strings_vs_previous_64": 884,
+  "answerability": {
+    "all-answerable": 870,
+    "all-unanswerable": 60,
+    "mixed": 75
+  },
+  "nonempty_answerable_reference_questions": 927,
+  "at_least_one_fully_text_mapped_reference_questions": 800,
+  "unmapped_evidence_strings_including_repeated_annotations": 387,
+  "annotations_are_scoring_labels_only_not_FTS": true,
+  "not_official_QASPER_answer_or_evidence_F1": true
+}

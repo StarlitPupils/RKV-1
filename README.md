@@ -6,7 +6,38 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.25.0 · 内容锚定段落预检与停止集成决策
+## 当前版本：v0.26.0 · 全dev科学检索与上下文证据覆盖
+
+新增独立`qasper_audit`离线评分器，扩到固定QASPER v0.3 dev全量281篇/1005问题
+实例（948种问题文本，比此前64题新增884种字符串）。原语料论文已使用，不算新
+独立论文；qas/答案/标注不进FTS，不给检索目标论文或gold证据，0模型请求。
+
+| 指标 | 结果 |
+|---|---:|
+| 目标论文召回@1 / @5 / @20 | 29.65% / 44.28% / 56.02% |
+| 8KB正文预算完整参考可见 | 107/927 · 11.54% |
+| 24KB正文预算完整参考可见 | 232/927 · 25.03% |
+| 48KB正文预算完整参考可见 | 295/927 · 31.82% |
+| 24KB已召回且文本可映射、但预算遗漏 | 134题 |
+
+927题有非空可答参考，其中800题至少一整组可映射文本；图表/无法映射项仍在
+分母。原QASPER任务给定论文，此处是281候选池定位和上下文诊断，不是官方
+Answer/Evidence F1，也不是模型回答正确率。正文UTF8预算不含标题/ID/JSON；
+24KB条件实际context JSON中位25689B。更大预算覆盖在本数据没有真→假回归，
+不由合成反例推断实际发生。下一版同检索/同预算对照问题相关证据选择。
+
+![全dev召回与上下文覆盖](results/v0.26.0/qasper-retrieval-coverage.png)
+
+3015正式top20查询/3轮，keys、BM25、原记录身份SHA和覆盖分数全一致，3预热排除；
+完整原文起止逐字节恢复、持久树不变。187测试通过、1权限跳过。top20检索wall
+中位23.175ms，不与历史top5/top10算加速。实际Memory6065400B，全部52模块/HTML源
+一次367366B，共计6432766B；公共运行时未全额计入，不是完整部署净压缩。
+
+[冻结协议](docs/QASPER-COVERAGE.md) · [详细实验报告](results/v0.26.0/SUMMARY.md) ·
+[全量原始指标](results/v0.26.0/trials.json) · [验证](results/v0.26.0/validation.json) ·
+[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.26.0)。
+
+## v0.25.0 · 内容锚定段落预检与停止集成决策
 
 独立JATS审计API新增显式`mode='content'`：父论文ID/角色/text SHA/重复序号构键，
 分别保留完整父SHA与原range SHA，避免把派生文本当原文。已有position/xml-id及

@@ -1,0 +1,9 @@
+{
+  "frozen_commit": "8bc803cfc3624b01385eb09698b0e51db7a19642",
+  "protocol": "docs/QASPER-COVERAGE.md",
+  "measured_modules": 52,
+  "all_modules_match_frozen_commit": true,
+  "candidate_CI_run": 40190780673,
+  "generation_calls": 0,
+  "scope": "All-dev paper retrieval and original annotated evidence exposure; no model answer generation or official F1."
+}
