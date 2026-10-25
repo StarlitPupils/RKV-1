@@ -1,6 +1,7 @@
 include README.md LICENSE rkv1.py
 recursive-include rkv1 *.html
 recursive-include docs *.md
+recursive-include docs *.json
 recursive-include scripts *.py
 recursive-include tests *.py
 recursive-include tests/fixtures *.json

@@ -13,6 +13,7 @@ PROFILE='compact-projection-v4'
 PROJECTION='qasper-paper-text-v1'
 MAX_REBINDINGS=4096
 KIND='qasper-json-member-v1'
+REBIND_KINDS={KIND,'elife-jats-article-v1'}
 
 
 def fingerprint(title,sentences):
@@ -31,7 +32,7 @@ def rebinding_items(delta):
         raise ValueError('Invalid projection overlay')
     keys=[]
     for meta,sha in delta['rebound']:
-        if (len(meta)!=6 or meta[5]!=KIND or not valid_hash(sha) or not valid_hash(meta[4])
+        if (len(meta)!=6 or meta[5] not in REBIND_KINDS or not valid_hash(sha) or not valid_hash(meta[4])
                 or not isinstance(meta[0],str) or not isinstance(meta[1],str)
                 or type(meta[2]) is not int or meta[2]<0 or type(meta[3]) is not int or meta[3]<1):
             raise ValueError('Invalid projection rebinding')
@@ -50,7 +51,7 @@ def check_rebindings(db,items):
         found.update((key,(rowid,kind,sha)) for key,rowid,kind,sha in rows)
     for meta,sha in items:
         old=found.get(meta[0])
-        if old is None or old[1]!=KIND or old[2]!=sha:raise ValueError('Projection rebinding fingerprint mismatch')
+        if old is None or old[1]!=meta[5] or old[2]!=sha:raise ValueError('Projection rebinding fingerprint mismatch')
     return found
 
 
@@ -131,7 +132,7 @@ def build(memory,sid):
             for meta in changed:
                 before=prior.get(meta[0]);_,title,body=current[meta[0]]
                 sha=fingerprint(title,body)
-                if before and before[5]==meta[5]==KIND and hashes.get(meta[0])==sha:rebound.append([meta,sha])
+                if before and before[5]==meta[5] and meta[5] in REBIND_KINDS and hashes.get(meta[0])==sha:rebound.append([meta,sha])
                 else:upserted.append(meta)
             reason=None
             if len(removed)+len(upserted)>max(1,len(prior)//4):reason='legacy-change-limit'
