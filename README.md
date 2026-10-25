@@ -6,7 +6,41 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.22.0 · 降低v4查询定位准备成本
+## 当前版本：v0.23.0 · 独立真实论文正文修订基线
+
+新增eLife JATS原始XML整文件证据定位，标题/普通摘要/正文段落只作检索投影；
+完整原文、评审/图表等所有字节仍在CAS。内部实体声明与外部实体引用拒绝，外部
+DTD不加载。新来源kind需v0.23，旧v0.22不能解码，归档/CAS/清单格式不变。
+
+实现/协议于a58d640冻结。固定官方提交、内容查看前选定的前六篇三版本论文，
+18文件、12次实际正文投影变化；不是正文相同的QASPER标注发布。逐篇v2再逐篇v3，
+初始加12更新，共13快照。固定/Gear、三策略各三轮，全部历史保留。
+
+| 条件 | 全部历史计入B | 总提交wall中位s | 基础索引数 |
+|---|---:|---:|---:|
+| 固定 重建 | 3556231 | 0.943 | 13 |
+| 固定 预算v3 | 3556330 | 0.900 | 13 |
+| 固定 投影v4 | 3663389 | 0.999 | 13 |
+| Gear 重建 | 3645981 | 0.860 | 13 |
+| Gear 预算v3 | 3646080 | 0.863 | 13 |
+| Gear 投影v4 | 3753139 | 0.923 | 13 |
+
+**整篇记录粒度没有获得增量索引收益。** 每次旧+新记录都超过256KiB，预算v3/v4
+均因记录字节建立检查点；没有为获得收益调高门槛，v4指纹表还增加空间。
+Gear CAS和原生依赖另计，不能把CAS复用当成v4索引收益。下轮研究更细证据粒度。
+
+![真实正文修订整篇基线](results/v0.23.0/revision-costs.png)
+
+4212正式/936历史身份查询全部匹配重建排序、BM25和精确当前来源；234历史实例
+全源核验、234阴性控制通过。同表示CAS树一致，查询不改持久树。177测试通过、
+1权限跳过，0模型调用/新增科学QA。18自动诊断词项非人工gold题，六篇非大样本。
+全部50模块/HTML计一次、Gear另计整份旧实测库/元数据；公共运行时未全额分配。
+默认继续预算v3，v4显式。仅本机温缓存；E3、多跳、长期对话等仍未验证。
+
+[协议及输入](docs/PAPER-REVISIONS.md) · [全矩阵](results/v0.23.0/SUMMARY.md) ·
+[核验](results/v0.23.0/validation.json) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.23.0)。
+
+## v0.22.0 · 降低v4查询定位准备成本
 
 v4查询批量核对全部重绑定，仅在命中时替换当前locator；纯定位/位移overlay直接
 查询只读基础，不再复制SQLite。有FTS删除/upsert仍复制并完整重放；完整基础/

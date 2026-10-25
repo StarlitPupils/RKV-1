@@ -256,3 +256,11 @@ key/kind及投影SHA。新应用v4需v0.21，v0.20明确拒绝。旧应用v1/v2/
 SQLite，FTS删除/upsert仍复制并完整重放。基础/overlay/源树/CAS/原记录/投影SHA
 与全部位移检查保留，不跨查询缓存。旧v0.21可读新v4，旧v0.20仍拒绝；不迁移。
 详见[PROJECTION-QUERIES.md](PROJECTION-QUERIES.md)。
+
+## v0.23真实正文修订与JATS来源
+
+eLife固定六篇三版本，12次正文投影变化，13状态、固定/Gear三策略各三轮。
+JATS原始XML整文件为精确记录，新kind需v0.23，旧v0.22来源解码器拒绝；旧来源
+兼容，应用清单/归档/CAS不改。4212正式/936历史身份查询对齐重建，177测试
+通过/1权限跳过。所有预算策略逐次因旧+新整篇记录>256KiB完整检查点，v4无增量
+索引收益；默认仍v3。0模型调用，新6篇非大样本；详见[PAPER-REVISIONS.md](PAPER-REVISIONS.md)。

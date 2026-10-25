@@ -1,0 +1,22 @@
+{
+  "formal_queries_audited": 4212,
+  "historical_identity_queries_audited": 936,
+  "negative_controls": 234,
+  "historical_snapshot_instances_fully_reopened": 234,
+  "fresh_query_processes_and_warmups": 234,
+  "all_keys_BM25_and_complete_source_identity_match_rebuild": true,
+  "all_CAS_trees_match_within_representation": true,
+  "all_true_body_revision_transitions": 12,
+  "all_budget_profiles_checkpoint_each_revision_for_record_bytes": true,
+  "current_modules": 50,
+  "new_independent_papers": 6,
+  "new_scientific_QA_questions": 0,
+  "generation_calls": 0,
+  "tests": {
+    "run": 178,
+    "passed": 177,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "238be752f8e4d856db1a04b622031713088a7d084e340226833c39a8e41bf1f3"
+  }
+}

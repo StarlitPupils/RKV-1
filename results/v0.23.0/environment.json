@@ -1,0 +1,15 @@
+{
+  "python": "3.13.12",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "sqlite": "3.51.1",
+  "rounds": 3,
+  "logical_cpus": 20,
+  "seed": 20261025,
+  "generation_calls": 0,
+  "new_scientific_QA_questions": 0,
+  "new_independent_papers": 6,
+  "real_revision_transitions": 12,
+  "cold_cache": null,
+  "cross_machine": null,
+  "scope": "Six eLife reviewed preprints with actual body projection changes, staggered version updates; whole XML record granularity; one warm-cache host"
+}

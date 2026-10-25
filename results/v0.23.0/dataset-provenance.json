@@ -1,0 +1,779 @@
+{
+  "inputs": {
+    "repository": "elifesciences/elife-article-xml",
+    "commit": "ed4962931df3720e9e96cf93fb165a754d1df212",
+    "selection": "First six numeric preprint IDs with v1/v2/v3 at fixed commit, each original file <=1 MiB; before content/performance inspection",
+    "papers": [
+      {
+        "id": "85562",
+        "versions": [
+          {
+            "path": "elife-preprint-85562-v1.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "85783f0dd1ae5d3772065e9b5f54dd1988092a8d",
+            "size": 165088,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-85562-v1.xml",
+            "version": 1,
+            "sha256": "c2755a3d61d4f0c71f86254d05ab25fc77016ccc6dd0341d2689a2aab3f684cf",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          },
+          {
+            "path": "elife-preprint-85562-v2.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "9026780629c31551293b0e6247664779aaf2434f",
+            "size": 205962,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-85562-v2.xml",
+            "version": 2,
+            "sha256": "af41b7288a284a833d12021df7acac07be93f22170fecb9caa4bde3f57199074",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          },
+          {
+            "path": "elife-preprint-85562-v3.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "3b8efc969b213ab1d290b906cb4243f4a1b62823",
+            "size": 173294,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-85562-v3.xml",
+            "version": 3,
+            "sha256": "4f8e162e154f33abb547bc34b29e3288c530673a9146feccc6cabb6c0628863d",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "86668",
+        "versions": [
+          {
+            "path": "elife-preprint-86668-v1.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "a29dd89133ae75b85fe3dfd6e81cc61f5c58040b",
+            "size": 152767,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86668-v1.xml",
+            "version": 1,
+            "sha256": "038fcd801afb475ad970fcc17eda24e6d7d52c21bc2d74e4ab41e7f75706d83a",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          },
+          {
+            "path": "elife-preprint-86668-v2.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "d9c32fb4792f5ff1caa30cd70be1b983275a1b59",
+            "size": 199705,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86668-v2.xml",
+            "version": 2,
+            "sha256": "b65b8d4224e6fd02774d7c21595311f18dcd673e669701c6b8f46e2154466729",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          },
+          {
+            "path": "elife-preprint-86668-v3.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "780dc42d220fa91525d796d7fdc7c884065dbbd2",
+            "size": 187960,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86668-v3.xml",
+            "version": 3,
+            "sha256": "65b1aca5b8422c41231051d10ee9a81397546c0faa93ffc036e664ec14e8f343",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "86670",
+        "versions": [
+          {
+            "path": "elife-preprint-86670-v1.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "7ab081b1ac2972a6ce5ef2c7fcb6f0b2a8938066",
+            "size": 280497,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86670-v1.xml",
+            "version": 1,
+            "sha256": "093538c054423c1048c95a6915f8a283331b1232be63c3ca12153060bf964360",
+            "license_urls": [
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ]
+          },
+          {
+            "path": "elife-preprint-86670-v2.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "5a5195fdbef8f4519faf431240d22f25af3ed428",
+            "size": 284715,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86670-v2.xml",
+            "version": 2,
+            "sha256": "7aa6eae05e2600979856e85e2bcec4e637cab475d08be511a1d0bb995f5122c4",
+            "license_urls": [
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ]
+          },
+          {
+            "path": "elife-preprint-86670-v3.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "75a07a62c4a741f261e94ecd4f8fe9d29e932be8",
+            "size": 264136,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86670-v3.xml",
+            "version": 3,
+            "sha256": "af320f1ee18f611c85f5f3e8b6b87f406b3b5fb30afc463bea56d00341285356",
+            "license_urls": [
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "86689",
+        "versions": [
+          {
+            "path": "elife-preprint-86689-v1.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "b497a214bcd5795ad2401eae2785b648899e9845",
+            "size": 142953,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86689-v1.xml",
+            "version": 1,
+            "sha256": "8eb186f32d4c7c058dffaf642caa67836946fac49def10edebe35a2cc0fc5d90",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          },
+          {
+            "path": "elife-preprint-86689-v2.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "ca42bef8e0d4406037a5438965016125fcc1a6f8",
+            "size": 183140,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86689-v2.xml",
+            "version": 2,
+            "sha256": "2cb6d697859272531f2dbba37e0c162c82d7c2250cc927307240f9c4dec2258b",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          },
+          {
+            "path": "elife-preprint-86689-v3.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "e118c32ad9278cf9b59636e11b64ad01a7de2185",
+            "size": 164272,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86689-v3.xml",
+            "version": 3,
+            "sha256": "bf9d648e342a5cf6e9952a5255ebe08e24c02436785d640add5e1d4be3eec9ff",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "86721",
+        "versions": [
+          {
+            "path": "elife-preprint-86721-v1.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "b41c7a028e2725203e6c3cdfb8b4334ac842a11f",
+            "size": 193806,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86721-v1.xml",
+            "version": 1,
+            "sha256": "b138a11f3986307811a5cd07a2cd8600ba9fa6ba6ea63c8c07adb38d3f80d6e6",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          },
+          {
+            "path": "elife-preprint-86721-v2.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "140a9994326e3c381911da8a3860270ff6bdf1be",
+            "size": 263600,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86721-v2.xml",
+            "version": 2,
+            "sha256": "80be9b25a51703adaf5d571153501e2044039b0e55e71e7c76c7a74ef53e686d",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          },
+          {
+            "path": "elife-preprint-86721-v3.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "e611790d0ddd24195d32d039a78b0909180d0842",
+            "size": 231871,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86721-v3.xml",
+            "version": 3,
+            "sha256": "9cf20918397a3a1178f49da617deec08a204ace38f48973c07ea726a08a52a1d",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "86805",
+        "versions": [
+          {
+            "path": "elife-preprint-86805-v1.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "ed1659e9569a21d0965f90d6a824914e6dc945fe",
+            "size": 213870,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86805-v1.xml",
+            "version": 1,
+            "sha256": "d99f34776ed8ed2ed26091828e29a06566e08f3f725f3d13026f1691198ef782",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          },
+          {
+            "path": "elife-preprint-86805-v2.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "d54d59074a15616d1547eb539dc3b3a8f97fa19b",
+            "size": 234689,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86805-v2.xml",
+            "version": 2,
+            "sha256": "b1683f5c2ff7ff7da75e2975781507c6a835a6dc5e253eba0dc51b32afbaf5e7",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          },
+          {
+            "path": "elife-preprint-86805-v3.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "d33afb3d051d819bf8a2221542452915022bd6a4",
+            "size": 195348,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86805-v3.xml",
+            "version": 3,
+            "sha256": "8a6e3c0a603a5df51bd27960554e27ee5fc767940dd9a53f1923a8d3f661759d",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "changes": [
+    {
+      "paper_id": "85562",
+      "version": 1,
+      "original_bytes": 165088,
+      "paragraphs": 61,
+      "projection_sha256": "40a6f92b85920dec53b24c91cdb5912a2ac9415a934afa8199596e0e15953293",
+      "projection_changed": null,
+      "old_plus_new_record_bytes": null
+    },
+    {
+      "paper_id": "85562",
+      "version": 2,
+      "original_bytes": 205962,
+      "paragraphs": 62,
+      "projection_sha256": "f638b03abdd79dea2401a6f6c5d8f9940afb6bad66a0825b4baaa7d40be85667",
+      "projection_changed": true,
+      "old_plus_new_record_bytes": 371050
+    },
+    {
+      "paper_id": "85562",
+      "version": 3,
+      "original_bytes": 173294,
+      "paragraphs": 61,
+      "projection_sha256": "cf42b3495c9f2abbe8243ad358f2ee105995f8a75b7d73fa03de251596390d1b",
+      "projection_changed": true,
+      "old_plus_new_record_bytes": 379256
+    },
+    {
+      "paper_id": "86668",
+      "version": 1,
+      "original_bytes": 152767,
+      "paragraphs": 64,
+      "projection_sha256": "c1067805d3b6db2c7c76f1f36f4d9d95563bf42a863a7f8e361e69d4f1b46e41",
+      "projection_changed": null,
+      "old_plus_new_record_bytes": null
+    },
+    {
+      "paper_id": "86668",
+      "version": 2,
+      "original_bytes": 199705,
+      "paragraphs": 68,
+      "projection_sha256": "711476681bfc3e61afbe12455816bd52b9136c8a5eba9b6aa2069b3d97ec7e95",
+      "projection_changed": true,
+      "old_plus_new_record_bytes": 352472
+    },
+    {
+      "paper_id": "86668",
+      "version": 3,
+      "original_bytes": 187960,
+      "paragraphs": 65,
+      "projection_sha256": "57f08be4628f0244e55cb2239e895e38ddec67a9e8798afc2417a1a611874379",
+      "projection_changed": true,
+      "old_plus_new_record_bytes": 387665
+    },
+    {
+      "paper_id": "86670",
+      "version": 1,
+      "original_bytes": 280497,
+      "paragraphs": 48,
+      "projection_sha256": "7f3510737295de45cca0dd32e98cb327bddf10ee4baa1cc2cd8e188fac07491e",
+      "projection_changed": null,
+      "old_plus_new_record_bytes": null
+    },
+    {
+      "paper_id": "86670",
+      "version": 2,
+      "original_bytes": 284715,
+      "paragraphs": 48,
+      "projection_sha256": "eb8372964936f2e1852f95aee8ff7a50f363797d2e8f4779f9fa9522f2c3f461",
+      "projection_changed": true,
+      "old_plus_new_record_bytes": 565212
+    },
+    {
+      "paper_id": "86670",
+      "version": 3,
+      "original_bytes": 264136,
+      "paragraphs": 48,
+      "projection_sha256": "77eb662e0dedba44a6a0762cc81a65f0758955831e930091cf6f4702454f9add",
+      "projection_changed": true,
+      "old_plus_new_record_bytes": 548851
+    },
+    {
+      "paper_id": "86689",
+      "version": 1,
+      "original_bytes": 142953,
+      "paragraphs": 51,
+      "projection_sha256": "8e340ec290dc3f7b90d7524c81ccf5a1140f3ea9f463dccc1d760b5c57b20be5",
+      "projection_changed": null,
+      "old_plus_new_record_bytes": null
+    },
+    {
+      "paper_id": "86689",
+      "version": 2,
+      "original_bytes": 183140,
+      "paragraphs": 50,
+      "projection_sha256": "11706be01fe0a77f0be551d6e3a058c17b789cab59228b46070af24cb3636759",
+      "projection_changed": true,
+      "old_plus_new_record_bytes": 326093
+    },
+    {
+      "paper_id": "86689",
+      "version": 3,
+      "original_bytes": 164272,
+      "paragraphs": 50,
+      "projection_sha256": "fa3378c3edacc12fc7b0335b6ae33395b1dd80d28802acfcf3d7fd5630510ad2",
+      "projection_changed": true,
+      "old_plus_new_record_bytes": 347412
+    },
+    {
+      "paper_id": "86721",
+      "version": 1,
+      "original_bytes": 193806,
+      "paragraphs": 46,
+      "projection_sha256": "2bc4cbd9a86e70cef789921a692c003d8588bf1d91495cbc318d2796ef72d12c",
+      "projection_changed": null,
+      "old_plus_new_record_bytes": null
+    },
+    {
+      "paper_id": "86721",
+      "version": 2,
+      "original_bytes": 263600,
+      "paragraphs": 43,
+      "projection_sha256": "ad35467a257f68a8e12e4e6f16b6bbd8127d61f72be5d4f851f0dcc3461f966e",
+      "projection_changed": true,
+      "old_plus_new_record_bytes": 457406
+    },
+    {
+      "paper_id": "86721",
+      "version": 3,
+      "original_bytes": 231871,
+      "paragraphs": 44,
+      "projection_sha256": "42a3041626e8e1f004e318da225134a929659a3c5e90c4eda8416ae7803933c6",
+      "projection_changed": true,
+      "old_plus_new_record_bytes": 495471
+    },
+    {
+      "paper_id": "86805",
+      "version": 1,
+      "original_bytes": 213870,
+      "paragraphs": 34,
+      "projection_sha256": "afff7b857a4cc34dae0b42ac4150444925e6cd66848be91f6a25e8ce98710c18",
+      "projection_changed": null,
+      "old_plus_new_record_bytes": null
+    },
+    {
+      "paper_id": "86805",
+      "version": 2,
+      "original_bytes": 234689,
+      "paragraphs": 20,
+      "projection_sha256": "73a0f5d4cb482375ab836063d5f5eb5e9bee91cb35ca8edcce23d57b49149b02",
+      "projection_changed": true,
+      "old_plus_new_record_bytes": 448559
+    },
+    {
+      "paper_id": "86805",
+      "version": 3,
+      "original_bytes": 195348,
+      "paragraphs": 46,
+      "projection_sha256": "f82162fcd19ea9597ffeb354fc5592b1a89ffabbef42a2fd31d5db8f9fb69491",
+      "projection_changed": true,
+      "old_plus_new_record_bytes": 430037
+    }
+  ],
+  "states": [
+    [
+      [
+        "85562",
+        1
+      ],
+      [
+        "86668",
+        1
+      ],
+      [
+        "86670",
+        1
+      ],
+      [
+        "86689",
+        1
+      ],
+      [
+        "86721",
+        1
+      ],
+      [
+        "86805",
+        1
+      ]
+    ],
+    [
+      [
+        "85562",
+        2
+      ],
+      [
+        "86668",
+        1
+      ],
+      [
+        "86670",
+        1
+      ],
+      [
+        "86689",
+        1
+      ],
+      [
+        "86721",
+        1
+      ],
+      [
+        "86805",
+        1
+      ]
+    ],
+    [
+      [
+        "85562",
+        2
+      ],
+      [
+        "86668",
+        2
+      ],
+      [
+        "86670",
+        1
+      ],
+      [
+        "86689",
+        1
+      ],
+      [
+        "86721",
+        1
+      ],
+      [
+        "86805",
+        1
+      ]
+    ],
+    [
+      [
+        "85562",
+        2
+      ],
+      [
+        "86668",
+        2
+      ],
+      [
+        "86670",
+        2
+      ],
+      [
+        "86689",
+        1
+      ],
+      [
+        "86721",
+        1
+      ],
+      [
+        "86805",
+        1
+      ]
+    ],
+    [
+      [
+        "85562",
+        2
+      ],
+      [
+        "86668",
+        2
+      ],
+      [
+        "86670",
+        2
+      ],
+      [
+        "86689",
+        2
+      ],
+      [
+        "86721",
+        1
+      ],
+      [
+        "86805",
+        1
+      ]
+    ],
+    [
+      [
+        "85562",
+        2
+      ],
+      [
+        "86668",
+        2
+      ],
+      [
+        "86670",
+        2
+      ],
+      [
+        "86689",
+        2
+      ],
+      [
+        "86721",
+        2
+      ],
+      [
+        "86805",
+        1
+      ]
+    ],
+    [
+      [
+        "85562",
+        2
+      ],
+      [
+        "86668",
+        2
+      ],
+      [
+        "86670",
+        2
+      ],
+      [
+        "86689",
+        2
+      ],
+      [
+        "86721",
+        2
+      ],
+      [
+        "86805",
+        2
+      ]
+    ],
+    [
+      [
+        "85562",
+        3
+      ],
+      [
+        "86668",
+        2
+      ],
+      [
+        "86670",
+        2
+      ],
+      [
+        "86689",
+        2
+      ],
+      [
+        "86721",
+        2
+      ],
+      [
+        "86805",
+        2
+      ]
+    ],
+    [
+      [
+        "85562",
+        3
+      ],
+      [
+        "86668",
+        3
+      ],
+      [
+        "86670",
+        2
+      ],
+      [
+        "86689",
+        2
+      ],
+      [
+        "86721",
+        2
+      ],
+      [
+        "86805",
+        2
+      ]
+    ],
+    [
+      [
+        "85562",
+        3
+      ],
+      [
+        "86668",
+        3
+      ],
+      [
+        "86670",
+        3
+      ],
+      [
+        "86689",
+        2
+      ],
+      [
+        "86721",
+        2
+      ],
+      [
+        "86805",
+        2
+      ]
+    ],
+    [
+      [
+        "85562",
+        3
+      ],
+      [
+        "86668",
+        3
+      ],
+      [
+        "86670",
+        3
+      ],
+      [
+        "86689",
+        3
+      ],
+      [
+        "86721",
+        2
+      ],
+      [
+        "86805",
+        2
+      ]
+    ],
+    [
+      [
+        "85562",
+        3
+      ],
+      [
+        "86668",
+        3
+      ],
+      [
+        "86670",
+        3
+      ],
+      [
+        "86689",
+        3
+      ],
+      [
+        "86721",
+        3
+      ],
+      [
+        "86805",
+        2
+      ]
+    ],
+    [
+      [
+        "85562",
+        3
+      ],
+      [
+        "86668",
+        3
+      ],
+      [
+        "86670",
+        3
+      ],
+      [
+        "86689",
+        3
+      ],
+      [
+        "86721",
+        3
+      ],
+      [
+        "86805",
+        3
+      ]
+    ]
+  ],
+  "query_count": 18,
+  "query_rule": "Six initial-title + twelve first-changed-paragraph queries: first eight unique ASCII alphabetic length>=4 non-stop tokens; generated retrieval diagnostics, not human QA labels"
+}
