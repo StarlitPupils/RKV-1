@@ -13,7 +13,7 @@ from urllib.error import HTTPError
 from urllib.request import Request,urlopen
 
 from rkv1.controlled import implementation_checksums
-from rkv1.core import digest
+from rkv1.core import digest,files_in
 from rkv1.memory import Memory
 from rkv1.memory_model import answer
 from scripts.run_memory_history import clean_env,inventory
@@ -23,10 +23,15 @@ from tests.context_protocol_support import FixtureService,corpus,demo_service
 ROOT=Path(__file__).resolve().parents[1]
 
 
+def primary_inventory(root):
+    return {name:{'bytes':p.stat().st_size,'sha256':digest(p.read_bytes())} for p,name in files_in(root)
+            if p.relative_to(root).parts[0]!='answers'}
+
+
 def main(args):
     args.out.mkdir();args.work.mkdir();checks=implementation_checksums();source=args.work/'source';source.mkdir()
     raw=corpus();(source/'fixture.jsonl').write_bytes(raw);m=Memory.create(args.work/'memory');built=m.add(source,label='v028-context-contract')
-    before={k:v for k,v in inventory(m.root).items() if not k.startswith('answers/')}
+    before=primary_inventory(m.root)
     source_identity=m.search('rareanchor')['hits'][0]['locator'];records=[]
     def check(record,expected,request):
         assert record['accepted'] and record['exposed_sentences']['doc:1']==expected
@@ -79,7 +84,7 @@ def main(args):
         seen=len(fixture.requests);p=subprocess.run([*cli,'--context-selector','lexical'],cwd=args.work,env={**env,'PYTHONPATH':str(old)},capture_output=True,text=True,encoding='utf-8')
         assert p.returncode!=0 and 'unrecognized arguments' in p.stderr and len(fixture.requests)==seen
         assert len(fixture.requests)==13 and len(records)==11
-    assert checks==implementation_checksums() and before=={k:v for k,v in inventory(m.root).items() if not k.startswith('answers/')}
+    assert checks==implementation_checksums() and before==primary_inventory(m.root)
     for path in (m.root/'answers').glob('*.json'):
         value=json.loads(path.read_bytes());assert value['primary_evidence'] is False and value['record_type']=='derived-model-answer'
     assert not m.search('scientific')['hits']
