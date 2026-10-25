@@ -58,6 +58,23 @@ in the denominator. A retrieved wrong paper cannot earn gold coverage.
     if any(not h.get('source_bytes_verified') for h in hits):
         raise ValueError('Context audit requires verified source hits')
     visible = exposed_hits(hits[:top_k], budget=budget)
+    return score_selected(case,hits,visible,budget=budget,top_k=top_k)
+
+
+def score_selected(case, hits, visible, *, budget=24000, top_k=5):
+    """Score a proposed selection only after binding it back to original hits."""
+    if type(budget) is not int or budget<0 or type(top_k) is not int or top_k<1:
+        raise ValueError('Invalid context audit budget/top_k')
+    if any(h.get('source_bytes_verified') is not True for h in hits):
+        raise ValueError('Context audit requires verified source hits')
+    originals={h['citation_id']:h for h in hits[:top_k]};seen=set()
+    for h in visible:
+        original=originals.get(h.get('citation_id'));ids=h.get('visible_sentence_ids')
+        if (original is None or h['citation_id'] in seen or {k:v for k,v in h.items() if k!='visible_sentence_ids'}!=original
+                or not isinstance(ids,list) or not ids or any(type(i) is not int or not 0<=i<len(original['sentences']) for i in ids)
+                or len(ids)!=len(set(ids))):
+            raise ValueError('Selected context differs from original source hits')
+        seen.add(h['citation_id'])
     selected = {s.strip() for h in visible if h['key'] == case['paper_key'] for i in h['visible_sentence_ids'] for s in [h['sentences'][i]]}
     refs = [set(ref) for ref in case['gold_sets']]
     complete = any(ref <= selected for ref in refs) if refs else None
@@ -69,7 +86,7 @@ in the denominator. A retrieved wrong paper cannot earn gold coverage.
     elif not case['fully_text_mapped_reference']: reason = 'no-fully-text-mapped-reference'
     else: reason = 'budget-omitted-reference'
     body_bytes = sum(len(h['sentences'][i].encode()) for h in visible for i in h['visible_sentence_ids'])
-    assert body_bytes <= budget
+    if body_bytes>budget:raise ValueError('Selected context exceeds body UTF-8 budget')
     # This accounts for the context object including titles/IDs/JSON overhead,
     # but excludes the question/system prompt/API envelopes and tokenization.
     context = [{'citation_id': h['citation_id'], 'title': h['title'],
