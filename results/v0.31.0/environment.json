@@ -1,0 +1,13 @@
+{
+  "python": "3.13.12",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "sqlite": "3.51.1",
+  "logical_cpus": 20,
+  "seed": 20261025,
+  "rounds": 3,
+  "generation_calls": 0,
+  "official_answer_accuracy": null,
+  "evidence_coverage": null,
+  "cold_cache": null,
+  "cross_machine": null
+}

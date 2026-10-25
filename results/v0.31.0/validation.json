@@ -1,0 +1,24 @@
+{
+  "frozen_commit": "5c713c1",
+  "all_55_modules_protocol_and_driver_match_freeze": true,
+  "formal_question_pairs": 3000,
+  "formal_read_operations": 6000,
+  "warmup_read_operations_excluded": 6,
+  "all_rounds_keys_ranks_identity_and_scores_equal": true,
+  "all_1000_original_member_spans_and_projection_whitelist_independently_verified": true,
+  "ranker_unchanged_from_v030": true,
+  "actual_v030_reader_refuses_new_source": true,
+  "original_file_and_persistent_trees_unchanged": true,
+  "remote_model_calls": 0,
+  "official_answer_accuracy": null,
+  "evidence_coverage": null,
+  "cold_cache": null,
+  "cross_machine": null,
+  "tests": {
+    "run": 210,
+    "passed": 209,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "d91d8f5384dadccc5cfa5ec594ad4125506c392d9c21c6fd66c2c91d99b8c895"
+  }
+}

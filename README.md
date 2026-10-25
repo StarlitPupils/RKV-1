@@ -6,7 +6,48 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.30.0 · 段落先行检索的收益与迁移失败
+## 当前版本：v0.31.0 · PubMedQA精确来源支持与冻结迁移边界
+
+新增显式`*.pubmedqa.json`原始成员reader：原JSON不改写，精确保留成员范围/SHA，
+仅`CONTEXTS`投影为证据。无独立文章标题时使用PMID元数据，问题/长答案/决策/
+预测等字段不进FTS或模型上下文。支持历史及v4来源重绑定；新来源需v0.31 reader，
+实际旧v0.30 lookup/search拒绝，原来源/Memory/CAS/归档格式及默认保持不变。
+
+[官方PubMedQA](https://github.com/pubmedqa/pubmedqa) PQA-L原文件1000 PMID/1000
+唯一问题，候选模块与v0.30逐字节相同、whole-paper搜索AST/STOP不变。这里将原本
+给定context的任务改为1000篇池的自定义来源定位，**不是官方QA/答案准确率**。
+
+| 精确目标PMID定位 | whole-paper | best-unit候选 |
+|---|---:|---:|
+| @1 | 957/1000 | 950/1000 |
+| @5 | 984/1000 | 986/1000 |
+| @10 | 990/1000 | 988/1000 |
+| @20 | 994/1000 | 992/1000 |
+| MRR@20 | 0.970238 | 0.965823 |
+
+@5仅5赢/3输，净+2题，描述区间跨零；无稳健正迁移。候选额外1249639B，查询wall
+中位10.855→14.712ms；计入总2152450→3402089B，原JSON2584787B。候选更大更慢，
+保持显式、默认不换，不在这些gold上继续调权重/融合。公共运行时未全额分配。
+
+![新来源检索与计入空间](results/v0.31.0/pubmedqa-transfer.png)
+![配对差及描述区间](results/v0.31.0/pubmedqa-paired-delta.png)
+
+三轮新进程、3000题对/6000读取、6预热排除，全部身份/分数稳定；1000成员范围与
+投影独立核对、整文件恢复/持久树不变。209测试通过、1权限跳过、0模型调用；
+QA正确率/证据覆盖、近重复/论文真正独立、冷缓存/跨机器仍未测。
+
+此前“仓库外安装”表述已更正：v0.24–v0.30原烟测在仓库内隔离目标、外部cwd，
+现已全部补做物理上的仓库外wheel/对应native安装，并在Release追加核验附件。
+旧tag/观测保留。新发布继续使用真正外部目标，同Windows依赖，不称跨机器。
+
+下一优先项回到E2代码/数学字节表示：先冻结可逆类型规则，计控制/字典/解码器
+成本与同codec对照，不把语义等价重建当字节恢复。E3及真实推理仍需独立设计。
+
+[冻结协议](docs/PUBMEDQA-TRANSFER.md) · [详细实验报告](results/v0.31.0/SUMMARY.md) ·
+[原始轮次](results/v0.31.0/round0.json) · [验证](results/v0.31.0/validation.json) ·
+[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.31.0)。
+
+## v0.30.0 · 段落先行检索的收益与迁移失败
 
 新增显式`ParagraphIndex`：标题单独一行、每个原段落一行的contentless FTS5，按
 每篇最佳单元BM25归并前20篇。不接收gold来源、不调权重/融合。辅助索引精确绑定

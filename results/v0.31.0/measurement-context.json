@@ -1,0 +1,17 @@
+{
+  "frozen_commit": "5c713c1b1b9167a02320dc7c0089c4fcd76d6194",
+  "protocol": "docs/PUBMEDQA-TRANSFER.md",
+  "measured_modules": 55,
+  "all_runtime_modules_protocol_and_driver_match_frozen_commit": true,
+  "candidate_CI_run": 40207444605,
+  "formal_question_pairs": 3000,
+  "formal_read_operations": 6000,
+  "warmup_read_operations_excluded": 6,
+  "remote_model_calls": 0,
+  "new_source_not_claimed_official_QA_test_or_strictly_independent_papers": true,
+  "no_parameter_tuning": true,
+  "all_1000_original_member_ranges_and_CONTEXTS_only_projection_verified": true,
+  "visual_QA": "Absolute recall/count-cost figure and paired-delta descriptive interval figure viewed; all labels/legends clear.",
+  "pre_v031_external_install_scope_corrections": "v0.24-v0.30 strict physical external wheel/native installs passed; append-only addenda downloaded and checked, old tags and benchmark observations preserved.",
+  "package_smoke_helper_note": "First local smoke reached the new synthetic PubMedQA probe but its nested CRLF literal caused a syntax error. Fixed only private helper framing with explicit bytes/Unicode code points, reran the same unchanged wheel in fresh external working data; formal observations/runtime unchanged. Failed helper log retained privately."
+}

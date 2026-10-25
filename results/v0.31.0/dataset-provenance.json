@@ -1,0 +1,28 @@
+{
+  "repository": "https://github.com/pubmedqa/pubmedqa",
+  "source_url": "https://raw.githubusercontent.com/pubmedqa/pubmedqa/1cbae8e92f72f20c8d3747cbb3bf5bc53554d997/data/ori_pqal.json",
+  "commit": "1cbae8e92f72f20c8d3747cbb3bf5bc53554d997",
+  "source_sha256": "8b3276be8942ebbd77f3ddcda12c1749bf0e490045a736fd8438ee40cf37a41d",
+  "source_bytes": 2584787,
+  "original_filename": "ori_pqal.json",
+  "stored_filename": "ori_pqal.pubmedqa.json",
+  "records": 1000,
+  "unique_questions": 1000,
+  "context_items": 3358,
+  "empty_context_records": 0,
+  "all_1000_original_member_offsets_lengths_and_raw_bytes_verified": true,
+  "license_url": "https://github.com/pubmedqa/pubmedqa/blob/1cbae8e92f72f20c8d3747cbb3bf5bc53554d997/LICENSE",
+  "not_official_QA_or_test_score": true,
+  "all_question_answer_prediction_metadata_excluded_from_projection": true,
+  "overlap": {
+    "body_normalization": "Concatenate original array items with spaces, collapse whitespace only; retain case and punctuation. This is overlap detection, not source normalization.",
+    "SciFact_exact_normalized_body_overlap": 0,
+    "near_duplicates_or_true_paper_independence": null,
+    "SciFact_dev_question_text_overlap": 0,
+    "QASPER_dev_exact_normalized_body_overlap": 0,
+    "QASPER_dev_question_text_overlap": 0,
+    "SciFact_train_question_text_overlap": 0,
+    "QASPER_train_exact_normalized_body_overlap": 0,
+    "QASPER_train_question_text_overlap": 0
+  }
+}

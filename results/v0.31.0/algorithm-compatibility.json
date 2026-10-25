@@ -1,0 +1,8 @@
+{
+  "reference_tag": "v0.30.0",
+  "best_unit_module_byte_identical": true,
+  "best_unit_module_sha256": "2830f859eafbedd1fe8e6b6225c0ffeafb6ecd999fd6728be1bbf06042f2e3e4",
+  "whole_paper_search_verified_hits_and_lookup_AST_identical": true,
+  "STOP_definition_AST_identical": true,
+  "no_ranking_parameter_change": true
+}
