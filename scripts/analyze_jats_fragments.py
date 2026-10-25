@@ -17,7 +17,7 @@ from scripts.run_units import save
 from scripts.summarize_units import table
 
 
-def analyze(root, log, frozen):
+def analyze(root, log, frozen, *, modes=MODES, test_count=182, write_report=True):
     read = lambda n: json.loads((root/n).read_text('utf-8'))
     checks = read('source-checksums.json'); assert checks == implementation_checksums()
     for name, sha in checks.items():
@@ -33,7 +33,7 @@ def analyze(root, log, frozen):
         assert f['sha256'] == digest(raw_files[path]); verified += f['units']
     assert identity['verified_ranges_including_two_key_policies'] == verified
     trials = read('parser-trials.json')['trials']; assert len(trials) == 9
-    assert {(r['mode'],r['round']) for r in trials} == {(m,r) for m in MODES for r in range(3)}
+    assert {(r['mode'],r['round']) for r in trials} == {(m,r) for m in modes for r in range(3)}
     for trial in trials:
         assert len(trial['samples']) == 18 and {s['path'] for s in trial['samples']} == set(raw_files)
         for s in trial['samples']:
@@ -41,10 +41,10 @@ def analyze(root, log, frozen):
             assert s['wall_s'] > 0 and s['cpu_s'] >= 0
     plans = read('plans.json')['plans']; assert len(plans) == 144
     assert {(p['case'],p['stage'],p['mode'],p['projection_rebinding']) for p in plans} == {
-        (c,s,m,v) for c in ('fixed','gear') for s in range(1,13) for m in MODES for v in (False,True)}
+        (c,s,m,v) for c in ('fixed','gear') for s in range(1,13) for m in modes for v in (False,True)}
     groups = []
     for case in ('fixed','gear'):
-        for mode in MODES:
+        for mode in modes:
             for projection in (False,True):
                 ps = [p for p in plans if p['case']==case and p['mode']==mode and p['projection_rebinding']==projection]
                 group = {'case':case, 'mode':mode, 'policy':'v4' if projection else 'v3', 'transitions':12,
@@ -67,21 +67,21 @@ def analyze(root, log, frozen):
     native = read('native-resource.json'); native_bytes = native['bytes']+native['metadata_bytes']
     for case in ('fixed','gear'):
         stages = [s for s in history['stages'] if s['case'] == case]; assert [s['stage'] for s in stages] == list(range(13))
-        for mode in MODES:
+        for mode in modes:
             metadata = sum(s['simple_locator_metadata_bytes'][mode] for s in stages)
             cas_bytes = stages[-1]['stats']['logical_file_bytes']
             costs.append({'case':case,'mode':mode,'retained_CAS_bytes':cas_bytes,'uncompressed_descriptor_metadata_candidate_bytes':metadata,
                 'RKV_source_once':source['total_bytes'],'native_once':native_bytes if case=='gear' else 0,
                 'partial_accounting_only':True,'not_an_actual_Memory_index_size':True})
     parsing = {}
-    for mode in MODES:
+    for mode in modes:
         ts = [r for r in trials if r['mode'] == mode]
         parsing[mode] = {'all_18_files_parser_wall_s':summary([sum(s['wall_s'] for s in r['samples']) for r in ts]),
             'all_18_files_parser_cpu_s':summary([sum(s['cpu_s'] for s in r['samples']) for r in ts]),
             'process_wall_including_startup_s':summary([r['process_wall_including_startup_s'] for r in ts]),
             'peak_rss_bytes':summary([r['peak_rss_bytes'] for r in ts])}
     text_log = log.read_text('utf-8'); n = int(re.search(r'Ran (\d+) tests', text_log)[1])
-    assert n == 182 and 'OK (skipped=1)' in text_log and 'FAILED' not in text_log
+    assert n == test_count and 'OK (skipped=1)' in text_log and 'FAILED' not in text_log
     validation = {'verified_ranges_including_two_key_policies':verified,'unique_source_files':18,'reused_independent_papers':6,
         'new_independent_papers':0,'new_scientific_QA':0,'generation_calls':0,'parser_processes':9,'parser_file_invocations':162,
         'adjacent_budget_plans':144,'real_revision_transitions':12,'retained_historical_CAS_snapshots_verified':26,
@@ -91,6 +91,8 @@ def analyze(root, log, frozen):
         'tests':{'run':n,'passed':n-1,'skipped':1,'failed':0,'log_sha256':digest(log.read_bytes())}}
     result = {'budget_groups':groups,'parsing':parsing,'partial_resource_accounting':costs}
     save(root/'derived-metrics.json',result);save(root/'validation.json',validation)
+    if not write_report:
+        return result
     text = '''# v0.24 原始JATS片段身份与预算预检实验报告
 
 ## 问题与本轮交付

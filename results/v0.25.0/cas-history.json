@@ -1,0 +1,552 @@
+{
+  "stages": [
+    {
+      "case": "fixed",
+      "stage": 0,
+      "snapshot_id": "47b09954244165ea26e719c82f64a686b2a172f115787ca1070c266f5e41bcc3",
+      "stats": {
+        "logical_file_bytes": 272220,
+        "files": 23,
+        "object_bytes": 269251,
+        "object_count": 21,
+        "snapshot_bytes": 2847,
+        "snapshot_count": 1,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 311424,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 87206,
+        "content": 127644
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 1,
+      "snapshot_id": "d92a6091bf8c184da9b9ef9fd65995d033604602c8d4bbb9f4fc2c36588a8621",
+      "stats": {
+        "logical_file_bytes": 326094,
+        "files": 28,
+        "object_bytes": 320192,
+        "object_count": 25,
+        "snapshot_bytes": 5780,
+        "snapshot_count": 2,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 372864,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 87474,
+        "content": 128036
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 2,
+      "snapshot_id": "500d9afbdfd587d809db9dae7fe5ed69f5bbc4765d53e9f28efe620d994d0683",
+      "stats": {
+        "logical_file_bytes": 379298,
+        "files": 33,
+        "object_bytes": 370377,
+        "object_count": 29,
+        "snapshot_bytes": 8799,
+        "snapshot_count": 3,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 430208,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 88600,
+        "content": 129682
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 3,
+      "snapshot_id": "60fc38fdd21f59b771635c6bc21f1291c5d6fa17d8f63504ab1db3e5c157555b",
+      "stats": {
+        "logical_file_bytes": 449862,
+        "files": 39,
+        "object_bytes": 437922,
+        "object_count": 34,
+        "snapshot_bytes": 11818,
+        "snapshot_count": 4,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 512128,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 88604,
+        "content": 129686
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 4,
+      "snapshot_id": "a901e274b463b696a78df3c38631dbca2c0d1e7ae2edf44bd3822055dddc938d",
+      "stats": {
+        "logical_file_bytes": 497782,
+        "files": 43,
+        "object_bytes": 482823,
+        "object_count": 37,
+        "snapshot_bytes": 14837,
+        "snapshot_count": 5,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 565376,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 88323,
+        "content": 129275
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 5,
+      "snapshot_id": "1bf3dd0c09fc1c1c2b6e967ee9c718222d46fcffd2aa0c1a1f84f755c2c5b46b",
+      "stats": {
+        "logical_file_bytes": 561626,
+        "files": 49,
+        "object_bytes": 543475,
+        "object_count": 42,
+        "snapshot_bytes": 18029,
+        "snapshot_count": 6,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 643200,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 87490,
+        "content": 128052
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 6,
+      "snapshot_id": "2ea863eb32fc6cd415e6ecc0512fd892dc02e0c562a3e5d8f28757da17ab9c53",
+      "stats": {
+        "logical_file_bytes": 622107,
+        "files": 54,
+        "object_bytes": 600764,
+        "object_count": 46,
+        "snapshot_bytes": 21221,
+        "snapshot_count": 7,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 708736,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 83543,
+        "content": 122285
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 7,
+      "snapshot_id": "3954efd0bdac7918f89cf2c428591d31ec479af329cf47394b661a4d2663afeb",
+      "stats": {
+        "logical_file_bytes": 665658,
+        "files": 58,
+        "object_bytes": 641209,
+        "object_count": 49,
+        "snapshot_bytes": 24327,
+        "snapshot_count": 8,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 757888,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 83262,
+        "content": 121874
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 8,
+      "snapshot_id": "acc5c50bdea3f5a1942309ad43dad4eac1aedb7de4cc53dbad549fe890f3abe4",
+      "stats": {
+        "logical_file_bytes": 711023,
+        "files": 62,
+        "object_bytes": 683554,
+        "object_count": 52,
+        "snapshot_bytes": 27347,
+        "snapshot_count": 9,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 811136,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 82421,
+        "content": 120643
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 9,
+      "snapshot_id": "6b47ac096fa2f005588319db4b7deb6f338ca4be5942854ed1c338f2a796c1ef",
+      "stats": {
+        "logical_file_bytes": 774159,
+        "files": 68,
+        "object_bytes": 743671,
+        "object_count": 57,
+        "snapshot_bytes": 30366,
+        "snapshot_count": 10,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 888960,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 82423,
+        "content": 120645
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 10,
+      "snapshot_id": "a0caf7c01fcba6cced7370b1e665fab4dc4a850575265fa1883a4f0ee5cb90a0",
+      "stats": {
+        "logical_file_bytes": 817468,
+        "files": 72,
+        "object_bytes": 783961,
+        "object_count": 60,
+        "snapshot_bytes": 33385,
+        "snapshot_count": 11,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 938112,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 82423,
+        "content": 120645
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 11,
+      "snapshot_id": "1a178854e7ce825e1f00ce287408a44da9d4600b6c1c3d0cb2dc0774967c7a8b",
+      "stats": {
+        "logical_file_bytes": 870867,
+        "files": 77,
+        "object_bytes": 834427,
+        "object_count": 64,
+        "snapshot_bytes": 36318,
+        "snapshot_count": 12,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 1003648,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 82704,
+        "content": 121056
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 12,
+      "snapshot_id": "b87001ebf81a397d372bd0535ce66d750745a602e51633dab3b5942f724f64de",
+      "stats": {
+        "logical_file_bytes": 919792,
+        "files": 81,
+        "object_bytes": 880506,
+        "object_count": 67,
+        "snapshot_bytes": 39164,
+        "snapshot_count": 13,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 1056896,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 90023,
+        "content": 131755
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 0,
+      "snapshot_id": "f83f0e622669d1bfe06ee050acb5b981be9005e303fbc60ca3e296f01eaa9171",
+      "stats": {
+        "logical_file_bytes": 262428,
+        "files": 15,
+        "object_bytes": 260032,
+        "object_count": 13,
+        "snapshot_bytes": 2155,
+        "snapshot_count": 1,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 291064,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 87206,
+        "content": 127644
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 1,
+      "snapshot_id": "83fbb8580944356b76d8cda5b7cd5d9e03f94da995a466b277ff26eb7cf06b89",
+      "stats": {
+        "logical_file_bytes": 314630,
+        "files": 18,
+        "object_bytes": 309992,
+        "object_count": 15,
+        "snapshot_bytes": 4397,
+        "snapshot_count": 2,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 348408,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 87474,
+        "content": 128036
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 2,
+      "snapshot_id": "8432a09787162a3a58ffbbc5f49a0d5fc9ba9c6c83fab6188b1a6d9ddb694a32",
+      "stats": {
+        "logical_file_bytes": 366936,
+        "files": 22,
+        "object_bytes": 360055,
+        "object_count": 18,
+        "snapshot_bytes": 6640,
+        "snapshot_count": 3,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 409848,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 88600,
+        "content": 129682
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 3,
+      "snapshot_id": "383a6831dc75b61305da90405634250f678cc92e4892ed2cb9a68731f5b9e931",
+      "stats": {
+        "logical_file_bytes": 435568,
+        "files": 27,
+        "object_bytes": 426444,
+        "object_count": 22,
+        "snapshot_bytes": 8883,
+        "snapshot_count": 4,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 491768,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 88604,
+        "content": 129686
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 4,
+      "snapshot_id": "555d110201681f4aaaeb2ab955698744e50b8c486f53655fa6744781ea66b5e7",
+      "stats": {
+        "logical_file_bytes": 482277,
+        "files": 31,
+        "object_bytes": 470910,
+        "object_count": 25,
+        "snapshot_bytes": 11126,
+        "snapshot_count": 5,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 545016,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 88323,
+        "content": 129275
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 5,
+      "snapshot_id": "ad98dff59b62e87645a0e90bfd11604baa79c0c4fd4546ef0fe64af783a75bee",
+      "stats": {
+        "logical_file_bytes": 544561,
+        "files": 34,
+        "object_bytes": 530864,
+        "object_count": 27,
+        "snapshot_bytes": 13456,
+        "snapshot_count": 6,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 614648,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 87490,
+        "content": 128052
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 6,
+      "snapshot_id": "7ed565420e567ee6d36662eec5b011739571db7f17313d790ea1e39a7eeca3fe",
+      "stats": {
+        "logical_file_bytes": 596855,
+        "files": 36,
+        "object_bytes": 580828,
+        "object_count": 28,
+        "snapshot_bytes": 15786,
+        "snapshot_count": 7,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 671992,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 83543,
+        "content": 122285
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 7,
+      "snapshot_id": "7b526d5c6fd504639801e9f2338852962ea0668a8b5910d10c1284d8587fd12f",
+      "stats": {
+        "logical_file_bytes": 637741,
+        "files": 38,
+        "object_bytes": 619471,
+        "object_count": 29,
+        "snapshot_bytes": 18029,
+        "snapshot_count": 8,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 717048,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 83262,
+        "content": 121874
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 8,
+      "snapshot_id": "d3c1ed4f58d025f54ab9350793d1a7ae3246c4c11c253dfafdeb228b034293f7",
+      "stats": {
+        "logical_file_bytes": 683346,
+        "files": 43,
+        "object_bytes": 662747,
+        "object_count": 33,
+        "snapshot_bytes": 20358,
+        "snapshot_count": 9,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 778488,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 82421,
+        "content": 120643
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 9,
+      "snapshot_id": "cca4fb9d7c5a1d92291ddb3d818b3d83cce491d68adbe19c6d8b708f2bb3b970",
+      "stats": {
+        "logical_file_bytes": 746011,
+        "files": 48,
+        "object_bytes": 723083,
+        "object_count": 37,
+        "snapshot_bytes": 22687,
+        "snapshot_count": 10,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 852216,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 82423,
+        "content": 120645
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 10,
+      "snapshot_id": "e33c438c7fc56bba73de34da9356714565b0e08b3c5d1bed99dcbe255e3103a0",
+      "stats": {
+        "logical_file_bytes": 788720,
+        "files": 53,
+        "object_bytes": 763376,
+        "object_count": 41,
+        "snapshot_bytes": 25103,
+        "snapshot_count": 11,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 905464,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 82423,
+        "content": 120645
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 11,
+      "snapshot_id": "e3d2ba315df0a732fd30cf81ba1aed714ffa7daa482ec49876ffd9ea93107c29",
+      "stats": {
+        "logical_file_bytes": 838705,
+        "files": 55,
+        "object_bytes": 811032,
+        "object_count": 42,
+        "snapshot_bytes": 27432,
+        "snapshot_count": 12,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 958712,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 82704,
+        "content": 121056
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 12,
+      "snapshot_id": "26ebe4c4ff970682fe44888f356b49a15fa905983a64c715e6002785e3b9e2f8",
+      "stats": {
+        "logical_file_bytes": 885123,
+        "files": 57,
+        "object_bytes": 855121,
+        "object_count": 43,
+        "snapshot_bytes": 29761,
+        "snapshot_count": 13,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 1007864,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 90023,
+        "content": 131755
+      }
+    }
+  ],
+  "historical_full_source_snapshots_verified": 26,
+  "persistent_trees_unchanged_by_reads": true
+}

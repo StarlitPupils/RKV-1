@@ -1,0 +1,7 @@
+{
+  "actual_published_v024_wheel_sha256": "63d573a576ed224b9a13d043ba3c9ce95f06252dcf67eeeb88e6d52e04c54ebb",
+  "all_36_old_mode_descriptors_byte_identical_to_released_v024": true,
+  "old_v024_rejects_content_mode": true,
+  "new_default_remains_xml_id": true,
+  "generation_calls": 0
+}

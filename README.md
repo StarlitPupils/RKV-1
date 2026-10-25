@@ -6,7 +6,36 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.24.0 · 精确论文片段身份与预算预检
+## 当前版本：v0.25.0 · 内容锚定段落预检与停止集成决策
+
+独立JATS审计API新增显式`mode='content'`：父论文ID/角色/text SHA/重复序号构键，
+分别保留完整父SHA与原range SHA，避免把派生文本当原文。已有position/xml-id及
+默认输出与实际v0.24发行包的36个描述逐字段一致；旧v0.24明确拒绝新content模式。
+Memory默认/来源kind/清单格式不改，仍不自动用片段。
+
+| 记录规则 | 固定/v4 range乐观可过/12 | Gear/v4 range乐观可过/12 | 当前完整父校验可过/12 |
+|---|---:|---:|---:|
+| 整篇 | 0 | 0 | 0 |
+| 位置段落 | 1 | 1 | 0 |
+| 内容锚定段落 | 3 | 2 | 0 |
+
+同批六篇18版本/12真实修订，内容键减少部分插入级联，但改写变成删除+插入操作，
+完整父验证仍超预算，未压缩13状态定位候选达1631278B。
+只有相邻状态必要条件，没有实际索引节省或查询加速。**暂缓片段Memory集成**，
+不调高预算追求正结果；下一轮转向扩大离线科学检索任务与上下文覆盖评测。
+
+![内容锚定必要条件对照](results/v0.25.0/content-anchor-preflight.png)
+
+1854范围审计含两规则重复；9新进程162解析、144规划、26历史CAS快照核验；
+183测试通过、1权限跳过。0新独立论文/科学QA/模型请求，现有API密钥不参与本轮。
+全部51模块/HTML源一次、Gear整个精确库/元数据另计；定位候选仅部分账本，
+未计FTS/Memory清单/公共运行时，不与旧完整系统体积算净压缩。仅本机温缓存。
+
+[冻结协议](docs/JATS-ANCHORS.md) · [详细实验报告](results/v0.25.0/SUMMARY.md) ·
+[逐转换计划](results/v0.25.0/plans.json) · [验证](results/v0.25.0/validation.json) ·
+[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.25.0)。
+
+## v0.24.0 · 精确论文片段身份与预算预检
 
 新增独立的`rkv1.jats_fragments`审计API：定位原始XML标题/摘要/正文p的连续字节，
 绑定父论文ID/完整父SHA与range SHA；不重写XML，不把派生text冒充原文。修复外部

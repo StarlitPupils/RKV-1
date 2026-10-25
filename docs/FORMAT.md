@@ -270,3 +270,8 @@ JATS原始XML整文件为精确记录，新kind需v0.23，旧v0.22来源解码�
 归档v1–v6/CAS1/Memory清单1–4无物理格式变化。独立JATS片段描述不是新Memory
 来源kind，也不宣称旧读取器可读取独立片段。整篇JATS新增拒绝被Expat跳过的未
 解析实体，避免投影文本静默丢字；所有既有正常公开样本保持可读。
+
+## v0.25 独立审计API
+
+新增显式content键不改变Memory来源kind/清单，也不修改CAS/归档格式。已有
+position/xml-id描述保持，默认仍xml-id；内容模式重复序号不等于永久语义ID。

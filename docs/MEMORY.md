@@ -123,3 +123,9 @@ JATS原始XML整文件为精确记录，新kind需v0.23，旧v0.22来源解码�
 `rkv1.jats_fragments.fragments/verify`是独立原范围审计API，不被Memory自动使用。
 父原文件SHA与范围SHA均绑定；verify重读完整父文章。正常整篇来源兼容，未加载
 DTD而被跳过的未知实体现在拒绝。片段identity/预算负结果见JATS-FRAGMENTS.md。
+
+## v0.25 显式content审计键
+
+独立`fragments(raw, mode="content")`按父论文/角色/text SHA/重复序号构键，仍
+分别验证完整父原文与原range。Memory不自动使用；旧两模式输出与真实v0.24
+发行一致，旧v0.24拒绝新mode。可行性不足，暂缓集成，见JATS-ANCHORS.md。
