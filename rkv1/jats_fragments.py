@@ -13,7 +13,7 @@ from .memory_jats import EXCLUDE, parse, reject
 
 MAX_SOURCE = 1 << 20
 MAX_UNITS = 16384
-MODES = ('position', 'xml-id')
+MODES = ('position', 'xml-id', 'content')
 
 
 def _tag_end(raw, start):
@@ -36,7 +36,8 @@ def fragments(raw, *, mode='xml-id'):
 
 position keys explicitly mean ordinal position within abstract/body. xml-id
 keys prefer a unique projected element id, falling back to that same ordinal;
-neither scheme asserts semantic equivalence across a changed record.
+    content keys bind exact projected UTF-8 text plus occurrence within a role.
+    These schemes do not assert semantic equivalence across a changed record.
 """
     if mode not in MODES:
         raise ValueError('Unknown JATS fragment key mode')
@@ -100,18 +101,25 @@ neither scheme asserts semantic equivalence across a changed record.
     if mode == 'xml-id' and any(n != 1 for n in ids.values()):
         raise ValueError('Duplicate projected JATS element id')
     counts = Counter()
+    occurrences = Counter()
     result = []
     parent_sha = digest(raw)
     for role, el in units:
         counts[role] += 1
-        selector = ('id:' + quote(el.get('id'), safe='')) if mode == 'xml-id' and el.get('id') else 'pos:' + str(counts[role])
+        text = ''.join(el.itertext()).strip()
+        if mode == 'content':
+            sha = digest(text.encode('utf-8'))
+            occurrences[role, sha] += 1
+            selector = 'text:' + sha + ':' + str(occurrences[role, sha])
+        else:
+            selector = ('id:' + quote(el.get('id'), safe='')) if mode == 'xml-id' and el.get('id') else 'pos:' + str(counts[role])
         offset, finish = bounds[el]
         original = raw[offset:finish]
         result.append({'key': parent_key + ':' + role + ':' + selector,
                        'parent_key': parent_key, 'parent_sha256': parent_sha,
                        'role': role, 'selector': selector,
                        'offset': offset, 'length': len(original),
-                       'sha256': digest(original), 'text': ''.join(el.itertext()).strip()})
+                       'sha256': digest(original), 'text': text})
     assert [f['text'] for f in result] == [title, *paragraphs]
     assert len({f['key'] for f in result}) == len(result)
     previous = -1

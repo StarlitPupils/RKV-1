@@ -60,5 +60,28 @@ class JATSFragmentTests(unittest.TestCase):
             with self.subTest(raw=raw[:60]), self.assertRaises((ValueError, UnicodeError)): fragments(raw)
         with self.assertRaises(ValueError): fragments(article(), mode='unknown')
 
+    def test_content_keys_survive_unrelated_insertion_but_bind_exact_projection(self):
+        before = article(extra='<p>Anchor caf\u00e9</p><p>Tail</p>')
+        after = before.replace(b'<p>Anchor ',b'<p>Inserted new paragraph</p><p>Anchor ')
+        a = next(r for r in fragments(before, mode='content') if r['text']=='Anchor caf\u00e9')
+        b = next(r for r in fragments(after, mode='content') if r['text']=='Anchor caf\u00e9')
+        self.assertEqual(a['key'],b['key']);self.assertEqual(a['sha256'],b['sha256'])
+        self.assertNotEqual(a['offset'],b['offset']);self.assertNotEqual(a['parent_sha256'],b['parent_sha256'])
+        self.assertEqual(verify(after,b,mode='content'), b'<p>Anchor caf\xc3\xa9</p>')
+        edited = before.replace(b'Anchor ',b'anchor ')
+        c = next(r for r in fragments(edited, mode='content') if r['text']=='anchor caf\u00e9')
+        self.assertNotEqual(a['key'],c['key'])
+
+    def test_content_duplicate_occurrence_and_markup_rebinding_are_explicit(self):
+        raw = article(body='Same',extra='<p><italic>Same</italic></p><p>Other</p>')
+        same = [r for r in fragments(raw,mode='content') if r['text']=='Same']
+        self.assertEqual(len(same),2);self.assertNotEqual(same[0]['key'],same[1]['key'])
+        self.assertEqual(same[0]['key'].rsplit(':',1)[0],same[1]['key'].rsplit(':',1)[0])
+        self.assertNotEqual(same[0]['sha256'],same[1]['sha256'])
+        changed = raw.replace(b'<p><italic>Same</italic></p>',b'<p>Same</p>')
+        new = [r for r in fragments(changed,mode='content') if r['text']=='Same']
+        self.assertEqual([f['key'] for f in same],[f['key'] for f in new])
+        self.assertEqual(verify(changed,new[1],mode='content'),b'<p>Same</p>')
+
 
 if __name__ == '__main__': unittest.main()

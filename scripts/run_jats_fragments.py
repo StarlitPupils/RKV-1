@@ -113,7 +113,8 @@ def plan(store, before_sid, sid, before, current, projection):
             'current_full_parent_verifier': {**actual_work, 'reason': actual_reason, 'admissible': actual_reason is None}}
 
 
-def main(args):
+def main(args, *, modes=MODES, fragment_modes=('position','xml-id'),
+         worker_module='scripts.run_jats_fragments', label_prefix='v024-fragments'):
     manifest = inputs(); args.out.mkdir(); args.work.mkdir()
     checks = implementation_checksums(); save(args.out/'source-checksums.json', checks)
     source_paths = sorted(Path('rkv1').rglob('*.py'))+[Path('rkv1/memory_demo.html')]
@@ -131,7 +132,7 @@ def main(args):
     for paper in manifest['papers']:
         for v in paper['versions']:
             raw = (ROOT/'data/elife-revisions'/v['path']).read_bytes()
-            for mode in ('position', 'xml-id'):
+            for mode in fragment_modes:
                 fs = fragments(raw, mode=mode)
                 for f in fs:
                     original = verify(raw, f, mode=mode)
@@ -145,10 +146,10 @@ def main(args):
     save(args.out/'identity-audit.json', {'inputs': manifest, 'files': audit, 'verified_ranges_including_two_key_policies': verified})
     parser_trials = []
     for r in range(3):
-        order = list(MODES); random.Random(SEED+r).shuffle(order)
+        order = list(modes); random.Random(SEED+r).shuffle(order)
         for mode in order:
             result = args.work/f'parse-{r}-{mode}.json'; start = time.perf_counter()
-            subprocess.run([sys.executable, '-m', 'scripts.run_jats_fragments', '--worker', '--mode', mode, '--round', str(r), '--result', str(result)], check=True, env=clean_env())
+            subprocess.run([sys.executable, '-m', worker_module, '--worker', '--mode', mode, '--round', str(r), '--result', str(result)], check=True, env=clean_env())
             trial = json.loads(result.read_text('utf-8')); trial['process_wall_including_startup_s'] = time.perf_counter()-start
             parser_trials.append(trial)
     save(args.out/'parser-trials.json', {'trials': parser_trials})
@@ -164,19 +165,19 @@ def main(args):
                 if p.name not in wanted: p.unlink()
             for name in wanted:
                 if not (source/name).exists(): shutil.copyfile(ROOT/'data/elife-revisions'/name, source/name)
-            built = store.add(source, label=f'v024-fragments-{n:02d}', chunker_backend='rust' if case=='gear' else 'python', native_library=str(library) if case=='gear' else None)
+            built = store.add(source, label=f'{label_prefix}-{n:02d}', chunker_backend='rust' if case=='gear' else 'python', native_library=str(library) if case=='gear' else None)
             sid = built['snapshot_id']; truth = {name: digest(p.read_bytes()) for p, name in files_in(source)}; history.append((sid, truth))
             with store.snapshot(sid) as snap:
                 assert all(snap.read_range(name) == (source/name).read_bytes() for name in wanted)
-            current = {mode: current_rows(state, versions, mode) for mode in MODES}
+            current = {mode: current_rows(state, versions, mode) for mode in modes}
             if n:
-                for mode in MODES:
+                for mode in modes:
                     for projection in (False, True):
                         plans.append({'case': case, 'stage': n, 'mode': mode, 'projection_rebinding': projection,
                                       **plan(store, previous_sid, sid, previous[mode], current[mode], projection)})
             cas_stats.append({'case': case, 'stage': n, 'snapshot_id': sid, 'stats': store.stats(),
                 'simple_locator_metadata_bytes': {mode: sum(len(_json({k: v for k, v in f.items() if k != 'text'})) for pid, version in state
-                    for f in units((ROOT/'data/elife-revisions'/versions[pid, version]['path']).read_bytes(), mode)) for mode in MODES}})
+                    for f in units((ROOT/'data/elife-revisions'/versions[pid, version]['path']).read_bytes(), mode)) for mode in modes}})
             previous_sid = sid; previous = current
         before = inventory(store.root)
         for sid, truth in history:
