@@ -6,7 +6,50 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.29.0 · 来源已知与开放检索分开评测
+## 当前版本：v0.30.0 · 段落先行检索的收益与迁移失败
+
+新增显式`ParagraphIndex`：标题单独一行、每个原段落一行的contentless FTS5，按
+每篇最佳单元BM25归并前20篇。不接收gold来源、不调权重/融合。辅助索引精确绑定
+一个snapshot，逐查询验证整DB/Memory/原记录SHA和投影；源更新须显式重建或读旧
+snapshot。原Memory格式及search/answer/CLI/HTTP默认保持不变。
+
+```python
+from rkv1.memory import Memory
+from rkv1.memory_paragraph import ParagraphIndex
+m = Memory('MEMORY')
+index = ParagraphIndex.create(m, 'EXPLICIT-SIDECAR')['index']
+result = index.search(m, 'scientific question', top_k=20)
+```
+
+| 全任务文档召回@5 | 整篇基线 | 最佳单元候选 | 结论 |
+|---|---:|---:|---|
+| QASPER dev · 1005题 | 44.279% | 45.871% | +1.592pp，论文区间跨零 |
+| QASPER train · 2593题 | 39.028% | 41.998% | +2.970pp |
+| SciFact dev · 188条有证据claim | 88.342% | 81.117% | −7.225pp |
+| SciFact train · 505条有证据claim | 89.175% | 82.937% | −6.238pp，迁移失败 |
+
+24KB lexical的QASPER完整参考dev260→284、train471→487，后者论文区间跨零。
+这些是文档定位/参考暴露，非模型准确率；SciFact只评文档召回，不评证据句/答案。
+
+![检索粒度与覆盖](results/v0.30.0/paragraph-retrieval.png)
+
+QASPER dev/train额外aux 5742950/16855400B，查询wall中位24.90→50.44ms、
+34.73→116.62ms；计源及aux总12191525/35931532B已大于原JSON，未达净压缩。
+SciFact aux另9044318B。公共运行时未全额分配，不能称完整部署成本或同任务普遍
+加速。**候选保持显式，默认不换，不因负结果调参重试。**
+
+12轮新进程、12873问题对、25746读取、129528选句绑定；原基线逐题复现，原文/
+持久树不变。204测试通过、1权限跳过，0远程模型调用。SciFact train是新增任务
+评测，摘要语料此前已使用；非新独立语料或盲测。冷缓存/跨机器仍未测。
+
+下一项将冻结规则迁移到新来源任务，先保证精确原始成员/标注隔离，并明确只测
+自定义检索而非官方QA；不把现有任务收益外推，不自动混合分数或提供oracle来源。
+
+[冻结协议](docs/PARAGRAPH-RETRIEVAL.md) · [详细实验报告](results/v0.30.0/SUMMARY.md) ·
+[原始轮次示例](results/v0.30.0/qasper-dev-round0.json) · [验证](results/v0.30.0/validation.json) ·
+[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.30.0)。
+
+## v0.29.0 · 来源已知与开放检索分开评测
 
 新增显式Python `Memory.lookup(key, snapshot=...)`，只读取调用者已知的原证据key，
 与search共用CAS/记录SHA及解析身份核验。支持v1–v4/历史/迁移/重绑定；未找到为空，

@@ -1,0 +1,60 @@
+{
+  "qasper-dev": {
+    "source_filename": "qasper-dev-v0.3.json",
+    "source_bytes": 11398686,
+    "source_sha256": "2ae7ee62a65b1c4225791c70de80c2aad4e8998cf1fd4f09a53103db4f21af93",
+    "question_instances": 1005,
+    "unique_question_strings": 948,
+    "gold_claim_document_pairs": 1005,
+    "reference_questions": 927
+  },
+  "qasper-train": {
+    "source_filename": "qasper-train-v0.3.json",
+    "source_bytes": 31969387,
+    "source_sha256": "9458bfe76074a8fa8d1685af02bcc73537aa6d338ad20591dfaff1946bc88bf4",
+    "question_instances": 2593,
+    "unique_question_strings": 2451,
+    "gold_claim_document_pairs": 2593,
+    "reference_questions": 2240
+  },
+  "scifact-dev": {
+    "source_filename": "corpus.jsonl",
+    "source_bytes": 8307875,
+    "source_sha256": "b8d6c89624cb2ed74dee8938effc4f5d8bd2086887880af8110d64be4ceade62",
+    "question_instances": 188,
+    "unique_question_strings": 188,
+    "gold_claim_document_pairs": 209,
+    "reference_questions": null,
+    "labels_sha256": "86f0435d08fdb65d1aa41d1472684f57e6e71930626497bdf4d7a9ec1a632217",
+    "archive_sha256": "11c621288d41ac144d29b13b0f8503b3820b7d6e8b1f6ff24dff335c196d76be",
+    "source_url": "https://scifact.s3-us-west-2.amazonaws.com/release/latest/data.tar.gz",
+    "all_claims": 300,
+    "excluded_without_evidence": 112,
+    "licenses": {
+      "claims": "CC-BY-4.0",
+      "abstracts": "ODC-By-1.0"
+    }
+  },
+  "scifact-train": {
+    "source_filename": "corpus.jsonl",
+    "source_bytes": 8307875,
+    "source_sha256": "b8d6c89624cb2ed74dee8938effc4f5d8bd2086887880af8110d64be4ceade62",
+    "question_instances": 505,
+    "unique_question_strings": 504,
+    "gold_claim_document_pairs": 564,
+    "reference_questions": null,
+    "labels_sha256": "f4c8fa82d8bd0653a9cc8d61a6ea48c25eacea64e90af5dbf390ebb1b74372f0",
+    "archive_sha256": "11c621288d41ac144d29b13b0f8503b3820b7d6e8b1f6ff24dff335c196d76be",
+    "source_url": "https://scifact.s3-us-west-2.amazonaws.com/release/latest/data.tar.gz",
+    "all_claims": 809,
+    "excluded_without_evidence": 304,
+    "licenses": {
+      "claims": "CC-BY-4.0",
+      "abstracts": "ODC-By-1.0"
+    }
+  },
+  "overlaps": {
+    "qasper_train_dev_question_string_overlap": 58,
+    "scifact_train_dev_question_string_overlap": 0
+  }
+}

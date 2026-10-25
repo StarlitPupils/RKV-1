@@ -1,0 +1,24 @@
+{
+  "frozen_commit": "6370a14",
+  "all_54_modules_protocol_driver_match_freeze": true,
+  "formal_question_pairs": 12873,
+  "formal_read_operations": 25746,
+  "QASPER_context_bindings": 129528,
+  "warmup_read_operations_excluded": 24,
+  "all_rounds_keys_ranks_source_identity_and_scores_equal": true,
+  "QASPER_whole_paper_all_scores_keys_ranks_identity_and_selection_match_v029": true,
+  "SciFact_dev_whole_paper_top10_keys_match_v015": true,
+  "all_original_files_bytewise_restored_and_Memory_auxiliary_trees_unchanged": true,
+  "no_gold_to_candidate_or_selectors": true,
+  "remote_model_calls": 0,
+  "new_model_answer_quality": null,
+  "cold_cache": null,
+  "cross_machine": null,
+  "tests": {
+    "run": 205,
+    "passed": 204,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "4446b961c248eb60af6839b8fcdfb70cec17df6ac173dfbd4a3cef64679c7727"
+  }
+}

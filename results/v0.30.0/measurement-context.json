@@ -1,0 +1,16 @@
+{
+  "frozen_commit": "6370a141d952f9214cd077df73520be01ed068f9",
+  "protocol": "docs/PARAGRAPH-RETRIEVAL.md",
+  "measured_modules": 54,
+  "all_runtime_modules_protocol_and_driver_match_frozen_commit": true,
+  "candidate_CI_run": 40201954787,
+  "formal_question_pairs": 12873,
+  "formal_read_operations": 25746,
+  "QASPER_context_bindings": 129528,
+  "warmup_read_operations_excluded": 24,
+  "remote_model_calls": 0,
+  "no_parameter_tuning": true,
+  "QASPER_tasks_previously_evaluated": true,
+  "SciFact_train_new_task_evaluation_not_new_corpus": true,
+  "visual_QA": "Both chart panels viewed; labels and legends clear. Report interpretation added from unchanged validated metrics."
+}
