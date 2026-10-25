@@ -187,6 +187,39 @@ class Memory:
             try:
                 rows=db.execute("SELECT key,path,offset,length,record_sha256,kind,title,body,bm25(evidence) FROM evidence WHERE evidence MATCH ? ORDER BY bm25(evidence),key LIMIT ?",(query,top_k)).fetchall()
             finally:db.close()
+        hits=self._verified_hits(rows,sid,manifest,resources)
+        return {"snapshot_id":sid,"question":question,"hits":hits,"wall_s":time.perf_counter()-started}
+
+    def lookup(self,key,*,snapshot=None):
+        """Read an explicitly supplied evidence key, without lexical retrieval.
+
+        The caller must already know this source identity. This does not locate
+        a paper from a question, and returns no BM25 rank. All immutable-source
+        validation is shared with search; absent keys return an empty hit list.
+        """
+        if not isinstance(key,str) or not 1<=len(key)<=512 or '\x00' in key:
+            raise ValueError('Invalid known-source key')
+        from .memory_index import QueryResources,view,LOCATORS
+        started=time.perf_counter();sid=snapshot or self.current()
+        with QueryResources(self) as resources:
+            manifest=self._manifest(sid,resources)
+            if manifest['version']==1:
+                db=sqlite3.connect((self.root/'indexes'/(sid+'.sqlite')).as_uri()+'?mode=ro',uri=True)
+                try:
+                    rows=db.execute('SELECT key,path,offset,length,record_sha256,kind,title,body,NULL FROM evidence WHERE key=?',(key,)).fetchall()
+                finally:db.close()
+            else:
+                # Materialize current locators, including all relocations and
+                # v4 rebinding, using the same validated overlay machinery.
+                with view(self,manifest,query=resources) as db:
+                    if manifest['version']==4:
+                        rows=db.execute('SELECT l.key,l.path,l.offset,l.length,lower(hex(l.sha)),l.kind,lower(hex(p.sha)),NULL,NULL FROM locators l JOIN projections p ON p.key=l.key WHERE l.key=?',(key,)).fetchall()
+                    else:
+                        rows=[(*r,None,None,None) for r in db.execute('SELECT '+LOCATORS+' FROM locators WHERE key=?',(key,))]
+            hits=self._verified_hits(rows,sid,manifest,resources)
+        return {'snapshot_id':sid,'source_key':key,'scope':'explicit-known-source','hits':hits,'wall_s':time.perf_counter()-started}
+
+    def _verified_hits(self,rows,sid,manifest,resources):
         hits=[]
         from .memory_index import snapshot as open_snapshot
         with open_snapshot(self,sid,resources) as snap:
@@ -204,7 +237,7 @@ class Memory:
                 title=actual_title
                 hits.append({"citation_id":f"D{len(hits)}","key":key,"title":title,"sentences":sentences,"rank":rank,
                     "source_bytes_verified":True,"locator":{"snapshot_id":sid,"path":path,"offset":int(offset),"length":int(length),"sha256":sha}})
-        return {"snapshot_id":sid,"question":question,"hits":hits,"wall_s":time.perf_counter()-started}
+        return hits
 
     def remember(self,record):
         """Persist derived output separately. It is never indexed as primary evidence."""
