@@ -280,3 +280,8 @@ position/xml-id描述保持，默认仍xml-id；内容模式重复序号不等�
 
 独立QASPER覆盖评分器不改变归档/CAS/Memory清单或来源kind。标注不进入FTS，
 context JSON仅为派生计费对象，不替代原证据。默认格式与选择器保持。
+
+## v0.27 派生选择，不改原证据格式
+
+词法段落顺序仅为查询内派生值，选择器临时FTS不落Memory持久索引；原record、
+原句ID及locator完整保留。没有新的Memory来源kind/清单或归档格式变更。

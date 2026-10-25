@@ -135,3 +135,9 @@ DTD而被跳过的未知实体现在拒绝。片段identity/预算负结果见JA
 `rkv1.qasper_audit.cases/score`将人工问题/参考标注放在索引外评分；Memory原
 成员定位不变。上下文预算只扣正文UTF8，不等于完整API token预算；同查原文
 身份不等于科学蕴含。无非空可答证据保持null，未映射图表不从分母删去。
+
+## v0.27 显式上下文候选
+
+`rkv1.context_selection.lexical_order/choose`仅在已校验的hits上按问题排序原段落，
+保持句ID/完整原locator，不读答案。`qasper_audit.score_selected`先逐字段绑定再
+评分；Memory及模型入口默认仍source-order。预算收益混合，见CONTEXT-SELECTION.md。

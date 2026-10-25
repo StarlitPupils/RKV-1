@@ -1,0 +1,21 @@
+{
+  "formal_queries": 10794,
+  "context_budget_bindings_checked": 64764,
+  "warmups_excluded": 6,
+  "dev_source_order_matches_v026_all_queries_and_budgets": true,
+  "all_rounds_keys_BM25_and_original_and_selected_identity_and_scores_equal": true,
+  "source_trees_unchanged_and_full_original_files_verified": true,
+  "generation_calls": 0,
+  "new_model_answer_quality": null,
+  "not_official_QASPER_F1": true,
+  "measured_modules": 53,
+  "frozen_commit": "a29175f37026cc92d8e450aa2968175255178ccb",
+  "all_measured_modules_equal_frozen_commit": true,
+  "tests": {
+    "run": 191,
+    "passed": 190,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "e447a0453ff1fa459e76df218ff016b2364f9a8596b807201af092e09681e9f6"
+  }
+}

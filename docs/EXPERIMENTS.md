@@ -236,3 +236,9 @@ results/v0.24.0/SUMMARY.md。9进程162解析、1854范围审计、26历史CAS�
 协议docs/QASPER-COVERAGE.md，52模块冻结8bc803c；3轮3015 top20正式查询/3预热，
 1005问题/281论文，三轮完整身份/分数一致，187测试通过/1权限跳过。论文召回、
 参考证据映射和上下文预算分别评分，无新API/官方F1。报告results/v0.26.0/SUMMARY.md。
+
+## v0.27 同检索/同预算证据选择
+
+协议docs/CONTEXT-SELECTION.md，53模块冻结a29175f，候选CI 40192284649通过；
+10794查询/6预热、64764预算绑定，190测试通过/1权限跳过。规则未在train gold调参，
+24KB区间跨零、48KB train有净退步，保持显式、不切默认。报告results/v0.27.0/SUMMARY.md。

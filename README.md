@@ -6,7 +6,42 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.26.0 · 全dev科学检索与上下文证据覆盖
+## 当前版本：v0.27.0 · 同检索/同预算的词法证据选择
+
+新增显式`context_selection.lexical_order/choose`：只对已检索top5论文的原段落
+按问题做临时词法排序，保留原句ID/locator，预算仍只扣正文UTF8；不看gold来选句。
+现有默认source-order不变。独立评分器逐字段核对所选上下文，拒绝伪造句子/定位。
+
+| 数据/正文预算 | 原顺序完整参考 | lexical完整参考 | 赢/输 | 结论 |
+|---|---:|---:|---:|---|
+| dev 8KB | 107/927 | 179/927 | 108/36 | 覆盖提高7.77pp |
+| train 8KB | 176/2240 | 305/2240 | 217/88 | 覆盖提高5.76pp |
+| dev 24KB | 232/927 | 260/927 | 78/50 | 提高3.02pp，论文组区间跨零 |
+| train 24KB | 445/2240 | 471/2240 | 162/136 | 提高1.16pp，论文组区间跨零 |
+| dev 48KB | 295/927 | 307/927 | 54/42 | 仍有输题 |
+| train 48KB | 570/2240 | 559/2240 | 104/115 | 净少11条成功 |
+
+8KB两split论文组bootstrap描述区间为正；24KB区间均跨零，48KB train更差，且
+lexical在train两对预算各出现1次真→假回归。排序中位约4.0/4.7ms，不能称全预算
+支配或推理提升。**不替换默认**；下一版只做显式CLI/API选项与本地协议/引用核验。
+
+![同检索同预算选择对照](results/v0.27.0/paired-context-selection.png)
+
+固定dev281论文/1005题、train888论文/2593题，各三轮，共10794正式查询、64764
+选择器/预算绑定核验、6预热排除。train用于新增任务迁移评测，原文曾做CAS存储，
+不称新科学来源/官方test或盲测；两split论文ID无重叠，问句文本重叠58条。
+dev基线逐题与v0.26的keys/BM25/来源身份及三预算分数全同；全部轮次/预算/原句
+绑定一致，起止原文恢复与持久树不变。190测试通过、1权限跳过、0模型调用。
+
+全部53模块/HTML源一次371171B，新selector模块2641B另列；临时FTS只在query中
+存在，CPU/RSS收费，公共运行时未全额分配。紧凑context JSON不等于完整wire/token
+成本，完整参考暴露不等于科学回答正确率。默认Memory/所有来源与存储格式不变。
+
+[冻结协议](docs/CONTEXT-SELECTION.md) · [详细实验报告](results/v0.27.0/SUMMARY.md) ·
+[配对差及区间](results/v0.27.0/derived-metrics.json) · [验证](results/v0.27.0/validation.json) ·
+[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.27.0)。
+
+## v0.26.0 · 全dev科学检索与上下文证据覆盖
 
 新增独立`qasper_audit`离线评分器，扩到固定QASPER v0.3 dev全量281篇/1005问题
 实例（948种问题文本，比此前64题新增884种字符串）。原语料论文已使用，不算新

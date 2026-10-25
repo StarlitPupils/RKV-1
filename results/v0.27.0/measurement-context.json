@@ -1,0 +1,9 @@
+{
+  "frozen_commit": "a29175f37026cc92d8e450aa2968175255178ccb",
+  "protocol": "docs/CONTEXT-SELECTION.md",
+  "measured_modules": 53,
+  "all_modules_match_frozen_commit": true,
+  "candidate_CI_run": 40192284649,
+  "generation_calls": 0,
+  "scope": "Paired same-hit same-body-budget context selection; train rules frozen before coverage results, no annotation-guided selection."
+}
