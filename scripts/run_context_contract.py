@@ -4,6 +4,8 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import platform
+import sqlite3
 import subprocess
 import sys
 from unittest.mock import patch
@@ -78,10 +80,16 @@ def main(args):
         assert p.returncode!=0 and 'unrecognized arguments' in p.stderr and len(fixture.requests)==seen
         assert len(fixture.requests)==13 and len(records)==11
     assert checks==implementation_checksums() and before=={k:v for k,v in inventory(m.root).items() if not k.startswith('answers/')}
+    for path in (m.root/'answers').glob('*.json'):
+        value=json.loads(path.read_bytes());assert value['primary_evidence'] is False and value['record_type']=='derived-model-answer'
+    assert not m.search('scientific')['hits']
     with m.store.snapshot(built['snapshot_id']) as snap:assert snap.read_range('fixture.jsonl')==raw
     save(args.out/'source-checksums.json',checks)
     files={p.as_posix():{'bytes':p.stat().st_size,'sha256':digest(p.read_bytes())} for p in [*sorted(Path('rkv1').rglob('*.py')),Path('rkv1/memory_demo.html')]}
     save(args.out/'source-resource.json',{'files':files,'total_bytes':sum(v['bytes'] for v in files.values()),'native_specific_bytes':0,'model_bytes':0})
+    save(args.out/'environment.json',{'python':platform.python_version(),'platform':platform.platform(),'sqlite':sqlite3.sqlite_version,
+        'logical_cpus':os.cpu_count(),'remote_model_calls':0,'new_scientific_QA_quality':None,'cold_cache':None,'cross_machine':None,
+        'scope':'Synthetic loopback protocol only; no latency/quality/generalization claims'})
     save(args.out/'contract.json',{'fixture_source_bytes':len(raw),'fixture_source_sha256':digest(raw),'conditions_and_default_CLI_HTTP_records':records,
         'local_fixture_model_HTTP_requests':13,'remote_model_calls':0,'invalid_Python_controls_rejected_before_request_or_write':4,
         'invalid_HTTP_controls_rejected_without_upstream':3,'omitted_citation_rejected_without_retry':True,
