@@ -6,7 +6,43 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.27.0 · 同检索/同预算的词法证据选择
+## 当前版本：v0.28.0 · 显式上下文控制与完整请求体核验
+
+Python/CLI/本机HTTP新增显式context selector与8000/24000/48000正文UTF8预算；
+默认仍source-order/24000。因v0.27不同预算收益混合，不自动切换为lexical。
+派生记录新增实际body/context JSON/完整POST字节与实际发送SHA，引用仍绑定原句。
+
+```powershell
+python -m rkv1 memory-answer MEMORY "claim" --context-selector lexical --context-body-budget 8000
+```
+
+HTTP先读/api/status，显式控制用`X-RKV-Client: memory-v2`；新服务拒绝v1携带
+控制，旧服务拒绝v2 header，避免静默忽略新选择。原v1仅question/原页面默认兼容。
+无效选择/预算不调用上游、不写答案；错误引用只写失败派生，不重试/降级/升格证据。
+
+| 合成合同条件 | 实际body B | context JSON B | 实际完整POST B | 可见原句ID |
+|---|---:|---:|---:|---|
+| source-order / 8000 | 7990 | 8086 | 8793 | [0] |
+| source-order / 24000 | 23980 | 24105 | 24818 | [0,1] |
+| lexical / 8000 | 57 | 155 | 866 | [2] |
+| lexical / 24000 | 8047 | 8174 | 8891 | [0,2] |
+
+这是确定性合成fixture，不是科学QA/模型质量或语料压缩实验。13个正式本地HTTP
+请求、0远程模型调用；旧24次预算未扩大。省略/显式原默认、实际旧发行默认POST
+逐字节一致；CLI/HTTP/拒绝路径、原句ID/locator、body上限和raw POST len/SHA均核验。
+
+![本地合同实际请求字节](results/v0.28.0/context-wire-bytes.png)
+
+196测试运行、195通过、1权限跳过。原证据持久树与源逐字节不变，仅新增非primary
+派生答案；Memory/CAS/归档格式无变化，HTTP能力版本新增2。原页面仍用默认控制。
+全部53模块/HTML源一次计入，公共运行时未全额分配，不是完整部署成本。下一步
+区分来源已知/开放检索工作负载，不以本地fixture回显当真实推理提升。
+
+[协议及接口](docs/CONTEXT-API.md) · [详细实验报告](results/v0.28.0/SUMMARY.md) ·
+[原始合同数据](results/v0.28.0/contract.json) · [验证](results/v0.28.0/validation.json) ·
+[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.28.0)。
+
+## v0.27.0 · 同检索/同预算的词法证据选择
 
 新增显式`context_selection.lexical_order/choose`：只对已检索top5论文的原段落
 按问题做临时词法排序，保留原句ID/locator，预算仍只扣正文UTF8；不看gold来选句。

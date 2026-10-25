@@ -141,3 +141,10 @@ DTD而被跳过的未知实体现在拒绝。片段identity/预算负结果见JA
 `rkv1.context_selection.lexical_order/choose`仅在已校验的hits上按问题排序原段落，
 保持句ID/完整原locator，不读答案。`qasper_audit.score_selected`先逐字段绑定再
 评分；Memory及模型入口默认仍source-order。预算收益混合，见CONTEXT-SELECTION.md。
+
+## v0.28 显式上下文入口
+
+`memory-answer --context-selector lexical --context-body-budget 8000`；默认原顺序
+24000正文UTF8字节，另支持24000/48000。Python同名kwargs。HTTP先查status能力，
+显式控制header memory-v2、字段context_selector/context_body_budget；原v1仅question
+保持默认。body/context JSON/实际POST分别计字节，不等于token预算。详见CONTEXT-API.md。

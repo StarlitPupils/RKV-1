@@ -1,0 +1,21 @@
+{
+  "formal_local_fixture_HTTP_requests": 13,
+  "remote_model_calls": 0,
+  "scientific_QA_quality": null,
+  "default_actual_POST_matches_old_released_responder": true,
+  "all_body_limits_and_actual_POST_length_and_SHA_verified": true,
+  "original_sentence_ids_locators_and_derived_only_writeback_verified": true,
+  "primary_tree_and_full_original_bytes_unchanged": true,
+  "invalid_controls_cause_no_upstream_requests": true,
+  "omitted_citation_rejected_without_retry": true,
+  "measured_modules": 53,
+  "frozen_commit": "b950894690046a61c8b3d18ef15fb2ef0d6d4f90",
+  "all_measured_modules_match_frozen_commit": true,
+  "tests": {
+    "run": 196,
+    "passed": 195,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "f5b8342b5a1781d31e5bbd1d3be582ac1cafb2672877ab331b25436c79d0def2"
+  }
+}

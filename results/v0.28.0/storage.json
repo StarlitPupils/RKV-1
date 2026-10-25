@@ -1,0 +1,23 @@
+{
+  "logical_file_bytes": 51613,
+  "by_directory_bytes": {
+    "cas": 840,
+    "indexes": 28812,
+    "manifests": 509,
+    "answers": 21358
+  },
+  "head_bytes": 94,
+  "cas": {
+    "logical_file_bytes": 840,
+    "files": 3,
+    "object_bytes": 320,
+    "object_count": 1,
+    "snapshot_bytes": 398,
+    "snapshot_count": 1,
+    "config_bytes": 122,
+    "allocated_file_data_bytes": 848,
+    "filesystem_directory_metadata_journal_unmeasured": true
+  },
+  "snapshot_id": "b11b803223164977f0d622f43d3a8e078fb4371ea62d62423f94aa1a38248acc",
+  "scope": "Includes all retained CAS objects, indexes, manifests and derived answers; excludes runtime/model/server and filesystem metadata"
+}

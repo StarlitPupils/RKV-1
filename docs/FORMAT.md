@@ -285,3 +285,9 @@ context JSON仅为派生计费对象，不替代原证据。默认格式与选�
 
 词法段落顺序仅为查询内派生值，选择器临时FTS不落Memory持久索引；原record、
 原句ID及locator完整保留。没有新的Memory来源kind/清单或归档格式变更。
+
+## v0.28 HTTP能力2与派生元数据
+
+Memory/CAS/归档物理格式不变，HTTP显式上下文控制需memory-v2，原v1默认保持。
+派生答案新增context selector/budget、选择耗时、body/context JSON/POST字节字段，
+原证据与引用句ID不改。额外派生字段不自动变成FTS或primary证据。

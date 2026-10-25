@@ -1,0 +1,9 @@
+{
+  "frozen_commit": "b950894690046a61c8b3d18ef15fb2ef0d6d4f90",
+  "protocol": "docs/CONTEXT-API.md",
+  "measured_modules": 53,
+  "all_runtime_modules_match_frozen_commit": true,
+  "candidate_CI_run": 40195294012,
+  "remote_model_calls": 0,
+  "discarded_attempt": "First postcondition used aggregate inventory as a file map. Fixed only audit driver, refroze, reran in fresh directories; no failed-run measurements accepted."
+}

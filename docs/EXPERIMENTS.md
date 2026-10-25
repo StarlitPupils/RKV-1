@@ -242,3 +242,9 @@ results/v0.24.0/SUMMARY.md。9进程162解析、1854范围审计、26历史CAS�
 协议docs/CONTEXT-SELECTION.md，53模块冻结a29175f，候选CI 40192284649通过；
 10794查询/6预热、64764预算绑定，190测试通过/1权限跳过。规则未在train gold调参，
 24KB区间跨零、48KB train有净退步，保持显式、不切默认。报告results/v0.27.0/SUMMARY.md。
+
+## v0.28 上下文API合同
+
+协议docs/CONTEXT-API.md，53模块冻结b950894，候选CI 40195294012通过；13正式
+本地fixture/0远程模型，旧默认实际POST全等，原句/字节/拒绝路径验证。首个审计
+驱动路径清单错误的尝试未接受，新目录重跑；报告results/v0.28.0/SUMMARY.md。

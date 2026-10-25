@@ -1,0 +1,170 @@
+{
+  "fixture_source_bytes": 24199,
+  "fixture_source_sha256": "53047c028df46fe98ff2ee3faba48474d728df5ade5b6f844e8bed6e9e9373d7",
+  "conditions_and_default_CLI_HTTP_records": [
+    {
+      "context_selector": "source-order",
+      "context_body_budget": 8000,
+      "context_body_utf8_bytes": 7990,
+      "context_json_bytes": 8086,
+      "request_body_bytes": 8793,
+      "prompt_sha256": "323620ee1a394b06a2e8228c72f1390cfa0f3684001b83db856ff31cfd76ea41",
+      "exposed_sentences": {
+        "doc:1": [
+          0
+        ]
+      }
+    },
+    {
+      "context_selector": "source-order",
+      "context_body_budget": 24000,
+      "context_body_utf8_bytes": 23980,
+      "context_json_bytes": 24105,
+      "request_body_bytes": 24818,
+      "prompt_sha256": "da312dd26644495478b0edec339fa1857728e6e895374c041edbfd09517b5135",
+      "exposed_sentences": {
+        "doc:1": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "context_selector": "source-order",
+      "context_body_budget": 48000,
+      "context_body_utf8_bytes": 24037,
+      "context_json_bytes": 24193,
+      "request_body_bytes": 24916,
+      "prompt_sha256": "6b9d567b519686aa145c9777c901b791fec66c17b9b25cb846093b87e4f4bef3",
+      "exposed_sentences": {
+        "doc:1": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "context_selector": "lexical",
+      "context_body_budget": 8000,
+      "context_body_utf8_bytes": 57,
+      "context_json_bytes": 155,
+      "request_body_bytes": 866,
+      "prompt_sha256": "cb2ce767a992c42fe80809eb55ef8a86888e654eb852aa7f1b5222d018b0210e",
+      "exposed_sentences": {
+        "doc:1": [
+          2
+        ]
+      }
+    },
+    {
+      "context_selector": "lexical",
+      "context_body_budget": 24000,
+      "context_body_utf8_bytes": 8047,
+      "context_json_bytes": 8174,
+      "request_body_bytes": 8891,
+      "prompt_sha256": "9de7d9fe59db3f72670ff23e7ac18c3395daaff3b78280b70c4983260c8614d3",
+      "exposed_sentences": {
+        "doc:1": [
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "context_selector": "lexical",
+      "context_body_budget": 48000,
+      "context_body_utf8_bytes": 24037,
+      "context_json_bytes": 24193,
+      "request_body_bytes": 24916,
+      "prompt_sha256": "6b9d567b519686aa145c9777c901b791fec66c17b9b25cb846093b87e4f4bef3",
+      "exposed_sentences": {
+        "doc:1": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "context_selector": "source-order",
+      "context_body_budget": 24000,
+      "context_body_utf8_bytes": 23980,
+      "context_json_bytes": 24105,
+      "request_body_bytes": 24818,
+      "prompt_sha256": "da312dd26644495478b0edec339fa1857728e6e895374c041edbfd09517b5135",
+      "exposed_sentences": {
+        "doc:1": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "context_selector": "source-order",
+      "context_body_budget": 24000,
+      "context_body_utf8_bytes": 23980,
+      "context_json_bytes": 24105,
+      "request_body_bytes": 24818,
+      "prompt_sha256": "da312dd26644495478b0edec339fa1857728e6e895374c041edbfd09517b5135",
+      "exposed_sentences": {
+        "doc:1": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "context_selector": "lexical",
+      "context_body_budget": 8000,
+      "context_body_utf8_bytes": 57,
+      "context_json_bytes": 155,
+      "request_body_bytes": 866,
+      "prompt_sha256": "cb2ce767a992c42fe80809eb55ef8a86888e654eb852aa7f1b5222d018b0210e",
+      "exposed_sentences": {
+        "doc:1": [
+          2
+        ]
+      }
+    },
+    {
+      "context_selector": "lexical",
+      "context_body_budget": 8000,
+      "context_body_utf8_bytes": 57,
+      "context_json_bytes": 155,
+      "request_body_bytes": 866,
+      "prompt_sha256": "cb2ce767a992c42fe80809eb55ef8a86888e654eb852aa7f1b5222d018b0210e",
+      "exposed_sentences": {
+        "doc:1": [
+          2
+        ]
+      }
+    },
+    {
+      "context_selector": "source-order",
+      "context_body_budget": 24000,
+      "context_body_utf8_bytes": 23980,
+      "context_json_bytes": 24105,
+      "request_body_bytes": 24818,
+      "prompt_sha256": "da312dd26644495478b0edec339fa1857728e6e895374c041edbfd09517b5135",
+      "exposed_sentences": {
+        "doc:1": [
+          0,
+          1
+        ]
+      }
+    }
+  ],
+  "local_fixture_model_HTTP_requests": 13,
+  "remote_model_calls": 0,
+  "invalid_Python_controls_rejected_before_request_or_write": 4,
+  "invalid_HTTP_controls_rejected_without_upstream": 3,
+  "omitted_citation_rejected_without_retry": true,
+  "default_wire_matches_actual_released_v026_responder_identical_to_v027": true,
+  "old_CLI_rejects_new_controls_without_upstream": true,
+  "old_wheel_sha256": "f81814cd74dd0105590a469b6a0a8aa6e7cebdde4dea7289725b1bd6ded4497c",
+  "primary_persistent_tree_unchanged": true,
+  "full_original_bytes_verified": true,
+  "answers_are_derived_and_not_primary": true,
+  "not_scientific_QA_or_model_quality": true
+}
