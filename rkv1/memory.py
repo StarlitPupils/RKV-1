@@ -46,6 +46,9 @@ def records(path,raw):
     elif path.lower().endswith('.xml'):
         from .memory_jats import records as jats_records
         yield from jats_records(raw,MAX_RECORD)
+    elif path.lower().endswith('.pubmedqa.json'):
+        from .memory_pubmedqa import records as pubmedqa_records
+        yield from pubmedqa_records(raw,MAX_RECORD)
     elif path.lower().endswith(".json"):
         from .memory_qasper import records as qasper_records
         yield from qasper_records(raw,MAX_RECORD)
@@ -54,7 +57,7 @@ def records(path,raw):
         text=raw.decode("utf-8",errors="strict")
         yield "file:"+path,path,[text],0,raw,"text"
     else:
-        raise ValueError("Memory evidence supports .txt/.md, SciFact .jsonl, QASPER .json or eLife JATS .xml only")
+        raise ValueError("Memory evidence supports .txt/.md, SciFact .jsonl, QASPER .json, PubMedQA .pubmedqa.json or eLife JATS .xml only")
 
 
 class Memory:

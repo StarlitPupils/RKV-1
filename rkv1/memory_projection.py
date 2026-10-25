@@ -13,7 +13,7 @@ PROFILE='compact-projection-v4'
 PROJECTION='qasper-paper-text-v1'
 MAX_REBINDINGS=4096
 KIND='qasper-json-member-v1'
-REBIND_KINDS={KIND,'elife-jats-article-v1'}
+REBIND_KINDS={KIND,'elife-jats-article-v1','pubmedqa-json-member-v1'}
 
 
 def fingerprint(title,sentences):
