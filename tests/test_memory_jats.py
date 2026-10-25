@@ -27,7 +27,7 @@ class JATSMemoryTests(unittest.TestCase):
 
     def test_duplicate_identity_schema_truncation_entities_and_size_rejected(self):
         raw=article()
-        bad=[raw[:-8],raw+b'x',raw.replace(b'10.7554/eLife.1',b'10.7554/eLife.2'),raw.replace(b'<body>',b'<body/><body>',1),
+        bad=[raw[:-8],raw+b'x',raw.replace(b'beacon.',b'&unbound;'),raw.replace(b'10.7554/eLife.1',b'10.7554/eLife.2'),raw.replace(b'<body>',b'<body/><body>',1),
              raw.replace(b'</article-meta>',b'<article-id pub-id-type="publisher-id">1</article-id></article-meta>'),
              raw.replace(b'article-type="research-article"',b'article-type="review"'),
              b'<!DOCTYPE article [<!ENTITY test "EXPAND">]>'+raw[raw.index(b'<article '):],

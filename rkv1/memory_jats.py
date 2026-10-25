@@ -18,6 +18,7 @@ def parse(raw):
     builder=ET.TreeBuilder();parser=expat.ParserCreate()
     parser.StartElementHandler=builder.start;parser.EndElementHandler=builder.end;parser.CharacterDataHandler=builder.data
     parser.EntityDeclHandler=reject;parser.ExternalEntityRefHandler=reject
+    parser.SkippedEntityHandler=reject
     parser.SetParamEntityParsing(expat.XML_PARAM_ENTITY_PARSING_NEVER)
     try:parser.Parse(raw,True);root=builder.close()
     except (expat.ExpatError,ET.ParseError) as exc:raise ValueError('Invalid JATS XML') from exc
