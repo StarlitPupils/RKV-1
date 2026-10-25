@@ -118,6 +118,8 @@ def main(argv=None):
     p.add_argument("memory");p.add_argument("question");p.add_argument("--top-k",type=int,default=5);p.add_argument("--snapshot")
     p=sub.add_parser("memory-answer")
     p.add_argument("memory");p.add_argument("question");p.add_argument("--top-k",type=int,default=5);p.add_argument("--snapshot")
+    p.add_argument('--context-selector',choices=('source-order','lexical'),default='source-order')
+    p.add_argument('--context-body-budget',type=int,choices=(8000,24000,48000),default=24000,help='Evidence body UTF-8 bytes; excludes title/JSON/prompt overhead')
     p=sub.add_parser("memory-stat")
     p.add_argument("memory")
     p=sub.add_parser("memory-serve")
@@ -183,7 +185,8 @@ def main(argv=None):
             elif args.command=="memory-search":result=Memory(args.memory).search(args.question,top_k=args.top_k,snapshot=args.snapshot)
             elif args.command=="memory-answer":
                 from .memory_model import answer
-                result=answer(Memory(args.memory),args.question,top_k=args.top_k,snapshot=args.snapshot)
+                result=answer(Memory(args.memory),args.question,top_k=args.top_k,snapshot=args.snapshot,
+                              context_selector=args.context_selector,context_body_budget=args.context_body_budget)
             elif args.command=="memory-serve":
                 from .memory_server import serve
                 serve(args.memory,args.port);return

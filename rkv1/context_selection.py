@@ -8,6 +8,9 @@ import sqlite3
 
 from .memory import STOP
 
+SELECTORS=('source-order','lexical')
+BODY_BUDGETS=(8000,24000,48000)
+
 
 def lexical_order(question, hits):
     """Rank paragraph bodies with query-local FTS5; unmatched rows follow source order."""

@@ -6,6 +6,7 @@ import threading
 
 from .memory import Memory
 from .memory_model import answer,configuration
+from .context_selection import SELECTORS,BODY_BUDGETS
 
 
 def serve(root,port=8765):
@@ -24,12 +25,15 @@ def serve(root,port=8765):
                 elif self.path=="/api/status":
                     try:c=configuration();model=c["model"]
                     except ValueError:model=None
-                    self.send(200,{"memory":Memory(root).stats(),"model":model})
+                    self.send(200,{"memory":Memory(root).stats(),"model":model,'context_api_version':2,
+                        'supported_clients':['memory-v1','memory-v2'],'context_selectors':list(SELECTORS),
+                        'context_body_budgets':list(BODY_BUDGETS),'default_context_selector':'source-order','default_context_body_budget':24000})
                 else:self.send(404,{"error":"Unknown resource"})
             except Exception:self.send(500,{"error":"Memory status unavailable"})
         def do_POST(self):
             origin=self.headers.get("Origin")
-            if (origin and origin!=f"http://127.0.0.1:{port}") or self.headers.get("X-RKV-Client")!="memory-v1":
+            client=self.headers.get('X-RKV-Client')
+            if (origin and origin!=f"http://127.0.0.1:{port}") or client not in ('memory-v1','memory-v2'):
                 self.send(403,{"error":"Use this loopback demo page"});return
             if self.headers.get("Content-Type","").split(";")[0]!="application/json":
                 self.send(415,{"error":"JSON required"});return
@@ -40,8 +44,10 @@ def serve(root,port=8765):
                 value=json.loads(self.rfile.read(length));q=value["question"];m=Memory(root)
                 if self.path=="/api/search":self.send(200,m.search(q))
                 elif self.path=="/api/answer":
+                    if client!='memory-v2' and ('context_selector' in value or 'context_body_budget' in value):
+                        self.send(400,{'error':'Context controls require the memory-v2 client protocol'});return
                     if not lock.acquire(blocking=False):self.send(409,{"error":"One model request is already running"});return
-                    try:self.send(200,answer(m,q))
+                    try:self.send(200,answer(m,q,context_selector=value.get('context_selector','source-order'),context_body_budget=value.get('context_body_budget',24000)))
                     finally:lock.release()
                 else:self.send(404,{"error":"Unknown action"})
             except (ValueError,KeyError,TypeError):self.send(400,{"error":"Invalid query or missing model configuration"})
