@@ -6,7 +6,37 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.23.0 · 独立真实论文正文修订基线
+## 当前版本：v0.24.0 · 精确论文片段身份与预算预检
+
+新增独立的`rkv1.jats_fragments`审计API：定位原始XML标题/摘要/正文p的连续字节，
+绑定父论文ID/完整父SHA与range SHA；不重写XML，不把派生text冒充原文。修复外部
+DTD未加载时跳过未解析实体的遗漏，改为拒绝。现有Memory默认/来源kind/格式不变。
+
+复用v0.23六篇/18版本、12真实修订，1854次范围校验含两种键规则重复，927个版本内
+投影单元均无元素id，xml-id全部回退位置。保留32变化/256KiB记录/2MiB CAS预算。
+
+| 记录规则 | v3乐观下界可过/12 | v4乐观下界可过/12 | 当前完整父校验可过/12 |
+|---|---:|---:|---:|
+| 整篇 | 0 | 0 | 0 |
+| 段落位置 | 0 | 1 | 0 |
+| 优先元素id | 0 | 1 | 0 |
+
+固定/Gear同计数；v4片段下界9次变化数、2次CAS字节超限。两种键规则解析18文件约
+0.273/0.276s，whole为0.057s；13状态未压缩定位候选1114496B，对整篇20904B。
+这只是相邻状态必要条件与部分候选账本，没有集成片段Memory、实际索引空间或查询
+加速。完整父校验费用不能省略。下一轮先测内容锚定键与重复段落规则，避免位置级联。
+
+![片段预算预检](results/v0.24.0/fragment-budget-preflight.png)
+
+9新进程、162次文件解析，26历史CAS快照全源核验；181测试通过、1权限跳过，0模型/
+新增独立论文/科学QA。全部51模块/HTML源一次、Gear整份旧实测库/元数据另计；公共
+运行时/实际FTS未全额计入，不与v0.23系统体积算净压缩率。仅本机温缓存。
+
+[冻结协议](docs/JATS-FRAGMENTS.md) · [详细实验报告](results/v0.24.0/SUMMARY.md) ·
+[逐转换规划](results/v0.24.0/plans.json) · [验证](results/v0.24.0/validation.json) ·
+[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.24.0)。
+
+## v0.23.0 · 独立真实论文正文修订基线
 
 新增eLife JATS原始XML整文件证据定位，标题/普通摘要/正文段落只作检索投影；
 完整原文、评审/图表等所有字节仍在CAS。内部实体声明与外部实体引用拒绝，外部

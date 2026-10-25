@@ -1,0 +1,3750 @@
+{
+  "plans": [
+    {
+      "case": "fixed",
+      "stage": 1,
+      "mode": "whole",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 371050,
+        "cas_bytes": 371050,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 371050,
+        "cas_bytes": 371050,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 1,
+      "mode": "whole",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 371050,
+        "cas_bytes": 371050,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 371050,
+        "cas_bytes": 371050,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 1,
+      "mode": "position",
+      "projection_rebinding": false,
+      "removed": 3,
+      "upserted": 63,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 310,
+      "current_records": 311,
+      "range_only_lower_bound": {
+        "record_reads": 123,
+        "record_bytes": 123456,
+        "cas_bytes": 8126464,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 123,
+        "record_bytes": 22840012,
+        "cas_bytes": 22840012,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 1,
+      "mode": "position",
+      "projection_rebinding": true,
+      "removed": 3,
+      "upserted": 62,
+      "rebound": 1,
+      "relocation_ranges": 0,
+      "prior_records": 310,
+      "current_records": 311,
+      "range_only_lower_bound": {
+        "record_reads": 123,
+        "record_bytes": 123456,
+        "cas_bytes": 8126464,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 124,
+        "record_bytes": 23045974,
+        "cas_bytes": 23045974,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 1,
+      "mode": "xml-id",
+      "projection_rebinding": false,
+      "removed": 3,
+      "upserted": 63,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 310,
+      "current_records": 311,
+      "range_only_lower_bound": {
+        "record_reads": 123,
+        "record_bytes": 123456,
+        "cas_bytes": 8126464,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 123,
+        "record_bytes": 22840012,
+        "cas_bytes": 22840012,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 1,
+      "mode": "xml-id",
+      "projection_rebinding": true,
+      "removed": 3,
+      "upserted": 62,
+      "rebound": 1,
+      "relocation_ranges": 0,
+      "prior_records": 310,
+      "current_records": 311,
+      "range_only_lower_bound": {
+        "record_reads": 123,
+        "record_bytes": 123456,
+        "cas_bytes": 8126464,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 124,
+        "record_bytes": 23045974,
+        "cas_bytes": 23045974,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 2,
+      "mode": "whole",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 352472,
+        "cas_bytes": 352472,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 352472,
+        "cas_bytes": 352472,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 2,
+      "mode": "whole",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 352472,
+        "cas_bytes": 352472,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 352472,
+        "cas_bytes": 352472,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 2,
+      "mode": "position",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 69,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 311,
+      "current_records": 315,
+      "range_only_lower_bound": {
+        "record_reads": 130,
+        "record_bytes": 120388,
+        "cas_bytes": 8650752,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 130,
+        "record_bytes": 23004556,
+        "cas_bytes": 23004556,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 2,
+      "mode": "position",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 65,
+      "rebound": 4,
+      "relocation_ranges": 0,
+      "prior_records": 311,
+      "current_records": 315,
+      "range_only_lower_bound": {
+        "record_reads": 126,
+        "record_bytes": 115565,
+        "cas_bytes": 8388608,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 130,
+        "record_bytes": 23098432,
+        "cas_bytes": 23098432,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 2,
+      "mode": "xml-id",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 69,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 311,
+      "current_records": 315,
+      "range_only_lower_bound": {
+        "record_reads": 130,
+        "record_bytes": 120388,
+        "cas_bytes": 8650752,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 130,
+        "record_bytes": 23004556,
+        "cas_bytes": 23004556,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 2,
+      "mode": "xml-id",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 65,
+      "rebound": 4,
+      "relocation_ranges": 0,
+      "prior_records": 311,
+      "current_records": 315,
+      "range_only_lower_bound": {
+        "record_reads": 126,
+        "record_bytes": 115565,
+        "cas_bytes": 8388608,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 130,
+        "record_bytes": 23098432,
+        "cas_bytes": 23098432,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 3,
+      "mode": "whole",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 565212,
+        "cas_bytes": 565212,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 565212,
+        "cas_bytes": 565212,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 3,
+      "mode": "whole",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 565212,
+        "cas_bytes": 565212,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 565212,
+        "cas_bytes": 565212,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 3,
+      "mode": "position",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 49,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 315,
+      "current_records": 315,
+      "range_only_lower_bound": {
+        "record_reads": 90,
+        "record_bytes": 164113,
+        "cas_bytes": 5963776,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 90,
+        "record_bytes": 25434540,
+        "cas_bytes": 25434540,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 3,
+      "mode": "position",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 33,
+      "rebound": 16,
+      "relocation_ranges": 0,
+      "prior_records": 315,
+      "current_records": 315,
+      "range_only_lower_bound": {
+        "record_reads": 66,
+        "record_bytes": 122400,
+        "cas_bytes": 4390912,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 82,
+        "record_bytes": 23207436,
+        "cas_bytes": 23207436,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 3,
+      "mode": "xml-id",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 49,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 315,
+      "current_records": 315,
+      "range_only_lower_bound": {
+        "record_reads": 90,
+        "record_bytes": 164113,
+        "cas_bytes": 5963776,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 90,
+        "record_bytes": 25434540,
+        "cas_bytes": 25434540,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 3,
+      "mode": "xml-id",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 33,
+      "rebound": 16,
+      "relocation_ranges": 0,
+      "prior_records": 315,
+      "current_records": 315,
+      "range_only_lower_bound": {
+        "record_reads": 66,
+        "record_bytes": 122400,
+        "cas_bytes": 4390912,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 82,
+        "record_bytes": 23207436,
+        "cas_bytes": 23207436,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 4,
+      "mode": "whole",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 326093,
+        "cas_bytes": 326093,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 326093,
+        "cas_bytes": 326093,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 4,
+      "mode": "whole",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 326093,
+        "cas_bytes": 326093,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 326093,
+        "cas_bytes": 326093,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 4,
+      "mode": "position",
+      "projection_rebinding": false,
+      "removed": 1,
+      "upserted": 51,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 315,
+      "current_records": 314,
+      "range_only_lower_bound": {
+        "record_reads": 101,
+        "record_bytes": 111639,
+        "cas_bytes": 6750208,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 101,
+        "record_bytes": 16447603,
+        "cas_bytes": 16447603,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 4,
+      "mode": "position",
+      "projection_rebinding": true,
+      "removed": 1,
+      "upserted": 50,
+      "rebound": 1,
+      "relocation_ranges": 0,
+      "prior_records": 315,
+      "current_records": 314,
+      "range_only_lower_bound": {
+        "record_reads": 101,
+        "record_bytes": 111639,
+        "cas_bytes": 6750208,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 102,
+        "record_bytes": 16630743,
+        "cas_bytes": 16630743,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 4,
+      "mode": "xml-id",
+      "projection_rebinding": false,
+      "removed": 1,
+      "upserted": 51,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 315,
+      "current_records": 314,
+      "range_only_lower_bound": {
+        "record_reads": 101,
+        "record_bytes": 111639,
+        "cas_bytes": 6750208,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 101,
+        "record_bytes": 16447603,
+        "cas_bytes": 16447603,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 4,
+      "mode": "xml-id",
+      "projection_rebinding": true,
+      "removed": 1,
+      "upserted": 50,
+      "rebound": 1,
+      "relocation_ranges": 0,
+      "prior_records": 315,
+      "current_records": 314,
+      "range_only_lower_bound": {
+        "record_reads": 101,
+        "record_bytes": 111639,
+        "cas_bytes": 6750208,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 102,
+        "record_bytes": 16630743,
+        "cas_bytes": 16630743,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 5,
+      "mode": "whole",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 457406,
+        "cas_bytes": 457406,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 457406,
+        "cas_bytes": 457406,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 5,
+      "mode": "whole",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 457406,
+        "cas_bytes": 457406,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 457406,
+        "cas_bytes": 457406,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 5,
+      "mode": "position",
+      "projection_rebinding": false,
+      "removed": 3,
+      "upserted": 44,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 314,
+      "current_records": 311,
+      "range_only_lower_bound": {
+        "record_reads": 89,
+        "record_bytes": 128614,
+        "cas_bytes": 5898240,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 89,
+        "record_bytes": 20249876,
+        "cas_bytes": 20249876,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 5,
+      "mode": "position",
+      "projection_rebinding": true,
+      "removed": 3,
+      "upserted": 43,
+      "rebound": 1,
+      "relocation_ranges": 0,
+      "prior_records": 314,
+      "current_records": 311,
+      "range_only_lower_bound": {
+        "record_reads": 89,
+        "record_bytes": 128614,
+        "cas_bytes": 5898240,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 90,
+        "record_bytes": 20513476,
+        "cas_bytes": 20513476,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 5,
+      "mode": "xml-id",
+      "projection_rebinding": false,
+      "removed": 3,
+      "upserted": 44,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 314,
+      "current_records": 311,
+      "range_only_lower_bound": {
+        "record_reads": 89,
+        "record_bytes": 128614,
+        "cas_bytes": 5898240,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 89,
+        "record_bytes": 20249876,
+        "cas_bytes": 20249876,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 5,
+      "mode": "xml-id",
+      "projection_rebinding": true,
+      "removed": 3,
+      "upserted": 43,
+      "rebound": 1,
+      "relocation_ranges": 0,
+      "prior_records": 314,
+      "current_records": 311,
+      "range_only_lower_bound": {
+        "record_reads": 89,
+        "record_bytes": 128614,
+        "cas_bytes": 5898240,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 90,
+        "record_bytes": 20513476,
+        "cas_bytes": 20513476,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 6,
+      "mode": "whole",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 448559,
+        "cas_bytes": 448559,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 448559,
+        "cas_bytes": 448559,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 6,
+      "mode": "whole",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 448559,
+        "cas_bytes": 448559,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 448559,
+        "cas_bytes": 448559,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 6,
+      "mode": "position",
+      "projection_rebinding": false,
+      "removed": 14,
+      "upserted": 21,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 311,
+      "current_records": 297,
+      "range_only_lower_bound": {
+        "record_reads": 52,
+        "record_bytes": 104369,
+        "cas_bytes": 3538944,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 52,
+        "record_bytes": 11516801,
+        "cas_bytes": 11516801,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 6,
+      "mode": "position",
+      "projection_rebinding": true,
+      "removed": 14,
+      "upserted": 16,
+      "rebound": 5,
+      "relocation_ranges": 0,
+      "prior_records": 311,
+      "current_records": 297,
+      "range_only_lower_bound": {
+        "record_reads": 46,
+        "record_bytes": 93825,
+        "cas_bytes": 3145728,
+        "reason": "budget-cas-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 51,
+        "record_bytes": 11344569,
+        "cas_bytes": 11344569,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 6,
+      "mode": "xml-id",
+      "projection_rebinding": false,
+      "removed": 14,
+      "upserted": 21,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 311,
+      "current_records": 297,
+      "range_only_lower_bound": {
+        "record_reads": 52,
+        "record_bytes": 104369,
+        "cas_bytes": 3538944,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 52,
+        "record_bytes": 11516801,
+        "cas_bytes": 11516801,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 6,
+      "mode": "xml-id",
+      "projection_rebinding": true,
+      "removed": 14,
+      "upserted": 16,
+      "rebound": 5,
+      "relocation_ranges": 0,
+      "prior_records": 311,
+      "current_records": 297,
+      "range_only_lower_bound": {
+        "record_reads": 46,
+        "record_bytes": 93825,
+        "cas_bytes": 3145728,
+        "reason": "budget-cas-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 51,
+        "record_bytes": 11344569,
+        "cas_bytes": 11344569,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 7,
+      "mode": "whole",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 379256,
+        "cas_bytes": 379256,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 379256,
+        "cas_bytes": 379256,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 7,
+      "mode": "whole",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 379256,
+        "cas_bytes": 379256,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 379256,
+        "cas_bytes": 379256,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 7,
+      "mode": "position",
+      "projection_rebinding": false,
+      "removed": 1,
+      "upserted": 62,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 297,
+      "current_records": 296,
+      "range_only_lower_bound": {
+        "record_reads": 89,
+        "record_bytes": 93990,
+        "cas_bytes": 5963776,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 89,
+        "record_bytes": 16893226,
+        "cas_bytes": 16893226,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 7,
+      "mode": "position",
+      "projection_rebinding": true,
+      "removed": 1,
+      "upserted": 41,
+      "rebound": 21,
+      "relocation_ranges": 0,
+      "prior_records": 297,
+      "current_records": 296,
+      "range_only_lower_bound": {
+        "record_reads": 83,
+        "record_bytes": 88292,
+        "cas_bytes": 5570560,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 104,
+        "record_bytes": 19394632,
+        "cas_bytes": 19394632,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 7,
+      "mode": "xml-id",
+      "projection_rebinding": false,
+      "removed": 1,
+      "upserted": 62,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 297,
+      "current_records": 296,
+      "range_only_lower_bound": {
+        "record_reads": 89,
+        "record_bytes": 93990,
+        "cas_bytes": 5963776,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 89,
+        "record_bytes": 16893226,
+        "cas_bytes": 16893226,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 7,
+      "mode": "xml-id",
+      "projection_rebinding": true,
+      "removed": 1,
+      "upserted": 41,
+      "rebound": 21,
+      "relocation_ranges": 0,
+      "prior_records": 297,
+      "current_records": 296,
+      "range_only_lower_bound": {
+        "record_reads": 83,
+        "record_bytes": 88292,
+        "cas_bytes": 5570560,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 104,
+        "record_bytes": 19394632,
+        "cas_bytes": 19394632,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 8,
+      "mode": "whole",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 387665,
+        "cas_bytes": 387665,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 387665,
+        "cas_bytes": 387665,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 8,
+      "mode": "whole",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 387665,
+        "cas_bytes": 387665,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 387665,
+        "cas_bytes": 387665,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 8,
+      "mode": "position",
+      "projection_rebinding": false,
+      "removed": 3,
+      "upserted": 66,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 296,
+      "current_records": 293,
+      "range_only_lower_bound": {
+        "record_reads": 123,
+        "record_bytes": 113495,
+        "cas_bytes": 8192000,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 123,
+        "record_bytes": 23859015,
+        "cas_bytes": 23859015,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 8,
+      "mode": "position",
+      "projection_rebinding": true,
+      "removed": 3,
+      "upserted": 54,
+      "rebound": 12,
+      "relocation_ranges": 0,
+      "prior_records": 296,
+      "current_records": 293,
+      "range_only_lower_bound": {
+        "record_reads": 111,
+        "record_bytes": 101970,
+        "cas_bytes": 7405568,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 123,
+        "record_bytes": 23788545,
+        "cas_bytes": 23788545,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 8,
+      "mode": "xml-id",
+      "projection_rebinding": false,
+      "removed": 3,
+      "upserted": 66,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 296,
+      "current_records": 293,
+      "range_only_lower_bound": {
+        "record_reads": 123,
+        "record_bytes": 113495,
+        "cas_bytes": 8192000,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 123,
+        "record_bytes": 23859015,
+        "cas_bytes": 23859015,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 8,
+      "mode": "xml-id",
+      "projection_rebinding": true,
+      "removed": 3,
+      "upserted": 54,
+      "rebound": 12,
+      "relocation_ranges": 0,
+      "prior_records": 296,
+      "current_records": 293,
+      "range_only_lower_bound": {
+        "record_reads": 111,
+        "record_bytes": 101970,
+        "cas_bytes": 7405568,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 123,
+        "record_bytes": 23788545,
+        "cas_bytes": 23788545,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 9,
+      "mode": "whole",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 548851,
+        "cas_bytes": 548851,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 548851,
+        "cas_bytes": 548851,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 9,
+      "mode": "whole",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 548851,
+        "cas_bytes": 548851,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 548851,
+        "cas_bytes": 548851,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 9,
+      "mode": "position",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 49,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 293,
+      "current_records": 293,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 2908,
+        "cas_bytes": 131072,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 548851,
+        "cas_bytes": 548851,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 9,
+      "mode": "position",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 48,
+      "relocation_ranges": 0,
+      "prior_records": 293,
+      "current_records": 293,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 2908,
+        "cas_bytes": 131072,
+        "reason": null,
+        "admissible": true
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 50,
+        "record_bytes": 13227379,
+        "cas_bytes": 13227379,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 9,
+      "mode": "xml-id",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 49,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 293,
+      "current_records": 293,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 2908,
+        "cas_bytes": 131072,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 548851,
+        "cas_bytes": 548851,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 9,
+      "mode": "xml-id",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 48,
+      "relocation_ranges": 0,
+      "prior_records": 293,
+      "current_records": 293,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 2908,
+        "cas_bytes": 131072,
+        "reason": null,
+        "admissible": true
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 50,
+        "record_bytes": 13227379,
+        "cas_bytes": 13227379,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 10,
+      "mode": "whole",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 347412,
+        "cas_bytes": 347412,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 347412,
+        "cas_bytes": 347412,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 10,
+      "mode": "whole",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 347412,
+        "cas_bytes": 347412,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 347412,
+        "cas_bytes": 347412,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 10,
+      "mode": "position",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 51,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 293,
+      "current_records": 293,
+      "range_only_lower_bound": {
+        "record_reads": 60,
+        "record_bytes": 78129,
+        "cas_bytes": 4063232,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 60,
+        "record_bytes": 10422360,
+        "cas_bytes": 10422360,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 10,
+      "mode": "position",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 26,
+      "rebound": 25,
+      "relocation_ranges": 0,
+      "prior_records": 293,
+      "current_records": 293,
+      "range_only_lower_bound": {
+        "record_reads": 52,
+        "record_bytes": 71450,
+        "cas_bytes": 3538944,
+        "reason": "budget-cas-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 77,
+        "record_bytes": 13139512,
+        "cas_bytes": 13139512,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 10,
+      "mode": "xml-id",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 51,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 293,
+      "current_records": 293,
+      "range_only_lower_bound": {
+        "record_reads": 60,
+        "record_bytes": 78129,
+        "cas_bytes": 4063232,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 60,
+        "record_bytes": 10422360,
+        "cas_bytes": 10422360,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 10,
+      "mode": "xml-id",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 26,
+      "rebound": 25,
+      "relocation_ranges": 0,
+      "prior_records": 293,
+      "current_records": 293,
+      "range_only_lower_bound": {
+        "record_reads": 52,
+        "record_bytes": 71450,
+        "cas_bytes": 3538944,
+        "reason": "budget-cas-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 77,
+        "record_bytes": 13139512,
+        "cas_bytes": 13139512,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 11,
+      "mode": "whole",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 495471,
+        "cas_bytes": 495471,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 495471,
+        "cas_bytes": 495471,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 11,
+      "mode": "whole",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 495471,
+        "cas_bytes": 495471,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 495471,
+        "cas_bytes": 495471,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 11,
+      "mode": "position",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 45,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 293,
+      "current_records": 294,
+      "range_only_lower_bound": {
+        "record_reads": 87,
+        "record_bytes": 147115,
+        "cas_bytes": 5832704,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 87,
+        "record_bytes": 21537124,
+        "cas_bytes": 21537124,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 11,
+      "mode": "position",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 42,
+      "rebound": 3,
+      "relocation_ranges": 0,
+      "prior_records": 293,
+      "current_records": 294,
+      "range_only_lower_bound": {
+        "record_reads": 83,
+        "record_bytes": 138125,
+        "cas_bytes": 5570560,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 86,
+        "record_bytes": 21241795,
+        "cas_bytes": 21241795,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 11,
+      "mode": "xml-id",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 45,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 293,
+      "current_records": 294,
+      "range_only_lower_bound": {
+        "record_reads": 87,
+        "record_bytes": 147115,
+        "cas_bytes": 5832704,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 87,
+        "record_bytes": 21537124,
+        "cas_bytes": 21537124,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 11,
+      "mode": "xml-id",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 42,
+      "rebound": 3,
+      "relocation_ranges": 0,
+      "prior_records": 293,
+      "current_records": 294,
+      "range_only_lower_bound": {
+        "record_reads": 83,
+        "record_bytes": 138125,
+        "cas_bytes": 5570560,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 86,
+        "record_bytes": 21241795,
+        "cas_bytes": 21241795,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 12,
+      "mode": "whole",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 430037,
+        "cas_bytes": 430037,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 430037,
+        "cas_bytes": 430037,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 12,
+      "mode": "whole",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 430037,
+        "cas_bytes": 430037,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 430037,
+        "cas_bytes": 430037,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 12,
+      "mode": "position",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 47,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 294,
+      "current_records": 320,
+      "range_only_lower_bound": {
+        "record_reads": 64,
+        "record_bytes": 106464,
+        "cas_bytes": 4325376,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 64,
+        "record_bytes": 13249751,
+        "cas_bytes": 13249751,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 12,
+      "mode": "position",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 39,
+      "rebound": 8,
+      "relocation_ranges": 0,
+      "prior_records": 294,
+      "current_records": 320,
+      "range_only_lower_bound": {
+        "record_reads": 52,
+        "record_bytes": 81488,
+        "cas_bytes": 3538944,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 60,
+        "record_bytes": 12232313,
+        "cas_bytes": 12232313,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 12,
+      "mode": "xml-id",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 47,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 294,
+      "current_records": 320,
+      "range_only_lower_bound": {
+        "record_reads": 64,
+        "record_bytes": 106464,
+        "cas_bytes": 4325376,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 64,
+        "record_bytes": 13249751,
+        "cas_bytes": 13249751,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 12,
+      "mode": "xml-id",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 39,
+      "rebound": 8,
+      "relocation_ranges": 0,
+      "prior_records": 294,
+      "current_records": 320,
+      "range_only_lower_bound": {
+        "record_reads": 52,
+        "record_bytes": 81488,
+        "cas_bytes": 3538944,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 60,
+        "record_bytes": 12232313,
+        "cas_bytes": 12232313,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 1,
+      "mode": "whole",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 371050,
+        "cas_bytes": 371050,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 371050,
+        "cas_bytes": 371050,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 1,
+      "mode": "whole",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 371050,
+        "cas_bytes": 371050,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 371050,
+        "cas_bytes": 371050,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 1,
+      "mode": "position",
+      "projection_rebinding": false,
+      "removed": 3,
+      "upserted": 63,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 310,
+      "current_records": 311,
+      "range_only_lower_bound": {
+        "record_reads": 123,
+        "record_bytes": 123456,
+        "cas_bytes": 20792710,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 123,
+        "record_bytes": 22840012,
+        "cas_bytes": 22840012,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 1,
+      "mode": "position",
+      "projection_rebinding": true,
+      "removed": 3,
+      "upserted": 62,
+      "rebound": 1,
+      "relocation_ranges": 0,
+      "prior_records": 310,
+      "current_records": 311,
+      "range_only_lower_bound": {
+        "record_reads": 123,
+        "record_bytes": 123456,
+        "cas_bytes": 20792710,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 124,
+        "record_bytes": 23045974,
+        "cas_bytes": 23045974,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 1,
+      "mode": "xml-id",
+      "projection_rebinding": false,
+      "removed": 3,
+      "upserted": 63,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 310,
+      "current_records": 311,
+      "range_only_lower_bound": {
+        "record_reads": 123,
+        "record_bytes": 123456,
+        "cas_bytes": 20792710,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 123,
+        "record_bytes": 22840012,
+        "cas_bytes": 22840012,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 1,
+      "mode": "xml-id",
+      "projection_rebinding": true,
+      "removed": 3,
+      "upserted": 62,
+      "rebound": 1,
+      "relocation_ranges": 0,
+      "prior_records": 310,
+      "current_records": 311,
+      "range_only_lower_bound": {
+        "record_reads": 123,
+        "record_bytes": 123456,
+        "cas_bytes": 20792710,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 124,
+        "record_bytes": 23045974,
+        "cas_bytes": 23045974,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 2,
+      "mode": "whole",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 352472,
+        "cas_bytes": 352472,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 352472,
+        "cas_bytes": 352472,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 2,
+      "mode": "whole",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 352472,
+        "cas_bytes": 352472,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 352472,
+        "cas_bytes": 352472,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 2,
+      "mode": "position",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 69,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 311,
+      "current_records": 315,
+      "range_only_lower_bound": {
+        "record_reads": 130,
+        "record_bytes": 120388,
+        "cas_bytes": 6333236,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 130,
+        "record_bytes": 23004556,
+        "cas_bytes": 23004556,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 2,
+      "mode": "position",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 65,
+      "rebound": 4,
+      "relocation_ranges": 0,
+      "prior_records": 311,
+      "current_records": 315,
+      "range_only_lower_bound": {
+        "record_reads": 126,
+        "record_bytes": 115565,
+        "cas_bytes": 6188408,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 130,
+        "record_bytes": 23098432,
+        "cas_bytes": 23098432,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 2,
+      "mode": "xml-id",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 69,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 311,
+      "current_records": 315,
+      "range_only_lower_bound": {
+        "record_reads": 130,
+        "record_bytes": 120388,
+        "cas_bytes": 6333236,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 130,
+        "record_bytes": 23004556,
+        "cas_bytes": 23004556,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 2,
+      "mode": "xml-id",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 65,
+      "rebound": 4,
+      "relocation_ranges": 0,
+      "prior_records": 311,
+      "current_records": 315,
+      "range_only_lower_bound": {
+        "record_reads": 126,
+        "record_bytes": 115565,
+        "cas_bytes": 6188408,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 130,
+        "record_bytes": 23098432,
+        "cas_bytes": 23098432,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 3,
+      "mode": "whole",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 565212,
+        "cas_bytes": 565212,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 565212,
+        "cas_bytes": 565212,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 3,
+      "mode": "whole",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 565212,
+        "cas_bytes": 565212,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 565212,
+        "cas_bytes": 565212,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 3,
+      "mode": "position",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 49,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 315,
+      "current_records": 315,
+      "range_only_lower_bound": {
+        "record_reads": 90,
+        "record_bytes": 164113,
+        "cas_bytes": 4500142,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 90,
+        "record_bytes": 25434540,
+        "cas_bytes": 25434540,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 3,
+      "mode": "position",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 33,
+      "rebound": 16,
+      "relocation_ranges": 0,
+      "prior_records": 315,
+      "current_records": 315,
+      "range_only_lower_bound": {
+        "record_reads": 66,
+        "record_bytes": 122400,
+        "cas_bytes": 3367960,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 82,
+        "record_bytes": 23207436,
+        "cas_bytes": 23207436,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 3,
+      "mode": "xml-id",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 49,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 315,
+      "current_records": 315,
+      "range_only_lower_bound": {
+        "record_reads": 90,
+        "record_bytes": 164113,
+        "cas_bytes": 4500142,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 90,
+        "record_bytes": 25434540,
+        "cas_bytes": 25434540,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 3,
+      "mode": "xml-id",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 33,
+      "rebound": 16,
+      "relocation_ranges": 0,
+      "prior_records": 315,
+      "current_records": 315,
+      "range_only_lower_bound": {
+        "record_reads": 66,
+        "record_bytes": 122400,
+        "cas_bytes": 3367960,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 82,
+        "record_bytes": 23207436,
+        "cas_bytes": 23207436,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 4,
+      "mode": "whole",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 326093,
+        "cas_bytes": 326093,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 326093,
+        "cas_bytes": 326093,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 4,
+      "mode": "whole",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 326093,
+        "cas_bytes": 326093,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 326093,
+        "cas_bytes": 326093,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 4,
+      "mode": "position",
+      "projection_rebinding": false,
+      "removed": 1,
+      "upserted": 51,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 315,
+      "current_records": 314,
+      "range_only_lower_bound": {
+        "record_reads": 101,
+        "record_bytes": 111639,
+        "cas_bytes": 8617293,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 101,
+        "record_bytes": 16447603,
+        "cas_bytes": 16447603,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 4,
+      "mode": "position",
+      "projection_rebinding": true,
+      "removed": 1,
+      "upserted": 50,
+      "rebound": 1,
+      "relocation_ranges": 0,
+      "prior_records": 315,
+      "current_records": 314,
+      "range_only_lower_bound": {
+        "record_reads": 101,
+        "record_bytes": 111639,
+        "cas_bytes": 8617293,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 102,
+        "record_bytes": 16630743,
+        "cas_bytes": 16630743,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 4,
+      "mode": "xml-id",
+      "projection_rebinding": false,
+      "removed": 1,
+      "upserted": 51,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 315,
+      "current_records": 314,
+      "range_only_lower_bound": {
+        "record_reads": 101,
+        "record_bytes": 111639,
+        "cas_bytes": 8617293,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 101,
+        "record_bytes": 16447603,
+        "cas_bytes": 16447603,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 4,
+      "mode": "xml-id",
+      "projection_rebinding": true,
+      "removed": 1,
+      "upserted": 50,
+      "rebound": 1,
+      "relocation_ranges": 0,
+      "prior_records": 315,
+      "current_records": 314,
+      "range_only_lower_bound": {
+        "record_reads": 101,
+        "record_bytes": 111639,
+        "cas_bytes": 8617293,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 102,
+        "record_bytes": 16630743,
+        "cas_bytes": 16630743,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 5,
+      "mode": "whole",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 457406,
+        "cas_bytes": 457406,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 457406,
+        "cas_bytes": 457406,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 5,
+      "mode": "whole",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 457406,
+        "cas_bytes": 457406,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 457406,
+        "cas_bytes": 457406,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 5,
+      "mode": "position",
+      "projection_rebinding": false,
+      "removed": 3,
+      "upserted": 44,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 314,
+      "current_records": 311,
+      "range_only_lower_bound": {
+        "record_reads": 89,
+        "record_bytes": 128614,
+        "cas_bytes": 18785683,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 89,
+        "record_bytes": 20249876,
+        "cas_bytes": 20249876,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 5,
+      "mode": "position",
+      "projection_rebinding": true,
+      "removed": 3,
+      "upserted": 43,
+      "rebound": 1,
+      "relocation_ranges": 0,
+      "prior_records": 314,
+      "current_records": 311,
+      "range_only_lower_bound": {
+        "record_reads": 89,
+        "record_bytes": 128614,
+        "cas_bytes": 18785683,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 90,
+        "record_bytes": 20513476,
+        "cas_bytes": 20513476,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 5,
+      "mode": "xml-id",
+      "projection_rebinding": false,
+      "removed": 3,
+      "upserted": 44,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 314,
+      "current_records": 311,
+      "range_only_lower_bound": {
+        "record_reads": 89,
+        "record_bytes": 128614,
+        "cas_bytes": 18785683,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 89,
+        "record_bytes": 20249876,
+        "cas_bytes": 20249876,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 5,
+      "mode": "xml-id",
+      "projection_rebinding": true,
+      "removed": 3,
+      "upserted": 43,
+      "rebound": 1,
+      "relocation_ranges": 0,
+      "prior_records": 314,
+      "current_records": 311,
+      "range_only_lower_bound": {
+        "record_reads": 89,
+        "record_bytes": 128614,
+        "cas_bytes": 18785683,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 90,
+        "record_bytes": 20513476,
+        "cas_bytes": 20513476,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 6,
+      "mode": "whole",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 448559,
+        "cas_bytes": 448559,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 448559,
+        "cas_bytes": 448559,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 6,
+      "mode": "whole",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 448559,
+        "cas_bytes": 448559,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 448559,
+        "cas_bytes": 448559,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 6,
+      "mode": "position",
+      "projection_rebinding": false,
+      "removed": 14,
+      "upserted": 21,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 311,
+      "current_records": 297,
+      "range_only_lower_bound": {
+        "record_reads": 52,
+        "record_bytes": 104369,
+        "cas_bytes": 11516801,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 52,
+        "record_bytes": 11516801,
+        "cas_bytes": 11516801,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 6,
+      "mode": "position",
+      "projection_rebinding": true,
+      "removed": 14,
+      "upserted": 16,
+      "rebound": 5,
+      "relocation_ranges": 0,
+      "prior_records": 311,
+      "current_records": 297,
+      "range_only_lower_bound": {
+        "record_reads": 46,
+        "record_bytes": 93825,
+        "cas_bytes": 10171124,
+        "reason": "budget-cas-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 51,
+        "record_bytes": 11344569,
+        "cas_bytes": 11344569,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 6,
+      "mode": "xml-id",
+      "projection_rebinding": false,
+      "removed": 14,
+      "upserted": 21,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 311,
+      "current_records": 297,
+      "range_only_lower_bound": {
+        "record_reads": 52,
+        "record_bytes": 104369,
+        "cas_bytes": 11516801,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 52,
+        "record_bytes": 11516801,
+        "cas_bytes": 11516801,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 6,
+      "mode": "xml-id",
+      "projection_rebinding": true,
+      "removed": 14,
+      "upserted": 16,
+      "rebound": 5,
+      "relocation_ranges": 0,
+      "prior_records": 311,
+      "current_records": 297,
+      "range_only_lower_bound": {
+        "record_reads": 46,
+        "record_bytes": 93825,
+        "cas_bytes": 10171124,
+        "reason": "budget-cas-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 51,
+        "record_bytes": 11344569,
+        "cas_bytes": 11344569,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 7,
+      "mode": "whole",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 379256,
+        "cas_bytes": 379256,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 379256,
+        "cas_bytes": 379256,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 7,
+      "mode": "whole",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 379256,
+        "cas_bytes": 379256,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 379256,
+        "cas_bytes": 379256,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 7,
+      "mode": "position",
+      "projection_rebinding": false,
+      "removed": 1,
+      "upserted": 62,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 297,
+      "current_records": 296,
+      "range_only_lower_bound": {
+        "record_reads": 89,
+        "record_bytes": 93990,
+        "cas_bytes": 15407281,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 89,
+        "record_bytes": 16893226,
+        "cas_bytes": 16893226,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 7,
+      "mode": "position",
+      "projection_rebinding": true,
+      "removed": 1,
+      "upserted": 41,
+      "rebound": 21,
+      "relocation_ranges": 0,
+      "prior_records": 297,
+      "current_records": 296,
+      "range_only_lower_bound": {
+        "record_reads": 83,
+        "record_bytes": 88292,
+        "cas_bytes": 14368576,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 104,
+        "record_bytes": 19394632,
+        "cas_bytes": 19394632,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 7,
+      "mode": "xml-id",
+      "projection_rebinding": false,
+      "removed": 1,
+      "upserted": 62,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 297,
+      "current_records": 296,
+      "range_only_lower_bound": {
+        "record_reads": 89,
+        "record_bytes": 93990,
+        "cas_bytes": 15407281,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 89,
+        "record_bytes": 16893226,
+        "cas_bytes": 16893226,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 7,
+      "mode": "xml-id",
+      "projection_rebinding": true,
+      "removed": 1,
+      "upserted": 41,
+      "rebound": 21,
+      "relocation_ranges": 0,
+      "prior_records": 297,
+      "current_records": 296,
+      "range_only_lower_bound": {
+        "record_reads": 83,
+        "record_bytes": 88292,
+        "cas_bytes": 14368576,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 104,
+        "record_bytes": 19394632,
+        "cas_bytes": 19394632,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 8,
+      "mode": "whole",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 387665,
+        "cas_bytes": 387665,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 387665,
+        "cas_bytes": 387665,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 8,
+      "mode": "whole",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 387665,
+        "cas_bytes": 387665,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 387665,
+        "cas_bytes": 387665,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 8,
+      "mode": "position",
+      "projection_rebinding": false,
+      "removed": 3,
+      "upserted": 66,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 296,
+      "current_records": 293,
+      "range_only_lower_bound": {
+        "record_reads": 123,
+        "record_bytes": 113495,
+        "cas_bytes": 5789061,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 123,
+        "record_bytes": 23859015,
+        "cas_bytes": 23859015,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 8,
+      "mode": "position",
+      "projection_rebinding": true,
+      "removed": 3,
+      "upserted": 54,
+      "rebound": 12,
+      "relocation_ranges": 0,
+      "prior_records": 296,
+      "current_records": 293,
+      "range_only_lower_bound": {
+        "record_reads": 111,
+        "record_bytes": 101970,
+        "cas_bytes": 5206497,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 123,
+        "record_bytes": 23788545,
+        "cas_bytes": 23788545,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 8,
+      "mode": "xml-id",
+      "projection_rebinding": false,
+      "removed": 3,
+      "upserted": 66,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 296,
+      "current_records": 293,
+      "range_only_lower_bound": {
+        "record_reads": 123,
+        "record_bytes": 113495,
+        "cas_bytes": 5789061,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 123,
+        "record_bytes": 23859015,
+        "cas_bytes": 23859015,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 8,
+      "mode": "xml-id",
+      "projection_rebinding": true,
+      "removed": 3,
+      "upserted": 54,
+      "rebound": 12,
+      "relocation_ranges": 0,
+      "prior_records": 296,
+      "current_records": 293,
+      "range_only_lower_bound": {
+        "record_reads": 111,
+        "record_bytes": 101970,
+        "cas_bytes": 5206497,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 123,
+        "record_bytes": 23788545,
+        "cas_bytes": 23788545,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 9,
+      "mode": "whole",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 548851,
+        "cas_bytes": 548851,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 548851,
+        "cas_bytes": 548851,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 9,
+      "mode": "whole",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 548851,
+        "cas_bytes": 548851,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 548851,
+        "cas_bytes": 548851,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 9,
+      "mode": "position",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 49,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 293,
+      "current_records": 293,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 2908,
+        "cas_bytes": 72586,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 548851,
+        "cas_bytes": 548851,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 9,
+      "mode": "position",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 48,
+      "relocation_ranges": 0,
+      "prior_records": 293,
+      "current_records": 293,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 2908,
+        "cas_bytes": 72586,
+        "reason": null,
+        "admissible": true
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 50,
+        "record_bytes": 13227379,
+        "cas_bytes": 13227379,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 9,
+      "mode": "xml-id",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 49,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 293,
+      "current_records": 293,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 2908,
+        "cas_bytes": 72586,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 548851,
+        "cas_bytes": 548851,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 9,
+      "mode": "xml-id",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 48,
+      "relocation_ranges": 0,
+      "prior_records": 293,
+      "current_records": 293,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 2908,
+        "cas_bytes": 72586,
+        "reason": null,
+        "admissible": true
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 50,
+        "record_bytes": 13227379,
+        "cas_bytes": 13227379,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 10,
+      "mode": "whole",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 347412,
+        "cas_bytes": 347412,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 347412,
+        "cas_bytes": 347412,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 10,
+      "mode": "whole",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 347412,
+        "cas_bytes": 347412,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 347412,
+        "cas_bytes": 347412,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 10,
+      "mode": "position",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 51,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 293,
+      "current_records": 293,
+      "range_only_lower_bound": {
+        "record_reads": 60,
+        "record_bytes": 78129,
+        "cas_bytes": 5313990,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 60,
+        "record_bytes": 10422360,
+        "cas_bytes": 10422360,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 10,
+      "mode": "position",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 26,
+      "rebound": 25,
+      "relocation_ranges": 0,
+      "prior_records": 293,
+      "current_records": 293,
+      "range_only_lower_bound": {
+        "record_reads": 52,
+        "record_bytes": 71450,
+        "cas_bytes": 4605458,
+        "reason": "budget-cas-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 77,
+        "record_bytes": 13139512,
+        "cas_bytes": 13139512,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 10,
+      "mode": "xml-id",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 51,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 293,
+      "current_records": 293,
+      "range_only_lower_bound": {
+        "record_reads": 60,
+        "record_bytes": 78129,
+        "cas_bytes": 5313990,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 60,
+        "record_bytes": 10422360,
+        "cas_bytes": 10422360,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 10,
+      "mode": "xml-id",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 26,
+      "rebound": 25,
+      "relocation_ranges": 0,
+      "prior_records": 293,
+      "current_records": 293,
+      "range_only_lower_bound": {
+        "record_reads": 52,
+        "record_bytes": 71450,
+        "cas_bytes": 4605458,
+        "reason": "budget-cas-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 77,
+        "record_bytes": 13139512,
+        "cas_bytes": 13139512,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 11,
+      "mode": "whole",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 495471,
+        "cas_bytes": 495471,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 495471,
+        "cas_bytes": 495471,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 11,
+      "mode": "whole",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 495471,
+        "cas_bytes": 495471,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 495471,
+        "cas_bytes": 495471,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 11,
+      "mode": "position",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 45,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 293,
+      "current_records": 294,
+      "range_only_lower_bound": {
+        "record_reads": 87,
+        "record_bytes": 147115,
+        "cas_bytes": 20072931,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 87,
+        "record_bytes": 21537124,
+        "cas_bytes": 21537124,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 11,
+      "mode": "position",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 42,
+      "rebound": 3,
+      "relocation_ranges": 0,
+      "prior_records": 293,
+      "current_records": 294,
+      "range_only_lower_bound": {
+        "record_reads": 83,
+        "record_bytes": 138125,
+        "cas_bytes": 19150091,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 86,
+        "record_bytes": 21241795,
+        "cas_bytes": 21241795,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 11,
+      "mode": "xml-id",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 45,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 293,
+      "current_records": 294,
+      "range_only_lower_bound": {
+        "record_reads": 87,
+        "record_bytes": 147115,
+        "cas_bytes": 20072931,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 87,
+        "record_bytes": 21537124,
+        "cas_bytes": 21537124,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 11,
+      "mode": "xml-id",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 42,
+      "rebound": 3,
+      "relocation_ranges": 0,
+      "prior_records": 293,
+      "current_records": 294,
+      "range_only_lower_bound": {
+        "record_reads": 83,
+        "record_bytes": 138125,
+        "cas_bytes": 19150091,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 86,
+        "record_bytes": 21241795,
+        "cas_bytes": 21241795,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 12,
+      "mode": "whole",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 430037,
+        "cas_bytes": 430037,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 430037,
+        "cas_bytes": 430037,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 12,
+      "mode": "whole",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 1,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 6,
+      "current_records": 6,
+      "range_only_lower_bound": {
+        "record_reads": 2,
+        "record_bytes": 430037,
+        "cas_bytes": 430037,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 2,
+        "record_bytes": 430037,
+        "cas_bytes": 430037,
+        "reason": "budget-record-bytes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 12,
+      "mode": "position",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 47,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 294,
+      "current_records": 320,
+      "range_only_lower_bound": {
+        "record_reads": 64,
+        "record_bytes": 106464,
+        "cas_bytes": 13249751,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 64,
+        "record_bytes": 13249751,
+        "cas_bytes": 13249751,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 12,
+      "mode": "position",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 39,
+      "rebound": 8,
+      "relocation_ranges": 0,
+      "prior_records": 294,
+      "current_records": 320,
+      "range_only_lower_bound": {
+        "record_reads": 52,
+        "record_bytes": 81488,
+        "cas_bytes": 10669529,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 60,
+        "record_bytes": 12232313,
+        "cas_bytes": 12232313,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 12,
+      "mode": "xml-id",
+      "projection_rebinding": false,
+      "removed": 0,
+      "upserted": 47,
+      "rebound": 0,
+      "relocation_ranges": 0,
+      "prior_records": 294,
+      "current_records": 320,
+      "range_only_lower_bound": {
+        "record_reads": 64,
+        "record_bytes": 106464,
+        "cas_bytes": 13249751,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 64,
+        "record_bytes": 13249751,
+        "cas_bytes": 13249751,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 12,
+      "mode": "xml-id",
+      "projection_rebinding": true,
+      "removed": 0,
+      "upserted": 39,
+      "rebound": 8,
+      "relocation_ranges": 0,
+      "prior_records": 294,
+      "current_records": 320,
+      "range_only_lower_bound": {
+        "record_reads": 52,
+        "record_bytes": 81488,
+        "cas_bytes": 10669529,
+        "reason": "budget-changes",
+        "admissible": false
+      },
+      "current_full_parent_verifier": {
+        "record_reads": 60,
+        "record_bytes": 12232313,
+        "cas_bytes": 12232313,
+        "reason": "budget-changes",
+        "admissible": false
+      }
+    }
+  ],
+  "adjacent_state_necessary_condition_only": true,
+  "not_actual_index_savings": true
+}

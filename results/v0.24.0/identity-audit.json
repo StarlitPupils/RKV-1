@@ -1,0 +1,960 @@
+{
+  "inputs": {
+    "repository": "elifesciences/elife-article-xml",
+    "commit": "ed4962931df3720e9e96cf93fb165a754d1df212",
+    "selection": "First six numeric preprint IDs with v1/v2/v3 at fixed commit, each original file <=1 MiB; before content/performance inspection",
+    "papers": [
+      {
+        "id": "85562",
+        "versions": [
+          {
+            "path": "elife-preprint-85562-v1.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "85783f0dd1ae5d3772065e9b5f54dd1988092a8d",
+            "size": 165088,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-85562-v1.xml",
+            "version": 1,
+            "sha256": "c2755a3d61d4f0c71f86254d05ab25fc77016ccc6dd0341d2689a2aab3f684cf",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          },
+          {
+            "path": "elife-preprint-85562-v2.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "9026780629c31551293b0e6247664779aaf2434f",
+            "size": 205962,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-85562-v2.xml",
+            "version": 2,
+            "sha256": "af41b7288a284a833d12021df7acac07be93f22170fecb9caa4bde3f57199074",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          },
+          {
+            "path": "elife-preprint-85562-v3.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "3b8efc969b213ab1d290b906cb4243f4a1b62823",
+            "size": 173294,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-85562-v3.xml",
+            "version": 3,
+            "sha256": "4f8e162e154f33abb547bc34b29e3288c530673a9146feccc6cabb6c0628863d",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "86668",
+        "versions": [
+          {
+            "path": "elife-preprint-86668-v1.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "a29dd89133ae75b85fe3dfd6e81cc61f5c58040b",
+            "size": 152767,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86668-v1.xml",
+            "version": 1,
+            "sha256": "038fcd801afb475ad970fcc17eda24e6d7d52c21bc2d74e4ab41e7f75706d83a",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          },
+          {
+            "path": "elife-preprint-86668-v2.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "d9c32fb4792f5ff1caa30cd70be1b983275a1b59",
+            "size": 199705,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86668-v2.xml",
+            "version": 2,
+            "sha256": "b65b8d4224e6fd02774d7c21595311f18dcd673e669701c6b8f46e2154466729",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          },
+          {
+            "path": "elife-preprint-86668-v3.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "780dc42d220fa91525d796d7fdc7c884065dbbd2",
+            "size": 187960,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86668-v3.xml",
+            "version": 3,
+            "sha256": "65b1aca5b8422c41231051d10ee9a81397546c0faa93ffc036e664ec14e8f343",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "86670",
+        "versions": [
+          {
+            "path": "elife-preprint-86670-v1.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "7ab081b1ac2972a6ce5ef2c7fcb6f0b2a8938066",
+            "size": 280497,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86670-v1.xml",
+            "version": 1,
+            "sha256": "093538c054423c1048c95a6915f8a283331b1232be63c3ca12153060bf964360",
+            "license_urls": [
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ]
+          },
+          {
+            "path": "elife-preprint-86670-v2.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "5a5195fdbef8f4519faf431240d22f25af3ed428",
+            "size": 284715,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86670-v2.xml",
+            "version": 2,
+            "sha256": "7aa6eae05e2600979856e85e2bcec4e637cab475d08be511a1d0bb995f5122c4",
+            "license_urls": [
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ]
+          },
+          {
+            "path": "elife-preprint-86670-v3.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "75a07a62c4a741f261e94ecd4f8fe9d29e932be8",
+            "size": 264136,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86670-v3.xml",
+            "version": 3,
+            "sha256": "af320f1ee18f611c85f5f3e8b6b87f406b3b5fb30afc463bea56d00341285356",
+            "license_urls": [
+              "https://creativecommons.org/publicdomain/zero/1.0/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "86689",
+        "versions": [
+          {
+            "path": "elife-preprint-86689-v1.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "b497a214bcd5795ad2401eae2785b648899e9845",
+            "size": 142953,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86689-v1.xml",
+            "version": 1,
+            "sha256": "8eb186f32d4c7c058dffaf642caa67836946fac49def10edebe35a2cc0fc5d90",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          },
+          {
+            "path": "elife-preprint-86689-v2.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "ca42bef8e0d4406037a5438965016125fcc1a6f8",
+            "size": 183140,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86689-v2.xml",
+            "version": 2,
+            "sha256": "2cb6d697859272531f2dbba37e0c162c82d7c2250cc927307240f9c4dec2258b",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          },
+          {
+            "path": "elife-preprint-86689-v3.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "e118c32ad9278cf9b59636e11b64ad01a7de2185",
+            "size": 164272,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86689-v3.xml",
+            "version": 3,
+            "sha256": "bf9d648e342a5cf6e9952a5255ebe08e24c02436785d640add5e1d4be3eec9ff",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "86721",
+        "versions": [
+          {
+            "path": "elife-preprint-86721-v1.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "b41c7a028e2725203e6c3cdfb8b4334ac842a11f",
+            "size": 193806,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86721-v1.xml",
+            "version": 1,
+            "sha256": "b138a11f3986307811a5cd07a2cd8600ba9fa6ba6ea63c8c07adb38d3f80d6e6",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          },
+          {
+            "path": "elife-preprint-86721-v2.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "140a9994326e3c381911da8a3860270ff6bdf1be",
+            "size": 263600,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86721-v2.xml",
+            "version": 2,
+            "sha256": "80be9b25a51703adaf5d571153501e2044039b0e55e71e7c76c7a74ef53e686d",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          },
+          {
+            "path": "elife-preprint-86721-v3.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "e611790d0ddd24195d32d039a78b0909180d0842",
+            "size": 231871,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86721-v3.xml",
+            "version": 3,
+            "sha256": "9cf20918397a3a1178f49da617deec08a204ace38f48973c07ea726a08a52a1d",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "86805",
+        "versions": [
+          {
+            "path": "elife-preprint-86805-v1.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "ed1659e9569a21d0965f90d6a824914e6dc945fe",
+            "size": 213870,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86805-v1.xml",
+            "version": 1,
+            "sha256": "d99f34776ed8ed2ed26091828e29a06566e08f3f725f3d13026f1691198ef782",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          },
+          {
+            "path": "elife-preprint-86805-v2.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "d54d59074a15616d1547eb539dc3b3a8f97fa19b",
+            "size": 234689,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86805-v2.xml",
+            "version": 2,
+            "sha256": "b1683f5c2ff7ff7da75e2975781507c6a835a6dc5e253eba0dc51b32afbaf5e7",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          },
+          {
+            "path": "elife-preprint-86805-v3.xml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "d33afb3d051d819bf8a2221542452915022bd6a4",
+            "size": 195348,
+            "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/ed4962931df3720e9e96cf93fb165a754d1df212/preprints/elife-preprint-86805-v3.xml",
+            "version": 3,
+            "sha256": "8a6e3c0a603a5df51bd27960554e27ee5fc767940dd9a53f1923a8d3f661759d",
+            "license_urls": [
+              "https://creativecommons.org/licenses/by/4.0/"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "files": [
+    {
+      "path": "elife-preprint-85562-v1.xml",
+      "sha256": "c2755a3d61d4f0c71f86254d05ab25fc77016ccc6dd0341d2689a2aab3f684cf",
+      "mode": "position",
+      "units": 62,
+      "roles": {
+        "title": 1,
+        "abstract": 4,
+        "body": 57
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "774758d7b60510f2484b229cc31da59861aeb875da425362ff787904b1622917",
+      "descriptor_bytes": 65770,
+      "locator_metadata_json_bytes": 17512,
+      "text_utf8_bytes": 47637,
+      "covered_original_bytes": 59583,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-85562-v1.xml",
+      "sha256": "c2755a3d61d4f0c71f86254d05ab25fc77016ccc6dd0341d2689a2aab3f684cf",
+      "mode": "xml-id",
+      "units": 62,
+      "roles": {
+        "title": 1,
+        "abstract": 4,
+        "body": 57
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "774758d7b60510f2484b229cc31da59861aeb875da425362ff787904b1622917",
+      "descriptor_bytes": 65770,
+      "locator_metadata_json_bytes": 17512,
+      "text_utf8_bytes": 47637,
+      "covered_original_bytes": 59583,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-85562-v2.xml",
+      "sha256": "af41b7288a284a833d12021df7acac07be93f22170fecb9caa4bde3f57199074",
+      "mode": "position",
+      "units": 63,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 61
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "eb1a4376330abd38a15da5b1fafc98291ab8433484da185fee970085bb519fcf",
+      "descriptor_bytes": 70112,
+      "locator_metadata_json_bytes": 17781,
+      "text_utf8_bytes": 51701,
+      "covered_original_bytes": 64223,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-85562-v2.xml",
+      "sha256": "af41b7288a284a833d12021df7acac07be93f22170fecb9caa4bde3f57199074",
+      "mode": "xml-id",
+      "units": 63,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 61
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "eb1a4376330abd38a15da5b1fafc98291ab8433484da185fee970085bb519fcf",
+      "descriptor_bytes": 70112,
+      "locator_metadata_json_bytes": 17781,
+      "text_utf8_bytes": 51701,
+      "covered_original_bytes": 64223,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-85562-v3.xml",
+      "sha256": "4f8e162e154f33abb547bc34b29e3288c530673a9146feccc6cabb6c0628863d",
+      "mode": "position",
+      "units": 62,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 60
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "4b54aba3125d7b694b0aa2a89a519bf29ba74a68692afb6f52eb6b2162ec9a5f",
+      "descriptor_bytes": 69755,
+      "locator_metadata_json_bytes": 17499,
+      "text_utf8_bytes": 51636,
+      "covered_original_bytes": 64635,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-85562-v3.xml",
+      "sha256": "4f8e162e154f33abb547bc34b29e3288c530673a9146feccc6cabb6c0628863d",
+      "mode": "xml-id",
+      "units": 62,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 60
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "4b54aba3125d7b694b0aa2a89a519bf29ba74a68692afb6f52eb6b2162ec9a5f",
+      "descriptor_bytes": 69755,
+      "locator_metadata_json_bytes": 17499,
+      "text_utf8_bytes": 51636,
+      "covered_original_bytes": 64635,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86668-v1.xml",
+      "sha256": "038fcd801afb475ad970fcc17eda24e6d7d52c21bc2d74e4ab41e7f75706d83a",
+      "mode": "position",
+      "units": 65,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 63
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "4cb4aef345c15c5c706145ad8c3dd04be6acc04e039d11a126e11f91423089e7",
+      "descriptor_bytes": 70610,
+      "locator_metadata_json_bytes": 18340,
+      "text_utf8_bytes": 51620,
+      "covered_original_bytes": 59914,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86668-v1.xml",
+      "sha256": "038fcd801afb475ad970fcc17eda24e6d7d52c21bc2d74e4ab41e7f75706d83a",
+      "mode": "xml-id",
+      "units": 65,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 63
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "4cb4aef345c15c5c706145ad8c3dd04be6acc04e039d11a126e11f91423089e7",
+      "descriptor_bytes": 70610,
+      "locator_metadata_json_bytes": 18340,
+      "text_utf8_bytes": 51620,
+      "covered_original_bytes": 59914,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86668-v2.xml",
+      "sha256": "b65b8d4224e6fd02774d7c21595311f18dcd673e669701c6b8f46e2154466729",
+      "mode": "position",
+      "units": 69,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 67
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "b3bf8801e7e791edb1050be6fe3bdce4a9019ad87d917e7ee237f5c654699aa7",
+      "descriptor_bytes": 72593,
+      "locator_metadata_json_bytes": 19470,
+      "text_utf8_bytes": 52433,
+      "covered_original_bytes": 62086,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86668-v2.xml",
+      "sha256": "b65b8d4224e6fd02774d7c21595311f18dcd673e669701c6b8f46e2154466729",
+      "mode": "xml-id",
+      "units": 69,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 67
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "b3bf8801e7e791edb1050be6fe3bdce4a9019ad87d917e7ee237f5c654699aa7",
+      "descriptor_bytes": 72593,
+      "locator_metadata_json_bytes": 19470,
+      "text_utf8_bytes": 52433,
+      "covered_original_bytes": 62086,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86668-v3.xml",
+      "sha256": "65b1aca5b8422c41231051d10ee9a81397546c0faa93ffc036e664ec14e8f343",
+      "mode": "position",
+      "units": 66,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 64
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "ca501aa21e3c9230a9f894a64d8b14f5746922473cf40797e1b1b5d7a941d070",
+      "descriptor_bytes": 71522,
+      "locator_metadata_json_bytes": 18626,
+      "text_utf8_bytes": 52236,
+      "covered_original_bytes": 60867,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86668-v3.xml",
+      "sha256": "65b1aca5b8422c41231051d10ee9a81397546c0faa93ffc036e664ec14e8f343",
+      "mode": "xml-id",
+      "units": 66,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 64
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "ca501aa21e3c9230a9f894a64d8b14f5746922473cf40797e1b1b5d7a941d070",
+      "descriptor_bytes": 71522,
+      "locator_metadata_json_bytes": 18626,
+      "text_utf8_bytes": 52236,
+      "covered_original_bytes": 60867,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86670-v1.xml",
+      "sha256": "093538c054423c1048c95a6915f8a283331b1232be63c3ca12153060bf964360",
+      "mode": "position",
+      "units": 49,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 47
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "8f05021f43921d251730d023d1e637caa9a506a268dfe21b3a1d73811455a305",
+      "descriptor_bytes": 79529,
+      "locator_metadata_json_bytes": 13843,
+      "text_utf8_bytes": 65196,
+      "covered_original_bytes": 83942,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86670-v1.xml",
+      "sha256": "093538c054423c1048c95a6915f8a283331b1232be63c3ca12153060bf964360",
+      "mode": "xml-id",
+      "units": 49,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 47
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "8f05021f43921d251730d023d1e637caa9a506a268dfe21b3a1d73811455a305",
+      "descriptor_bytes": 79529,
+      "locator_metadata_json_bytes": 13843,
+      "text_utf8_bytes": 65196,
+      "covered_original_bytes": 83942,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86670-v2.xml",
+      "sha256": "7aa6eae05e2600979856e85e2bcec4e637cab475d08be511a1d0bb995f5122c4",
+      "mode": "position",
+      "units": 49,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 47
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "ae0f14e936abeb5f2f940bf7b67468bb018142a769f4569780c029dcbff7aca0",
+      "descriptor_bytes": 82135,
+      "locator_metadata_json_bytes": 13847,
+      "text_utf8_bytes": 67798,
+      "covered_original_bytes": 87429,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86670-v2.xml",
+      "sha256": "7aa6eae05e2600979856e85e2bcec4e637cab475d08be511a1d0bb995f5122c4",
+      "mode": "xml-id",
+      "units": 49,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 47
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "ae0f14e936abeb5f2f940bf7b67468bb018142a769f4569780c029dcbff7aca0",
+      "descriptor_bytes": 82135,
+      "locator_metadata_json_bytes": 13847,
+      "text_utf8_bytes": 67798,
+      "covered_original_bytes": 87429,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86670-v3.xml",
+      "sha256": "af320f1ee18f611c85f5f3e8b6b87f406b3b5fb30afc463bea56d00341285356",
+      "mode": "position",
+      "units": 49,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 47
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "801f1d2764d3038ac8a6da905b3a38c5edcaef7806326bf986abb554ce96e8ae",
+      "descriptor_bytes": 82272,
+      "locator_metadata_json_bytes": 13849,
+      "text_utf8_bytes": 67933,
+      "covered_original_bytes": 87615,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86670-v3.xml",
+      "sha256": "af320f1ee18f611c85f5f3e8b6b87f406b3b5fb30afc463bea56d00341285356",
+      "mode": "xml-id",
+      "units": 49,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 47
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "801f1d2764d3038ac8a6da905b3a38c5edcaef7806326bf986abb554ce96e8ae",
+      "descriptor_bytes": 82272,
+      "locator_metadata_json_bytes": 13849,
+      "text_utf8_bytes": 67933,
+      "covered_original_bytes": 87615,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86689-v1.xml",
+      "sha256": "8eb186f32d4c7c058dffaf642caa67836946fac49def10edebe35a2cc0fc5d90",
+      "mode": "position",
+      "units": 52,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 50
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "552f4b402caecfbd5aa315cee27eff4187908d5d289e1e2b4b8d7f1abfb361ea",
+      "descriptor_bytes": 63277,
+      "locator_metadata_json_bytes": 14674,
+      "text_utf8_bytes": 48083,
+      "covered_original_bytes": 55299,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86689-v1.xml",
+      "sha256": "8eb186f32d4c7c058dffaf642caa67836946fac49def10edebe35a2cc0fc5d90",
+      "mode": "xml-id",
+      "units": 52,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 50
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "552f4b402caecfbd5aa315cee27eff4187908d5d289e1e2b4b8d7f1abfb361ea",
+      "descriptor_bytes": 63277,
+      "locator_metadata_json_bytes": 14674,
+      "text_utf8_bytes": 48083,
+      "covered_original_bytes": 55299,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86689-v2.xml",
+      "sha256": "2cb6d697859272531f2dbba37e0c162c82d7c2250cc927307240f9c4dec2258b",
+      "mode": "position",
+      "units": 51,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 49
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "4c254a9c152125a66d98752431010407296a45d2f72853340735751e205c3490",
+      "descriptor_bytes": 63952,
+      "locator_metadata_json_bytes": 14392,
+      "text_utf8_bytes": 49050,
+      "covered_original_bytes": 56578,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86689-v2.xml",
+      "sha256": "2cb6d697859272531f2dbba37e0c162c82d7c2250cc927307240f9c4dec2258b",
+      "mode": "xml-id",
+      "units": 51,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 49
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "4c254a9c152125a66d98752431010407296a45d2f72853340735751e205c3490",
+      "descriptor_bytes": 63952,
+      "locator_metadata_json_bytes": 14392,
+      "text_utf8_bytes": 49050,
+      "covered_original_bytes": 56578,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86689-v3.xml",
+      "sha256": "bf9d648e342a5cf6e9952a5255ebe08e24c02436785d640add5e1d4be3eec9ff",
+      "mode": "position",
+      "units": 51,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 49
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "b27f496c9e04464915d5f452a07549ef05071258fd8a8697eb6bc4db34d4fb63",
+      "descriptor_bytes": 65674,
+      "locator_metadata_json_bytes": 14392,
+      "text_utf8_bytes": 50772,
+      "covered_original_bytes": 58205,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86689-v3.xml",
+      "sha256": "bf9d648e342a5cf6e9952a5255ebe08e24c02436785d640add5e1d4be3eec9ff",
+      "mode": "xml-id",
+      "units": 51,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 49
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "b27f496c9e04464915d5f452a07549ef05071258fd8a8697eb6bc4db34d4fb63",
+      "descriptor_bytes": 65674,
+      "locator_metadata_json_bytes": 14392,
+      "text_utf8_bytes": 50772,
+      "covered_original_bytes": 58205,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86721-v1.xml",
+      "sha256": "b138a11f3986307811a5cd07a2cd8600ba9fa6ba6ea63c8c07adb38d3f80d6e6",
+      "mode": "position",
+      "units": 47,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 45
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "11f85d66fa6c154ac3e1555ba95cccabc88e26cd7aec8256057fd9f0357b746e",
+      "descriptor_bytes": 59584,
+      "locator_metadata_json_bytes": 13267,
+      "text_utf8_bytes": 45847,
+      "covered_original_bytes": 56424,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86721-v1.xml",
+      "sha256": "b138a11f3986307811a5cd07a2cd8600ba9fa6ba6ea63c8c07adb38d3f80d6e6",
+      "mode": "xml-id",
+      "units": 47,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 45
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "11f85d66fa6c154ac3e1555ba95cccabc88e26cd7aec8256057fd9f0357b746e",
+      "descriptor_bytes": 59584,
+      "locator_metadata_json_bytes": 13267,
+      "text_utf8_bytes": 45847,
+      "covered_original_bytes": 56424,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86721-v2.xml",
+      "sha256": "80be9b25a51703adaf5d571153501e2044039b0e55e71e7c76c7a74ef53e686d",
+      "mode": "position",
+      "units": 44,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 42
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "d6b73eb3e919148c02892c40220a6e687a62a9641d467eaf9ea88f28d659bb88",
+      "descriptor_bytes": 69365,
+      "locator_metadata_json_bytes": 12431,
+      "text_utf8_bytes": 56494,
+      "covered_original_bytes": 72450,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86721-v2.xml",
+      "sha256": "80be9b25a51703adaf5d571153501e2044039b0e55e71e7c76c7a74ef53e686d",
+      "mode": "xml-id",
+      "units": 44,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 42
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "d6b73eb3e919148c02892c40220a6e687a62a9641d467eaf9ea88f28d659bb88",
+      "descriptor_bytes": 69365,
+      "locator_metadata_json_bytes": 12431,
+      "text_utf8_bytes": 56494,
+      "covered_original_bytes": 72450,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86721-v3.xml",
+      "sha256": "9cf20918397a3a1178f49da617deec08a204ace38f48973c07ea726a08a52a1d",
+      "mode": "position",
+      "units": 45,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 43
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "e40cb6a77f04ec444a0098b99f9053585e04016e636a43c7e43dcbe965048880",
+      "descriptor_bytes": 71710,
+      "locator_metadata_json_bytes": 12713,
+      "text_utf8_bytes": 58547,
+      "covered_original_bytes": 74925,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86721-v3.xml",
+      "sha256": "9cf20918397a3a1178f49da617deec08a204ace38f48973c07ea726a08a52a1d",
+      "mode": "xml-id",
+      "units": 45,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 43
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "e40cb6a77f04ec444a0098b99f9053585e04016e636a43c7e43dcbe965048880",
+      "descriptor_bytes": 71710,
+      "locator_metadata_json_bytes": 12713,
+      "text_utf8_bytes": 58547,
+      "covered_original_bytes": 74925,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86805-v1.xml",
+      "sha256": "d99f34776ed8ed2ed26091828e29a06566e08f3f725f3d13026f1691198ef782",
+      "mode": "position",
+      "units": 35,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 33
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "7f6e939763215b1ccd3bbaca5f60f9c7c341891d11ad0e765b521d92b5dd4d5c",
+      "descriptor_bytes": 63825,
+      "locator_metadata_json_bytes": 9886,
+      "text_utf8_bytes": 53589,
+      "covered_original_bytes": 64054,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86805-v1.xml",
+      "sha256": "d99f34776ed8ed2ed26091828e29a06566e08f3f725f3d13026f1691198ef782",
+      "mode": "xml-id",
+      "units": 35,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 33
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "7f6e939763215b1ccd3bbaca5f60f9c7c341891d11ad0e765b521d92b5dd4d5c",
+      "descriptor_bytes": 63825,
+      "locator_metadata_json_bytes": 9886,
+      "text_utf8_bytes": 53589,
+      "covered_original_bytes": 64054,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86805-v2.xml",
+      "sha256": "b1683f5c2ff7ff7da75e2975781507c6a835a6dc5e253eba0dc51b32afbaf5e7",
+      "mode": "position",
+      "units": 21,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 19
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "fa838bb31181a99100f9506d26c469fd3bdcbec8eff2651264479e9f511adcbd",
+      "descriptor_bytes": 44816,
+      "locator_metadata_json_bytes": 5925,
+      "text_utf8_bytes": 38681,
+      "covered_original_bytes": 45589,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86805-v2.xml",
+      "sha256": "b1683f5c2ff7ff7da75e2975781507c6a835a6dc5e253eba0dc51b32afbaf5e7",
+      "mode": "xml-id",
+      "units": 21,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 19
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "fa838bb31181a99100f9506d26c469fd3bdcbec8eff2651264479e9f511adcbd",
+      "descriptor_bytes": 44816,
+      "locator_metadata_json_bytes": 5925,
+      "text_utf8_bytes": 38681,
+      "covered_original_bytes": 45589,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86805-v3.xml",
+      "sha256": "8a6e3c0a603a5df51bd27960554e27ee5fc767940dd9a53f1923a8d3f661759d",
+      "mode": "position",
+      "units": 47,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 45
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "69a6cc3bc55cac0f65a6b2a46ae3cf55b9610f1a82d1a6dc23e3b45e42a5dbc9",
+      "descriptor_bytes": 70289,
+      "locator_metadata_json_bytes": 13270,
+      "text_utf8_bytes": 56549,
+      "covered_original_bytes": 65167,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    },
+    {
+      "path": "elife-preprint-86805-v3.xml",
+      "sha256": "8a6e3c0a603a5df51bd27960554e27ee5fc767940dd9a53f1923a8d3f661759d",
+      "mode": "xml-id",
+      "units": 47,
+      "roles": {
+        "title": 1,
+        "abstract": 1,
+        "body": 45
+      },
+      "id_key_count": 0,
+      "descriptor_sha256": "69a6cc3bc55cac0f65a6b2a46ae3cf55b9610f1a82d1a6dc23e3b45e42a5dbc9",
+      "descriptor_bytes": 70289,
+      "locator_metadata_json_bytes": 13270,
+      "text_utf8_bytes": 56549,
+      "covered_original_bytes": 65167,
+      "parent_and_every_range_verified": true,
+      "lexical_projection_matches_whole": true
+    }
+  ],
+  "verified_ranges_including_two_key_policies": 1854
+}

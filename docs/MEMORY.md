@@ -117,3 +117,9 @@ JATS原始XML整文件为精确记录，新kind需v0.23，旧v0.22来源解码�
 兼容，应用清单/归档/CAS不改。4212正式/936历史身份查询对齐重建，177测试
 通过/1权限跳过。所有预算策略逐次因旧+新整篇记录>256KiB完整检查点，v4无增量
 索引收益；默认仍v3。0模型调用，新6篇非大样本；详见[PAPER-REVISIONS.md](PAPER-REVISIONS.md)。
+
+## v0.24 独立JATS片段审计
+
+`rkv1.jats_fragments.fragments/verify`是独立原范围审计API，不被Memory自动使用。
+父原文件SHA与范围SHA均绑定；verify重读完整父文章。正常整篇来源兼容，未加载
+DTD而被跳过的未知实体现在拒绝。片段identity/预算负结果见JATS-FRAGMENTS.md。

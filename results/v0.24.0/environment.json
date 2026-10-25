@@ -1,0 +1,15 @@
+{
+  "python": "3.13.12",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "logical_cpus": 20,
+  "seed": 20261025,
+  "parser_rounds": 3,
+  "new_independent_papers": 0,
+  "reused_papers": 6,
+  "real_transitions": 12,
+  "generation_calls": 0,
+  "new_scientific_QA": 0,
+  "cold_cache": null,
+  "cross_machine": null,
+  "scope": "Identity audit and adjacent-state necessary-condition planning only; not an integrated Memory benchmark"
+}

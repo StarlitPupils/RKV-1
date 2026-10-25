@@ -1,0 +1,552 @@
+{
+  "stages": [
+    {
+      "case": "fixed",
+      "stage": 0,
+      "snapshot_id": "58464022b8aed9ca6c73e63b4d7ada1a4007d5dec4b01c26b8b623dc8289e78d",
+      "stats": {
+        "logical_file_bytes": 272222,
+        "files": 23,
+        "object_bytes": 269251,
+        "object_count": 21,
+        "snapshot_bytes": 2849,
+        "snapshot_count": 1,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 311424,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 87206,
+        "xml-id": 87206
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 1,
+      "snapshot_id": "da2fea9f168d168c6b321611099c239bbda065609766b1e9012243f8a722643d",
+      "stats": {
+        "logical_file_bytes": 326098,
+        "files": 28,
+        "object_bytes": 320192,
+        "object_count": 25,
+        "snapshot_bytes": 5784,
+        "snapshot_count": 2,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 372864,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 87474,
+        "xml-id": 87474
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 2,
+      "snapshot_id": "0d8734147c959dd7c71e7a296f93352aabacb6e433fd2966a0326ca937f25597",
+      "stats": {
+        "logical_file_bytes": 379304,
+        "files": 33,
+        "object_bytes": 370377,
+        "object_count": 29,
+        "snapshot_bytes": 8805,
+        "snapshot_count": 3,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 430208,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 88600,
+        "xml-id": 88600
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 3,
+      "snapshot_id": "e9384ae1c22580fa273945334e63aa9a85b90c037f35276c5757d3b6980ffaa7",
+      "stats": {
+        "logical_file_bytes": 449870,
+        "files": 39,
+        "object_bytes": 437922,
+        "object_count": 34,
+        "snapshot_bytes": 11826,
+        "snapshot_count": 4,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 512128,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 88604,
+        "xml-id": 88604
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 4,
+      "snapshot_id": "7ef8d2231c1a306f8faaac690fcc0f409f6cd48285c985a1c482f6d5787e1898",
+      "stats": {
+        "logical_file_bytes": 497792,
+        "files": 43,
+        "object_bytes": 482823,
+        "object_count": 37,
+        "snapshot_bytes": 14847,
+        "snapshot_count": 5,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 565376,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 88323,
+        "xml-id": 88323
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 5,
+      "snapshot_id": "a06d9757222d587280c5d76d724103da7ff6be5cccd2847996a78ca3b6375b1a",
+      "stats": {
+        "logical_file_bytes": 561638,
+        "files": 49,
+        "object_bytes": 543475,
+        "object_count": 42,
+        "snapshot_bytes": 18041,
+        "snapshot_count": 6,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 643200,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 87490,
+        "xml-id": 87490
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 6,
+      "snapshot_id": "81b7f39123de9e736d0b21c255136964dee1930e84ff8f09e07e0dccc9617124",
+      "stats": {
+        "logical_file_bytes": 622121,
+        "files": 54,
+        "object_bytes": 600764,
+        "object_count": 46,
+        "snapshot_bytes": 21235,
+        "snapshot_count": 7,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 708736,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 83543,
+        "xml-id": 83543
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 7,
+      "snapshot_id": "aa1ec1ab597bdeb3ea6b1e2d3af06789c2daf6e9d1b94342d6375eb359fabf50",
+      "stats": {
+        "logical_file_bytes": 665674,
+        "files": 58,
+        "object_bytes": 641209,
+        "object_count": 49,
+        "snapshot_bytes": 24343,
+        "snapshot_count": 8,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 757888,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 83262,
+        "xml-id": 83262
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 8,
+      "snapshot_id": "1911365a67f39237b867fcb00319b2e1eb734ee5e2dd8b2b7927ece29391f833",
+      "stats": {
+        "logical_file_bytes": 711041,
+        "files": 62,
+        "object_bytes": 683554,
+        "object_count": 52,
+        "snapshot_bytes": 27365,
+        "snapshot_count": 9,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 811136,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 82421,
+        "xml-id": 82421
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 9,
+      "snapshot_id": "c2e5cd056da63a38fb4a47912e0e02b725aa9a4587574dbe934085a751e201c7",
+      "stats": {
+        "logical_file_bytes": 774179,
+        "files": 68,
+        "object_bytes": 743671,
+        "object_count": 57,
+        "snapshot_bytes": 30386,
+        "snapshot_count": 10,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 888960,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 82423,
+        "xml-id": 82423
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 10,
+      "snapshot_id": "8b4822192a8994567b2a975216eb3f90d14cd5d2390db50aa348db1d6e260dd5",
+      "stats": {
+        "logical_file_bytes": 817490,
+        "files": 72,
+        "object_bytes": 783961,
+        "object_count": 60,
+        "snapshot_bytes": 33407,
+        "snapshot_count": 11,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 938112,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 82423,
+        "xml-id": 82423
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 11,
+      "snapshot_id": "063b7cb19692779e3b4cefaa09f479d142a0aa7ca30bf401695dd69cbc666d6f",
+      "stats": {
+        "logical_file_bytes": 870891,
+        "files": 77,
+        "object_bytes": 834427,
+        "object_count": 64,
+        "snapshot_bytes": 36342,
+        "snapshot_count": 12,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 1003648,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 82704,
+        "xml-id": 82704
+      }
+    },
+    {
+      "case": "fixed",
+      "stage": 12,
+      "snapshot_id": "2269b248dd8e36ca09ded3aace8a5251401bc8732cd3ca2946ee6fef4c094e99",
+      "stats": {
+        "logical_file_bytes": 919818,
+        "files": 81,
+        "object_bytes": 880506,
+        "object_count": 67,
+        "snapshot_bytes": 39190,
+        "snapshot_count": 13,
+        "config_bytes": 122,
+        "allocated_file_data_bytes": 1056896,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 90023,
+        "xml-id": 90023
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 0,
+      "snapshot_id": "197548801858a41cd8fc809a4528875b601ef182bd992e171e622305c7006dff",
+      "stats": {
+        "logical_file_bytes": 262430,
+        "files": 15,
+        "object_bytes": 260032,
+        "object_count": 13,
+        "snapshot_bytes": 2157,
+        "snapshot_count": 1,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 291064,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 87206,
+        "xml-id": 87206
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 1,
+      "snapshot_id": "ad976fb35063faea56620dec557b26eb74f622fafaafab84d7ac9c4f64b2a125",
+      "stats": {
+        "logical_file_bytes": 314634,
+        "files": 18,
+        "object_bytes": 309992,
+        "object_count": 15,
+        "snapshot_bytes": 4401,
+        "snapshot_count": 2,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 348408,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 87474,
+        "xml-id": 87474
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 2,
+      "snapshot_id": "22ac800bd572d3a6fd8effa16a0a42cb9626d659156ba2a3d008b3a5451ffcfc",
+      "stats": {
+        "logical_file_bytes": 366942,
+        "files": 22,
+        "object_bytes": 360055,
+        "object_count": 18,
+        "snapshot_bytes": 6646,
+        "snapshot_count": 3,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 409848,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 88600,
+        "xml-id": 88600
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 3,
+      "snapshot_id": "ffec5c8f4f321673da34c322e68d5942f9e2ca2f4bf7aad21d48697c9887087b",
+      "stats": {
+        "logical_file_bytes": 435576,
+        "files": 27,
+        "object_bytes": 426444,
+        "object_count": 22,
+        "snapshot_bytes": 8891,
+        "snapshot_count": 4,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 491768,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 88604,
+        "xml-id": 88604
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 4,
+      "snapshot_id": "6740b94e976140fc30efda62468cb1aa41e2205c2473abad41907855e1b9dff8",
+      "stats": {
+        "logical_file_bytes": 482287,
+        "files": 31,
+        "object_bytes": 470910,
+        "object_count": 25,
+        "snapshot_bytes": 11136,
+        "snapshot_count": 5,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 545016,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 88323,
+        "xml-id": 88323
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 5,
+      "snapshot_id": "5293d46c841ffa785908613b173092d77e583a2166fc649b95aa73f1e4a2ded1",
+      "stats": {
+        "logical_file_bytes": 544573,
+        "files": 34,
+        "object_bytes": 530864,
+        "object_count": 27,
+        "snapshot_bytes": 13468,
+        "snapshot_count": 6,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 614648,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 87490,
+        "xml-id": 87490
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 6,
+      "snapshot_id": "b58fcf5c1d62479a0f480d04f75d437bc3628b4382e5b16b9ee1e7a5371ea980",
+      "stats": {
+        "logical_file_bytes": 596869,
+        "files": 36,
+        "object_bytes": 580828,
+        "object_count": 28,
+        "snapshot_bytes": 15800,
+        "snapshot_count": 7,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 671992,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 83543,
+        "xml-id": 83543
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 7,
+      "snapshot_id": "c0e9ad00d1755195612f25844e88ef8d7badf33323056a57f451afc94cf75bba",
+      "stats": {
+        "logical_file_bytes": 637757,
+        "files": 38,
+        "object_bytes": 619471,
+        "object_count": 29,
+        "snapshot_bytes": 18045,
+        "snapshot_count": 8,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 717048,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 83262,
+        "xml-id": 83262
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 8,
+      "snapshot_id": "a68067c8cddeb80837c45d44f9192a16154658a5d27fa8989f08da4733375be7",
+      "stats": {
+        "logical_file_bytes": 683364,
+        "files": 43,
+        "object_bytes": 662747,
+        "object_count": 33,
+        "snapshot_bytes": 20376,
+        "snapshot_count": 9,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 778488,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 82421,
+        "xml-id": 82421
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 9,
+      "snapshot_id": "8bba0596c34f35f853ba0a06adebcb2edb5d971b140317a807cc3c18681dc6a7",
+      "stats": {
+        "logical_file_bytes": 746031,
+        "files": 48,
+        "object_bytes": 723083,
+        "object_count": 37,
+        "snapshot_bytes": 22707,
+        "snapshot_count": 10,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 852216,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 82423,
+        "xml-id": 82423
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 10,
+      "snapshot_id": "f27af707a585c1851a69b1d80ba0eb6bec611dad57a4a3f6b27c873c88fee779",
+      "stats": {
+        "logical_file_bytes": 788742,
+        "files": 53,
+        "object_bytes": 763376,
+        "object_count": 41,
+        "snapshot_bytes": 25125,
+        "snapshot_count": 11,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 905464,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 82423,
+        "xml-id": 82423
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 11,
+      "snapshot_id": "aaa07f4e77963f4a21c3f95c2b628bf4b8a8940b88383056b977380c94df9b09",
+      "stats": {
+        "logical_file_bytes": 838729,
+        "files": 55,
+        "object_bytes": 811032,
+        "object_count": 42,
+        "snapshot_bytes": 27456,
+        "snapshot_count": 12,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 958712,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 82704,
+        "xml-id": 82704
+      }
+    },
+    {
+      "case": "gear",
+      "stage": 12,
+      "snapshot_id": "b1b9fcc1e98fd499a55e5b3fd2b6631e903d18a98d1950a636d4ed3d3dce6778",
+      "stats": {
+        "logical_file_bytes": 885149,
+        "files": 57,
+        "object_bytes": 855121,
+        "object_count": 43,
+        "snapshot_bytes": 29787,
+        "snapshot_count": 13,
+        "config_bytes": 241,
+        "allocated_file_data_bytes": 1007864,
+        "filesystem_directory_metadata_journal_unmeasured": true
+      },
+      "simple_locator_metadata_bytes": {
+        "whole": 1608,
+        "position": 90023,
+        "xml-id": 90023
+      }
+    }
+  ],
+  "historical_full_source_snapshots_verified": 26,
+  "persistent_trees_unchanged_by_reads": true
+}

@@ -1,0 +1,1210 @@
+{
+  "trials": [
+    {
+      "mode": "whole",
+      "round": 0,
+      "samples": [
+        {
+          "path": "elife-preprint-86721-v3.xml",
+          "units": 1,
+          "wall_s": 0.004806399927474558,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "c354be74ad1598e9fa973b7648b0ce822946ac2350ec4d07582737953ad87a19"
+        },
+        {
+          "path": "elife-preprint-85562-v3.xml",
+          "units": 1,
+          "wall_s": 0.0027480999706313014,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "8f6e17cf82a118c7086eb3644867fc138c0d66755f574bbd3d0f2c260b8e48d1"
+        },
+        {
+          "path": "elife-preprint-86668-v2.xml",
+          "units": 1,
+          "wall_s": 0.002589500043541193,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "513f3983ec706b04bf91c06160e63a92b49fe33e7816d8af285f3021ab7dbbf6"
+        },
+        {
+          "path": "elife-preprint-85562-v1.xml",
+          "units": 1,
+          "wall_s": 0.002355300006456673,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "5133d03e479cc7d13777ac86c0265982fb8bf37a42dec694fca4bbdcfc77977a"
+        },
+        {
+          "path": "elife-preprint-86670-v3.xml",
+          "units": 1,
+          "wall_s": 0.004387599998153746,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "7dc6efaba11b48a65e9db34bcfda59eec01f7110ed30c006bf7bffdcf69f4e34"
+        },
+        {
+          "path": "elife-preprint-86805-v3.xml",
+          "units": 1,
+          "wall_s": 0.0034060999751091003,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "f5d6d9371afe06d860080a885a7fbe0368511e9bd251ae9486d7cd7ad13b447a"
+        },
+        {
+          "path": "elife-preprint-86805-v2.xml",
+          "units": 1,
+          "wall_s": 0.002711299923248589,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "bc49bc3446dfbd13fafced5e0f8e3fbd35f6768af9de9304ec44a154bbc33cbb"
+        },
+        {
+          "path": "elife-preprint-86668-v3.xml",
+          "units": 1,
+          "wall_s": 0.00263740005902946,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "a8e5717d926025c38deab142427b96a1287b36dfb3f809f02eddf4029623b4dd"
+        },
+        {
+          "path": "elife-preprint-86670-v1.xml",
+          "units": 1,
+          "wall_s": 0.004768199985846877,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "264b1e977f3e67ad994fc71b5680a94ce41586c938866a94cb2fc63c66a504c9"
+        },
+        {
+          "path": "elife-preprint-85562-v2.xml",
+          "units": 1,
+          "wall_s": 0.0025999000063166022,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "c77e93cb167dab6525f9e8380dbff38c6be663665fafbe849766645dc0cce9c5"
+        },
+        {
+          "path": "elife-preprint-86805-v1.xml",
+          "units": 1,
+          "wall_s": 0.002605399931780994,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "62342f52033e1df123a819906503b97bbec0cc8e976455b036bacb6a63908df3"
+        },
+        {
+          "path": "elife-preprint-86689-v1.xml",
+          "units": 1,
+          "wall_s": 0.0019479000475257635,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "b95b15a6c7f04df7aa5260e6c2dd008169dff71df8e606f3780674fa150748ce"
+        },
+        {
+          "path": "elife-preprint-86689-v3.xml",
+          "units": 1,
+          "wall_s": 0.0024419999681413174,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "cdecc3f2d4c762081a4e34c1d6ecfd2ed4d75826b95325f2d322f49a834603f2"
+        },
+        {
+          "path": "elife-preprint-86689-v2.xml",
+          "units": 1,
+          "wall_s": 0.0025130000431090593,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "59c523b928457c6a1fb8d4a7476a1feced9d25123bc87efcc55b1285e475b4f4"
+        },
+        {
+          "path": "elife-preprint-86668-v1.xml",
+          "units": 1,
+          "wall_s": 0.00219590007327497,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "603658824781c390b07699fa53efe7322a565e0eda46a6540b4165697a6344e6"
+        },
+        {
+          "path": "elife-preprint-86670-v2.xml",
+          "units": 1,
+          "wall_s": 0.00461669999640435,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "020facc7a5f3bd1715e6dec4f80f4b9aa11946d560868d518ab6a141494ea0b6"
+        },
+        {
+          "path": "elife-preprint-86721-v1.xml",
+          "units": 1,
+          "wall_s": 0.002742700045928359,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "7c1c71f54ee9b2d5c294a418e8840f86e999cad5ef98bcf3556f22c71b8d7fb8"
+        },
+        {
+          "path": "elife-preprint-86721-v2.xml",
+          "units": 1,
+          "wall_s": 0.0049301000544801354,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "9fd6e7bca7cbeec7b7584ebb1c09b1b1778485cce788743ddde14f1e792f8f56"
+        }
+      ],
+      "peak_rss_bytes": 38895616,
+      "process_wall_including_startup_s": 0.20402830000966787
+    },
+    {
+      "mode": "xml-id",
+      "round": 0,
+      "samples": [
+        {
+          "path": "elife-preprint-86721-v3.xml",
+          "units": 45,
+          "wall_s": 0.02081499993801117,
+          "cpu_s": 0.03125,
+          "descriptor_sha256": "e40cb6a77f04ec444a0098b99f9053585e04016e636a43c7e43dcbe965048880"
+        },
+        {
+          "path": "elife-preprint-85562-v3.xml",
+          "units": 62,
+          "wall_s": 0.013155999942682683,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "4b54aba3125d7b694b0aa2a89a519bf29ba74a68692afb6f52eb6b2162ec9a5f"
+        },
+        {
+          "path": "elife-preprint-86668-v2.xml",
+          "units": 69,
+          "wall_s": 0.014534899964928627,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "b3bf8801e7e791edb1050be6fe3bdce4a9019ad87d917e7ee237f5c654699aa7"
+        },
+        {
+          "path": "elife-preprint-85562-v1.xml",
+          "units": 62,
+          "wall_s": 0.011357299983501434,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "774758d7b60510f2484b229cc31da59861aeb875da425362ff787904b1622917"
+        },
+        {
+          "path": "elife-preprint-86670-v3.xml",
+          "units": 49,
+          "wall_s": 0.02351319999434054,
+          "cpu_s": 0.03125,
+          "descriptor_sha256": "801f1d2764d3038ac8a6da905b3a38c5edcaef7806326bf986abb554ce96e8ae"
+        },
+        {
+          "path": "elife-preprint-86805-v3.xml",
+          "units": 47,
+          "wall_s": 0.012351299985311925,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "69a6cc3bc55cac0f65a6b2a46ae3cf55b9610f1a82d1a6dc23e3b45e42a5dbc9"
+        },
+        {
+          "path": "elife-preprint-86805-v2.xml",
+          "units": 21,
+          "wall_s": 0.014185399981215596,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "fa838bb31181a99100f9506d26c469fd3bdcbec8eff2651264479e9f511adcbd"
+        },
+        {
+          "path": "elife-preprint-86668-v3.xml",
+          "units": 66,
+          "wall_s": 0.014284800039604306,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "ca501aa21e3c9230a9f894a64d8b14f5746922473cf40797e1b1b5d7a941d070"
+        },
+        {
+          "path": "elife-preprint-86670-v1.xml",
+          "units": 49,
+          "wall_s": 0.025417700060643256,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "8f05021f43921d251730d023d1e637caa9a506a268dfe21b3a1d73811455a305"
+        },
+        {
+          "path": "elife-preprint-85562-v2.xml",
+          "units": 63,
+          "wall_s": 0.01469450001604855,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "eb1a4376330abd38a15da5b1fafc98291ab8433484da185fee970085bb519fcf"
+        },
+        {
+          "path": "elife-preprint-86805-v1.xml",
+          "units": 35,
+          "wall_s": 0.011972700012847781,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "7f6e939763215b1ccd3bbaca5f60f9c7c341891d11ad0e765b521d92b5dd4d5c"
+        },
+        {
+          "path": "elife-preprint-86689-v1.xml",
+          "units": 52,
+          "wall_s": 0.009924000012688339,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "552f4b402caecfbd5aa315cee27eff4187908d5d289e1e2b4b8d7f1abfb361ea"
+        },
+        {
+          "path": "elife-preprint-86689-v3.xml",
+          "units": 51,
+          "wall_s": 0.010317400097846985,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "b27f496c9e04464915d5f452a07549ef05071258fd8a8697eb6bc4db34d4fb63"
+        },
+        {
+          "path": "elife-preprint-86689-v2.xml",
+          "units": 51,
+          "wall_s": 0.012082700035534799,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "4c254a9c152125a66d98752431010407296a45d2f72853340735751e205c3490"
+        },
+        {
+          "path": "elife-preprint-86668-v1.xml",
+          "units": 65,
+          "wall_s": 0.011204099981114268,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "4cb4aef345c15c5c706145ad8c3dd04be6acc04e039d11a126e11f91423089e7"
+        },
+        {
+          "path": "elife-preprint-86670-v2.xml",
+          "units": 49,
+          "wall_s": 0.024572799913585186,
+          "cpu_s": 0.03125,
+          "descriptor_sha256": "ae0f14e936abeb5f2f940bf7b67468bb018142a769f4569780c029dcbff7aca0"
+        },
+        {
+          "path": "elife-preprint-86721-v1.xml",
+          "units": 47,
+          "wall_s": 0.01713170006405562,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "11f85d66fa6c154ac3e1555ba95cccabc88e26cd7aec8256057fd9f0357b746e"
+        },
+        {
+          "path": "elife-preprint-86721-v2.xml",
+          "units": 44,
+          "wall_s": 0.01919549994636327,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "d6b73eb3e919148c02892c40220a6e687a62a9641d467eaf9ea88f28d659bb88"
+        }
+      ],
+      "peak_rss_bytes": 52080640,
+      "process_wall_including_startup_s": 0.4203215000452474
+    },
+    {
+      "mode": "position",
+      "round": 0,
+      "samples": [
+        {
+          "path": "elife-preprint-86721-v3.xml",
+          "units": 45,
+          "wall_s": 0.02159899997059256,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "e40cb6a77f04ec444a0098b99f9053585e04016e636a43c7e43dcbe965048880"
+        },
+        {
+          "path": "elife-preprint-85562-v3.xml",
+          "units": 62,
+          "wall_s": 0.013237899984233081,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "4b54aba3125d7b694b0aa2a89a519bf29ba74a68692afb6f52eb6b2162ec9a5f"
+        },
+        {
+          "path": "elife-preprint-86668-v2.xml",
+          "units": 69,
+          "wall_s": 0.013354000053368509,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "b3bf8801e7e791edb1050be6fe3bdce4a9019ad87d917e7ee237f5c654699aa7"
+        },
+        {
+          "path": "elife-preprint-85562-v1.xml",
+          "units": 62,
+          "wall_s": 0.01193600008264184,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "774758d7b60510f2484b229cc31da59861aeb875da425362ff787904b1622917"
+        },
+        {
+          "path": "elife-preprint-86670-v3.xml",
+          "units": 49,
+          "wall_s": 0.024826799985021353,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "801f1d2764d3038ac8a6da905b3a38c5edcaef7806326bf986abb554ce96e8ae"
+        },
+        {
+          "path": "elife-preprint-86805-v3.xml",
+          "units": 47,
+          "wall_s": 0.01229129999410361,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "69a6cc3bc55cac0f65a6b2a46ae3cf55b9610f1a82d1a6dc23e3b45e42a5dbc9"
+        },
+        {
+          "path": "elife-preprint-86805-v2.xml",
+          "units": 21,
+          "wall_s": 0.013258300023153424,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "fa838bb31181a99100f9506d26c469fd3bdcbec8eff2651264479e9f511adcbd"
+        },
+        {
+          "path": "elife-preprint-86668-v3.xml",
+          "units": 66,
+          "wall_s": 0.014271900057792664,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "ca501aa21e3c9230a9f894a64d8b14f5746922473cf40797e1b1b5d7a941d070"
+        },
+        {
+          "path": "elife-preprint-86670-v1.xml",
+          "units": 49,
+          "wall_s": 0.024393700063228607,
+          "cpu_s": 0.03125,
+          "descriptor_sha256": "8f05021f43921d251730d023d1e637caa9a506a268dfe21b3a1d73811455a305"
+        },
+        {
+          "path": "elife-preprint-85562-v2.xml",
+          "units": 63,
+          "wall_s": 0.014227399951778352,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "eb1a4376330abd38a15da5b1fafc98291ab8433484da185fee970085bb519fcf"
+        },
+        {
+          "path": "elife-preprint-86805-v1.xml",
+          "units": 35,
+          "wall_s": 0.012264400022104383,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "7f6e939763215b1ccd3bbaca5f60f9c7c341891d11ad0e765b521d92b5dd4d5c"
+        },
+        {
+          "path": "elife-preprint-86689-v1.xml",
+          "units": 52,
+          "wall_s": 0.009446899988688529,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "552f4b402caecfbd5aa315cee27eff4187908d5d289e1e2b4b8d7f1abfb361ea"
+        },
+        {
+          "path": "elife-preprint-86689-v3.xml",
+          "units": 51,
+          "wall_s": 0.010848399950191379,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "b27f496c9e04464915d5f452a07549ef05071258fd8a8697eb6bc4db34d4fb63"
+        },
+        {
+          "path": "elife-preprint-86689-v2.xml",
+          "units": 51,
+          "wall_s": 0.012701499974355102,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "4c254a9c152125a66d98752431010407296a45d2f72853340735751e205c3490"
+        },
+        {
+          "path": "elife-preprint-86668-v1.xml",
+          "units": 65,
+          "wall_s": 0.00985709996894002,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "4cb4aef345c15c5c706145ad8c3dd04be6acc04e039d11a126e11f91423089e7"
+        },
+        {
+          "path": "elife-preprint-86670-v2.xml",
+          "units": 49,
+          "wall_s": 0.023401000071316957,
+          "cpu_s": 0.03125,
+          "descriptor_sha256": "ae0f14e936abeb5f2f940bf7b67468bb018142a769f4569780c029dcbff7aca0"
+        },
+        {
+          "path": "elife-preprint-86721-v1.xml",
+          "units": 47,
+          "wall_s": 0.016418500104919076,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "11f85d66fa6c154ac3e1555ba95cccabc88e26cd7aec8256057fd9f0357b746e"
+        },
+        {
+          "path": "elife-preprint-86721-v2.xml",
+          "units": 44,
+          "wall_s": 0.018896800000220537,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "d6b73eb3e919148c02892c40220a6e687a62a9641d467eaf9ea88f28d659bb88"
+        }
+      ],
+      "peak_rss_bytes": 52146176,
+      "process_wall_including_startup_s": 0.42254209995735437
+    },
+    {
+      "mode": "position",
+      "round": 1,
+      "samples": [
+        {
+          "path": "elife-preprint-86689-v1.xml",
+          "units": 52,
+          "wall_s": 0.010771800065413117,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "552f4b402caecfbd5aa315cee27eff4187908d5d289e1e2b4b8d7f1abfb361ea"
+        },
+        {
+          "path": "elife-preprint-86805-v3.xml",
+          "units": 47,
+          "wall_s": 0.013266100082546473,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "69a6cc3bc55cac0f65a6b2a46ae3cf55b9610f1a82d1a6dc23e3b45e42a5dbc9"
+        },
+        {
+          "path": "elife-preprint-86805-v1.xml",
+          "units": 35,
+          "wall_s": 0.012181700090877712,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "7f6e939763215b1ccd3bbaca5f60f9c7c341891d11ad0e765b521d92b5dd4d5c"
+        },
+        {
+          "path": "elife-preprint-86721-v3.xml",
+          "units": 45,
+          "wall_s": 0.02005230006761849,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "e40cb6a77f04ec444a0098b99f9053585e04016e636a43c7e43dcbe965048880"
+        },
+        {
+          "path": "elife-preprint-86689-v2.xml",
+          "units": 51,
+          "wall_s": 0.011884199921041727,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "4c254a9c152125a66d98752431010407296a45d2f72853340735751e205c3490"
+        },
+        {
+          "path": "elife-preprint-86689-v3.xml",
+          "units": 51,
+          "wall_s": 0.010417299927212298,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "b27f496c9e04464915d5f452a07549ef05071258fd8a8697eb6bc4db34d4fb63"
+        },
+        {
+          "path": "elife-preprint-85562-v3.xml",
+          "units": 62,
+          "wall_s": 0.01274159993045032,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "4b54aba3125d7b694b0aa2a89a519bf29ba74a68692afb6f52eb6b2162ec9a5f"
+        },
+        {
+          "path": "elife-preprint-86668-v3.xml",
+          "units": 66,
+          "wall_s": 0.0136009999550879,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "ca501aa21e3c9230a9f894a64d8b14f5746922473cf40797e1b1b5d7a941d070"
+        },
+        {
+          "path": "elife-preprint-86721-v1.xml",
+          "units": 47,
+          "wall_s": 0.01598949998151511,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "11f85d66fa6c154ac3e1555ba95cccabc88e26cd7aec8256057fd9f0357b746e"
+        },
+        {
+          "path": "elife-preprint-85562-v1.xml",
+          "units": 62,
+          "wall_s": 0.010899699991568923,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "774758d7b60510f2484b229cc31da59861aeb875da425362ff787904b1622917"
+        },
+        {
+          "path": "elife-preprint-85562-v2.xml",
+          "units": 63,
+          "wall_s": 0.01294200005941093,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "eb1a4376330abd38a15da5b1fafc98291ab8433484da185fee970085bb519fcf"
+        },
+        {
+          "path": "elife-preprint-86670-v3.xml",
+          "units": 49,
+          "wall_s": 0.02256940002553165,
+          "cpu_s": 0.03125,
+          "descriptor_sha256": "801f1d2764d3038ac8a6da905b3a38c5edcaef7806326bf986abb554ce96e8ae"
+        },
+        {
+          "path": "elife-preprint-86670-v1.xml",
+          "units": 49,
+          "wall_s": 0.02319869992788881,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "8f05021f43921d251730d023d1e637caa9a506a268dfe21b3a1d73811455a305"
+        },
+        {
+          "path": "elife-preprint-86805-v2.xml",
+          "units": 21,
+          "wall_s": 0.014268999919295311,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "fa838bb31181a99100f9506d26c469fd3bdcbec8eff2651264479e9f511adcbd"
+        },
+        {
+          "path": "elife-preprint-86721-v2.xml",
+          "units": 44,
+          "wall_s": 0.01843729999382049,
+          "cpu_s": 0.03125,
+          "descriptor_sha256": "d6b73eb3e919148c02892c40220a6e687a62a9641d467eaf9ea88f28d659bb88"
+        },
+        {
+          "path": "elife-preprint-86668-v2.xml",
+          "units": 69,
+          "wall_s": 0.013364400016143918,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "b3bf8801e7e791edb1050be6fe3bdce4a9019ad87d917e7ee237f5c654699aa7"
+        },
+        {
+          "path": "elife-preprint-86670-v2.xml",
+          "units": 49,
+          "wall_s": 0.023225400014780462,
+          "cpu_s": 0.03125,
+          "descriptor_sha256": "ae0f14e936abeb5f2f940bf7b67468bb018142a769f4569780c029dcbff7aca0"
+        },
+        {
+          "path": "elife-preprint-86668-v1.xml",
+          "units": 65,
+          "wall_s": 0.01010490010958165,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "4cb4aef345c15c5c706145ad8c3dd04be6acc04e039d11a126e11f91423089e7"
+        }
+      ],
+      "peak_rss_bytes": 51466240,
+      "process_wall_including_startup_s": 0.41819860006216913
+    },
+    {
+      "mode": "xml-id",
+      "round": 1,
+      "samples": [
+        {
+          "path": "elife-preprint-86689-v1.xml",
+          "units": 52,
+          "wall_s": 0.010530300089158118,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "552f4b402caecfbd5aa315cee27eff4187908d5d289e1e2b4b8d7f1abfb361ea"
+        },
+        {
+          "path": "elife-preprint-86805-v3.xml",
+          "units": 47,
+          "wall_s": 0.013173599960282445,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "69a6cc3bc55cac0f65a6b2a46ae3cf55b9610f1a82d1a6dc23e3b45e42a5dbc9"
+        },
+        {
+          "path": "elife-preprint-86805-v1.xml",
+          "units": 35,
+          "wall_s": 0.012375999940559268,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "7f6e939763215b1ccd3bbaca5f60f9c7c341891d11ad0e765b521d92b5dd4d5c"
+        },
+        {
+          "path": "elife-preprint-86721-v3.xml",
+          "units": 45,
+          "wall_s": 0.0198134999955073,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "e40cb6a77f04ec444a0098b99f9053585e04016e636a43c7e43dcbe965048880"
+        },
+        {
+          "path": "elife-preprint-86689-v2.xml",
+          "units": 51,
+          "wall_s": 0.01251370005775243,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "4c254a9c152125a66d98752431010407296a45d2f72853340735751e205c3490"
+        },
+        {
+          "path": "elife-preprint-86689-v3.xml",
+          "units": 51,
+          "wall_s": 0.010239799972623587,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "b27f496c9e04464915d5f452a07549ef05071258fd8a8697eb6bc4db34d4fb63"
+        },
+        {
+          "path": "elife-preprint-85562-v3.xml",
+          "units": 62,
+          "wall_s": 0.014437699923291802,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "4b54aba3125d7b694b0aa2a89a519bf29ba74a68692afb6f52eb6b2162ec9a5f"
+        },
+        {
+          "path": "elife-preprint-86668-v3.xml",
+          "units": 66,
+          "wall_s": 0.013494799961335957,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "ca501aa21e3c9230a9f894a64d8b14f5746922473cf40797e1b1b5d7a941d070"
+        },
+        {
+          "path": "elife-preprint-86721-v1.xml",
+          "units": 47,
+          "wall_s": 0.01657310000155121,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "11f85d66fa6c154ac3e1555ba95cccabc88e26cd7aec8256057fd9f0357b746e"
+        },
+        {
+          "path": "elife-preprint-85562-v1.xml",
+          "units": 62,
+          "wall_s": 0.01055210002232343,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "774758d7b60510f2484b229cc31da59861aeb875da425362ff787904b1622917"
+        },
+        {
+          "path": "elife-preprint-85562-v2.xml",
+          "units": 63,
+          "wall_s": 0.013019999954849482,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "eb1a4376330abd38a15da5b1fafc98291ab8433484da185fee970085bb519fcf"
+        },
+        {
+          "path": "elife-preprint-86670-v3.xml",
+          "units": 49,
+          "wall_s": 0.024276799988001585,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "801f1d2764d3038ac8a6da905b3a38c5edcaef7806326bf986abb554ce96e8ae"
+        },
+        {
+          "path": "elife-preprint-86670-v1.xml",
+          "units": 49,
+          "wall_s": 0.023943600011989474,
+          "cpu_s": 0.03125,
+          "descriptor_sha256": "8f05021f43921d251730d023d1e637caa9a506a268dfe21b3a1d73811455a305"
+        },
+        {
+          "path": "elife-preprint-86805-v2.xml",
+          "units": 21,
+          "wall_s": 0.013868200010620058,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "fa838bb31181a99100f9506d26c469fd3bdcbec8eff2651264479e9f511adcbd"
+        },
+        {
+          "path": "elife-preprint-86721-v2.xml",
+          "units": 44,
+          "wall_s": 0.0195882999105379,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "d6b73eb3e919148c02892c40220a6e687a62a9641d467eaf9ea88f28d659bb88"
+        },
+        {
+          "path": "elife-preprint-86668-v2.xml",
+          "units": 69,
+          "wall_s": 0.013360399985685945,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "b3bf8801e7e791edb1050be6fe3bdce4a9019ad87d917e7ee237f5c654699aa7"
+        },
+        {
+          "path": "elife-preprint-86670-v2.xml",
+          "units": 49,
+          "wall_s": 0.022964000003412366,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "ae0f14e936abeb5f2f940bf7b67468bb018142a769f4569780c029dcbff7aca0"
+        },
+        {
+          "path": "elife-preprint-86668-v1.xml",
+          "units": 65,
+          "wall_s": 0.009711700025945902,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "4cb4aef345c15c5c706145ad8c3dd04be6acc04e039d11a126e11f91423089e7"
+        }
+      ],
+      "peak_rss_bytes": 51281920,
+      "process_wall_including_startup_s": 0.4226968999719247
+    },
+    {
+      "mode": "whole",
+      "round": 1,
+      "samples": [
+        {
+          "path": "elife-preprint-86689-v1.xml",
+          "units": 1,
+          "wall_s": 0.002840000088326633,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "b95b15a6c7f04df7aa5260e6c2dd008169dff71df8e606f3780674fa150748ce"
+        },
+        {
+          "path": "elife-preprint-86805-v3.xml",
+          "units": 1,
+          "wall_s": 0.0026391000719740987,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "f5d6d9371afe06d860080a885a7fbe0368511e9bd251ae9486d7cd7ad13b447a"
+        },
+        {
+          "path": "elife-preprint-86805-v1.xml",
+          "units": 1,
+          "wall_s": 0.002927500056102872,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "62342f52033e1df123a819906503b97bbec0cc8e976455b036bacb6a63908df3"
+        },
+        {
+          "path": "elife-preprint-86721-v3.xml",
+          "units": 1,
+          "wall_s": 0.0039015000220388174,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "c354be74ad1598e9fa973b7648b0ce822946ac2350ec4d07582737953ad87a19"
+        },
+        {
+          "path": "elife-preprint-86689-v2.xml",
+          "units": 1,
+          "wall_s": 0.0023618999402970076,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "59c523b928457c6a1fb8d4a7476a1feced9d25123bc87efcc55b1285e475b4f4"
+        },
+        {
+          "path": "elife-preprint-86689-v3.xml",
+          "units": 1,
+          "wall_s": 0.0031889999518170953,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "cdecc3f2d4c762081a4e34c1d6ecfd2ed4d75826b95325f2d322f49a834603f2"
+        },
+        {
+          "path": "elife-preprint-85562-v3.xml",
+          "units": 1,
+          "wall_s": 0.0028366000624373555,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "8f6e17cf82a118c7086eb3644867fc138c0d66755f574bbd3d0f2c260b8e48d1"
+        },
+        {
+          "path": "elife-preprint-86668-v3.xml",
+          "units": 1,
+          "wall_s": 0.0028279999969527125,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "a8e5717d926025c38deab142427b96a1287b36dfb3f809f02eddf4029623b4dd"
+        },
+        {
+          "path": "elife-preprint-86721-v1.xml",
+          "units": 1,
+          "wall_s": 0.0030439000111073256,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "7c1c71f54ee9b2d5c294a418e8840f86e999cad5ef98bcf3556f22c71b8d7fb8"
+        },
+        {
+          "path": "elife-preprint-85562-v1.xml",
+          "units": 1,
+          "wall_s": 0.0022520999191328883,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "5133d03e479cc7d13777ac86c0265982fb8bf37a42dec694fca4bbdcfc77977a"
+        },
+        {
+          "path": "elife-preprint-85562-v2.xml",
+          "units": 1,
+          "wall_s": 0.0026790000265464187,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "c77e93cb167dab6525f9e8380dbff38c6be663665fafbe849766645dc0cce9c5"
+        },
+        {
+          "path": "elife-preprint-86670-v3.xml",
+          "units": 1,
+          "wall_s": 0.004572600009851158,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "7dc6efaba11b48a65e9db34bcfda59eec01f7110ed30c006bf7bffdcf69f4e34"
+        },
+        {
+          "path": "elife-preprint-86670-v1.xml",
+          "units": 1,
+          "wall_s": 0.004579100059345365,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "264b1e977f3e67ad994fc71b5680a94ce41586c938866a94cb2fc63c66a504c9"
+        },
+        {
+          "path": "elife-preprint-86805-v2.xml",
+          "units": 1,
+          "wall_s": 0.0026947000296786427,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "bc49bc3446dfbd13fafced5e0f8e3fbd35f6768af9de9304ec44a154bbc33cbb"
+        },
+        {
+          "path": "elife-preprint-86721-v2.xml",
+          "units": 1,
+          "wall_s": 0.0037812000373378396,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "9fd6e7bca7cbeec7b7584ebb1c09b1b1778485cce788743ddde14f1e792f8f56"
+        },
+        {
+          "path": "elife-preprint-86668-v2.xml",
+          "units": 1,
+          "wall_s": 0.0027674000011757016,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "513f3983ec706b04bf91c06160e63a92b49fe33e7816d8af285f3021ab7dbbf6"
+        },
+        {
+          "path": "elife-preprint-86670-v2.xml",
+          "units": 1,
+          "wall_s": 0.004481600015424192,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "020facc7a5f3bd1715e6dec4f80f4b9aa11946d560868d518ab6a141494ea0b6"
+        },
+        {
+          "path": "elife-preprint-86668-v1.xml",
+          "units": 1,
+          "wall_s": 0.0023309000534936786,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "603658824781c390b07699fa53efe7322a565e0eda46a6540b4165697a6344e6"
+        }
+      ],
+      "peak_rss_bytes": 38907904,
+      "process_wall_including_startup_s": 0.193326500011608
+    },
+    {
+      "mode": "position",
+      "round": 2,
+      "samples": [
+        {
+          "path": "elife-preprint-85562-v3.xml",
+          "units": 62,
+          "wall_s": 0.014843399985693395,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "4b54aba3125d7b694b0aa2a89a519bf29ba74a68692afb6f52eb6b2162ec9a5f"
+        },
+        {
+          "path": "elife-preprint-86689-v2.xml",
+          "units": 51,
+          "wall_s": 0.01229569991119206,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "4c254a9c152125a66d98752431010407296a45d2f72853340735751e205c3490"
+        },
+        {
+          "path": "elife-preprint-86805-v1.xml",
+          "units": 35,
+          "wall_s": 0.012577799963764846,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "7f6e939763215b1ccd3bbaca5f60f9c7c341891d11ad0e765b521d92b5dd4d5c"
+        },
+        {
+          "path": "elife-preprint-86670-v2.xml",
+          "units": 49,
+          "wall_s": 0.022995500010438263,
+          "cpu_s": 0.03125,
+          "descriptor_sha256": "ae0f14e936abeb5f2f940bf7b67468bb018142a769f4569780c029dcbff7aca0"
+        },
+        {
+          "path": "elife-preprint-86668-v3.xml",
+          "units": 66,
+          "wall_s": 0.015468199970200658,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "ca501aa21e3c9230a9f894a64d8b14f5746922473cf40797e1b1b5d7a941d070"
+        },
+        {
+          "path": "elife-preprint-86689-v3.xml",
+          "units": 51,
+          "wall_s": 0.010138800018467009,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "b27f496c9e04464915d5f452a07549ef05071258fd8a8697eb6bc4db34d4fb63"
+        },
+        {
+          "path": "elife-preprint-86721-v2.xml",
+          "units": 44,
+          "wall_s": 0.01871720002964139,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "d6b73eb3e919148c02892c40220a6e687a62a9641d467eaf9ea88f28d659bb88"
+        },
+        {
+          "path": "elife-preprint-86670-v3.xml",
+          "units": 49,
+          "wall_s": 0.023525699973106384,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "801f1d2764d3038ac8a6da905b3a38c5edcaef7806326bf986abb554ce96e8ae"
+        },
+        {
+          "path": "elife-preprint-85562-v1.xml",
+          "units": 62,
+          "wall_s": 0.011101000010967255,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "774758d7b60510f2484b229cc31da59861aeb875da425362ff787904b1622917"
+        },
+        {
+          "path": "elife-preprint-86721-v1.xml",
+          "units": 47,
+          "wall_s": 0.015563900000415742,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "11f85d66fa6c154ac3e1555ba95cccabc88e26cd7aec8256057fd9f0357b746e"
+        },
+        {
+          "path": "elife-preprint-86805-v2.xml",
+          "units": 21,
+          "wall_s": 0.0141301000257954,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "fa838bb31181a99100f9506d26c469fd3bdcbec8eff2651264479e9f511adcbd"
+        },
+        {
+          "path": "elife-preprint-86670-v1.xml",
+          "units": 49,
+          "wall_s": 0.023094800068065524,
+          "cpu_s": 0.03125,
+          "descriptor_sha256": "8f05021f43921d251730d023d1e637caa9a506a268dfe21b3a1d73811455a305"
+        },
+        {
+          "path": "elife-preprint-86721-v3.xml",
+          "units": 45,
+          "wall_s": 0.02012010000180453,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "e40cb6a77f04ec444a0098b99f9053585e04016e636a43c7e43dcbe965048880"
+        },
+        {
+          "path": "elife-preprint-86689-v1.xml",
+          "units": 52,
+          "wall_s": 0.009444099967367947,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "552f4b402caecfbd5aa315cee27eff4187908d5d289e1e2b4b8d7f1abfb361ea"
+        },
+        {
+          "path": "elife-preprint-86668-v1.xml",
+          "units": 65,
+          "wall_s": 0.009963899967260659,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "4cb4aef345c15c5c706145ad8c3dd04be6acc04e039d11a126e11f91423089e7"
+        },
+        {
+          "path": "elife-preprint-86805-v3.xml",
+          "units": 47,
+          "wall_s": 0.013628400047309697,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "69a6cc3bc55cac0f65a6b2a46ae3cf55b9610f1a82d1a6dc23e3b45e42a5dbc9"
+        },
+        {
+          "path": "elife-preprint-85562-v2.xml",
+          "units": 63,
+          "wall_s": 0.01237910008057952,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "eb1a4376330abd38a15da5b1fafc98291ab8433484da185fee970085bb519fcf"
+        },
+        {
+          "path": "elife-preprint-86668-v2.xml",
+          "units": 69,
+          "wall_s": 0.01321140001527965,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "b3bf8801e7e791edb1050be6fe3bdce4a9019ad87d917e7ee237f5c654699aa7"
+        }
+      ],
+      "peak_rss_bytes": 51789824,
+      "process_wall_including_startup_s": 0.41474059992469847
+    },
+    {
+      "mode": "xml-id",
+      "round": 2,
+      "samples": [
+        {
+          "path": "elife-preprint-85562-v3.xml",
+          "units": 62,
+          "wall_s": 0.015115799964405596,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "4b54aba3125d7b694b0aa2a89a519bf29ba74a68692afb6f52eb6b2162ec9a5f"
+        },
+        {
+          "path": "elife-preprint-86689-v2.xml",
+          "units": 51,
+          "wall_s": 0.011912599904462695,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "4c254a9c152125a66d98752431010407296a45d2f72853340735751e205c3490"
+        },
+        {
+          "path": "elife-preprint-86805-v1.xml",
+          "units": 35,
+          "wall_s": 0.013495199964381754,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "7f6e939763215b1ccd3bbaca5f60f9c7c341891d11ad0e765b521d92b5dd4d5c"
+        },
+        {
+          "path": "elife-preprint-86670-v2.xml",
+          "units": 49,
+          "wall_s": 0.02255869994405657,
+          "cpu_s": 0.03125,
+          "descriptor_sha256": "ae0f14e936abeb5f2f940bf7b67468bb018142a769f4569780c029dcbff7aca0"
+        },
+        {
+          "path": "elife-preprint-86668-v3.xml",
+          "units": 66,
+          "wall_s": 0.015081100049428642,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "ca501aa21e3c9230a9f894a64d8b14f5746922473cf40797e1b1b5d7a941d070"
+        },
+        {
+          "path": "elife-preprint-86689-v3.xml",
+          "units": 51,
+          "wall_s": 0.01058920007199049,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "b27f496c9e04464915d5f452a07549ef05071258fd8a8697eb6bc4db34d4fb63"
+        },
+        {
+          "path": "elife-preprint-86721-v2.xml",
+          "units": 44,
+          "wall_s": 0.018410599906928837,
+          "cpu_s": 0.03125,
+          "descriptor_sha256": "d6b73eb3e919148c02892c40220a6e687a62a9641d467eaf9ea88f28d659bb88"
+        },
+        {
+          "path": "elife-preprint-86670-v3.xml",
+          "units": 49,
+          "wall_s": 0.023122199927456677,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "801f1d2764d3038ac8a6da905b3a38c5edcaef7806326bf986abb554ce96e8ae"
+        },
+        {
+          "path": "elife-preprint-85562-v1.xml",
+          "units": 62,
+          "wall_s": 0.010584800038486719,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "774758d7b60510f2484b229cc31da59861aeb875da425362ff787904b1622917"
+        },
+        {
+          "path": "elife-preprint-86721-v1.xml",
+          "units": 47,
+          "wall_s": 0.014099800027906895,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "11f85d66fa6c154ac3e1555ba95cccabc88e26cd7aec8256057fd9f0357b746e"
+        },
+        {
+          "path": "elife-preprint-86805-v2.xml",
+          "units": 21,
+          "wall_s": 0.013720399932935834,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "fa838bb31181a99100f9506d26c469fd3bdcbec8eff2651264479e9f511adcbd"
+        },
+        {
+          "path": "elife-preprint-86670-v1.xml",
+          "units": 49,
+          "wall_s": 0.023921300075016916,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "8f05021f43921d251730d023d1e637caa9a506a268dfe21b3a1d73811455a305"
+        },
+        {
+          "path": "elife-preprint-86721-v3.xml",
+          "units": 45,
+          "wall_s": 0.01974850008264184,
+          "cpu_s": 0.03125,
+          "descriptor_sha256": "e40cb6a77f04ec444a0098b99f9053585e04016e636a43c7e43dcbe965048880"
+        },
+        {
+          "path": "elife-preprint-86689-v1.xml",
+          "units": 52,
+          "wall_s": 0.010167000000365078,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "552f4b402caecfbd5aa315cee27eff4187908d5d289e1e2b4b8d7f1abfb361ea"
+        },
+        {
+          "path": "elife-preprint-86668-v1.xml",
+          "units": 65,
+          "wall_s": 0.009950099978595972,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "4cb4aef345c15c5c706145ad8c3dd04be6acc04e039d11a126e11f91423089e7"
+        },
+        {
+          "path": "elife-preprint-86805-v3.xml",
+          "units": 47,
+          "wall_s": 0.013090199907310307,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "69a6cc3bc55cac0f65a6b2a46ae3cf55b9610f1a82d1a6dc23e3b45e42a5dbc9"
+        },
+        {
+          "path": "elife-preprint-85562-v2.xml",
+          "units": 63,
+          "wall_s": 0.017414400004781783,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "eb1a4376330abd38a15da5b1fafc98291ab8433484da185fee970085bb519fcf"
+        },
+        {
+          "path": "elife-preprint-86668-v2.xml",
+          "units": 69,
+          "wall_s": 0.013110799947753549,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "b3bf8801e7e791edb1050be6fe3bdce4a9019ad87d917e7ee237f5c654699aa7"
+        }
+      ],
+      "peak_rss_bytes": 51363840,
+      "process_wall_including_startup_s": 0.42186090000905097
+    },
+    {
+      "mode": "whole",
+      "round": 2,
+      "samples": [
+        {
+          "path": "elife-preprint-85562-v3.xml",
+          "units": 1,
+          "wall_s": 0.003247999935410917,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "8f6e17cf82a118c7086eb3644867fc138c0d66755f574bbd3d0f2c260b8e48d1"
+        },
+        {
+          "path": "elife-preprint-86689-v2.xml",
+          "units": 1,
+          "wall_s": 0.002463499899022281,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "59c523b928457c6a1fb8d4a7476a1feced9d25123bc87efcc55b1285e475b4f4"
+        },
+        {
+          "path": "elife-preprint-86805-v1.xml",
+          "units": 1,
+          "wall_s": 0.0025846000062301755,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "62342f52033e1df123a819906503b97bbec0cc8e976455b036bacb6a63908df3"
+        },
+        {
+          "path": "elife-preprint-86670-v2.xml",
+          "units": 1,
+          "wall_s": 0.0054166000336408615,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "020facc7a5f3bd1715e6dec4f80f4b9aa11946d560868d518ab6a141494ea0b6"
+        },
+        {
+          "path": "elife-preprint-86668-v3.xml",
+          "units": 1,
+          "wall_s": 0.002695700037293136,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "a8e5717d926025c38deab142427b96a1287b36dfb3f809f02eddf4029623b4dd"
+        },
+        {
+          "path": "elife-preprint-86689-v3.xml",
+          "units": 1,
+          "wall_s": 0.003122099908068776,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "cdecc3f2d4c762081a4e34c1d6ecfd2ed4d75826b95325f2d322f49a834603f2"
+        },
+        {
+          "path": "elife-preprint-86721-v2.xml",
+          "units": 1,
+          "wall_s": 0.003952399943955243,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "9fd6e7bca7cbeec7b7584ebb1c09b1b1778485cce788743ddde14f1e792f8f56"
+        },
+        {
+          "path": "elife-preprint-86670-v3.xml",
+          "units": 1,
+          "wall_s": 0.005757799954153597,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "7dc6efaba11b48a65e9db34bcfda59eec01f7110ed30c006bf7bffdcf69f4e34"
+        },
+        {
+          "path": "elife-preprint-85562-v1.xml",
+          "units": 1,
+          "wall_s": 0.0023418000200763345,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "5133d03e479cc7d13777ac86c0265982fb8bf37a42dec694fca4bbdcfc77977a"
+        },
+        {
+          "path": "elife-preprint-86721-v1.xml",
+          "units": 1,
+          "wall_s": 0.003023300087079406,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "7c1c71f54ee9b2d5c294a418e8840f86e999cad5ef98bcf3556f22c71b8d7fb8"
+        },
+        {
+          "path": "elife-preprint-86805-v2.xml",
+          "units": 1,
+          "wall_s": 0.002564299968071282,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "bc49bc3446dfbd13fafced5e0f8e3fbd35f6768af9de9304ec44a154bbc33cbb"
+        },
+        {
+          "path": "elife-preprint-86670-v1.xml",
+          "units": 1,
+          "wall_s": 0.004785800003446639,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "264b1e977f3e67ad994fc71b5680a94ce41586c938866a94cb2fc63c66a504c9"
+        },
+        {
+          "path": "elife-preprint-86721-v3.xml",
+          "units": 1,
+          "wall_s": 0.0046187000116333365,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "c354be74ad1598e9fa973b7648b0ce822946ac2350ec4d07582737953ad87a19"
+        },
+        {
+          "path": "elife-preprint-86689-v1.xml",
+          "units": 1,
+          "wall_s": 0.0020236000418663025,
+          "cpu_s": 0.015625,
+          "descriptor_sha256": "b95b15a6c7f04df7aa5260e6c2dd008169dff71df8e606f3780674fa150748ce"
+        },
+        {
+          "path": "elife-preprint-86668-v1.xml",
+          "units": 1,
+          "wall_s": 0.0020118000684306026,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "603658824781c390b07699fa53efe7322a565e0eda46a6540b4165697a6344e6"
+        },
+        {
+          "path": "elife-preprint-86805-v3.xml",
+          "units": 1,
+          "wall_s": 0.0027178999735042453,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "f5d6d9371afe06d860080a885a7fbe0368511e9bd251ae9486d7cd7ad13b447a"
+        },
+        {
+          "path": "elife-preprint-85562-v2.xml",
+          "units": 1,
+          "wall_s": 0.0032181000569835305,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "c77e93cb167dab6525f9e8380dbff38c6be663665fafbe849766645dc0cce9c5"
+        },
+        {
+          "path": "elife-preprint-86668-v2.xml",
+          "units": 1,
+          "wall_s": 0.002921300008893013,
+          "cpu_s": 0.0,
+          "descriptor_sha256": "513f3983ec706b04bf91c06160e63a92b49fe33e7816d8af285f3021ab7dbbf6"
+        }
+      ],
+      "peak_rss_bytes": 38547456,
+      "process_wall_including_startup_s": 0.20680409995839
+    }
+  ]
+}

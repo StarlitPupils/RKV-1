@@ -1,0 +1,27 @@
+{
+  "verified_ranges_including_two_key_policies": 1854,
+  "unique_source_files": 18,
+  "reused_independent_papers": 6,
+  "new_independent_papers": 0,
+  "new_scientific_QA": 0,
+  "generation_calls": 0,
+  "parser_processes": 9,
+  "parser_file_invocations": 162,
+  "adjacent_budget_plans": 144,
+  "real_revision_transitions": 12,
+  "retained_historical_CAS_snapshots_verified": 26,
+  "all_range_parent_identity_and_projection_checks_passed": true,
+  "persistent_CAS_trees_unchanged_by_reads": true,
+  "Memory_fragment_reader_integrated": false,
+  "query_quality_or_latency_measurements": null,
+  "source_modules": 51,
+  "frozen_commit": "3b296e1fc0c8363145d7ebf42b981d940feaa15f",
+  "all_measured_modules_match_frozen_commit": true,
+  "tests": {
+    "run": 182,
+    "passed": 181,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "8cc0b09241525a7092f8ab2fb74115adaad538d1e598e1c9def094b2024eab45"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "frozen_commit": "3b296e1fc0c8363145d7ebf42b981d940feaa15f",
+  "protocol": "docs/JATS-FRAGMENTS.md",
+  "measured_modules": 51,
+  "all_modules_equal_frozen_commit": true,
+  "candidate_CI_run": 40188753450,
+  "generation_calls": 0,
+  "discarded_pilot": "A local pilot was invalidated by the in-flight version string edit; none of its timings/plans used. Formal run began after source/protocol freeze and native-enabled tests completed."
+}
