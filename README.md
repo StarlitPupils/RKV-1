@@ -6,7 +6,43 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.28.0 · 显式上下文控制与完整请求体核验
+## 当前版本：v0.29.0 · 来源已知与开放检索分开评测
+
+新增显式Python `Memory.lookup(key, snapshot=...)`，只读取调用者已知的原证据key，
+与search共用CAS/记录SHA及解析身份核验。支持v1–v4/历史/迁移/重绑定；未找到为空，
+无检索回退，rank为null。现有memory-answer/CLI/HTTP与检索/选择默认保持不变。
+
+```python
+from rkv1.memory import Memory
+result = Memory('MEMORY').lookup('qasper:already-known-paper-id')
+```
+
+沿用dev/train全量任务，三条件、两选择器、三预算、三轮新进程：10794问题对、
+21588读取、194292原句绑定；open逐题keys/BM25/原文身份/全部覆盖分数复现v0.27。
+
+| 24KB / lexical | open top5 | 调用者提供来源 | 仅保留已召回目标论文（oracle诊断） |
+|---|---:|---:|---:|
+| dev · 927非空参考题 | 260 | 764 | 352 |
+| train · 2240非空参考题 | 471 | 1728 | 674 |
+
+提供未召回来源解释dev/train额外412/1054成功，来源定位是当前主要瓶颈。
+oracle用到目标身份，且移除其他论文同时改变预算竞争和词法IDF，不能算开放检索
+算法收益。已知来源24KB仍有127/392题无全文映射参考、36/120题被预算遗漏。
+
+![来源条件覆盖](results/v0.29.0/known-open-coverage.png)
+
+已知来源8KB lexical相对原顺序净增26.11/25.40pp，但输60/154题；24KB dev论文组
+区间仍跨零。不切换默认，不把覆盖当模型正确率。199测试通过、1权限跳过，原文/
+持久树不变，0模型请求；冷缓存/跨机器未测。来源相同，属于任务分解而非新盲测。
+
+下一项优先冻结一个不接收目标身份的开放检索候选，计入辅助索引、构建和查询
+全部实际成本；不在现有gold上搜参数。Python/SQLite等共享运行时未全额分配。
+
+[冻结协议](docs/KNOWN-SOURCE.md) · [详细实验报告](results/v0.29.0/SUMMARY.md) ·
+[原始轮次示例](results/v0.29.0/dev-round0.json) · [验证](results/v0.29.0/validation.json) ·
+[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.29.0)。
+
+## v0.28.0 · 显式上下文控制与完整请求体核验
 
 Python/CLI/本机HTTP新增显式context selector与8000/24000/48000正文UTF8预算；
 默认仍source-order/24000。因v0.27不同预算收益混合，不自动切换为lexical。

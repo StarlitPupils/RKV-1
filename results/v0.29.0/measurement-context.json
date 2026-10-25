@@ -1,0 +1,15 @@
+{
+  "frozen_commit": "222dda93ff7f3f25fa3902aa15199b90a757b779",
+  "protocol": "docs/KNOWN-SOURCE.md",
+  "measured_modules": 53,
+  "all_runtime_modules_protocol_and_driver_match_frozen_commit": true,
+  "candidate_CI_run": 40199499786,
+  "formal_question_pairs": 10794,
+  "formal_read_operations": 21588,
+  "context_bindings": 194292,
+  "warmup_read_operations_excluded": 12,
+  "remote_model_calls": 0,
+  "no_new_independent_dataset": true,
+  "no_parameter_tuning": true,
+  "render_only_revision": "Chart legend moved outside curves and interpretive report added from unchanged validated metrics; raw observations not changed."
+}

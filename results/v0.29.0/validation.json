@@ -1,0 +1,23 @@
+{
+  "frozen_commit": "222dda9",
+  "all_53_modules_protocol_and_driver_match_freeze": true,
+  "formal_question_pairs": 10794,
+  "formal_read_operations": 21588,
+  "context_bindings": 194292,
+  "warmup_read_operations_excluded": 12,
+  "all_rounds_identity_and_scores_identical": true,
+  "open_all_scores_keys_ranks_identity_match_v027": true,
+  "known_and_oracle_source_ids_and_scores_match_when_recalled": true,
+  "all_persistent_trees_and_full_original_bytes_unchanged": true,
+  "remote_model_calls": 0,
+  "new_model_answer_quality": null,
+  "cold_cache": null,
+  "cross_machine": null,
+  "tests": {
+    "run": 200,
+    "passed": 199,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "a76156384b93bf490eb67bee4aca43236a5ee541bf1e17f34d26a030649f923c"
+  }
+}

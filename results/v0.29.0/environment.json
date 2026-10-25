@@ -1,0 +1,33 @@
+{
+  "python": "3.13.12",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "sqlite": "3.51.1",
+  "logical_cpus": 20,
+  "seed": 20261025,
+  "rounds": 3,
+  "generation_calls": 0,
+  "cold_cache": null,
+  "cross_machine": null,
+  "new_model_answer_quality": null,
+  "score_fields": [
+    "complete_reference_exposed",
+    "best_reference_paragraph_recall",
+    "failure_or_success_reason",
+    "visible_body_utf8_bytes",
+    "serialized_context_json_bytes",
+    "visible_papers",
+    "visible_paragraphs"
+  ],
+  "selection_timing_fields": [
+    "prepare_wall_s",
+    "prepare_cpu_s",
+    "choose_wall_s",
+    "choose_cpu_s",
+    "offline_score_wall_s"
+  ],
+  "workloads": [
+    "open-top5",
+    "known-source",
+    "oracle-if-recalled"
+  ]
+}
