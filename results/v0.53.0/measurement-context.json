@@ -1,0 +1,117 @@
+{
+  "runtime_protocol_input_freeze": "1e9f7b6b6c08f1b3a93289f9e5e6a40584b1f767",
+  "candidate_CI": 40371530467,
+  "formal_workers": 9,
+  "formal_evaluation_retries": 0,
+  "formal_training_runs": 1,
+  "new_remote_model_calls": 0,
+  "prior_fully_verified_release": "v0.52.0",
+  "prior_final_proof_sha256": "1a3818beacef6d3c6994ada41ff4412bd456f504374c58f3dea0d0e29108e256",
+  "code_frozen_utc": "2026-10-26T17:48:44.398058+00:00",
+  "known_project_benchmark_transfer": true,
+  "dev_not_scored_with_this_candidate_before_training": true,
+  "model_freeze": {
+    "code_protocol_freeze": "1e9f7b6b6c08f1b3a93289f9e5e6a40584b1f767",
+    "dev_not_scored_with_this_candidate_before_model_freeze": true,
+    "frozen_utc": "2026-10-26T17:48:45.575091+00:00",
+    "known_project_data": true,
+    "model_bytes": 10152832,
+    "model_sha256": "f062c7a784421b71bbfaf3c299be78ff323a391847afbf5420e4c06a4d422be0",
+    "training_parent": {
+      "error": null,
+      "parent_full_process_wall_s": 1.167892900062725,
+      "return_code": 0
+    },
+    "training_summary": {
+      "component_bytes": {
+        "graph": 3064,
+        "permuted_graph": 3072,
+        "shared": 10146658
+      },
+      "component_sha256": {
+        "graph": "4d6d18639fb12d5555fde8db0c6e455ea43c81900957019b6f32dc87b74bf854",
+        "permuted_graph": "2d09f96068a3c5edbcd384fa2757f53f29679b36c8d7bc43b7130c53185646d8",
+        "shared": "21dbf2102de5e4369932ad94aca61e92db7f7593ace1bb2862492540df42f743"
+      },
+      "dev_scored": false,
+      "model_bytes": 10152832,
+      "model_parts": {
+        "annotated_training_rows": 505,
+        "component_bytes": {
+          "graph": 3064,
+          "permuted_graph": 3072,
+          "shared": 10146658
+        },
+        "component_sha256": {
+          "graph": "4d6d18639fb12d5555fde8db0c6e455ea43c81900957019b6f32dc87b74bf854",
+          "permuted_graph": "2d09f96068a3c5edbcd384fa2757f53f29679b36c8d7bc43b7130c53185646d8",
+          "shared": "21dbf2102de5e4369932ad94aca61e92db7f7593ace1bb2862492540df42f743"
+        },
+        "corpus_documents": 5183,
+        "graph_nodes": 64,
+        "training_rows": 809,
+        "undirected_graph_edges": 60,
+        "whole_original_record_budget": true
+      },
+      "model_sha256": "f062c7a784421b71bbfaf3c299be78ff323a391847afbf5420e4c06a4d422be0",
+      "observed_peak_rss_bytes": 113184768,
+      "scope": "Single train-only deterministic lexical index and supervised co-occurrence graph construction; model/index private",
+      "source_sha256": "b8d6c89624cb2ed74dee8938effc4f5d8bd2086887880af8110d64be4ceade62",
+      "training_label_sha256": "f4c8fa82d8bd0653a9cc8d61a6ea48c25eacea64e90af5dbf390ebb1b74372f0",
+      "training_runs": 1,
+      "worker_cpu_s": 1.046875,
+      "worker_wall_s": 1.0716524000745267
+    }
+  },
+  "protocol_input_test_source": {
+    "docs/SCIFACT-GRAPH.md": {
+      "bytes": 7364,
+      "sha256": "f86a7874e4b7be6f4555d47ea6cca1081c521f316ee4cfede63c9d3879309c9d"
+    },
+    "docs/scifact-graph-inputs.json": {
+      "bytes": 926,
+      "sha256": "142994f18f0cd9aa8677dd233ebe0320853f1bda4cc3f5cdda4c66b11b108428"
+    },
+    "tests/test_scifact_graph.py": {
+      "bytes": 3134,
+      "sha256": "63f24587d7110450a3e4c28bba087dff8b4bffd02c533ac63ff5d71ee014c9a3"
+    }
+  },
+  "retained_private_input_and_model_files": {
+    "data/scifact/claims_dev.jsonl": {
+      "bytes": 65007,
+      "sha256": "86f0435d08fdb65d1aa41d1472684f57e6e71930626497bdf4d7a9ec1a632217"
+    },
+    "data/scifact/claims_test.jsonl": {
+      "bytes": 33769,
+      "sha256": "558930d75215c73f84a28fe538307d6d397c9de1ec7239514cf45f80d75d2ca3"
+    },
+    "data/scifact/claims_train.jsonl": {
+      "bytes": 175616,
+      "sha256": "f4c8fa82d8bd0653a9cc8d61a6ea48c25eacea64e90af5dbf390ebb1b74372f0"
+    },
+    "data/scifact/corpus.jsonl": {
+      "bytes": 8307875,
+      "sha256": "b8d6c89624cb2ed74dee8938effc4f5d8bd2086887880af8110d64be4ceade62"
+    },
+    ".tools/scifact-graph-v053-training/model-freeze.json": {
+      "bytes": 1791,
+      "sha256": "2c49e5b8d55b601b250359a155382b645aea211748d6208b029512acd15f3b88"
+    },
+    ".tools/scifact-graph-v053-training/model.json": {
+      "bytes": 10152832,
+      "sha256": "f062c7a784421b71bbfaf3c299be78ff323a391847afbf5420e4c06a4d422be0"
+    },
+    ".tools/scifact-graph-v053-training/training.json": {
+      "bytes": 1571,
+      "sha256": "a55121f2a462b30ffa743e2e00714e7b3c19f69d39f2d7e0a587afcfd13691c6"
+    }
+  },
+  "retained_private_total_bytes": 18738461,
+  "historical_other_task_model_bytes": 4629668,
+  "historical_other_task_model_sha256": "2f82ee4b28c943038e7a37ddcbd8871443f7a441ddd45a1af599decc8bade183",
+  "historical_other_task_model_not_used_here": true,
+  "new_model_bytes": 10152832,
+  "new_training_runs": 1,
+  "training_log_bytes": 0
+}

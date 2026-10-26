@@ -6,7 +6,19 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.52.0 · 已见漏证分解与gold-aware诊断上界
+## 当前版本：v0.53.0 · 已见SciFact整篇论文来源迁移
+
+固定BM25/graph/control与12篇/4096原整行B，训练一次另冻模型SHA、9fresh worker；300原行/298实际检索/188有gold评分/110无gold/2训练重叠排除。
+**论文来源质量True / 时间False / 联合False**：graph仅多找回1篇gold，完整找全仍139/188，query wall中位比1.007687。不是稳健、显著或回答收益。
+
+![SciFact论文来源迁移](results/v0.53.0/scifact-graph.png)
+
+7677原paper绑定/9整源恢复与proof/全树通过；273检查272通过/1权限跳过，65runtime仅版本，0新模型API。
+已见benchmark来源定位不当未知数据验证/NLI/verdict/生成回答，E3净收益/E4整体/真实长会话/无限上下文未完成。
+
+[冻结协议](docs/SCIFACT-GRAPH.md) · [详实报告](results/v0.53.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.53.0)。
+
+## v0.52.0 · 已见漏证分解与gold-aware诊断上界
 
 6诊断worker、1578旧题方法记录/6204源ID组排他分类和独立DP核验通过。前12字节排除占漏证多数假设False，graph dev/test比例0.000/0.000。
 
