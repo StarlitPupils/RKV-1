@@ -6,7 +6,19 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.50.0 · question-only封存开发集来源定位
+## 当前版本：v0.51.0 · 原模型封存官方test迁移
+
+同一模型和固定算法/12facts/4096B不改、新训练0，9fresh worker原test340行/评分339/重叠排除1。
+源ID质量True / 时间True / 联合True，36612原成员绑定/9整源恢复、proof/全树确定。
+
+![同模型官方test复现](results/v0.51.0/question-test.png)
+
+严格literal完整覆盖graph4题反而少于lexical6题；未解/改写/逐题负方向/全部费用保留，来源ID窄门槛通过不当NLI/整体证据或回答质量收益。
+268检查267通过/1权限跳过，65runtime仅版本、默认不改，0新模型API，E3净收益/E4整体/真实长会话/无限上下文未完成。
+
+[冻结协议](docs/QUESTION-TEST.md) · [详实报告](results/v0.51.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.51.0)。
+
+## v0.50.0 · question-only封存开发集来源定位
 
 训练一次→独立model SHA冻结→首次揭dev，固定BM25/训练共现graph/置换图3方法9worker。质量门槛True，时间门槛False，质量与时间联合False。
 原187行/评分187行/重叠排除0，20196原成员绑定/9全源恢复与proof/全树通过。
