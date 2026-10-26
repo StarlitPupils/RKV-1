@@ -1,0 +1,22 @@
+{
+  "frozen_commit": "d6d7c21",
+  "all_57_modules_protocol_driver_and_inputs_manifest_match_freeze": true,
+  "formal_encode_restore_pairs": 189,
+  "fresh_subprocess_stages": 378,
+  "actual_file_fsyncs": 378,
+  "all_189_restores_bytewise_and_SHA_equal": true,
+  "all_rounds_frames_choices_and_control_accounts_identical": true,
+  "source_files_and_protocol_unchanged": true,
+  "no_input_project_import_or_execution": true,
+  "remote_model_calls": 0,
+  "inference_quality": null,
+  "cold_cache": null,
+  "cross_machine": null,
+  "tests": {
+    "run": 218,
+    "passed": 217,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "2217853c636d6a8b3e6b9d27b695d5b7c1b7486c2ce49cbb253475394cbcb241"
+  }
+}

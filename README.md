@@ -6,7 +6,46 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.31.0 · PubMedQA精确来源支持与冻结迁移边界
+## 当前版本：v0.32.0 · 代码/数学词法字节通道的完整负结果
+
+新增独立`RKVTEXT1`实验帧与四类ASCII词法字节通道：原始拼写、空白/注释/字符串/
+换行/Unicode都保存，control记每token原顺序/长度，不执行代码或做语义规范化。
+这不是主RKV归档v7；旧归档v1–v6、Memory/CAS及所有默认保持不变。
+
+```python
+from rkv1.text_frame import encode, decode
+frame, info = encode(b'alpha = 1.00e-3\r\n', codec='zstd', mode='auto')
+assert decode(frame) == b'alpha = 1.00e-3\r\n'
+```
+
+固定SciPy/SymPy/LaTeX2e各两份公开历史源文件(581292B)，另固定噪声负对照；
+Zlib6/Zstd3/LZMA6，同完整帧比较plain/lanes/auto，不搜规则/级别或扩大对象数。
+
+| 六科学文件共享专用源码一次 | plain总B | 强制lanes总B | auto总B |
+|---|---:|---:|---:|
+| Zlib | 157405 | 232204 | 159919 |
+| Zstd | 167086 | 263084 | 169600 |
+| LZMA | 141149 | 198907 | 143663 |
+
+科学候选净空间0/36、联合0/36通过，噪声联合0/6。强制lane连不计源的帧也更大；
+auto21/21条件都回退plain，帧与原样完全相同，仍付变换/两次codec和2514B候选源。
+不能靠免费回退或扩大N声称收益，不做当前表示的Rust原生化/默认集成。
+
+![同codec净成本](results/v0.32.0/text-lanes-net-cost.png)
+
+189编码/恢复对、378全新阶段进程、378实际文件fsync，全部逐字节恢复及SHA相等，
+三轮帧/选择/control账本一致，源/协议不变。217测试通过、1权限跳过、0模型调用。
+对首次导入/预载、I/O/纯计算、字典/模型、专用源与全部57模块分配分别记账；
+公共运行时未全额分配，不是完整部署成本或推理收益。冷缓存/跨机器未测。
+
+下一项优先验证动态证据记忆的单writer/多reader快照一致性，作为机械正确性实验；
+不把它当生产并发/长期对话/模型质量证明。E3神经预测仍需独立设计和完整模型成本。
+
+[冻结格式/协议](docs/TEXT-LANES.md) · [详细实验报告](results/v0.32.0/SUMMARY.md) ·
+[原始逐阶段JSON](results/v0.32.0/trials.json) · [验证](results/v0.32.0/validation.json) ·
+[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.32.0)。
+
+## v0.31.0 · PubMedQA精确来源支持与冻结迁移边界
 
 新增显式`*.pubmedqa.json`原始成员reader：原JSON不改写，精确保留成员范围/SHA，
 仅`CONTEXTS`投影为证据。无独立文章标题时使用PMID元数据，问题/长答案/决策/

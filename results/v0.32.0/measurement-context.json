@@ -1,0 +1,17 @@
+{
+  "frozen_commit": "d6d7c21b0088f89064ceb6cdcf96d48840082b99",
+  "protocol": "docs/TEXT-LANES.md",
+  "measured_modules": 57,
+  "all_runtime_modules_protocol_driver_and_input_manifest_match_freeze": true,
+  "candidate_CI_run": 40211413230,
+  "formal_encode_restore_pairs": 189,
+  "fresh_subprocess_stages": 378,
+  "actual_file_fsyncs": 378,
+  "remote_model_calls": 0,
+  "scientific_source_files": 6,
+  "scientific_projects": 3,
+  "synthetic_negative_control_files": 1,
+  "raw_code_never_executed": true,
+  "no_parameter_or_object_count_tuning": true,
+  "visual_QA": "Three codec panels viewed; normalized baseline and source-cost labels clear. Interpretation added from unchanged validated observations."
+}

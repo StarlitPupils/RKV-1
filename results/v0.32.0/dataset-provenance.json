@@ -1,0 +1,90 @@
+{
+  "files": [
+    {
+      "id": "scipy__scipy__optimize___linprog.py",
+      "family": "scipy/scipy",
+      "ref": "v1.14.1",
+      "commit": "92d2a8592782ee19a1161d0bf3fc2241ba78bb63",
+      "source_path": "scipy/optimize/_linprog.py",
+      "bytes": 29756,
+      "sha256": "078a34610c7bb6bbe2d5fdd945a8941cf52e054319eeca552d9b24e9e8f0dafc",
+      "git_blob_sha1": "1812182171961f16f69fe85f40d07bf0ae790e03",
+      "source_url": "https://raw.githubusercontent.com/scipy/scipy/92d2a8592782ee19a1161d0bf3fc2241ba78bb63/scipy/optimize/_linprog.py",
+      "license_url": "https://github.com/scipy/scipy/blob/92d2a8592782ee19a1161d0bf3fc2241ba78bb63/LICENSE.txt",
+      "license_sha256": "c29fb8e5936f33237a8b15256b4c6e93037f05bbf58c3d7b5755aede4c200173"
+    },
+    {
+      "id": "scipy__scipy__linalg___basic.py",
+      "family": "scipy/scipy",
+      "ref": "v1.14.1",
+      "commit": "92d2a8592782ee19a1161d0bf3fc2241ba78bb63",
+      "source_path": "scipy/linalg/_basic.py",
+      "bytes": 69168,
+      "sha256": "629c54df2b299e5a0283b1f0d990d740562ac91711b34e73a71a2742f2ec252a",
+      "git_blob_sha1": "84e4cafdc4a697a20f15c9bb0fb419864bea8046",
+      "source_url": "https://raw.githubusercontent.com/scipy/scipy/92d2a8592782ee19a1161d0bf3fc2241ba78bb63/scipy/linalg/_basic.py",
+      "license_url": "https://github.com/scipy/scipy/blob/92d2a8592782ee19a1161d0bf3fc2241ba78bb63/LICENSE.txt",
+      "license_sha256": "c29fb8e5936f33237a8b15256b4c6e93037f05bbf58c3d7b5755aede4c200173"
+    },
+    {
+      "id": "sympy__sympy__core__expr.py",
+      "family": "sympy/sympy",
+      "ref": "1.13.3",
+      "commit": "c870d17c2638f5061800e344b72ff80086a0b41d",
+      "source_path": "sympy/core/expr.py",
+      "bytes": 142171,
+      "sha256": "d8bca4bb806a17a5474a69780aa7175dbe2f55dc64dd1a14ae6275c016200913",
+      "git_blob_sha1": "7c4015e0f0e504308d036636292cecd4eec646d7",
+      "source_url": "https://raw.githubusercontent.com/sympy/sympy/c870d17c2638f5061800e344b72ff80086a0b41d/sympy/core/expr.py",
+      "license_url": "https://github.com/sympy/sympy/blob/c870d17c2638f5061800e344b72ff80086a0b41d/LICENSE",
+      "license_sha256": "07a5e9819f727b4986ad2829c7a29a6320d42575f720eb24d71b7fef573a0286"
+    },
+    {
+      "id": "sympy__sympy__integrals__integrals.py",
+      "family": "sympy/sympy",
+      "ref": "1.13.3",
+      "commit": "c870d17c2638f5061800e344b72ff80086a0b41d",
+      "source_path": "sympy/integrals/integrals.py",
+      "bytes": 64861,
+      "sha256": "b3507a881434ec45f9d8019f6ef63e45a361d2115a789c188d246d6aa56493cd",
+      "git_blob_sha1": "3017c9ba31bfab6960ea860e6ec2713dcade5fc0",
+      "source_url": "https://raw.githubusercontent.com/sympy/sympy/c870d17c2638f5061800e344b72ff80086a0b41d/sympy/integrals/integrals.py",
+      "license_url": "https://github.com/sympy/sympy/blob/c870d17c2638f5061800e344b72ff80086a0b41d/LICENSE",
+      "license_sha256": "07a5e9819f727b4986ad2829c7a29a6320d42575f720eb24d71b7fef573a0286"
+    },
+    {
+      "id": "latex3__required__amsmath__amsmath.dtx",
+      "family": "latex3/latex2e",
+      "ref": "release-2024-11-01",
+      "commit": "daf97c97ebc43873d154062ca88895ed190cbdf9",
+      "source_path": "required/amsmath/amsmath.dtx",
+      "bytes": 233049,
+      "sha256": "406913081307c85b87ba2e628b68bcec46a91c12d2f7b655d53f94c964d7f2f1",
+      "git_blob_sha1": "9d45cc2f9df2e364a207a38728d5949e807003a0",
+      "source_url": "https://raw.githubusercontent.com/latex3/latex2e/daf97c97ebc43873d154062ca88895ed190cbdf9/required/amsmath/amsmath.dtx",
+      "license_url": "https://github.com/latex3/latex2e/blob/daf97c97ebc43873d154062ca88895ed190cbdf9/LICENSE",
+      "license_sha256": "5f05fcf6ef25a6c31bccd2df7c0c46b23107bbeb2ce5cdba74efb5cc357f4dbb"
+    },
+    {
+      "id": "latex3__base__ltmath.dtx",
+      "family": "latex3/latex2e",
+      "ref": "release-2024-11-01",
+      "commit": "daf97c97ebc43873d154062ca88895ed190cbdf9",
+      "source_path": "base/ltmath.dtx",
+      "bytes": 42287,
+      "sha256": "3473171fa4a68a527937ca2e75738bc3440fc41519f0f9936a1a16c39dce6ffe",
+      "git_blob_sha1": "b40faa8a80022d06fa480e6717db57d0b959d103",
+      "source_url": "https://raw.githubusercontent.com/latex3/latex2e/daf97c97ebc43873d154062ca88895ed190cbdf9/base/ltmath.dtx",
+      "license_url": "https://github.com/latex3/latex2e/blob/daf97c97ebc43873d154062ca88895ed190cbdf9/LICENSE",
+      "license_sha256": "5f05fcf6ef25a6c31bccd2df7c0c46b23107bbeb2ce5cdba74efb5cc357f4dbb"
+    }
+  ],
+  "negative_control": {
+    "id": "control_noise_256k.bin",
+    "family": "synthetic-negative-control",
+    "bytes": 262144,
+    "sha256": "ac3a35276c2cecb37823f21a86ac3f30a41045d79e21444cb3323adf836a36d9",
+    "generator": "hashlib.shake_256(b\"RKV-1 text lanes v032 fixed noise seed20261025\").digest(262144)"
+  },
+  "source_selection": "Six fixed archival scientific-code/math-markup files from three projects, two per project; no code execution or compression scoring during input preparation."
+}

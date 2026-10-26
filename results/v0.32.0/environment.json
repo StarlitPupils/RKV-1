@@ -1,0 +1,25 @@
+{
+  "python": "3.13.12",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "logical_cpus": 20,
+  "zstandard": "0.24.0",
+  "seed": 20261025,
+  "rounds": 3,
+  "codecs": [
+    "zlib",
+    "zstd",
+    "lzma"
+  ],
+  "modes": [
+    "plain",
+    "lanes",
+    "auto"
+  ],
+  "source_manifest_sha256": "27cef355d89de8c59a8259755254e535af379a1639ba444099772ded08c9e136",
+  "raw_code_executed": false,
+  "remote_model_calls": 0,
+  "cold_cache": null,
+  "cross_machine": null,
+  "directory_sync_or_power_loss": null,
+  "inference_quality": null
+}
