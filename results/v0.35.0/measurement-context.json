@@ -1,0 +1,9 @@
+{
+  "freeze": "3db7215",
+  "candidate_CI": 40284208146,
+  "runtime": "57Python modules except version byte-identical to actual v0.34 tag. No production recovery fix or cleanup added.",
+  "formal_campaign": "Exactly3x8 original cases.21 owned-child hard exits at fixed Python hooks and3 success controls. No failed-case retries. Additional marker/log IO outside Memory tree not production throughput.",
+  "file_accounting": "All recursive files counted including root .memory-head-* remnants. Memory.stats grouping excludes these;94B per case6,282B total retained. No physical filesystem allocation claim.",
+  "scope": "LocalCPU/Windows, not arbitrary-instruction crash, external kill, power loss, kernel/storage failure or model quality.0 new remote model calls.",
+  "strict_external_install_scope": "Fresh physically external wheel/current native and cwd, same interpreter/dependencies. Installed functional smoke separately includes real owned-child exit77 before HEAD name publication and one-shot recovery."
+}

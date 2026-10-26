@@ -1,0 +1,21 @@
+{
+  "freeze": "3db7215",
+  "all57_runtime_modules_and_protocol_and_drivers_match_freeze": true,
+  "runtime_except_version_byte_identical_to_v034": true,
+  "independently_recomputed_cases": 24,
+  "passed": 24,
+  "all_full_file_inventories_and_stats_coverage_reconciled": true,
+  "errors": [],
+  "tests": {
+    "run": 223,
+    "passed": 222,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "880234746d10a8e70ec3c6d3e5a59a8c1ba3c01813f4d0ba491b4eb09896ebef"
+  },
+  "remote_model_calls": 0,
+  "cold_cache": null,
+  "cross_machine": null,
+  "power_loss": null,
+  "model_quality": null
+}

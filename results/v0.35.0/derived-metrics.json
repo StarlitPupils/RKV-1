@@ -1,0 +1,600 @@
+{
+  "cases": [
+    {
+      "round": 1,
+      "stage": "before-add",
+      "gate_passed": true,
+      "exit_code": 77,
+      "visible_epoch": 0,
+      "exit_logical_file_bytes": 371530,
+      "final_logical_file_bytes": 383821,
+      "exit_stats_uncovered_bytes": 0,
+      "final_stats_uncovered_bytes": 0,
+      "pending_HEAD_files": 0,
+      "pending_HEAD_bytes": 0,
+      "recovery_add_ms": 28.552799951285124,
+      "future_add_ms": 29.67029996216297,
+      "process_wall_ms": 97.73410018533468,
+      "errors": []
+    },
+    {
+      "round": 1,
+      "stage": "before-first-new-CAS-object",
+      "gate_passed": true,
+      "exit_code": 77,
+      "visible_epoch": 0,
+      "exit_logical_file_bytes": 371530,
+      "final_logical_file_bytes": 383821,
+      "exit_stats_uncovered_bytes": 0,
+      "final_stats_uncovered_bytes": 0,
+      "pending_HEAD_files": 0,
+      "pending_HEAD_bytes": 0,
+      "recovery_add_ms": 27.88539999164641,
+      "future_add_ms": 28.429799946025014,
+      "process_wall_ms": 91.22620010748506,
+      "errors": []
+    },
+    {
+      "round": 1,
+      "stage": "after-first-new-CAS-object",
+      "gate_passed": true,
+      "exit_code": 77,
+      "visible_epoch": 0,
+      "exit_logical_file_bytes": 375784,
+      "final_logical_file_bytes": 383821,
+      "exit_stats_uncovered_bytes": 0,
+      "final_stats_uncovered_bytes": 0,
+      "pending_HEAD_files": 0,
+      "pending_HEAD_bytes": 0,
+      "recovery_add_ms": 26.82589995674789,
+      "future_add_ms": 29.88089993596077,
+      "process_wall_ms": 91.71959990635514,
+      "errors": []
+    },
+    {
+      "round": 1,
+      "stage": "after-CAS-snapshot-before-index",
+      "gate_passed": true,
+      "exit_code": 77,
+      "visible_epoch": 0,
+      "exit_logical_file_bytes": 376511,
+      "final_logical_file_bytes": 383821,
+      "exit_stats_uncovered_bytes": 0,
+      "final_stats_uncovered_bytes": 0,
+      "pending_HEAD_files": 0,
+      "pending_HEAD_bytes": 0,
+      "recovery_add_ms": 26.98699990287423,
+      "future_add_ms": 29.56819999963045,
+      "process_wall_ms": 95.57539992965758,
+      "errors": []
+    },
+    {
+      "round": 1,
+      "stage": "after-index-manifest-before-HEAD",
+      "gate_passed": true,
+      "exit_code": 77,
+      "visible_epoch": 0,
+      "exit_logical_file_bytes": 377675,
+      "final_logical_file_bytes": 383821,
+      "exit_stats_uncovered_bytes": 0,
+      "final_stats_uncovered_bytes": 0,
+      "pending_HEAD_files": 0,
+      "pending_HEAD_bytes": 0,
+      "recovery_add_ms": 12.105599977076054,
+      "future_add_ms": 53.373799892142415,
+      "process_wall_ms": 122.68619984388351,
+      "errors": []
+    },
+    {
+      "round": 1,
+      "stage": "after-HEAD-temp-fsync-before-name",
+      "gate_passed": true,
+      "exit_code": 77,
+      "visible_epoch": 0,
+      "exit_logical_file_bytes": 377769,
+      "final_logical_file_bytes": 383915,
+      "exit_stats_uncovered_bytes": 94,
+      "final_stats_uncovered_bytes": 94,
+      "pending_HEAD_files": 1,
+      "pending_HEAD_bytes": 94,
+      "recovery_add_ms": 9.000000078231096,
+      "future_add_ms": 53.45899984240532,
+      "process_wall_ms": 122.22739984281361,
+      "errors": []
+    },
+    {
+      "round": 1,
+      "stage": "after-HEAD-name-before-add-return",
+      "gate_passed": true,
+      "exit_code": 77,
+      "visible_epoch": 1,
+      "exit_logical_file_bytes": 377675,
+      "final_logical_file_bytes": 383821,
+      "exit_stats_uncovered_bytes": 0,
+      "final_stats_uncovered_bytes": 0,
+      "pending_HEAD_files": 0,
+      "pending_HEAD_bytes": 0,
+      "recovery_add_ms": 11.43029984086752,
+      "future_add_ms": 44.14899996481836,
+      "process_wall_ms": 125.41399989277124,
+      "errors": []
+    },
+    {
+      "round": 1,
+      "stage": "success-control",
+      "gate_passed": true,
+      "exit_code": 0,
+      "visible_epoch": 1,
+      "exit_logical_file_bytes": 377675,
+      "final_logical_file_bytes": 383821,
+      "exit_stats_uncovered_bytes": 0,
+      "final_stats_uncovered_bytes": 0,
+      "pending_HEAD_files": 0,
+      "pending_HEAD_bytes": 0,
+      "recovery_add_ms": 12.816500151529908,
+      "future_add_ms": 55.776899913325906,
+      "process_wall_ms": 157.84219978377223,
+      "errors": []
+    },
+    {
+      "round": 2,
+      "stage": "before-add",
+      "gate_passed": true,
+      "exit_code": 77,
+      "visible_epoch": 0,
+      "exit_logical_file_bytes": 371530,
+      "final_logical_file_bytes": 383821,
+      "exit_stats_uncovered_bytes": 0,
+      "final_stats_uncovered_bytes": 0,
+      "pending_HEAD_files": 0,
+      "pending_HEAD_bytes": 0,
+      "recovery_add_ms": 57.03400005586445,
+      "future_add_ms": 47.46949998661876,
+      "process_wall_ms": 106.34410008788109,
+      "errors": []
+    },
+    {
+      "round": 2,
+      "stage": "before-first-new-CAS-object",
+      "gate_passed": true,
+      "exit_code": 77,
+      "visible_epoch": 0,
+      "exit_logical_file_bytes": 371530,
+      "final_logical_file_bytes": 383821,
+      "exit_stats_uncovered_bytes": 0,
+      "final_stats_uncovered_bytes": 0,
+      "pending_HEAD_files": 0,
+      "pending_HEAD_bytes": 0,
+      "recovery_add_ms": 42.33280010521412,
+      "future_add_ms": 51.98949994519353,
+      "process_wall_ms": 107.65760019421577,
+      "errors": []
+    },
+    {
+      "round": 2,
+      "stage": "after-first-new-CAS-object",
+      "gate_passed": true,
+      "exit_code": 77,
+      "visible_epoch": 0,
+      "exit_logical_file_bytes": 375784,
+      "final_logical_file_bytes": 383821,
+      "exit_stats_uncovered_bytes": 0,
+      "final_stats_uncovered_bytes": 0,
+      "pending_HEAD_files": 0,
+      "pending_HEAD_bytes": 0,
+      "recovery_add_ms": 34.53680011443794,
+      "future_add_ms": 54.31109992787242,
+      "process_wall_ms": 92.32589998282492,
+      "errors": []
+    },
+    {
+      "round": 2,
+      "stage": "after-CAS-snapshot-before-index",
+      "gate_passed": true,
+      "exit_code": 77,
+      "visible_epoch": 0,
+      "exit_logical_file_bytes": 376511,
+      "final_logical_file_bytes": 383821,
+      "exit_stats_uncovered_bytes": 0,
+      "final_stats_uncovered_bytes": 0,
+      "pending_HEAD_files": 0,
+      "pending_HEAD_bytes": 0,
+      "recovery_add_ms": 46.65709985420108,
+      "future_add_ms": 29.967400012537837,
+      "process_wall_ms": 93.70029997080564,
+      "errors": []
+    },
+    {
+      "round": 2,
+      "stage": "after-index-manifest-before-HEAD",
+      "gate_passed": true,
+      "exit_code": 77,
+      "visible_epoch": 0,
+      "exit_logical_file_bytes": 377675,
+      "final_logical_file_bytes": 383821,
+      "exit_stats_uncovered_bytes": 0,
+      "final_stats_uncovered_bytes": 0,
+      "pending_HEAD_files": 0,
+      "pending_HEAD_bytes": 0,
+      "recovery_add_ms": 10.08649985305965,
+      "future_add_ms": 46.2245000526309,
+      "process_wall_ms": 135.62879990786314,
+      "errors": []
+    },
+    {
+      "round": 2,
+      "stage": "after-HEAD-temp-fsync-before-name",
+      "gate_passed": true,
+      "exit_code": 77,
+      "visible_epoch": 0,
+      "exit_logical_file_bytes": 377769,
+      "final_logical_file_bytes": 383915,
+      "exit_stats_uncovered_bytes": 94,
+      "final_stats_uncovered_bytes": 94,
+      "pending_HEAD_files": 1,
+      "pending_HEAD_bytes": 94,
+      "recovery_add_ms": 11.350899934768677,
+      "future_add_ms": 44.225400080904365,
+      "process_wall_ms": 124.33620006777346,
+      "errors": []
+    },
+    {
+      "round": 2,
+      "stage": "after-HEAD-name-before-add-return",
+      "gate_passed": true,
+      "exit_code": 77,
+      "visible_epoch": 1,
+      "exit_logical_file_bytes": 377675,
+      "final_logical_file_bytes": 383821,
+      "exit_stats_uncovered_bytes": 0,
+      "final_stats_uncovered_bytes": 0,
+      "pending_HEAD_files": 0,
+      "pending_HEAD_bytes": 0,
+      "recovery_add_ms": 9.54760005697608,
+      "future_add_ms": 53.76129993237555,
+      "process_wall_ms": 124.96990012004972,
+      "errors": []
+    },
+    {
+      "round": 2,
+      "stage": "success-control",
+      "gate_passed": true,
+      "exit_code": 0,
+      "visible_epoch": 1,
+      "exit_logical_file_bytes": 377675,
+      "final_logical_file_bytes": 383821,
+      "exit_stats_uncovered_bytes": 0,
+      "final_stats_uncovered_bytes": 0,
+      "pending_HEAD_files": 0,
+      "pending_HEAD_bytes": 0,
+      "recovery_add_ms": 7.527400040999055,
+      "future_add_ms": 55.19880005158484,
+      "process_wall_ms": 129.18450008146465,
+      "errors": []
+    },
+    {
+      "round": 3,
+      "stage": "before-add",
+      "gate_passed": true,
+      "exit_code": 77,
+      "visible_epoch": 0,
+      "exit_logical_file_bytes": 371530,
+      "final_logical_file_bytes": 383821,
+      "exit_stats_uncovered_bytes": 0,
+      "final_stats_uncovered_bytes": 0,
+      "pending_HEAD_files": 0,
+      "pending_HEAD_bytes": 0,
+      "recovery_add_ms": 47.34770022332668,
+      "future_add_ms": 59.09029999747872,
+      "process_wall_ms": 101.92000004462898,
+      "errors": []
+    },
+    {
+      "round": 3,
+      "stage": "before-first-new-CAS-object",
+      "gate_passed": true,
+      "exit_code": 77,
+      "visible_epoch": 0,
+      "exit_logical_file_bytes": 371530,
+      "final_logical_file_bytes": 383821,
+      "exit_stats_uncovered_bytes": 0,
+      "final_stats_uncovered_bytes": 0,
+      "pending_HEAD_files": 0,
+      "pending_HEAD_bytes": 0,
+      "recovery_add_ms": 46.88229993917048,
+      "future_add_ms": 44.86089991405606,
+      "process_wall_ms": 93.1893999222666,
+      "errors": []
+    },
+    {
+      "round": 3,
+      "stage": "after-first-new-CAS-object",
+      "gate_passed": true,
+      "exit_code": 77,
+      "visible_epoch": 0,
+      "exit_logical_file_bytes": 375784,
+      "final_logical_file_bytes": 383821,
+      "exit_stats_uncovered_bytes": 0,
+      "final_stats_uncovered_bytes": 0,
+      "pending_HEAD_files": 0,
+      "pending_HEAD_bytes": 0,
+      "recovery_add_ms": 53.508699871599674,
+      "future_add_ms": 53.31259989179671,
+      "process_wall_ms": 95.53849999792874,
+      "errors": []
+    },
+    {
+      "round": 3,
+      "stage": "after-CAS-snapshot-before-index",
+      "gate_passed": true,
+      "exit_code": 77,
+      "visible_epoch": 0,
+      "exit_logical_file_bytes": 376511,
+      "final_logical_file_bytes": 383821,
+      "exit_stats_uncovered_bytes": 0,
+      "final_stats_uncovered_bytes": 0,
+      "pending_HEAD_files": 0,
+      "pending_HEAD_bytes": 0,
+      "recovery_add_ms": 39.02529994957149,
+      "future_add_ms": 52.800399949774146,
+      "process_wall_ms": 94.25139985978603,
+      "errors": []
+    },
+    {
+      "round": 3,
+      "stage": "after-index-manifest-before-HEAD",
+      "gate_passed": true,
+      "exit_code": 77,
+      "visible_epoch": 0,
+      "exit_logical_file_bytes": 377675,
+      "final_logical_file_bytes": 383821,
+      "exit_stats_uncovered_bytes": 0,
+      "final_stats_uncovered_bytes": 0,
+      "pending_HEAD_files": 0,
+      "pending_HEAD_bytes": 0,
+      "recovery_add_ms": 7.609100081026554,
+      "future_add_ms": 40.25800013914704,
+      "process_wall_ms": 124.14569989778101,
+      "errors": []
+    },
+    {
+      "round": 3,
+      "stage": "after-HEAD-temp-fsync-before-name",
+      "gate_passed": true,
+      "exit_code": 77,
+      "visible_epoch": 0,
+      "exit_logical_file_bytes": 377769,
+      "final_logical_file_bytes": 383915,
+      "exit_stats_uncovered_bytes": 94,
+      "final_stats_uncovered_bytes": 94,
+      "pending_HEAD_files": 1,
+      "pending_HEAD_bytes": 94,
+      "recovery_add_ms": 8.513699984177947,
+      "future_add_ms": 45.33739993348718,
+      "process_wall_ms": 125.12880004942417,
+      "errors": []
+    },
+    {
+      "round": 3,
+      "stage": "after-HEAD-name-before-add-return",
+      "gate_passed": true,
+      "exit_code": 77,
+      "visible_epoch": 1,
+      "exit_logical_file_bytes": 377675,
+      "final_logical_file_bytes": 383821,
+      "exit_stats_uncovered_bytes": 0,
+      "final_stats_uncovered_bytes": 0,
+      "pending_HEAD_files": 0,
+      "pending_HEAD_bytes": 0,
+      "recovery_add_ms": 7.881700061261654,
+      "future_add_ms": 56.965900119394064,
+      "process_wall_ms": 127.38790013827384,
+      "errors": []
+    },
+    {
+      "round": 3,
+      "stage": "success-control",
+      "gate_passed": true,
+      "exit_code": 0,
+      "visible_epoch": 1,
+      "exit_logical_file_bytes": 377675,
+      "final_logical_file_bytes": 383821,
+      "exit_stats_uncovered_bytes": 0,
+      "final_stats_uncovered_bytes": 0,
+      "pending_HEAD_files": 0,
+      "pending_HEAD_bytes": 0,
+      "recovery_add_ms": 11.178100015968084,
+      "future_add_ms": 53.31250000745058,
+      "process_wall_ms": 129.88830008544028,
+      "errors": []
+    }
+  ],
+  "by_stage": [
+    {
+      "stage": "before-add",
+      "passed": 3,
+      "cases": 3,
+      "exit_bytes": [
+        371530,
+        371530,
+        371530
+      ],
+      "final_bytes": [
+        383821,
+        383821,
+        383821
+      ],
+      "uncovered_bytes": [
+        0,
+        0,
+        0
+      ],
+      "recovery_add_median_ms": 47.34770022332668,
+      "future_add_median_ms": 47.46949998661876
+    },
+    {
+      "stage": "before-first-new-CAS-object",
+      "passed": 3,
+      "cases": 3,
+      "exit_bytes": [
+        371530,
+        371530,
+        371530
+      ],
+      "final_bytes": [
+        383821,
+        383821,
+        383821
+      ],
+      "uncovered_bytes": [
+        0,
+        0,
+        0
+      ],
+      "recovery_add_median_ms": 42.33280010521412,
+      "future_add_median_ms": 44.86089991405606
+    },
+    {
+      "stage": "after-first-new-CAS-object",
+      "passed": 3,
+      "cases": 3,
+      "exit_bytes": [
+        375784,
+        375784,
+        375784
+      ],
+      "final_bytes": [
+        383821,
+        383821,
+        383821
+      ],
+      "uncovered_bytes": [
+        0,
+        0,
+        0
+      ],
+      "recovery_add_median_ms": 34.53680011443794,
+      "future_add_median_ms": 53.31259989179671
+    },
+    {
+      "stage": "after-CAS-snapshot-before-index",
+      "passed": 3,
+      "cases": 3,
+      "exit_bytes": [
+        376511,
+        376511,
+        376511
+      ],
+      "final_bytes": [
+        383821,
+        383821,
+        383821
+      ],
+      "uncovered_bytes": [
+        0,
+        0,
+        0
+      ],
+      "recovery_add_median_ms": 39.02529994957149,
+      "future_add_median_ms": 29.967400012537837
+    },
+    {
+      "stage": "after-index-manifest-before-HEAD",
+      "passed": 3,
+      "cases": 3,
+      "exit_bytes": [
+        377675,
+        377675,
+        377675
+      ],
+      "final_bytes": [
+        383821,
+        383821,
+        383821
+      ],
+      "uncovered_bytes": [
+        0,
+        0,
+        0
+      ],
+      "recovery_add_median_ms": 10.08649985305965,
+      "future_add_median_ms": 46.2245000526309
+    },
+    {
+      "stage": "after-HEAD-temp-fsync-before-name",
+      "passed": 3,
+      "cases": 3,
+      "exit_bytes": [
+        377769,
+        377769,
+        377769
+      ],
+      "final_bytes": [
+        383915,
+        383915,
+        383915
+      ],
+      "uncovered_bytes": [
+        94,
+        94,
+        94
+      ],
+      "recovery_add_median_ms": 9.000000078231096,
+      "future_add_median_ms": 45.33739993348718
+    },
+    {
+      "stage": "after-HEAD-name-before-add-return",
+      "passed": 3,
+      "cases": 3,
+      "exit_bytes": [
+        377675,
+        377675,
+        377675
+      ],
+      "final_bytes": [
+        383821,
+        383821,
+        383821
+      ],
+      "uncovered_bytes": [
+        0,
+        0,
+        0
+      ],
+      "recovery_add_median_ms": 9.54760005697608,
+      "future_add_median_ms": 53.76129993237555
+    },
+    {
+      "stage": "success-control",
+      "passed": 3,
+      "cases": 3,
+      "exit_bytes": [
+        377675,
+        377675,
+        377675
+      ],
+      "final_bytes": [
+        383821,
+        383821,
+        383821
+      ],
+      "uncovered_bytes": [
+        0,
+        0,
+        0
+      ],
+      "recovery_add_median_ms": 11.178100015968084,
+      "future_add_median_ms": 55.19880005158484
+    }
+  ],
+  "case_count": 24,
+  "passed": 24,
+  "errors": [],
+  "hard_exit_cases": 21,
+  "success_controls": 3,
+  "complete_source_locator_audits": 192,
+  "verified_original_record_bindings": 768,
+  "historical_SID_audits": 72,
+  "retained_pending_HEAD_files": 3,
+  "retained_pending_HEAD_bytes": 282
+}

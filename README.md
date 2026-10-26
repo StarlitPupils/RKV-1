@@ -6,7 +6,31 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.34.0 · Windows边写边读修正，本机原负载通过
+## 当前版本：v0.35.0 · 固定边界硬退出后，一次恢复写入通过
+
+运行库除版本号与v0.34逐字节相同。新增单writer固定Python hook进程实验：
+7个硬退出点+1成功控制，3轮共24个新目录；21次os._exit(77)、3次正常返回。
+**24/24原计划通过**，退出后HEAD符合原阶段、旧SID可读，一次epoch1恢复与一次epoch2更新成功。
+
+192次完整源/locator审计、768条原文绑定、72次历史SID复查通过；
+初始及退出时已存在的全部非HEAD文件SHA不变，不重试直到成功、不清理负结果。
+
+![进程边界恢复及完整文件账本](results/v0.35.0/interruption-recovery.png)
+
+实际残留也计费：HEAD临时文件fsync后、名称发布前退出，每轮留下94B，合计282B，
+恢复不会自动回收。Memory.stats原分组不包含根目录其他临时文件，本实验用递归完整
+文件账本对账，最终383915B对stats383821B；其他案例最终383821B。
+这不是断电、任意指令时刻终止、多writer或生产恢复证明，没有推理质量收益结论。
+
+223测试222通过/1权限跳过。0模型调用，冷缓存/跨机器未测。
+下一项回到E3本地小型预测器+熵编码：先冻结确定性、训练/验证分离和完整权重/运行库/
+训练及编解码成本，再研究是否有净收益；长期对话/多跳/无限上下文仍未完成。
+
+[冻结协议](docs/MEMORY-INTERRUPTIONS.md) · [详实报告](results/v0.35.0/SUMMARY.md) ·
+[原始JSON](results/v0.35.0/round-1.json) · [验证](results/v0.35.0/validation.json) ·
+[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.35.0)。
+
+## v0.34.0 · Windows边写边读修正，本机原负载通过
 
 读取HEAD时允许Windows共享删除/重命名；最终发布名称使用FileRenameInfoEx的
 替换/POSIX语义。旧句柄继续读旧内容，新句柄读新内容；原字节/格式/预算/校验不变。
