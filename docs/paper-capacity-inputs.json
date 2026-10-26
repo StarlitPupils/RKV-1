@@ -1,0 +1,27 @@
+{
+  "model_sha256": "f062c7a784421b71bbfaf3c299be78ff323a391847afbf5420e4c06a4d422be0",
+  "source_sha256": "b8d6c89624cb2ed74dee8938effc4f5d8bd2086887880af8110d64be4ceade62",
+  "methods": {
+    "lexical": {
+      "report_path": "E:/memorystorage/results/v0.53.0/round-1-lexical.json",
+      "report_sha256": "a2b785569004faf24ff5b6b96128ea62e586742b32f7de6e33dfda75056ef42d",
+      "report_bytes": 533418
+    },
+    "graph": {
+      "report_path": "E:/memorystorage/results/v0.53.0/round-1-graph.json",
+      "report_sha256": "db33e952e4fe16ceae5e5573aff3a46ab3a509480ecf2f1d602143c6e35b0360",
+      "report_bytes": 533442
+    },
+    "permuted_graph": {
+      "report_path": "E:/memorystorage/results/v0.53.0/round-1-permuted_graph.json",
+      "report_sha256": "d62426545d1022bc6f1e53584e29234e5fa9356c8eb7f7c89fc0b5dce2e091b8",
+      "report_bytes": 533440
+    }
+  },
+  "prior_fully_verified_release": "v0.55.0",
+  "prior_tag_commit": "9ee69c470c5dd6abc7712c11554339b121f90b82",
+  "prior_final_proof_sha256": "8ed99f50de06cfd15dc8a137dd7c54680b0016f68dd3f855bff06fac8cdad182",
+  "source_binding_trust": "Source identity/gold from previously independently audited v053 report hashes and exact model; v055 actual API proof compatibility complete. No new raw-source binding this version.",
+  "no_scientific_queries_or_training_or_new_source_ranges": true,
+  "known_gold_capacity_upper_bound_only": true
+}
