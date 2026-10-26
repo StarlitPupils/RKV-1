@@ -1,0 +1,55 @@
+{
+  "scope": "Fresh fixed ranges within previously seen files, not unseen projects",
+  "inputs": [
+    {
+      "id": "scipy__scipy__linalg___basic.py@32768",
+      "family": "scipy/scipy",
+      "scientific": true,
+      "offset": 32768,
+      "bytes": 8192,
+      "sha256": "5eb43d1c21c58953f9874a0f60c76d3f97ad29907e021c7ccdfc64ad919bce2c",
+      "full_bytes": 69168,
+      "full_sha256": "629c54df2b299e5a0283b1f0d990d740562ac91711b34e73a71a2742f2ec252a",
+      "source_url": "https://raw.githubusercontent.com/scipy/scipy/92d2a8592782ee19a1161d0bf3fc2241ba78bb63/scipy/linalg/_basic.py"
+    },
+    {
+      "id": "sympy__sympy__integrals__integrals.py@32768",
+      "family": "sympy/sympy",
+      "scientific": true,
+      "offset": 32768,
+      "bytes": 8192,
+      "sha256": "305d2b2267db06442c75276f4a19778998920ea1197c63e4f705baf237307624",
+      "full_bytes": 64861,
+      "full_sha256": "b3507a881434ec45f9d8019f6ef63e45a361d2115a789c188d246d6aa56493cd",
+      "source_url": "https://raw.githubusercontent.com/sympy/sympy/c870d17c2638f5061800e344b72ff80086a0b41d/sympy/integrals/integrals.py"
+    },
+    {
+      "id": "latex3__base__ltmath.dtx@32768",
+      "family": "latex3/latex2e",
+      "scientific": true,
+      "offset": 32768,
+      "bytes": 8192,
+      "sha256": "3a7703e878768aa5234abfcde6bc68961ba040b6d9089e47b4ae4b20ab0105e9",
+      "full_bytes": 42287,
+      "full_sha256": "3473171fa4a68a527937ca2e75738bc3440fc41519f0f9936a1a16c39dce6ffe",
+      "source_url": "https://raw.githubusercontent.com/latex3/latex2e/daf97c97ebc43873d154062ca88895ed190cbdf9/base/ltmath.dtx"
+    },
+    {
+      "id": "new_noise",
+      "family": "synthetic",
+      "scientific": false,
+      "offset": 0,
+      "bytes": 8192,
+      "sha256": "d6bfd92402586f19da9c5573259904dfbe4e843c053546a141d1bd3b51093153"
+    },
+    {
+      "id": "byte_cycle",
+      "family": "synthetic",
+      "scientific": false,
+      "offset": 0,
+      "bytes": 8192,
+      "sha256": "dc404a613fedaeb54034514bc6505f56b933caa5250299ba7d094377a51caa46"
+    }
+  ],
+  "compression_runs": 0
+}
