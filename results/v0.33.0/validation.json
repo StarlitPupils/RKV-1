@@ -1,0 +1,58 @@
+{
+  "frozen_commit": "148b5f4",
+  "all_57_modules_protocol_driver_and_generated_source_hashes_match": true,
+  "runtime_other_than_version_byte_identical_to_v032": true,
+  "formal_rounds": 3,
+  "formal_reader_processes": 12,
+  "writer_updates_requested": 240,
+  "all_rounds_gate_passed": false,
+  "errors": [
+    {
+      "round": 1,
+      "reader": 1,
+      "type": "PermissionError",
+      "message": "[Errno 13] Permission denied: 'E:\\\\memorystorage\\\\.tools\\\\memory-concurrency-v033-work\\\\round-1\\\\memory\\\\HEAD.json'"
+    },
+    {
+      "round": 1,
+      "reader": 2,
+      "type": "PermissionError",
+      "message": "[Errno 13] Permission denied: 'E:\\\\memorystorage\\\\.tools\\\\memory-concurrency-v033-work\\\\round-1\\\\memory\\\\HEAD.json'"
+    },
+    {
+      "round": 1,
+      "reader": 3,
+      "type": "PermissionError",
+      "message": "[Errno 13] Permission denied: 'E:\\\\memorystorage\\\\.tools\\\\memory-concurrency-v033-work\\\\round-1\\\\memory\\\\HEAD.json'"
+    },
+    {
+      "round": 2,
+      "reader": 0,
+      "type": "PermissionError",
+      "message": "[Errno 13] Permission denied: 'E:\\\\memorystorage\\\\.tools\\\\memory-concurrency-v033-work\\\\round-2\\\\memory\\\\HEAD.json'"
+    },
+    {
+      "round": 2,
+      "writer": true,
+      "type": "PermissionError",
+      "message": "[WinError 5] 拒绝访问。: 'E:\\\\memorystorage\\\\.tools\\\\memory-concurrency-v033-work\\\\round-2\\\\memory\\\\.memory-head-i12mi9d0' -> 'E:\\\\memorystorage\\\\.tools\\\\memory-concurrency-v033-work\\\\round-2\\\\memory\\\\HEAD.json'"
+    },
+    {
+      "round": 3,
+      "writer": true,
+      "type": "PermissionError",
+      "message": "[WinError 5] 拒绝访问。: 'E:\\\\memorystorage\\\\.tools\\\\memory-concurrency-v033-work\\\\round-3\\\\memory\\\\.memory-head-3q6xkqo9' -> 'E:\\\\memorystorage\\\\.tools\\\\memory-concurrency-v033-work\\\\round-3\\\\memory\\\\HEAD.json'"
+    }
+  ],
+  "tests": {
+    "run": 220,
+    "passed": 219,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "e1b5e630a6d17d3f376a7399471b6d205d2ad5d5b94eb3539787b87e94373f03"
+  },
+  "remote_model_calls": 0,
+  "cold_cache": null,
+  "cross_machine": null,
+  "inference_quality": null
+}

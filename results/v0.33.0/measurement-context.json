@@ -1,0 +1,9 @@
+{
+  "freeze": "148b5f4",
+  "candidate_CI": 40278673252,
+  "test_log_sha256": "e1b5e630a6d17d3f376a7399471b6d205d2ad5d5b94eb3539787b87e94373f03",
+  "initial_test_without_native_selection": "220 run,210pass,10skip. Retained private log; no failures. Full suite repeated with existing explicitly selected native functional asset:219pass,1skip.",
+  "formal_experiment": "Three original frozen rounds, no repeats. Read/write errors retained; all gates false. No native benchmark or remote model calls.",
+  "negative_result": "Windows HEAD availability errors; no observed successful-hit binding corruption. Failed add can retain staged immutable files; all actual files charged.",
+  "strict_external_install_scope": "Local and actual published wheel/current native installed physically outside repository with external cwd; same Windows interpreter/dependencies, no clean-runtime/cross-machine claim."
+}

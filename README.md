@@ -6,7 +6,27 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.32.0 · 代码/数学词法字节通道的完整负结果
+## 当前版本：v0.33.0 · 边写边读发现 Windows HEAD 共享冲突
+
+新增冻结的单writer/四reader合成机械实验，运行库除版本号外与v0.32相同。
+3轮各计划80次更新、2048条记录；原预算、原默认，不重试失败操作。
+**三轮均失败：成功提交80/48/13次，4次reader读HEAD异常，2次writer替换HEAD异常。**
+
+2689次查询完成10756条原句/位置绑定，144个已提交历史快照复查通过，
+1930次当前查询区间与实际add重叠。成功返回部分未见串版，但文件访问失败意味着
+并发可用性未达标，不能把它称为支持生产并发。实际保留树含失败写入留下的对象。
+
+![操作数量/重叠/写入时间/保留空间](results/v0.33.0/snapshot-concurrency.png)
+
+完整套件219通过、1权限跳过；新增审计器主动拒绝损坏的来源/投影/SID/位置。
+下一版优先修正Windows HEAD读取共享方式，定向句柄测试后同负载复测。
+没有模型新调用，冷缓存/跨机器/断电未测；E3、多跳推理、长期对话收益仍未完成。
+
+[冻结协议](docs/MEMORY-CONCURRENCY.md) · [详实报告](results/v0.33.0/SUMMARY.md) ·
+[逐次原始JSON](results/v0.33.0/round-1.json) · [验证](results/v0.33.0/validation.json) ·
+[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.33.0)。
+
+## v0.32.0 · 代码/数学词法字节通道的完整负结果
 
 新增独立`RKVTEXT1`实验帧与四类ASCII词法字节通道：原始拼写、空白/注释/字符串/
 换行/Unicode都保存，control记每token原顺序/长度，不执行代码或做语义规范化。

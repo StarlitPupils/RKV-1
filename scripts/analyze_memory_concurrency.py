@@ -32,6 +32,7 @@ def main():
     assert env['source_bytes']==len(corpus(0)) and env['source_hashes_by_epoch']=={str(g):h for h,g in expected_hashes().items()}
     log=Path(args.test_log).read_text('utf-8');assert 'Ran 220 tests' in log and 'OK (skipped=1)' in log
     trials=[json.loads((out/f'round-{i}.json').read_text('utf-8')) for i in range(1,ROUNDS+1)]
+    source_bytes=len(corpus(0))
     rows=[];round_rows=[];errors=[];valid_queries=0;retained_total=0;overlap_total=0;history_total=0
     for n,trial in enumerate(trials,1):
         assert trial['round']==n and len(trial['readers'])==READERS
@@ -48,7 +49,7 @@ def main():
             assert [q['query'] for q in reader['queries']]==list(range(len(reader['queries'])))
             assert [q['epoch'] for q in current]==sorted(q['epoch'] for q in current)
             for q in good:
-                assert q['verified_records']==4 and q['source_sha256']==expected[str(q['epoch'])] and q['source_bytes']==len(corpus(0))
+                assert q['verified_records']==4 and q['source_sha256']==expected[str(q['epoch'])] and q['source_bytes']==source_bytes
                 assert q['search_wall_s']>=0 and q['audit_wall_s']>=0 and q['end_s']>=q['start_s']
                 assert q['retained']==(q['query']%10==0)
             assert all(q['epoch']==0 and q['snapshot_id']==trial['history'][0]['snapshot_id'] for q in retained)
@@ -162,7 +163,31 @@ writer 停止后，全部成功提交历史 SID 再做完整源与四 locator �
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 '''
     for r in rows:text+=f"|{r['round']}/{r['reader']}|{r['verified']}|{r['retained']}|{r['current']}|{r['distinct_current_epochs']}|{r['current_add_interval_overlaps']}|{r['last_current_epoch']}|{r['search_p50_ms']:.3f}|{r['search_p95_ms']:.3f}|{r['extra_audit_p50_ms']:.3f}|\n"
-    text+='''
+    attempts=sum(len(t['writer']['events']) for t in trials)
+    successes=sum(r['completed_updates'] for r in round_rows)
+    query_attempts=sum(len(r['queries']) for t in trials for r in t['readers'])
+    text+=f'\n## 异常与部分完成的解释\n\nadd尝试{attempts}次，成功{successes}次；query尝试{query_attempts}次，完成审计{valid_queries}次。\n'
+    if errors:
+        text+='原始异常如下；后续未执行的操作不能算作通过，不重跑失败轮来替换这些结果。\n\n|轮|执行者|异常|\n|---|---|---|\n'
+        for e in errors:
+            actor=('reader '+str(e['reader'])) if 'reader' in e else 'writer' if e.get('writer') else 'parent/history'
+            text+=f"|{e['round']}|{actor}|{e['type']}：{e['message'].replace('|','/')}|\n"
+        text+='\n本轮三个门槛均未达到；已返回结果与历史复查没有发现混合epoch或绑定错误，观察到的HEAD访问冲突仍使并发可用性失败。\n'
+    else:text+='本次没有观察到worker/父进程/历史审计错误；不意味着所有并发调度都无缺陷。\n'
+    text+=f'\n独立历史审计{history_total}次；初始不可变文件保持的轮数{sum(t["initial_immutable_files_unchanged"] for t in trials)}/3。\n'
+    text+="""
+失败 add 可能已留下 CAS/索引/manifest 但 HEAD 未前移，其实际空间仍计入；没有清理这些文件
+来美化大小，未承诺失败写入是无副作用的事务。没有观察到内容错误不能证明不存在其他一致性问题。
+
+下一版先考察 HEAD 的 Windows 读取共享方式：微软文档说明 FILE_SHARE_DELETE 允许其他
+句柄进行 rename/delete；其技术文章说明普通 C runtime 的读写共享不等于共享删除，
+并可能在 rename 窗口引发 sharing violation。本实验错误位置与该机制相符，仍是机制推断，
+需定向句柄测试和同负载正式复测才能验证；本版未加入修正或重试。
+参考：[CreateFileW官方文档](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilew)
+和[微软关于重命名共享冲突的说明](https://devblogs.microsoft.com/oldnewthing/20211022-00/?p=105822/)。
+
+"""
+    text+="""
 ![快照实验操作数量、区间重叠、写入延迟与保留空间](snapshot-concurrency.png)
 
 查询频率与具体交错由 OS 调度决定，不要求三轮次数相同，也不将较多查询当质量提升。
@@ -199,7 +224,7 @@ publication 指令的穷举调度。E3 神经预测、推理质量、多跳与�
 与历史证据，再独立恢复写入；明确区分进程中断与真正断电。若不通过，保留本版原始失败，
 下一版依据具体错误提出最小修正及固定复测，不能把失败重新运行后覆盖成通过。
 不调整已评估科学任务预算，不因本次正确性结果默认切换检索或压缩表示。
-'''
+"""
     (out/'SUMMARY.md').write_text(text,encoding='utf-8',newline='\n')
     print(json.dumps({'verified_queries':valid_queries,'errors':len(errors),'rounds_passed':sum(r['gate'] for r in round_rows)},ensure_ascii=False))
 

@@ -1,0 +1,296 @@
+{
+  "rounds": [
+    {
+      "round": 1,
+      "completed_updates": 80,
+      "history_verified": 81,
+      "gate": false,
+      "writer_add_p50_ms": 30.693050008267164,
+      "writer_add_p95_ms": 43.589709990192205,
+      "initial_logical_bytes": 371538,
+      "retained_logical_bytes": 863971,
+      "initial_immutable_files": 10,
+      "storage_by_directory_bytes": {
+        "cas": 417716,
+        "indexes": 383009,
+        "manifests": 63152,
+        "answers": 0
+      }
+    },
+    {
+      "round": 2,
+      "completed_updates": 48,
+      "history_verified": 49,
+      "gate": false,
+      "writer_add_p50_ms": 30.37164988927543,
+      "writer_add_p95_ms": 35.673475021030754,
+      "initial_logical_bytes": 371538,
+      "retained_logical_bytes": 673144,
+      "initial_immutable_files": 10,
+      "storage_by_directory_bytes": {
+        "cas": 263026,
+        "indexes": 371145,
+        "manifests": 38879,
+        "answers": 0
+      }
+    },
+    {
+      "round": 3,
+      "completed_updates": 13,
+      "history_verified": 14,
+      "gate": false,
+      "writer_add_p50_ms": 33.17089984193444,
+      "writer_add_p95_ms": 35.463180113583796,
+      "initial_logical_bytes": 371538,
+      "retained_logical_bytes": 457707,
+      "initial_immutable_files": 10,
+      "storage_by_directory_bytes": {
+        "cas": 88388,
+        "indexes": 357751,
+        "manifests": 11474,
+        "answers": 0
+      }
+    }
+  ],
+  "readers": [
+    {
+      "round": 1,
+      "reader": 0,
+      "queries": 447,
+      "verified": 447,
+      "retained": 45,
+      "current": 402,
+      "distinct_current_epochs": 81,
+      "last_current_epoch": 80,
+      "current_add_interval_overlaps": 349,
+      "search_p50_ms": 5.443699890747666,
+      "search_p95_ms": 8.58746008016169,
+      "extra_audit_p50_ms": 1.909299986436963,
+      "error": null
+    },
+    {
+      "round": 1,
+      "reader": 1,
+      "queries": 393,
+      "verified": 392,
+      "retained": 40,
+      "current": 352,
+      "distinct_current_epochs": 74,
+      "last_current_epoch": 73,
+      "current_add_interval_overlaps": 321,
+      "search_p50_ms": 5.405800067819655,
+      "search_p95_ms": 8.566894882824272,
+      "extra_audit_p50_ms": 1.8650998827069998,
+      "error": {
+        "type": "PermissionError",
+        "message": "[Errno 13] Permission denied: 'E:\\\\memorystorage\\\\.tools\\\\memory-concurrency-v033-work\\\\round-1\\\\memory\\\\HEAD.json'"
+      }
+    },
+    {
+      "round": 1,
+      "reader": 2,
+      "queries": 240,
+      "verified": 239,
+      "retained": 24,
+      "current": 215,
+      "distinct_current_epochs": 39,
+      "last_current_epoch": 38,
+      "current_add_interval_overlaps": 184,
+      "search_p50_ms": 5.315500078722835,
+      "search_p95_ms": 6.475149909965693,
+      "extra_audit_p50_ms": 1.8223000224679708,
+      "error": {
+        "type": "PermissionError",
+        "message": "[Errno 13] Permission denied: 'E:\\\\memorystorage\\\\.tools\\\\memory-concurrency-v033-work\\\\round-1\\\\memory\\\\HEAD.json'"
+      }
+    },
+    {
+      "round": 1,
+      "reader": 3,
+      "queries": 157,
+      "verified": 156,
+      "retained": 16,
+      "current": 140,
+      "distinct_current_epochs": 24,
+      "last_current_epoch": 23,
+      "current_add_interval_overlaps": 117,
+      "search_p50_ms": 5.32169989310205,
+      "search_p95_ms": 6.679125130176544,
+      "extra_audit_p50_ms": 1.8378000240772963,
+      "error": {
+        "type": "PermissionError",
+        "message": "[Errno 13] Permission denied: 'E:\\\\memorystorage\\\\.tools\\\\memory-concurrency-v033-work\\\\round-1\\\\memory\\\\HEAD.json'"
+      }
+    },
+    {
+      "round": 2,
+      "reader": 0,
+      "queries": 59,
+      "verified": 58,
+      "retained": 6,
+      "current": 52,
+      "distinct_current_epochs": 6,
+      "last_current_epoch": 5,
+      "current_add_interval_overlaps": 32,
+      "search_p50_ms": 2.7699500788003206,
+      "search_p95_ms": 6.525995070114732,
+      "extra_audit_p50_ms": 1.714100013487041,
+      "error": {
+        "type": "PermissionError",
+        "message": "[Errno 13] Permission denied: 'E:\\\\memorystorage\\\\.tools\\\\memory-concurrency-v033-work\\\\round-2\\\\memory\\\\HEAD.json'"
+      }
+    },
+    {
+      "round": 2,
+      "reader": 1,
+      "queries": 311,
+      "verified": 311,
+      "retained": 32,
+      "current": 279,
+      "distinct_current_epochs": 49,
+      "last_current_epoch": 48,
+      "current_add_interval_overlaps": 226,
+      "search_p50_ms": 5.249900044873357,
+      "search_p95_ms": 6.434700102545321,
+      "extra_audit_p50_ms": 1.7541998531669378,
+      "error": null
+    },
+    {
+      "round": 2,
+      "reader": 2,
+      "queries": 307,
+      "verified": 307,
+      "retained": 31,
+      "current": 276,
+      "distinct_current_epochs": 49,
+      "last_current_epoch": 48,
+      "current_add_interval_overlaps": 220,
+      "search_p50_ms": 5.275599891319871,
+      "search_p95_ms": 6.417680042795837,
+      "extra_audit_p50_ms": 1.7858999781310558,
+      "error": null
+    },
+    {
+      "round": 2,
+      "reader": 3,
+      "queries": 312,
+      "verified": 312,
+      "retained": 32,
+      "current": 280,
+      "distinct_current_epochs": 49,
+      "last_current_epoch": 48,
+      "current_add_interval_overlaps": 229,
+      "search_p50_ms": 5.2659501088783145,
+      "search_p95_ms": 6.510910007636994,
+      "extra_audit_p50_ms": 1.7283499473705888,
+      "error": null
+    },
+    {
+      "round": 3,
+      "reader": 0,
+      "queries": 117,
+      "verified": 117,
+      "retained": 12,
+      "current": 105,
+      "distinct_current_epochs": 14,
+      "last_current_epoch": 13,
+      "current_add_interval_overlaps": 63,
+      "search_p50_ms": 5.436599953100085,
+      "search_p95_ms": 7.233299966901541,
+      "extra_audit_p50_ms": 1.8569999374449253,
+      "error": null
+    },
+    {
+      "round": 3,
+      "reader": 1,
+      "queries": 117,
+      "verified": 117,
+      "retained": 12,
+      "current": 105,
+      "distinct_current_epochs": 14,
+      "last_current_epoch": 13,
+      "current_add_interval_overlaps": 65,
+      "search_p50_ms": 5.348699865862727,
+      "search_p95_ms": 6.963020144030449,
+      "extra_audit_p50_ms": 1.7966998275369406,
+      "error": null
+    },
+    {
+      "round": 3,
+      "reader": 2,
+      "queries": 117,
+      "verified": 117,
+      "retained": 12,
+      "current": 105,
+      "distinct_current_epochs": 14,
+      "last_current_epoch": 13,
+      "current_add_interval_overlaps": 62,
+      "search_p50_ms": 5.2581001073122025,
+      "search_p95_ms": 7.353719929233192,
+      "extra_audit_p50_ms": 1.8217000178992748,
+      "error": null
+    },
+    {
+      "round": 3,
+      "reader": 3,
+      "queries": 116,
+      "verified": 116,
+      "retained": 12,
+      "current": 104,
+      "distinct_current_epochs": 14,
+      "last_current_epoch": 13,
+      "current_add_interval_overlaps": 62,
+      "search_p50_ms": 5.3318500285968184,
+      "search_p95_ms": 7.642675016541034,
+      "extra_audit_p50_ms": 1.8844499718397856,
+      "error": null
+    }
+  ],
+  "verified_queries": 2689,
+  "retained_queries": 274,
+  "current_queries": 2415,
+  "overlapping_current_queries": 1930,
+  "verified_record_bindings": 10756,
+  "post_run_history_verifications": 144,
+  "post_run_history_record_bindings": 576,
+  "excluded_warm_queries": 12,
+  "errors": [
+    {
+      "round": 1,
+      "reader": 1,
+      "type": "PermissionError",
+      "message": "[Errno 13] Permission denied: 'E:\\\\memorystorage\\\\.tools\\\\memory-concurrency-v033-work\\\\round-1\\\\memory\\\\HEAD.json'"
+    },
+    {
+      "round": 1,
+      "reader": 2,
+      "type": "PermissionError",
+      "message": "[Errno 13] Permission denied: 'E:\\\\memorystorage\\\\.tools\\\\memory-concurrency-v033-work\\\\round-1\\\\memory\\\\HEAD.json'"
+    },
+    {
+      "round": 1,
+      "reader": 3,
+      "type": "PermissionError",
+      "message": "[Errno 13] Permission denied: 'E:\\\\memorystorage\\\\.tools\\\\memory-concurrency-v033-work\\\\round-1\\\\memory\\\\HEAD.json'"
+    },
+    {
+      "round": 2,
+      "reader": 0,
+      "type": "PermissionError",
+      "message": "[Errno 13] Permission denied: 'E:\\\\memorystorage\\\\.tools\\\\memory-concurrency-v033-work\\\\round-2\\\\memory\\\\HEAD.json'"
+    },
+    {
+      "round": 2,
+      "writer": true,
+      "type": "PermissionError",
+      "message": "[WinError 5] 拒绝访问。: 'E:\\\\memorystorage\\\\.tools\\\\memory-concurrency-v033-work\\\\round-2\\\\memory\\\\.memory-head-i12mi9d0' -> 'E:\\\\memorystorage\\\\.tools\\\\memory-concurrency-v033-work\\\\round-2\\\\memory\\\\HEAD.json'"
+    },
+    {
+      "round": 3,
+      "writer": true,
+      "type": "PermissionError",
+      "message": "[WinError 5] 拒绝访问。: 'E:\\\\memorystorage\\\\.tools\\\\memory-concurrency-v033-work\\\\round-3\\\\memory\\\\.memory-head-3q6xkqo9' -> 'E:\\\\memorystorage\\\\.tools\\\\memory-concurrency-v033-work\\\\round-3\\\\memory\\\\HEAD.json'"
+    }
+  ],
+  "all_rounds_gate_passed": false
+}
