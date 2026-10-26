@@ -1,0 +1,48 @@
+{
+  "model_sha256": "35437268b5c5feccff134e024e45c0161b3c07b54b601b19ccb0db9ff2280672",
+  "model_bytes": 520,
+  "model_zlib6_bytes": 203,
+  "training_inputs": [
+    {
+      "id": "scipy__scipy__optimize___linprog.py",
+      "split": "train",
+      "family": "scipy/scipy",
+      "full_bytes": 29756,
+      "full_sha256": "078a34610c7bb6bbe2d5fdd945a8941cf52e054319eeca552d9b24e9e8f0dafc",
+      "prefix_bytes": 29756,
+      "prefix_sha256": "078a34610c7bb6bbe2d5fdd945a8941cf52e054319eeca552d9b24e9e8f0dafc",
+      "source_url": "https://raw.githubusercontent.com/scipy/scipy/92d2a8592782ee19a1161d0bf3fc2241ba78bb63/scipy/optimize/_linprog.py",
+      "source_path": "scipy/optimize/_linprog.py"
+    },
+    {
+      "id": "sympy__sympy__core__expr.py",
+      "split": "train",
+      "family": "sympy/sympy",
+      "full_bytes": 142171,
+      "full_sha256": "d8bca4bb806a17a5474a69780aa7175dbe2f55dc64dd1a14ae6275c016200913",
+      "prefix_bytes": 32768,
+      "prefix_sha256": "7e8d301f8664268cb970c18da1e51dc752b8bc068934b5ff6f0da5a4e58ad662",
+      "source_url": "https://raw.githubusercontent.com/sympy/sympy/c870d17c2638f5061800e344b72ff80086a0b41d/sympy/core/expr.py",
+      "source_path": "sympy/core/expr.py"
+    },
+    {
+      "id": "latex3__required__amsmath__amsmath.dtx",
+      "split": "train",
+      "family": "latex3/latex2e",
+      "full_bytes": 233049,
+      "full_sha256": "406913081307c85b87ba2e628b68bcec46a91c12d2f7b655d53f94c964d7f2f1",
+      "prefix_bytes": 32768,
+      "prefix_sha256": "f9660f0461b11536d48a7daf84891e518386a8d093a05a2db498415c8ec06e3f",
+      "source_url": "https://raw.githubusercontent.com/latex3/latex2e/daf97c97ebc43873d154062ca88895ed190cbdf9/required/amsmath/amsmath.dtx",
+      "source_path": "required/amsmath/amsmath.dtx"
+    }
+  ],
+  "training_symbols": 95292,
+  "builds": 1,
+  "new_neural_training_runs": 0,
+  "test_evaluations_before_model_freeze": 0,
+  "build_through_model_fsync_wall_s": 0.005220300052314997,
+  "peak_rss_bytes": 27373568,
+  "remote_model_calls": 0,
+  "scope": "Static frequency count on exactly v0.36 training inputs. Diagnostic on previously seen prefixes; original neural weights unchanged."
+}
