@@ -1,0 +1,1 @@
+{"driver_only_cpu_s":0.5625,"driver_plus_worker_and_plot_wall_s":5.032507499912754,"observed_peak_rss_bytes":78835712,"scope":"Parent includes 3 subprocess waits; CPU excludes child CPU listed separately; initial interpreter and timing-record write excluded"}

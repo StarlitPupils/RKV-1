@@ -6,7 +6,17 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.53.0 · 已见SciFact整篇论文来源迁移
+## 当前版本：v0.54.0 · SciFact既有结果的漏证诊断
+
+原v053结果/模型/4096原B预算不改，3诊断worker、894记录/627来源组；新科学试次/训练/源range绑定均0。
+剩余byte预算拒绝占graph漏证至少一半：**True**（实际100.00%）；至少半数有gold主张的top6 seed能触图：**False**。
+
+![漏证位置与图暴露](results/v0.54.0/paper-gap.png)
+
+诊断不代表增加预算/补图后的实际收益；v053仅多1篇gold、时间及联合失败不变。277检查276通过/1权限跳过，65runtime仅版本，0新模型API。
+[协议](docs/PAPER-GAP.md) · [详实报告](results/v0.54.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.54.0)。E3净收益/E4整体/真实长期会话/回答/无限上下文未完成。
+
+## v0.53.0 · 已见SciFact整篇论文来源迁移
 
 固定BM25/graph/control与12篇/4096原整行B，训练一次另冻模型SHA、9fresh worker；300原行/298实际检索/188有gold评分/110无gold/2训练重叠排除。
 **论文来源质量True / 时间False / 联合False**：graph仅多找回1篇gold，完整找全仍139/188，query wall中位比1.007687。不是稳健、显著或回答收益。
