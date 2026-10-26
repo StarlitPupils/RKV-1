@@ -6,7 +6,17 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.54.0 · SciFact既有结果的漏证诊断
+## 当前版本：v0.55.0 · 可调用的实验性论文证据API
+
+新增wheel内PaperRetriever：显式SID/modelSHA、固定BM25/图/控制、最多12篇/4096原B，返回可核原文位置。默认Memory/CLI/UI不改，不生成答案。
+3机制worker/894调用全部匹配原proof，2559原文绑定及独立追加2559/整源恢复通过；285检查284通过/1权限跳过。
+
+![实验API一致性检查](results/v0.55.0/paper-api.png)
+
+这是工程兼容性，不是新增科学质量或速度收益；v053时间/联合失败不变。66递归Python+HTML 426112B、完整模型10152832B及全部CPU/RAM/历史文件费用保留，0新模型API。
+[协议](docs/PAPER-RETRIEVER-API.md) · [详实报告](results/v0.55.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.55.0)。E3净收益/E4整体/真实长会话/回答/无限上下文未完成。
+
+## v0.54.0 · SciFact既有结果的漏证诊断
 
 原v053结果/模型/4096原B预算不改，3诊断worker、894记录/627来源组；新科学试次/训练/源range绑定均0。
 剩余byte预算拒绝占graph漏证至少一半：**True**（实际100.00%）；至少半数有gold主张的top6 seed能触图：**False**。

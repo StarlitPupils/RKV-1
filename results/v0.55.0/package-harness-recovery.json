@@ -1,0 +1,8 @@
+{
+  "scope": "Pre-tag package smoke harness failure only; frozen runtime/protocol and scientific/mechanism results unchanged",
+  "initial_failure": "NameError: hashlib absent in embedded synthetic smoke subprocess",
+  "failure_before_package_validation_written": true,
+  "failure_log_bytes": 17049,
+  "failure_log_sha256": "5ab70d53fc72eb6664257ad61821f5d758a821bdafc6b3395d84ffd7645619be",
+  "recovery": "Added embedded hashlib import to both private package smoke helpers and generator; resumed fresh synthetic work directory, no formal mechanism rerun"
+}

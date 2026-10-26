@@ -1,0 +1,23 @@
+{
+  "mechanism_workers": 3,
+  "mechanism_queries": 894,
+  "all_prior_proofs_equal": true,
+  "formal_selected_bindings": 2559,
+  "additional_independent_audit_bindings": 2559,
+  "full_source_recoveries_worker": 3,
+  "additional_full_source_recoveries_audit": 3,
+  "figure_visually_inspected": true,
+  "unit_tests_run": 285,
+  "unit_tests_passed": 284,
+  "unit_tests_skipped": 1,
+  "runtime_module_count": 66,
+  "html_files": 1,
+  "new_scientific_quality_trials": 0,
+  "new_training_runs": 0,
+  "new_remote_model_calls": 0,
+  "freeze": "7cfe023d834222fe8b01456f1fc11e99ada4c812",
+  "physical_SSD_bytes": null,
+  "all_system_file_bytes": null,
+  "cold_cache": null,
+  "cross_machine": null
+}
