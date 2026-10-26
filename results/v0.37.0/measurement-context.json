@@ -1,0 +1,14 @@
+{
+  "runtime_and_protocol_freeze": "f868b4b",
+  "static_model_freeze_commit": "fd9aa1c",
+  "candidate_CI": 40292169410,
+  "static_model_freeze_CI": 40292259638,
+  "original_neural_model": "f4848728bc05e305208cdc50f4ec10b80fee167736deecf334b03e0ebfc03813",
+  "static_model": "35437268b5c5feccff134e024e45c0161b3c07b54b601b19ccb0db9ff2280672",
+  "new_neural_training_runs": 0,
+  "static_model_builds": 1,
+  "scope": "Same previously evaluated prefixes, diagnostic not unseen validation.60 original pairs, all48 old frames reproduced. No tuning/retries/new model API calls.",
+  "allocation_sensitivity": "Noise neural netB smaller169B, but frame larger899B; C allocation reverses that comparison. Not noise compression or ordinary-codec benefit.",
+  "development_note": "Analyzer generator initially had a quoting syntax error before running analysis; fixed private generation only, no runtime, model or formal trial changed.",
+  "strict_external_install_scope": "Fresh physically external current wheel/native and cwd; same Windows interpreter/dependencies; actual older v0.36 neural reader rejection checked in external installed smoke."
+}

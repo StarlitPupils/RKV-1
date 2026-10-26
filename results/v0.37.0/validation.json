@@ -1,0 +1,23 @@
+{
+  "runtime_and_protocol_freeze": "f868b4b",
+  "original_neural_freeze_commit": "7b865bb",
+  "diagnostic_static_model_freeze_commit": "fd9aa1c",
+  "all61_modules_and_protocol_and_training_inputs_model_identity_verified": true,
+  "all60_actual_frames_and_restored_files_match_recorded_SHA_and_original_prefix_bytes": true,
+  "all3_round_frame_bytes_and_model_and_bits_identical": true,
+  "all120_stages_no_numpy_or_scientific_input_import": true,
+  "actual_file_fsyncs": 120,
+  "scientific_space_pass": 0,
+  "scientific_joint_pass": 0,
+  "tests": {
+    "run": 230,
+    "passed": 229,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "eefdffe46181841d894df3faa3953b843509021f7d61e44b309d04fe848e86d4"
+  },
+  "remote_model_calls": 0,
+  "model_quality": null,
+  "cold_cache": null,
+  "cross_machine": null
+}

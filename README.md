@@ -6,7 +6,33 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.36.0 · E3整数神经预测原型：精确恢复，净成本失败
+## 当前版本：v0.37.0 · 神经模型学到了规律，但完整费用未胜廉价统计
+
+新增同训练资料的静态unigram+同算术码诊断。旧60模块除版本号字节不变，原神经模型
+不重训、不改参数；先冻结静态520B模型（压缩203B）再评估已见前缀，不称新独立验证。
+
+| 科学8192B前缀 | 神经payload B | 静态payload B | 神经净B总计 | 静态净B总计 |
+|---|---:|---:|---:|---:|
+| SciPy | 4734 | 4898 | 18358 | 14915 |
+| SymPy | 4487 | 4721 | 18111 | 14738 |
+| LaTeX | 5313 | 5504 | 18937 | 15521 |
+
+神经payload **3/3更小**，但科学完整B成本 **0/3更小**，模型费用4878B对203B吃掉优势。
+静态和神经对普通codec的科学净空间/联合都0/9，不把只胜神经当作实用压缩改善。
+噪声中NN仅在专用源码B分配下小169B，完整帧反而大899B；整库C结论不同，反向案例照实保留。
+
+![同资料诊断的payload、完整费用和CPU](results/v0.37.0/neural-unigram-diagnostic.png)
+
+60恢复对/120新阶段进程/120文件fsync全精确，48个原v0.36条件帧SHA逐项复现。
+230测试229通过/1权限跳过；新独立RKVUNI01只供显式诊断，旧NeuralFrame/主Archive拒绝，默认不变。
+所有61模块+HTML递归账本；新静态模型只构建一次，原NN训练与NumPy费用单列历史，不重复训练/收费。
+0模型API，冷缓存/跨机器未测；净收益、长期对话/多跳/无限上下文仍未验收。
+
+[冻结协议](docs/NEURAL-UNIGRAM.md) · [详实报告](results/v0.37.0/SUMMARY.md) ·
+[原始JSON](results/v0.37.0/round-1.json) · [验证](results/v0.37.0/validation.json) ·
+[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.37.0)。
+
+## v0.36.0 · E3整数神经预测原型：精确恢复，净成本失败
 
 新增小MLP、纯整数CDF/32bit算术编码和独立`RKVNN001`自包含实验帧；
 运行时不需要NumPy或模型API。主Archive v1–v6/Memory/CAS和默认保持不变。
