@@ -303,3 +303,7 @@ ON入证156426B，对应应用CAS返回2444100B（15.62×）和解码56426496B�
 observer开销和全部memory/sidecar/源码计账，原v0.40漏项不回填。报告results/v0.41.0/SUMMARY.md。
 下一项先冻单trace内有界已验证块复用，保持原证据合同，新增RAM/源码/CPU不能免费，默认不改。
 0新模型调用；已见合成fixture的计量修复不等于真实推理验证，E3净收益/E4整体未验收。
+
+## v0.42：有界单trace缓存完整factorial
+
+12worker/1200proof/3420绑定和文件一致，工作量门槛True、无仪表时间联合True，原值/RAM/源码/sidecar收费。已见同块有利fixture非真实推理验证，不改默认。下一项先冻跨块负控制，不调cap。报告results/v0.42.0/SUMMARY.md。

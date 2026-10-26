@@ -1,0 +1,11 @@
+{
+  "cache": "off",
+  "child_report_sha256": "b33cb5a1ed746aa9642d52b5a46ae26830d516eff0ce26942a07fc57a2d48ecd",
+  "condition": "on",
+  "error": null,
+  "meter_report_sha256": "09ca0c94f7af470884bcc9ac9da94bf74f58706ea1cdac6e87cbfbf29babf388",
+  "parent_full_process_wall_s": 1.379014200065285,
+  "return_code": 0,
+  "round": 3,
+  "scope": "perf_counter immediately before subprocess.run to after child exit or timeout; parent record written separately"
+}

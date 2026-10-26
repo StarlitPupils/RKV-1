@@ -1,0 +1,337 @@
+{
+  "rows": [
+    {
+      "round": 1,
+      "cache": "off",
+      "meter": "off",
+      "traffic": null,
+      "cache_totals": null,
+      "peak_retained_payload_bytes": null,
+      "peak_retained_graph_bytes": null,
+      "trace_wall_s": 0.35509099904447794,
+      "trace_cpu_s": 0.28125,
+      "parent_full_process_wall_s": 1.3569106999784708,
+      "worker_wall_s": 1.1976246999111027,
+      "observed_peak_rss_bytes": 39145472,
+      "memory_bytes": 1171964,
+      "admitted_record_bytes": 52142
+    },
+    {
+      "round": 1,
+      "cache": "on",
+      "meter": "off",
+      "traffic": null,
+      "cache_totals": {
+        "requests": 287,
+        "hits": 188,
+        "misses": 99,
+        "evictions": 0,
+        "oversize": 0
+      },
+      "peak_retained_payload_bytes": 65536,
+      "peak_retained_graph_bytes": 66190,
+      "trace_wall_s": 0.3415717992465943,
+      "trace_cpu_s": 0.3125,
+      "parent_full_process_wall_s": 1.3430459001101553,
+      "worker_wall_s": 1.1891471999697387,
+      "observed_peak_rss_bytes": 39534592,
+      "memory_bytes": 1171964,
+      "admitted_record_bytes": 52142
+    },
+    {
+      "round": 1,
+      "cache": "off",
+      "meter": "on",
+      "traffic": {
+        "CAS_decoded_output_bytes": 18808832,
+        "application_CAS_file_bytes": 814700,
+        "compressed_decode_output_bytes": 18808832,
+        "decode_attempts": 287,
+        "decode_successes": 287,
+        "object_opens": 287,
+        "payload_input_bytes": 790592,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 574
+      },
+      "cache_totals": null,
+      "peak_retained_payload_bytes": null,
+      "peak_retained_graph_bytes": null,
+      "trace_wall_s": 0.41949979891069233,
+      "trace_cpu_s": 0.375,
+      "parent_full_process_wall_s": 1.47085090004839,
+      "worker_wall_s": 1.3260454998817295,
+      "observed_peak_rss_bytes": 39428096,
+      "memory_bytes": 1171964,
+      "admitted_record_bytes": 52142
+    },
+    {
+      "round": 1,
+      "cache": "on",
+      "meter": "on",
+      "traffic": {
+        "CAS_decoded_output_bytes": 6488064,
+        "application_CAS_file_bytes": 280993,
+        "compressed_decode_output_bytes": 6488064,
+        "decode_attempts": 99,
+        "decode_successes": 99,
+        "object_opens": 99,
+        "payload_input_bytes": 272677,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 198
+      },
+      "cache_totals": {
+        "requests": 287,
+        "hits": 188,
+        "misses": 99,
+        "evictions": 0,
+        "oversize": 0
+      },
+      "peak_retained_payload_bytes": 65536,
+      "peak_retained_graph_bytes": 66190,
+      "trace_wall_s": 0.38610569946467876,
+      "trace_cpu_s": 0.328125,
+      "parent_full_process_wall_s": 1.4867074000649154,
+      "worker_wall_s": 1.3424666000064462,
+      "observed_peak_rss_bytes": 39383040,
+      "memory_bytes": 1171964,
+      "admitted_record_bytes": 52142
+    },
+    {
+      "round": 2,
+      "cache": "off",
+      "meter": "off",
+      "traffic": null,
+      "cache_totals": null,
+      "peak_retained_payload_bytes": null,
+      "peak_retained_graph_bytes": null,
+      "trace_wall_s": 0.33002350153401494,
+      "trace_cpu_s": 0.265625,
+      "parent_full_process_wall_s": 1.2937670000828803,
+      "worker_wall_s": 1.1458060001023114,
+      "observed_peak_rss_bytes": 39280640,
+      "memory_bytes": 1171964,
+      "admitted_record_bytes": 52142
+    },
+    {
+      "round": 2,
+      "cache": "on",
+      "meter": "off",
+      "traffic": null,
+      "cache_totals": {
+        "requests": 287,
+        "hits": 188,
+        "misses": 99,
+        "evictions": 0,
+        "oversize": 0
+      },
+      "peak_retained_payload_bytes": 65536,
+      "peak_retained_graph_bytes": 66190,
+      "trace_wall_s": 0.32671600254252553,
+      "trace_cpu_s": 0.265625,
+      "parent_full_process_wall_s": 1.3222888000309467,
+      "worker_wall_s": 1.175027399789542,
+      "observed_peak_rss_bytes": 39038976,
+      "memory_bytes": 1171964,
+      "admitted_record_bytes": 52142
+    },
+    {
+      "round": 2,
+      "cache": "off",
+      "meter": "on",
+      "traffic": {
+        "CAS_decoded_output_bytes": 18808832,
+        "application_CAS_file_bytes": 814700,
+        "compressed_decode_output_bytes": 18808832,
+        "decode_attempts": 287,
+        "decode_successes": 287,
+        "object_opens": 287,
+        "payload_input_bytes": 790592,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 574
+      },
+      "cache_totals": null,
+      "peak_retained_payload_bytes": null,
+      "peak_retained_graph_bytes": null,
+      "trace_wall_s": 0.3729109005071223,
+      "trace_cpu_s": 0.359375,
+      "parent_full_process_wall_s": 1.3505283000413328,
+      "worker_wall_s": 1.2152094000484794,
+      "observed_peak_rss_bytes": 39387136,
+      "memory_bytes": 1171964,
+      "admitted_record_bytes": 52142
+    },
+    {
+      "round": 2,
+      "cache": "on",
+      "meter": "on",
+      "traffic": {
+        "CAS_decoded_output_bytes": 6488064,
+        "application_CAS_file_bytes": 280993,
+        "compressed_decode_output_bytes": 6488064,
+        "decode_attempts": 99,
+        "decode_successes": 99,
+        "object_opens": 99,
+        "payload_input_bytes": 272677,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 198
+      },
+      "cache_totals": {
+        "requests": 287,
+        "hits": 188,
+        "misses": 99,
+        "evictions": 0,
+        "oversize": 0
+      },
+      "peak_retained_payload_bytes": 65536,
+      "peak_retained_graph_bytes": 66190,
+      "trace_wall_s": 0.32897819858044386,
+      "trace_cpu_s": 0.296875,
+      "parent_full_process_wall_s": 1.2964502999093384,
+      "worker_wall_s": 1.1599316999781877,
+      "observed_peak_rss_bytes": 38944768,
+      "memory_bytes": 1171964,
+      "admitted_record_bytes": 52142
+    },
+    {
+      "round": 3,
+      "cache": "off",
+      "meter": "off",
+      "traffic": null,
+      "cache_totals": null,
+      "peak_retained_payload_bytes": null,
+      "peak_retained_graph_bytes": null,
+      "trace_wall_s": 0.3282444993965328,
+      "trace_cpu_s": 0.28125,
+      "parent_full_process_wall_s": 1.3593071000650525,
+      "worker_wall_s": 1.2218516999855638,
+      "observed_peak_rss_bytes": 38834176,
+      "memory_bytes": 1171964,
+      "admitted_record_bytes": 52142
+    },
+    {
+      "round": 3,
+      "cache": "on",
+      "meter": "off",
+      "traffic": null,
+      "cache_totals": {
+        "requests": 287,
+        "hits": 188,
+        "misses": 99,
+        "evictions": 0,
+        "oversize": 0
+      },
+      "peak_retained_payload_bytes": 65536,
+      "peak_retained_graph_bytes": 66190,
+      "trace_wall_s": 0.31485459953546524,
+      "trace_cpu_s": 0.25,
+      "parent_full_process_wall_s": 1.296693299897015,
+      "worker_wall_s": 1.1692238000687212,
+      "observed_peak_rss_bytes": 39211008,
+      "memory_bytes": 1171964,
+      "admitted_record_bytes": 52142
+    },
+    {
+      "round": 3,
+      "cache": "off",
+      "meter": "on",
+      "traffic": {
+        "CAS_decoded_output_bytes": 18808832,
+        "application_CAS_file_bytes": 814700,
+        "compressed_decode_output_bytes": 18808832,
+        "decode_attempts": 287,
+        "decode_successes": 287,
+        "object_opens": 287,
+        "payload_input_bytes": 790592,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 574
+      },
+      "cache_totals": null,
+      "peak_retained_payload_bytes": null,
+      "peak_retained_graph_bytes": null,
+      "trace_wall_s": 0.3742073003668338,
+      "trace_cpu_s": 0.234375,
+      "parent_full_process_wall_s": 1.379014200065285,
+      "worker_wall_s": 1.2418412999249995,
+      "observed_peak_rss_bytes": 39518208,
+      "memory_bytes": 1171964,
+      "admitted_record_bytes": 52142
+    },
+    {
+      "round": 3,
+      "cache": "on",
+      "meter": "on",
+      "traffic": {
+        "CAS_decoded_output_bytes": 6488064,
+        "application_CAS_file_bytes": 280993,
+        "compressed_decode_output_bytes": 6488064,
+        "decode_attempts": 99,
+        "decode_successes": 99,
+        "object_opens": 99,
+        "payload_input_bytes": 272677,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 198
+      },
+      "cache_totals": {
+        "requests": 287,
+        "hits": 188,
+        "misses": 99,
+        "evictions": 0,
+        "oversize": 0
+      },
+      "peak_retained_payload_bytes": 65536,
+      "peak_retained_graph_bytes": 66190,
+      "trace_wall_s": 0.32846899912692606,
+      "trace_cpu_s": 0.203125,
+      "parent_full_process_wall_s": 1.2748710999730974,
+      "worker_wall_s": 1.1413620000239462,
+      "observed_peak_rss_bytes": 39120896,
+      "memory_bytes": 1171964,
+      "admitted_record_bytes": 52142
+    }
+  ],
+  "unmetered_time_pairs": [
+    {
+      "round": 1,
+      "trace_wall_s": 0.9619275063736824,
+      "trace_cpu_s": 1.1111111111111112,
+      "parent_full_process_wall_s": 0.989782083766798
+    },
+    {
+      "round": 2,
+      "trace_wall_s": 0.9899779895185782,
+      "trace_cpu_s": 1.0,
+      "parent_full_process_wall_s": 1.0220455460266333
+    },
+    {
+      "round": 3,
+      "trace_wall_s": 0.9592075422872753,
+      "trace_cpu_s": 0.8888888888888888,
+      "parent_full_process_wall_s": 0.9539369726200644
+    }
+  ],
+  "metered_work_pairs": [
+    {
+      "round": 1,
+      "application_CAS_file_bytes": 0.344903645513686,
+      "CAS_decoded_output_bytes": 0.34494773519163763
+    },
+    {
+      "round": 2,
+      "application_CAS_file_bytes": 0.344903645513686,
+      "CAS_decoded_output_bytes": 0.34494773519163763
+    },
+    {
+      "round": 3,
+      "application_CAS_file_bytes": 0.344903645513686,
+      "CAS_decoded_output_bytes": 0.34494773519163763
+    }
+  ],
+  "median_unmetered_time_ratios": {
+    "trace_wall_s": 0.9619275063736824,
+    "trace_cpu_s": 1.0,
+    "parent_full_process_wall_s": 0.989782083766798
+  },
+  "work_reduction_gate": true,
+  "time_joint_gate": true,
+  "raw_report_json_bytes": 5166866
+}

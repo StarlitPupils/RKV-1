@@ -1,0 +1,16 @@
+{
+  "runtime_protocol_freeze": "b04bb05fea32359f73cbae58355f8d5d128988a4",
+  "candidate_CI": 40320128717,
+  "prior_input_freeze": "643b6aeb677f66b8fec5a07d85005c053d6df6f1",
+  "fixture_unchanged_from_v040": true,
+  "formal_evaluation_retries": 0,
+  "new_training_runs": 0,
+  "new_remote_model_calls": 0,
+  "scope": "Known same-block synthetic mechanism, not unknown data/reasoning validation",
+  "work_reduction_gate": true,
+  "unmetered_time_joint_gate": true,
+  "default_integration": false,
+  "raw_report_json_bytes": 5166866,
+  "physical_SSD_bytes": null,
+  "figure_visually_inspected": true
+}

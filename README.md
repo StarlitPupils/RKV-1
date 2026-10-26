@@ -6,7 +6,21 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.41.0 · 补齐新批次进程计时，测到CAS读取/解码放大
+## 当前版本：v0.42.0 · 单trace有界缓存：工作量门槛True，时间联合门槛True
+
+完整2×2缓存/仪表、12新worker，1200 proof同v0.40；1152主问题/48控制/24负审计、3420绑定符合预期。
+只在一次trace内复用已验证块，固定65536B payload，hit仍验raw SHA，每record绑定不变，退出清空。
+meter OFF时间比率中位：wall 0.9619275063736824、CPU 1.0、parent 0.989782083766798。
+meter ON只评应用CAS工作量，RAM/源码/observer与所有memory文件另收费；无默认集成。
+
+![缓存工作量、无仪表时间和RSS](results/v0.42.0/cached-paths.png)
+
+已见链集中同块的有利合成机制，不能推广为真实科学/推理收益。64 runtime只改版本，246测试245通过/1权限跳过。
+0模型API，物理SSD/冷缓存/跨机/真实长会话未测，E3净收益/E4整体未验收。
+
+[协议](docs/QUERY-BLOCK-CACHE.md) · [详实报告](results/v0.42.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.42.0)。
+
+## v0.41.0 · 补齐新批次进程计时，测到CAS读取/解码放大
 
 同一已见E4合成fixture的OFF/ON六worker复测，600 proof与v0.40一致；576主问题/24控制/12负审计、1710绑定通过。
 新增6份父测完整process wall，原v0.40漏项保持null，不回填。64 runtime除版本不变。
