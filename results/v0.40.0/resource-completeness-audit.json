@@ -1,0 +1,11 @@
+{
+  "resource_recording_complete": false,
+  "overall_protocol_fully_satisfied": false,
+  "main_mechanical_gates_pass": true,
+  "parent_full_process_wall_s": null,
+  "reason": "Frozen protocol requested parent-measured full process wall, but frozen parent driver did not record it. worker_wall_s starts after imports and cannot substitute. No backfill or result-overwriting rerun.",
+  "worker_peak_rss_scope": "Process peak observed before final report serialization; not a complete lifecycle external measurement",
+  "physical_read_or_decompressed_bytes": null,
+  "physical_io_null_was_predeclared": true,
+  "runtime_and_scoring_unchanged_after_freeze": true
+}

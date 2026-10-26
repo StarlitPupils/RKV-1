@@ -6,7 +6,23 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.39.0 · 有界在线统计能恢复，科学净收益0/9
+## 当前版本：v0.40.0 · 三跳原证据路径机械通过，完整进程计时缺项
+
+新增显式known-root/指定SID的合成引用路径，不改Archive/Memory默认。
+288主问题状态/值/全路径符合预期：279完成、6缺证、3循环；另12控制、6篡改负审计符合预期。
+855原record绑定、39完整历史源及HEAD/旧文件保持核验通过。不是开放检索/自然语言多跳或模型答案收益。
+
+![指定快照证据路径与完整文件成本](results/v0.40.0/evidence-paths.png)
+
+每轮最终memory1171964B，派生路径166682B；所有64模块+HTML及旧快照/索引费用单列。
+协议要求的父测完整process wall漏记为null，**资源记录完整性false，整份协议未全满足**；原结果不覆盖。
+4096B是入证record预算，物理IO/解压未仪表化，不能叫4096B读盘上限。下一版优先补仪表。
+240本地检查239通过/1权限跳过，0模型API；E3净收益、E4整体/真实长会话/回答质量仍未验收。
+
+[冻结协议](docs/EVIDENCE-PATHS.md) · [详实报告](results/v0.40.0/SUMMARY.md) ·
+[资源缺项](results/v0.40.0/resource-completeness-audit.json) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.40.0)。
+
+## v0.39.0 · 有界在线统计能恢复，科学净收益0/9
 
 新增无需训练权重的显式order0/order1实验帧，旧61模块除版本号不改。
 固定新[32768:40960]科学区段+噪声/循环控制，75对/150新codec阶段/150文件fsync全精确，25帧条件三轮SHA一致。

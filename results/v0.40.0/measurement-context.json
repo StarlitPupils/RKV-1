@@ -1,0 +1,19 @@
+{
+  "runtime_protocol_freeze": "efc12820375924fd6134bf9b10f3418c66ac4056",
+  "candidate_CI": 40311078879,
+  "input_freeze": "643b6aeb677f66b8fec5a07d85005c053d6df6f1",
+  "formal_evaluation_retries": 0,
+  "new_training_runs": 0,
+  "new_remote_model_calls": 0,
+  "scope": "Synthetic explicit references, known root and explicit SID; not unknown natural language tasks",
+  "formal_rescoring_runs": 0,
+  "mechanical_gates_pass": true,
+  "resource_recording_complete": false,
+  "missing_parent_process_timing_preserved": true,
+  "physical_io_uninstrumented": true,
+  "plot_note": "Initial frozen analyzer figure legend covered bars. Retained original locally; independent aggregate-only plotter moved legends outside without changing raw measurements/thresholds.",
+  "initial_plot_sha256": "3044d886a0e96f96a82e687f20540c360a5223f98991bc3347626690c25c9e48",
+  "final_plot_sha256": "8332898d5b870e99de32f051b3083c56cae6430fd3e515176901b7cb3107ebc0",
+  "plotter_sha256": "9e6007cc5985960dfc7aaf618bf628cac9934b532f939f8c72312192ded7591a",
+  "native_performance_claim": false
+}
