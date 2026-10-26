@@ -283,6 +283,15 @@ class Memory:
             hits=self._verified_hits(rows,sid,manifest,resources)
         return {'snapshot_id':sid,'source_key':key,'scope':'explicit-known-source','hits':hits,'wall_s':time.perf_counter()-started}
 
+    def lookup_many(self,keys,*,snapshot,max_source_bytes=1<<20):
+        """Opt-in v3 fixed-SID batch; admitted bytes are not an I/O/RAM cap.
+
+        View validation occurs at request entry; selected original records are
+        reverified per occurrence. Existing lookup/default callers are unchanged.
+        """
+        from .memory_batch import lookup_many
+        return lookup_many(self,keys,snapshot=snapshot,max_source_bytes=max_source_bytes)
+
     def _verified_hits(self,rows,sid,manifest,resources):
         hits=[]
         from .memory_index import snapshot as open_snapshot
