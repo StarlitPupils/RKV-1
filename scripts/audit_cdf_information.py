@@ -69,7 +69,8 @@ def audit(inputs, workers):
     start = time.perf_counter()
     cpu = time.process_time()
     jobs = {meta['id']: (meta, raw) for meta, raw in load(inputs, 'test')}
-    expected = json.loads((ROOT/'results/v0.37.0/source-checksums.json').read_text('utf-8'))
+    ledger = json.loads((ROOT/'results/v0.37.0/source-resource.json').read_text('utf-8'))['files']
+    expected = {name.removeprefix('rkv1/'): item['sha256'] for name, item in ledger.items()}
     files = sorted((ROOT/'rkv1').rglob('*.py')) + [ROOT/'rkv1/memory_demo.html']
     actual = {p.relative_to(ROOT/'rkv1').as_posix(): sha(p.read_bytes()) for p in files}
     if actual != expected:
