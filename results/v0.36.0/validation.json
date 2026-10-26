@@ -1,0 +1,22 @@
+{
+  "runtime_and_protocol_freeze": "a0c34fb",
+  "pre_test_model_freeze_commit": "7b865bb",
+  "all60_modules_and_protocol_and_training_inputs_model_identity_verified": true,
+  "all48_actual_frames_and_restored_files_match_recorded_SHA_and_original_prefix_bytes": true,
+  "all3_round_frame_bytes_and_model_and_bits_identical": true,
+  "all96_stages_no_numpy_or_scientific_input_import": true,
+  "actual_file_fsyncs": 96,
+  "scientific_space_pass": 0,
+  "scientific_joint_pass": 0,
+  "tests": {
+    "run": 227,
+    "passed": 226,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "05ef6f16707fddb0419428c9766ea586f2a005e752689d4fbf4a869597eec713"
+  },
+  "remote_model_calls": 0,
+  "model_quality": null,
+  "cold_cache": null,
+  "cross_machine": null
+}

@@ -1,0 +1,15 @@
+{
+  "runtime_and_protocol_freeze": "a0c34fb",
+  "pre_test_model_freeze_commit": "7b865bb",
+  "candidate_CI": 40288390422,
+  "model_freeze_CI": 40288529503,
+  "training_runs": 1,
+  "scientific_training_bytes": 95292,
+  "science_test_prefix_bytes": 24576,
+  "noise_prefix_bytes": 8192,
+  "model_sha256": "f4848728bc05e305208cdc50f4ec10b80fee167736deecf334b03e0ebfc03813",
+  "scope": "Original48 pairs/96processes, no reruns. Known archival file-separated prefixes, not unseen project domains or full-file compression. Pure integer inference; NumPy training only. No new remote model calls.",
+  "negative_result": "All9 scientific space/joint points fail. Neural arithmetic payload alone larger than each plain codec; zero model storage would not fix those observations. No default integration or native/shared-model follow-up for unchanged bitstream.",
+  "tests": "Final full227run226pass1Windowspermission skip; earlier227pass before stricter invalid input normalization retained privately, targeted4byte-exact/corruption tests also passed.",
+  "strict_external_install_scope": "Fresh physically external wheel/current native and cwd; same interpreter/dependencies, no clean-runtime/cross-machine claim; installed new neural frame smoke uses synthetic weights, not private scientific data."
+}

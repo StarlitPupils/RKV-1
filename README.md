@@ -6,7 +6,50 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.35.0 · 固定边界硬退出后，一次恢复写入通过
+## 当前版本：v0.36.0 · E3整数神经预测原型：精确恢复，净成本失败
+
+新增小MLP、纯整数CDF/32bit算术编码和独立`RKVNN001`自包含实验帧；
+运行时不需要NumPy或模型API。主Archive v1–v6/Memory/CAS和默认保持不变。
+先冻代码/协议，再以95292B训练一次并提交量化模型SHA，最后才测3科学8192B前缀和噪声。
+
+| 每对象8192B，完整帧 | Neural | Zlib6 | Zstd3 | LZMA6 |
+|---|---:|---:|---:|---:|
+| SciPy前缀 | 9746 | 3379 | 3506 | 3422 |
+| SymPy前缀 | 9499 | 2911 | 3083 | 2962 |
+| LaTeX前缀 | 10325 | 2526 | 2669 | 2562 |
+| 固定噪声 | 14152 | 8337 | 8340 | 8386 |
+
+科学净空间/联合**0/9**，噪声均0/3；科学神经位流本身在9/9比较已比普通payload更大。
+每神经帧还实收4878B权重（原模型6944B），专用源码另计，不能靠免费模型或扩大N解释收益。
+不集成当前候选，也不追加同表示的Rust/共享模型格式。这个小候选失败不代表所有神经方法失败。
+
+![神经模型/位流/源码/CPU完整成本](results/v0.36.0/neural-small-cost.png)
+
+48恢复对/96新进程/96文件fsync全部逐字节一致；227测试226通过/1权限跳过。
+运行库60模块+HTML 402581B，专用分配与整份分配分开；训练NumPy安装52666902B、
+训练/导入/依赖盘点CPU与RSS单列，编解码96进程均未导入NumPy或执行输入项目代码。
+这是固定档案前缀/CPU可行性，非完整源文件、未知领域、生产压缩或模型回答收益。
+E3有机械原型，净收益门槛未完成；长期对话/多跳/无限上下文仍未实现，0新增模型调用。
+
+```python
+# 未训练零权重的机械恢复示例；科学结果使用另行冻结的真实训练模型。
+from rkv1.neural_small import model_bytes, PARAMETERS
+from rkv1.neural_frame import encode, decode
+raw = b'byte exact\r\n'
+frame, info = encode(raw, model=model_bytes([0] * PARAMETERS))
+assert decode(frame) == raw
+```
+
+训练只测试Python3.13/NumPy2.4.4；输入完整文件URL/SHA见docs/text-lanes-inputs.json。
+按NEURAL-SMALL.md先训练并锁模型，再评估；跨机器训练复现、冷缓存/跨机性能未测。
+下一项固定同训练资料的廉价unigram+同算术码诊断，分离条件预测与权重成本；
+已有测试前缀不当新验证、不调参追正结果。
+
+[冻结协议](docs/NEURAL-SMALL.md) · [详实报告](results/v0.36.0/SUMMARY.md) ·
+[训练/模型冻结](results/v0.36.0/model-freeze.json) · [原始JSON](results/v0.36.0/round-1.json) ·
+[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.36.0)。
+
+## v0.35.0 · 固定边界硬退出后，一次恢复写入通过
 
 运行库除版本号与v0.34逐字节相同。新增单writer固定Python hook进程实验：
 7个硬退出点+1成功控制，3轮共24个新目录；21次os._exit(77)、3次正常返回。
