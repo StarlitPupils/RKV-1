@@ -1,0 +1,89 @@
+{
+  "source_sha256": "b8d6c89624cb2ed74dee8938effc4f5d8bd2086887880af8110d64be4ceade62",
+  "source_bytes": 8307875,
+  "records": 5183,
+  "scope": "Input plan and admission-size preparation only, no lookup/codec/scientific outcome scoring",
+  "plans": [
+    {
+      "batch_size": 1,
+      "round": 1,
+      "plan_sha256": "7e9d30080b545446f5aa35ccf164fc2a8310cf8414d55c8b6191a6b9d4201d30",
+      "bundles": 32,
+      "unique_keys": 32,
+      "min_admitted_bytes": 750,
+      "max_admitted_bytes": 3348
+    },
+    {
+      "batch_size": 1,
+      "round": 2,
+      "plan_sha256": "e6534bfece7575e2990286d4384ed7ddfa60cdfddd13bdfa76a6e1b2f8292ce6",
+      "bundles": 32,
+      "unique_keys": 32,
+      "min_admitted_bytes": 750,
+      "max_admitted_bytes": 3348
+    },
+    {
+      "batch_size": 1,
+      "round": 3,
+      "plan_sha256": "98b8ee5284622bf6ebe2c4e1f3411e6b53495d50a89d4aa4332cb01ca2e07f6c",
+      "bundles": 32,
+      "unique_keys": 32,
+      "min_admitted_bytes": 750,
+      "max_admitted_bytes": 3348
+    },
+    {
+      "batch_size": 3,
+      "round": 1,
+      "plan_sha256": "0a6f3ee29686ac1e7164c0d6ea46f68f9016e5e0e2ab7af28c2baa6fd6fff5b2",
+      "bundles": 32,
+      "unique_keys": 96,
+      "min_admitted_bytes": 3289,
+      "max_admitted_bytes": 9548
+    },
+    {
+      "batch_size": 3,
+      "round": 2,
+      "plan_sha256": "eef9d621d3c13cf66f84f1b42c00f4e23013c94ec8e505a12b94a3d03d076e2f",
+      "bundles": 32,
+      "unique_keys": 96,
+      "min_admitted_bytes": 3289,
+      "max_admitted_bytes": 9548
+    },
+    {
+      "batch_size": 3,
+      "round": 3,
+      "plan_sha256": "7387ff506251b3483a65cea565cb0c252c4f013960b955a807b505ec9af2af35",
+      "bundles": 32,
+      "unique_keys": 96,
+      "min_admitted_bytes": 3289,
+      "max_admitted_bytes": 9548
+    },
+    {
+      "batch_size": 32,
+      "round": 1,
+      "plan_sha256": "2508d51fb722a5e7c6202c00278471392b4e0f77e5048e34ef15c4439c05ef40",
+      "bundles": 32,
+      "unique_keys": 1024,
+      "min_admitted_bytes": 45058,
+      "max_admitted_bytes": 57875
+    },
+    {
+      "batch_size": 32,
+      "round": 2,
+      "plan_sha256": "d5f0aec911dc20251d2fab9d0192d43314db0ad382725f10f8c32600dfc08bd5",
+      "bundles": 32,
+      "unique_keys": 1024,
+      "min_admitted_bytes": 45058,
+      "max_admitted_bytes": 57875
+    },
+    {
+      "batch_size": 32,
+      "round": 3,
+      "plan_sha256": "ad62e2a6e955295032a306b208f43b541cfc9dfa01c07bcd49f5b389e76f7d74",
+      "bundles": 32,
+      "unique_keys": 1024,
+      "min_admitted_bytes": 45058,
+      "max_admitted_bytes": 57875
+    }
+  ]
+}
