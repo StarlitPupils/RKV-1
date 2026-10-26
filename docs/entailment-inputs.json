@@ -1,0 +1,63 @@
+{
+  "repository": "https://github.com/allenai/entailment_bank",
+  "commit": "daac2fdb7ab52ec3ef8f2953f59288c1edd7c2f0",
+  "files": {
+    "train.jsonl": {
+      "source_url": "https://github.com/allenai/entailment_bank/blob/daac2fdb7ab52ec3ef8f2953f59288c1edd7c2f0/data/public_dataset/entailment_trees_emnlp2021_data_v2/dataset/task_3/train.jsonl",
+      "source_commit": "daac2fdb7ab52ec3ef8f2953f59288c1edd7c2f0",
+      "bytes": 7585643,
+      "sha256": "d5ec46a271f16cafe4986acb91e5893d413393ee17860382d311f7cc3b89fe89",
+      "git_blob_sha1": "33c5f8682343096c40fa3ca0862fd8d0f033ac48",
+      "lines": 1313
+    },
+    "dev.jsonl": {
+      "source_url": "https://github.com/allenai/entailment_bank/blob/daac2fdb7ab52ec3ef8f2953f59288c1edd7c2f0/data/public_dataset/entailment_trees_emnlp2021_data_v2/dataset/task_3/dev.jsonl",
+      "source_commit": "daac2fdb7ab52ec3ef8f2953f59288c1edd7c2f0",
+      "bytes": 1059882,
+      "sha256": "9a0fbf937661f13dc44d533623f241c624f5dadd82dac9512a4652dbb26a883b",
+      "git_blob_sha1": "5677395422658c6542c1e25fedabe3682b0dedb1",
+      "lines": 187
+    },
+    "corpus.json": {
+      "source_url": "https://github.com/allenai/entailment_bank/blob/daac2fdb7ab52ec3ef8f2953f59288c1edd7c2f0/data/public_dataset/entailment_trees_emnlp2021_data_v2/supporting_data/worldtree_corpus_sentences_extended.json",
+      "source_commit": "daac2fdb7ab52ec3ef8f2953f59288c1edd7c2f0",
+      "bytes": 909930,
+      "sha256": "7afb6b0464e02b83a29615b06cb8a28002625dbbf707f6c0a86bfd450f5aefcb",
+      "git_blob_sha1": "120616a7a7f4b313eb5936ba5e8f84a3c039b18c",
+      "lines": null
+    },
+    "LICENSE": {
+      "source_url": "https://github.com/allenai/entailment_bank/blob/daac2fdb7ab52ec3ef8f2953f59288c1edd7c2f0/LICENSE",
+      "source_commit": "daac2fdb7ab52ec3ef8f2953f59288c1edd7c2f0",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "lines": null
+    },
+    "labels-train.jsonl": {
+      "source_url": "https://github.com/allenai/entailment_bank/blob/daac2fdb7ab52ec3ef8f2953f59288c1edd7c2f0/data/public_dataset/entailment_trees_emnlp2021_data_v2/dataset/task_1/train.jsonl",
+      "source_commit": "daac2fdb7ab52ec3ef8f2953f59288c1edd7c2f0",
+      "bytes": 6861525,
+      "sha256": "cb96db359d4a4a135ce21274497f218ff2306cf874593aad3e0619b6546247ba",
+      "git_blob_sha1": "82335c340bac391c83015aef522e56ef40d6f263",
+      "lines": 1313
+    },
+    "labels-dev.jsonl": {
+      "source_url": "https://github.com/allenai/entailment_bank/blob/daac2fdb7ab52ec3ef8f2953f59288c1edd7c2f0/data/public_dataset/entailment_trees_emnlp2021_data_v2/dataset/task_1/dev.jsonl",
+      "source_commit": "daac2fdb7ab52ec3ef8f2953f59288c1edd7c2f0",
+      "bytes": 970998,
+      "sha256": "a9779787851fcdf2cdd5841520deda73474ebc4915e562225744807b5d8d1f5d",
+      "git_blob_sha1": "d4a519c581b7d7737b75c0ceaa70c8365feb1233",
+      "lines": 187
+    }
+  },
+  "phase": "Input preparation only; no retrieval/codec scoring; dev downloaded but not parsed/inspected",
+  "license_scope": "Repository root LICENSE Apache-2.0; distinct upstream corpus licensing not inferred; raw data stays local",
+  "new_model_calls": 0,
+  "preparation_wall_s": 30.213694999925792,
+  "preparation_cpu_s": 0.203125,
+  "labels_download_wall_s": 13.263697700109333,
+  "labels_download_cpu_s": 0.125,
+  "schema_finding": "Task3 public proof strings are empty on all1313 training rows. Task1 authoritative proof annotations separately fetched; both dev inputs remain unparsed. Task3 retrieved contexts/relevance scores will not be used as gold or query features.",
+  "scope": "Provenance/preparation only; formal v049 opens only corpus.json and labels-train.jsonl. Both dev files remain unparsed; no retrieval scoring or model training."
+}
