@@ -1,0 +1,9 @@
+{
+  "scope": "Postmeasurement inventory of unchanged codec environment; not new compression trial",
+  "python": "3.13.12",
+  "zlib_compile": "1.3.1",
+  "zlib_runtime": "1.3.1",
+  "zstandard": "0.24.0",
+  "liblzma_runtime_version_exposed_by_python": null,
+  "numpy_imported_by_codec_workers": false
+}

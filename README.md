@@ -6,7 +6,22 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.38.0 · 编码器只多不到2位，压缩瓶颈在别处
+## 当前版本：v0.39.0 · 有界在线统计能恢复，科学净收益0/9
+
+新增无需训练权重的显式order0/order1实验帧，旧61模块除版本号不改。
+固定新[32768:40960]科学区段+噪声/循环控制，75对/150新codec阶段/150文件fsync全精确，25帧条件三轮SHA一致。
+科学净B空间：order0 0/9、order1 0/9；联合分别0/9、0/9。
+无权重文件不等于免费模型：状态逻辑516B/132612B，持久容器、RSS、CPU和完整源码都单列。
+
+![在线统计完整成本](results/v0.39.0/online-counts-cost.png)
+
+237测试236通过/1权限跳过；递归63模块+HTML，0新模型API。新段来自已见文件，不能称未知项目泛化。
+默认不改；冷缓存/跨机/长期会话/多跳/模型回答收益未测或未证明。
+
+[冻结协议](docs/ONLINE-COUNTS.md) · [详实报告](results/v0.39.0/SUMMARY.md) ·
+[原始JSON](results/v0.39.0/round-1.json) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.39.0)。
+
+## v0.38.0 · 编码器只多不到2位，压缩瓶颈在别处
 
 冻结原模型/CDF/已见前缀，独立计算概率信息量并核对24个原帧：8条件L-I为0.25–1.72位，
 全部通过预定[-1,4]工程门槛；3合成控制恢复、2 uniform解析golden通过。0新增科学编码/恢复。

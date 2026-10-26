@@ -1,0 +1,31 @@
+{
+  "runtime_protocol_freeze": "d5b0d7dd8c0b8bfa3913a6194515ad193bdfc9f6",
+  "candidate_CI": 40306732310,
+  "input_freeze": "aee51783250388a2b71a21831753e4cb84d4e2f2",
+  "scientific_evaluation_retries": 0,
+  "new_training_runs": 0,
+  "new_remote_model_calls": 0,
+  "new_model_builds": 0,
+  "external_model_bytes": 0,
+  "independent_unseen_projects": false,
+  "scope": "Previously seen archived files but fixed unscored nonoverlapping suffixes; not cross-project validation",
+  "scientific_comparisons": {
+    "order0": {
+      "payload_win": 0,
+      "net_B_win": 0,
+      "net_C_win": 0,
+      "joint_win": 0
+    },
+    "order1": {
+      "payload_win": 0,
+      "net_B_win": 0,
+      "net_C_win": 0,
+      "joint_win": 0
+    }
+  },
+  "no_runtime_or_rule_changes_after_freeze": true,
+  "frame_state_reset_for_every_object": true,
+  "publication_scope": "Local CPU offline, cold cache/cross machine untested; no model answer calls",
+  "package_source_count": 63,
+  "html_files": 1
+}

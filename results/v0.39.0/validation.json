@@ -1,0 +1,22 @@
+{
+  "pairs": 75,
+  "fresh_codec_stage_processes": 150,
+  "file_fsyncs": 150,
+  "all_byte_exact": true,
+  "deterministic_frame_conditions": 25,
+  "unit_tests_run": 237,
+  "unit_tests_passed": 236,
+  "unit_tests_skipped": 1,
+  "test_log_sha256": "26c144a885920b5e8577f2652cab1921b428fbc15ec1cd2522265b8fcfe5bfaa",
+  "runtime_module_count": 63,
+  "html_files": 1,
+  "runtime_protocol_freeze": "d5b0d7dd8c0b8bfa3913a6194515ad193bdfc9f6",
+  "input_freeze": "aee51783250388a2b71a21831753e4cb84d4e2f2",
+  "no_numpy_in_codec_workers": true,
+  "no_input_project_execution": true,
+  "remote_model_calls": 0,
+  "cold_cache": null,
+  "cross_machine": null,
+  "figure_visually_inspected": true,
+  "figure_titles_units_legends_and_bars_unclipped": true
+}
