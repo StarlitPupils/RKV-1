@@ -6,7 +6,19 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.48.0 · 公共API固定1/3/32条科学记录成本
+## 当前版本：v0.49.0 · 训练标注原始来源就绪审计
+
+3fresh worker、17292重复叶检查/16533原成员绑定/3整源恢复通过；严格全可解/全literal两门槛均False。
+单轮5764叶：3982 UUID+1529精确文本+253未解；2142 literal相等、3369 UUID绑定但改写，不能当语义证明。
+
+![训练来源身份审计](results/v0.49.0/source-alignment.png)
+
+已见训练输入的独立物理诊断，开发集仍封存，图/模型训练0、检索分数0。263检查262通过/1权限跳过；65runtime仅版本，0新模型API。
+默认能力不改，E3净收益/E4整体/真实长会话/回答质量/无限上下文未完成。
+
+[冻结协议](docs/SOURCE-ALIGNMENT.md) · [详实报告](results/v0.49.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.49.0)。
+
+## v0.48.0 · 公共API固定1/3/32条科学记录成本
 
 36fresh worker、1152bundle/13824原record绑定/36完整源恢复和9组proof/全部树一致。各size时间联合：1key: False / 3key: True / 32key: True。
 base-only所有CAS计数相等，没有读取字节节省；低批量/CPU/parent/RSS反向和全部费用保留。

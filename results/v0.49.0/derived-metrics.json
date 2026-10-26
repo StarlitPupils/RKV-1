@@ -1,0 +1,105 @@
+{
+  "rows": [
+    {
+      "round": 1,
+      "counts": {
+        "provided_UUID": 3982,
+        "original_bindings": 5511,
+        "UUID_bound_annotation_different": 3369,
+        "exact_decoded_text": 1529,
+        "annotation_literal_exact": 2142,
+        "unresolved": 253
+      },
+      "worker_wall_s": 3.467105699935928,
+      "worker_cpu_s": 3.375,
+      "parent_full_process_wall_s": 3.6107886999379843,
+      "observed_peak_rss_bytes": 71401472,
+      "files": {
+        "ledger_bytes": 5280,
+        "shared_input_application_read_returned_bytes": 7771455,
+        "source_copy_bytes": 909930,
+        "store_bytes": 315672
+      },
+      "ingest": {
+        "wall_s": 0.04877730016596615,
+        "cpu_s": 0.03125
+      },
+      "physical_audit": {
+        "cpu_s": 3.28125,
+        "wall_s": 3.3321076999418437
+      }
+    },
+    {
+      "round": 2,
+      "counts": {
+        "provided_UUID": 3982,
+        "original_bindings": 5511,
+        "UUID_bound_annotation_different": 3369,
+        "exact_decoded_text": 1529,
+        "annotation_literal_exact": 2142,
+        "unresolved": 253
+      },
+      "worker_wall_s": 3.4223199000116438,
+      "worker_cpu_s": 3.328125,
+      "parent_full_process_wall_s": 3.541787799913436,
+      "observed_peak_rss_bytes": 71462912,
+      "files": {
+        "ledger_bytes": 5280,
+        "shared_input_application_read_returned_bytes": 7771455,
+        "source_copy_bytes": 909930,
+        "store_bytes": 315672
+      },
+      "ingest": {
+        "wall_s": 0.039518500212579966,
+        "cpu_s": 0.03125
+      },
+      "physical_audit": {
+        "cpu_s": 3.203125,
+        "wall_s": 3.3017528001219034
+      }
+    },
+    {
+      "round": 3,
+      "counts": {
+        "provided_UUID": 3982,
+        "original_bindings": 5511,
+        "UUID_bound_annotation_different": 3369,
+        "exact_decoded_text": 1529,
+        "annotation_literal_exact": 2142,
+        "unresolved": 253
+      },
+      "worker_wall_s": 3.4242629997897893,
+      "worker_cpu_s": 3.390625,
+      "parent_full_process_wall_s": 3.5431365999393165,
+      "observed_peak_rss_bytes": 71905280,
+      "files": {
+        "ledger_bytes": 5280,
+        "shared_input_application_read_returned_bytes": 7771455,
+        "source_copy_bytes": 909930,
+        "store_bytes": 315672
+      },
+      "ingest": {
+        "wall_s": 0.03957759984768927,
+        "cpu_s": 0.046875
+      },
+      "physical_audit": {
+        "cpu_s": 3.265625,
+        "wall_s": 3.302713599987328
+      }
+    }
+  ],
+  "training_rows": 1313,
+  "unique_training_ids": 1308,
+  "source_ids": 11941,
+  "exact_unique_source_sentences": 11521,
+  "source_aliases": 420,
+  "total_repeated_leaf_checks": 17292,
+  "total_repeated_original_bindings": 16533,
+  "source_full_recoveries": 3,
+  "raw_report_json_bytes": 7870753,
+  "all_training_leaves_source_resolvable_gate": false,
+  "all_training_annotations_literal_equal_source_gate": false,
+  "retrieval_quality_gate": null,
+  "model_training_runs": 0,
+  "dev_unparsed": true
+}

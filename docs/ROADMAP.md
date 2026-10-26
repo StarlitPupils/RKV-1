@@ -331,3 +331,7 @@ Memory.lookup_many最多32显式key、原record入证预算不等于I/O/RAM上�
 ## v0.48：公共批查询固定size成本范围
 
 36worker/1152bundle/13824原record绑定/36全源恢复通过，1/3/32时间联合1key: False / 3key: True / 32key: True，CAS全部计数相等无字节收益，全部负方向/费用保留。原公共API不改、默认不切换，既有科学数据和3key不称新独立科学验证。报告results/v0.48.0/SUMMARY.md；下一优先项另冻未知问题证据定位/检索假设，无新模型API，E4整体/真实长会话未验收。
+
+## v0.49：训练标注原始来源就绪诊断
+
+3worker/16533实际成员绑定/3全源恢复通过；单轮253未解、3369 UUID改写保留，严格全可解/全literal均False，不能当语义等价或检索收益。开发集未解析、图/模型训练0，报告results/v0.49.0/SUMMARY.md；后续冻结train-only检索/图方法与modelSHA后再揭dev，不补gold进原source。

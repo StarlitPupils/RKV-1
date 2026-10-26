@@ -1,0 +1,71 @@
+{
+  "runtime_protocol_input_freeze": "efe8c44299acafe8e5db45ac912513eb61fc4b4f",
+  "candidate_CI": 40357693859,
+  "formal_workers": 3,
+  "formal_evaluation_retries": 0,
+  "new_model_training_runs": 0,
+  "new_remote_model_calls": 0,
+  "prior_fully_verified_release": "v0.48.0",
+  "prior_final_proof_sha256": "8d0dd6cef097214c21b98ace7a935a2eb054fb358725ab783289404aff184910",
+  "training_mapping_counts_seen_during_preparation": true,
+  "unseen_scientific_validation": false,
+  "dev_unparsed": true,
+  "scope": "Physical original-member audit of known training input; readiness failures retained, no graph or retrieval scores",
+  "protocol_inputs_test_source": {
+    "docs/SOURCE-ALIGNMENT.md": {
+      "bytes": 5612,
+      "sha256": "9ccaadf22a914ed91d6f5abec61d2c9f0cf4ecbf98d94894407865bb0ed95461"
+    },
+    "docs/entailment-inputs.json": {
+      "bytes": 3848,
+      "sha256": "f31c70754f00af28b5ce2d1117306866ea7959aea89fad3c69541e726a6eaa6f"
+    },
+    "tests/test_source_alignment.py": {
+      "bytes": 2820,
+      "sha256": "64778c4c83419ebbc8992792377f65db022be3b49950713624a883c84609a785"
+    }
+  },
+  "private_preparation_retained_files": {
+    "corpus.json": {
+      "bytes": 909930,
+      "sha256": "7afb6b0464e02b83a29615b06cb8a28002625dbbf707f6c0a86bfd450f5aefcb"
+    },
+    "dev.jsonl": {
+      "bytes": 1059882,
+      "sha256": "9a0fbf937661f13dc44d533623f241c624f5dadd82dac9512a4652dbb26a883b"
+    },
+    "labels-dev.jsonl": {
+      "bytes": 970998,
+      "sha256": "a9779787851fcdf2cdd5841520deda73474ebc4915e562225744807b5d8d1f5d"
+    },
+    "labels-train.jsonl": {
+      "bytes": 6861525,
+      "sha256": "cb96db359d4a4a135ce21274497f218ff2306cf874593aad3e0619b6546247ba"
+    },
+    "LICENSE": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "provenance.json": {
+      "bytes": 3736,
+      "sha256": "c81809ce2c75d452ece0e9537937e8da33c03090daa0a8c27da76b0cbe4ee1dd"
+    },
+    "train-identity-preparation.json": {
+      "bytes": 575,
+      "sha256": "550b1442fe81129c61f56e29e948aecbfcf778d870f4945172dfd2876a0f34ca"
+    },
+    "train.jsonl": {
+      "bytes": 7585643,
+      "sha256": "d5ec46a271f16cafe4986acb91e5893d413393ee17860382d311f7cc3b89fe89"
+    }
+  },
+  "private_preparation_total_bytes": 17403646,
+  "models_and_graphs_trained": 0,
+  "pre_tag_audit_harness_failure": {
+    "error": "str lacked relative_to on new input-manifest audit path",
+    "private_log_bytes": 264,
+    "private_log_sha256": "b338eb5fecaf400c8207ba7178bc311aafe0ca35fe76458c066216a3996bb33e",
+    "only_private_harness_corrected": true,
+    "formal_runs_repeated": 0
+  }
+}
