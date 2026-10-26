@@ -1,5 +1,6 @@
 """Disposable lexical indexes over immutable, byte-verifiable CAS evidence."""
 import hashlib
+from functools import lru_cache
 import json
 import os
 from pathlib import Path
@@ -18,12 +19,72 @@ STOP=set("a an the is are was were be been of to in on for and or with by as at 
 def _json(value):return json.dumps(value,ensure_ascii=False,sort_keys=True,separators=(",",":")).encode("utf-8")
 
 
+@lru_cache(maxsize=1)
+def _windows_head_api():
+    import ctypes
+    from ctypes import wintypes
+    kernel=ctypes.WinDLL('kernel32',use_last_error=True)
+    create=kernel.CreateFileW
+    create.argtypes=(wintypes.LPCWSTR,wintypes.DWORD,wintypes.DWORD,wintypes.LPVOID,
+                     wintypes.DWORD,wintypes.DWORD,wintypes.HANDLE)
+    create.restype=wintypes.HANDLE
+    close=kernel.CloseHandle;close.argtypes=(wintypes.HANDLE,);close.restype=wintypes.BOOL
+    rename=kernel.SetFileInformationByHandle
+    rename.argtypes=(wintypes.HANDLE,ctypes.c_int,wintypes.LPVOID,wintypes.DWORD)
+    rename.restype=wintypes.BOOL
+    class RenameInfo(ctypes.Structure):
+        _fields_=[('Flags',wintypes.DWORD),('RootDirectory',wintypes.HANDLE),
+                  ('FileNameLength',wintypes.DWORD),('FileName',wintypes.WCHAR*1)]
+    return kernel,create,close,rename,RenameInfo
+
+
+def _open_head(path):
+    """Read one HEAD handle, sharing rename/delete on Windows; never retry."""
+    if os.name!='nt':return Path(path).open('rb')
+    import ctypes
+    import msvcrt
+    _,create,close,_,_=_windows_head_api()
+    handle=create(str(path),0x80000000,0x00000007,None,3,0x00000080,None)
+    if handle==ctypes.c_void_p(-1).value:raise ctypes.WinError(ctypes.get_last_error())
+    try:fd=msvcrt.open_osfhandle(handle,os.O_RDONLY|os.O_BINARY|os.O_NOINHERIT)
+    except BaseException:
+        close(handle);raise
+    try:return os.fdopen(fd,'rb')
+    except BaseException:
+        os.close(fd);raise
+
+
+def _replace_head(source,target):
+    """Replace one flushed sibling; Windows supports readers of the old inode."""
+    if os.name!='nt':return os.replace(source,target)
+    import ctypes
+    _,create,close,rename,info_type=_windows_head_api()
+    handle=create(str(source),0x00010000,0x00000007,None,3,0x00000080,None)
+    if handle==ctypes.c_void_p(-1).value:raise ctypes.WinError(ctypes.get_last_error())
+    unsupported=False
+    try:
+        name=str(Path(target).resolve()).encode('utf-16-le')
+        size=max(ctypes.sizeof(info_type),info_type.FileName.offset+len(name)+2)
+        buffer=ctypes.create_string_buffer(size);info=info_type.from_buffer(buffer)
+        info.Flags=3  # REPLACE_IF_EXISTS | POSIX_SEMANTICS, FileRenameInfoEx
+        info.FileNameLength=len(name)
+        ctypes.memmove(ctypes.addressof(buffer)+info_type.FileName.offset,name,len(name))
+        if not rename(handle,22,buffer,size):
+            error=ctypes.get_last_error()
+            if error in (1,50,87):unsupported=True
+            else:raise ctypes.WinError(error)
+    finally:close(handle)
+    # Older Windows/filesystems retain the previous single os.replace behavior.
+    # No retry on permission/sharing failures, and no concurrent-reader guarantee there.
+    if unsupported:return os.replace(source,target)
+
+
 def _head(path,value):
     fd,name=tempfile.mkstemp(prefix=".memory-head-",dir=path.parent)
     try:
         with os.fdopen(fd,"wb") as stream:
             stream.write(_json(value));stream.flush();os.fsync(stream.fileno())
-        os.replace(name,path)
+        _replace_head(name,path)
     finally:
         if Path(name).exists():Path(name).unlink()
 
@@ -149,7 +210,7 @@ class Memory:
         return {**added,"indexed_records":count,"index_bytes":target.stat().st_size,"index_reused":False,"wall_s":time.perf_counter()-started}
 
     def current(self):
-        head=json.loads((self.root/"HEAD.json").read_bytes())
+        with _open_head(self.root/"HEAD.json") as stream:head=json.loads(stream.read())
         if head.get("version")!=1 or not valid_hash(head.get("snapshot_id")):raise ValueError("Invalid memory HEAD")
         return head["snapshot_id"]
 

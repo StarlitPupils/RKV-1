@@ -96,7 +96,7 @@ class ReplayBudgetTests(unittest.TestCase):
         m=Memory.create(self.root/'legacy-enable',index_profile='compact-base-v3');first=m.add(self.source)
         head=(m.root/'HEAD.json').read_bytes();manifest=(m.root/'manifests'/(first['snapshot_id']+'.json')).read_bytes()
         previous=(m.root/'indexes/config.json').read_bytes()
-        with patch('rkv1.memory.os.replace',side_effect=OSError('injected')):
+        with patch('rkv1.memory._replace_head',side_effect=OSError('injected')):
             with self.assertRaises(OSError):m.enable_replay_budget()
         self.assertEqual((m.root/'indexes/config.json').read_bytes(),previous)
         result=subprocess.run([sys.executable,'-m','rkv1','memory-budget',str(m.root)],capture_output=True,text=True,encoding='utf-8')
