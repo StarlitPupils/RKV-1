@@ -1,0 +1,35 @@
+{
+  "methods": {
+    "lexical": {
+      "report_path": "E:/memorystorage/results/v0.53.0/round-1-lexical.json",
+      "report_sha256": "a2b785569004faf24ff5b6b96128ea62e586742b32f7de6e33dfda75056ef42d",
+      "report_bytes": 533418,
+      "queries_path": "E:/memorystorage/.tools/scifact-graph-v053-workers/round-1-lexical/private-query-check.json",
+      "queries_sha256": "015ee1f097e005a9fe0f85295d6f28dc5005c1919de1aa8a1dbfb9864d1468cb",
+      "queries_bytes": 53995
+    },
+    "graph": {
+      "report_path": "E:/memorystorage/results/v0.53.0/round-1-graph.json",
+      "report_sha256": "db33e952e4fe16ceae5e5573aff3a46ab3a509480ecf2f1d602143c6e35b0360",
+      "report_bytes": 533442,
+      "queries_path": "E:/memorystorage/.tools/scifact-graph-v053-workers/round-1-graph/private-query-check.json",
+      "queries_sha256": "84e43bb367056dbf1e3d0631c7904b6b9fec00a77c1d56fe882b503a43660174",
+      "queries_bytes": 53995
+    },
+    "permuted_graph": {
+      "report_path": "E:/memorystorage/results/v0.53.0/round-1-permuted_graph.json",
+      "report_sha256": "d62426545d1022bc6f1e53584e29234e5fa9356c8eb7f7c89fc0b5dce2e091b8",
+      "report_bytes": 533440,
+      "queries_path": "E:/memorystorage/.tools/scifact-graph-v053-workers/round-1-permuted_graph/private-query-check.json",
+      "queries_sha256": "f70f618249df370a026a3f72fe8b56f29fbd54260ce79c001c82d77b45b3a14d",
+      "queries_bytes": 53995
+    }
+  },
+  "model_sha256": "f062c7a784421b71bbfaf3c299be78ff323a391847afbf5420e4c06a4d422be0",
+  "source_sha256": "b8d6c89624cb2ed74dee8938effc4f5d8bd2086887880af8110d64be4ceade62",
+  "prior_fully_verified_release": "v0.53.0",
+  "prior_tag_commit": "748def47bccd25330b561d34da488b4f6738e9b0",
+  "prior_final_proof_sha256": "f9750cdc2b40bbbb77c063670cb5fa5b6226f782179b9a6219bd64cea9749419",
+  "no_raw_source_range_reads_this_version": true,
+  "known_results_diagnostic_only": true
+}
