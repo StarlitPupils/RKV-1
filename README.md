@@ -6,7 +6,20 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.43.0 · 跨块布局控制：迁移工作量门槛True
+## 当前版本：v0.44.0 · CAS角色归因：80%假设门槛True
+
+两布局cacheOFF各3轮、6fresh worker，600proof/1710绑定/156历史文件及12795原block事件守恒，proof/完整树/计量等v0.43。
+按manifest_validation/index_view/source_hit/other_trace排他归因，不跳校验；重仪表时间只报成本，不是优化速度验证。
+分散布局3978次解码中3691次发生在index_view，直接目标读取仍287次；没有实施视图复用。
+
+![CAS调用角色归因](results/v0.44.0/path-roles.png)
+
+250检查249通过/1权限跳过，64 runtime只变版本，0模型API。v0.43两个时间联合失败仍保留；无默认集成。
+已知合成显式链，非自然多跳/真实长会话/回答质量；E3净收益/E4整体未验收，SSD物理/全系统IO/冷缓存/跨机未测。
+
+[协议](docs/PATH-ROLES.md) · [详实报告](results/v0.44.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.44.0)。
+
+## v0.43.0 · 跨块布局控制：迁移工作量门槛True
 
 同一原始行保留，两布局×cache×meter、24新worker，2400proof/6840绑定/624历史文件恢复及6组完整树一致性通过。
 clustered工作量/时间联合：True/False；separated：True/False。

@@ -1,0 +1,31 @@
+{
+  "main_questions": 576,
+  "main_status": {
+    "complete": 558,
+    "cycle": 6,
+    "missing": 12
+  },
+  "controls": 24,
+  "negative_audits": 12,
+  "proofs": 600,
+  "accepted_bindings": 1710,
+  "historical_source_files_recovered": 156,
+  "role_events": 12795,
+  "all_mechanical_gates_pass": true,
+  "all_proofs_trees_and_traffic_match_v043": true,
+  "role_conservation_and_restoration_cases": 600,
+  "role_attribution_gate": true,
+  "parent_timing_records": 6,
+  "unit_tests_run": 250,
+  "unit_tests_passed": 249,
+  "unit_tests_skipped": 1,
+  "runtime_module_count": 64,
+  "html_files": 1,
+  "freeze": "f0ae98910bb28e452d4c4260d150b230a8377f77",
+  "new_remote_model_calls": 0,
+  "physical_SSD_bytes": null,
+  "all_system_file_bytes": null,
+  "cold_cache": null,
+  "cross_machine": null,
+  "figure_visually_inspected": true
+}

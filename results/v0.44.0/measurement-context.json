@@ -1,0 +1,25 @@
+{
+  "runtime_protocol_input_freeze": "f0ae98910bb28e452d4c4260d150b230a8377f77",
+  "candidate_CI": 40331351687,
+  "formal_workers": 6,
+  "formal_evaluation_retries": 0,
+  "new_training_runs": 0,
+  "new_remote_model_calls": 0,
+  "prior_fully_verified_release": "v0.43.0",
+  "prior_final_proof_sha256": "8cb34668b57837668ba17406e05020b9ab1d9e1f466a373bd8f8c6d7982f44f4",
+  "scope": "Heavy exclusive original CAS work diagnostic, no algorithm/caching/QA performance claim",
+  "postmeasurement_figure_only": {
+    "program": "scripts/plot_path_roles.py",
+    "program_bytes": 2489,
+    "program_sha256": "cbc2a5a422c69e81f589cb44464455ae8ffc96f23c237ec2e24bc9465dc13f6e",
+    "initial_figure_sha256": "3f1e61caeae8630aead39691df717efeff6f756f06edf7b4810c40aea93213ce",
+    "final_figure_sha256": "c601a3c67ca19409eb03dd7c2d7d2f877e41c01974faf5626462ea8e14f61509",
+    "cost": {
+      "wall_s": 0.5362438000738621,
+      "cpu_s": 0.546875,
+      "observed_peak_rss_bytes": 76591104,
+      "scope": "Plot-only postmeasurement, includes matplotlib import; excludes interpreter startup and this stats write; frozen raw scores/initial figure unchanged"
+    },
+    "scope": "Postmeasurement plot-only headroom and total labels; initial formal figure retained locally; no raw score/code/protocol change"
+  }
+}

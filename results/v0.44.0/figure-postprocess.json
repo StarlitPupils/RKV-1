@@ -1,0 +1,14 @@
+{
+  "program": "scripts/plot_path_roles.py",
+  "program_bytes": 2489,
+  "program_sha256": "cbc2a5a422c69e81f589cb44464455ae8ffc96f23c237ec2e24bc9465dc13f6e",
+  "initial_figure_sha256": "3f1e61caeae8630aead39691df717efeff6f756f06edf7b4810c40aea93213ce",
+  "final_figure_sha256": "c601a3c67ca19409eb03dd7c2d7d2f877e41c01974faf5626462ea8e14f61509",
+  "cost": {
+    "wall_s": 0.5362438000738621,
+    "cpu_s": 0.546875,
+    "observed_peak_rss_bytes": 76591104,
+    "scope": "Plot-only postmeasurement, includes matplotlib import; excludes interpreter startup and this stats write; frozen raw scores/initial figure unchanged"
+  },
+  "scope": "Postmeasurement plot-only headroom and total labels; initial formal figure retained locally; no raw score/code/protocol change"
+}

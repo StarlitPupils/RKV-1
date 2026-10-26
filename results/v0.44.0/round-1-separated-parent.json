@@ -1,0 +1,9 @@
+{
+  "child_report_sha256": "137e4de7c835cdb4dfcc5bd1be90b0b721969d88048fba776ed3b93bf12ecf2d",
+  "error": null,
+  "layout": "separated",
+  "parent_full_process_wall_s": 2.6605509999208152,
+  "return_code": 0,
+  "role_report_sha256": "fd98fe63837e2caf5f5ad2362e65d8676440cc4e18ff3afcebc462e64ccc3561",
+  "round": 1
+}

@@ -311,3 +311,7 @@ observer开销和全部memory/sidecar/源码计账，原v0.40漏项不回填。�
 ## v0.43：同原记录跨文件布局控制
 
 24worker/2400proof/6840绑定/624历史文件与6组完整树通过。clustered工作量/时间True/False，separated True/False；固定cap不调，全部负方向/CPU/文件/RAM收费，非真实推理验证。报告results/v0.43.0/SUMMARY.md。下一步须另冻假设，不默认集成。
+
+## v0.44：原CAS工作量调用角色归因
+
+6worker/600proof/1710绑定/156源/12795event与v043原值一致且守恒，80%归因假设门槛True。重仪表只计诊断成本，没有优化/提速验证。下一项另冻请求内验证/视图复用及安全/RAM合同。报告results/v0.44.0/SUMMARY.md。

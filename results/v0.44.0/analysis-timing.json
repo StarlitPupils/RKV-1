@@ -1,0 +1,6 @@
+{
+  "analysis_wall_s": 3.762159900041297,
+  "analysis_cpu_s": 2.140625,
+  "observed_peak_rss_bytes": 91258880,
+  "scope": "Separate full audit and plotting, excludes interpreter startup and this record writing; diagnostic cost"
+}
