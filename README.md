@@ -6,7 +6,19 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.46.0 · SciFact指定来源三键批查询迁移
+## 当前版本：v0.47.0 · 可选公共批查询API
+
+新增Memory.lookup_many：固定历史SID、1..32个已知来源key，原record逐次验证；入证字节预算默认1MiB，不是读取或RAM上限。
+6fresh worker、126机械case=66返回/60预期预算拒绝，666原record绑定/36历史源恢复通过；259检查258通过/1权限跳过。
+
+![公共批查询机械验收成本](results/v0.47.0/batch-api.png)
+
+默认lookup/CLI/UI未改，无method patch或decoded块cache。预算拒绝前view仍可能读CAS，完整文件/65递归Python+HTML和CPU费用在报告。
+本版没有提速对照，performance_gain_gate=null；不把v045/46旧assessment科学耗时外推新API。0新模型请求，E3净收益/E4整体/真实长会话/无限上下文未完成。
+
+[接口和冻结协议](docs/BATCH-LOOKUP.md) · [详实报告](results/v0.47.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.47.0)。
+
+## v0.46.0 · SciFact指定来源三键批查询迁移
 
 24fresh worker、768bundle/2304绑定/24完整源恢复及6组proof/全树一致。base-only全部CAS计数相等控制：True/True；没有读取字节节省。
 spread/repeated时间联合门槛：True/True，query wall中位比0.440/0.426；CPU/parent/RSS/源码和全部费用见报告。

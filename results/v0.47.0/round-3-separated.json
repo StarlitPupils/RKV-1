@@ -1,0 +1,3852 @@
+{
+  "all_system_file_bytes": null,
+  "cases": [
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 0.006739299977198243,
+      "bindings": 1,
+      "budget_bytes": 164,
+      "case_id": "e0-n1-accepted",
+      "epoch": 0,
+      "error": null,
+      "expected": "accepted",
+      "instrumented_call_cpu_s": 0.0,
+      "instrumented_call_wall_s": 0.0015712000895291567,
+      "keys": [
+        "doc:0"
+      ],
+      "outcome_gate_pass": true,
+      "primary": true,
+      "result": {
+        "admitted_source_bytes": 164,
+        "consistency": "View verified at request entry; each selected original record reverified per occurrence",
+        "max_keys": 32,
+        "max_source_bytes": 164,
+        "results": [
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:0",
+                "locator": {
+                  "length": 164,
+                  "offset": 0,
+                  "path": "step-0.jsonl",
+                  "sha256": "482fa0dfcfeeb0f8e65704641a7259e082632c4d47b56b370b9b4192971c38bc",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:1"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 00, record 0"
+              }
+            ],
+            "source_key": "doc:0"
+          }
+        ],
+        "scope": "explicit-known-source-batch",
+        "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec",
+        "wall_s": 0.001308599952608347
+      },
+      "traffic": {
+        "CAS_decoded_output_bytes": 55993,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 2206,
+        "compressed_decode_output_bytes": 55993,
+        "decode_attempts": 1,
+        "decode_successes": 1,
+        "object_opens": 1,
+        "payload_input_bytes": 2122,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 2,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 1.00000761449337e-06,
+      "bindings": 0,
+      "budget_bytes": 163,
+      "case_id": "e0-n1-budget-rejected",
+      "epoch": 0,
+      "error": "Batch source-byte budget exceeded",
+      "expected": "budget-rejected",
+      "instrumented_call_cpu_s": 0.0,
+      "instrumented_call_wall_s": 0.001048500183969736,
+      "keys": [
+        "doc:0"
+      ],
+      "outcome_gate_pass": true,
+      "primary": true,
+      "result": null,
+      "traffic": {
+        "CAS_decoded_output_bytes": 0,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 0,
+        "compressed_decode_output_bytes": 0,
+        "decode_attempts": 0,
+        "decode_successes": 0,
+        "object_opens": 0,
+        "payload_input_bytes": 0,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 0,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 0.0066315000876784325,
+      "bindings": 3,
+      "budget_bytes": 541,
+      "case_id": "e0-n3-accepted",
+      "epoch": 0,
+      "error": null,
+      "expected": "accepted",
+      "instrumented_call_cpu_s": 0.015625,
+      "instrumented_call_wall_s": 0.001811400055885315,
+      "keys": [
+        "doc:0",
+        "doc:1",
+        "doc:2"
+      ],
+      "outcome_gate_pass": true,
+      "primary": true,
+      "result": {
+        "admitted_source_bytes": 541,
+        "consistency": "View verified at request entry; each selected original record reverified per occurrence",
+        "max_keys": 32,
+        "max_source_bytes": 541,
+        "results": [
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:0",
+                "locator": {
+                  "length": 164,
+                  "offset": 0,
+                  "path": "step-0.jsonl",
+                  "sha256": "482fa0dfcfeeb0f8e65704641a7259e082632c4d47b56b370b9b4192971c38bc",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:1"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 00, record 0"
+              }
+            ],
+            "source_key": "doc:0"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:1",
+                "locator": {
+                  "length": 164,
+                  "offset": 0,
+                  "path": "step-1.jsonl",
+                  "sha256": "22c4a866a4ba00a4faca2b4eaa2d3b1ac7ff324f0b4ab9c44838b024db07b9a9",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:2"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 00, record 1"
+              }
+            ],
+            "source_key": "doc:1"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:2",
+                "locator": {
+                  "length": 213,
+                  "offset": 0,
+                  "path": "step-2.jsonl",
+                  "sha256": "ef1600fb70b28d7ef9d196a5233e6ccd1470604fcc59df08716e1301c999d2a5",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVVALUE assay-00 revision-00 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 00, record 2"
+              }
+            ],
+            "source_key": "doc:2"
+          }
+        ],
+        "scope": "explicit-known-source-batch",
+        "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec",
+        "wall_s": 0.0017842999659478664
+      },
+      "traffic": {
+        "CAS_decoded_output_bytes": 169520,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 6681,
+        "compressed_decode_output_bytes": 169520,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 6429,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 6.00004568696022e-07,
+      "bindings": 0,
+      "budget_bytes": 540,
+      "case_id": "e0-n3-budget-rejected",
+      "epoch": 0,
+      "error": "Batch source-byte budget exceeded",
+      "expected": "budget-rejected",
+      "instrumented_call_cpu_s": 0.0,
+      "instrumented_call_wall_s": 0.0010396998841315508,
+      "keys": [
+        "doc:0",
+        "doc:1",
+        "doc:2"
+      ],
+      "outcome_gate_pass": true,
+      "primary": true,
+      "result": null,
+      "traffic": {
+        "CAS_decoded_output_bytes": 0,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 0,
+        "compressed_decode_output_bytes": 0,
+        "decode_attempts": 0,
+        "decode_successes": 0,
+        "object_opens": 0,
+        "payload_input_bytes": 0,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 0,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 0.011348299914970994,
+      "bindings": 32,
+      "budget_bytes": 5776,
+      "case_id": "e0-n32-accepted",
+      "epoch": 0,
+      "error": null,
+      "expected": "accepted",
+      "instrumented_call_cpu_s": 0.015625,
+      "instrumented_call_wall_s": 0.00843179994262755,
+      "keys": [
+        "doc:0",
+        "doc:1",
+        "doc:2",
+        "doc:3",
+        "doc:4",
+        "doc:5",
+        "doc:6",
+        "doc:7",
+        "doc:8",
+        "doc:9",
+        "doc:10",
+        "doc:11",
+        "doc:12",
+        "doc:13",
+        "doc:14",
+        "doc:15",
+        "doc:16",
+        "doc:17",
+        "doc:18",
+        "doc:19",
+        "doc:20",
+        "doc:21",
+        "doc:22",
+        "doc:23",
+        "doc:24",
+        "doc:25",
+        "doc:26",
+        "doc:27",
+        "doc:28",
+        "doc:29",
+        "doc:30",
+        "doc:31"
+      ],
+      "outcome_gate_pass": true,
+      "primary": true,
+      "result": {
+        "admitted_source_bytes": 5776,
+        "consistency": "View verified at request entry; each selected original record reverified per occurrence",
+        "max_keys": 32,
+        "max_source_bytes": 5776,
+        "results": [
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:0",
+                "locator": {
+                  "length": 164,
+                  "offset": 0,
+                  "path": "step-0.jsonl",
+                  "sha256": "482fa0dfcfeeb0f8e65704641a7259e082632c4d47b56b370b9b4192971c38bc",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:1"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 00, record 0"
+              }
+            ],
+            "source_key": "doc:0"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:1",
+                "locator": {
+                  "length": 164,
+                  "offset": 0,
+                  "path": "step-1.jsonl",
+                  "sha256": "22c4a866a4ba00a4faca2b4eaa2d3b1ac7ff324f0b4ab9c44838b024db07b9a9",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:2"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 00, record 1"
+              }
+            ],
+            "source_key": "doc:1"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:2",
+                "locator": {
+                  "length": 213,
+                  "offset": 0,
+                  "path": "step-2.jsonl",
+                  "sha256": "ef1600fb70b28d7ef9d196a5233e6ccd1470604fcc59df08716e1301c999d2a5",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVVALUE assay-00 revision-00 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 00, record 2"
+              }
+            ],
+            "source_key": "doc:2"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:3",
+                "locator": {
+                  "length": 164,
+                  "offset": 164,
+                  "path": "step-0.jsonl",
+                  "sha256": "08f53cea1554ca3f7d942f17e767df67fb23b2d8eda19f3ab3f05eca5cc7e454",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:4"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 01, record 0"
+              }
+            ],
+            "source_key": "doc:3"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:4",
+                "locator": {
+                  "length": 164,
+                  "offset": 164,
+                  "path": "step-1.jsonl",
+                  "sha256": "ea41c0f0a4d045f048ac9c6e05284e6634347054b6bc1986bc147ffa80a81b48",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:5"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 01, record 1"
+              }
+            ],
+            "source_key": "doc:4"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:5",
+                "locator": {
+                  "length": 213,
+                  "offset": 213,
+                  "path": "step-2.jsonl",
+                  "sha256": "86493eaa8905618e7a1039778f4a19d8d93de6f45c84aeda32088bfc8b656aea",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVVALUE assay-01 revision-00 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 01, record 2"
+              }
+            ],
+            "source_key": "doc:5"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:6",
+                "locator": {
+                  "length": 164,
+                  "offset": 328,
+                  "path": "step-0.jsonl",
+                  "sha256": "ff8aec142b013521ed692957257a4a29f6fc7368a07142d128a714c362d39cdc",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:7"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 02, record 0"
+              }
+            ],
+            "source_key": "doc:6"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:7",
+                "locator": {
+                  "length": 164,
+                  "offset": 328,
+                  "path": "step-1.jsonl",
+                  "sha256": "42c97d95b5419848070b8cb3e7c129d137b2fb903c2c9f8d35a7a42e78017e04",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:8"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 02, record 1"
+              }
+            ],
+            "source_key": "doc:7"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:8",
+                "locator": {
+                  "length": 213,
+                  "offset": 426,
+                  "path": "step-2.jsonl",
+                  "sha256": "0aaaf9bc402457d7fdf6b52dc1ada625e0fbbd9697dcbe375f61d6f233d970e7",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVVALUE assay-02 revision-00 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 02, record 2"
+              }
+            ],
+            "source_key": "doc:8"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:9",
+                "locator": {
+                  "length": 165,
+                  "offset": 492,
+                  "path": "step-0.jsonl",
+                  "sha256": "253781fad0d65f71ce0b69d19063a94fb348d5fa1c0b92dc398a44d38bb4761c",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:10"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 03, record 0"
+              }
+            ],
+            "source_key": "doc:9"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:10",
+                "locator": {
+                  "length": 166,
+                  "offset": 492,
+                  "path": "step-1.jsonl",
+                  "sha256": "ac7f21794add6ed63fc121b88dabe7ae5ea7909147609a3838f8adb5b686f99c",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:11"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 03, record 1"
+              }
+            ],
+            "source_key": "doc:10"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:11",
+                "locator": {
+                  "length": 214,
+                  "offset": 639,
+                  "path": "step-2.jsonl",
+                  "sha256": "3b7ba1afd057720c56f25838946416cc4153c4c29d6be40693e56996a50763b8",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVVALUE assay-03 revision-00 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 03, record 2"
+              }
+            ],
+            "source_key": "doc:11"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:12",
+                "locator": {
+                  "length": 166,
+                  "offset": 657,
+                  "path": "step-0.jsonl",
+                  "sha256": "5b69e0d122c6865f2f96a3803032774b3320a14c64c8435c4ae8a7504e3277bd",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:13"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 04, record 0"
+              }
+            ],
+            "source_key": "doc:12"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:13",
+                "locator": {
+                  "length": 166,
+                  "offset": 658,
+                  "path": "step-1.jsonl",
+                  "sha256": "5b6fad2ccc2b08e730818ffdf88193752b497e648bfbff77362ccaf9627058d1",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:14"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 04, record 1"
+              }
+            ],
+            "source_key": "doc:13"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:14",
+                "locator": {
+                  "length": 214,
+                  "offset": 853,
+                  "path": "step-2.jsonl",
+                  "sha256": "12f34aa5968fa2546952f5aa9e621586347afb8a92edbb2438ffa8fdf49fd30a",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVVALUE assay-04 revision-00 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 04, record 2"
+              }
+            ],
+            "source_key": "doc:14"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:15",
+                "locator": {
+                  "length": 166,
+                  "offset": 823,
+                  "path": "step-0.jsonl",
+                  "sha256": "4cc5baa84dfed0d0f4fc4bff05f340eed5ae86c52220c3d554dbc3bcc1c421e1",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:16"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 05, record 0"
+              }
+            ],
+            "source_key": "doc:15"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:16",
+                "locator": {
+                  "length": 166,
+                  "offset": 824,
+                  "path": "step-1.jsonl",
+                  "sha256": "2fb13ae135d812b4115f800750cf6e3ddb8baa9005c9b8a97ab6ba38db1802c3",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:17"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 05, record 1"
+              }
+            ],
+            "source_key": "doc:16"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:17",
+                "locator": {
+                  "length": 214,
+                  "offset": 1067,
+                  "path": "step-2.jsonl",
+                  "sha256": "92a5ecba4f849099af9f2fb1931c791cb2cf45038202e4c4971ea4477e305c3a",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVVALUE assay-05 revision-00 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 05, record 2"
+              }
+            ],
+            "source_key": "doc:17"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:18",
+                "locator": {
+                  "length": 166,
+                  "offset": 989,
+                  "path": "step-0.jsonl",
+                  "sha256": "287c457de00628095ee22713ca2be4ac86cac60e3bf1aea58b1ad54cda6f9ae9",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:19"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 06, record 0"
+              }
+            ],
+            "source_key": "doc:18"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:19",
+                "locator": {
+                  "length": 166,
+                  "offset": 990,
+                  "path": "step-1.jsonl",
+                  "sha256": "a55bf25827da580beafd903e2f639d717e4e724e8eb90c36de869c3167097e59",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:20"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 06, record 1"
+              }
+            ],
+            "source_key": "doc:19"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:20",
+                "locator": {
+                  "length": 214,
+                  "offset": 1281,
+                  "path": "step-2.jsonl",
+                  "sha256": "daf7f57509be927d4ac89a8ef0d0164a3383e08027abe8de480b9bef16d98f10",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVVALUE assay-06 revision-00 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 06, record 2"
+              }
+            ],
+            "source_key": "doc:20"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:21",
+                "locator": {
+                  "length": 166,
+                  "offset": 1155,
+                  "path": "step-0.jsonl",
+                  "sha256": "55443868bea0789a0cffc9290f1b82b0b2cb345466ecdc22789653f252fdc9e8",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:22"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 07, record 0"
+              }
+            ],
+            "source_key": "doc:21"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:22",
+                "locator": {
+                  "length": 166,
+                  "offset": 1156,
+                  "path": "step-1.jsonl",
+                  "sha256": "e5b363a132a9df1989962b830ae5792d0ef067e770248a37d5197dccbcb37157",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:23"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 07, record 1"
+              }
+            ],
+            "source_key": "doc:22"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:23",
+                "locator": {
+                  "length": 214,
+                  "offset": 1495,
+                  "path": "step-2.jsonl",
+                  "sha256": "bac4fc585dab24e979c26de5df8d7cef5934753f7a3ff424ab910d6a5d42c285",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVVALUE assay-07 revision-00 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 07, record 2"
+              }
+            ],
+            "source_key": "doc:23"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:24",
+                "locator": {
+                  "length": 166,
+                  "offset": 1321,
+                  "path": "step-0.jsonl",
+                  "sha256": "704ddc13608e6b8177d76273fc90a11ca4a8e180bc0079e3f15f50c778b8d96f",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:25"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 08, record 0"
+              }
+            ],
+            "source_key": "doc:24"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:25",
+                "locator": {
+                  "length": 166,
+                  "offset": 1322,
+                  "path": "step-1.jsonl",
+                  "sha256": "d4a7401856530234dd597317d725cdcd0419ed6392b56f83b69dc6f398cc25e7",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:26"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 08, record 1"
+              }
+            ],
+            "source_key": "doc:25"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:26",
+                "locator": {
+                  "length": 214,
+                  "offset": 1709,
+                  "path": "step-2.jsonl",
+                  "sha256": "22f618a4a161751e9d5f6c926a7df36614f057368df9a47fd436dfb05d6a2621",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVVALUE assay-08 revision-00 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 08, record 2"
+              }
+            ],
+            "source_key": "doc:26"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:27",
+                "locator": {
+                  "length": 166,
+                  "offset": 1487,
+                  "path": "step-0.jsonl",
+                  "sha256": "88706f34269285e2367a6ac1c2bdcd8b8043d9d49b4d1697317838ab41cb8049",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:28"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 09, record 0"
+              }
+            ],
+            "source_key": "doc:27"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:28",
+                "locator": {
+                  "length": 166,
+                  "offset": 1488,
+                  "path": "step-1.jsonl",
+                  "sha256": "260a423f9f80227463bc1a63055ab0f1a63de75bd8269d5df5dce5c9e47cc178",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:29"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 09, record 1"
+              }
+            ],
+            "source_key": "doc:28"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:29",
+                "locator": {
+                  "length": 214,
+                  "offset": 1923,
+                  "path": "step-2.jsonl",
+                  "sha256": "b50389876e225832942f668d339d150dd1c76242725f34da368f37c98d18f71a",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVVALUE assay-09 revision-00 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 09, record 2"
+              }
+            ],
+            "source_key": "doc:29"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:30",
+                "locator": {
+                  "length": 166,
+                  "offset": 1653,
+                  "path": "step-0.jsonl",
+                  "sha256": "3ea1ae96d2dce196ca4b0156b3674b32320bd9264aeccfc947e3ee14269cdf34",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:31"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 10, record 0"
+              }
+            ],
+            "source_key": "doc:30"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:31",
+                "locator": {
+                  "length": 166,
+                  "offset": 1654,
+                  "path": "step-1.jsonl",
+                  "sha256": "492f03aa91b32eafd900228841cbad7003f3492163c092bdd11a9852c14d898f",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:32"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 10, record 1"
+              }
+            ],
+            "source_key": "doc:31"
+          }
+        ],
+        "scope": "explicit-known-source-batch",
+        "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec",
+        "wall_s": 0.008397400146350265
+      },
+      "traffic": {
+        "CAS_decoded_output_bytes": 1807187,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 71222,
+        "compressed_decode_output_bytes": 1807187,
+        "decode_attempts": 32,
+        "decode_successes": 32,
+        "object_opens": 32,
+        "payload_input_bytes": 68534,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 64,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 6.998889148235321e-07,
+      "bindings": 0,
+      "budget_bytes": 5775,
+      "case_id": "e0-n32-budget-rejected",
+      "epoch": 0,
+      "error": "Batch source-byte budget exceeded",
+      "expected": "budget-rejected",
+      "instrumented_call_cpu_s": 0.0,
+      "instrumented_call_wall_s": 0.001588399987667799,
+      "keys": [
+        "doc:0",
+        "doc:1",
+        "doc:2",
+        "doc:3",
+        "doc:4",
+        "doc:5",
+        "doc:6",
+        "doc:7",
+        "doc:8",
+        "doc:9",
+        "doc:10",
+        "doc:11",
+        "doc:12",
+        "doc:13",
+        "doc:14",
+        "doc:15",
+        "doc:16",
+        "doc:17",
+        "doc:18",
+        "doc:19",
+        "doc:20",
+        "doc:21",
+        "doc:22",
+        "doc:23",
+        "doc:24",
+        "doc:25",
+        "doc:26",
+        "doc:27",
+        "doc:28",
+        "doc:29",
+        "doc:30",
+        "doc:31"
+      ],
+      "outcome_gate_pass": true,
+      "primary": true,
+      "result": null,
+      "traffic": {
+        "CAS_decoded_output_bytes": 0,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 0,
+        "compressed_decode_output_bytes": 0,
+        "decode_attempts": 0,
+        "decode_successes": 0,
+        "object_opens": 0,
+        "payload_input_bytes": 0,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 0,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      }
+    },
+    {
+      "audit_cpu_s": 0.015625,
+      "audit_wall_s": 0.0066455998457968235,
+      "bindings": 1,
+      "budget_bytes": 164,
+      "case_id": "e1-n1-accepted",
+      "epoch": 1,
+      "error": null,
+      "expected": "accepted",
+      "instrumented_call_cpu_s": 0.0,
+      "instrumented_call_wall_s": 0.005354400025680661,
+      "keys": [
+        "doc:0"
+      ],
+      "outcome_gate_pass": true,
+      "primary": true,
+      "result": {
+        "admitted_source_bytes": 164,
+        "consistency": "View verified at request entry; each selected original record reverified per occurrence",
+        "max_keys": 32,
+        "max_source_bytes": 164,
+        "results": [
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:0",
+                "locator": {
+                  "length": 164,
+                  "offset": 0,
+                  "path": "step-0.jsonl",
+                  "sha256": "482fa0dfcfeeb0f8e65704641a7259e082632c4d47b56b370b9b4192971c38bc",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:1"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 00, record 0"
+              }
+            ],
+            "source_key": "doc:0"
+          }
+        ],
+        "scope": "explicit-known-source-batch",
+        "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6",
+        "wall_s": 0.005325099918991327
+      },
+      "traffic": {
+        "CAS_decoded_output_bytes": 746425,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 29548,
+        "compressed_decode_output_bytes": 746425,
+        "decode_attempts": 13,
+        "decode_successes": 13,
+        "object_opens": 13,
+        "payload_input_bytes": 28456,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 26,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 6.00004568696022e-07,
+      "bindings": 0,
+      "budget_bytes": 163,
+      "case_id": "e1-n1-budget-rejected",
+      "epoch": 1,
+      "error": "Batch source-byte budget exceeded",
+      "expected": "budget-rejected",
+      "instrumented_call_cpu_s": 0.0,
+      "instrumented_call_wall_s": 0.005036999937146902,
+      "keys": [
+        "doc:0"
+      ],
+      "outcome_gate_pass": true,
+      "primary": true,
+      "result": null,
+      "traffic": {
+        "CAS_decoded_output_bytes": 690432,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 27342,
+        "compressed_decode_output_bytes": 690432,
+        "decode_attempts": 12,
+        "decode_successes": 12,
+        "object_opens": 12,
+        "payload_input_bytes": 26334,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 24,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      }
+    },
+    {
+      "audit_cpu_s": 0.015625,
+      "audit_wall_s": 0.007060899864882231,
+      "bindings": 3,
+      "budget_bytes": 542,
+      "case_id": "e1-n3-accepted",
+      "epoch": 1,
+      "error": null,
+      "expected": "accepted",
+      "instrumented_call_cpu_s": 0.0,
+      "instrumented_call_wall_s": 0.005798199912533164,
+      "keys": [
+        "doc:0",
+        "doc:1",
+        "doc:2"
+      ],
+      "outcome_gate_pass": true,
+      "primary": true,
+      "result": {
+        "admitted_source_bytes": 542,
+        "consistency": "View verified at request entry; each selected original record reverified per occurrence",
+        "max_keys": 32,
+        "max_source_bytes": 542,
+        "results": [
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:0",
+                "locator": {
+                  "length": 164,
+                  "offset": 0,
+                  "path": "step-0.jsonl",
+                  "sha256": "482fa0dfcfeeb0f8e65704641a7259e082632c4d47b56b370b9b4192971c38bc",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:1"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 00, record 0"
+              }
+            ],
+            "source_key": "doc:0"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:1",
+                "locator": {
+                  "length": 164,
+                  "offset": 0,
+                  "path": "step-1.jsonl",
+                  "sha256": "22c4a866a4ba00a4faca2b4eaa2d3b1ac7ff324f0b4ab9c44838b024db07b9a9",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:2"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 00, record 1"
+              }
+            ],
+            "source_key": "doc:1"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:2",
+                "locator": {
+                  "length": 214,
+                  "offset": 0,
+                  "path": "step-2.jsonl",
+                  "sha256": "eb7d8b96f9fd0bdd58ca4f1579eb07c7b9fe7b9373b6156d2b56974abaecc83b",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding x",
+                  "RKVVALUE assay-00 revision-01 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 00, record 2"
+              }
+            ],
+            "source_key": "doc:2"
+          }
+        ],
+        "scope": "explicit-known-source-batch",
+        "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6",
+        "wall_s": 0.005766700021922588
+      },
+      "traffic": {
+        "CAS_decoded_output_bytes": 859958,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 34042,
+        "compressed_decode_output_bytes": 859958,
+        "decode_attempts": 15,
+        "decode_successes": 15,
+        "object_opens": 15,
+        "payload_input_bytes": 32782,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 30,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 4.998873919248581e-07,
+      "bindings": 0,
+      "budget_bytes": 541,
+      "case_id": "e1-n3-budget-rejected",
+      "epoch": 1,
+      "error": "Batch source-byte budget exceeded",
+      "expected": "budget-rejected",
+      "instrumented_call_cpu_s": 0.0,
+      "instrumented_call_wall_s": 0.00512490002438426,
+      "keys": [
+        "doc:0",
+        "doc:1",
+        "doc:2"
+      ],
+      "outcome_gate_pass": true,
+      "primary": true,
+      "result": null,
+      "traffic": {
+        "CAS_decoded_output_bytes": 690432,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 27342,
+        "compressed_decode_output_bytes": 690432,
+        "decode_attempts": 12,
+        "decode_successes": 12,
+        "object_opens": 12,
+        "payload_input_bytes": 26334,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 24,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      }
+    },
+    {
+      "audit_cpu_s": 0.015625,
+      "audit_wall_s": 0.011232299963012338,
+      "bindings": 32,
+      "budget_bytes": 5782,
+      "case_id": "e1-n32-accepted",
+      "epoch": 1,
+      "error": null,
+      "expected": "accepted",
+      "instrumented_call_cpu_s": 0.015625,
+      "instrumented_call_wall_s": 0.013124600052833557,
+      "keys": [
+        "doc:0",
+        "doc:1",
+        "doc:2",
+        "doc:3",
+        "doc:4",
+        "doc:5",
+        "doc:6",
+        "doc:7",
+        "doc:8",
+        "doc:9",
+        "doc:10",
+        "doc:11",
+        "doc:12",
+        "doc:13",
+        "doc:14",
+        "doc:15",
+        "doc:16",
+        "doc:17",
+        "doc:18",
+        "doc:19",
+        "doc:20",
+        "doc:21",
+        "doc:22",
+        "doc:23",
+        "doc:24",
+        "doc:25",
+        "doc:26",
+        "doc:27",
+        "doc:28",
+        "doc:29",
+        "doc:30",
+        "doc:31"
+      ],
+      "outcome_gate_pass": true,
+      "primary": true,
+      "result": {
+        "admitted_source_bytes": 5782,
+        "consistency": "View verified at request entry; each selected original record reverified per occurrence",
+        "max_keys": 32,
+        "max_source_bytes": 5782,
+        "results": [
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:0",
+                "locator": {
+                  "length": 164,
+                  "offset": 0,
+                  "path": "step-0.jsonl",
+                  "sha256": "482fa0dfcfeeb0f8e65704641a7259e082632c4d47b56b370b9b4192971c38bc",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:1"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 00, record 0"
+              }
+            ],
+            "source_key": "doc:0"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:1",
+                "locator": {
+                  "length": 164,
+                  "offset": 0,
+                  "path": "step-1.jsonl",
+                  "sha256": "22c4a866a4ba00a4faca2b4eaa2d3b1ac7ff324f0b4ab9c44838b024db07b9a9",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:2"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 00, record 1"
+              }
+            ],
+            "source_key": "doc:1"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:2",
+                "locator": {
+                  "length": 214,
+                  "offset": 0,
+                  "path": "step-2.jsonl",
+                  "sha256": "eb7d8b96f9fd0bdd58ca4f1579eb07c7b9fe7b9373b6156d2b56974abaecc83b",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding x",
+                  "RKVVALUE assay-00 revision-01 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 00, record 2"
+              }
+            ],
+            "source_key": "doc:2"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:3",
+                "locator": {
+                  "length": 164,
+                  "offset": 164,
+                  "path": "step-0.jsonl",
+                  "sha256": "08f53cea1554ca3f7d942f17e767df67fb23b2d8eda19f3ab3f05eca5cc7e454",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:4"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 01, record 0"
+              }
+            ],
+            "source_key": "doc:3"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:4",
+                "locator": {
+                  "length": 164,
+                  "offset": 164,
+                  "path": "step-1.jsonl",
+                  "sha256": "ea41c0f0a4d045f048ac9c6e05284e6634347054b6bc1986bc147ffa80a81b48",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:5"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 01, record 1"
+              }
+            ],
+            "source_key": "doc:4"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:5",
+                "locator": {
+                  "length": 214,
+                  "offset": 214,
+                  "path": "step-2.jsonl",
+                  "sha256": "51496bce72259900568f897c7efc953d022efc16f45d8740bb11634d57a6d8f6",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding x",
+                  "RKVVALUE assay-01 revision-01 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 01, record 2"
+              }
+            ],
+            "source_key": "doc:5"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:6",
+                "locator": {
+                  "length": 164,
+                  "offset": 328,
+                  "path": "step-0.jsonl",
+                  "sha256": "ff8aec142b013521ed692957257a4a29f6fc7368a07142d128a714c362d39cdc",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:7"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 02, record 0"
+              }
+            ],
+            "source_key": "doc:6"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:7",
+                "locator": {
+                  "length": 164,
+                  "offset": 328,
+                  "path": "step-1.jsonl",
+                  "sha256": "42c97d95b5419848070b8cb3e7c129d137b2fb903c2c9f8d35a7a42e78017e04",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:8"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 02, record 1"
+              }
+            ],
+            "source_key": "doc:7"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:8",
+                "locator": {
+                  "length": 214,
+                  "offset": 428,
+                  "path": "step-2.jsonl",
+                  "sha256": "028073cfef959349c2ef8328bfa90067282456940267764f571c5cfa4fa02ef4",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding x",
+                  "RKVVALUE assay-02 revision-01 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 02, record 2"
+              }
+            ],
+            "source_key": "doc:8"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:9",
+                "locator": {
+                  "length": 165,
+                  "offset": 492,
+                  "path": "step-0.jsonl",
+                  "sha256": "253781fad0d65f71ce0b69d19063a94fb348d5fa1c0b92dc398a44d38bb4761c",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:10"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 03, record 0"
+              }
+            ],
+            "source_key": "doc:9"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:10",
+                "locator": {
+                  "length": 166,
+                  "offset": 492,
+                  "path": "step-1.jsonl",
+                  "sha256": "ac7f21794add6ed63fc121b88dabe7ae5ea7909147609a3838f8adb5b686f99c",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:11"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 03, record 1"
+              }
+            ],
+            "source_key": "doc:10"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:11",
+                "locator": {
+                  "length": 215,
+                  "offset": 642,
+                  "path": "step-2.jsonl",
+                  "sha256": "2e85c2aee7c945fb7aafb55947049cc48327b8e36a3c83d1633ac84411f89c01",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding x",
+                  "RKVVALUE assay-03 revision-01 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 03, record 2"
+              }
+            ],
+            "source_key": "doc:11"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:12",
+                "locator": {
+                  "length": 166,
+                  "offset": 657,
+                  "path": "step-0.jsonl",
+                  "sha256": "5b69e0d122c6865f2f96a3803032774b3320a14c64c8435c4ae8a7504e3277bd",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:13"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 04, record 0"
+              }
+            ],
+            "source_key": "doc:12"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:13",
+                "locator": {
+                  "length": 166,
+                  "offset": 658,
+                  "path": "step-1.jsonl",
+                  "sha256": "5b6fad2ccc2b08e730818ffdf88193752b497e648bfbff77362ccaf9627058d1",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:14"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 04, record 1"
+              }
+            ],
+            "source_key": "doc:13"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:14",
+                "locator": {
+                  "length": 215,
+                  "offset": 857,
+                  "path": "step-2.jsonl",
+                  "sha256": "75c93cd88cc7c6db4e3eade9500f41fe96b191c98f41f637c4ad1c3995d52305",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding x",
+                  "RKVVALUE assay-04 revision-01 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 04, record 2"
+              }
+            ],
+            "source_key": "doc:14"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:15",
+                "locator": {
+                  "length": 166,
+                  "offset": 823,
+                  "path": "step-0.jsonl",
+                  "sha256": "4cc5baa84dfed0d0f4fc4bff05f340eed5ae86c52220c3d554dbc3bcc1c421e1",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:16"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 05, record 0"
+              }
+            ],
+            "source_key": "doc:15"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:16",
+                "locator": {
+                  "length": 166,
+                  "offset": 824,
+                  "path": "step-1.jsonl",
+                  "sha256": "2fb13ae135d812b4115f800750cf6e3ddb8baa9005c9b8a97ab6ba38db1802c3",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:17"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 05, record 1"
+              }
+            ],
+            "source_key": "doc:16"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:17",
+                "locator": {
+                  "length": 215,
+                  "offset": 1072,
+                  "path": "step-2.jsonl",
+                  "sha256": "4f5ed11ba6c8b3b52d7ae76aa37adf2c072633dd64cc1d7eaf8264a8216936a7",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding x",
+                  "RKVVALUE assay-05 revision-01 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 05, record 2"
+              }
+            ],
+            "source_key": "doc:17"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:18",
+                "locator": {
+                  "length": 166,
+                  "offset": 989,
+                  "path": "step-0.jsonl",
+                  "sha256": "287c457de00628095ee22713ca2be4ac86cac60e3bf1aea58b1ad54cda6f9ae9",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:19"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 06, record 0"
+              }
+            ],
+            "source_key": "doc:18"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:19",
+                "locator": {
+                  "length": 166,
+                  "offset": 990,
+                  "path": "step-1.jsonl",
+                  "sha256": "a55bf25827da580beafd903e2f639d717e4e724e8eb90c36de869c3167097e59",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:20"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 06, record 1"
+              }
+            ],
+            "source_key": "doc:19"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:20",
+                "locator": {
+                  "length": 214,
+                  "offset": 1287,
+                  "path": "step-2.jsonl",
+                  "sha256": "daf7f57509be927d4ac89a8ef0d0164a3383e08027abe8de480b9bef16d98f10",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVVALUE assay-06 revision-00 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 06, record 2"
+              }
+            ],
+            "source_key": "doc:20"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:21",
+                "locator": {
+                  "length": 166,
+                  "offset": 1155,
+                  "path": "step-0.jsonl",
+                  "sha256": "55443868bea0789a0cffc9290f1b82b0b2cb345466ecdc22789653f252fdc9e8",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:22"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 07, record 0"
+              }
+            ],
+            "source_key": "doc:21"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:22",
+                "locator": {
+                  "length": 166,
+                  "offset": 1156,
+                  "path": "step-1.jsonl",
+                  "sha256": "e5b363a132a9df1989962b830ae5792d0ef067e770248a37d5197dccbcb37157",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:23"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 07, record 1"
+              }
+            ],
+            "source_key": "doc:22"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:23",
+                "locator": {
+                  "length": 214,
+                  "offset": 1501,
+                  "path": "step-2.jsonl",
+                  "sha256": "bac4fc585dab24e979c26de5df8d7cef5934753f7a3ff424ab910d6a5d42c285",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVVALUE assay-07 revision-00 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 07, record 2"
+              }
+            ],
+            "source_key": "doc:23"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:24",
+                "locator": {
+                  "length": 166,
+                  "offset": 1321,
+                  "path": "step-0.jsonl",
+                  "sha256": "704ddc13608e6b8177d76273fc90a11ca4a8e180bc0079e3f15f50c778b8d96f",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:25"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 08, record 0"
+              }
+            ],
+            "source_key": "doc:24"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:25",
+                "locator": {
+                  "length": 166,
+                  "offset": 1322,
+                  "path": "step-1.jsonl",
+                  "sha256": "d4a7401856530234dd597317d725cdcd0419ed6392b56f83b69dc6f398cc25e7",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:26"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 08, record 1"
+              }
+            ],
+            "source_key": "doc:25"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:26",
+                "locator": {
+                  "length": 214,
+                  "offset": 1715,
+                  "path": "step-2.jsonl",
+                  "sha256": "22f618a4a161751e9d5f6c926a7df36614f057368df9a47fd436dfb05d6a2621",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVVALUE assay-08 revision-00 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 08, record 2"
+              }
+            ],
+            "source_key": "doc:26"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:27",
+                "locator": {
+                  "length": 166,
+                  "offset": 1487,
+                  "path": "step-0.jsonl",
+                  "sha256": "88706f34269285e2367a6ac1c2bdcd8b8043d9d49b4d1697317838ab41cb8049",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:28"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 09, record 0"
+              }
+            ],
+            "source_key": "doc:27"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:28",
+                "locator": {
+                  "length": 166,
+                  "offset": 1488,
+                  "path": "step-1.jsonl",
+                  "sha256": "260a423f9f80227463bc1a63055ab0f1a63de75bd8269d5df5dce5c9e47cc178",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:29"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 09, record 1"
+              }
+            ],
+            "source_key": "doc:28"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:29",
+                "locator": {
+                  "length": 214,
+                  "offset": 1929,
+                  "path": "step-2.jsonl",
+                  "sha256": "b50389876e225832942f668d339d150dd1c76242725f34da368f37c98d18f71a",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVVALUE assay-09 revision-00 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 09, record 2"
+              }
+            ],
+            "source_key": "doc:29"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:30",
+                "locator": {
+                  "length": 166,
+                  "offset": 1653,
+                  "path": "step-0.jsonl",
+                  "sha256": "3ea1ae96d2dce196ca4b0156b3674b32320bd9264aeccfc947e3ee14269cdf34",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:31"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 10, record 0"
+              }
+            ],
+            "source_key": "doc:30"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:31",
+                "locator": {
+                  "length": 166,
+                  "offset": 1654,
+                  "path": "step-1.jsonl",
+                  "sha256": "492f03aa91b32eafd900228841cbad7003f3492163c092bdd11a9852c14d898f",
+                  "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:32"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 10, record 1"
+              }
+            ],
+            "source_key": "doc:31"
+          }
+        ],
+        "scope": "explicit-known-source-batch",
+        "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6",
+        "wall_s": 0.013089000014588237
+      },
+      "traffic": {
+        "CAS_decoded_output_bytes": 2497679,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 98754,
+        "compressed_decode_output_bytes": 2497679,
+        "decode_attempts": 44,
+        "decode_successes": 44,
+        "object_opens": 44,
+        "payload_input_bytes": 95058,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 88,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 6.00004568696022e-07,
+      "bindings": 0,
+      "budget_bytes": 5781,
+      "case_id": "e1-n32-budget-rejected",
+      "epoch": 1,
+      "error": "Batch source-byte budget exceeded",
+      "expected": "budget-rejected",
+      "instrumented_call_cpu_s": 0.0,
+      "instrumented_call_wall_s": 0.005836899857968092,
+      "keys": [
+        "doc:0",
+        "doc:1",
+        "doc:2",
+        "doc:3",
+        "doc:4",
+        "doc:5",
+        "doc:6",
+        "doc:7",
+        "doc:8",
+        "doc:9",
+        "doc:10",
+        "doc:11",
+        "doc:12",
+        "doc:13",
+        "doc:14",
+        "doc:15",
+        "doc:16",
+        "doc:17",
+        "doc:18",
+        "doc:19",
+        "doc:20",
+        "doc:21",
+        "doc:22",
+        "doc:23",
+        "doc:24",
+        "doc:25",
+        "doc:26",
+        "doc:27",
+        "doc:28",
+        "doc:29",
+        "doc:30",
+        "doc:31"
+      ],
+      "outcome_gate_pass": true,
+      "primary": true,
+      "result": null,
+      "traffic": {
+        "CAS_decoded_output_bytes": 690432,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 27342,
+        "compressed_decode_output_bytes": 690432,
+        "decode_attempts": 12,
+        "decode_successes": 12,
+        "object_opens": 12,
+        "payload_input_bytes": 26334,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 24,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      }
+    },
+    {
+      "audit_cpu_s": 0.015625,
+      "audit_wall_s": 0.00665390002541244,
+      "bindings": 1,
+      "budget_bytes": 164,
+      "case_id": "e2-n1-accepted",
+      "epoch": 2,
+      "error": null,
+      "expected": "accepted",
+      "instrumented_call_cpu_s": 0.0,
+      "instrumented_call_wall_s": 0.008064000168815255,
+      "keys": [
+        "doc:0"
+      ],
+      "outcome_gate_pass": true,
+      "primary": true,
+      "result": {
+        "admitted_source_bytes": 164,
+        "consistency": "View verified at request entry; each selected original record reverified per occurrence",
+        "max_keys": 32,
+        "max_source_bytes": 164,
+        "results": [
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:0",
+                "locator": {
+                  "length": 164,
+                  "offset": 0,
+                  "path": "step-0.jsonl",
+                  "sha256": "482fa0dfcfeeb0f8e65704641a7259e082632c4d47b56b370b9b4192971c38bc",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:1"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 00, record 0"
+              }
+            ],
+            "source_key": "doc:0"
+          }
+        ],
+        "scope": "explicit-known-source-batch",
+        "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b",
+        "wall_s": 0.008033499820157886
+      },
+      "traffic": {
+        "CAS_decoded_output_bytes": 1437001,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 57034,
+        "compressed_decode_output_bytes": 1437001,
+        "decode_attempts": 25,
+        "decode_successes": 25,
+        "object_opens": 25,
+        "payload_input_bytes": 54934,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 50,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 6.00004568696022e-07,
+      "bindings": 0,
+      "budget_bytes": 163,
+      "case_id": "e2-n1-budget-rejected",
+      "epoch": 2,
+      "error": "Batch source-byte budget exceeded",
+      "expected": "budget-rejected",
+      "instrumented_call_cpu_s": 0.0,
+      "instrumented_call_wall_s": 0.007749200100079179,
+      "keys": [
+        "doc:0"
+      ],
+      "outcome_gate_pass": true,
+      "primary": true,
+      "result": null,
+      "traffic": {
+        "CAS_decoded_output_bytes": 1381008,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 54828,
+        "compressed_decode_output_bytes": 1381008,
+        "decode_attempts": 24,
+        "decode_successes": 24,
+        "object_opens": 24,
+        "payload_input_bytes": 52812,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 48,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      }
+    },
+    {
+      "audit_cpu_s": 0.015625,
+      "audit_wall_s": 0.007221000036224723,
+      "bindings": 3,
+      "budget_bytes": 542,
+      "case_id": "e2-n3-accepted",
+      "epoch": 2,
+      "error": null,
+      "expected": "accepted",
+      "instrumented_call_cpu_s": 0.0,
+      "instrumented_call_wall_s": 0.008407099870964885,
+      "keys": [
+        "doc:0",
+        "doc:1",
+        "doc:2"
+      ],
+      "outcome_gate_pass": true,
+      "primary": true,
+      "result": {
+        "admitted_source_bytes": 542,
+        "consistency": "View verified at request entry; each selected original record reverified per occurrence",
+        "max_keys": 32,
+        "max_source_bytes": 542,
+        "results": [
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:0",
+                "locator": {
+                  "length": 164,
+                  "offset": 0,
+                  "path": "step-0.jsonl",
+                  "sha256": "482fa0dfcfeeb0f8e65704641a7259e082632c4d47b56b370b9b4192971c38bc",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:1"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 00, record 0"
+              }
+            ],
+            "source_key": "doc:0"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:1",
+                "locator": {
+                  "length": 164,
+                  "offset": 0,
+                  "path": "step-1.jsonl",
+                  "sha256": "22c4a866a4ba00a4faca2b4eaa2d3b1ac7ff324f0b4ab9c44838b024db07b9a9",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:2"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 00, record 1"
+              }
+            ],
+            "source_key": "doc:1"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:2",
+                "locator": {
+                  "length": 214,
+                  "offset": 0,
+                  "path": "step-2.jsonl",
+                  "sha256": "eb7d8b96f9fd0bdd58ca4f1579eb07c7b9fe7b9373b6156d2b56974abaecc83b",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding x",
+                  "RKVVALUE assay-00 revision-01 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 00, record 2"
+              }
+            ],
+            "source_key": "doc:2"
+          }
+        ],
+        "scope": "explicit-known-source-batch",
+        "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b",
+        "wall_s": 0.008376199984923005
+      },
+      "traffic": {
+        "CAS_decoded_output_bytes": 1550546,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 61540,
+        "compressed_decode_output_bytes": 1550546,
+        "decode_attempts": 27,
+        "decode_successes": 27,
+        "object_opens": 27,
+        "payload_input_bytes": 59272,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 54,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 6.998889148235321e-07,
+      "bindings": 0,
+      "budget_bytes": 541,
+      "case_id": "e2-n3-budget-rejected",
+      "epoch": 2,
+      "error": "Batch source-byte budget exceeded",
+      "expected": "budget-rejected",
+      "instrumented_call_cpu_s": 0.0,
+      "instrumented_call_wall_s": 0.0077315999660640955,
+      "keys": [
+        "doc:0",
+        "doc:1",
+        "doc:2"
+      ],
+      "outcome_gate_pass": true,
+      "primary": true,
+      "result": null,
+      "traffic": {
+        "CAS_decoded_output_bytes": 1381008,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 54828,
+        "compressed_decode_output_bytes": 1381008,
+        "decode_attempts": 24,
+        "decode_successes": 24,
+        "object_opens": 24,
+        "payload_input_bytes": 52812,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 48,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      }
+    },
+    {
+      "audit_cpu_s": 0.015625,
+      "audit_wall_s": 0.01143960002809763,
+      "bindings": 32,
+      "budget_bytes": 5790,
+      "case_id": "e2-n32-accepted",
+      "epoch": 2,
+      "error": null,
+      "expected": "accepted",
+      "instrumented_call_cpu_s": 0.015625,
+      "instrumented_call_wall_s": 0.013901700032874942,
+      "keys": [
+        "doc:0",
+        "doc:1",
+        "doc:2",
+        "doc:3",
+        "doc:4",
+        "doc:5",
+        "doc:6",
+        "doc:7",
+        "doc:8",
+        "doc:9",
+        "doc:10",
+        "doc:11",
+        "doc:12",
+        "doc:13",
+        "doc:14",
+        "doc:15",
+        "doc:16",
+        "doc:17",
+        "doc:18",
+        "doc:19",
+        "doc:20",
+        "doc:21",
+        "doc:22",
+        "doc:23",
+        "doc:24",
+        "doc:25",
+        "doc:26",
+        "doc:27",
+        "doc:28",
+        "doc:29",
+        "doc:30",
+        "doc:31"
+      ],
+      "outcome_gate_pass": true,
+      "primary": true,
+      "result": {
+        "admitted_source_bytes": 5790,
+        "consistency": "View verified at request entry; each selected original record reverified per occurrence",
+        "max_keys": 32,
+        "max_source_bytes": 5790,
+        "results": [
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:0",
+                "locator": {
+                  "length": 164,
+                  "offset": 0,
+                  "path": "step-0.jsonl",
+                  "sha256": "482fa0dfcfeeb0f8e65704641a7259e082632c4d47b56b370b9b4192971c38bc",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:1"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 00, record 0"
+              }
+            ],
+            "source_key": "doc:0"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:1",
+                "locator": {
+                  "length": 164,
+                  "offset": 0,
+                  "path": "step-1.jsonl",
+                  "sha256": "22c4a866a4ba00a4faca2b4eaa2d3b1ac7ff324f0b4ab9c44838b024db07b9a9",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:2"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 00, record 1"
+              }
+            ],
+            "source_key": "doc:1"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:2",
+                "locator": {
+                  "length": 214,
+                  "offset": 0,
+                  "path": "step-2.jsonl",
+                  "sha256": "eb7d8b96f9fd0bdd58ca4f1579eb07c7b9fe7b9373b6156d2b56974abaecc83b",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding x",
+                  "RKVVALUE assay-00 revision-01 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 00, record 2"
+              }
+            ],
+            "source_key": "doc:2"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:3",
+                "locator": {
+                  "length": 164,
+                  "offset": 164,
+                  "path": "step-0.jsonl",
+                  "sha256": "08f53cea1554ca3f7d942f17e767df67fb23b2d8eda19f3ab3f05eca5cc7e454",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:4"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 01, record 0"
+              }
+            ],
+            "source_key": "doc:3"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:4",
+                "locator": {
+                  "length": 164,
+                  "offset": 164,
+                  "path": "step-1.jsonl",
+                  "sha256": "ea41c0f0a4d045f048ac9c6e05284e6634347054b6bc1986bc147ffa80a81b48",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:5"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 01, record 1"
+              }
+            ],
+            "source_key": "doc:4"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:5",
+                "locator": {
+                  "length": 214,
+                  "offset": 214,
+                  "path": "step-2.jsonl",
+                  "sha256": "51496bce72259900568f897c7efc953d022efc16f45d8740bb11634d57a6d8f6",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding x",
+                  "RKVVALUE assay-01 revision-01 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 01, record 2"
+              }
+            ],
+            "source_key": "doc:5"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:6",
+                "locator": {
+                  "length": 164,
+                  "offset": 328,
+                  "path": "step-0.jsonl",
+                  "sha256": "ff8aec142b013521ed692957257a4a29f6fc7368a07142d128a714c362d39cdc",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:7"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 02, record 0"
+              }
+            ],
+            "source_key": "doc:6"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:7",
+                "locator": {
+                  "length": 164,
+                  "offset": 328,
+                  "path": "step-1.jsonl",
+                  "sha256": "42c97d95b5419848070b8cb3e7c129d137b2fb903c2c9f8d35a7a42e78017e04",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:8"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 02, record 1"
+              }
+            ],
+            "source_key": "doc:7"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:8",
+                "locator": {
+                  "length": 214,
+                  "offset": 428,
+                  "path": "step-2.jsonl",
+                  "sha256": "028073cfef959349c2ef8328bfa90067282456940267764f571c5cfa4fa02ef4",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding x",
+                  "RKVVALUE assay-02 revision-01 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 02, record 2"
+              }
+            ],
+            "source_key": "doc:8"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:9",
+                "locator": {
+                  "length": 165,
+                  "offset": 492,
+                  "path": "step-0.jsonl",
+                  "sha256": "253781fad0d65f71ce0b69d19063a94fb348d5fa1c0b92dc398a44d38bb4761c",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:10"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 03, record 0"
+              }
+            ],
+            "source_key": "doc:9"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:10",
+                "locator": {
+                  "length": 166,
+                  "offset": 492,
+                  "path": "step-1.jsonl",
+                  "sha256": "ac7f21794add6ed63fc121b88dabe7ae5ea7909147609a3838f8adb5b686f99c",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:11"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 03, record 1"
+              }
+            ],
+            "source_key": "doc:10"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:11",
+                "locator": {
+                  "length": 215,
+                  "offset": 642,
+                  "path": "step-2.jsonl",
+                  "sha256": "2e85c2aee7c945fb7aafb55947049cc48327b8e36a3c83d1633ac84411f89c01",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding x",
+                  "RKVVALUE assay-03 revision-01 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 03, record 2"
+              }
+            ],
+            "source_key": "doc:11"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:12",
+                "locator": {
+                  "length": 166,
+                  "offset": 657,
+                  "path": "step-0.jsonl",
+                  "sha256": "5b69e0d122c6865f2f96a3803032774b3320a14c64c8435c4ae8a7504e3277bd",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:13"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 04, record 0"
+              }
+            ],
+            "source_key": "doc:12"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:13",
+                "locator": {
+                  "length": 166,
+                  "offset": 658,
+                  "path": "step-1.jsonl",
+                  "sha256": "5b6fad2ccc2b08e730818ffdf88193752b497e648bfbff77362ccaf9627058d1",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:14"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 04, record 1"
+              }
+            ],
+            "source_key": "doc:13"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:14",
+                "locator": {
+                  "length": 215,
+                  "offset": 857,
+                  "path": "step-2.jsonl",
+                  "sha256": "75c93cd88cc7c6db4e3eade9500f41fe96b191c98f41f637c4ad1c3995d52305",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding x",
+                  "RKVVALUE assay-04 revision-01 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 04, record 2"
+              }
+            ],
+            "source_key": "doc:14"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:15",
+                "locator": {
+                  "length": 166,
+                  "offset": 823,
+                  "path": "step-0.jsonl",
+                  "sha256": "4cc5baa84dfed0d0f4fc4bff05f340eed5ae86c52220c3d554dbc3bcc1c421e1",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:16"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 05, record 0"
+              }
+            ],
+            "source_key": "doc:15"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:16",
+                "locator": {
+                  "length": 166,
+                  "offset": 824,
+                  "path": "step-1.jsonl",
+                  "sha256": "2fb13ae135d812b4115f800750cf6e3ddb8baa9005c9b8a97ab6ba38db1802c3",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:17"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 05, record 1"
+              }
+            ],
+            "source_key": "doc:16"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:17",
+                "locator": {
+                  "length": 215,
+                  "offset": 1072,
+                  "path": "step-2.jsonl",
+                  "sha256": "4f5ed11ba6c8b3b52d7ae76aa37adf2c072633dd64cc1d7eaf8264a8216936a7",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding x",
+                  "RKVVALUE assay-05 revision-01 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 05, record 2"
+              }
+            ],
+            "source_key": "doc:17"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:18",
+                "locator": {
+                  "length": 166,
+                  "offset": 989,
+                  "path": "step-0.jsonl",
+                  "sha256": "287c457de00628095ee22713ca2be4ac86cac60e3bf1aea58b1ad54cda6f9ae9",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:19"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 06, record 0"
+              }
+            ],
+            "source_key": "doc:18"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:19",
+                "locator": {
+                  "length": 166,
+                  "offset": 990,
+                  "path": "step-1.jsonl",
+                  "sha256": "a55bf25827da580beafd903e2f639d717e4e724e8eb90c36de869c3167097e59",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:20"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 06, record 1"
+              }
+            ],
+            "source_key": "doc:19"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:20",
+                "locator": {
+                  "length": 216,
+                  "offset": 1287,
+                  "path": "step-2.jsonl",
+                  "sha256": "835a8d80c34392de8cd8e06d38768d9ee62166ab08afc6dc8fd981c15488a70e",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding xx",
+                  "RKVVALUE assay-06 revision-02 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 06, record 2"
+              }
+            ],
+            "source_key": "doc:20"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:21",
+                "locator": {
+                  "length": 166,
+                  "offset": 1155,
+                  "path": "step-0.jsonl",
+                  "sha256": "55443868bea0789a0cffc9290f1b82b0b2cb345466ecdc22789653f252fdc9e8",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:22"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 07, record 0"
+              }
+            ],
+            "source_key": "doc:21"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:22",
+                "locator": {
+                  "length": 166,
+                  "offset": 1156,
+                  "path": "step-1.jsonl",
+                  "sha256": "e5b363a132a9df1989962b830ae5792d0ef067e770248a37d5197dccbcb37157",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:23"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 07, record 1"
+              }
+            ],
+            "source_key": "doc:22"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:23",
+                "locator": {
+                  "length": 216,
+                  "offset": 1503,
+                  "path": "step-2.jsonl",
+                  "sha256": "a4cea14dcfdea9afd8b9c236c694e9c2aaf7c66661468cfef07e187368a8c2dd",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding xx",
+                  "RKVVALUE assay-07 revision-02 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 07, record 2"
+              }
+            ],
+            "source_key": "doc:23"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:24",
+                "locator": {
+                  "length": 166,
+                  "offset": 1321,
+                  "path": "step-0.jsonl",
+                  "sha256": "704ddc13608e6b8177d76273fc90a11ca4a8e180bc0079e3f15f50c778b8d96f",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:25"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 08, record 0"
+              }
+            ],
+            "source_key": "doc:24"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:25",
+                "locator": {
+                  "length": 166,
+                  "offset": 1322,
+                  "path": "step-1.jsonl",
+                  "sha256": "d4a7401856530234dd597317d725cdcd0419ed6392b56f83b69dc6f398cc25e7",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:26"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 08, record 1"
+              }
+            ],
+            "source_key": "doc:25"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:26",
+                "locator": {
+                  "length": 216,
+                  "offset": 1719,
+                  "path": "step-2.jsonl",
+                  "sha256": "de404718658158121c200f6517ae239c6149f442ff7b4d1e964ede0219067dbc",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding xx",
+                  "RKVVALUE assay-08 revision-02 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 08, record 2"
+              }
+            ],
+            "source_key": "doc:26"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:27",
+                "locator": {
+                  "length": 166,
+                  "offset": 1487,
+                  "path": "step-0.jsonl",
+                  "sha256": "88706f34269285e2367a6ac1c2bdcd8b8043d9d49b4d1697317838ab41cb8049",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:28"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 09, record 0"
+              }
+            ],
+            "source_key": "doc:27"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:28",
+                "locator": {
+                  "length": 166,
+                  "offset": 1488,
+                  "path": "step-1.jsonl",
+                  "sha256": "260a423f9f80227463bc1a63055ab0f1a63de75bd8269d5df5dce5c9e47cc178",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:29"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 09, record 1"
+              }
+            ],
+            "source_key": "doc:28"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:29",
+                "locator": {
+                  "length": 216,
+                  "offset": 1935,
+                  "path": "step-2.jsonl",
+                  "sha256": "5973521a84e8fe22f3c7f01a4d35f3f3bc959621eb8a4117e1ddc142177359e3",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding xx",
+                  "RKVVALUE assay-09 revision-02 literal=1.00e-3 caf\u00e9 \u96ea"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 09, record 2"
+              }
+            ],
+            "source_key": "doc:29"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:30",
+                "locator": {
+                  "length": 166,
+                  "offset": 1653,
+                  "path": "step-0.jsonl",
+                  "sha256": "3ea1ae96d2dce196ca4b0156b3674b32320bd9264aeccfc947e3ee14269cdf34",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:31"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 10, record 0"
+              }
+            ],
+            "source_key": "doc:30"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:31",
+                "locator": {
+                  "length": 166,
+                  "offset": 1654,
+                  "path": "step-1.jsonl",
+                  "sha256": "492f03aa91b32eafd900228841cbad7003f3492163c092bdd11a9852c14d898f",
+                  "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:32"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 10, record 1"
+              }
+            ],
+            "source_key": "doc:31"
+          }
+        ],
+        "scope": "explicit-known-source-batch",
+        "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b",
+        "wall_s": 0.013865600107237697
+      },
+      "traffic": {
+        "CAS_decoded_output_bytes": 3188375,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 126360,
+        "compressed_decode_output_bytes": 3188375,
+        "decode_attempts": 56,
+        "decode_successes": 56,
+        "object_opens": 56,
+        "payload_input_bytes": 121656,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 112,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 6.00004568696022e-07,
+      "bindings": 0,
+      "budget_bytes": 5789,
+      "case_id": "e2-n32-budget-rejected",
+      "epoch": 2,
+      "error": "Batch source-byte budget exceeded",
+      "expected": "budget-rejected",
+      "instrumented_call_cpu_s": 0.0,
+      "instrumented_call_wall_s": 0.008417299948632717,
+      "keys": [
+        "doc:0",
+        "doc:1",
+        "doc:2",
+        "doc:3",
+        "doc:4",
+        "doc:5",
+        "doc:6",
+        "doc:7",
+        "doc:8",
+        "doc:9",
+        "doc:10",
+        "doc:11",
+        "doc:12",
+        "doc:13",
+        "doc:14",
+        "doc:15",
+        "doc:16",
+        "doc:17",
+        "doc:18",
+        "doc:19",
+        "doc:20",
+        "doc:21",
+        "doc:22",
+        "doc:23",
+        "doc:24",
+        "doc:25",
+        "doc:26",
+        "doc:27",
+        "doc:28",
+        "doc:29",
+        "doc:30",
+        "doc:31"
+      ],
+      "outcome_gate_pass": true,
+      "primary": true,
+      "result": null,
+      "traffic": {
+        "CAS_decoded_output_bytes": 1381008,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 54828,
+        "compressed_decode_output_bytes": 1381008,
+        "decode_attempts": 24,
+        "decode_successes": 24,
+        "object_opens": 24,
+        "payload_input_bytes": 52812,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 48,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 0.006509700091555715,
+      "bindings": 3,
+      "budget_bytes": 492,
+      "case_id": "duplicate-accepted",
+      "epoch": 0,
+      "error": null,
+      "expected": "accepted",
+      "instrumented_call_cpu_s": 0.0,
+      "instrumented_call_wall_s": 0.0017253998667001724,
+      "keys": [
+        "doc:0",
+        "doc:0",
+        "doc:0"
+      ],
+      "outcome_gate_pass": true,
+      "primary": false,
+      "result": {
+        "admitted_source_bytes": 492,
+        "consistency": "View verified at request entry; each selected original record reverified per occurrence",
+        "max_keys": 32,
+        "max_source_bytes": 492,
+        "results": [
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:0",
+                "locator": {
+                  "length": 164,
+                  "offset": 0,
+                  "path": "step-0.jsonl",
+                  "sha256": "482fa0dfcfeeb0f8e65704641a7259e082632c4d47b56b370b9b4192971c38bc",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:1"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 00, record 0"
+              }
+            ],
+            "source_key": "doc:0"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:0",
+                "locator": {
+                  "length": 164,
+                  "offset": 0,
+                  "path": "step-0.jsonl",
+                  "sha256": "482fa0dfcfeeb0f8e65704641a7259e082632c4d47b56b370b9b4192971c38bc",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:1"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 00, record 0"
+              }
+            ],
+            "source_key": "doc:0"
+          },
+          {
+            "hits": [
+              {
+                "citation_id": "D0",
+                "key": "doc:0",
+                "locator": {
+                  "length": 164,
+                  "offset": 0,
+                  "path": "step-0.jsonl",
+                  "sha256": "482fa0dfcfeeb0f8e65704641a7259e082632c4d47b56b370b9b4192971c38bc",
+                  "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec"
+                },
+                "rank": null,
+                "sentences": [
+                  "Synthetic fixture only; escaped \"quote\", caf\u00e9 \u96ea",
+                  "Revision padding ",
+                  "RKVNEXT doc:1"
+                ],
+                "source_bytes_verified": true,
+                "title": "Synthetic assay 00, record 0"
+              }
+            ],
+            "source_key": "doc:0"
+          }
+        ],
+        "scope": "explicit-known-source-batch",
+        "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec",
+        "wall_s": 0.0016944999806582928
+      },
+      "traffic": {
+        "CAS_decoded_output_bytes": 167979,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 6618,
+        "compressed_decode_output_bytes": 167979,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 6366,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 6.998889148235321e-07,
+      "bindings": 0,
+      "budget_bytes": 491,
+      "case_id": "duplicate-budget-rejected",
+      "epoch": 0,
+      "error": "Batch source-byte budget exceeded",
+      "expected": "budget-rejected",
+      "instrumented_call_cpu_s": 0.0,
+      "instrumented_call_wall_s": 0.000980400014668703,
+      "keys": [
+        "doc:0",
+        "doc:0",
+        "doc:0"
+      ],
+      "outcome_gate_pass": true,
+      "primary": false,
+      "result": null,
+      "traffic": {
+        "CAS_decoded_output_bytes": 0,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 0,
+        "compressed_decode_output_bytes": 0,
+        "decode_attempts": 0,
+        "decode_successes": 0,
+        "object_opens": 0,
+        "payload_input_bytes": 0,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 0,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      }
+    },
+    {
+      "audit_cpu_s": 0.015625,
+      "audit_wall_s": 0.005934900138527155,
+      "bindings": 0,
+      "budget_bytes": 0,
+      "case_id": "missing-zero-budget",
+      "epoch": 0,
+      "error": null,
+      "expected": "accepted",
+      "instrumented_call_cpu_s": 0.0,
+      "instrumented_call_wall_s": 0.0010997001081705093,
+      "keys": [
+        "doc:999999"
+      ],
+      "outcome_gate_pass": true,
+      "primary": false,
+      "result": {
+        "admitted_source_bytes": 0,
+        "consistency": "View verified at request entry; each selected original record reverified per occurrence",
+        "max_keys": 32,
+        "max_source_bytes": 0,
+        "results": [
+          {
+            "hits": [],
+            "source_key": "doc:999999"
+          }
+        ],
+        "scope": "explicit-known-source-batch",
+        "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec",
+        "wall_s": 0.0010760999284684658
+      },
+      "traffic": {
+        "CAS_decoded_output_bytes": 0,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 0,
+        "compressed_decode_output_bytes": 0,
+        "decode_attempts": 0,
+        "decode_successes": 0,
+        "object_opens": 0,
+        "payload_input_bytes": 0,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 0,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      }
+    }
+  ],
+  "cold_cache": null,
+  "cross_machine": null,
+  "files": {
+    "memory_bytes": 198252,
+    "other_worker_files_bytes": 5496,
+    "source_current_bytes": 169538
+  },
+  "head_unchanged": true,
+  "ingests": [
+    {
+      "commit": {
+        "bytewise_source_hashed": true,
+        "checkpoint_reason": "initial",
+        "chunk_references": 3,
+        "chunk_sizes": [
+          55993,
+          55994,
+          57533
+        ],
+        "delta_depth": 0,
+        "files": 3,
+        "index_bytes": 180224,
+        "index_profile": "compact-budget-v3",
+        "index_reused": false,
+        "indexed_records": 864,
+        "new_index_bytes": 180224,
+        "new_object_bytes": 6681,
+        "new_objects": 3,
+        "new_raw_bytes": 169520,
+        "new_snapshot_bytes": 806,
+        "new_written_bytes": 7487,
+        "overlay_upserts": 0,
+        "raw_bytes": 169520,
+        "relocation_ranges": 0,
+        "replay_budget": null,
+        "reused_raw_bytes": 0,
+        "reused_references": 0,
+        "snapshot_bytes": 806,
+        "snapshot_id": "c531b37eaf9f4c32c576202d489f80706e31d03f815c0301abe4ede580509fec",
+        "snapshot_published": true,
+        "unique_snapshot_objects": 3,
+        "wall_s": 0.031465600011870265
+      },
+      "cpu_s": 0.0,
+      "epoch": 0,
+      "wall_s": 0.03169219987466931
+    },
+    {
+      "commit": {
+        "bytewise_source_hashed": true,
+        "checkpoint_reason": null,
+        "chunk_references": 3,
+        "chunk_sizes": [
+          55993,
+          55994,
+          57539
+        ],
+        "delta_depth": 1,
+        "files": 3,
+        "index_bytes": 180720,
+        "index_profile": "compact-budget-v3",
+        "index_reused": false,
+        "indexed_records": 864,
+        "new_index_bytes": 496,
+        "new_object_bytes": 2288,
+        "new_objects": 1,
+        "new_raw_bytes": 57539,
+        "new_snapshot_bytes": 806,
+        "new_written_bytes": 3094,
+        "overlay_upserts": 6,
+        "raw_bytes": 169526,
+        "relocation_ranges": 1,
+        "replay_budget": {
+          "cas_bytes": 690432,
+          "changes": 6,
+          "limits": {
+            "max_cas_bytes": 2097152,
+            "max_changes": 32,
+            "max_record_bytes": 262144,
+            "version": 1
+          },
+          "reason": null,
+          "record_bytes": 2568,
+          "record_reads": 12
+        },
+        "reused_raw_bytes": 111987,
+        "reused_references": 2,
+        "snapshot_bytes": 806,
+        "snapshot_id": "67a98935cc0d9f39464925b010eb73c12bce7ba7ada8a69b7f78d257dbb4c4f6",
+        "snapshot_published": true,
+        "unique_snapshot_objects": 3,
+        "wall_s": 0.025274200132116675
+      },
+      "cpu_s": 0.015625,
+      "epoch": 1,
+      "wall_s": 0.0255558998323977
+    },
+    {
+      "commit": {
+        "bytewise_source_hashed": true,
+        "checkpoint_reason": null,
+        "chunk_references": 3,
+        "chunk_sizes": [
+          55993,
+          55994,
+          57551
+        ],
+        "delta_depth": 1,
+        "files": 3,
+        "index_bytes": 180998,
+        "index_profile": "compact-budget-v3",
+        "index_reused": false,
+        "indexed_records": 864,
+        "new_index_bytes": 774,
+        "new_object_bytes": 2300,
+        "new_objects": 1,
+        "new_raw_bytes": 57551,
+        "new_snapshot_bytes": 806,
+        "new_written_bytes": 3106,
+        "overlay_upserts": 12,
+        "raw_bytes": 169538,
+        "relocation_ranges": 1,
+        "replay_budget": {
+          "cas_bytes": 1381008,
+          "changes": 12,
+          "limits": {
+            "max_cas_bytes": 2097152,
+            "max_changes": 32,
+            "max_record_bytes": 262144,
+            "version": 1
+          },
+          "reason": null,
+          "record_bytes": 5148,
+          "record_reads": 24
+        },
+        "reused_raw_bytes": 111987,
+        "reused_references": 2,
+        "snapshot_bytes": 806,
+        "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b",
+        "snapshot_published": true,
+        "unique_snapshot_objects": 3,
+        "wall_s": 0.03346560010686517
+      },
+      "cpu_s": 0.015625,
+      "epoch": 2,
+      "wall_s": 0.03367499983869493
+    }
+  ],
+  "internal_memory_fsyncs": null,
+  "layout": "separated",
+  "ledger_fsyncs": 1,
+  "memory_stats": {
+    "by_directory_bytes": {
+      "answers": 0,
+      "cas": 13809,
+      "indexes": 181634,
+      "manifests": 2715
+    },
+    "cas": {
+      "allocated_file_data_bytes": 32896,
+      "config_bytes": 122,
+      "files": 9,
+      "filesystem_directory_metadata_journal_unmeasured": true,
+      "logical_file_bytes": 13809,
+      "object_bytes": 11269,
+      "object_count": 5,
+      "snapshot_bytes": 2418,
+      "snapshot_count": 3
+    },
+    "head_bytes": 94,
+    "logical_file_bytes": 198252,
+    "scope": "Includes all retained CAS objects, indexes, manifests and derived answers; excludes runtime/model/server and filesystem metadata",
+    "snapshot_id": "7cfcf0387c594a45d0441294080bfaec74dc6d3fa42de3a58e7356cd1465027b"
+  },
+  "memory_tree_sha256": "f7cfaeea569422fa907d34a8a51c7e0fb54ecfec181a6abdda1cea3208a891d0",
+  "memory_tree_unchanged": true,
+  "new_remote_model_calls": 0,
+  "observed_peak_rss_bytes": 37404672,
+  "original_lookup_baseline_cpu_s": 0.5,
+  "original_lookup_baseline_wall_s": 0.48879189952276647,
+  "outcome_counts": {
+    "accepted": 11,
+    "budget-rejected": 10
+  },
+  "physical_SSD_bytes": null,
+  "recovery": {
+    "cpu_s": 0.015625,
+    "files": 9,
+    "wall_s": 0.015104500111192465
+  },
+  "round": 3,
+  "scope": "Synthetic public API mechanical acceptance with heavy traffic instrument; costs only, no speed/QA/production gain gate",
+  "source_write_fsyncs": 0,
+  "worker_cpu_s": 0.8125,
+  "worker_wall_s": 0.8586122000124305
+}

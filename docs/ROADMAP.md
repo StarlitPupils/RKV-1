@@ -323,3 +323,7 @@ observer开销和全部memory/sidecar/源码计账，原v0.40漏项不回填。�
 ## v0.46：既有SciFact指定三key批查询迁移
 
 24worker/768bundle/2304绑定/24全源恢复通过，无原文公共JSON及全树一致。两负载base-only CAS计数相等，时间联合True/True，全部费用与负方向见results/v0.46.0/SUMMARY.md。旧QueryView不改，默认不集成，非未知数据/科学问答或长期收益；下一项另冻假设，不改本次selector追正。
+
+## v0.47：可选公共固定SID批查询接口
+
+Memory.lookup_many最多32显式key、原record入证预算不等于I/O/RAM上限。126case=66返回/60预期预算拒绝、666绑定/36历史源恢复通过；65递归Python+HTML和全部成本计账。仅合成机械验收，performance_gain_gate=null，不外推旧科学速度；默认lookup/CLI/UI不改。报告results/v0.47.0/SUMMARY.md，E3净收益/E4整体/真实长会话未验收，下一项须另冻假设。

@@ -1,0 +1,25 @@
+{
+  "runtime_protocol_input_freeze": "d09c6a850a552f6d3743c49703f1e4ab45dc2368",
+  "candidate_CI": 40347032596,
+  "formal_workers": 6,
+  "formal_evaluation_retries": 0,
+  "new_remote_model_calls": 0,
+  "new_training_runs": 0,
+  "prior_fully_verified_release": "v0.46.0",
+  "prior_final_proof_sha256": "98150555c19c9c9f99e0c91936e3fe3dfed6e2f3ee2f16fb54b5eb5318bd77f4",
+  "runtime_old_module_count": 64,
+  "runtime_current_module_count": 65,
+  "old_memory_exact_proxy_insertion_only": true,
+  "performance_gain_gate": null,
+  "protocol_and_test_source": {
+    "docs/BATCH-LOOKUP.md": {
+      "bytes": 6531,
+      "sha256": "0cb103e541a8ceec2fa962872270c6ea2bd329df0321ca18190ffcd2d43b93a3"
+    },
+    "tests/test_memory_batch.py": {
+      "bytes": 6605,
+      "sha256": "15327db6bdc57525d196c82d26a27f3897379bfc887648ac4fcae911962ed217"
+    }
+  },
+  "scope": "Known synthetic public batch API contract only; no scientific performance or answer-quality evaluation"
+}

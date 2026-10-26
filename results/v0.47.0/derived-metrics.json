@@ -1,0 +1,670 @@
+{
+  "rows": [
+    {
+      "round": 1,
+      "layout": "clustered",
+      "accepted": 11,
+      "budget_rejected": 10,
+      "bindings": 111,
+      "traffic": {
+        "CAS_decoded_output_bytes": 21430272,
+        "application_CAS_file_bytes": 919725,
+        "compressed_decode_output_bytes": 21430272,
+        "decode_attempts": 327,
+        "decode_successes": 327,
+        "object_opens": 327,
+        "payload_input_bytes": 892257,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 654
+      },
+      "instrumented_call_wall_s": 0.1259197008330375,
+      "instrumented_call_cpu_s": 0.171875,
+      "audit_wall_s": 0.06875899969600141,
+      "audit_cpu_s": 0.046875,
+      "ingest_wall_s": 0.08788809995166957,
+      "ingest_cpu_s": 0.09375,
+      "worker_wall_s": 0.9225212999153882,
+      "worker_cpu_s": 0.890625,
+      "observed_peak_rss_bytes": 37928960,
+      "files": {
+        "memory_bytes": 204568,
+        "other_worker_files_bytes": 6864,
+        "source_current_bytes": 169538
+      },
+      "recovery": {
+        "cpu_s": 0.015625,
+        "files": 3,
+        "wall_s": 0.010191800072789192
+      },
+      "original_lookup_baseline_wall_s": 0.5766316999215633,
+      "original_lookup_baseline_cpu_s": 0.515625,
+      "parent_full_process_wall_s": 1.0481169000267982
+    },
+    {
+      "round": 1,
+      "layout": "separated",
+      "accepted": 11,
+      "budget_rejected": 10,
+      "bindings": 111,
+      "traffic": {
+        "CAS_decoded_output_bytes": 18694983,
+        "application_CAS_file_bytes": 740515,
+        "compressed_decode_output_bytes": 18694983,
+        "decode_attempts": 327,
+        "decode_successes": 327,
+        "object_opens": 327,
+        "payload_input_bytes": 713047,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 654
+      },
+      "instrumented_call_wall_s": 0.11485310015268624,
+      "instrumented_call_cpu_s": 0.0625,
+      "audit_wall_s": 0.08868640032596886,
+      "audit_cpu_s": 0.125,
+      "ingest_wall_s": 0.0848180998582393,
+      "ingest_cpu_s": 0.0625,
+      "worker_wall_s": 0.8638192999642342,
+      "worker_cpu_s": 0.859375,
+      "observed_peak_rss_bytes": 37441536,
+      "files": {
+        "memory_bytes": 198252,
+        "other_worker_files_bytes": 5496,
+        "source_current_bytes": 169538
+      },
+      "recovery": {
+        "cpu_s": 0.015625,
+        "files": 9,
+        "wall_s": 0.01540020015090704
+      },
+      "original_lookup_baseline_wall_s": 0.4982491999398917,
+      "original_lookup_baseline_cpu_s": 0.515625,
+      "parent_full_process_wall_s": 0.989132400136441
+    },
+    {
+      "round": 2,
+      "layout": "clustered",
+      "accepted": 11,
+      "budget_rejected": 10,
+      "bindings": 111,
+      "traffic": {
+        "CAS_decoded_output_bytes": 21430272,
+        "application_CAS_file_bytes": 919725,
+        "compressed_decode_output_bytes": 21430272,
+        "decode_attempts": 327,
+        "decode_successes": 327,
+        "object_opens": 327,
+        "payload_input_bytes": 892257,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 654
+      },
+      "instrumented_call_wall_s": 0.12549240002408624,
+      "instrumented_call_cpu_s": 0.140625,
+      "audit_wall_s": 0.06971850036643445,
+      "audit_cpu_s": 0.0625,
+      "ingest_wall_s": 0.08766979980282485,
+      "ingest_cpu_s": 0.09375,
+      "worker_wall_s": 0.9103540999349207,
+      "worker_cpu_s": 0.90625,
+      "observed_peak_rss_bytes": 37609472,
+      "files": {
+        "memory_bytes": 204568,
+        "other_worker_files_bytes": 6864,
+        "source_current_bytes": 169538
+      },
+      "recovery": {
+        "cpu_s": 0.0,
+        "files": 3,
+        "wall_s": 0.01022879988886416
+      },
+      "original_lookup_baseline_wall_s": 0.5634562002960593,
+      "original_lookup_baseline_cpu_s": 0.5625,
+      "parent_full_process_wall_s": 1.0350072998553514
+    },
+    {
+      "round": 2,
+      "layout": "separated",
+      "accepted": 11,
+      "budget_rejected": 10,
+      "bindings": 111,
+      "traffic": {
+        "CAS_decoded_output_bytes": 18694983,
+        "application_CAS_file_bytes": 740515,
+        "compressed_decode_output_bytes": 18694983,
+        "decode_attempts": 327,
+        "decode_successes": 327,
+        "object_opens": 327,
+        "payload_input_bytes": 713047,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 654
+      },
+      "instrumented_call_wall_s": 0.114629699382931,
+      "instrumented_call_cpu_s": 0.078125,
+      "audit_wall_s": 0.08923020004294813,
+      "audit_cpu_s": 0.09375,
+      "ingest_wall_s": 0.08605559961870313,
+      "ingest_cpu_s": 0.078125,
+      "worker_wall_s": 0.854502699803561,
+      "worker_cpu_s": 0.84375,
+      "observed_peak_rss_bytes": 37490688,
+      "files": {
+        "memory_bytes": 198252,
+        "other_worker_files_bytes": 5496,
+        "source_current_bytes": 169538
+      },
+      "recovery": {
+        "cpu_s": 0.015625,
+        "files": 9,
+        "wall_s": 0.014828899875283241
+      },
+      "original_lookup_baseline_wall_s": 0.48785739997401834,
+      "original_lookup_baseline_cpu_s": 0.515625,
+      "parent_full_process_wall_s": 0.9809745000675321
+    },
+    {
+      "round": 3,
+      "layout": "clustered",
+      "accepted": 11,
+      "budget_rejected": 10,
+      "bindings": 111,
+      "traffic": {
+        "CAS_decoded_output_bytes": 21430272,
+        "application_CAS_file_bytes": 919725,
+        "compressed_decode_output_bytes": 21430272,
+        "decode_attempts": 327,
+        "decode_successes": 327,
+        "object_opens": 327,
+        "payload_input_bytes": 892257,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 654
+      },
+      "instrumented_call_wall_s": 0.12628159951418638,
+      "instrumented_call_cpu_s": 0.140625,
+      "audit_wall_s": 0.07039579935371876,
+      "audit_cpu_s": 0.046875,
+      "ingest_wall_s": 0.08582309982739389,
+      "ingest_cpu_s": 0.0625,
+      "worker_wall_s": 0.914022000040859,
+      "worker_cpu_s": 0.859375,
+      "observed_peak_rss_bytes": 37429248,
+      "files": {
+        "memory_bytes": 204568,
+        "other_worker_files_bytes": 6864,
+        "source_current_bytes": 169538
+      },
+      "recovery": {
+        "cpu_s": 0.015625,
+        "files": 3,
+        "wall_s": 0.00986310001462698
+      },
+      "original_lookup_baseline_wall_s": 0.5548412997741252,
+      "original_lookup_baseline_cpu_s": 0.5625,
+      "parent_full_process_wall_s": 1.0371298000682145
+    },
+    {
+      "round": 3,
+      "layout": "separated",
+      "accepted": 11,
+      "budget_rejected": 10,
+      "bindings": 111,
+      "traffic": {
+        "CAS_decoded_output_bytes": 18694983,
+        "application_CAS_file_bytes": 740515,
+        "compressed_decode_output_bytes": 18694983,
+        "decode_attempts": 327,
+        "decode_successes": 327,
+        "object_opens": 327,
+        "payload_input_bytes": 713047,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 654
+      },
+      "instrumented_call_wall_s": 0.1138434000313282,
+      "instrumented_call_cpu_s": 0.0625,
+      "audit_wall_s": 0.08742359955795109,
+      "audit_cpu_s": 0.109375,
+      "ingest_wall_s": 0.09092309954576194,
+      "ingest_cpu_s": 0.03125,
+      "worker_wall_s": 0.8586122000124305,
+      "worker_cpu_s": 0.8125,
+      "observed_peak_rss_bytes": 37404672,
+      "files": {
+        "memory_bytes": 198252,
+        "other_worker_files_bytes": 5496,
+        "source_current_bytes": 169538
+      },
+      "recovery": {
+        "cpu_s": 0.015625,
+        "files": 9,
+        "wall_s": 0.015104500111192465
+      },
+      "original_lookup_baseline_wall_s": 0.48879189952276647,
+      "original_lookup_baseline_cpu_s": 0.5,
+      "parent_full_process_wall_s": 0.9825132000260055
+    }
+  ],
+  "budget_rejection_CAS_work": [
+    {
+      "round": 1,
+      "layout": "clustered",
+      "case_id": "e0-n1-budget-rejected",
+      "application_CAS_file_bytes": 0,
+      "CAS_decoded_output_bytes": 0
+    },
+    {
+      "round": 1,
+      "layout": "clustered",
+      "case_id": "e0-n3-budget-rejected",
+      "application_CAS_file_bytes": 0,
+      "CAS_decoded_output_bytes": 0
+    },
+    {
+      "round": 1,
+      "layout": "clustered",
+      "case_id": "e0-n32-budget-rejected",
+      "application_CAS_file_bytes": 0,
+      "CAS_decoded_output_bytes": 0
+    },
+    {
+      "round": 1,
+      "layout": "clustered",
+      "case_id": "e1-n1-budget-rejected",
+      "application_CAS_file_bytes": 33660,
+      "CAS_decoded_output_bytes": 786432
+    },
+    {
+      "round": 1,
+      "layout": "clustered",
+      "case_id": "e1-n3-budget-rejected",
+      "application_CAS_file_bytes": 33660,
+      "CAS_decoded_output_bytes": 786432
+    },
+    {
+      "round": 1,
+      "layout": "clustered",
+      "case_id": "e1-n32-budget-rejected",
+      "application_CAS_file_bytes": 33660,
+      "CAS_decoded_output_bytes": 786432
+    },
+    {
+      "round": 1,
+      "layout": "clustered",
+      "case_id": "e2-n1-budget-rejected",
+      "application_CAS_file_bytes": 67560,
+      "CAS_decoded_output_bytes": 1572864
+    },
+    {
+      "round": 1,
+      "layout": "clustered",
+      "case_id": "e2-n3-budget-rejected",
+      "application_CAS_file_bytes": 67560,
+      "CAS_decoded_output_bytes": 1572864
+    },
+    {
+      "round": 1,
+      "layout": "clustered",
+      "case_id": "e2-n32-budget-rejected",
+      "application_CAS_file_bytes": 67560,
+      "CAS_decoded_output_bytes": 1572864
+    },
+    {
+      "round": 1,
+      "layout": "clustered",
+      "case_id": "duplicate-budget-rejected",
+      "application_CAS_file_bytes": 0,
+      "CAS_decoded_output_bytes": 0
+    },
+    {
+      "round": 1,
+      "layout": "separated",
+      "case_id": "e0-n1-budget-rejected",
+      "application_CAS_file_bytes": 0,
+      "CAS_decoded_output_bytes": 0
+    },
+    {
+      "round": 1,
+      "layout": "separated",
+      "case_id": "e0-n3-budget-rejected",
+      "application_CAS_file_bytes": 0,
+      "CAS_decoded_output_bytes": 0
+    },
+    {
+      "round": 1,
+      "layout": "separated",
+      "case_id": "e0-n32-budget-rejected",
+      "application_CAS_file_bytes": 0,
+      "CAS_decoded_output_bytes": 0
+    },
+    {
+      "round": 1,
+      "layout": "separated",
+      "case_id": "e1-n1-budget-rejected",
+      "application_CAS_file_bytes": 27342,
+      "CAS_decoded_output_bytes": 690432
+    },
+    {
+      "round": 1,
+      "layout": "separated",
+      "case_id": "e1-n3-budget-rejected",
+      "application_CAS_file_bytes": 27342,
+      "CAS_decoded_output_bytes": 690432
+    },
+    {
+      "round": 1,
+      "layout": "separated",
+      "case_id": "e1-n32-budget-rejected",
+      "application_CAS_file_bytes": 27342,
+      "CAS_decoded_output_bytes": 690432
+    },
+    {
+      "round": 1,
+      "layout": "separated",
+      "case_id": "e2-n1-budget-rejected",
+      "application_CAS_file_bytes": 54828,
+      "CAS_decoded_output_bytes": 1381008
+    },
+    {
+      "round": 1,
+      "layout": "separated",
+      "case_id": "e2-n3-budget-rejected",
+      "application_CAS_file_bytes": 54828,
+      "CAS_decoded_output_bytes": 1381008
+    },
+    {
+      "round": 1,
+      "layout": "separated",
+      "case_id": "e2-n32-budget-rejected",
+      "application_CAS_file_bytes": 54828,
+      "CAS_decoded_output_bytes": 1381008
+    },
+    {
+      "round": 1,
+      "layout": "separated",
+      "case_id": "duplicate-budget-rejected",
+      "application_CAS_file_bytes": 0,
+      "CAS_decoded_output_bytes": 0
+    },
+    {
+      "round": 2,
+      "layout": "clustered",
+      "case_id": "e0-n1-budget-rejected",
+      "application_CAS_file_bytes": 0,
+      "CAS_decoded_output_bytes": 0
+    },
+    {
+      "round": 2,
+      "layout": "clustered",
+      "case_id": "e0-n3-budget-rejected",
+      "application_CAS_file_bytes": 0,
+      "CAS_decoded_output_bytes": 0
+    },
+    {
+      "round": 2,
+      "layout": "clustered",
+      "case_id": "e0-n32-budget-rejected",
+      "application_CAS_file_bytes": 0,
+      "CAS_decoded_output_bytes": 0
+    },
+    {
+      "round": 2,
+      "layout": "clustered",
+      "case_id": "e1-n1-budget-rejected",
+      "application_CAS_file_bytes": 33660,
+      "CAS_decoded_output_bytes": 786432
+    },
+    {
+      "round": 2,
+      "layout": "clustered",
+      "case_id": "e1-n3-budget-rejected",
+      "application_CAS_file_bytes": 33660,
+      "CAS_decoded_output_bytes": 786432
+    },
+    {
+      "round": 2,
+      "layout": "clustered",
+      "case_id": "e1-n32-budget-rejected",
+      "application_CAS_file_bytes": 33660,
+      "CAS_decoded_output_bytes": 786432
+    },
+    {
+      "round": 2,
+      "layout": "clustered",
+      "case_id": "e2-n1-budget-rejected",
+      "application_CAS_file_bytes": 67560,
+      "CAS_decoded_output_bytes": 1572864
+    },
+    {
+      "round": 2,
+      "layout": "clustered",
+      "case_id": "e2-n3-budget-rejected",
+      "application_CAS_file_bytes": 67560,
+      "CAS_decoded_output_bytes": 1572864
+    },
+    {
+      "round": 2,
+      "layout": "clustered",
+      "case_id": "e2-n32-budget-rejected",
+      "application_CAS_file_bytes": 67560,
+      "CAS_decoded_output_bytes": 1572864
+    },
+    {
+      "round": 2,
+      "layout": "clustered",
+      "case_id": "duplicate-budget-rejected",
+      "application_CAS_file_bytes": 0,
+      "CAS_decoded_output_bytes": 0
+    },
+    {
+      "round": 2,
+      "layout": "separated",
+      "case_id": "e0-n1-budget-rejected",
+      "application_CAS_file_bytes": 0,
+      "CAS_decoded_output_bytes": 0
+    },
+    {
+      "round": 2,
+      "layout": "separated",
+      "case_id": "e0-n3-budget-rejected",
+      "application_CAS_file_bytes": 0,
+      "CAS_decoded_output_bytes": 0
+    },
+    {
+      "round": 2,
+      "layout": "separated",
+      "case_id": "e0-n32-budget-rejected",
+      "application_CAS_file_bytes": 0,
+      "CAS_decoded_output_bytes": 0
+    },
+    {
+      "round": 2,
+      "layout": "separated",
+      "case_id": "e1-n1-budget-rejected",
+      "application_CAS_file_bytes": 27342,
+      "CAS_decoded_output_bytes": 690432
+    },
+    {
+      "round": 2,
+      "layout": "separated",
+      "case_id": "e1-n3-budget-rejected",
+      "application_CAS_file_bytes": 27342,
+      "CAS_decoded_output_bytes": 690432
+    },
+    {
+      "round": 2,
+      "layout": "separated",
+      "case_id": "e1-n32-budget-rejected",
+      "application_CAS_file_bytes": 27342,
+      "CAS_decoded_output_bytes": 690432
+    },
+    {
+      "round": 2,
+      "layout": "separated",
+      "case_id": "e2-n1-budget-rejected",
+      "application_CAS_file_bytes": 54828,
+      "CAS_decoded_output_bytes": 1381008
+    },
+    {
+      "round": 2,
+      "layout": "separated",
+      "case_id": "e2-n3-budget-rejected",
+      "application_CAS_file_bytes": 54828,
+      "CAS_decoded_output_bytes": 1381008
+    },
+    {
+      "round": 2,
+      "layout": "separated",
+      "case_id": "e2-n32-budget-rejected",
+      "application_CAS_file_bytes": 54828,
+      "CAS_decoded_output_bytes": 1381008
+    },
+    {
+      "round": 2,
+      "layout": "separated",
+      "case_id": "duplicate-budget-rejected",
+      "application_CAS_file_bytes": 0,
+      "CAS_decoded_output_bytes": 0
+    },
+    {
+      "round": 3,
+      "layout": "clustered",
+      "case_id": "e0-n1-budget-rejected",
+      "application_CAS_file_bytes": 0,
+      "CAS_decoded_output_bytes": 0
+    },
+    {
+      "round": 3,
+      "layout": "clustered",
+      "case_id": "e0-n3-budget-rejected",
+      "application_CAS_file_bytes": 0,
+      "CAS_decoded_output_bytes": 0
+    },
+    {
+      "round": 3,
+      "layout": "clustered",
+      "case_id": "e0-n32-budget-rejected",
+      "application_CAS_file_bytes": 0,
+      "CAS_decoded_output_bytes": 0
+    },
+    {
+      "round": 3,
+      "layout": "clustered",
+      "case_id": "e1-n1-budget-rejected",
+      "application_CAS_file_bytes": 33660,
+      "CAS_decoded_output_bytes": 786432
+    },
+    {
+      "round": 3,
+      "layout": "clustered",
+      "case_id": "e1-n3-budget-rejected",
+      "application_CAS_file_bytes": 33660,
+      "CAS_decoded_output_bytes": 786432
+    },
+    {
+      "round": 3,
+      "layout": "clustered",
+      "case_id": "e1-n32-budget-rejected",
+      "application_CAS_file_bytes": 33660,
+      "CAS_decoded_output_bytes": 786432
+    },
+    {
+      "round": 3,
+      "layout": "clustered",
+      "case_id": "e2-n1-budget-rejected",
+      "application_CAS_file_bytes": 67560,
+      "CAS_decoded_output_bytes": 1572864
+    },
+    {
+      "round": 3,
+      "layout": "clustered",
+      "case_id": "e2-n3-budget-rejected",
+      "application_CAS_file_bytes": 67560,
+      "CAS_decoded_output_bytes": 1572864
+    },
+    {
+      "round": 3,
+      "layout": "clustered",
+      "case_id": "e2-n32-budget-rejected",
+      "application_CAS_file_bytes": 67560,
+      "CAS_decoded_output_bytes": 1572864
+    },
+    {
+      "round": 3,
+      "layout": "clustered",
+      "case_id": "duplicate-budget-rejected",
+      "application_CAS_file_bytes": 0,
+      "CAS_decoded_output_bytes": 0
+    },
+    {
+      "round": 3,
+      "layout": "separated",
+      "case_id": "e0-n1-budget-rejected",
+      "application_CAS_file_bytes": 0,
+      "CAS_decoded_output_bytes": 0
+    },
+    {
+      "round": 3,
+      "layout": "separated",
+      "case_id": "e0-n3-budget-rejected",
+      "application_CAS_file_bytes": 0,
+      "CAS_decoded_output_bytes": 0
+    },
+    {
+      "round": 3,
+      "layout": "separated",
+      "case_id": "e0-n32-budget-rejected",
+      "application_CAS_file_bytes": 0,
+      "CAS_decoded_output_bytes": 0
+    },
+    {
+      "round": 3,
+      "layout": "separated",
+      "case_id": "e1-n1-budget-rejected",
+      "application_CAS_file_bytes": 27342,
+      "CAS_decoded_output_bytes": 690432
+    },
+    {
+      "round": 3,
+      "layout": "separated",
+      "case_id": "e1-n3-budget-rejected",
+      "application_CAS_file_bytes": 27342,
+      "CAS_decoded_output_bytes": 690432
+    },
+    {
+      "round": 3,
+      "layout": "separated",
+      "case_id": "e1-n32-budget-rejected",
+      "application_CAS_file_bytes": 27342,
+      "CAS_decoded_output_bytes": 690432
+    },
+    {
+      "round": 3,
+      "layout": "separated",
+      "case_id": "e2-n1-budget-rejected",
+      "application_CAS_file_bytes": 54828,
+      "CAS_decoded_output_bytes": 1381008
+    },
+    {
+      "round": 3,
+      "layout": "separated",
+      "case_id": "e2-n3-budget-rejected",
+      "application_CAS_file_bytes": 54828,
+      "CAS_decoded_output_bytes": 1381008
+    },
+    {
+      "round": 3,
+      "layout": "separated",
+      "case_id": "e2-n32-budget-rejected",
+      "application_CAS_file_bytes": 54828,
+      "CAS_decoded_output_bytes": 1381008
+    },
+    {
+      "round": 3,
+      "layout": "separated",
+      "case_id": "duplicate-budget-rejected",
+      "application_CAS_file_bytes": 0,
+      "CAS_decoded_output_bytes": 0
+    }
+  ],
+  "nonzero_CAS_read_budget_rejections": 36,
+  "raw_report_json_bytes": 817846,
+  "driver_log_bytes": 0,
+  "performance_gain_gate": null
+}
