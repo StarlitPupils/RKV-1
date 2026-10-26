@@ -1,0 +1,29 @@
+{
+  "original_24_frame_identities_verified": true,
+  "independent_information_conditions": 8,
+  "engineering_conditions_passed": 8,
+  "synthetic_exact": 3,
+  "synthetic_uniform_golden": 2,
+  "no_new_scientific_encoding_or_recovery": true,
+  "original_raw_sha256": "d2ef58baa83076046a3d528a31bb5d827144b7831367a22d23fd8d92b04f1a7a",
+  "frozen_audit_source_sha256": "b03161f272ca0b6e37499a3e6479fb4eb777451d8109c2e776ebcbcdb2f6f405",
+  "threshold_bits": [
+    -1,
+    4
+  ],
+  "all_gates_pass": true,
+  "raw_status_is_measurement_time_flag_not_release_status": true,
+  "unit_tests_run": 233,
+  "unit_tests_passed": 232,
+  "unit_tests_skipped": 1,
+  "tests_log_sha256": "643a518b8422ea417d725f58280110214bf3efa84130ac5e9e33d6be82e9f125",
+  "source_allocation_recursive_python_modules": 61,
+  "source_allocation_html_files": 1,
+  "figure_visually_inspected": true,
+  "figure_has_no_clipping_or_overlapping_labels": true,
+  "measured_to_packaged_runtime_difference": "__init__.py version literal only; exact normalized byte check passed",
+  "public_only_analysis_outside_repository_without_git_or_private_logs": true,
+  "aggregate_derived_and_figure_byte_identical": true,
+  "scientific_inputs_models_or_frames_copied": false,
+  "additional_remote_model_calls": 0
+}

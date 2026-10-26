@@ -1,0 +1,32 @@
+{
+  "initial_freeze": "270e20f",
+  "corrected_pre_computation_freeze": "396d111",
+  "initial_freeze_CI": 40297239511,
+  "corrected_freeze_CI": 40297364464,
+  "measured_runtime": "v0.37.0 byte-identical all61 Python modules plus HTML",
+  "prior_preflight_failure": {
+    "category": "Full source set compared against Python-only ledger",
+    "scientific_information_computed": false,
+    "retained_log_sha256": "74ecf212cdd046440b978fa713fe83b31b8ca6ef8d7dbb5ef0abc8d92cc840c4",
+    "correction": "Use original full source-resource files ledger before any CDF calculation"
+  },
+  "resumed_after_quota_checkpoint": true,
+  "scientific_measurement_repeated": false,
+  "raw_status": "Original diagnostic_only_not_release retained unchanged; current release status is separately verified",
+  "new_model_training_runs": 0,
+  "new_static_model_builds": 0,
+  "new_scientific_encodes": 0,
+  "diagnostic_cost": {
+    "wall_s": 13.915797000052407,
+    "cpu_s": 13.53125,
+    "peak_rss_bytes": 27799552,
+    "source_bytes": 7153
+  },
+  "analysis_source_bytes": 7292,
+  "analysis_source_sha256": "dc251dfa99b47ec0111c38f05dc148c04603d7a2961d38400e7d81c4aa338020",
+  "cold_cache": null,
+  "cross_machine": null,
+  "additional_remote_model_calls": 0,
+  "external_smoke_development_note": "First private external golden harness generated an embedded NUL inside subprocess command, failed before new golden code executed. Replaced zero literal with bytes([0]), preserved original log. No runtime/model/scientific audit changed.",
+  "external_smoke_initial_failed_log_sha256": "f35e0ea3a0cec1e1a664bd562e7519c53d848eed2cf3e1eb9674402ccba4346f"
+}

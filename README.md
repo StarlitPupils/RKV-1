@@ -6,7 +6,24 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.37.0 · 神经模型学到了规律，但完整费用未胜廉价统计
+## 当前版本：v0.38.0 · 编码器只多不到2位，压缩瓶颈在别处
+
+冻结原模型/CDF/已见前缀，独立计算概率信息量并核对24个原帧：8条件L-I为0.25–1.72位，
+全部通过预定[-1,4]工程门槛；3合成控制恢复、2 uniform解析golden通过。0新增科学编码/恢复。
+相对普通codec的科学payload差距至少10892位，去掉不足2位冗余仍不改输赢；不追加同CDF空间优化。
+这次是账本诊断，没有新增压缩或推理收益；神经/静态完整成本仍未胜普通压缩器。
+
+![原帧码长审计](results/v0.38.0/cdf-information-audit.png)
+
+233测试232通过/1权限跳过，递归61模块+HTML成本完整，发行仅版本号不同。
+审计wall13.916s/CPU13.531s单列诊断成本，0模型调用，冷缓存/跨机/长期会话未测。
+下一项先冻无外置训练权重的有界在线统计候选和新留出数据，不调这些已见前缀追收益。
+
+[冻结协议](docs/CDF-INFORMATION-AUDIT.md) · [详实报告](results/v0.38.0/SUMMARY.md) ·
+[原始aggregate](results/v0.38.0/aggregate.json) · [验证](results/v0.38.0/validation.json) ·
+[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.38.0)。
+
+## v0.37.0 · 神经模型学到了规律，但完整费用未胜廉价统计
 
 新增同训练资料的静态unigram+同算术码诊断。旧60模块除版本号字节不变，原神经模型
 不重训、不改参数；先冻结静态520B模型（压缩203B）再评估已见前缀，不称新独立验证。

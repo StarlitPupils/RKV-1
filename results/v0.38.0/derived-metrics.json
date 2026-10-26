@@ -1,0 +1,198 @@
+{
+  "comparisons": [
+    {
+      "id": "sympy__sympy__integrals__integrals.py",
+      "method": "neural",
+      "baseline": "zlib",
+      "original_logical_payload_gap_bits": 13679,
+      "fixed_CDF_ideal_gap_bits": 13678.750207959478,
+      "overhead_fraction_of_positive_gap": 1.826098695241992e-05
+    },
+    {
+      "id": "sympy__sympy__integrals__integrals.py",
+      "method": "neural",
+      "baseline": "zstd",
+      "original_logical_payload_gap_bits": 12303,
+      "fixed_CDF_ideal_gap_bits": 12302.750207959478,
+      "overhead_fraction_of_positive_gap": 2.030334394230286e-05
+    },
+    {
+      "id": "sympy__sympy__integrals__integrals.py",
+      "method": "neural",
+      "baseline": "lzma",
+      "original_logical_payload_gap_bits": 13271,
+      "fixed_CDF_ideal_gap_bits": 13270.750207959478,
+      "overhead_fraction_of_positive_gap": 1.882239774863628e-05
+    },
+    {
+      "id": "latex3__base__ltmath.dtx",
+      "method": "neural",
+      "baseline": "zlib",
+      "original_logical_payload_gap_bits": 23367,
+      "fixed_CDF_ideal_gap_bits": 23365.478482034232,
+      "overhead_fraction_of_positive_gap": 6.511396267248677e-05
+    },
+    {
+      "id": "latex3__base__ltmath.dtx",
+      "method": "neural",
+      "baseline": "zstd",
+      "original_logical_payload_gap_bits": 22223,
+      "fixed_CDF_ideal_gap_bits": 22221.478482034232,
+      "overhead_fraction_of_positive_gap": 6.846591215263458e-05
+    },
+    {
+      "id": "latex3__base__ltmath.dtx",
+      "method": "neural",
+      "baseline": "lzma",
+      "original_logical_payload_gap_bits": 23079,
+      "fixed_CDF_ideal_gap_bits": 23077.478482034232,
+      "overhead_fraction_of_positive_gap": 6.592651179721818e-05
+    },
+    {
+      "id": "latex3__base__ltmath.dtx",
+      "method": "unigram",
+      "baseline": "zlib",
+      "original_logical_payload_gap_bits": 24893,
+      "fixed_CDF_ideal_gap_bits": 24891.48365150846,
+      "overhead_fraction_of_positive_gap": 6.091465438232625e-05
+    },
+    {
+      "id": "latex3__base__ltmath.dtx",
+      "method": "unigram",
+      "baseline": "zstd",
+      "original_logical_payload_gap_bits": 23749,
+      "fixed_CDF_ideal_gap_bits": 23747.48365150846,
+      "overhead_fraction_of_positive_gap": 6.384894065178523e-05
+    },
+    {
+      "id": "latex3__base__ltmath.dtx",
+      "method": "unigram",
+      "baseline": "lzma",
+      "original_logical_payload_gap_bits": 24605,
+      "fixed_CDF_ideal_gap_bits": 24603.48365150846,
+      "overhead_fraction_of_positive_gap": 6.162765663642542e-05
+    },
+    {
+      "id": "scipy__scipy__linalg___basic.py",
+      "method": "neural",
+      "baseline": "zlib",
+      "original_logical_payload_gap_bits": 11908,
+      "fixed_CDF_ideal_gap_bits": 11906.976800229822,
+      "overhead_fraction_of_positive_gap": 8.592540898367469e-05
+    },
+    {
+      "id": "scipy__scipy__linalg___basic.py",
+      "method": "neural",
+      "baseline": "zstd",
+      "original_logical_payload_gap_bits": 10892,
+      "fixed_CDF_ideal_gap_bits": 10890.976800229822,
+      "overhead_fraction_of_positive_gap": 9.394048569386689e-05
+    },
+    {
+      "id": "scipy__scipy__linalg___basic.py",
+      "method": "neural",
+      "baseline": "lzma",
+      "original_logical_payload_gap_bits": 11564,
+      "fixed_CDF_ideal_gap_bits": 11562.976800229822,
+      "overhead_fraction_of_positive_gap": 8.848147441867849e-05
+    },
+    {
+      "id": "control_noise_256k.bin",
+      "method": "neural",
+      "baseline": "zlib",
+      "original_logical_payload_gap_bits": 7494,
+      "fixed_CDF_ideal_gap_bits": 7492.281897605295,
+      "overhead_fraction_of_positive_gap": 0.0002292637302782301
+    },
+    {
+      "id": "control_noise_256k.bin",
+      "method": "neural",
+      "baseline": "zstd",
+      "original_logical_payload_gap_bits": 7470,
+      "fixed_CDF_ideal_gap_bits": 7468.281897605295,
+      "overhead_fraction_of_positive_gap": 0.00023000032057631274
+    },
+    {
+      "id": "control_noise_256k.bin",
+      "method": "neural",
+      "baseline": "lzma",
+      "original_logical_payload_gap_bits": 7102,
+      "fixed_CDF_ideal_gap_bits": 7100.281897605295,
+      "overhead_fraction_of_positive_gap": 0.00024191810682977418
+    },
+    {
+      "id": "control_noise_256k.bin",
+      "method": "unigram",
+      "baseline": "zlib",
+      "original_logical_payload_gap_bits": 37704,
+      "fixed_CDF_ideal_gap_bits": 37703.64501693922,
+      "overhead_fraction_of_positive_gap": 9.414997368470088e-06
+    },
+    {
+      "id": "control_noise_256k.bin",
+      "method": "unigram",
+      "baseline": "zstd",
+      "original_logical_payload_gap_bits": 37680,
+      "fixed_CDF_ideal_gap_bits": 37679.64501693922,
+      "overhead_fraction_of_positive_gap": 9.42099418208058e-06
+    },
+    {
+      "id": "control_noise_256k.bin",
+      "method": "unigram",
+      "baseline": "lzma",
+      "original_logical_payload_gap_bits": 37312,
+      "fixed_CDF_ideal_gap_bits": 37311.64501693922,
+      "overhead_fraction_of_positive_gap": 9.513911363121683e-06
+    },
+    {
+      "id": "sympy__sympy__integrals__integrals.py",
+      "method": "unigram",
+      "baseline": "zlib",
+      "original_logical_payload_gap_bits": 15546,
+      "fixed_CDF_ideal_gap_bits": 15545.2585009486,
+      "overhead_fraction_of_positive_gap": 4.7697095806043445e-05
+    },
+    {
+      "id": "sympy__sympy__integrals__integrals.py",
+      "method": "unigram",
+      "baseline": "zstd",
+      "original_logical_payload_gap_bits": 14170,
+      "fixed_CDF_ideal_gap_bits": 14169.2585009486,
+      "overhead_fraction_of_positive_gap": 5.2328796852558314e-05
+    },
+    {
+      "id": "sympy__sympy__integrals__integrals.py",
+      "method": "unigram",
+      "baseline": "lzma",
+      "original_logical_payload_gap_bits": 15138,
+      "fixed_CDF_ideal_gap_bits": 15137.2585009486,
+      "overhead_fraction_of_positive_gap": 4.898262989831889e-05
+    },
+    {
+      "id": "scipy__scipy__linalg___basic.py",
+      "method": "unigram",
+      "baseline": "zlib",
+      "original_logical_payload_gap_bits": 13221,
+      "fixed_CDF_ideal_gap_bits": 13219.760342296606,
+      "overhead_fraction_of_positive_gap": 9.376429191393894e-05
+    },
+    {
+      "id": "scipy__scipy__linalg___basic.py",
+      "method": "unigram",
+      "baseline": "zstd",
+      "original_logical_payload_gap_bits": 12205,
+      "fixed_CDF_ideal_gap_bits": 12203.760342296606,
+      "overhead_fraction_of_positive_gap": 0.00010156966025351796
+    },
+    {
+      "id": "scipy__scipy__linalg___basic.py",
+      "method": "unigram",
+      "baseline": "lzma",
+      "original_logical_payload_gap_bits": 12877,
+      "fixed_CDF_ideal_gap_bits": 12875.760342296606,
+      "overhead_fraction_of_positive_gap": 9.626913903814449e-05
+    }
+  ],
+  "logical_not_byte_padding": true,
+  "scope": "Diagnostic reuse of previously evaluated prefixes; no new scientific trial"
+}
