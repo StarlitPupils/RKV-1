@@ -6,7 +6,19 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.45.0 · 固定SID单trace视图复用候选
+## 当前版本：v0.46.0 · SciFact指定来源三键批查询迁移
+
+24fresh worker、768bundle/2304绑定/24完整源恢复及6组proof/全树一致。base-only全部CAS计数相等控制：True/True；没有读取字节节省。
+spread/repeated时间联合门槛：True/True，query wall中位比0.440/0.426；CPU/parent/RSS/源码和全部费用见报告。
+
+![科学记录批查询成本](results/v0.46.0/science-bundles.png)
+
+既有5183doc科学语料、SHA规则选128doc，非未知数据/开放检索/自然多跳/回答收益。原文和完整hit只留本地，public仅SHA/locator/计数。
+255检查254通过/1跳过，默认不集成、旧QueryView逐字不改，0新模型API；E3净收益/E4整体/真实长会话/无限上下文未完成。
+
+[冻结协议](docs/SCIENCE-BUNDLES.md) · [详实报告](results/v0.46.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.46.0)。
+
+## v0.45.0 · 固定SID单trace视图复用候选
 
 24fresh worker、2400proof/6840绑定/624历史源及6组完整树一致。分散工作量严格下降/同块相等控制联合True；
 clustered/separated时间联合门槛True/True。

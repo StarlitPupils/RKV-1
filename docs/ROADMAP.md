@@ -319,3 +319,7 @@ observer开销和全部memory/sidecar/源码计账，原v0.40漏项不回填。�
 ## v0.45：固定SID单trace已验证视图候选
 
 24worker/2400proof/6840绑定/624源与旧v043一致。机制联合True，两布局时间联合True/True，分散decoded少61.49%；新请求重验/每selected原record SHA保持，但不承诺每hop重验所有未选中源。RAM/源码和完整费用计账，默认不集成，非真实推理收益。报告results/v0.45.0/SUMMARY.md；下一项先冻独立安全/负载转移，不调旧参数。
+
+## v0.46：既有SciFact指定三key批查询迁移
+
+24worker/768bundle/2304绑定/24全源恢复通过，无原文公共JSON及全树一致。两负载base-only CAS计数相等，时间联合True/True，全部费用与负方向见results/v0.46.0/SUMMARY.md。旧QueryView不改，默认不集成，非未知数据/科学问答或长期收益；下一项另冻假设，不改本次selector追正。

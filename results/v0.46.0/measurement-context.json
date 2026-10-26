@@ -1,0 +1,29 @@
+{
+  "runtime_protocol_input_freeze": "0400c5695ac1d854ada96bc7c75443f1e04eabd3",
+  "candidate_CI": 40342657404,
+  "formal_workers": 24,
+  "formal_evaluation_retries": 0,
+  "new_training_runs": 0,
+  "new_remote_model_calls": 0,
+  "prior_fully_verified_release": "v0.45.0",
+  "prior_final_proof_sha256": "5049462d2a24e1672b265bda09a2149996f684e10f472ae26361d465b60d9743",
+  "protocol_and_test_source": {
+    "docs/SCIENCE-BUNDLES.md": {
+      "bytes": 7304,
+      "sha256": "ab19ce75bd7fa30f7d52b5a361b5e5525cd74032e01e9600a6f752c6cff2aecf"
+    },
+    "tests/test_science_bundles.py": {
+      "bytes": 2925,
+      "sha256": "ed2888870be6acb03f08beed5a1c527488ad5703606c6504e9c12d74fdcdfc4c"
+    }
+  },
+  "scope": "Existing SciFact known-source three-key batch transfer; no scientific source text in new public results, no new QA or reasoning",
+  "pre_tag_install_harness_failure": {
+    "kind": "NameError: json missing in newly generated isolated smoke program",
+    "log_bytes": 6339,
+    "log_sha256": "358c465714fa079e6ab47b5382d30520e46f3fd3876a6e21bbee0696261f9f33",
+    "corrected_private_harness_only": true,
+    "scientific_experiments_repeated": 0,
+    "corrected_external_install_smoke_passed": true
+  }
+}

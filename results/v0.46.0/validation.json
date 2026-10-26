@@ -1,0 +1,44 @@
+{
+  "bundles": 768,
+  "accepted_bindings": 2304,
+  "full_corpus_recoveries": 24,
+  "four_condition_identity_groups": 6,
+  "all_mechanical_gates_pass": true,
+  "text_free_new_public_JSON": true,
+  "parent_timing_records": 24,
+  "meter_ON_cases": 384,
+  "meter_OFF_null_cases": 384,
+  "view_ON_scope_and_cleanup_cases": 384,
+  "unit_tests_run": 255,
+  "unit_tests_passed": 254,
+  "unit_tests_skipped": 1,
+  "runtime_module_count": 64,
+  "html_files": 1,
+  "freeze": "0400c5695ac1d854ada96bc7c75443f1e04eabd3",
+  "gates_by_workload": {
+    "spread": {
+      "expected_exact_CAS_equality": true,
+      "median_unmetered_time_ratios": {
+        "query_wall_s": 0.4397092449640912,
+        "query_cpu_s": 0.4444444444444444,
+        "parent_full_process_wall_s": 0.8147465079682084
+      },
+      "time_joint_gate": true
+    },
+    "repeated": {
+      "expected_exact_CAS_equality": true,
+      "median_unmetered_time_ratios": {
+        "query_wall_s": 0.4260592983201808,
+        "query_cpu_s": 0.40540540540540543,
+        "parent_full_process_wall_s": 0.8112580856098234
+      },
+      "time_joint_gate": true
+    }
+  },
+  "new_remote_model_calls": 0,
+  "physical_SSD_bytes": null,
+  "all_system_file_bytes": null,
+  "cold_cache": null,
+  "cross_machine": null,
+  "figure_visually_inspected": true
+}

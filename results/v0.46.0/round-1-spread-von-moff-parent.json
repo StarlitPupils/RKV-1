@@ -1,0 +1,10 @@
+{
+  "child_report_sha256": "ccdd4d03a545b064081b57dbd7ac5e184ff2e95389b4c9701c39bedc2d3bc1e2",
+  "error": null,
+  "meter": "off",
+  "parent_full_process_wall_s": 1.3955906999763101,
+  "return_code": 0,
+  "round": 1,
+  "view": "on",
+  "workload": "spread"
+}

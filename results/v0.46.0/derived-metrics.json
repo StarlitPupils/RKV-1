@@ -1,0 +1,942 @@
+{
+  "rows": [
+    {
+      "round": 1,
+      "workload": "spread",
+      "view": "off",
+      "meter": "off",
+      "traffic": null,
+      "view_totals": null,
+      "peak_sqlite_logical_page_bytes": null,
+      "peak_metadata_graph_bytes": null,
+      "query_wall_s": 0.552352900383994,
+      "query_cpu_s": 0.53125,
+      "audit_wall_s": 0.00035310001112520695,
+      "audit_cpu_s": 0.0,
+      "selected_record_bytes": 155245,
+      "parent_full_process_wall_s": 1.7129140000324696,
+      "worker_wall_s": 1.5837950999848545,
+      "worker_cpu_s": 1.46875,
+      "observed_peak_rss_bytes": 90816512,
+      "files": {
+        "memory_bytes": 8420243,
+        "other_worker_files_bytes": 232833,
+        "source_bytes": 8307875
+      },
+      "ingest_wall_s": 0.788113399874419,
+      "ingest_cpu_s": 0.703125,
+      "recovery_wall_s": 0.06259420001879334,
+      "recovery_cpu_s": 0.0625
+    },
+    {
+      "round": 1,
+      "workload": "spread",
+      "view": "on",
+      "meter": "off",
+      "traffic": null,
+      "view_totals": {
+        "view_builds": 32,
+        "lookup_calls": 96
+      },
+      "peak_sqlite_logical_page_bytes": 5455872,
+      "peak_metadata_graph_bytes": 44294,
+      "query_wall_s": 0.23901030072011054,
+      "query_cpu_s": 0.234375,
+      "audit_wall_s": 0.0003557989839464426,
+      "audit_cpu_s": 0.0,
+      "selected_record_bytes": 155245,
+      "parent_full_process_wall_s": 1.3955906999763101,
+      "worker_wall_s": 1.2520569001790136,
+      "worker_cpu_s": 1.234375,
+      "observed_peak_rss_bytes": 89632768,
+      "files": {
+        "memory_bytes": 8420243,
+        "other_worker_files_bytes": 232833,
+        "source_bytes": 8307875
+      },
+      "ingest_wall_s": 0.7753315998706967,
+      "ingest_cpu_s": 0.75,
+      "recovery_wall_s": 0.06062759994529188,
+      "recovery_cpu_s": 0.0625
+    },
+    {
+      "round": 1,
+      "workload": "spread",
+      "view": "off",
+      "meter": "on",
+      "traffic": {
+        "CAS_decoded_output_bytes": 6422528,
+        "application_CAS_file_bytes": 2283382,
+        "compressed_decode_output_bytes": 6422528,
+        "decode_attempts": 98,
+        "decode_successes": 98,
+        "object_opens": 98,
+        "payload_input_bytes": 2275150,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 196
+      },
+      "view_totals": null,
+      "peak_sqlite_logical_page_bytes": null,
+      "peak_metadata_graph_bytes": null,
+      "query_wall_s": 0.5572877007070929,
+      "query_cpu_s": 0.546875,
+      "audit_wall_s": 0.000337300356477499,
+      "audit_cpu_s": 0.0,
+      "selected_record_bytes": 155245,
+      "parent_full_process_wall_s": 1.7171972000505775,
+      "worker_wall_s": 1.572342700092122,
+      "worker_cpu_s": 1.5,
+      "observed_peak_rss_bytes": 90755072,
+      "files": {
+        "memory_bytes": 8420243,
+        "other_worker_files_bytes": 232833,
+        "source_bytes": 8307875
+      },
+      "ingest_wall_s": 0.7720480000134557,
+      "ingest_cpu_s": 0.703125,
+      "recovery_wall_s": 0.06262320000678301,
+      "recovery_cpu_s": 0.0625
+    },
+    {
+      "round": 1,
+      "workload": "spread",
+      "view": "on",
+      "meter": "on",
+      "traffic": {
+        "CAS_decoded_output_bytes": 6422528,
+        "application_CAS_file_bytes": 2283382,
+        "compressed_decode_output_bytes": 6422528,
+        "decode_attempts": 98,
+        "decode_successes": 98,
+        "object_opens": 98,
+        "payload_input_bytes": 2275150,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 196
+      },
+      "view_totals": {
+        "view_builds": 32,
+        "lookup_calls": 96
+      },
+      "peak_sqlite_logical_page_bytes": 5455872,
+      "peak_metadata_graph_bytes": 44294,
+      "query_wall_s": 0.25050760083831847,
+      "query_cpu_s": 0.234375,
+      "audit_wall_s": 0.0003429003991186619,
+      "audit_cpu_s": 0.0,
+      "selected_record_bytes": 155245,
+      "parent_full_process_wall_s": 1.3920092999469489,
+      "worker_wall_s": 1.2634762001689523,
+      "worker_cpu_s": 1.1875,
+      "observed_peak_rss_bytes": 89718784,
+      "files": {
+        "memory_bytes": 8420243,
+        "other_worker_files_bytes": 232833,
+        "source_bytes": 8307875
+      },
+      "ingest_wall_s": 0.7719650000799447,
+      "ingest_cpu_s": 0.703125,
+      "recovery_wall_s": 0.060613200068473816,
+      "recovery_cpu_s": 0.0625
+    },
+    {
+      "round": 1,
+      "workload": "repeated",
+      "view": "off",
+      "meter": "off",
+      "traffic": null,
+      "view_totals": null,
+      "peak_sqlite_logical_page_bytes": null,
+      "peak_metadata_graph_bytes": null,
+      "query_wall_s": 0.5639607000630349,
+      "query_cpu_s": 0.578125,
+      "audit_wall_s": 0.00027540093287825584,
+      "audit_cpu_s": 0.0,
+      "selected_record_bytes": 153483,
+      "parent_full_process_wall_s": 1.7094878000207245,
+      "worker_wall_s": 1.5785262000281364,
+      "worker_cpu_s": 1.515625,
+      "observed_peak_rss_bytes": 90718208,
+      "files": {
+        "memory_bytes": 8420243,
+        "other_worker_files_bytes": 231233,
+        "source_bytes": 8307875
+      },
+      "ingest_wall_s": 0.7741911998018622,
+      "ingest_cpu_s": 0.734375,
+      "recovery_wall_s": 0.06122469995170832,
+      "recovery_cpu_s": 0.0625
+    },
+    {
+      "round": 1,
+      "workload": "repeated",
+      "view": "on",
+      "meter": "off",
+      "traffic": null,
+      "view_totals": {
+        "view_builds": 32,
+        "lookup_calls": 96
+      },
+      "peak_sqlite_logical_page_bytes": 5455872,
+      "peak_metadata_graph_bytes": 44294,
+      "query_wall_s": 0.2402807001490146,
+      "query_cpu_s": 0.234375,
+      "audit_wall_s": 0.0002674995921552181,
+      "audit_cpu_s": 0.0,
+      "selected_record_bytes": 153483,
+      "parent_full_process_wall_s": 1.3868358000181615,
+      "worker_wall_s": 1.2569607999175787,
+      "worker_cpu_s": 1.21875,
+      "observed_peak_rss_bytes": 89731072,
+      "files": {
+        "memory_bytes": 8420243,
+        "other_worker_files_bytes": 231233,
+        "source_bytes": 8307875
+      },
+      "ingest_wall_s": 0.7766106999479234,
+      "ingest_cpu_s": 0.75,
+      "recovery_wall_s": 0.06103219999931753,
+      "recovery_cpu_s": 0.0625
+    },
+    {
+      "round": 1,
+      "workload": "repeated",
+      "view": "off",
+      "meter": "on",
+      "traffic": {
+        "CAS_decoded_output_bytes": 6442473,
+        "application_CAS_file_bytes": 2289018,
+        "compressed_decode_output_bytes": 6442473,
+        "decode_attempts": 99,
+        "decode_successes": 99,
+        "object_opens": 99,
+        "payload_input_bytes": 2280702,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 198
+      },
+      "view_totals": null,
+      "peak_sqlite_logical_page_bytes": null,
+      "peak_metadata_graph_bytes": null,
+      "query_wall_s": 0.5565266998019069,
+      "query_cpu_s": 0.5625,
+      "audit_wall_s": 0.0002701005432754755,
+      "audit_cpu_s": 0.0,
+      "selected_record_bytes": 153483,
+      "parent_full_process_wall_s": 1.7087316999677569,
+      "worker_wall_s": 1.5808980001602322,
+      "worker_cpu_s": 1.546875,
+      "observed_peak_rss_bytes": 90656768,
+      "files": {
+        "memory_bytes": 8420243,
+        "other_worker_files_bytes": 231233,
+        "source_bytes": 8307875
+      },
+      "ingest_wall_s": 0.7810967999976128,
+      "ingest_cpu_s": 0.734375,
+      "recovery_wall_s": 0.06134749995544553,
+      "recovery_cpu_s": 0.0625
+    },
+    {
+      "round": 1,
+      "workload": "repeated",
+      "view": "on",
+      "meter": "on",
+      "traffic": {
+        "CAS_decoded_output_bytes": 6442473,
+        "application_CAS_file_bytes": 2289018,
+        "compressed_decode_output_bytes": 6442473,
+        "decode_attempts": 99,
+        "decode_successes": 99,
+        "object_opens": 99,
+        "payload_input_bytes": 2280702,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 198
+      },
+      "view_totals": {
+        "view_builds": 32,
+        "lookup_calls": 96
+      },
+      "peak_sqlite_logical_page_bytes": 5455872,
+      "peak_metadata_graph_bytes": 44294,
+      "query_wall_s": 0.24234590074047446,
+      "query_cpu_s": 0.234375,
+      "audit_wall_s": 0.0002667002845555544,
+      "audit_cpu_s": 0.0,
+      "selected_record_bytes": 153483,
+      "parent_full_process_wall_s": 1.4044423999730498,
+      "worker_wall_s": 1.2603332998696715,
+      "worker_cpu_s": 1.109375,
+      "observed_peak_rss_bytes": 89890816,
+      "files": {
+        "memory_bytes": 8420243,
+        "other_worker_files_bytes": 231233,
+        "source_bytes": 8307875
+      },
+      "ingest_wall_s": 0.778486100025475,
+      "ingest_cpu_s": 0.640625,
+      "recovery_wall_s": 0.06007400015369058,
+      "recovery_cpu_s": 0.0625
+    },
+    {
+      "round": 2,
+      "workload": "spread",
+      "view": "off",
+      "meter": "off",
+      "traffic": null,
+      "view_totals": null,
+      "peak_sqlite_logical_page_bytes": null,
+      "peak_metadata_graph_bytes": null,
+      "query_wall_s": 0.5364093000534922,
+      "query_cpu_s": 0.546875,
+      "audit_wall_s": 0.00034649879671633244,
+      "audit_cpu_s": 0.0,
+      "selected_record_bytes": 155245,
+      "parent_full_process_wall_s": 1.698526200139895,
+      "worker_wall_s": 1.5707850998733193,
+      "worker_cpu_s": 1.515625,
+      "observed_peak_rss_bytes": 90771456,
+      "files": {
+        "memory_bytes": 8420243,
+        "other_worker_files_bytes": 232833,
+        "source_bytes": 8307875
+      },
+      "ingest_wall_s": 0.7923487999942154,
+      "ingest_cpu_s": 0.734375,
+      "recovery_wall_s": 0.06222620001062751,
+      "recovery_cpu_s": 0.0625
+    },
+    {
+      "round": 2,
+      "workload": "spread",
+      "view": "on",
+      "meter": "off",
+      "traffic": null,
+      "view_totals": {
+        "view_builds": 32,
+        "lookup_calls": 96
+      },
+      "peak_sqlite_logical_page_bytes": 5455872,
+      "peak_metadata_graph_bytes": 44294,
+      "query_wall_s": 0.23782600136473775,
+      "query_cpu_s": 0.25,
+      "audit_wall_s": 0.00033820117823779583,
+      "audit_cpu_s": 0.0,
+      "selected_record_bytes": 155245,
+      "parent_full_process_wall_s": 1.40432079997845,
+      "worker_wall_s": 1.2768506000284106,
+      "worker_cpu_s": 1.234375,
+      "observed_peak_rss_bytes": 89837568,
+      "files": {
+        "memory_bytes": 8420243,
+        "other_worker_files_bytes": 232833,
+        "source_bytes": 8307875
+      },
+      "ingest_wall_s": 0.7943345000967383,
+      "ingest_cpu_s": 0.765625,
+      "recovery_wall_s": 0.06359730008989573,
+      "recovery_cpu_s": 0.078125
+    },
+    {
+      "round": 2,
+      "workload": "spread",
+      "view": "off",
+      "meter": "on",
+      "traffic": {
+        "CAS_decoded_output_bytes": 6422528,
+        "application_CAS_file_bytes": 2283382,
+        "compressed_decode_output_bytes": 6422528,
+        "decode_attempts": 98,
+        "decode_successes": 98,
+        "object_opens": 98,
+        "payload_input_bytes": 2275150,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 196
+      },
+      "view_totals": null,
+      "peak_sqlite_logical_page_bytes": null,
+      "peak_metadata_graph_bytes": null,
+      "query_wall_s": 0.5748521997593343,
+      "query_cpu_s": 0.578125,
+      "audit_wall_s": 0.00039789918810129166,
+      "audit_cpu_s": 0.0,
+      "selected_record_bytes": 155245,
+      "parent_full_process_wall_s": 1.7657282000873238,
+      "worker_wall_s": 1.621062999824062,
+      "worker_cpu_s": 1.578125,
+      "observed_peak_rss_bytes": 90513408,
+      "files": {
+        "memory_bytes": 8420243,
+        "other_worker_files_bytes": 232833,
+        "source_bytes": 8307875
+      },
+      "ingest_wall_s": 0.8020136000122875,
+      "ingest_cpu_s": 0.765625,
+      "recovery_wall_s": 0.06071080011315644,
+      "recovery_cpu_s": 0.0625
+    },
+    {
+      "round": 2,
+      "workload": "spread",
+      "view": "on",
+      "meter": "on",
+      "traffic": {
+        "CAS_decoded_output_bytes": 6422528,
+        "application_CAS_file_bytes": 2283382,
+        "compressed_decode_output_bytes": 6422528,
+        "decode_attempts": 98,
+        "decode_successes": 98,
+        "object_opens": 98,
+        "payload_input_bytes": 2275150,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 196
+      },
+      "view_totals": {
+        "view_builds": 32,
+        "lookup_calls": 96
+      },
+      "peak_sqlite_logical_page_bytes": 5455872,
+      "peak_metadata_graph_bytes": 44294,
+      "query_wall_s": 0.25703170080669224,
+      "query_cpu_s": 0.265625,
+      "audit_wall_s": 0.00035830005072057247,
+      "audit_cpu_s": 0.0,
+      "selected_record_bytes": 155245,
+      "parent_full_process_wall_s": 1.4292867998592556,
+      "worker_wall_s": 1.3020887000020593,
+      "worker_cpu_s": 1.265625,
+      "observed_peak_rss_bytes": 89751552,
+      "files": {
+        "memory_bytes": 8420243,
+        "other_worker_files_bytes": 232833,
+        "source_bytes": 8307875
+      },
+      "ingest_wall_s": 0.768570699961856,
+      "ingest_cpu_s": 0.75,
+      "recovery_wall_s": 0.083718900103122,
+      "recovery_cpu_s": 0.078125
+    },
+    {
+      "round": 2,
+      "workload": "repeated",
+      "view": "off",
+      "meter": "off",
+      "traffic": null,
+      "view_totals": null,
+      "peak_sqlite_logical_page_bytes": null,
+      "peak_metadata_graph_bytes": null,
+      "query_wall_s": 0.6029300009831786,
+      "query_cpu_s": 0.609375,
+      "audit_wall_s": 0.00031000026501715183,
+      "audit_cpu_s": 0.0,
+      "selected_record_bytes": 153483,
+      "parent_full_process_wall_s": 1.7738521001301706,
+      "worker_wall_s": 1.6299380001146346,
+      "worker_cpu_s": 1.578125,
+      "observed_peak_rss_bytes": 90607616,
+      "files": {
+        "memory_bytes": 8420243,
+        "other_worker_files_bytes": 231233,
+        "source_bytes": 8307875
+      },
+      "ingest_wall_s": 0.7786645998712629,
+      "ingest_cpu_s": 0.734375,
+      "recovery_wall_s": 0.06796280015259981,
+      "recovery_cpu_s": 0.0625
+    },
+    {
+      "round": 2,
+      "workload": "repeated",
+      "view": "on",
+      "meter": "off",
+      "traffic": null,
+      "view_totals": {
+        "view_builds": 32,
+        "lookup_calls": 96
+      },
+      "peak_sqlite_logical_page_bytes": 5455872,
+      "peak_metadata_graph_bytes": 44294,
+      "query_wall_s": 0.24165230034850538,
+      "query_cpu_s": 0.21875,
+      "audit_wall_s": 0.0002725005615502596,
+      "audit_cpu_s": 0.0,
+      "selected_record_bytes": 153483,
+      "parent_full_process_wall_s": 1.3854805000592023,
+      "worker_wall_s": 1.2562963000964373,
+      "worker_cpu_s": 1.1875,
+      "observed_peak_rss_bytes": 89817088,
+      "files": {
+        "memory_bytes": 8420243,
+        "other_worker_files_bytes": 231233,
+        "source_bytes": 8307875
+      },
+      "ingest_wall_s": 0.772928899852559,
+      "ingest_cpu_s": 0.71875,
+      "recovery_wall_s": 0.05918550002388656,
+      "recovery_cpu_s": 0.0625
+    },
+    {
+      "round": 2,
+      "workload": "repeated",
+      "view": "off",
+      "meter": "on",
+      "traffic": {
+        "CAS_decoded_output_bytes": 6442473,
+        "application_CAS_file_bytes": 2289018,
+        "compressed_decode_output_bytes": 6442473,
+        "decode_attempts": 99,
+        "decode_successes": 99,
+        "object_opens": 99,
+        "payload_input_bytes": 2280702,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 198
+      },
+      "view_totals": null,
+      "peak_sqlite_logical_page_bytes": null,
+      "peak_metadata_graph_bytes": null,
+      "query_wall_s": 0.5921841003000736,
+      "query_cpu_s": 0.578125,
+      "audit_wall_s": 0.00028930045664310455,
+      "audit_cpu_s": 0.0,
+      "selected_record_bytes": 153483,
+      "parent_full_process_wall_s": 1.7552924999035895,
+      "worker_wall_s": 1.62098199990578,
+      "worker_cpu_s": 1.53125,
+      "observed_peak_rss_bytes": 90497024,
+      "files": {
+        "memory_bytes": 8420243,
+        "other_worker_files_bytes": 231233,
+        "source_bytes": 8307875
+      },
+      "ingest_wall_s": 0.7810873999260366,
+      "ingest_cpu_s": 0.703125,
+      "recovery_wall_s": 0.06918610003776848,
+      "recovery_cpu_s": 0.078125
+    },
+    {
+      "round": 2,
+      "workload": "repeated",
+      "view": "on",
+      "meter": "on",
+      "traffic": {
+        "CAS_decoded_output_bytes": 6442473,
+        "application_CAS_file_bytes": 2289018,
+        "compressed_decode_output_bytes": 6442473,
+        "decode_attempts": 99,
+        "decode_successes": 99,
+        "object_opens": 99,
+        "payload_input_bytes": 2280702,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 198
+      },
+      "view_totals": {
+        "view_builds": 32,
+        "lookup_calls": 96
+      },
+      "peak_sqlite_logical_page_bytes": 5455872,
+      "peak_metadata_graph_bytes": 44294,
+      "query_wall_s": 0.2590982005931437,
+      "query_cpu_s": 0.265625,
+      "audit_wall_s": 0.00027860025875270367,
+      "audit_cpu_s": 0.0,
+      "selected_record_bytes": 153483,
+      "parent_full_process_wall_s": 1.4329449001234025,
+      "worker_wall_s": 1.3051130000967532,
+      "worker_cpu_s": 1.28125,
+      "observed_peak_rss_bytes": 89378816,
+      "files": {
+        "memory_bytes": 8420243,
+        "other_worker_files_bytes": 231233,
+        "source_bytes": 8307875
+      },
+      "ingest_wall_s": 0.7869455001782626,
+      "ingest_cpu_s": 0.796875,
+      "recovery_wall_s": 0.06605649995617568,
+      "recovery_cpu_s": 0.0625
+    },
+    {
+      "round": 3,
+      "workload": "spread",
+      "view": "off",
+      "meter": "off",
+      "traffic": null,
+      "view_totals": null,
+      "peak_sqlite_logical_page_bytes": null,
+      "peak_metadata_graph_bytes": null,
+      "query_wall_s": 0.575782299041748,
+      "query_cpu_s": 0.5625,
+      "audit_wall_s": 0.00033340021036565304,
+      "audit_cpu_s": 0.0,
+      "selected_record_bytes": 155245,
+      "parent_full_process_wall_s": 1.7618222997989506,
+      "worker_wall_s": 1.6124770001042634,
+      "worker_cpu_s": 1.5625,
+      "observed_peak_rss_bytes": 90394624,
+      "files": {
+        "memory_bytes": 8420243,
+        "other_worker_files_bytes": 232833,
+        "source_bytes": 8307875
+      },
+      "ingest_wall_s": 0.7839375999756157,
+      "ingest_cpu_s": 0.734375,
+      "recovery_wall_s": 0.0682921998668462,
+      "recovery_cpu_s": 0.046875
+    },
+    {
+      "round": 3,
+      "workload": "spread",
+      "view": "on",
+      "meter": "off",
+      "traffic": null,
+      "view_totals": {
+        "view_builds": 32,
+        "lookup_calls": 96
+      },
+      "peak_sqlite_logical_page_bytes": 5455872,
+      "peak_metadata_graph_bytes": 44294,
+      "query_wall_s": 0.2531767999753356,
+      "query_cpu_s": 0.25,
+      "audit_wall_s": 0.00034579960629343987,
+      "audit_cpu_s": 0.0,
+      "selected_record_bytes": 155245,
+      "parent_full_process_wall_s": 1.422558099962771,
+      "worker_wall_s": 1.2890214999206364,
+      "worker_cpu_s": 1.25,
+      "observed_peak_rss_bytes": 89309184,
+      "files": {
+        "memory_bytes": 8420243,
+        "other_worker_files_bytes": 232833,
+        "source_bytes": 8307875
+      },
+      "ingest_wall_s": 0.7852713000029325,
+      "ingest_cpu_s": 0.734375,
+      "recovery_wall_s": 0.06893759989179671,
+      "recovery_cpu_s": 0.078125
+    },
+    {
+      "round": 3,
+      "workload": "spread",
+      "view": "off",
+      "meter": "on",
+      "traffic": {
+        "CAS_decoded_output_bytes": 6422528,
+        "application_CAS_file_bytes": 2283382,
+        "compressed_decode_output_bytes": 6422528,
+        "decode_attempts": 98,
+        "decode_successes": 98,
+        "object_opens": 98,
+        "payload_input_bytes": 2275150,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 196
+      },
+      "view_totals": null,
+      "peak_sqlite_logical_page_bytes": null,
+      "peak_metadata_graph_bytes": null,
+      "query_wall_s": 0.5967315002344549,
+      "query_cpu_s": 0.59375,
+      "audit_wall_s": 0.0003428997006267309,
+      "audit_cpu_s": 0.0,
+      "selected_record_bytes": 155245,
+      "parent_full_process_wall_s": 1.8252544000279158,
+      "worker_wall_s": 1.6733208000659943,
+      "worker_cpu_s": 1.546875,
+      "observed_peak_rss_bytes": 90873856,
+      "files": {
+        "memory_bytes": 8420243,
+        "other_worker_files_bytes": 232833,
+        "source_bytes": 8307875
+      },
+      "ingest_wall_s": 0.8121308998670429,
+      "ingest_cpu_s": 0.703125,
+      "recovery_wall_s": 0.07573679997585714,
+      "recovery_cpu_s": 0.078125
+    },
+    {
+      "round": 3,
+      "workload": "spread",
+      "view": "on",
+      "meter": "on",
+      "traffic": {
+        "CAS_decoded_output_bytes": 6422528,
+        "application_CAS_file_bytes": 2283382,
+        "compressed_decode_output_bytes": 6422528,
+        "decode_attempts": 98,
+        "decode_successes": 98,
+        "object_opens": 98,
+        "payload_input_bytes": 2275150,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 196
+      },
+      "view_totals": {
+        "view_builds": 32,
+        "lookup_calls": 96
+      },
+      "peak_sqlite_logical_page_bytes": 5455872,
+      "peak_metadata_graph_bytes": 44294,
+      "query_wall_s": 0.26101369969546795,
+      "query_cpu_s": 0.25,
+      "audit_wall_s": 0.0003494999837130308,
+      "audit_cpu_s": 0.0,
+      "selected_record_bytes": 155245,
+      "parent_full_process_wall_s": 1.4573038001544774,
+      "worker_wall_s": 1.3223675000481308,
+      "worker_cpu_s": 1.25,
+      "observed_peak_rss_bytes": 89690112,
+      "files": {
+        "memory_bytes": 8420243,
+        "other_worker_files_bytes": 232833,
+        "source_bytes": 8307875
+      },
+      "ingest_wall_s": 0.8146387999877334,
+      "ingest_cpu_s": 0.75,
+      "recovery_wall_s": 0.06716619990766048,
+      "recovery_cpu_s": 0.0625
+    },
+    {
+      "round": 3,
+      "workload": "repeated",
+      "view": "off",
+      "meter": "off",
+      "traffic": null,
+      "view_totals": null,
+      "peak_sqlite_logical_page_bytes": null,
+      "peak_metadata_graph_bytes": null,
+      "query_wall_s": 0.5861292004119605,
+      "query_cpu_s": 0.5625,
+      "audit_wall_s": 0.0002752991858869791,
+      "audit_cpu_s": 0.0,
+      "selected_record_bytes": 153483,
+      "parent_full_process_wall_s": 1.747232099995017,
+      "worker_wall_s": 1.6155437999404967,
+      "worker_cpu_s": 1.515625,
+      "observed_peak_rss_bytes": 90902528,
+      "files": {
+        "memory_bytes": 8420243,
+        "other_worker_files_bytes": 231233,
+        "source_bytes": 8307875
+      },
+      "ingest_wall_s": 0.7821807998698205,
+      "ingest_cpu_s": 0.71875,
+      "recovery_wall_s": 0.0656448001973331,
+      "recovery_cpu_s": 0.078125
+    },
+    {
+      "round": 3,
+      "workload": "repeated",
+      "view": "on",
+      "meter": "off",
+      "traffic": null,
+      "view_totals": {
+        "view_builds": 32,
+        "lookup_calls": 96
+      },
+      "peak_sqlite_logical_page_bytes": 5455872,
+      "peak_metadata_graph_bytes": 44294,
+      "query_wall_s": 0.2528023994527757,
+      "query_cpu_s": 0.25,
+      "audit_wall_s": 0.00026899995282292366,
+      "audit_cpu_s": 0.0,
+      "selected_record_bytes": 153483,
+      "parent_full_process_wall_s": 1.4343838999047875,
+      "worker_wall_s": 1.3025062000378966,
+      "worker_cpu_s": 1.28125,
+      "observed_peak_rss_bytes": 89595904,
+      "files": {
+        "memory_bytes": 8420243,
+        "other_worker_files_bytes": 231233,
+        "source_bytes": 8307875
+      },
+      "ingest_wall_s": 0.8046723001170903,
+      "ingest_cpu_s": 0.78125,
+      "recovery_wall_s": 0.06565060000866652,
+      "recovery_cpu_s": 0.078125
+    },
+    {
+      "round": 3,
+      "workload": "repeated",
+      "view": "off",
+      "meter": "on",
+      "traffic": {
+        "CAS_decoded_output_bytes": 6442473,
+        "application_CAS_file_bytes": 2289018,
+        "compressed_decode_output_bytes": 6442473,
+        "decode_attempts": 99,
+        "decode_successes": 99,
+        "object_opens": 99,
+        "payload_input_bytes": 2280702,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 198
+      },
+      "view_totals": null,
+      "peak_sqlite_logical_page_bytes": null,
+      "peak_metadata_graph_bytes": null,
+      "query_wall_s": 0.5952794984914362,
+      "query_cpu_s": 0.578125,
+      "audit_wall_s": 0.00027510058134794235,
+      "audit_cpu_s": 0.0,
+      "selected_record_bytes": 153483,
+      "parent_full_process_wall_s": 1.7854532001074404,
+      "worker_wall_s": 1.6527321001049131,
+      "worker_cpu_s": 1.578125,
+      "observed_peak_rss_bytes": 90533888,
+      "files": {
+        "memory_bytes": 8420243,
+        "other_worker_files_bytes": 231233,
+        "source_bytes": 8307875
+      },
+      "ingest_wall_s": 0.8115708997938782,
+      "ingest_cpu_s": 0.765625,
+      "recovery_wall_s": 0.0680498001165688,
+      "recovery_cpu_s": 0.0625
+    },
+    {
+      "round": 3,
+      "workload": "repeated",
+      "view": "on",
+      "meter": "on",
+      "traffic": {
+        "CAS_decoded_output_bytes": 6442473,
+        "application_CAS_file_bytes": 2289018,
+        "compressed_decode_output_bytes": 6442473,
+        "decode_attempts": 99,
+        "decode_successes": 99,
+        "object_opens": 99,
+        "payload_input_bytes": 2280702,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 198
+      },
+      "view_totals": {
+        "view_builds": 32,
+        "lookup_calls": 96
+      },
+      "peak_sqlite_logical_page_bytes": 5455872,
+      "peak_metadata_graph_bytes": 44294,
+      "query_wall_s": 0.25811929954215884,
+      "query_cpu_s": 0.25,
+      "audit_wall_s": 0.00026859971694648266,
+      "audit_cpu_s": 0.0,
+      "selected_record_bytes": 153483,
+      "parent_full_process_wall_s": 1.4433447001501918,
+      "worker_wall_s": 1.3101377999410033,
+      "worker_cpu_s": 1.234375,
+      "observed_peak_rss_bytes": 89710592,
+      "files": {
+        "memory_bytes": 8420243,
+        "other_worker_files_bytes": 231233,
+        "source_bytes": 8307875
+      },
+      "ingest_wall_s": 0.8005288999993354,
+      "ingest_cpu_s": 0.71875,
+      "recovery_wall_s": 0.0694556999951601,
+      "recovery_cpu_s": 0.0625
+    }
+  ],
+  "unmetered_time_pairs": [
+    {
+      "round": 1,
+      "workload": "spread",
+      "query_wall_s": 0.4327130364554098,
+      "query_cpu_s": 0.4411764705882353,
+      "parent_full_process_wall_s": 0.8147465079682084
+    },
+    {
+      "round": 2,
+      "workload": "spread",
+      "query_wall_s": 0.4433666629960015,
+      "query_cpu_s": 0.45714285714285713,
+      "parent_full_process_wall_s": 0.8267878351613218
+    },
+    {
+      "round": 3,
+      "workload": "spread",
+      "query_wall_s": 0.4397092449640912,
+      "query_cpu_s": 0.4444444444444444,
+      "parent_full_process_wall_s": 0.8074356307813253
+    },
+    {
+      "round": 1,
+      "workload": "repeated",
+      "query_wall_s": 0.4260592983201808,
+      "query_cpu_s": 0.40540540540540543,
+      "parent_full_process_wall_s": 0.8112580856098234
+    },
+    {
+      "round": 2,
+      "workload": "repeated",
+      "query_wall_s": 0.4007966098128319,
+      "query_cpu_s": 0.358974358974359,
+      "parent_full_process_wall_s": 0.7810575075326357
+    },
+    {
+      "round": 3,
+      "workload": "repeated",
+      "query_wall_s": 0.4313083178164366,
+      "query_cpu_s": 0.4444444444444444,
+      "parent_full_process_wall_s": 0.8209463985402273
+    }
+  ],
+  "metered_work_pairs": [
+    {
+      "round": 1,
+      "workload": "spread",
+      "all_traffic_equal": true,
+      "application_CAS_file_bytes": 1.0,
+      "CAS_decoded_output_bytes": 1.0
+    },
+    {
+      "round": 2,
+      "workload": "spread",
+      "all_traffic_equal": true,
+      "application_CAS_file_bytes": 1.0,
+      "CAS_decoded_output_bytes": 1.0
+    },
+    {
+      "round": 3,
+      "workload": "spread",
+      "all_traffic_equal": true,
+      "application_CAS_file_bytes": 1.0,
+      "CAS_decoded_output_bytes": 1.0
+    },
+    {
+      "round": 1,
+      "workload": "repeated",
+      "all_traffic_equal": true,
+      "application_CAS_file_bytes": 1.0,
+      "CAS_decoded_output_bytes": 1.0
+    },
+    {
+      "round": 2,
+      "workload": "repeated",
+      "all_traffic_equal": true,
+      "application_CAS_file_bytes": 1.0,
+      "CAS_decoded_output_bytes": 1.0
+    },
+    {
+      "round": 3,
+      "workload": "repeated",
+      "all_traffic_equal": true,
+      "application_CAS_file_bytes": 1.0,
+      "CAS_decoded_output_bytes": 1.0
+    }
+  ],
+  "gates_by_workload": {
+    "spread": {
+      "expected_exact_CAS_equality": true,
+      "median_unmetered_time_ratios": {
+        "query_wall_s": 0.4397092449640912,
+        "query_cpu_s": 0.4444444444444444,
+        "parent_full_process_wall_s": 0.8147465079682084
+      },
+      "time_joint_gate": true
+    },
+    "repeated": {
+      "expected_exact_CAS_equality": true,
+      "median_unmetered_time_ratios": {
+        "query_wall_s": 0.4260592983201808,
+        "query_cpu_s": 0.40540540540540543,
+        "parent_full_process_wall_s": 0.8112580856098234
+      },
+      "time_joint_gate": true
+    }
+  },
+  "raw_report_json_bytes": 2086667,
+  "driver_log_bytes": 0
+}

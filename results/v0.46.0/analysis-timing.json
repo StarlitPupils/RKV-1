@@ -1,0 +1,6 @@
+{
+  "analysis_wall_s": 5.515879599843174,
+  "analysis_cpu_s": 3.828125,
+  "observed_peak_rss_bytes": 113840128,
+  "scope": "Separate diagnostic byte/hit/tree audit and plot; excludes initial interpreter startup and writing this record"
+}

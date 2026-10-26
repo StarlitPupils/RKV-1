@@ -1,0 +1,2751 @@
+{
+  "all_system_file_bytes": null,
+  "cases": [
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 9.699957445263863e-06,
+      "bindings": 3,
+      "case_id": "repeated-06",
+      "hits": [
+        {
+          "hit_sha256": "e31b20b860d1d31a5a1ff387049247f906b2bd8c7e21929d1ef369b7dd754e52",
+          "key": "doc:28707489",
+          "locator": {
+            "length": 1971,
+            "offset": 6565264,
+            "path": "corpus.jsonl",
+            "sha256": "6cb9f271d8b46020f01bfff6bfca71f6d0fc5a17d731c2693e3baa4f6c668d25",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "e31b20b860d1d31a5a1ff387049247f906b2bd8c7e21929d1ef369b7dd754e52",
+          "key": "doc:28707489",
+          "locator": {
+            "length": 1971,
+            "offset": 6565264,
+            "path": "corpus.jsonl",
+            "sha256": "6cb9f271d8b46020f01bfff6bfca71f6d0fc5a17d731c2693e3baa4f6c668d25",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "e31b20b860d1d31a5a1ff387049247f906b2bd8c7e21929d1ef369b7dd754e52",
+          "key": "doc:28707489",
+          "locator": {
+            "length": 1971,
+            "offset": 6565264,
+            "path": "corpus.jsonl",
+            "sha256": "6cb9f271d8b46020f01bfff6bfca71f6d0fc5a17d731c2693e3baa4f6c668d25",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:28707489",
+        "doc:28707489",
+        "doc:28707489"
+      ],
+      "proof_sha256": "9836bb63d2af888286f41e4b463339a7949ef422226a766a1175a655ebccc91b",
+      "query_cpu_s": 0.015625,
+      "query_wall_s": 0.008150199893862009,
+      "selected_record_bytes": 5913,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 70209,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 69957,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 9.00006853044033e-06,
+      "bindings": 3,
+      "case_id": "repeated-31",
+      "hits": [
+        {
+          "hit_sha256": "43cfaae3fee806029c150cc1af8e600cf7abc31fb2667d9a34571a4b227515b9",
+          "key": "doc:38944245",
+          "locator": {
+            "length": 1725,
+            "offset": 7477402,
+            "path": "corpus.jsonl",
+            "sha256": "6243904a76cb5a3eadb8cf08f7d071654e87082ae856377fd07a282550a1dd43",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "43cfaae3fee806029c150cc1af8e600cf7abc31fb2667d9a34571a4b227515b9",
+          "key": "doc:38944245",
+          "locator": {
+            "length": 1725,
+            "offset": 7477402,
+            "path": "corpus.jsonl",
+            "sha256": "6243904a76cb5a3eadb8cf08f7d071654e87082ae856377fd07a282550a1dd43",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "43cfaae3fee806029c150cc1af8e600cf7abc31fb2667d9a34571a4b227515b9",
+          "key": "doc:38944245",
+          "locator": {
+            "length": 1725,
+            "offset": 7477402,
+            "path": "corpus.jsonl",
+            "sha256": "6243904a76cb5a3eadb8cf08f7d071654e87082ae856377fd07a282550a1dd43",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:38944245",
+        "doc:38944245",
+        "doc:38944245"
+      ],
+      "proof_sha256": "d1b56e5197f84d71c45c8e34dac5d748ba7a4eb65c538e574c9da7fbabb1f118",
+      "query_cpu_s": 0.0,
+      "query_wall_s": 0.00771609996445477,
+      "selected_record_bytes": 5175,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 70224,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 69972,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 8.400063961744308e-06,
+      "bindings": 3,
+      "case_id": "repeated-15",
+      "hits": [
+        {
+          "hit_sha256": "f96fc99a93b884f24c9fbdffa9e38086885f4df7424ea1883dd09857b305141c",
+          "key": "doc:24494539",
+          "locator": {
+            "length": 2169,
+            "offset": 5765495,
+            "path": "corpus.jsonl",
+            "sha256": "85c9e960b9ae0d5da61c50b6072814a512c843234e37f2e9195e55bee369a6eb",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "f96fc99a93b884f24c9fbdffa9e38086885f4df7424ea1883dd09857b305141c",
+          "key": "doc:24494539",
+          "locator": {
+            "length": 2169,
+            "offset": 5765495,
+            "path": "corpus.jsonl",
+            "sha256": "85c9e960b9ae0d5da61c50b6072814a512c843234e37f2e9195e55bee369a6eb",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "f96fc99a93b884f24c9fbdffa9e38086885f4df7424ea1883dd09857b305141c",
+          "key": "doc:24494539",
+          "locator": {
+            "length": 2169,
+            "offset": 5765495,
+            "path": "corpus.jsonl",
+            "sha256": "85c9e960b9ae0d5da61c50b6072814a512c843234e37f2e9195e55bee369a6eb",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:24494539",
+        "doc:24494539",
+        "doc:24494539"
+      ],
+      "proof_sha256": "4fc37ba3d5fc2bc4e27351dd739cf4f8122aa78eb490e64d58bc0ff2713bf9dc",
+      "query_cpu_s": 0.015625,
+      "query_wall_s": 0.008537199813872576,
+      "selected_record_bytes": 6507,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 393216,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 137673,
+        "compressed_decode_output_bytes": 393216,
+        "decode_attempts": 6,
+        "decode_successes": 6,
+        "object_opens": 6,
+        "payload_input_bytes": 137169,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 12,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 7.90017656981945e-06,
+      "bindings": 3,
+      "case_id": "repeated-16",
+      "hits": [
+        {
+          "hit_sha256": "37a0c0c01b11b12545df7974a3e75474e953c73955a442580e3577d434080e91",
+          "key": "doc:6826100",
+          "locator": {
+            "length": 1269,
+            "offset": 2004793,
+            "path": "corpus.jsonl",
+            "sha256": "62772b4b6addfb706b80cb22e7de5621054f838cad8167172f2c524890e0c823",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "37a0c0c01b11b12545df7974a3e75474e953c73955a442580e3577d434080e91",
+          "key": "doc:6826100",
+          "locator": {
+            "length": 1269,
+            "offset": 2004793,
+            "path": "corpus.jsonl",
+            "sha256": "62772b4b6addfb706b80cb22e7de5621054f838cad8167172f2c524890e0c823",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "37a0c0c01b11b12545df7974a3e75474e953c73955a442580e3577d434080e91",
+          "key": "doc:6826100",
+          "locator": {
+            "length": 1269,
+            "offset": 2004793,
+            "path": "corpus.jsonl",
+            "sha256": "62772b4b6addfb706b80cb22e7de5621054f838cad8167172f2c524890e0c823",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:6826100",
+        "doc:6826100",
+        "doc:6826100"
+      ],
+      "proof_sha256": "30ba11f3f398eb988434c9188f94820be4aa5e5c30071133f8b3931499d6ea17",
+      "query_cpu_s": 0.0,
+      "query_wall_s": 0.007873499998822808,
+      "selected_record_bytes": 3807,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 69429,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 69177,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 7.999828085303307e-06,
+      "bindings": 3,
+      "case_id": "repeated-10",
+      "hits": [
+        {
+          "hit_sha256": "2ac80fe85a746a9efd4ee4b6f4ce9c5c5bc5e75774ec750ff026ed61c61093d3",
+          "key": "doc:6807122",
+          "locator": {
+            "length": 1872,
+            "offset": 1999946,
+            "path": "corpus.jsonl",
+            "sha256": "627b67dfdb621fc76c4102b431f92ffed6cd55bfba734e56e8ef47ad8e584c8c",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "2ac80fe85a746a9efd4ee4b6f4ce9c5c5bc5e75774ec750ff026ed61c61093d3",
+          "key": "doc:6807122",
+          "locator": {
+            "length": 1872,
+            "offset": 1999946,
+            "path": "corpus.jsonl",
+            "sha256": "627b67dfdb621fc76c4102b431f92ffed6cd55bfba734e56e8ef47ad8e584c8c",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "2ac80fe85a746a9efd4ee4b6f4ce9c5c5bc5e75774ec750ff026ed61c61093d3",
+          "key": "doc:6807122",
+          "locator": {
+            "length": 1872,
+            "offset": 1999946,
+            "path": "corpus.jsonl",
+            "sha256": "627b67dfdb621fc76c4102b431f92ffed6cd55bfba734e56e8ef47ad8e584c8c",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:6807122",
+        "doc:6807122",
+        "doc:6807122"
+      ],
+      "proof_sha256": "3c26c45f872d34939f683e6f779f7fb3c08710e2382b82ad56ed53f1d6d187ea",
+      "query_cpu_s": 0.015625,
+      "query_wall_s": 0.007701999973505735,
+      "selected_record_bytes": 5616,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 69429,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 69177,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 7.899943739175797e-06,
+      "bindings": 3,
+      "case_id": "repeated-12",
+      "hits": [
+        {
+          "hit_sha256": "783b37e4a49a1c86fb0fde5c87a2eca9f1e9ad047def27fd2179577687cebbb7",
+          "key": "doc:43711341",
+          "locator": {
+            "length": 1259,
+            "offset": 7872701,
+            "path": "corpus.jsonl",
+            "sha256": "5a3f20c62dfc85cf0e636b3839a7a80456db88aa5c2653aec6b82c79945c20ee",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "783b37e4a49a1c86fb0fde5c87a2eca9f1e9ad047def27fd2179577687cebbb7",
+          "key": "doc:43711341",
+          "locator": {
+            "length": 1259,
+            "offset": 7872701,
+            "path": "corpus.jsonl",
+            "sha256": "5a3f20c62dfc85cf0e636b3839a7a80456db88aa5c2653aec6b82c79945c20ee",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "783b37e4a49a1c86fb0fde5c87a2eca9f1e9ad047def27fd2179577687cebbb7",
+          "key": "doc:43711341",
+          "locator": {
+            "length": 1259,
+            "offset": 7872701,
+            "path": "corpus.jsonl",
+            "sha256": "5a3f20c62dfc85cf0e636b3839a7a80456db88aa5c2653aec6b82c79945c20ee",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:43711341",
+        "doc:43711341",
+        "doc:43711341"
+      ],
+      "proof_sha256": "04b4bc6b0899d45ab92b0699b82d6927df13207c6b2d1fcbca87486ef2c98f4e",
+      "query_cpu_s": 0.015625,
+      "query_wall_s": 0.009323300095275044,
+      "selected_record_bytes": 3777,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 69363,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 69111,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 9.699957445263863e-06,
+      "bindings": 3,
+      "case_id": "repeated-00",
+      "hits": [
+        {
+          "hit_sha256": "a649f59e1220006f284d6ac01370b6b7a0d08fc018c2ee5ab7f9e70902d92eca",
+          "key": "doc:10944947",
+          "locator": {
+            "length": 1271,
+            "offset": 2963808,
+            "path": "corpus.jsonl",
+            "sha256": "f0896d767a17e24c44839f002ef3d58ddb64f4cdcc941161bb55bd1d3ade66d5",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "a649f59e1220006f284d6ac01370b6b7a0d08fc018c2ee5ab7f9e70902d92eca",
+          "key": "doc:10944947",
+          "locator": {
+            "length": 1271,
+            "offset": 2963808,
+            "path": "corpus.jsonl",
+            "sha256": "f0896d767a17e24c44839f002ef3d58ddb64f4cdcc941161bb55bd1d3ade66d5",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "a649f59e1220006f284d6ac01370b6b7a0d08fc018c2ee5ab7f9e70902d92eca",
+          "key": "doc:10944947",
+          "locator": {
+            "length": 1271,
+            "offset": 2963808,
+            "path": "corpus.jsonl",
+            "sha256": "f0896d767a17e24c44839f002ef3d58ddb64f4cdcc941161bb55bd1d3ade66d5",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:10944947",
+        "doc:10944947",
+        "doc:10944947"
+      ],
+      "proof_sha256": "91d423013a0de767f58f597978f3375aa8d75926d92ef58d0bb961c0b6497c25",
+      "query_cpu_s": 0.0,
+      "query_wall_s": 0.007952400017529726,
+      "selected_record_bytes": 3813,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 71367,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 71115,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 8.600065484642982e-06,
+      "bindings": 3,
+      "case_id": "repeated-03",
+      "hits": [
+        {
+          "hit_sha256": "74a7caf735577e0ebd96c5fb61ef06fea8db589922a6a575e2db31da909d95ca",
+          "key": "doc:39300105",
+          "locator": {
+            "length": 1236,
+            "offset": 7504358,
+            "path": "corpus.jsonl",
+            "sha256": "3c6d25b0dfe460edc867463d4a8b5620f95d71866507c5065c4289a6d1e6cbf0",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "74a7caf735577e0ebd96c5fb61ef06fea8db589922a6a575e2db31da909d95ca",
+          "key": "doc:39300105",
+          "locator": {
+            "length": 1236,
+            "offset": 7504358,
+            "path": "corpus.jsonl",
+            "sha256": "3c6d25b0dfe460edc867463d4a8b5620f95d71866507c5065c4289a6d1e6cbf0",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "74a7caf735577e0ebd96c5fb61ef06fea8db589922a6a575e2db31da909d95ca",
+          "key": "doc:39300105",
+          "locator": {
+            "length": 1236,
+            "offset": 7504358,
+            "path": "corpus.jsonl",
+            "sha256": "3c6d25b0dfe460edc867463d4a8b5620f95d71866507c5065c4289a6d1e6cbf0",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:39300105",
+        "doc:39300105",
+        "doc:39300105"
+      ],
+      "proof_sha256": "825efd0b75ab4865835f18d58bd6fedd4ed540e39a863188b4c7a0178b98d8ff",
+      "query_cpu_s": 0.0,
+      "query_wall_s": 0.007937800139188766,
+      "selected_record_bytes": 3708,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 70224,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 69972,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 7.2999391704797745e-06,
+      "bindings": 3,
+      "case_id": "repeated-01",
+      "hits": [
+        {
+          "hit_sha256": "c9c4b2e5d5c71cd46206eaba87a90dece1282ecd0df4fb20395b57820814ea5a",
+          "key": "doc:11481946",
+          "locator": {
+            "length": 755,
+            "offset": 3071937,
+            "path": "corpus.jsonl",
+            "sha256": "ef4b24b3683538ec440c7019a04d7c063039c56213722fe0ffcd75a370e6f41c",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "c9c4b2e5d5c71cd46206eaba87a90dece1282ecd0df4fb20395b57820814ea5a",
+          "key": "doc:11481946",
+          "locator": {
+            "length": 755,
+            "offset": 3071937,
+            "path": "corpus.jsonl",
+            "sha256": "ef4b24b3683538ec440c7019a04d7c063039c56213722fe0ffcd75a370e6f41c",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "c9c4b2e5d5c71cd46206eaba87a90dece1282ecd0df4fb20395b57820814ea5a",
+          "key": "doc:11481946",
+          "locator": {
+            "length": 755,
+            "offset": 3071937,
+            "path": "corpus.jsonl",
+            "sha256": "ef4b24b3683538ec440c7019a04d7c063039c56213722fe0ffcd75a370e6f41c",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:11481946",
+        "doc:11481946",
+        "doc:11481946"
+      ],
+      "proof_sha256": "974e7bd248b17a89c26658d7993b8a2473b7e47ec51e18e7194d26354693d2c4",
+      "query_cpu_s": 0.0,
+      "query_wall_s": 0.007578799966722727,
+      "selected_record_bytes": 2265,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 71448,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 71196,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 8.299946784973145e-06,
+      "bindings": 3,
+      "case_id": "repeated-26",
+      "hits": [
+        {
+          "hit_sha256": "6d7fa12aed75bf34dc01f01f95ed307e19bf0ec21a5d5c2cc4f20c5021ca63d8",
+          "key": "doc:2601135",
+          "locator": {
+            "length": 2485,
+            "offset": 753963,
+            "path": "corpus.jsonl",
+            "sha256": "04bfc77658b908af051ab776774b2d833c422a291c79c8b4c5e7de642c27e93b",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "6d7fa12aed75bf34dc01f01f95ed307e19bf0ec21a5d5c2cc4f20c5021ca63d8",
+          "key": "doc:2601135",
+          "locator": {
+            "length": 2485,
+            "offset": 753963,
+            "path": "corpus.jsonl",
+            "sha256": "04bfc77658b908af051ab776774b2d833c422a291c79c8b4c5e7de642c27e93b",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "6d7fa12aed75bf34dc01f01f95ed307e19bf0ec21a5d5c2cc4f20c5021ca63d8",
+          "key": "doc:2601135",
+          "locator": {
+            "length": 2485,
+            "offset": 753963,
+            "path": "corpus.jsonl",
+            "sha256": "04bfc77658b908af051ab776774b2d833c422a291c79c8b4c5e7de642c27e93b",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:2601135",
+        "doc:2601135",
+        "doc:2601135"
+      ],
+      "proof_sha256": "35839df2883dbc6ad23e7c26b6599826f06556052d9d90e8aa0c4ccc58864e38",
+      "query_cpu_s": 0.015625,
+      "query_wall_s": 0.008361499989405274,
+      "selected_record_bytes": 7455,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 69888,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 69636,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 8.599832653999329e-06,
+      "bindings": 3,
+      "case_id": "repeated-25",
+      "hits": [
+        {
+          "hit_sha256": "92b26931ee47bdc2ac6f0d0c9c7cb13f236c380fe6afddee550f4be04b438700",
+          "key": "doc:9629682",
+          "locator": {
+            "length": 2446,
+            "offset": 2660663,
+            "path": "corpus.jsonl",
+            "sha256": "c79722afeb5591a1fae891ef40f57702bd3f7cca870e5f0b1ac5f22ceef577fb",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "92b26931ee47bdc2ac6f0d0c9c7cb13f236c380fe6afddee550f4be04b438700",
+          "key": "doc:9629682",
+          "locator": {
+            "length": 2446,
+            "offset": 2660663,
+            "path": "corpus.jsonl",
+            "sha256": "c79722afeb5591a1fae891ef40f57702bd3f7cca870e5f0b1ac5f22ceef577fb",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "92b26931ee47bdc2ac6f0d0c9c7cb13f236c380fe6afddee550f4be04b438700",
+          "key": "doc:9629682",
+          "locator": {
+            "length": 2446,
+            "offset": 2660663,
+            "path": "corpus.jsonl",
+            "sha256": "c79722afeb5591a1fae891ef40f57702bd3f7cca870e5f0b1ac5f22ceef577fb",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:9629682",
+        "doc:9629682",
+        "doc:9629682"
+      ],
+      "proof_sha256": "9bf5101b9384787bc9318f78426a75b3e3c6522190b535718a0c1cc1b3c70b60",
+      "query_cpu_s": 0.0,
+      "query_wall_s": 0.007881200173869729,
+      "selected_record_bytes": 7338,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 69954,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 69702,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 7.899943739175797e-06,
+      "bindings": 3,
+      "case_id": "repeated-17",
+      "hits": [
+        {
+          "hit_sha256": "6a25c53f69d2e31ed8664503e18a79d7b745d786c18789c05bc2077b03ea5ba8",
+          "key": "doc:2734421",
+          "locator": {
+            "length": 1202,
+            "offset": 794203,
+            "path": "corpus.jsonl",
+            "sha256": "08111bac4d070eec6112bb889c7955103cac7504379b69bc5dae5ede4a0efbe0",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "6a25c53f69d2e31ed8664503e18a79d7b745d786c18789c05bc2077b03ea5ba8",
+          "key": "doc:2734421",
+          "locator": {
+            "length": 1202,
+            "offset": 794203,
+            "path": "corpus.jsonl",
+            "sha256": "08111bac4d070eec6112bb889c7955103cac7504379b69bc5dae5ede4a0efbe0",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "6a25c53f69d2e31ed8664503e18a79d7b745d786c18789c05bc2077b03ea5ba8",
+          "key": "doc:2734421",
+          "locator": {
+            "length": 1202,
+            "offset": 794203,
+            "path": "corpus.jsonl",
+            "sha256": "08111bac4d070eec6112bb889c7955103cac7504379b69bc5dae5ede4a0efbe0",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:2734421",
+        "doc:2734421",
+        "doc:2734421"
+      ],
+      "proof_sha256": "68d45aba189dec76f5ded4234319d1204c85a420ef65b66f72899e3e2b2c27a3",
+      "query_cpu_s": 0.015625,
+      "query_wall_s": 0.0075441999360919,
+      "selected_record_bytes": 3606,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 68997,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 68745,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 7.800059393048286e-06,
+      "bindings": 3,
+      "case_id": "repeated-29",
+      "hits": [
+        {
+          "hit_sha256": "a0ee5e5aa827718e1c39ca21ed29a816e95ccb6d6412250c7b2ffa77fbdae3b8",
+          "key": "doc:33118292",
+          "locator": {
+            "length": 1507,
+            "offset": 6956282,
+            "path": "corpus.jsonl",
+            "sha256": "92932c92d005ff67b0805d41b8ff1608cd1ae989985ab47777dbeb61caab0089",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "a0ee5e5aa827718e1c39ca21ed29a816e95ccb6d6412250c7b2ffa77fbdae3b8",
+          "key": "doc:33118292",
+          "locator": {
+            "length": 1507,
+            "offset": 6956282,
+            "path": "corpus.jsonl",
+            "sha256": "92932c92d005ff67b0805d41b8ff1608cd1ae989985ab47777dbeb61caab0089",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "a0ee5e5aa827718e1c39ca21ed29a816e95ccb6d6412250c7b2ffa77fbdae3b8",
+          "key": "doc:33118292",
+          "locator": {
+            "length": 1507,
+            "offset": 6956282,
+            "path": "corpus.jsonl",
+            "sha256": "92932c92d005ff67b0805d41b8ff1608cd1ae989985ab47777dbeb61caab0089",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:33118292",
+        "doc:33118292",
+        "doc:33118292"
+      ],
+      "proof_sha256": "348e44def78904faeb5827ae65a360608f678b7b79dd675c4c429043837c1e3a",
+      "query_cpu_s": 0.0,
+      "query_wall_s": 0.00766229978762567,
+      "selected_record_bytes": 4521,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 68400,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 68148,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 7.699942216277122e-06,
+      "bindings": 3,
+      "case_id": "repeated-18",
+      "hits": [
+        {
+          "hit_sha256": "164c9b4d9f8a81416347718e04226dab61d3de93de577c79f39a7c8f619a0d18",
+          "key": "doc:5785219",
+          "locator": {
+            "length": 1448,
+            "offset": 1706393,
+            "path": "corpus.jsonl",
+            "sha256": "9bdc026fb02d4ad3f32d13aa719557f52f59c7fe5267454a6a25ce16f5c7ff19",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "164c9b4d9f8a81416347718e04226dab61d3de93de577c79f39a7c8f619a0d18",
+          "key": "doc:5785219",
+          "locator": {
+            "length": 1448,
+            "offset": 1706393,
+            "path": "corpus.jsonl",
+            "sha256": "9bdc026fb02d4ad3f32d13aa719557f52f59c7fe5267454a6a25ce16f5c7ff19",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "164c9b4d9f8a81416347718e04226dab61d3de93de577c79f39a7c8f619a0d18",
+          "key": "doc:5785219",
+          "locator": {
+            "length": 1448,
+            "offset": 1706393,
+            "path": "corpus.jsonl",
+            "sha256": "9bdc026fb02d4ad3f32d13aa719557f52f59c7fe5267454a6a25ce16f5c7ff19",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:5785219",
+        "doc:5785219",
+        "doc:5785219"
+      ],
+      "proof_sha256": "694fd689c47b5a7f8821d1bb3bb7179d1a41201fee33a63f80c26520a727be4f",
+      "query_cpu_s": 0.015625,
+      "query_wall_s": 0.00765389995649457,
+      "selected_record_bytes": 4344,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 69066,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 68814,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 9.100185707211494e-06,
+      "bindings": 3,
+      "case_id": "repeated-22",
+      "hits": [
+        {
+          "hit_sha256": "5d19ea281df49c592983f61ec15d5e0f753574542a41d47bea985eb9e941f7bf",
+          "key": "doc:7155555",
+          "locator": {
+            "length": 1986,
+            "offset": 2083775,
+            "path": "corpus.jsonl",
+            "sha256": "ed8c4e1fc369066d364c287214b5b3dc5f08962240c0fbba98e5edd0aca64386",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "5d19ea281df49c592983f61ec15d5e0f753574542a41d47bea985eb9e941f7bf",
+          "key": "doc:7155555",
+          "locator": {
+            "length": 1986,
+            "offset": 2083775,
+            "path": "corpus.jsonl",
+            "sha256": "ed8c4e1fc369066d364c287214b5b3dc5f08962240c0fbba98e5edd0aca64386",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "5d19ea281df49c592983f61ec15d5e0f753574542a41d47bea985eb9e941f7bf",
+          "key": "doc:7155555",
+          "locator": {
+            "length": 1986,
+            "offset": 2083775,
+            "path": "corpus.jsonl",
+            "sha256": "ed8c4e1fc369066d364c287214b5b3dc5f08962240c0fbba98e5edd0aca64386",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:7155555",
+        "doc:7155555",
+        "doc:7155555"
+      ],
+      "proof_sha256": "d40ca17cf8ef52d4da3e5613c0024db6457e121a87fc73f6b233e3ec881d232f",
+      "query_cpu_s": 0.0,
+      "query_wall_s": 0.00781410001218319,
+      "selected_record_bytes": 5958,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 69888,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 69636,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 8.600065484642982e-06,
+      "bindings": 3,
+      "case_id": "repeated-30",
+      "hits": [
+        {
+          "hit_sha256": "8f4d419338bca89def34d150161d3074d73884b2a7c9da72edf28d1cd5c41497",
+          "key": "doc:23349986",
+          "locator": {
+            "length": 2487,
+            "offset": 5493037,
+            "path": "corpus.jsonl",
+            "sha256": "ac09ce355a7162675edee4612a02dc1c44c915784c344160e048385955f12f81",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "8f4d419338bca89def34d150161d3074d73884b2a7c9da72edf28d1cd5c41497",
+          "key": "doc:23349986",
+          "locator": {
+            "length": 2487,
+            "offset": 5493037,
+            "path": "corpus.jsonl",
+            "sha256": "ac09ce355a7162675edee4612a02dc1c44c915784c344160e048385955f12f81",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "8f4d419338bca89def34d150161d3074d73884b2a7c9da72edf28d1cd5c41497",
+          "key": "doc:23349986",
+          "locator": {
+            "length": 2487,
+            "offset": 5493037,
+            "path": "corpus.jsonl",
+            "sha256": "ac09ce355a7162675edee4612a02dc1c44c915784c344160e048385955f12f81",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:23349986",
+        "doc:23349986",
+        "doc:23349986"
+      ],
+      "proof_sha256": "29141a00231e0ce864dc0db06df481c2e1c4c7727f4045b32861265c4471f047",
+      "query_cpu_s": 0.015625,
+      "query_wall_s": 0.007618000032380223,
+      "selected_record_bytes": 7461,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 70089,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 69837,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 8.699949830770493e-06,
+      "bindings": 3,
+      "case_id": "repeated-24",
+      "hits": [
+        {
+          "hit_sha256": "39fa940458840fbf949130ecbee9ab6eec42675ffb1c2f33a65b31fd901af112",
+          "key": "doc:12172346",
+          "locator": {
+            "length": 1211,
+            "offset": 3218977,
+            "path": "corpus.jsonl",
+            "sha256": "42f9e936bc4b4b1f65c5a5516e4c5345172a42fd0634b9c6fef27a5d626bd2f9",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "39fa940458840fbf949130ecbee9ab6eec42675ffb1c2f33a65b31fd901af112",
+          "key": "doc:12172346",
+          "locator": {
+            "length": 1211,
+            "offset": 3218977,
+            "path": "corpus.jsonl",
+            "sha256": "42f9e936bc4b4b1f65c5a5516e4c5345172a42fd0634b9c6fef27a5d626bd2f9",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "39fa940458840fbf949130ecbee9ab6eec42675ffb1c2f33a65b31fd901af112",
+          "key": "doc:12172346",
+          "locator": {
+            "length": 1211,
+            "offset": 3218977,
+            "path": "corpus.jsonl",
+            "sha256": "42f9e936bc4b4b1f65c5a5516e4c5345172a42fd0634b9c6fef27a5d626bd2f9",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:12172346",
+        "doc:12172346",
+        "doc:12172346"
+      ],
+      "proof_sha256": "1a0873183f53ee71761213ed762f1cf1b40cebd74f20b6f6c97beb4cc1665873",
+      "query_cpu_s": 0.0,
+      "query_wall_s": 0.007994499988853931,
+      "selected_record_bytes": 3633,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 68481,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 68229,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 8.599832653999329e-06,
+      "bindings": 3,
+      "case_id": "repeated-04",
+      "hits": [
+        {
+          "hit_sha256": "33acf0d1a8ca2e380ed356776ae8aea4ffb86af4181350b8c38aba10cb364d91",
+          "key": "doc:23639838",
+          "locator": {
+            "length": 1179,
+            "offset": 5559601,
+            "path": "corpus.jsonl",
+            "sha256": "35111816841d39fa572f3d9b41dbf8147dd4d3e66a8f41efd18e12d057d6a122",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "33acf0d1a8ca2e380ed356776ae8aea4ffb86af4181350b8c38aba10cb364d91",
+          "key": "doc:23639838",
+          "locator": {
+            "length": 1179,
+            "offset": 5559601,
+            "path": "corpus.jsonl",
+            "sha256": "35111816841d39fa572f3d9b41dbf8147dd4d3e66a8f41efd18e12d057d6a122",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "33acf0d1a8ca2e380ed356776ae8aea4ffb86af4181350b8c38aba10cb364d91",
+          "key": "doc:23639838",
+          "locator": {
+            "length": 1179,
+            "offset": 5559601,
+            "path": "corpus.jsonl",
+            "sha256": "35111816841d39fa572f3d9b41dbf8147dd4d3e66a8f41efd18e12d057d6a122",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:23639838",
+        "doc:23639838",
+        "doc:23639838"
+      ],
+      "proof_sha256": "570a456f46896f66d336c725f3663b8ce68531e9c43973de0e43ac7c7b68c376",
+      "query_cpu_s": 0.015625,
+      "query_wall_s": 0.00906289997510612,
+      "selected_record_bytes": 3537,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 70749,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 70497,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 8.09994526207447e-06,
+      "bindings": 3,
+      "case_id": "repeated-19",
+      "hits": [
+        {
+          "hit_sha256": "e294a9d9c68d3119461eee98511606dcb4b7263b554cbea9346d76afaf39bbdb",
+          "key": "doc:4641348",
+          "locator": {
+            "length": 1803,
+            "offset": 1417127,
+            "path": "corpus.jsonl",
+            "sha256": "d6dbbbbad66acca6f9a9922184da36123473b2ecffbf12e7649f4b5b3a666bd2",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "e294a9d9c68d3119461eee98511606dcb4b7263b554cbea9346d76afaf39bbdb",
+          "key": "doc:4641348",
+          "locator": {
+            "length": 1803,
+            "offset": 1417127,
+            "path": "corpus.jsonl",
+            "sha256": "d6dbbbbad66acca6f9a9922184da36123473b2ecffbf12e7649f4b5b3a666bd2",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "e294a9d9c68d3119461eee98511606dcb4b7263b554cbea9346d76afaf39bbdb",
+          "key": "doc:4641348",
+          "locator": {
+            "length": 1803,
+            "offset": 1417127,
+            "path": "corpus.jsonl",
+            "sha256": "d6dbbbbad66acca6f9a9922184da36123473b2ecffbf12e7649f4b5b3a666bd2",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:4641348",
+        "doc:4641348",
+        "doc:4641348"
+      ],
+      "proof_sha256": "21c9c1f13e59afa84f3ed81f9ef4f8fad8dc28d449aff837a2ccdf940ad1395f",
+      "query_cpu_s": 0.0,
+      "query_wall_s": 0.007915699854493141,
+      "selected_record_bytes": 5409,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 68745,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 68493,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 7.999828085303307e-06,
+      "bindings": 3,
+      "case_id": "repeated-08",
+      "hits": [
+        {
+          "hit_sha256": "6819a1f20d71442f4d6d4115f4302b367ba1741d27965d47867c1ec86b477825",
+          "key": "doc:6227220",
+          "locator": {
+            "length": 1412,
+            "offset": 1836776,
+            "path": "corpus.jsonl",
+            "sha256": "f1359e3f306021e50650bc8a83724a7330ad57699b52024e94f0c04bbcb3af35",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "6819a1f20d71442f4d6d4115f4302b367ba1741d27965d47867c1ec86b477825",
+          "key": "doc:6227220",
+          "locator": {
+            "length": 1412,
+            "offset": 1836776,
+            "path": "corpus.jsonl",
+            "sha256": "f1359e3f306021e50650bc8a83724a7330ad57699b52024e94f0c04bbcb3af35",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "6819a1f20d71442f4d6d4115f4302b367ba1741d27965d47867c1ec86b477825",
+          "key": "doc:6227220",
+          "locator": {
+            "length": 1412,
+            "offset": 1836776,
+            "path": "corpus.jsonl",
+            "sha256": "f1359e3f306021e50650bc8a83724a7330ad57699b52024e94f0c04bbcb3af35",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:6227220",
+        "doc:6227220",
+        "doc:6227220"
+      ],
+      "proof_sha256": "7702364492f152b496159624bf9fc55bb4f156e7eb13d835128e212f9f2ff22c",
+      "query_cpu_s": 0.015625,
+      "query_wall_s": 0.0077436999417841434,
+      "selected_record_bytes": 4236,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 70629,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 70377,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 8.999835699796677e-06,
+      "bindings": 3,
+      "case_id": "repeated-02",
+      "hits": [
+        {
+          "hit_sha256": "c33c46380cccb87db551f60b38b343c87702189b444b716ea9a58859fcd0ae4a",
+          "key": "doc:20130904",
+          "locator": {
+            "length": 1794,
+            "offset": 4821398,
+            "path": "corpus.jsonl",
+            "sha256": "c36e10b74f5178da158e89f62d44e37aebf0bf56983799cc3662b08754a990a5",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "c33c46380cccb87db551f60b38b343c87702189b444b716ea9a58859fcd0ae4a",
+          "key": "doc:20130904",
+          "locator": {
+            "length": 1794,
+            "offset": 4821398,
+            "path": "corpus.jsonl",
+            "sha256": "c36e10b74f5178da158e89f62d44e37aebf0bf56983799cc3662b08754a990a5",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "c33c46380cccb87db551f60b38b343c87702189b444b716ea9a58859fcd0ae4a",
+          "key": "doc:20130904",
+          "locator": {
+            "length": 1794,
+            "offset": 4821398,
+            "path": "corpus.jsonl",
+            "sha256": "c36e10b74f5178da158e89f62d44e37aebf0bf56983799cc3662b08754a990a5",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:20130904",
+        "doc:20130904",
+        "doc:20130904"
+      ],
+      "proof_sha256": "fa0596ea476f46f63ee6e8cb16c3e3142b80f2851f20a2c90087988016347bb5",
+      "query_cpu_s": 0.0,
+      "query_wall_s": 0.008304000133648515,
+      "selected_record_bytes": 5382,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 70386,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 70134,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 8.500181138515472e-06,
+      "bindings": 3,
+      "case_id": "repeated-13",
+      "hits": [
+        {
+          "hit_sha256": "ae4f384ad8a7e2a159791140533040ea5c04a98a96fdb3e5c17d4e9ca9ef51c9",
+          "key": "doc:17779800",
+          "locator": {
+            "length": 1931,
+            "offset": 4445012,
+            "path": "corpus.jsonl",
+            "sha256": "abc62095158cbe5855d72b632fa98cf916b29273b07a741e5d07a241aa7b24a0",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "ae4f384ad8a7e2a159791140533040ea5c04a98a96fdb3e5c17d4e9ca9ef51c9",
+          "key": "doc:17779800",
+          "locator": {
+            "length": 1931,
+            "offset": 4445012,
+            "path": "corpus.jsonl",
+            "sha256": "abc62095158cbe5855d72b632fa98cf916b29273b07a741e5d07a241aa7b24a0",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "ae4f384ad8a7e2a159791140533040ea5c04a98a96fdb3e5c17d4e9ca9ef51c9",
+          "key": "doc:17779800",
+          "locator": {
+            "length": 1931,
+            "offset": 4445012,
+            "path": "corpus.jsonl",
+            "sha256": "abc62095158cbe5855d72b632fa98cf916b29273b07a741e5d07a241aa7b24a0",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:17779800",
+        "doc:17779800",
+        "doc:17779800"
+      ],
+      "proof_sha256": "56a479af109be3308d0079c65926379e9b95a9045e19b10fd9ad86a1f7bc16e7",
+      "query_cpu_s": 0.015625,
+      "query_wall_s": 0.007615300128236413,
+      "selected_record_bytes": 5793,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 70668,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 70416,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 7.6000578701496124e-06,
+      "bindings": 3,
+      "case_id": "repeated-27",
+      "hits": [
+        {
+          "hit_sha256": "2ac43ef7835b614da752c4ff41b00aebb63b7d0cb4cabfe03adfd043a590a4d3",
+          "key": "doc:11822354",
+          "locator": {
+            "length": 670,
+            "offset": 3129980,
+            "path": "corpus.jsonl",
+            "sha256": "5bbdcb0331eadbcf31b0c84e372cd4e7bf53b69a47e43c6d8c3155cd99c9f740",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "2ac43ef7835b614da752c4ff41b00aebb63b7d0cb4cabfe03adfd043a590a4d3",
+          "key": "doc:11822354",
+          "locator": {
+            "length": 670,
+            "offset": 3129980,
+            "path": "corpus.jsonl",
+            "sha256": "5bbdcb0331eadbcf31b0c84e372cd4e7bf53b69a47e43c6d8c3155cd99c9f740",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "2ac43ef7835b614da752c4ff41b00aebb63b7d0cb4cabfe03adfd043a590a4d3",
+          "key": "doc:11822354",
+          "locator": {
+            "length": 670,
+            "offset": 3129980,
+            "path": "corpus.jsonl",
+            "sha256": "5bbdcb0331eadbcf31b0c84e372cd4e7bf53b69a47e43c6d8c3155cd99c9f740",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:11822354",
+        "doc:11822354",
+        "doc:11822354"
+      ],
+      "proof_sha256": "74123e128cbdefaebd6868d8b1c172f2de6114380d68cc532e32d5173c9d9b4b",
+      "query_cpu_s": 0.0,
+      "query_wall_s": 0.008067399961873889,
+      "selected_record_bytes": 2010,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 70251,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 69999,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 8.09994526207447e-06,
+      "bindings": 3,
+      "case_id": "repeated-21",
+      "hits": [
+        {
+          "hit_sha256": "d8770cc6405c2a6301fd1aa626a35bab5a1cba454c3b61963f81d19f1d36d7be",
+          "key": "doc:27078065",
+          "locator": {
+            "length": 983,
+            "offset": 6367125,
+            "path": "corpus.jsonl",
+            "sha256": "00dac3fa33e55c7c1d4d23e00d6886c7e6ca8889c89ec4d2295486637a7e81e1",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "d8770cc6405c2a6301fd1aa626a35bab5a1cba454c3b61963f81d19f1d36d7be",
+          "key": "doc:27078065",
+          "locator": {
+            "length": 983,
+            "offset": 6367125,
+            "path": "corpus.jsonl",
+            "sha256": "00dac3fa33e55c7c1d4d23e00d6886c7e6ca8889c89ec4d2295486637a7e81e1",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "d8770cc6405c2a6301fd1aa626a35bab5a1cba454c3b61963f81d19f1d36d7be",
+          "key": "doc:27078065",
+          "locator": {
+            "length": 983,
+            "offset": 6367125,
+            "path": "corpus.jsonl",
+            "sha256": "00dac3fa33e55c7c1d4d23e00d6886c7e6ca8889c89ec4d2295486637a7e81e1",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:27078065",
+        "doc:27078065",
+        "doc:27078065"
+      ],
+      "proof_sha256": "a440b7c0a1d17e78618f0185d7c6fc12a5675893f3e0589b3472b4c9c3ad3af5",
+      "query_cpu_s": 0.015625,
+      "query_wall_s": 0.00788769987411797,
+      "selected_record_bytes": 2949,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 69492,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 69240,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 7.699942216277122e-06,
+      "bindings": 3,
+      "case_id": "repeated-23",
+      "hits": [
+        {
+          "hit_sha256": "f37bdd4be9c3c42c11ddede2c53676d6dd0f2468bbaa34fd2e713adb17bf552a",
+          "key": "doc:167469018",
+          "locator": {
+            "length": 1170,
+            "offset": 8285534,
+            "path": "corpus.jsonl",
+            "sha256": "fac3a0e11ba7483b6cf7babdc5b8964f40273c8e6b41bcc10ba5711e21bf3698",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "f37bdd4be9c3c42c11ddede2c53676d6dd0f2468bbaa34fd2e713adb17bf552a",
+          "key": "doc:167469018",
+          "locator": {
+            "length": 1170,
+            "offset": 8285534,
+            "path": "corpus.jsonl",
+            "sha256": "fac3a0e11ba7483b6cf7babdc5b8964f40273c8e6b41bcc10ba5711e21bf3698",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "f37bdd4be9c3c42c11ddede2c53676d6dd0f2468bbaa34fd2e713adb17bf552a",
+          "key": "doc:167469018",
+          "locator": {
+            "length": 1170,
+            "offset": 8285534,
+            "path": "corpus.jsonl",
+            "sha256": "fac3a0e11ba7483b6cf7babdc5b8964f40273c8e6b41bcc10ba5711e21bf3698",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:167469018",
+        "doc:167469018",
+        "doc:167469018"
+      ],
+      "proof_sha256": "72f0185e1b579c98eb0e385b3bd4cede3e79098ec686a2f8a87118194f2c31f8",
+      "query_cpu_s": 0.0,
+      "query_wall_s": 0.008192599983885884,
+      "selected_record_bytes": 3510,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 151017,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 56955,
+        "compressed_decode_output_bytes": 151017,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 56703,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 8.00006091594696e-06,
+      "bindings": 3,
+      "case_id": "repeated-05",
+      "hits": [
+        {
+          "hit_sha256": "9b149eb205b6c6f3dd6a0e595c7293b1fb5af451da7ef978f0aaa983d26a2e41",
+          "key": "doc:7098463",
+          "locator": {
+            "length": 2332,
+            "offset": 2066345,
+            "path": "corpus.jsonl",
+            "sha256": "8539bd6ffafbd73f89f4c31db829998610e4481ad8b48462b93a7e46b21f522c",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "9b149eb205b6c6f3dd6a0e595c7293b1fb5af451da7ef978f0aaa983d26a2e41",
+          "key": "doc:7098463",
+          "locator": {
+            "length": 2332,
+            "offset": 2066345,
+            "path": "corpus.jsonl",
+            "sha256": "8539bd6ffafbd73f89f4c31db829998610e4481ad8b48462b93a7e46b21f522c",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "9b149eb205b6c6f3dd6a0e595c7293b1fb5af451da7ef978f0aaa983d26a2e41",
+          "key": "doc:7098463",
+          "locator": {
+            "length": 2332,
+            "offset": 2066345,
+            "path": "corpus.jsonl",
+            "sha256": "8539bd6ffafbd73f89f4c31db829998610e4481ad8b48462b93a7e46b21f522c",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:7098463",
+        "doc:7098463",
+        "doc:7098463"
+      ],
+      "proof_sha256": "8a1cbe12b5a55c1d10d3ce30a8904ce957bae964c1079ee8327430a54bd16905",
+      "query_cpu_s": 0.015625,
+      "query_wall_s": 0.007980800000950694,
+      "selected_record_bytes": 6996,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 69888,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 69636,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 7.700175046920776e-06,
+      "bindings": 3,
+      "case_id": "repeated-09",
+      "hits": [
+        {
+          "hit_sha256": "fbd3c89b751c8145c6c618e9f6041cfbc61de87653115362450612d71498180d",
+          "key": "doc:22444939",
+          "locator": {
+            "length": 1018,
+            "offset": 5303379,
+            "path": "corpus.jsonl",
+            "sha256": "6d78b9a282714a56f904f8d36013ff6f468c9185149279239b710b93fd29592b",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "fbd3c89b751c8145c6c618e9f6041cfbc61de87653115362450612d71498180d",
+          "key": "doc:22444939",
+          "locator": {
+            "length": 1018,
+            "offset": 5303379,
+            "path": "corpus.jsonl",
+            "sha256": "6d78b9a282714a56f904f8d36013ff6f468c9185149279239b710b93fd29592b",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "fbd3c89b751c8145c6c618e9f6041cfbc61de87653115362450612d71498180d",
+          "key": "doc:22444939",
+          "locator": {
+            "length": 1018,
+            "offset": 5303379,
+            "path": "corpus.jsonl",
+            "sha256": "6d78b9a282714a56f904f8d36013ff6f468c9185149279239b710b93fd29592b",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:22444939",
+        "doc:22444939",
+        "doc:22444939"
+      ],
+      "proof_sha256": "e6bdfec16bb482e4d02d91db64b0c83a238c24a67055aa282d194d62c789bfe7",
+      "query_cpu_s": 0.0,
+      "query_wall_s": 0.00803159992210567,
+      "selected_record_bytes": 3054,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 69183,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 68931,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 7.800059393048286e-06,
+      "bindings": 3,
+      "case_id": "repeated-14",
+      "hits": [
+        {
+          "hit_sha256": "3d7541146d3ccb3cfdb105673215cb3407f7c3c9e013486c040e10bd638ba800",
+          "key": "doc:16201748",
+          "locator": {
+            "length": 1550,
+            "offset": 4176808,
+            "path": "corpus.jsonl",
+            "sha256": "18a621c3477d8862dc9897ba5e904a9000a52c3028982c4ce89ce41ff30d2047",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "3d7541146d3ccb3cfdb105673215cb3407f7c3c9e013486c040e10bd638ba800",
+          "key": "doc:16201748",
+          "locator": {
+            "length": 1550,
+            "offset": 4176808,
+            "path": "corpus.jsonl",
+            "sha256": "18a621c3477d8862dc9897ba5e904a9000a52c3028982c4ce89ce41ff30d2047",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "3d7541146d3ccb3cfdb105673215cb3407f7c3c9e013486c040e10bd638ba800",
+          "key": "doc:16201748",
+          "locator": {
+            "length": 1550,
+            "offset": 4176808,
+            "path": "corpus.jsonl",
+            "sha256": "18a621c3477d8862dc9897ba5e904a9000a52c3028982c4ce89ce41ff30d2047",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:16201748",
+        "doc:16201748",
+        "doc:16201748"
+      ],
+      "proof_sha256": "b77249c47fb16043aec28758ed1b4124429617ea54f27fb7fb9c7bd163194789",
+      "query_cpu_s": 0.015625,
+      "query_wall_s": 0.007956100162118673,
+      "selected_record_bytes": 4650,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 69048,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 68796,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 9.09995287656784e-06,
+      "bindings": 3,
+      "case_id": "repeated-11",
+      "hits": [
+        {
+          "hit_sha256": "abc0c570cdfd5f49f1e004d64a1af9cfb53237e49093c8eda076e486884c7f33",
+          "key": "doc:19752008",
+          "locator": {
+            "length": 2298,
+            "offset": 4754931,
+            "path": "corpus.jsonl",
+            "sha256": "e3f94cddd056a09ed9c1478fa361ee7f584daf7164b48183392b45e345db2b77",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "abc0c570cdfd5f49f1e004d64a1af9cfb53237e49093c8eda076e486884c7f33",
+          "key": "doc:19752008",
+          "locator": {
+            "length": 2298,
+            "offset": 4754931,
+            "path": "corpus.jsonl",
+            "sha256": "e3f94cddd056a09ed9c1478fa361ee7f584daf7164b48183392b45e345db2b77",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "abc0c570cdfd5f49f1e004d64a1af9cfb53237e49093c8eda076e486884c7f33",
+          "key": "doc:19752008",
+          "locator": {
+            "length": 2298,
+            "offset": 4754931,
+            "path": "corpus.jsonl",
+            "sha256": "e3f94cddd056a09ed9c1478fa361ee7f584daf7164b48183392b45e345db2b77",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:19752008",
+        "doc:19752008",
+        "doc:19752008"
+      ],
+      "proof_sha256": "4ff12a28f26f152fc97e55a4903e43d97dd2ce306b747b2a68548505bb8b9db7",
+      "query_cpu_s": 0.0,
+      "query_wall_s": 0.008352099917829037,
+      "selected_record_bytes": 6894,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 70692,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 70440,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 8.00006091594696e-06,
+      "bindings": 3,
+      "case_id": "repeated-20",
+      "hits": [
+        {
+          "hit_sha256": "b20d07a2ef2e9250862f9f01eac2a90b77d0ae7bc7f8dbb36eb52d1a1d9888d2",
+          "key": "doc:5849439",
+          "locator": {
+            "length": 1201,
+            "offset": 1725692,
+            "path": "corpus.jsonl",
+            "sha256": "b41a839ac9cc1e06cb023a363bc771c925ad450c13199166bb59e41860278548",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "b20d07a2ef2e9250862f9f01eac2a90b77d0ae7bc7f8dbb36eb52d1a1d9888d2",
+          "key": "doc:5849439",
+          "locator": {
+            "length": 1201,
+            "offset": 1725692,
+            "path": "corpus.jsonl",
+            "sha256": "b41a839ac9cc1e06cb023a363bc771c925ad450c13199166bb59e41860278548",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "b20d07a2ef2e9250862f9f01eac2a90b77d0ae7bc7f8dbb36eb52d1a1d9888d2",
+          "key": "doc:5849439",
+          "locator": {
+            "length": 1201,
+            "offset": 1725692,
+            "path": "corpus.jsonl",
+            "sha256": "b41a839ac9cc1e06cb023a363bc771c925ad450c13199166bb59e41860278548",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:5849439",
+        "doc:5849439",
+        "doc:5849439"
+      ],
+      "proof_sha256": "aa0efd7699f5a47d158f9a34199212d5bc9db6750784b662690ec2c152949178",
+      "query_cpu_s": 0.015625,
+      "query_wall_s": 0.008059100015088916,
+      "selected_record_bytes": 3603,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 69066,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 68814,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 9.299954399466515e-06,
+      "bindings": 3,
+      "case_id": "repeated-07",
+      "hits": [
+        {
+          "hit_sha256": "172eefba53103e202c1c2a3af73af0f6336fc22c7b6aaddab9c8ad6b1554e5a2",
+          "key": "doc:9154703",
+          "locator": {
+            "length": 1113,
+            "offset": 2534821,
+            "path": "corpus.jsonl",
+            "sha256": "615c02ca74b575f1811a568a86d23da5b6146131acf00bab78e54b6f678b4682",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "172eefba53103e202c1c2a3af73af0f6336fc22c7b6aaddab9c8ad6b1554e5a2",
+          "key": "doc:9154703",
+          "locator": {
+            "length": 1113,
+            "offset": 2534821,
+            "path": "corpus.jsonl",
+            "sha256": "615c02ca74b575f1811a568a86d23da5b6146131acf00bab78e54b6f678b4682",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "172eefba53103e202c1c2a3af73af0f6336fc22c7b6aaddab9c8ad6b1554e5a2",
+          "key": "doc:9154703",
+          "locator": {
+            "length": 1113,
+            "offset": 2534821,
+            "path": "corpus.jsonl",
+            "sha256": "615c02ca74b575f1811a568a86d23da5b6146131acf00bab78e54b6f678b4682",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:9154703",
+        "doc:9154703",
+        "doc:9154703"
+      ],
+      "proof_sha256": "0082c2d176d8783e6b12d3408845a0bfad74aba6d08cf5cea05844c4b28bdbdf",
+      "query_cpu_s": 0.015625,
+      "query_wall_s": 0.008874600054696202,
+      "selected_record_bytes": 3339,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 68964,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 68712,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    },
+    {
+      "audit_cpu_s": 0.0,
+      "audit_wall_s": 9.899958968162537e-06,
+      "bindings": 3,
+      "case_id": "repeated-28",
+      "hits": [
+        {
+          "hit_sha256": "03790edd33676d1ecda53e58a9c28613deca07c5adaaae026808f87fb35ecfac",
+          "key": "doc:14474178",
+          "locator": {
+            "length": 2408,
+            "offset": 3828270,
+            "path": "corpus.jsonl",
+            "sha256": "08a542c037f8647e15f4b608b15561aba90c78f66a88c8a7634822b176704164",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "03790edd33676d1ecda53e58a9c28613deca07c5adaaae026808f87fb35ecfac",
+          "key": "doc:14474178",
+          "locator": {
+            "length": 2408,
+            "offset": 3828270,
+            "path": "corpus.jsonl",
+            "sha256": "08a542c037f8647e15f4b608b15561aba90c78f66a88c8a7634822b176704164",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        },
+        {
+          "hit_sha256": "03790edd33676d1ecda53e58a9c28613deca07c5adaaae026808f87fb35ecfac",
+          "key": "doc:14474178",
+          "locator": {
+            "length": 2408,
+            "offset": 3828270,
+            "path": "corpus.jsonl",
+            "sha256": "08a542c037f8647e15f4b608b15561aba90c78f66a88c8a7634822b176704164",
+            "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+          }
+        }
+      ],
+      "keys": [
+        "doc:14474178",
+        "doc:14474178",
+        "doc:14474178"
+      ],
+      "proof_sha256": "3eeeec2398a86a7d1853bfd3d0b31bf01e75a8092a3a19bd0e89111b5ad66acd",
+      "query_cpu_s": 0.0,
+      "query_wall_s": 0.008774699876084924,
+      "selected_record_bytes": 7224,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "traffic": {
+        "CAS_decoded_output_bytes": 196608,
+        "all_system_file_bytes": null,
+        "application_CAS_file_bytes": 70173,
+        "compressed_decode_output_bytes": 196608,
+        "decode_attempts": 3,
+        "decode_successes": 3,
+        "object_opens": 3,
+        "payload_input_bytes": 69921,
+        "physical_SSD_bytes": null,
+        "raw_codec_output_bytes": 0,
+        "read_calls": 6,
+        "scope": "Trace-only application CAS object binary read returns and decoder outputs; excludes metadata/SQLite/audit/ingest"
+      },
+      "view": {
+        "active": false,
+        "lookup_calls": 3,
+        "lookup_restored": true,
+        "peak_deltas": 0,
+        "peak_metadata_graph_bytes": 44294,
+        "peak_snapshots": 1,
+        "peak_sqlite_logical_page_bytes": 5455872,
+        "resources_cleared": true,
+        "scope": "Single fixed-SID trace; full view validated on entry, selected original records reverified each lookup; no decoded block cache. Logical SQLite pages and Python metadata graph exclude allocator/native buffers/patch bookkeeping; not total RAM.",
+        "view_builds": 1,
+        "view_closed": true,
+        "view_storage": "read-only-base-connection"
+      }
+    }
+  ],
+  "cold_cache": null,
+  "cross_machine": null,
+  "files": {
+    "memory_bytes": 8420243,
+    "other_worker_files_bytes": 231233,
+    "source_bytes": 8307875
+  },
+  "ingest": {
+    "commit": {
+      "bytewise_source_hashed": true,
+      "checkpoint_reason": "initial",
+      "chunk_references": 127,
+      "chunk_sizes": [
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536,
+        50339
+      ],
+      "delta_depth": 0,
+      "files": 1,
+      "index_bytes": 5455872,
+      "index_profile": "compact-budget-v3",
+      "index_reused": false,
+      "indexed_records": 5183,
+      "new_index_bytes": 5455872,
+      "new_object_bytes": 2952154,
+      "new_objects": 127,
+      "new_raw_bytes": 8307875,
+      "new_snapshot_bytes": 11348,
+      "new_written_bytes": 2963502,
+      "overlay_upserts": 0,
+      "raw_bytes": 8307875,
+      "relocation_ranges": 0,
+      "replay_budget": null,
+      "reused_raw_bytes": 0,
+      "reused_references": 0,
+      "snapshot_bytes": 11348,
+      "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846",
+      "snapshot_published": true,
+      "unique_snapshot_objects": 127,
+      "wall_s": 0.8002831998746842
+    },
+    "cpu_s": 0.71875,
+    "wall_s": 0.8005288999993354
+  },
+  "input_fsyncs": 1,
+  "internal_memory_fsyncs": null,
+  "ledger_fsyncs": 1,
+  "memory_stats": {
+    "by_directory_bytes": {
+      "answers": 0,
+      "cas": 2963624,
+      "indexes": 5456012,
+      "manifests": 513
+    },
+    "cas": {
+      "allocated_file_data_bytes": 3129472,
+      "config_bytes": 122,
+      "files": 129,
+      "filesystem_directory_metadata_journal_unmeasured": true,
+      "logical_file_bytes": 2963624,
+      "object_bytes": 2952154,
+      "object_count": 127,
+      "snapshot_bytes": 11348,
+      "snapshot_count": 1
+    },
+    "head_bytes": 94,
+    "logical_file_bytes": 8420243,
+    "scope": "Includes all retained CAS objects, indexes, manifests and derived answers; excludes runtime/model/server and filesystem metadata",
+    "snapshot_id": "233a9cf43a87344e204c5aeb217a355d468b0aa2524a710843f2158d7e17d846"
+  },
+  "memory_tree_sha256": "246bb3c03abb9bb284a3c43634d619dbd3b322b3877d67ef3b1f97df5aa8337d",
+  "memory_tree_unchanged": true,
+  "meter": "on",
+  "observed_peak_rss_bytes": 89710592,
+  "physical_SSD_bytes": null,
+  "plan_fsyncs": 1,
+  "plan_sha256": "97d529632ab0be1b759bae16b60f59deca753b6d89fba025714fbdac4be0d50c",
+  "private_hits_sha256": "83d9b8ea84e1300f8cda03a32ad20ee2f4a65669f3593853a8ef240d9321203e",
+  "private_proof_fsyncs": 1,
+  "recovery": {
+    "bytes": 8307875,
+    "cpu_s": 0.0625,
+    "sha256": "b8d6c89624cb2ed74dee8938effc4f5d8bd2086887880af8110d64be4ceade62",
+    "wall_s": 0.0694556999951601
+  },
+  "remote_model_calls": 0,
+  "round": 3,
+  "source_bytes": 8307875,
+  "source_records": 5183,
+  "source_sha256": "b8d6c89624cb2ed74dee8938effc4f5d8bd2086887880af8110d64be4ceade62",
+  "view": "on",
+  "worker_cpu_s": 1.234375,
+  "worker_wall_s": 1.3101377999410033,
+  "workload": "repeated"
+}
