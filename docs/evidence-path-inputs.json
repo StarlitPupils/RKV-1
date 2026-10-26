@@ -1,0 +1,87 @@
+{
+  "synthetic_only": true,
+  "schema": "rkv-explicit-path-fixture-1",
+  "epochs": [
+    {
+      "epoch": 0,
+      "bytes": 169520,
+      "records": 864,
+      "sha256": "d5622f377160e9da9c1a69103b89d08c9f99ead92c7851b3c318f7da034b94a2"
+    },
+    {
+      "epoch": 1,
+      "bytes": 169526,
+      "records": 864,
+      "sha256": "f782186f0a5d77e3b793f84e5901e333b70335963fc230a62ea8443718a9ef25"
+    },
+    {
+      "epoch": 2,
+      "bytes": 169538,
+      "records": 864,
+      "sha256": "583af409e88fb480a317405290dee63816c0602f30221ad5114cd6b8a4838527"
+    },
+    {
+      "epoch": 3,
+      "bytes": 169556,
+      "records": 864,
+      "sha256": "c8af615bdb7f31e25889dc6566c9d9ab81d1458eacd4bc7d6df2475e58c998d8"
+    },
+    {
+      "epoch": 4,
+      "bytes": 169580,
+      "records": 864,
+      "sha256": "84f58cc27c88664fc2f9bb2d6f1c2fdbcdc6d14b216d2bf3eb96628b151ce94c"
+    },
+    {
+      "epoch": 5,
+      "bytes": 169610,
+      "records": 864,
+      "sha256": "5ebdf62c786eef8133c30d4a2f111180d81bc5c81f8a17935e3620a18216206a"
+    },
+    {
+      "epoch": 6,
+      "bytes": 169474,
+      "records": 863,
+      "sha256": "9f7b03128c0f3f268eabb7d0853faa2aea30fe376557e48e1c318eb5a799a3d0"
+    },
+    {
+      "epoch": 7,
+      "bytes": 169504,
+      "records": 863,
+      "sha256": "f195b3d5024cfcbe3b03a1dd5d33e0b3cd58477dd6260c5eee254f40d042f01f"
+    },
+    {
+      "epoch": 8,
+      "bytes": 169534,
+      "records": 863,
+      "sha256": "ce56a3a75888ec6ae423cb18f53fb1fd4e6b45ca9b8a75b7861f4cf827df7400"
+    },
+    {
+      "epoch": 9,
+      "bytes": 169564,
+      "records": 863,
+      "sha256": "10457a2c934737fe9b5770c0ac96ea25be48751b361be28b8e6687491c31894a"
+    },
+    {
+      "epoch": 10,
+      "bytes": 169594,
+      "records": 863,
+      "sha256": "47758c1f8161d0ad4541a49414e7b320d56c84e4da04b77399409292d91565c3"
+    },
+    {
+      "epoch": 11,
+      "bytes": 169624,
+      "records": 863,
+      "sha256": "7f0111e1e0ae16cf578879a7bb35e6fbf39c44f92b4460d7179ed2b1d6daabc0"
+    },
+    {
+      "epoch": 12,
+      "bytes": 169654,
+      "records": 863,
+      "sha256": "9180e7229c368e547934b5b508ab60a4dfa22542b64204d94e2e5313818c125f"
+    }
+  ],
+  "ingestions_or_queries": 0,
+  "questions_generated_after_all_ingestions": true,
+  "scope": "Deterministic public fixture, operational delay only, no unknown-task claim"
+}
