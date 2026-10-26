@@ -6,7 +6,19 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.49.0 · 训练标注原始来源就绪审计
+## 当前版本：v0.50.0 · question-only封存开发集来源定位
+
+训练一次→独立model SHA冻结→首次揭dev，固定BM25/训练共现graph/置换图3方法9worker。质量门槛True，时间门槛False，质量与时间联合False。
+原187行/评分187行/重叠排除0，20196原成员绑定/9全源恢复与proof/全树通过。
+
+![仅问题文本的证据定位](results/v0.50.0/question-retrieval.png)
+
+固定12facts/4096原memberB，未解/UUID改写留ID+literal两口径；不是生成答案准确率或NLI/长期会话收益。
+267检查266通过/1权限跳过，65runtime仅版本，0新模型API，私有原问题/科学源/模型图不发布，E3净收益/E4整体未验收。
+
+[冻结协议](docs/QUESTION-RETRIEVAL.md) · [详实报告](results/v0.50.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.50.0)。
+
+## v0.49.0 · 训练标注原始来源就绪审计
 
 3fresh worker、17292重复叶检查/16533原成员绑定/3整源恢复通过；严格全可解/全literal两门槛均False。
 单轮5764叶：3982 UUID+1529精确文本+253未解；2142 literal相等、3369 UUID绑定但改写，不能当语义证明。

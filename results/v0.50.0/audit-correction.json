@@ -1,0 +1,13 @@
+{
+  "original_frozen_analyzer": "scripts/analyze_question_retrieval.py",
+  "failure": "Method tuples had become string (lexical); first read round-1-l.json failed before aggregates",
+  "failure_log_bytes": 4532,
+  "failure_log_sha256": "63f19462fb99c2cb36714970b275e3b14fe4f35e74bdced8aa9c85068b88d70f",
+  "supplemental_analyzer": "scripts/audit_question_retrieval.py",
+  "supplemental_sha256": "c26d4f0eb272ab1cfb98a6ae876a3f4e536ef1de8f48f1bbfd1197bbd9422e68",
+  "supplemental_bytes": 15059,
+  "supplemental_commit": "695f0b035ecb4e7de514e6ee0e92b59018698bcf",
+  "exact_changes": "Three method-sequence tuples restored; no threshold, algorithm, data, model, metric or budget change",
+  "formal_evaluation_retries": 0,
+  "real_model_retraining_runs": 0
+}
