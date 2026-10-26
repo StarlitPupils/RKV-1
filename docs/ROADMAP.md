@@ -315,3 +315,7 @@ observer开销和全部memory/sidecar/源码计账，原v0.40漏项不回填。�
 ## v0.44：原CAS工作量调用角色归因
 
 6worker/600proof/1710绑定/156源/12795event与v043原值一致且守恒，80%归因假设门槛True。重仪表只计诊断成本，没有优化/提速验证。下一项另冻请求内验证/视图复用及安全/RAM合同。报告results/v0.44.0/SUMMARY.md。
+
+## v0.45：固定SID单trace已验证视图候选
+
+24worker/2400proof/6840绑定/624源与旧v043一致。机制联合True，两布局时间联合True/True，分散decoded少61.49%；新请求重验/每selected原record SHA保持，但不承诺每hop重验所有未选中源。RAM/源码和完整费用计账，默认不集成，非真实推理收益。报告results/v0.45.0/SUMMARY.md；下一项先冻独立安全/负载转移，不调旧参数。

@@ -1,0 +1,11 @@
+{
+  "child_report_sha256": "365dcfa23a2e4d1137611d96e0dfb8126492fa917539883ebeb6c1624ff428f0",
+  "error": null,
+  "layout": "clustered",
+  "meter": "on",
+  "meter_report_sha256": "09d8569ddb87cb66172bf5e1b55254f7566929b3ae4e307cf19a5abb62cd5b7d",
+  "parent_full_process_wall_s": 1.2735049999319017,
+  "return_code": 0,
+  "round": 1,
+  "view": "on"
+}

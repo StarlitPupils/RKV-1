@@ -6,7 +6,21 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.44.0 · CAS角色归因：80%假设门槛True
+## 当前版本：v0.45.0 · 固定SID单trace视图复用候选
+
+24fresh worker、2400proof/6840绑定/624历史源及6组完整树一致。分散工作量严格下降/同块相等控制联合True；
+clustered/separated时间联合门槛True/True。
+分散decoded少61.49%，meterOFF trace wall中位比0.608/0.402、parent完整wall0.922/0.659；RAM/源码/全部费用另列。
+
+![视图复用工作量和时间](results/v0.45.0/view-paths.png)
+
+请求开始完整验证一次视图，每selected record仍原SHA；**不承诺每hop重查未选中源/索引的中途篡改**，新请求重验。
+仅assessment/v3/固定显式SID，不默认集成，无decoded块cache。253检查252通过/1跳过，64 runtime仅版本，0模型API。
+既有合成机制非真实推理/长会话/回答收益，E3净收益/E4整体未验收，SSD物理/冷缓存/跨机未测。
+
+[冻结协议](docs/QUERY-VIEW.md) · [详实报告](results/v0.45.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.45.0)。
+
+## v0.44.0 · CAS角色归因：80%假设门槛True
 
 两布局cacheOFF各3轮、6fresh worker，600proof/1710绑定/156历史文件及12795原block事件守恒，proof/完整树/计量等v0.43。
 按manifest_validation/index_view/source_hit/other_trace排他归因，不跳校验；重仪表时间只报成本，不是优化速度验证。

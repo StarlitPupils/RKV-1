@@ -1,0 +1,11 @@
+{
+  "runtime_protocol_input_freeze": "4a0bfab61ad667f7c7c707057c35eed6969d382c",
+  "candidate_CI": 40337615085,
+  "formal_workers": 24,
+  "formal_evaluation_retries": 0,
+  "new_training_runs": 0,
+  "new_remote_model_calls": 0,
+  "prior_fully_verified_release": "v0.44.0",
+  "prior_final_proof_sha256": "81808833bf4e0b0c8e98dadd0a9b829a0bbe4fc9489f0f0859e09db4be2f07aa",
+  "scope": "Known synthetic layouts; fixed-SID v3 preverified view consistency, selected records reverified; not per-hop revalidation of every unselected file or real QA"
+}

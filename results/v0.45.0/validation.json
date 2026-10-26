@@ -1,0 +1,55 @@
+{
+  "main_questions": 2304,
+  "main_status": {
+    "complete": 2232,
+    "cycle": 24,
+    "missing": 48
+  },
+  "controls": 96,
+  "negative_audits": 48,
+  "proofs": 2400,
+  "accepted_bindings": 6840,
+  "all_mechanical_gates_pass": true,
+  "all_clustered_proofs_match_v040": true,
+  "cross_layout_semantics_and_record_sha_match": true,
+  "four_condition_tree_identity_groups": 6,
+  "historical_source_files_recovered": 624,
+  "parent_timing_records": 24,
+  "meter_ON_conservation_cases": 1200,
+  "meter_OFF_null_cases": 1200,
+  "view_ON_scope_and_cleanup_cases": 1200,
+  "gates_by_layout": {
+    "clustered": {
+      "expected_work_gate": true,
+      "work_rule": "exact_equality",
+      "median_unmetered_time_ratios": {
+        "trace_wall_s": 0.6077644409389654,
+        "trace_cpu_s": 0.47058823529411764,
+        "parent_full_process_wall_s": 0.9216289721528562
+      },
+      "time_joint_gate": true
+    },
+    "separated": {
+      "expected_work_gate": true,
+      "work_rule": "strict_reduction",
+      "median_unmetered_time_ratios": {
+        "trace_wall_s": 0.40167122626942,
+        "trace_cpu_s": 0.39325842696629215,
+        "parent_full_process_wall_s": 0.6589398600964274
+      },
+      "time_joint_gate": true
+    }
+  },
+  "unit_tests_run": 253,
+  "unit_tests_passed": 252,
+  "unit_tests_skipped": 1,
+  "runtime_module_count": 64,
+  "html_files": 1,
+  "freeze": "4a0bfab61ad667f7c7c707057c35eed6969d382c",
+  "new_remote_model_calls": 0,
+  "physical_SSD_bytes": null,
+  "all_system_file_bytes": null,
+  "cold_cache": null,
+  "cross_machine": null,
+  "figure_visually_inspected": true
+}
