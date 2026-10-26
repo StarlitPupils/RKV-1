@@ -1,0 +1,40 @@
+{
+  "runtime_protocol_input_freeze": "38742a5936858ad943782533f0a65e454eb11517",
+  "candidate_CI": 40351186775,
+  "formal_workers": 36,
+  "formal_evaluation_retries": 0,
+  "new_remote_model_calls": 0,
+  "new_training_runs": 0,
+  "prior_fully_verified_release": "v0.47.0",
+  "prior_final_proof_sha256": "760001ff68d09f28717cefa4246bcef379def8ad499fcdf8ed7adb0394260fc9",
+  "input_plan_preparation_cpu_s": null,
+  "input_plan_preparation_wall_s": null,
+  "input_preparation_scope": "Original-byte identity, pure deterministic plans and admission lengths only; no lookup/codec scoring; not measured retroactively",
+  "protocol_input_and_test_source": {
+    "docs/API-BUNDLES.md": {
+      "bytes": 6315,
+      "sha256": "80f0a43ae32b9f9dc34102234c2bb1a3eb3299f10466462ce99cb52e75c89538"
+    },
+    "docs/api-bundle-inputs.json": {
+      "bytes": 2574,
+      "sha256": "b85604d4abd0e3137eb00bd8767b61bb89cf3ff6d2941b08b3742c5bbc415ac6"
+    },
+    "tests/test_api_bundles.py": {
+      "bytes": 1832,
+      "sha256": "bfa54afa0790d6caae5fb4490d47dbf716666731edb3860aa6bdfc6605ae3e19"
+    }
+  },
+  "candidate_push_failure": {
+    "details": {
+      "phase": "Candidate frozen commit push before CI/formal experiment",
+      "commit": "38742a5",
+      "error": "schannel: failed to receive handshake, SSL/TLS connection failed",
+      "formal_workers_started": 0,
+      "retry_scope": "Push exact existing commit only via configured local proxy; no commit/experiment replacement"
+    },
+    "private_log_bytes": 327,
+    "private_log_sha256": "d0b0652888a6d570b0e98648285125a4c76d8b63d72db59a86c5792ee1d7204c",
+    "same_commit_push_retry_succeeded": true
+  },
+  "scope": "Public API unchanged, fixed1/3/32 existing scientific known-source batch costs; not new unknown scientific QA"
+}

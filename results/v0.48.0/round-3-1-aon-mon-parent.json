@@ -1,0 +1,10 @@
+{
+  "api": "on",
+  "batch_size": 1,
+  "child_report_sha256": "aa39e0e5db2ed006cff2b8b231cdc90b397fdb82f687392f459b1eb28d4f75f9",
+  "error": null,
+  "meter": "on",
+  "parent_full_process_wall_s": 1.3826437999960035,
+  "return_code": 0,
+  "round": 3
+}

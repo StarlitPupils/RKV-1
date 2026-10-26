@@ -327,3 +327,7 @@ observer开销和全部memory/sidecar/源码计账，原v0.40漏项不回填。�
 ## v0.47：可选公共固定SID批查询接口
 
 Memory.lookup_many最多32显式key、原record入证预算不等于I/O/RAM上限。126case=66返回/60预期预算拒绝、666绑定/36历史源恢复通过；65递归Python+HTML和全部成本计账。仅合成机械验收，performance_gain_gate=null，不外推旧科学速度；默认lookup/CLI/UI不改。报告results/v0.47.0/SUMMARY.md，E3净收益/E4整体/真实长会话未验收，下一项须另冻假设。
+
+## v0.48：公共批查询固定size成本范围
+
+36worker/1152bundle/13824原record绑定/36全源恢复通过，1/3/32时间联合1key: False / 3key: True / 32key: True，CAS全部计数相等无字节收益，全部负方向/费用保留。原公共API不改、默认不切换，既有科学数据和3key不称新独立科学验证。报告results/v0.48.0/SUMMARY.md；下一优先项另冻未知问题证据定位/检索假设，无新模型API，E4整体/真实长会话未验收。

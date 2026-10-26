@@ -6,7 +6,19 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.47.0 · 可选公共批查询API
+## 当前版本：v0.48.0 · 公共API固定1/3/32条科学记录成本
+
+36fresh worker、1152bundle/13824原record绑定/36完整源恢复和9组proof/全部树一致。各size时间联合：1key: False / 3key: True / 32key: True。
+base-only所有CAS计数相等，没有读取字节节省；低批量/CPU/parent/RSS反向和全部费用保留。
+
+![公共批查询不同批量成本](results/v0.48.0/api-bundles.png)
+
+公共lookup_many与原memory.py逐字等v047，默认不切换；原语料已见、3key组等旧v046，不称未知科学验证或回答提升。
+260检查259通过/1权限跳过，65递归Python+HTML收费，0新模型API；E3净收益/E4整体/真实长会话/无限上下文未完成。
+
+[冻结协议](docs/API-BUNDLES.md) · [详实报告](results/v0.48.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.48.0)。
+
+## v0.47.0 · 可选公共批查询API
 
 新增Memory.lookup_many：固定历史SID、1..32个已知来源key，原record逐次验证；入证字节预算默认1MiB，不是读取或RAM上限。
 6fresh worker、126机械case=66返回/60预期预算拒绝，666原record绑定/36历史源恢复通过；259检查258通过/1权限跳过。
