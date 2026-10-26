@@ -1,0 +1,66 @@
+{
+  "model_sha256": "2f82ee4b28c943038e7a37ddcbd8871443f7a441ddd45a1af599decc8bade183",
+  "reports": [
+    {
+      "split": "dev",
+      "method": "lexical",
+      "report_path": "results/v0.50.0/round-1-lexical.json",
+      "report_sha256": "3a17eefd65c51b033b10302973e9d1a436265d749811293c934b0cbbb8dac31d",
+      "report_bytes": 1009261,
+      "private_query_path": ".tools/question-retrieval-v050-workers/round-1-lexical/private-query-check.json",
+      "private_query_sha256": "b66812b7382b7a8f3f6b9a3a2be8bfca0a6aeb86014e48ef22905455f55814be",
+      "private_query_bytes": 73391
+    },
+    {
+      "split": "dev",
+      "method": "graph",
+      "report_path": "results/v0.50.0/round-1-graph.json",
+      "report_sha256": "1d5633d4e8424f0dc8290adaac32be591d7561cf70a7953f1f3a9ae0cbefce90",
+      "report_bytes": 1009428,
+      "private_query_path": ".tools/question-retrieval-v050-workers/round-1-graph/private-query-check.json",
+      "private_query_sha256": "272fd18faf6644cb50762110d5f88f678d22dd24f4c02a950f69792660a522b2",
+      "private_query_bytes": 73489
+    },
+    {
+      "split": "dev",
+      "method": "permuted_graph",
+      "report_path": "results/v0.50.0/round-1-permuted_graph.json",
+      "report_sha256": "a20c858a18f93ba2b38c665e30d8b6496a0309c7810feac78a92fcf65b5eb74d",
+      "report_bytes": 1009671,
+      "private_query_path": ".tools/question-retrieval-v050-workers/round-1-permuted_graph/private-query-check.json",
+      "private_query_sha256": "0f8eeace3c1b418011fa9b224a05d460d1ebb313743f7439cb590ff71b09fdf3",
+      "private_query_bytes": 73641
+    },
+    {
+      "split": "test",
+      "method": "lexical",
+      "report_path": "results/v0.51.0/round-1-lexical.json",
+      "report_sha256": "92f95077fb6a2187b31a2073fa376eb7abc780103a55a1a216a0672d70d1c385",
+      "report_bytes": 1825130,
+      "private_query_path": ".tools/question-test-v051-workers/round-1-lexical/private-query-check.json",
+      "private_query_sha256": "b95cac09c0dfaf403f137740992435bd3556d38193aeb04a45800ba1bc4130ec",
+      "private_query_bytes": 133048
+    },
+    {
+      "split": "test",
+      "method": "graph",
+      "report_path": "results/v0.51.0/round-1-graph.json",
+      "report_sha256": "26d0e2f544e7279e47ef2aedfb7d1207e1036589723ee29e3ff2c39c13fd0258",
+      "report_bytes": 1826490,
+      "private_query_path": ".tools/question-test-v051-workers/round-1-graph/private-query-check.json",
+      "private_query_sha256": "c5dca1a03ce614b054dae0be60b60bf1f857d09ef8b73ead8fabee5eb18968a9",
+      "private_query_bytes": 133688
+    },
+    {
+      "split": "test",
+      "method": "permuted_graph",
+      "report_path": "results/v0.51.0/round-1-permuted_graph.json",
+      "report_sha256": "1bc5f1c2463c0ec10082d17ce8af21602fa29931df596f4f939ed41bc74ec77f",
+      "report_bytes": 1826653,
+      "private_query_path": ".tools/question-test-v051-workers/round-1-permuted_graph/private-query-check.json",
+      "private_query_sha256": "2c669fd969f583bc7b9d3269843a9069b12e926bd49f138f4f9c51e46d0da944",
+      "private_query_bytes": 133827
+    }
+  ],
+  "scope": "Known original round1 reports and exact private query records; pure diagnostic, not new retrieval scores"
+}
