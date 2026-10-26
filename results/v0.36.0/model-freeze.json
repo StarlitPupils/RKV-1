@@ -1,0 +1,12 @@
+{
+  "runtime_and_protocol_freeze": "a0c34fb41d45f0143279680ccf34d74089cf3b37",
+  "model_sha256": "f4848728bc05e305208cdc50f4ec10b80fee167736deecf334b03e0ebfc03813",
+  "model_bytes": 6944,
+  "model_zlib6_bytes": 4878,
+  "training_report_sha256": "bc4d753f43cd4abe4c7db77398f914f725672472a22da59429f593fa4734040e",
+  "training_runs": 1,
+  "epochs": 1,
+  "test_evaluations_before_this_commit": 0,
+  "test_split_policy": "Three second-file8192B prefixes plus fixed8192B noise; exact policy frozen before training. No test early stop, retraining or parameter search.",
+  "private_model_artifact": "Not distributed: self-contained scientific frames/models stay local; weight/source hashes, training metadata and reconstruction code public."
+}
