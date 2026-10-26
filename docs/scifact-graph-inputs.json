@@ -1,0 +1,27 @@
+{
+  "source": "https://github.com/allenai/scifact",
+  "download_url": "https://scifact.s3-us-west-2.amazonaws.com/release/latest/data.tar.gz",
+  "archive_sha256": "11c621288d41ac144d29b13b0f8503b3820b7d6e8b1f6ff24dff335c196d76be",
+  "files": {
+    "corpus.jsonl": {
+      "bytes": 8307875,
+      "sha256": "b8d6c89624cb2ed74dee8938effc4f5d8bd2086887880af8110d64be4ceade62",
+      "lines": 5183
+    },
+    "claims_train.jsonl": {
+      "bytes": 175616,
+      "sha256": "f4c8fa82d8bd0653a9cc8d61a6ea48c25eacea64e90af5dbf390ebb1b74372f0",
+      "lines": 809
+    },
+    "claims_dev.jsonl": {
+      "bytes": 65007,
+      "sha256": "86f0435d08fdb65d1aa41d1472684f57e6e71930626497bdf4d7a9ec1a632217",
+      "lines": 300
+    }
+  },
+  "licenses": {
+    "claims": "CC-BY-4.0",
+    "abstracts": "ODC-By-1.0"
+  },
+  "scope": "Existing project benchmark used in v015/v030, known train/dev; new graph transfer not unseen-data validation"
+}
