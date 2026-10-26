@@ -1,0 +1,13 @@
+{
+  "freeze": "b9f15a4",
+  "fix_protocol_sha256": "c05e478a9e714adfe5605036fe7751689c9f10877cb142e8615b1f179e7f16d6",
+  "baseline_runtime": "v0.33.0",
+  "old_driver_and_protocol_byte_identical": true,
+  "all_other_Memory_methods_and_existing_module_functions_except_head_AST_identical": true,
+  "baseline_raw_round_sha256": {
+    "1": "086772866e5fd9bb9e6588a5f34f32bdbb5f61fe04c9ae690c12e0ec3985e9b7",
+    "2": "34d41d15e1dfa5cf3fd4ba449e9892f11bab6afa9f110dd222018acdf0af7630",
+    "3": "42ac0249926e6c4864308c981be4621dfc09d88779b8e1dd3534da65913abc4f"
+  },
+  "scope": "Same frozen workload and gates; different schedules and successful revision counts prevent throughput or compression claims."
+}

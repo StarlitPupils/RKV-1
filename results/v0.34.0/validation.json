@@ -1,0 +1,21 @@
+{
+  "frozen_commit": "b9f15a4",
+  "all_57_modules_protocol_driver_and_generated_source_hashes_match": true,
+  "runtime_except_version_and_HEAD_operations_byte_identical_to_v033": true,
+  "formal_rounds": 3,
+  "formal_reader_processes": 12,
+  "writer_updates_requested": 240,
+  "all_rounds_gate_passed": true,
+  "errors": [],
+  "tests": {
+    "run": 223,
+    "passed": 222,
+    "skipped": 1,
+    "failed": 0,
+    "log_sha256": "70627fdbe640d4f93800359966ee15ebb6fb7ca62b3120edac6d90a4cdf300a7"
+  },
+  "remote_model_calls": 0,
+  "cold_cache": null,
+  "cross_machine": null,
+  "inference_quality": null
+}

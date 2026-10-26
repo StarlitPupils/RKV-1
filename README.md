@@ -6,7 +6,37 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.33.0 · 边写边读发现 Windows HEAD 共享冲突
+## 当前版本：v0.34.0 · Windows边写边读修正，本机原负载通过
+
+读取HEAD时允许Windows共享删除/重命名；最终发布名称使用FileRenameInfoEx的
+替换/POSIX语义。旧句柄继续读旧内容，新句柄读新内容；原字节/格式/预算/校验不变。
+不支持该API的Windows文件系统回到原单次os.replace，不保证该降级路径的并发。
+没有权限重试、缓存SID或放宽原文验证，所有其他Memory方法保持不变。
+
+| 同一个冻结计划、各3新目录 | v0.33基线 | v0.34修正 |
+|---|---:|---:|
+|门槛通过|0/3|3/3|
+|成功更新|141|240|
+|完整审计查询|2689|5462|
+|历史快照复查|144|243|
+|观察到的worker/audit错误|6|0|
+
+两版原driver/合成源/预算/超时逐字节相同，调度交错和实际操作数量不同，
+不能据此声称吞吐或模型质量提升。新结果21848条原句/位置绑定、4341次add区间
+重叠，全部历史保留；每轮80更新后Memory863971B。新增源码2856B，整体393969B。
+
+![原计划下的失败与修正](results/v0.34.0/head-sharing-baseline-comparison.png)
+
+完整套件222通过/1权限跳过，旧句柄/新句柄、关闭/不可继承和缺失/损坏边界实测。
+v0.33源码账本漏计4子模块12842B，已按原标签/实际wheel追加更正，旧实验不改。
+这是本机有界机械验证；生产并发、多writer、进程中断/断电、长期对话和推理收益尚未证明。
+下一项固定提交边界的进程中断恢复；0新增模型调用，冷缓存/跨机器未测。
+
+[修正协议](docs/MEMORY-HEAD-SHARING.md) · [详实报告](results/v0.34.0/SUMMARY.md) ·
+[原始JSON](results/v0.34.0/round-1.json) · [验证](results/v0.34.0/validation.json) ·
+[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.34.0)。
+
+## v0.33.0 · 边写边读发现 Windows HEAD 共享冲突
 
 新增冻结的单writer/四reader合成机械实验，运行库除版本号外与v0.32相同。
 3轮各计划80次更新、2048条记录；原预算、原默认，不重试失败操作。

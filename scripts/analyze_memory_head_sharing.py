@@ -46,6 +46,9 @@ def main():
         assert Path(rel).read_bytes()==subprocess.check_output(['git','show','v0.33.0:'+rel])
     fix=Path('docs/MEMORY-HEAD-SHARING.md').read_bytes()
     assert fix==subprocess.check_output(['git','show',args.freeze+':docs/MEMORY-HEAD-SHARING.md'])
+    for n in range(1,4):
+        rel=f'results/v0.33.0/round-{n}.json'
+        assert Path(rel).read_bytes()==subprocess.check_output(['git','show','v0.33.0:'+rel])
     save(out/'fix-context.json',{'freeze':args.freeze,'fix_protocol_sha256':digest(fix),'baseline_runtime':'v0.33.0',
                               'old_driver_and_protocol_byte_identical':True,'all_other_Memory_methods_and_existing_module_functions_except_head_AST_identical':True,
                               'baseline_raw_round_sha256':{str(n):digest(Path(f'results/v0.33.0/round-{n}.json').read_bytes()) for n in range(1,4)},
@@ -102,7 +105,8 @@ def main():
              'post_run_history_verifications':history_total,'post_run_history_record_bindings':4*history_total,'excluded_warm_queries':ROUNDS*READERS,
              'errors':errors,'all_rounds_gate_passed':all(r['gate'] for r in round_rows)}
     save(out/'derived-metrics.json',metrics);save(out/'source-checksums.json',checks)
-    resources={str(p).replace('\\','/'):{'bytes':p.stat().st_size,'sha256':digest(p.read_bytes())} for p in sorted(Path('rkv1').glob('*')) if p.suffix in ('.py','.html')}
+    resources={str(p).replace('\\','/'):{'bytes':p.stat().st_size,'sha256':digest(p.read_bytes())} for p in sorted(Path('rkv1').rglob('*')) if p.suffix in ('.py','.html')}
+    assert set(resources)=={'rkv1/'+name for name in checks}|{'rkv1/memory_demo.html'}
     save(out/'source-resource.json',{'files':resources,'all_rkv_python_and_html_bytes':sum(x['bytes'] for x in resources.values()),
                                    'benchmark_native_specific_bytes':0,'scope':'Runtime source ledger only; Python/SQLite/Zlib/OS/filesystem/hardware and harness costs are not a complete deployment accounting.'})
     validation={'frozen_commit':args.freeze,'all_57_modules_protocol_driver_and_generated_source_hashes_match':True,
@@ -126,6 +130,17 @@ def main():
     axes[1,1].set_xticks([1,2,3]);axes[1,1].set_xlabel('Fresh root / round');axes[1,1].set_ylabel('Retained Memory logical MiB')
     fig.suptitle('Synthetic single writer / four readers: observed correctness and cost')
     fig.savefig(out/'snapshot-concurrency.png',dpi=160);plt.close(fig)
+    baseline=json.loads(Path('results/v0.33.0/derived-metrics.json').read_text('utf-8'))
+    fig,axes=plt.subplots(1,2,figsize=(10,4),constrained_layout=True)
+    x=[1,2,3]
+    axes[0].bar([n-.18 for n in x],[r['completed_updates'] for r in baseline['rounds']],width=.36,label='v0.33 baseline',color='#e76f51')
+    axes[0].bar([n+.18 for n in x],[r['completed_updates'] for r in round_rows],width=.36,label='v0.34 fix',color='#2a9d8f')
+    axes[0].set_xticks(x);axes[0].set_xlabel('Fresh round');axes[0].set_ylabel('Completed updates / planned 80');axes[0].legend()
+    counts=[len(baseline['errors']),len(errors)]
+    bars=axes[1].bar(['v0.33','v0.34'],counts,color=['#e76f51','#2a9d8f']);axes[1].bar_label(bars);axes[1].set_ylim(0,max(counts+[1])+1)
+    axes[1].set_ylabel('Observed worker / audit errors')
+    fig.suptitle('Same planned workload; schedules and query counts differ')
+    fig.savefig(out/'head-sharing-baseline-comparison.png',dpi=160);plt.close(fig)
     text=f'''# v0.34.0 实验报告：单写入 / 多读取的快照一致性
 
 ## 结论与适用范围
@@ -250,6 +265,38 @@ publication 指令的穷举调度。E3 神经预测、推理质量、多跳与�
 下一版依据具体错误提出最小修正及固定复测，不能把失败重新运行后覆盖成通过。
 不调整已评估科学任务预算，不因本次正确性结果默认切换检索或压缩表示。
 """
+    old_checks=json.loads(Path('results/v0.33.0/source-resource.json').read_text('utf-8'))
+    old_paths=['rkv1/'+name for name in checks]+['rkv1/memory_demo.html']
+    old_source=sum(len(subprocess.check_output(['git','show','v0.33.0:'+name])) for name in old_paths)
+    new_source=sum(v['bytes'] for v in resources.values())
+    text+=f'''
+
+## 与保留的v0.33失败对照
+
+|原计划相同的三轮|v0.33基线|v0.34修正|
+|---|---:|---:|
+|门槛通过|{sum(r['gate'] for r in baseline['rounds'])}/3|{sum(r['gate'] for r in round_rows)}/3|
+|实际成功更新|{sum(r['completed_updates'] for r in baseline['rounds'])}|{sum(r['completed_updates'] for r in round_rows)}|
+|完整源/位置审计查询|{baseline['verified_queries']}|{valid_queries}|
+|原文/位置绑定|{baseline['verified_record_bindings']}|{4*valid_queries}|
+|历史版本复查|{baseline['post_run_history_verifications']}|{history_total}|
+|观察到的worker/audit错误|{len(baseline['errors'])}|{len(errors)}|
+|运行库Python+HTML源码B|{old_source}|{new_source}|
+
+![原负载失败与修正后的完成情况](head-sharing-baseline-comparison.png)
+
+v0.33每轮成功80/48/13次，v0.34按原协议各80次；两版都未重跑替换原正式结果。
+由于调度、查询总数和实际成功历史数量不同，此表只比较冻结正确性门槛和观察到的失败，
+不是错误率显著性检验、吞吐配对或压缩提升。v0.34三轮保留树均863971B，等于v0.33完成80次的第一轮；
+不能拿它与基线提前失败的小树比较后声称压缩得失。新增源码{new_source-old_source}B仍需计入，
+系统DLL/Python运行时与文件系统元数据未全额分配，没有新增自有原生库或模型权重。
+v0.33原源码成本表漏了experiments/下4个模块，共12842B；本表按原标签/实发wheel完整58文件
+重算为391113B，补充更正随v0.33 Release追加。原标签、57模块SHA和实验数据不变。
+
+现有原子性测试的故障注入从os.replace改到跨平台_replace_head发布边界；失败后的配置、
+HEAD和历史断言保持。原测试目标在Windows新路径上已不会执行，不应以“没有触发假异常”来
+跳过故障保持验证。完整测试最终223项222通过/1权限跳过，开发中失败日志SHA见measurement-context。
+'''
     (out/'SUMMARY.md').write_text(text,encoding='utf-8',newline='\n')
     print(json.dumps({'verified_queries':valid_queries,'errors':len(errors),'rounds_passed':sum(r['gate'] for r in round_rows)},ensure_ascii=False))
 

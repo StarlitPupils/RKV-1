@@ -1,0 +1,16 @@
+{
+  "freeze": "b9f15a4",
+  "candidate_CI": 40281596354,
+  "development_logs_sha256": {
+    "test-v034-read-sharing-only.log": "0773dc70b4d36a3c794163ba560c5128a20a38aca6270fe2361b44fe28af3918",
+    "test-v034-head-targeted.log": "5749f9788085b3b64fd475bf59648237f813ac10eefe474829bfb5c6c4aad4f5",
+    "test-v034-rename-targeted-single.log": "483d14b075766013b58fcff6bd4b7ec49b3b8167b883741b690627b698aa8eab",
+    "test-v034-pre-injection-adapter.log": "a3cdadda92810363cfab4cd6cf21d913830cf17b98a683025f97d3b4b2a18484",
+    "test-v034-head-final-targeted.log": "6a5f4306329679d708bf115dbc5d5e95684c84197712033215cee21162534fd0",
+    "test-v034-native.log": "70627fdbe640d4f93800359966ee15ebb6fb7ca62b3120edac6d90a4cdf300a7"
+  },
+  "development_failures": "Shared-delete read only failed held-reader replacement. First POSIX rename prototype lacked UTF16 NUL space, caught by same directional test. Later existing budget fault injection still targeted os.replace; moved to cross-platform _replace_head with unchanged state assertions. No failed prototype entered formal rounds; logs retained privately without personal paths published.",
+  "formal_rounds": "Exactly three original-driver fresh-root rounds, no repeats; all gates passed. Schedules differ from v0.33; no throughput/compression/model-quality causal claim.",
+  "source_ledger_correction": "v0.33 old ledger omitted four experiments/ modules (12842B). Append-only actual-wheel/tag correction downloaded SHA bf4703617a7d982097b282c8c16e1adede6483ba24036aba21c3c7415cc7fb05. Current recursive ledger covers all57 Python modules plusHTML,393969B.",
+  "strict_external_install_scope": "Fresh physically external wheel/native installation and cwd; same Windows interpreter/dependencies, not clean-runtime or cross-machine."
+}
