@@ -1,0 +1,16 @@
+{
+  "initial_frozen_analyzer_figure_sha256": "0dee002ee541080716a938b95e7d5b31200776d1291594d5f3547a9b9827de1a",
+  "corrected_figure_sha256": "b3f41c34055973ebe4301fd248b872694955a0767512799e934e62a02780645c",
+  "initial_original_preserved_private": ".tools/retrieval-gap-v052-measured/retrieval-gap.png",
+  "correction": "Explicit ylim12% headroom and totals after visual check found stacked autoscale top tight/cropped",
+  "plot_program_sha256": "60ca38d755f5f556651f6b9e4764a15f4386deb81a33ebc7932939f3958c3756",
+  "plot_program_bytes": 2347,
+  "plot_frozen_commit": "aeffad7367b3d0a4149cf52aa46e4b1a24e2df11",
+  "metrics_sha256": "ffa391ade28f925816490331914e9f576eac03e921df845cd49feb51b3467ba8",
+  "figure_sha256": "b3f41c34055973ebe4301fd248b872694955a0767512799e934e62a02780645c",
+  "plot_only_wall_s": 0.5719012999907136,
+  "plot_only_cpu_s": 0.5625,
+  "scope": "Plot only explicit axis bounds and totals; no classification, model, score or oracle recomputation",
+  "scientific_retrials": 0,
+  "diagnostic_repeats": 0
+}

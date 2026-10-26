@@ -6,7 +6,18 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.51.0 · 原模型封存官方test迁移
+## 当前版本：v0.52.0 · 已见漏证分解与gold-aware诊断上界
+
+6诊断worker、1578旧题方法记录/6204源ID组排他分类和独立DP核验通过。前12字节排除占漏证多数假设False，graph dev/test比例0.000/0.000。
+
+![已见漏证分解](results/v0.52.0/retrieval-gap.png)
+
+oracle知道gold，仅为上界，不是可部署检索成绩。0新科学试次/训练/原source range绑定；旧v050/51成绩与literal负方向保持。
+270检查269通过/1权限跳过，65runtime仅版本，0新模型API；E3净收益/E4整体/回答质量/真实长会话/无限上下文未完成。
+
+[冻结协议](docs/RETRIEVAL-GAP.md) · [详实报告](results/v0.52.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.52.0)。
+
+## v0.51.0 · 原模型封存官方test迁移
 
 同一模型和固定算法/12facts/4096B不改、新训练0，9fresh worker原test340行/评分339/重叠排除1。
 源ID质量True / 时间True / 联合True，36612原成员绑定/9整源恢复、proof/全树确定。

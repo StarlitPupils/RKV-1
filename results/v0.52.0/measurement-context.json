@@ -1,0 +1,75 @@
+{
+  "runtime_protocol_input_freeze": "0b6f8fe2c8e77050dbb4110618ec5aa988fe1cdd",
+  "candidate_CI": 40368073580,
+  "diagnostic_workers": 6,
+  "formal_diagnostic_retries": 0,
+  "new_scientific_evaluation_trials": 0,
+  "new_training_runs": 0,
+  "new_remote_model_calls": 0,
+  "prior_fully_verified_release": "v0.51.0",
+  "prior_final_proof_sha256": "cb3d4a6d16091cadf1ae82185a0b7285a8bcdf336ea8d2d1284ac8a82d112cc3",
+  "source_reports_already_seen": true,
+  "gold_aware_bounds_not_deployable": true,
+  "protocol_input_test_source": {
+    "docs/RETRIEVAL-GAP.md": {
+      "bytes": 5422,
+      "sha256": "6c185302face20a99a4fc4598d1d26460271fc0bc1fecc537b4409703f16d8ba"
+    },
+    "docs/retrieval-gap-inputs.json": {
+      "bytes": 3182,
+      "sha256": "709cf283a5782ea55c4132e82ba5eede11cb3733ab50b009c8767b763bd6e43e"
+    },
+    "tests/test_retrieval_gap.py": {
+      "bytes": 1822,
+      "sha256": "4dae573c4da0f6939b1cc21612fcb6e6b098034a0440f1109074d1a3b523851e"
+    }
+  },
+  "reused_model_sha256": "2f82ee4b28c943038e7a37ddcbd8871443f7a441ddd45a1af599decc8bade183",
+  "reused_model_bytes": 4629668,
+  "historical_training_summary": {
+    "component_bytes": {
+      "graph": 425128,
+      "permuted_graph": 434231,
+      "shared": 3770271
+    },
+    "component_sha256": {
+      "graph": "c20a7e4e1567136824c4e7999e98d4d7ba30ae6d5c3c28e975c847c5720dcfcc",
+      "permuted_graph": "b89f64cb2bc514e76bd91549acca1dc9e2b9397c82a79591d43fe3956f9c3790",
+      "shared": "197178710cea6a41aca19c5d4896afe4a5ff8b9461a6556fd13b3eb643983cae"
+    },
+    "dev_file_opened": false,
+    "model_bytes": 4629668,
+    "model_parts": {
+      "control_graph_bytes": 434231,
+      "exact_unique_facts": 11521,
+      "gold_mapping_counts": {
+        "annotated_text_differs": 3369,
+        "exact_decoded_text": 1529,
+        "provided_UUID": 3982,
+        "unresolved": 253
+      },
+      "graph_nodes": 3095,
+      "positive_graph_bytes": 425128,
+      "shared_bytes": 3770271,
+      "source_alias_ids": 11941,
+      "train_rows": 1313,
+      "train_unique_ids": 1308,
+      "undirected_graph_edges": 8088
+    },
+    "model_sha256": "2f82ee4b28c943038e7a37ddcbd8871443f7a441ddd45a1af599decc8bade183",
+    "observed_peak_rss_bytes": 83959808,
+    "scope": "Single train-only deterministic lexical index and supervised co-occurrence graph construction; model/index private",
+    "source_sha256": "7afb6b0464e02b83a29615b06cb8a28002625dbbf707f6c0a86bfd450f5aefcb",
+    "training_label_sha256": "cb96db359d4a4a135ce21274497f218ff2306cf874593aad3e0619b6546247ba",
+    "training_runs": 1,
+    "worker_cpu_s": 1.4375,
+    "worker_wall_s": 1.4555001000408083
+  },
+  "historical_training_parent": {
+    "error": null,
+    "parent_full_process_wall_s": 1.5477491000201553,
+    "return_code": 0
+  },
+  "new_model_bytes": 0,
+  "new_original_source_range_bindings": 0
+}

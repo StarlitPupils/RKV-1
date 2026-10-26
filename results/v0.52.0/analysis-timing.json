@@ -1,0 +1,6 @@
+{
+  "analysis_wall_s": 4.328134499955922,
+  "analysis_cpu_s": 2.765625,
+  "observed_peak_rss_bytes": 103747584,
+  "scope": "Independent partition replay and dynamic-program oracle proof plus plot; not online inference/retrieval time"
+}

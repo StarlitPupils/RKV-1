@@ -1,0 +1,23 @@
+{
+  "diagnostic_workers": 6,
+  "parent_timing_records": 6,
+  "question_records_checked": 1578,
+  "source_ID_groups_partitioned": 6204,
+  "partition_and_DP_oracle_audit_pass": true,
+  "first12_byte_exclusion_majority_hypothesis": false,
+  "new_scientific_evaluation_trials": 0,
+  "new_model_training_runs": 0,
+  "new_original_source_range_bindings": 0,
+  "unit_tests_run": 270,
+  "unit_tests_passed": 269,
+  "unit_tests_skipped": 1,
+  "runtime_module_count": 65,
+  "html_files": 1,
+  "freeze": "0b6f8fe2c8e77050dbb4110618ec5aa988fe1cdd",
+  "new_remote_model_calls": 0,
+  "physical_SSD_bytes": null,
+  "all_system_file_bytes": null,
+  "cold_cache": null,
+  "cross_machine": null,
+  "figure_visually_inspected": true
+}

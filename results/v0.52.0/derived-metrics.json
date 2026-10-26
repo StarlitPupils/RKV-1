@@ -1,0 +1,220 @@
+{
+  "rows": [
+    {
+      "split": "dev",
+      "method": "lexical",
+      "question_records": 187,
+      "counts": {
+        "recovered": 147,
+        "unresolved_source": 46,
+        "no_candidate": 250,
+        "below_count_prefix": 277,
+        "byte_budget_excluded": 0
+      },
+      "archived_macro_ID_recall": 0.2617497178994505,
+      "archived_complete_ID_questions": 12,
+      "source_ID_oracle_macro_ceiling": 0.945713763360822,
+      "candidate_ID_oracle_macro_ceiling": 0.6550718740558314,
+      "literal_oracle_macro_ceiling": 0.3669359754921253,
+      "source_ID_oracle_complete_possible": 153,
+      "candidate_ID_oracle_complete_possible": 65,
+      "literal_oracle_complete_possible": 15,
+      "worker_wall_s": 0.2752131000161171,
+      "worker_cpu_s": 0.28125,
+      "parent_full_process_wall_s": 0.3760490999557078,
+      "observed_peak_rss_bytes": 52006912,
+      "loaded_bytes": {
+        "archived_report": 1009261,
+        "manifest": 3182,
+        "model": 4629668,
+        "private_queries": 73391
+      },
+      "replay_and_diagnostic": {
+        "cpu_s": 0.25,
+        "wall_s": 0.23731729993596673
+      }
+    },
+    {
+      "split": "dev",
+      "method": "graph",
+      "question_records": 187,
+      "counts": {
+        "recovered": 179,
+        "unresolved_source": 46,
+        "no_candidate": 230,
+        "below_count_prefix": 265,
+        "byte_budget_excluded": 0
+      },
+      "archived_macro_ID_recall": 0.30680165051822805,
+      "archived_complete_ID_questions": 22,
+      "source_ID_oracle_macro_ceiling": 0.945713763360822,
+      "candidate_ID_oracle_macro_ceiling": 0.6791132812523188,
+      "literal_oracle_macro_ceiling": 0.3669359754921253,
+      "source_ID_oracle_complete_possible": 153,
+      "candidate_ID_oracle_complete_possible": 71,
+      "literal_oracle_complete_possible": 15,
+      "worker_wall_s": 0.28706840006634593,
+      "worker_cpu_s": 0.296875,
+      "parent_full_process_wall_s": 0.38723669992759824,
+      "observed_peak_rss_bytes": 52158464,
+      "loaded_bytes": {
+        "archived_report": 1009428,
+        "manifest": 3182,
+        "model": 4629668,
+        "private_queries": 73489
+      },
+      "replay_and_diagnostic": {
+        "cpu_s": 0.234375,
+        "wall_s": 0.24730980000458658
+      }
+    },
+    {
+      "split": "dev",
+      "method": "permuted_graph",
+      "question_records": 187,
+      "counts": {
+        "recovered": 124,
+        "unresolved_source": 46,
+        "no_candidate": 250,
+        "below_count_prefix": 300,
+        "byte_budget_excluded": 0
+      },
+      "archived_macro_ID_recall": 0.2217700896845282,
+      "archived_complete_ID_questions": 9,
+      "source_ID_oracle_macro_ceiling": 0.945713763360822,
+      "candidate_ID_oracle_macro_ceiling": 0.6550718740558314,
+      "literal_oracle_macro_ceiling": 0.3669359754921253,
+      "source_ID_oracle_complete_possible": 153,
+      "candidate_ID_oracle_complete_possible": 65,
+      "literal_oracle_complete_possible": 15,
+      "worker_wall_s": 0.2921770999673754,
+      "worker_cpu_s": 0.296875,
+      "parent_full_process_wall_s": 0.4068535999394953,
+      "observed_peak_rss_bytes": 52023296,
+      "loaded_bytes": {
+        "archived_report": 1009671,
+        "manifest": 3182,
+        "model": 4629668,
+        "private_queries": 73641
+      },
+      "replay_and_diagnostic": {
+        "cpu_s": 0.265625,
+        "wall_s": 0.25432039983570576
+      }
+    },
+    {
+      "split": "test",
+      "method": "lexical",
+      "question_records": 339,
+      "counts": {
+        "recovered": 266,
+        "unresolved_source": 75,
+        "no_candidate": 520,
+        "below_count_prefix": 487,
+        "byte_budget_excluded": 0
+      },
+      "archived_macro_ID_recall": 0.2512326169405815,
+      "archived_complete_ID_questions": 22,
+      "source_ID_oracle_macro_ceiling": 0.9462377674767053,
+      "candidate_ID_oracle_macro_ceiling": 0.605190335721309,
+      "literal_oracle_macro_ceiling": 0.41107918630042534,
+      "source_ID_oracle_complete_possible": 275,
+      "candidate_ID_oracle_complete_possible": 91,
+      "literal_oracle_complete_possible": 42,
+      "worker_wall_s": 0.4876436998602003,
+      "worker_cpu_s": 0.484375,
+      "parent_full_process_wall_s": 0.5905124000273645,
+      "observed_peak_rss_bytes": 55275520,
+      "loaded_bytes": {
+        "archived_report": 1825130,
+        "manifest": 3182,
+        "model": 4629668,
+        "private_queries": 133048
+      },
+      "replay_and_diagnostic": {
+        "cpu_s": 0.4375,
+        "wall_s": 0.4458554999437183
+      }
+    },
+    {
+      "split": "test",
+      "method": "graph",
+      "question_records": 339,
+      "counts": {
+        "recovered": 292,
+        "unresolved_source": 75,
+        "no_candidate": 496,
+        "below_count_prefix": 485,
+        "byte_budget_excluded": 0
+      },
+      "archived_macro_ID_recall": 0.26279322938614974,
+      "archived_complete_ID_questions": 25,
+      "source_ID_oracle_macro_ceiling": 0.9462377674767053,
+      "candidate_ID_oracle_macro_ceiling": 0.6233225640305288,
+      "literal_oracle_macro_ceiling": 0.41107918630042534,
+      "source_ID_oracle_complete_possible": 275,
+      "candidate_ID_oracle_complete_possible": 98,
+      "literal_oracle_complete_possible": 42,
+      "worker_wall_s": 0.49110840004868805,
+      "worker_cpu_s": 0.484375,
+      "parent_full_process_wall_s": 0.5911212000064552,
+      "observed_peak_rss_bytes": 55214080,
+      "loaded_bytes": {
+        "archived_report": 1826490,
+        "manifest": 3182,
+        "model": 4629668,
+        "private_queries": 133688
+      },
+      "replay_and_diagnostic": {
+        "cpu_s": 0.4375,
+        "wall_s": 0.4489599000662565
+      }
+    },
+    {
+      "split": "test",
+      "method": "permuted_graph",
+      "question_records": 339,
+      "counts": {
+        "recovered": 221,
+        "unresolved_source": 75,
+        "no_candidate": 520,
+        "below_count_prefix": 532,
+        "byte_budget_excluded": 0
+      },
+      "archived_macro_ID_recall": 0.20393664840567496,
+      "archived_complete_ID_questions": 16,
+      "source_ID_oracle_macro_ceiling": 0.9462377674767053,
+      "candidate_ID_oracle_macro_ceiling": 0.605190335721309,
+      "literal_oracle_macro_ceiling": 0.41107918630042534,
+      "source_ID_oracle_complete_possible": 275,
+      "candidate_ID_oracle_complete_possible": 91,
+      "literal_oracle_complete_possible": 42,
+      "worker_wall_s": 0.49903109995648265,
+      "worker_cpu_s": 0.5,
+      "parent_full_process_wall_s": 0.6002813000231981,
+      "observed_peak_rss_bytes": 55054336,
+      "loaded_bytes": {
+        "archived_report": 1826653,
+        "manifest": 3182,
+        "model": 4629668,
+        "private_queries": 133827
+      },
+      "replay_and_diagnostic": {
+        "cpu_s": 0.453125,
+        "wall_s": 0.45622210018336773
+      }
+    }
+  ],
+  "records_checked": 1578,
+  "source_ID_groups_partitioned": 6204,
+  "graph_missing_groups_first12_byte_exclusion_fraction": {
+    "dev": 0.0,
+    "test": 0.0
+  },
+  "first12_byte_exclusion_majority_hypothesis": false,
+  "raw_report_json_bytes": 2694767,
+  "driver_log_bytes": 0,
+  "new_scientific_trials": 0,
+  "new_training_runs": 0,
+  "oracle_is_not_deployable": true
+}
