@@ -1,0 +1,1908 @@
+{
+  "cache": "on",
+  "layout": "clustered",
+  "meter": "off",
+  "round": 2,
+  "traces": [
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 0,
+      "proof_sha256": "c5e5d0ffb1b48b70f284cc22b5d4521f21cb8727f97e56e5e4770da6f4cab873",
+      "root_key": "doc:84",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 1,
+      "proof_sha256": "2d5529a926a5c14c6164c4df7335b4a76f5d732d99065b6386fe431b7f2cd3b8",
+      "root_key": "doc:18",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 2,
+      "proof_sha256": "daa081d7e380ada7eb5ad927329a03ae7357771e12df7c34c70c1e7374c83d84",
+      "root_key": "doc:9",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 3,
+      "proof_sha256": "6aba1e2950e01121405ca68dd3e5dbe4eb4083a3e79dd49fdb26317055b32f0e",
+      "root_key": "doc:9",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 4,
+      "proof_sha256": "29c3968443a3e8100eff13ce436bc3e65706817504c3576e7a71c4eaa3a14726",
+      "root_key": "doc:12",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 5,
+      "proof_sha256": "94cbeb1258f893137edcb1188c60b4b8cdeaa71bc0614ff3743b804fc1fc37e5",
+      "root_key": "doc:21",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 6,
+      "proof_sha256": "349b80d0092a4d63a469e192f50bab3faab2797b1de057cd297a9ab395a44fcc",
+      "root_key": "doc:24",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 7,
+      "proof_sha256": "2acb718f8f4f489b16cdea9aa3d4b3e6d5b917088fd923fbaa670440eb1f8a4a",
+      "root_key": "doc:84",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 8,
+      "proof_sha256": "d11d2c5e9867e56296b00401440cc64e8990a824045f561b773009a8beb6518c",
+      "root_key": "doc:51",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 9,
+      "proof_sha256": "f9363f753d010199d4477c953a62b64d542363c38dc653396e20d1da262d5b9f",
+      "root_key": "doc:54",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 0,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 1,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 10,
+      "proof_sha256": "768a012b8f8f1b05575bfbe7046bb96f391f6f69729435c016bca6b9b3140717",
+      "root_key": "doc:93",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 11,
+      "proof_sha256": "b08b7e4180ee63d363c1c7c255f985ec10e269d5d63810f72ef983fb4bdb0523",
+      "root_key": "doc:18",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 12,
+      "proof_sha256": "29ebbe984960eaa469186cb79b35ce23f342c4f423fe33ed728cb3981d690691",
+      "root_key": "doc:75",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 13,
+      "proof_sha256": "d15474f6c5fc14a593db07822c1443529d648a1dc36d88a4c6af68555eb5f5ab",
+      "root_key": "doc:0",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 14,
+      "proof_sha256": "b37d4298647484e04d05e2309966bfbd9a6913e8b3773e73e8bfb6164b9df8fb",
+      "root_key": "doc:21",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 15,
+      "proof_sha256": "2127289948a6fb2fbb3071b71dcd8240d2cbd9a884bcae0807cd92e9c80e3819",
+      "root_key": "doc:42",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 16,
+      "proof_sha256": "1bbc5ca0bdbc1c3df346c05ab8c211e9f36194a2e50f24a1542d98a01807ee47",
+      "root_key": "doc:87",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 17,
+      "proof_sha256": "0a0e67ff7dd4efdbc5e3ec385c5b3e11701ca94538c829e3a76dfb6eab53c4ec",
+      "root_key": "doc:69",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 18,
+      "proof_sha256": "db51ca188268d92d852e990cf823238e05f50032ad00c0e3359dea46fd23c682",
+      "root_key": "doc:27",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 19,
+      "proof_sha256": "5a8953be5dbc94f5ff5d7a4c1f82df57927dcf435d12f1df0419f38227a7caae",
+      "root_key": "doc:3",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 20,
+      "proof_sha256": "4447ef470383c08568227a5d8e41199aed09f5708ff20e5d81d90c8a3fab6136",
+      "root_key": "doc:63",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 21,
+      "proof_sha256": "e858b6d7075504c41abf0a1dd9a246426e9c7ecae8c87ce051cf3bf83fa32791",
+      "root_key": "doc:60",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 22,
+      "proof_sha256": "cf8bff6ace9d597a605336e1827f9a2c216532db7daa15fc2e99fac37bbe7c8b",
+      "root_key": "doc:57",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 23,
+      "proof_sha256": "5ae7a3268067fb9458af92c537c8ac340441abdbea231c4a0689d95dbfdc153a",
+      "root_key": "doc:90",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 24,
+      "proof_sha256": "e1f63954dc903baff07cd4b808b43e4369808349ab09d144c60cde2c36afbff5",
+      "root_key": "doc:48",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 25,
+      "proof_sha256": "829c0435c80512e7ed3eb0e0de26f3e2fe1a653c2e1648177dd715c94b3f5737",
+      "root_key": "doc:30",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 26,
+      "proof_sha256": "df31d646723266405550994a9a66398f90e04d517876b20a138ea0ce1f248ccf",
+      "root_key": "doc:6",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 1,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 2,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 27,
+      "proof_sha256": "a014be65fb244b538c927423ebd90fef4d7a6b998b5a3449edbe3357959ae40f",
+      "root_key": "doc:90",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 28,
+      "proof_sha256": "f8df946175c38eed5ffe43daf01ffbdc4acea2104778faecce0b28449b9671d4",
+      "root_key": "doc:15",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 29,
+      "proof_sha256": "4b5589f9c512d94bcb384ea43bf0536c328991adce6405f7f10810ca13a311f9",
+      "root_key": "doc:39",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 30,
+      "proof_sha256": "8039215d46d500ddbb46e95b0205514327db4c6b211f37da9f6e27d76cde0d69",
+      "root_key": "doc:24",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 31,
+      "proof_sha256": "6e57020c1fdce68c92885d376e940e97986dd5b70895d1adbf030e89e79b258d",
+      "root_key": "doc:36",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 32,
+      "proof_sha256": "81d45658fd12dc757d82bd9775f235be46e0546a3f7619b74ef2ec68108fe2f4",
+      "root_key": "doc:72",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 33,
+      "proof_sha256": "69dabb8db498067608ca3700bdfb2ef057bb4e1fee7f49317cc628f58b028ef1",
+      "root_key": "doc:18",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 34,
+      "proof_sha256": "305fa2078e331972a55cb0e71d78a450e3fdbcbe5e14f1d833e16cfaa847f29c",
+      "root_key": "doc:63",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 35,
+      "proof_sha256": "d8b065146614499f672c951ed4142631cf9c4c07c915828e68571591798f0ba0",
+      "root_key": "doc:42",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 36,
+      "proof_sha256": "f9f14ba33115cf3029dce35e5e36e0428c0a86acd695ef3e2f17e587217eb213",
+      "root_key": "doc:90",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 37,
+      "proof_sha256": "86e406d5df67ab6fb1bb4a9618a5374551f3eea1b292426f76ee1a509d81e6c8",
+      "root_key": "doc:69",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 38,
+      "proof_sha256": "72fb0e686fb930afbe29a6f9194fff714a7dbbb97c57efcda820d90cbf3ce44a",
+      "root_key": "doc:57",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 39,
+      "proof_sha256": "d68871a38d59efc4fda060dc2b22b19795ceffaa43d4803df1d81a1da1de027f",
+      "root_key": "doc:0",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 40,
+      "proof_sha256": "3cfc8376691d205a13bdc506926eb1ea74004cb86bda6a2a058debbc4bb54738",
+      "root_key": "doc:72",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 41,
+      "proof_sha256": "5ee53f5889959e87e83ffa94b3461c2e8b3e76c44e823b24f223a6e39c4fc7d0",
+      "root_key": "doc:57",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 42,
+      "proof_sha256": "fcad5a51bcc7fcdd2f8dd2293a80722d54a852f285857affae6bf8397b65b1fa",
+      "root_key": "doc:54",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 43,
+      "proof_sha256": "c1406aef226cf385372489818dee80044b52f8d4fb9a841bf1c0515cf264d10c",
+      "root_key": "doc:30",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 44,
+      "proof_sha256": "add12442db8f31e95a10c9af324cc0ea9e511684a59694fd3ee7106a93a996b7",
+      "root_key": "doc:6",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 45,
+      "proof_sha256": "a1e8c8d1391834fa8b0f77d35e4138cd6d9db3889834b7a95e0ebfb9292660c4",
+      "root_key": "doc:45",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 46,
+      "proof_sha256": "8b94e4ed352873ec2a74109a5388b9f708ab43205adf0bc2f2cbd492526f663c",
+      "root_key": "doc:3",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 47,
+      "proof_sha256": "9af137f54fef21353f279784b6a6fcafeefa4131c844ecba1e5e4c1d490a7e68",
+      "root_key": "doc:60",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 48,
+      "proof_sha256": "ef74b393e520d2433fd1064fc38aa9fb4948b575a51c9be00e5721626ccf3d6b",
+      "root_key": "doc:75",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 49,
+      "proof_sha256": "fe8ee20506a3f32acaca4e251093356cc942611dc3c13c51e4d8cbf5891a2b22",
+      "root_key": "doc:45",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 50,
+      "proof_sha256": "54dc42bc52287850b617aafaf716f2510820fcb103e0cf80a6b4a10bf1d27fbf",
+      "root_key": "doc:51",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 51,
+      "proof_sha256": "cbcdaa6aa9f7491a225ed2400e3c017f2cb02551c75228ad1d5c92b95ebe5312",
+      "root_key": "doc:63",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 52,
+      "proof_sha256": "bde195363bc00c5a6e3b502afd6755ca3d3ff28b789cfc0077c50a6ec35a1655",
+      "root_key": "doc:48",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 53,
+      "proof_sha256": "a74fc7a0b27a38e8a6dbb900796a5a290a1e5dd7cb876b4d99f67e9f08f18b91",
+      "root_key": "doc:66",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 54,
+      "proof_sha256": "2a6d36e1eae7fd94a1d69858872babf35ac81ac1ac914fa8192aaa6f362347ef",
+      "root_key": "doc:27",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 55,
+      "proof_sha256": "34a3667036c97ca34729a63cdce7e3cd6fd027770d2767fa9547e6e8c28dc94a",
+      "root_key": "doc:66",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 56,
+      "proof_sha256": "ae9e9775bfa843211bebf92d9497002ffa11a744385de7ffad6dfb6fd2d748f0",
+      "root_key": "doc:6",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 57,
+      "proof_sha256": "ea12a3819cfaba9a31ad8d70d875bf1aa647025ec611f74f297cff1c631d41d7",
+      "root_key": "doc:27",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 58,
+      "proof_sha256": "71d356f364314f79c8db2a3c18dca48afe938ff2cffdb0107e090a617927f915",
+      "root_key": "doc:9",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 59,
+      "proof_sha256": "184bb7182cb6c129d6955f1cc99cd388eced9b579a757929018fd92e600b4aad",
+      "root_key": "doc:93",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 60,
+      "proof_sha256": "999b153744e03d040c88b7da9792a54fd250498a34cf5fe8c4ce2e64b5325ff2",
+      "root_key": "doc:36",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 61,
+      "proof_sha256": "2cf09353d1b630798b01b2b30ad462249417cd7805dd5f733b7da246d66c99ca",
+      "root_key": "doc:78",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 62,
+      "proof_sha256": "72822943be16d33691cee225740c6923d286f85388e792ae91f6878e8f0cc43f",
+      "root_key": "doc:33",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 63,
+      "proof_sha256": "c6a6dbca61a78ef5d503487b5d3fef6daccd9f67f3d1e67e046c85af11e004f6",
+      "root_key": "doc:33",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 64,
+      "proof_sha256": "cf63cfb530a8d5c7da9c07e3902063e4399be9fdd1d4b419463a52d3b29237e8",
+      "root_key": "doc:12",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 65,
+      "proof_sha256": "7d685f12187e28f0b5331e0dff2f5b71c9659c2072f8c27706fcfc1fe5d82a3f",
+      "root_key": "doc:33",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 66,
+      "proof_sha256": "d566a1b777710ff34cd3b8b832c720258226633c3b1644c2eac06dcdc9754047",
+      "root_key": "doc:81",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 67,
+      "proof_sha256": "43cead6ee612f44bb4634f6b40cb06c1561921304b382d6582c32056dba1b642",
+      "root_key": "doc:24",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 68,
+      "proof_sha256": "200e0023a960ddc1f5a4b898389145eeb9cce4c1e5674aa2eae66fe15d2f8509",
+      "root_key": "doc:78",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 69,
+      "proof_sha256": "318fa510fe6c2d06177a4e671160411457fe7aa35672b7e860ba2c45d44c7d65",
+      "root_key": "doc:39",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 70,
+      "proof_sha256": "a3eb81342f5004b8d8259ace21e50f9f272a35a84a45fdefe326f229545e96f8",
+      "root_key": "doc:60",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 71,
+      "proof_sha256": "32d56084af280147916d702c53ddaf58403c26f99529a5cd4c1d42ac6cdebd4a",
+      "root_key": "doc:48",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 72,
+      "proof_sha256": "e7840ba1b6336fae1ed9bfba16e9e1dd079897abad9a4c86b3f563d7f4bb8355",
+      "root_key": "doc:39",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 73,
+      "proof_sha256": "506df2b3bd276328da0ea12862985da6159b5503a25b30c337d045f23fc19d0f",
+      "root_key": "doc:51",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 74,
+      "proof_sha256": "7ddb420d9b410b7a14356fc68c2ef30bd8fe102463e767f95a16087e4f401181",
+      "root_key": "doc:42",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 75,
+      "proof_sha256": "f1897f6e5b42173554d19cfc890763a0e380cb3e523c96684d4a05d7b85dad2a",
+      "root_key": "doc:66",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 76,
+      "proof_sha256": "dd1a8e688018d4f8f020e79cf96eb5edb775642784ced95b84072a88c3699763",
+      "root_key": "doc:75",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 77,
+      "proof_sha256": "3f03b9937288ed61312bbc4e05396c2559589fb10943b75dfcc322d18bcde628",
+      "root_key": "doc:87",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 78,
+      "proof_sha256": "f842c0464d2a2795a40bd82e363d8043dfc9b0a9113375c7e6bde39346e26b69",
+      "root_key": "doc:36",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 79,
+      "proof_sha256": "115c26e4c4dd748df8c4f09090d486cb1cb6845e3128f300c2b26e909b301d02",
+      "root_key": "doc:87",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 80,
+      "proof_sha256": "d96804d615b56f9c7d4a7e458baadadac52433d5dbc7bf72b2c8ab33a72a57f2",
+      "root_key": "doc:78",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 81,
+      "proof_sha256": "7741c225a775e553367aa1e881356a2cf0d6cf03a8047234a672e0731ab07ba8",
+      "root_key": "doc:0",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 82,
+      "proof_sha256": "0b1361cc2841e5adf58bb569c1ae054b42231493da6ead07d1fea1073acb3893",
+      "root_key": "doc:3",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 83,
+      "proof_sha256": "cd8fa16e3371501b0623b6d1ea8821c33eed8731348920b2d75fa1729c345472",
+      "root_key": "doc:54",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 84,
+      "proof_sha256": "2575a7bc78977a133e0db42480c52a724aedf30058861e6f4c767e3b8db283ba",
+      "root_key": "doc:15",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 0,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 1,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 85,
+      "proof_sha256": "4d28daa38968454e93e2df6c9fa52e59cb9f3c7d5a66d6df87de1935aeace401",
+      "root_key": "doc:93",
+      "snapshot_id": "f6efc0a1aa3d6f31224cde2abdf67a186de7cb5de70187d023ee7c946f8e8d85",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 86,
+      "proof_sha256": "f373ba7ca7be36ff70bb6529aa68d1eaa33b5647e8ee10cf5a52abe74cd49c1f",
+      "root_key": "doc:12",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 87,
+      "proof_sha256": "2eba2cfd96665722d8d8cd52f3486a0482ec9d5e800419178f84dabbc5fcf8e9",
+      "root_key": "doc:81",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 88,
+      "proof_sha256": "e8aa50750bd19a4785092b298bc716cfe52b1903e51cad33b28fdc11ab373d7d",
+      "root_key": "doc:69",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 89,
+      "proof_sha256": "5ac0eec6d49ee71186695a1644b220c7ee8db4c34cfdd35528abd58b0c212dfa",
+      "root_key": "doc:81",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 90,
+      "proof_sha256": "efac6479a8882c7f15e411e0c5ce832e2779fccc8da1407b4f87331d109ccee7",
+      "root_key": "doc:15",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 91,
+      "proof_sha256": "93d0662912d3eac634a94e12e59370111c986ae052484e9291c1c6c21cecb0a8",
+      "root_key": "doc:30",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 92,
+      "proof_sha256": "3ea893c9a3a754ff75bede594f1547f12e6a18bfa5a55d99848d1107bbd1df9f",
+      "root_key": "doc:84",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 93,
+      "proof_sha256": "d87abc3c1e8f778b70177977e3a7c8b6d6b208e0efcba9b8b3973ef50640109d",
+      "root_key": "doc:72",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 94,
+      "proof_sha256": "9dd4697910df09f1379b6ca4e89284e7336cd67ce4169db5873127912a0963eb",
+      "root_key": "doc:21",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 2,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 3,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 95,
+      "proof_sha256": "818e7879da67071c63c76dd3e99200f362c7de9a23ee8d9c3e95d09679f8fa70",
+      "root_key": "doc:45",
+      "snapshot_id": "ebc9fdfea4c906d9bda7bbf478d37103e3f3f017bda541c11f2e76444a36f8ba",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 0,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 1,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 96,
+      "proof_sha256": "6ca61878fade27084c9a1b7b838450299f2dff1e78a1abed10cdb25b64ebd5ce",
+      "root_key": "doc:0",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 1,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 2,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 97,
+      "proof_sha256": "659ab910678f30c62149eec78a7d0c9e4b87ef8d796759b1a9a68bbcd6bfa982",
+      "root_key": "doc:0",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 0,
+        "misses": 1,
+        "oversize": 0,
+        "peak_payload_bytes": 65536,
+        "peak_retained_graph_bytes": 66190,
+        "requests": 1,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 98,
+      "proof_sha256": "61333aff0600ac19ce6137451bb980e9678ff90afe2460a6393bd03b9e66c5c2",
+      "root_key": "doc:10000",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    },
+    {
+      "cache": {
+        "capacity_payload_bytes": 65536,
+        "evictions": 0,
+        "hits": 0,
+        "misses": 0,
+        "oversize": 0,
+        "peak_payload_bytes": 0,
+        "peak_retained_graph_bytes": 0,
+        "requests": 0,
+        "retained_payload_bytes_after_scope": 0,
+        "scope": "Single target-SID trace; payload cap excludes metadata/transient decode; retained graph size includes referenced keys/bytes, not incremental allocator RAM"
+      },
+      "index": 99,
+      "proof_sha256": "ff447f744be66b7a001fa6699937397df27a1a85de6cc8e3451ab2aa585fcb10",
+      "root_key": "doc:999999",
+      "snapshot_id": "51bde51beb5ebaa485f2a8c8e8996336bcd6f500a60972fda10b7bce6656dbec",
+      "traffic": null
+    }
+  ]
+}

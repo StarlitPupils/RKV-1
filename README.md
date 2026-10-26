@@ -6,7 +6,21 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.42.0 · 单trace有界缓存：工作量门槛True，时间联合门槛True
+## 当前版本：v0.43.0 · 跨块布局控制：迁移工作量门槛True
+
+同一原始行保留，两布局×cache×meter、24新worker，2400proof/6840绑定/624历史文件恢复及6组完整树一致性通过。
+clustered工作量/时间联合：True/False；separated：True/False。
+分散后解码量只少1.54%，查询wall中位反而+3.85%；两个布局时间联合失败，保留负结果。
+固定65536B cap/4096B入证/3hop，不调参数、不默认集成；逐轮原值/RAM/全部文件与CPU/源码费用见报告。
+
+![两布局成本比较](results/v0.43.0/layout-paths.png)
+
+248检查247通过/1权限跳过；64 runtime只改版本。已知合成显式链，非真实多跳/推理或生产收益。
+0模型API；物理SSD/全系统IO/冷缓存/跨机/真实长会话未测，E3净收益/E4整体未验收。
+
+[冻结协议](docs/PATH-LAYOUT-CONTROL.md) · [详实报告](results/v0.43.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.43.0)。
+
+## v0.42.0 · 单trace有界缓存：工作量门槛True，时间联合门槛True
 
 完整2×2缓存/仪表、12新worker，1200 proof同v0.40；1152主问题/48控制/24负审计、3420绑定符合预期。
 只在一次trace内复用已验证块，固定65536B payload，hit仍验raw SHA，每record绑定不变，退出清空。

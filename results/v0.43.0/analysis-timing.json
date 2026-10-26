@@ -1,0 +1,6 @@
+{
+  "analysis_wall_s": 15.549291299888864,
+  "analysis_cpu_s": 13.671875,
+  "observed_peak_rss_bytes": 89960448,
+  "scope": "Separate diagnostic full-file/source/proof audit and plot, excludes initial interpreter startup and writing this timing record; not query performance"
+}

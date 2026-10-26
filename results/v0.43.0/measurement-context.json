@@ -1,0 +1,23 @@
+{
+  "runtime_protocol_input_freeze": "fc8732a98740212def36b14e8fe453cc9e196c34",
+  "candidate_CI": 40327182731,
+  "formal_workers": 24,
+  "formal_evaluation_retries": 0,
+  "new_training_runs": 0,
+  "new_remote_model_calls": 0,
+  "prior_fully_verified_release": "v0.42.0",
+  "prior_final_proof_sha256": "3c9e06dc6438dc696cfc512cc2c91ed0c6c41d784f9bcaa77ca4b60d08c92dd9",
+  "scope": "Known synthetic byte records, layout-only mechanism transfer, not new scientific or QA validation",
+  "preflight_failures_before_any_formal_worker": 2,
+  "private_preflight_log_identity": {
+    "start-formal-v043.log": {
+      "bytes": 898,
+      "sha256": "15628a206c19f529871ec6d75be7bce298b487d2bbca6a7d917ec3a2b5dee04a"
+    },
+    "start-formal-v043-resume.log": {
+      "bytes": 480,
+      "sha256": "c0ef8b92016429bda367654c829f67b75b9e79079f48fedadcaaa688035dc20b"
+    }
+  },
+  "preflight_corrections": "Manifest LF bytes already matched frozen blob; refreshed Git stat. Private launcher sys.path needed workspace root. Neither changed frozen code or started formal workers."
+}

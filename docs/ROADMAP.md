@@ -307,3 +307,7 @@ observer开销和全部memory/sidecar/源码计账，原v0.40漏项不回填。�
 ## v0.42：有界单trace缓存完整factorial
 
 12worker/1200proof/3420绑定和文件一致，工作量门槛True、无仪表时间联合True，原值/RAM/源码/sidecar收费。已见同块有利fixture非真实推理验证，不改默认。下一项先冻跨块负控制，不调cap。报告results/v0.42.0/SUMMARY.md。
+
+## v0.43：同原记录跨文件布局控制
+
+24worker/2400proof/6840绑定/624历史文件与6组完整树通过。clustered工作量/时间True/False，separated True/False；固定cap不调，全部负方向/CPU/文件/RAM收费，非真实推理验证。报告results/v0.43.0/SUMMARY.md。下一步须另冻假设，不默认集成。
