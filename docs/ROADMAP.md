@@ -295,3 +295,11 @@ known-root/指定SID/合成语法仅为证据基础设施，非真实多跳或�
 父测完整process wall漏记，资源记录false、整份协议未全满足；物理IO/解压B原定null。
 下一项独立协议补父测进程时间/CAS块工作量，已见fixture复测不当新科学验证，不调入证预算。
 报告results/v0.40.0/SUMMARY.md；0模型请求，E3净收益与E4整体/长期会话/无限上下文未验收。
+
+## v0.41：新批次父测完整时间与CAS应用放大通过核验
+
+6 fresh worker、600 proof与v0.40一致，576/24/12/1710合同通过，6parent sidecar有完整计时/SHA。
+ON入证156426B，对应应用CAS返回2444100B（15.62×）和解码56426496B（360.72×）；非SSD/全系统IO。
+observer开销和全部memory/sidecar/源码计账，原v0.40漏项不回填。报告results/v0.41.0/SUMMARY.md。
+下一项先冻单trace内有界已验证块复用，保持原证据合同，新增RAM/源码/CPU不能免费，默认不改。
+0新模型调用；已见合成fixture的计量修复不等于真实推理验证，E3净收益/E4整体未验收。

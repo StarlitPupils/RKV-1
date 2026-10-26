@@ -6,7 +6,23 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.40.0 · 三跳原证据路径机械通过，完整进程计时缺项
+## 当前版本：v0.41.0 · 补齐新批次进程计时，测到CAS读取/解码放大
+
+同一已见E4合成fixture的OFF/ON六worker复测，600 proof与v0.40一致；576主问题/24控制/12负审计、1710绑定通过。
+新增6份父测完整process wall，原v0.40漏项保持null，不回填。64 runtime除版本不变。
+ON300 trace入证156426B，CAS应用read返回2444100B（15.62×）、解码56426496B（360.72×）；
+4096B入证预算不约束CAS工作量，SSD物理/全系统IO仍未测。
+
+![CAS应用流量和完整process计时](results/v0.41.0/path-traffic.png)
+
+observer trace wall成对中位比率1.117、parent 1.033，开销/噪声照实保留。
+所有memory文件SHA配对相等，每目录1171964B；评测sidecar/源码单列。243检查242通过/1权限跳过。
+这次是成本仪表，不是新科学/推理收益；0模型API，冷缓存/跨机/真实QA未测。下一项先冻单trace有界块复用假设。
+
+[协议](docs/PATH-TRAFFIC.md) · [详实报告](results/v0.41.0/SUMMARY.md) ·
+[原始计量](results/v0.41.0/round-1-on-meter.json) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.41.0)。
+
+## v0.40.0 · 三跳原证据路径机械通过，完整进程计时缺项
 
 新增显式known-root/指定SID的合成引用路径，不改Archive/Memory默认。
 288主问题状态/值/全路径符合预期：279完成、6缺证、3循环；另12控制、6篡改负审计符合预期。
