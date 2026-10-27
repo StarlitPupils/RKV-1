@@ -1,0 +1,121 @@
+{
+  "format": "RKVCOMPACTPROTOCOL1",
+  "prior_complete_release_tag": "v0.74.0",
+  "prior_tag_commit": "2cb7bebc385365c44e5b4d2db57a37120f3ee632",
+  "input_meta_path": "E:/memorystorage/.tools/compact-witness-v075-frozen-inputs/input-freeze.json",
+  "input_meta_bytes": 70010,
+  "input_meta_sha256": "fd92868641b2af49ff19770c65dceacf11ae3315143dc4bca15da33fb7088c96",
+  "input_case_count": 96,
+  "common_original_Store_context_B": 3036285,
+  "common_canonical_root_input_B": 3182064,
+  "formal_workers": 12,
+  "case_operations": 1152,
+  "orders": [
+    "ABCD",
+    "BADC",
+    "CDAB"
+  ],
+  "roles": {
+    "A": [
+      "plain",
+      "zstd"
+    ],
+    "B": [
+      "compact",
+      "zstd"
+    ],
+    "C": [
+      "plain",
+      "zlib"
+    ],
+    "D": [
+      "compact",
+      "zlib"
+    ]
+  },
+  "timeout_s": 600,
+  "worker_retries": 0,
+  "primary_codec": "zstd",
+  "dedicated_full_candidate_premium_files": [
+    "scripts/compact_witness.py",
+    "scripts/audit_compact_witness.py",
+    "scripts/run_compact_witness.py",
+    "scripts/analyze_compact_witness.py",
+    "tests/test_compact_witness.py",
+    "tests/test_compact_witness_analysis.py",
+    "docs/COMPACT-WITNESS.md",
+    "docs/compact-witness-inputs.json"
+  ],
+  "new_remote_model_calls": 0,
+  "new_training_runs": 0,
+  "files": {
+    "scripts/compact_witness.py": {
+      "bytes": 6046,
+      "sha256": "6121bfa8d4abeae1c18d19cd5bc083f09ec2684623fa7291265e1fb3d4fe9b19"
+    },
+    "scripts/audit_compact_witness.py": {
+      "bytes": 2184,
+      "sha256": "c9c87cd22267f649575163c993fa27a8b2198d2d607dd95288c001c211b9b152"
+    },
+    "scripts/run_compact_witness.py": {
+      "bytes": 3793,
+      "sha256": "6078781afa37cdee76049ef2ec17a3fd91f31c49bba4e0ddaaefa5638fc79402"
+    },
+    "scripts/analyze_compact_witness.py": {
+      "bytes": 3280,
+      "sha256": "967b94b94f9b35118f19a1fb71bcabc62177d70859a42736f3ea2d4b65a5f708"
+    },
+    "scripts/selected_witness.py": {
+      "bytes": 3155,
+      "sha256": "dce809ada9798b48aa549a121f0a0606cee0d5438322d09040966dc71c9caff6"
+    },
+    "scripts/audit_selected_witness.py": {
+      "bytes": 4613,
+      "sha256": "dcb5d684f1546655d9ae83325ba0d1eab2d06b080fab72ce2db4f2a679050973"
+    },
+    "scripts/source_set_logic.py": {
+      "bytes": 2147,
+      "sha256": "dc57f7b30ec0aa4aa5b6398072e9412e0d9ac2154fde90be8eef276110b306f0"
+    },
+    "scripts/audit_source_set_logic.py": {
+      "bytes": 8017,
+      "sha256": "665a9df6a3d1ed339619768e30d39ca1ec6c1ecb2a62ad0f273ae8d64f0dbf96"
+    },
+    "scripts/signed_logic.py": {
+      "bytes": 6765,
+      "sha256": "606e2945cd7459a0376ee62ffea56641cdce06e723601ffa39e756bcc732af08"
+    },
+    "scripts/audit_signed_logic.py": {
+      "bytes": 8244,
+      "sha256": "6a5aa9ba2322a8aec3613033b702e62e59c93a6c6d078c4d4c4fc4e4bf8abd44"
+    },
+    "scripts/source_universe.py": {
+      "bytes": 2396,
+      "sha256": "306041d27c5016d74e1c3b52b2a4f4516ca6eef6ffa6b1add6314e826e024def"
+    },
+    "scripts/audit_source_universe.py": {
+      "bytes": 2932,
+      "sha256": "8544d098387f6dd5fd1b3e551bb8825235b47cfa80a67105d723213c95b57e6f"
+    },
+    "scripts/proof_frame.py": {
+      "bytes": 6881,
+      "sha256": "09b1292bfb3b9cbaac9cb58c830f0f2eb6f0c02c67824aaab31d0c13c28158da"
+    },
+    "scripts/postings_transform.py": {
+      "bytes": 6138,
+      "sha256": "e4326ff144bb5332c7cedf0aafe0be509efd78de1f0cc7f14de5cbbae5b8004e"
+    },
+    "tests/test_compact_witness.py": {
+      "bytes": 6507,
+      "sha256": "885e31c3827decba8e76155dfb4dfb26b0c9ef84213917b05603235cab95f619"
+    },
+    "tests/test_compact_witness_analysis.py": {
+      "bytes": 2740,
+      "sha256": "7a83ecbe8c9b13939f23dd4d83fdfdcaccbf18dc1ebbf6c800ffaff6ae8fb161"
+    },
+    "docs/COMPACT-WITNESS.md": {
+      "bytes": 7080,
+      "sha256": "22dfa9099fe60ce66c781a2ec235399245e51c77cb812f0c90dc7231684f8122"
+    }
+  }
+}
