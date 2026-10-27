@@ -6,6 +6,14 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
+## v0.75.0 研究候选 · 原Store依赖紧凑证明（发行待核验）
+
+1152精确恢复/原证据通过H0=True；主Zstd计入全部新增源码后节省42136–42177B，H1=True，但耗时约1.44–1.51倍，H2=False/joint=False。节省依赖既有Store，非contextless压缩/E3净收益/科学NLI；后置分析收尾时间缺项保留null。
+
+![紧凑证明完整账本](results/v0.75.0/compact-witness.png)
+
+452检查451pass/1权限skip；[详实报告](results/v0.75.0/SUMMARY.md) · [冻结协议](docs/COMPACT-WITNESS.md)。最新完整核验发行仍为下列v0.74。
+
 ## 当前版本：v0.74.0 · 固定证据下的目录放大
 
 12worker/96query与追加96原DAG、14055原file恢复通过，H1=True；但4096/9耗时214–243倍、证明25.84倍，H2=False/H3=False/joint=False。只取少量证据不等于整体成本固定；没有宣称科学NLI或加速。

@@ -1,0 +1,9 @@
+{
+  "reason": "Windowsworker zlib is builtin, no __file__; list actual worker CPython executable/DLL hosting-container allocation rather than fabricated zlib modulefile",
+  "failed_log_sha256": "bbbd05ed4dfddf1e2fd7db6a38eead238861ececad85c27262d71161a69d9aef",
+  "recovery_log_sha256": "5a3905ffd1d1aaa3c70fce7775ced4dae2d7b0db8ee119947840ababcab04144",
+  "formal_retries": 0,
+  "source_DAG_audits_repeated_for_recovery": 0,
+  "resumed_from_existing_complete_rawaggregate_and_resource_JSON": true,
+  "full_failed_analysis_elapsed_wall_CPU_unknown_not_zero": true
+}

@@ -1,0 +1,47 @@
+{
+  "worker_executable": "E:\\memorystorage\\.tools\\scientific-venv\\Scripts\\python.exe",
+  "zstandard_version": "0.24.0",
+  "zlib_runtime_version": "1.3.1",
+  "zlib_module_origin": "built-in",
+  "zlib_builtin_container_allocation_not_individual_function_size": true,
+  "files": {
+    "E:\\memorystorage\\.tools\\scientific-venv\\Lib\\site-packages\\zstandard\\backend_c.cp313-win_amd64.pyd": {
+      "bytes": 521728,
+      "sha256": "fda79913ec26930e11f5a55024661f1d6033b1da7a18b7baa2272cd046c4a1ac"
+    },
+    "E:\\memorystorage\\.tools\\scientific-venv\\Lib\\site-packages\\zstandard\\backend_cffi.py": {
+      "bytes": 157655,
+      "sha256": "17ef7ae165f8fc18207d712bade0a817e05c4808c5fe8d7eb90c6b711458b20b"
+    },
+    "E:\\memorystorage\\.tools\\scientific-venv\\Lib\\site-packages\\zstandard\\py.typed": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "E:\\memorystorage\\.tools\\scientific-venv\\Lib\\site-packages\\zstandard\\_cffi.cp313-win_amd64.pyd": {
+      "bytes": 667136,
+      "sha256": "451e81ab60bf8eab5abeb4077471e26a1699bb7961208d2ff13f506fdb6bbe91"
+    },
+    "E:\\memorystorage\\.tools\\scientific-venv\\Lib\\site-packages\\zstandard\\__init__.py": {
+      "bytes": 7436,
+      "sha256": "9605a8fa821596b2e40cdb4ca28d5138b5e668930e9f6b13e3400cb8d0e18f74"
+    },
+    "E:\\memorystorage\\.tools\\scientific-venv\\Lib\\site-packages\\zstandard\\__init__.pyi": {
+      "bytes": 14446,
+      "sha256": "501be7b89ce39d8d0a4059a2ae729058411b52b278e1d1f6bfce5ba6df13c8a3"
+    },
+    "E:\\memorystorage\\.tools\\scientific-venv\\Scripts\\python.exe": {
+      "bytes": 253256,
+      "sha256": "d4c273b18fa7d67fe84c102975e4ecc853c5d3ad6f7835b9b40468b78a3dd021"
+    },
+    "E:\\miniconda\\python3.dll": {
+      "bytes": 70472,
+      "sha256": "90288ee895d7e6c53fe73ab9e370d280bf8d83c6274f939bc9a0413a52dd4b6f"
+    },
+    "E:\\miniconda\\python313.dll": {
+      "bytes": 7127880,
+      "sha256": "1f93d5101c446fc5d4c4bbd90e602a6bc14f6843999ee946bae3fad3521bcc5d"
+    }
+  },
+  "listed_common_bytes": 8820009,
+  "unallocated_other_CPython_OS_allocator_not_zero": true
+}

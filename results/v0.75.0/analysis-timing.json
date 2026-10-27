@@ -1,0 +1,10 @@
+{
+  "wall_s": 0.7400611001066864,
+  "cpu_s": 0.59375,
+  "peak_RSS_bytes": 86896640,
+  "additional_actual_frame_DAG_audits": 1152,
+  "additional_actual_restored_byte_comparisons": 1152,
+  "scope": "Recovered dependency collection/plot/report only; 1152frame/DAG audits already completed before builtin-zlib provenance failure, not repeated in this timed recovery",
+  "prior_failed_full_postanalysis_wall_s": null,
+  "prior_failed_full_postanalysis_cpu_s": null
+}

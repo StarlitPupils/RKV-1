@@ -1,0 +1,97 @@
+{
+  "headline": {
+    "H0_all1152_exact_original_and_independent_DAG": true,
+    "H1_primary_Zstd_full_conservative_listed_file_B": true,
+    "H2_primary_workerwall_CPU_parentwall": false,
+    "joint": false,
+    "formal_workers": 12,
+    "restored_roots": 1152,
+    "seen_representation_only_no_new_science": true
+  },
+  "pairs": [
+    {
+      "round": 1,
+      "codec": "zstd",
+      "frame_delta_B": -77640,
+      "full_conservative_listed_file_delta_B": -42177,
+      "candidate_dedicated_source_premium_B": 35476,
+      "plain_complete_listed_B": 11842087,
+      "compact_complete_listed_B": 11799910,
+      "worker_wall_ratio": 1.4444548474778207,
+      "worker_CPU_ratio": 1.4705357142857143,
+      "parent_wall_ratio": 1.4413620784282786
+    },
+    {
+      "round": 1,
+      "codec": "zlib",
+      "frame_delta_B": -292518,
+      "full_conservative_listed_file_delta_B": -257020,
+      "candidate_dedicated_source_premium_B": 35476,
+      "plain_complete_listed_B": 12053553,
+      "compact_complete_listed_B": 11796533,
+      "worker_wall_ratio": 1.6672670739691278,
+      "worker_CPU_ratio": 1.6623970722781336,
+      "parent_wall_ratio": 1.6631737836699159
+    },
+    {
+      "round": 2,
+      "codec": "zstd",
+      "frame_delta_B": -77640,
+      "full_conservative_listed_file_delta_B": -42136,
+      "candidate_dedicated_source_premium_B": 35476,
+      "plain_complete_listed_B": 11842069,
+      "compact_complete_listed_B": 11799933,
+      "worker_wall_ratio": 1.4444193897775368,
+      "worker_CPU_ratio": 1.4466101694915254,
+      "parent_wall_ratio": 1.4411864134830332
+    },
+    {
+      "round": 2,
+      "codec": "zlib",
+      "frame_delta_B": -292518,
+      "full_conservative_listed_file_delta_B": -257066,
+      "candidate_dedicated_source_premium_B": 35476,
+      "plain_complete_listed_B": 12053587,
+      "compact_complete_listed_B": 11796521,
+      "worker_wall_ratio": 1.590871972116997,
+      "worker_CPU_ratio": 1.5935251798561152,
+      "parent_wall_ratio": 1.5871733641271262
+    },
+    {
+      "round": 3,
+      "codec": "zstd",
+      "frame_delta_B": -77640,
+      "full_conservative_listed_file_delta_B": -42136,
+      "candidate_dedicated_source_premium_B": 35476,
+      "plain_complete_listed_B": 11842056,
+      "compact_complete_listed_B": 11799920,
+      "worker_wall_ratio": 1.5066236093212166,
+      "worker_CPU_ratio": 1.4973166368515205,
+      "parent_wall_ratio": 1.503383493543619
+    },
+    {
+      "round": 3,
+      "codec": "zlib",
+      "frame_delta_B": -292518,
+      "full_conservative_listed_file_delta_B": -257056,
+      "candidate_dedicated_source_premium_B": 35476,
+      "plain_complete_listed_B": 12053591,
+      "compact_complete_listed_B": 11796535,
+      "worker_wall_ratio": 1.5313281144783077,
+      "worker_CPU_ratio": 1.5281195079086116,
+      "parent_wall_ratio": 1.528239025363689
+    }
+  ],
+  "common_listed_source_context_input_B": 8354150,
+  "all_dedicated_new_source_premium_B": 35476,
+  "unallocated_OS_allocator_directory_metadata_not_zero": true,
+  "common_components": {
+    "full_runtime_Python_HTML_B": 426112,
+    "all_existing_old_experimental_scripts_B": 1639679,
+    "actual_required_old_Store_contexts_B": 3036285,
+    "canonical_raw_input_root_files_B": 3182064,
+    "input_meta_B": 70010
+  },
+  "additional_actual_frame_original_DAG_audits": 1152,
+  "additional_actual_restored_byte_comparisons": 1152
+}

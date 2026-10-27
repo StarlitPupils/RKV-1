@@ -437,3 +437,7 @@ H1关系分类质量False / H2局部CPU与model可行性True / 本probe联合Fal
 ## v0.74：固定证据的全目录放大诊断
 
 12worker/96query、96actualDAG/14055file恢复，H1True，但4096/9wall214–243x、证书25.84x，H2/H3/jointFalse；CPU零base保留null，observerON非生产速度，完整成本与负结果保留。下一步应分别研究紧凑catalogue绑定与pinned metadata复用，不能混两个改动解释收益。发行核验待完成，详见results/v0.74.0/SUMMARY.md。
+
+## v0.75：原Store依赖的紧凑证书
+
+1152byte/原DAG通过，主Zstd完整列明B H1True（净-42136至-42177B），时间H2False（1.44–1.51x），jointFalse；不是通用压缩或E3/NLI/回答收益。postanalysis完整计时因builtin-zlib收尾失败未知null保留，formal计时齐。发行核验待完成，详见results/v0.75.0/SUMMARY.md。

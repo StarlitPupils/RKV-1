@@ -1,0 +1,21 @@
+{
+  "H0_all1152_exact_original_and_independent_DAG": true,
+  "H1_primary_Zstd_full_conservative_listed_file_B": true,
+  "H2_primary_workerwall_CPU_parentwall": false,
+  "joint": false,
+  "formal_workers": 12,
+  "restored_roots": 1152,
+  "seen_representation_only_no_new_science": true,
+  "additional_actual_frame_mapping_original_DAG_audits": 1152,
+  "additional_actual_restored_byte_comparisons": 1152,
+  "unit_tests_run": 452,
+  "unit_tests_passed": 451,
+  "unit_tests_skipped": 1,
+  "formal_retries": 0,
+  "figure_visually_inspected": true,
+  "freeze": "c01fd01694b48f61438e6235cd47db485fb4b156",
+  "new_scientific_evaluations": 0,
+  "new_training_runs": 0,
+  "new_remote_model_calls": 0,
+  "full_postanalysis_elapsed_measurement_complete": false
+}
