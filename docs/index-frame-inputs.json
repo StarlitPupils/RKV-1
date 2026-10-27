@@ -1,0 +1,28 @@
+{
+  "datasets": {
+    "entailmentbank": {
+      "path": "E:/memorystorage/.tools/question-retrieval-v050-training/model.json",
+      "sha256": "2f82ee4b28c943038e7a37ddcbd8871443f7a441ddd45a1af599decc8bade183",
+      "bytes": 4629668,
+      "role": "scientific_index"
+    },
+    "scifact": {
+      "path": "E:/memorystorage/.tools/scifact-graph-v053-training/model.json",
+      "sha256": "f062c7a784421b71bbfaf3c299be78ff323a391847afbf5420e4c06a4d422be0",
+      "bytes": 10152832,
+      "role": "scientific_index"
+    },
+    "synthetic_control": {
+      "path": "E:/memorystorage/.tools/index-frame-v058-inputs/control-index.json",
+      "sha256": "d9f5ce24c804e639f0de3711cc6be66eee0703a6667f48d5a181a99033aa1f1b",
+      "bytes": 353987,
+      "role": "owned_structured_control"
+    }
+  },
+  "prior_fully_verified_release": "v0.57.0",
+  "prior_tag_commit": "1a1a8f6e76d5ac305dfbff4080ffecf7e1b31a0e",
+  "prior_final_proof_sha256": "ee2b664ceca85d46979c16997edeb5bf0833711076f330bb3a0b77fd2bb2330e",
+  "known_original_index_sources_not_failed_sentence_sidecar": true,
+  "synthetic_seed": 20261027,
+  "source_model_or_control_generation_is_not_new_neural_training": true
+}
