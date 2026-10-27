@@ -1,0 +1,12 @@
+{
+  "first_download_failed_HTTP_status": 415,
+  "reason": "Incorrect application/octet-stream Accept on Actions artifact redirect API",
+  "corrected_Accept": "application/vnd.github+json",
+  "failed_log_bytes": 2468,
+  "failed_log_sha256": "71e29ab36796a06565c8d0eb66daed9e2e586862e59e699d073864bb428f88a8",
+  "original_candidate_CI_unchanged": true,
+  "original_measured_binary_not_recompiled": true,
+  "formal_workers_started_before_failure": 0,
+  "scientific_trials_rerun": 0,
+  "official_API_reference": "https://docs.github.com/en/rest/actions/artifacts#download-an-artifact"
+}

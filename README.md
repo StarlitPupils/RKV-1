@@ -6,7 +6,17 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.59.0 · 索引加载观察器成本诊断
+## 当前版本：v0.60.0 · 同frame的Rust批量规范varint读取
+
+27新鲜无profiler配对原byte/model一致，追加27Python/9actualnative decode审计通过；旧Python格式/变换不改，整个DLL/metadata/专用源码收费。
+**H1相对typed Python加载时间：True；H2相对plain完整空间/加载联合：False**。C/B是实现时间，C/A才是完整活动路径；不把内核或已见索引结果当回答提升。
+
+![同frame的原生实现时间与完整费用](results/v0.60.0/native-postings.png)
+
+320检查319pass/1权限skip，CI Win/Linux native测试通过；66runtime仅版本、默认SDK/UI/归档不集成，0新模型API。被测DLL与current发行binary身份分开。
+[协议](docs/NATIVE-POSTINGS.md) · [详实报告](results/v0.60.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.60.0)。E3净收益/E4整体/回答/无限上下文未完成。
+
+## v0.59.0 · 索引加载观察器成本诊断
 
 固定旧typed/LZMA frame，18新鲜OFF/ON配对全部原字节与model一致；9ON调用/时间守恒、9OFF计数null及追加18实际解码审计通过。
 **H1观察器开销≤10%：False；H2 instrumented inverse+varint self-time占比每轮≥50%：False**。仅已见索引的工程诊断，instrumented占比不是未剖析CPU份额，尚无Rust提速结论。

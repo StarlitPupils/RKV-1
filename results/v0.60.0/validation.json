@@ -1,0 +1,21 @@
+{
+  "H1": true,
+  "H2": false,
+  "binary_freeze": "e8c19db41d87a7b981f6ca51cf7ea30968ca3c86",
+  "formal_byte_model_restorations": 27,
+  "formal_workers": 27,
+  "freeze": "34726ce87e424e324d6e04b4d8884ad6985bcb42",
+  "html_files": 1,
+  "independent_Python_actual_decode_audits": 27,
+  "independent_native_actual_decode_audits": 9,
+  "native_CI_Python_tests": 6,
+  "native_CI_Rust_tests": 4,
+  "new_remote_model_calls": 0,
+  "new_scientific_question_trials": 0,
+  "new_training_runs": 0,
+  "runtime_module_count": 66,
+  "unit_tests_passed": 319,
+  "unit_tests_run": 320,
+  "unit_tests_skipped": 1,
+  "figure_visually_inspected": true
+}

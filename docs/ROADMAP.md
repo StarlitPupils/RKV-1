@@ -6,7 +6,7 @@
 固定决策：公开科学数据集；本地 CPU；压缩与科学推理共同优化；Python 原型、
 经性能分析后迁移 Rust 核心。先交付可运行 E0/E1，后续阶段分别发布版本。
 
-| 阶段 | 内容 | 验收门槛 | v0.59.0 状态 |
+| 阶段 | 内容 | 验收门槛 | v0.60.0 状态 |
 |---|---|---|---|
 | E0 | Zstd、Brotli、LZMA、Zlib、去重对照 | 固定数据哈希，重复测量体积、时间、RAM、随机读 | 同容器对照；新增十个查询种子、读取器生命周期、打开阶段与配对波动；冷缓存/跨机器未测 |
 | E1 | 分块、内容寻址、校验、增量编码复用、解码 | 逐字节恢复；损坏必须失败 | 两个独立家族各三次真实发布；同格式IO消融与冻结v0.8对照；240次正式恢复/92,160次正式范围读取一致。IO收益混合，默认reference/link不变；全量读源/校验保留；归档恢复默认文件同步、198条故障审计，80次正式恢复一致；目录/掉电未测 |
@@ -375,3 +375,7 @@ Memory.lookup_many最多32显式key、原record入证预算不等于I/O/RAM上�
 ## v0.59：加载观察器成本与规范varint调用诊断
 
 H1观察器开销≤10%：False；H2 instrumented inverse+varint self-time占比每轮≥50%：False。原3typed/LZMA frame18 OFF/ON worker逐字节通过、9ON调用/时间守恒与9OFF null、追加18实际解码审计；工具偏置不能当未剖析CPU份额/原生收益。原v058主联合失败保留，下一版另冻小型Rust批量候选与完整二进制费用再测。详见results/v0.59.0/SUMMARY.md。
+
+## v0.60：原frame同表示Rust批量u64读取
+
+H1相对typed Python加载时间：True；H2相对plain完整空间/加载联合：False。原LZMA frame不重编码，27无profiler worker原byte/model和追加27Python/9native audit通过，完整DLL/metadata/Python+Rust/Cargo费用计入；被测CI binary SHA与当前发行binary功能proof分开。保持v058/v059负结果，不由内核时间推断问答/无限上下文。详见results/v0.60.0/SUMMARY.md。
