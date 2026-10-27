@@ -1,0 +1,28 @@
+{
+  "base_model": {
+    "path": "E:/memorystorage/.tools/scifact-graph-v053-training/model.json",
+    "bytes": 10152832,
+    "sha256": "f062c7a784421b71bbfaf3c299be78ff323a391847afbf5420e4c06a4d422be0"
+  },
+  "source_inputs_manifest": "docs/scifact-graph-inputs.json",
+  "private_source_inputs": "data/scifact",
+  "training_rows": 809,
+  "known_data_preparation_only": {
+    "normalized_train_questions": 807,
+    "annotated_train_rows": 505,
+    "query_term_types": 2817,
+    "new_real_training_runs": 0,
+    "new_dev_scoring": 0
+  },
+  "prior_fully_verified_release": "v0.60.0",
+  "prior_tag_commit": "04977fb64cbc0523f544f886c83cd96cd7d703fe",
+  "prior_final_proof_sha256": "da5647866025ce5a1d351c74187e18704f67830dddeb147233076e2b66ed0e54",
+  "parameters": {
+    "document_terms": 16,
+    "mapping_terms": 8,
+    "query_terms": 8,
+    "alpha": 0.25,
+    "count_budget": 12,
+    "original_record_byte_budget": 4096
+  }
+}
