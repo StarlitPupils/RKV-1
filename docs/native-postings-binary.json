@@ -1,0 +1,39 @@
+{
+  "path": "E:/memorystorage/.tools/postings-native-v060-measured/rkv1_postings.dll",
+  "sha256": "e128f5510a287f3dc29f76e65e0c6e8331d7689820dc5c0a4f3888f89d138553",
+  "bytes": 9728,
+  "metadata_path": "E:/memorystorage/.tools/postings-native-v060-measured/native-postings.json",
+  "metadata_sha256": "7b5f04724dd2cb310cfa2222bf449df56a1382317ffb2256482a03e99070b50e",
+  "metadata_bytes": 727,
+  "source_runtime_protocol_freeze": "34726ce87e424e324d6e04b4d8884ad6985bcb42",
+  "exact_candidate_CI": 40435920805,
+  "candidate_CI_url": "https://github.com/StarlitPupils/RKV-1/actions/runs/40435920805",
+  "candidate_artifact_id": 12704217303,
+  "candidate_artifact_zip_sha256": "a35387607f7934c5acc4824b60daa409622bb4a1feb0a30668a3479ffcb2b3d8",
+  "candidate_artifact_zip_bytes": 5116,
+  "measured_zip_asset": "rkv1-postings-measured-v0.60.0-windows-x86_64.zip",
+  "measured_zip_path": "E:/memorystorage/.tools/postings-native-v060-measured/rkv1-postings-measured-v0.60.0-windows-x86_64.zip",
+  "CI_compile_CPU_s": null,
+  "build_provenance": {
+    "abi": 1,
+    "library": "rkv1_postings.dll",
+    "sha256": "e128f5510a287f3dc29f76e65e0c6e8331d7689820dc5c0a4f3888f89d138553",
+    "bytes": 9728,
+    "source_commit": "34726ce87e424e324d6e04b4d8884ad6985bcb42",
+    "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+    "platform": "Windows-2025Server-10.0.26100-SP0",
+    "features": [
+      "canonical-u64-batch-v1"
+    ],
+    "compile_options": {
+      "opt-level": 3,
+      "lto": true,
+      "codegen-units": 1,
+      "panic": "abort",
+      "strip": true,
+      "third_party_crate_dependencies": 0
+    },
+    "scope": "Allocation-free canonical u64 reader only. Caller buffers and Python/frame validation still required. Performance applies only to the explicitly measured binary."
+  },
+  "scope": "Exact CI binary measured on this Windows machine. Current tag build can differ and only gets functional verification, never inherits timing."
+}
