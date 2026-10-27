@@ -6,7 +6,17 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.58.0 · 可逆索引postings存储格式
+## 当前版本：v0.59.0 · 索引加载观察器成本诊断
+
+固定旧typed/LZMA frame，18新鲜OFF/ON配对全部原字节与model一致；9ON调用/时间守恒、9OFF计数null及追加18实际解码审计通过。
+**H1观察器开销≤10%：False；H2 instrumented inverse+varint self-time占比每轮≥50%：False**。仅已见索引的工程诊断，instrumented占比不是未剖析CPU份额，尚无Rust提速结论。
+
+![观察器开销与函数份额](results/v0.59.0/index-profile.png)
+
+314检查313pass/1权限跳过；66runtime仅版本，原格式/变换/默认SDK/UI不变，0新模型API。v058主联合失败保留。
+[协议](docs/INDEX-PROFILE.md) · [详实报告](results/v0.59.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.59.0)。E3净收益/E4整体/回答/无限上下文未完成。
+
+## v0.58.0 · 可逆索引postings存储格式
 
 RKVPOST1实验格式/CLI，原两个canonical词法/图索引及一个人工结构控制，72worker全部逐字节恢复、追加72实际frame审计通过。
 预定typed/zstd空间/加载/联合均False；同codec和LZMA空间点完整保留，但加载明显更慢，不称综合推理收益。

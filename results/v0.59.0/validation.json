@@ -1,0 +1,19 @@
+{
+  "H1": false,
+  "H2": false,
+  "OFF_counter_null_records": 9,
+  "ON_exact_varint_counts_and_self_time_conservation": 9,
+  "additional_decoder_audits": 18,
+  "formal_restorations": 18,
+  "formal_workers": 18,
+  "freeze": "f0825a5c5cce5208f12563c83aea2ada771befb3",
+  "html_files": 1,
+  "new_remote_model_calls": 0,
+  "new_scientific_question_trials": 0,
+  "new_training_runs": 0,
+  "runtime_module_count": 66,
+  "unit_tests_passed": 313,
+  "unit_tests_run": 314,
+  "unit_tests_skipped": 1,
+  "figure_visually_inspected": true
+}
