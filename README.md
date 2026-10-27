@@ -6,7 +6,16 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.70.0 · 受限英语输入到证据规则
+## 当前版本：v0.71.0 · 证明共享布局与普通压缩对照
+
+768组证明包逐字节恢复及原querySHA通过，主Zstd完整保守空间H1=False、整进程时间H2=False、联合=False。源码/metadata/全部残留和时间都计费；这是已见证明的格式实验，未新增科学NLI或回答收益。
+
+![证明格式完整账本](results/v0.71.0/proof-frame.png)
+
+406检查405pass/1权限skip，0新训练/API，默认SDK/UI不改。E3净收益/E4整体/可靠长会话/无限上下文未完成。
+[协议](docs/PROOF-FRAME.md) · [详实报告](results/v0.71.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.71.0)。
+
+## v0.70.0 · 受限英语输入到证据规则
 
 官方人工OWA test64理论共1394题，正确且接受1394，H1=True/H2=True。预测只读声明范围内的English句子，给定formalreference仅在预测后独立核验；未实现通用语言理解或科学真理判断。
 

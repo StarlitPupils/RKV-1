@@ -421,3 +421,7 @@ H1关系分类质量False / H2局部CPU与model可行性True / 本probe联合Fal
 ## v0.70：受限controlledEnglish预测与后置reference对齐
 
 固定officialtest64全部题，English唯一预测源，givenrepresentation后置audit，H1=True/H2=True。不称开放NL/科学NLI，0训练/API；E3净收益/E4整体/回答/无限上下文未完成，详见results/v0.70.0/SUMMARY.md。
+
+## v0.71：已见证明可逆共享布局与ordinarycodec
+
+12worker/768root恢复/actualframe独立审计，primaryZstd保守空间H1=False/整process时间H2=False/joint=False；全部source/deps/metadata/旧新残留成本保留，不称新科学NLI/推理收益，详见results/v0.71.0/SUMMARY.md。

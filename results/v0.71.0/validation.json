@@ -1,0 +1,21 @@
+{
+  "H1": false,
+  "H2": false,
+  "case_roundtrips": 768,
+  "formal_retries": 0,
+  "formal_workers": 12,
+  "freeze": "5b34dcf9dc6df45fae38d01b760a40b02ee0f1fa",
+  "html_files": 1,
+  "independent_actual_frame_layout_audits": 768,
+  "joint": false,
+  "new_remote_model_calls": 0,
+  "new_scientific_evaluations": 0,
+  "new_semantic_source_DAG_audits": 0,
+  "new_training_runs": 0,
+  "perquery_certificate_identity_comparisons": 16728,
+  "runtime_module_count": 66,
+  "unit_tests_passed": 405,
+  "unit_tests_run": 406,
+  "unit_tests_skipped": 1,
+  "figure_visually_inspected": true
+}

@@ -1,0 +1,12 @@
+{
+  "platform": "Windows-11-10.0.26200-SP0",
+  "analysis_parent_python": "3.13.12",
+  "worker_executable": ".tools/scientific-venv/Scripts/python.exe",
+  "codecs": {
+    "zlib_level": 9,
+    "zstd_level": 3
+  },
+  "dependency_actual_source_binary_full_package_metadata_in": "source-resource.json",
+  "CPU_only": true,
+  "scope": "Local seenproofbyte experiment; metadata collectedimmediately afterformal, not coldcache/crossmachine benchmark"
+}
