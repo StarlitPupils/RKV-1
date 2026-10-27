@@ -1,0 +1,23 @@
+{
+  "H1": true,
+  "H2": true,
+  "formal_workers": 1,
+  "formal_retries": 0,
+  "main_certificates": 216,
+  "complete": 36,
+  "incomplete_source_set": 144,
+  "incomplete_logical_work": 36,
+  "history_equal": 72,
+  "tamper_controls": 12,
+  "original_file_recoveries": 7,
+  "runtime_module_count": 66,
+  "html_files": 1,
+  "unit_tests_run": 380,
+  "unit_tests_passed": 379,
+  "unit_tests_skipped": 1,
+  "new_training_runs": 0,
+  "new_remote_model_calls": 0,
+  "scientific_entailment_verified": false,
+  "freeze": "5160e9dcf2404553cd8b5af73970b175e67c9170",
+  "figure_visually_inspected": true
+}

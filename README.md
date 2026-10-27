@@ -6,7 +6,16 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.67.0 · 证据来源未读全时明确拒绝
+## 当前版本：v0.68.0 · 多来源显式规则与原文件证据链
+
+能把不同文件里的显式事实/规则接起来，逐条核验原file来源；216检查中36完整、144证据不全、36工作不足，72旧快照proof一致、12篡改拒绝。来源与推导范围受限于人工公理，自动语言理解和科学真理判断仍未实现。
+
+![多来源原证](results/v0.68.0/source-set-logic.png)
+
+380检查379pass/1权限skip；0新训练/API，默认SDK/UI不改。E3净收益/E4整体/可靠长对话/无限上下文未完成。
+[协议](docs/SOURCE-SET-LOGIC.md) · [详实报告](results/v0.68.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.68.0)。
+
+## v0.67.0 · 证据来源未读全时明确拒绝
 
 36来源集合检查：12完整、24预算或遗漏时明确incomplete，12旧快照证明不变，10无效完整proof拒绝。只验证机器来源字节集合，语法/逻辑/科学验证均未声称通过；自动自然语言理解仍未实现。
 

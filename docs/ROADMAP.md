@@ -409,3 +409,7 @@ H1关系分类质量False / H2局部CPU与model可行性True / 本probe联合Fal
 ## v0.67：eligible来源集合字节覆盖边界
 
 36case/12完整/24incomplete/12history/10无效完整proof拒绝。只做StageA字节覆盖，sourcegrammar/logic/science flagsFalse，跨文件推导和自然语言NLI未实现，0新训练/API。E3净收益/E4整体/回答/无限上下文未完成，详见results/v0.67.0/SUMMARY.md。
+
+## v0.68：多来源显式规则原fileDAG
+
+216case/36fullclosure/144sourceincomplete/36workincomplete/72history/12tamper/7恢复通过，原tuple与独立closure，不代表NL或科学真理，0新训练/API。E3净收益/E4整体/回答/无限上下文未完成，详见results/v0.68.0/SUMMARY.md。
