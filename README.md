@@ -16,6 +16,8 @@
 349检查348pass/1权限skip，66runtime仅版本，默认SDK/UI/归档不改；0新模型API。
 [协议](docs/RELATION-PROBE.md) · [详实报告](results/v0.64.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.64.0)。E3净收益/E4整体/回答/无限上下文未完成。
 
+v0.64实际发行核验已完成：7base资产SHA、66Python+HTML与全部新旧源码、物理仓库外实际wheel/currentnative及actualsdist新旧功能、最终proof重下载通过。[最终证明](https://github.com/StarlitPupils/RKV-1/releases/download/v0.64.0/published-verification.json)，SHA78a6d1274da990f277e8c7e0d8fdb94644facfbd442343c64e95334757dfa8aa。原tag前报告的待办状态不回写。
+
 ## v0.63.0 · 冻结词语关联无重训跨语料迁移
 
 旧SciFact关联与source/target模型3SHA不变，9fresh worker，ID/literal质量与时间分别验收；全部sourcebase/sidecar/target加载与历史训练成本计账。

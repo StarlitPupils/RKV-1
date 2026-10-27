@@ -1,0 +1,47 @@
+{
+  "schema": "owned-signed-logic-and-existing-BOW-diagnostic-v1",
+  "scientific_dataset_queries": 0,
+  "owned_not_new_science": true,
+  "initial_axioms_sha256": "597975803125537bb74720230437a7894c5193b7a02b098b109499cdd8728ff0",
+  "updated_axioms_sha256": "ce39430dd2a2ebaf264f54a7a9475315ea61017205d165e713c5f5ec6f02eb7e",
+  "initial_records": 26,
+  "updated_records": 27,
+  "queries_per_stage": 24,
+  "main_certificates": 72,
+  "budget_controls": 3,
+  "tamper_controls": 6,
+  "owned_collision_pairs": 8,
+  "owned_collision_predictions": 64,
+  "existing_v064_models": {
+    "claim_only": {
+      "path": "E:/memorystorage/.tools/relation-probe-v064-training/claim_only.json",
+      "sha256": "25ffc7eb96bd69ef8360fae01a7f77c70281b10464e4cc13fed0425c6a856fd7",
+      "bytes": 4211
+    },
+    "majority": {
+      "path": "E:/memorystorage/.tools/relation-probe-v064-training/majority.json",
+      "sha256": "e4f8d05a688935f476b846751185c58fbc4a5ac9d73ce2c2abe94ed01cb02996",
+      "bytes": 488
+    },
+    "pair": {
+      "path": "E:/memorystorage/.tools/relation-probe-v064-training/pair.json",
+      "sha256": "aad660b51b3361177311212e920a52b08115afa047c3af6aa911b8781bdc9961",
+      "bytes": 8545
+    },
+    "permuted_pair": {
+      "path": "E:/memorystorage/.tools/relation-probe-v064-training/permuted_pair.json",
+      "sha256": "fe6ed6235947995c1c56fbeba0b4682e3b3e827f20c0e0b90b29abf73a9e3870",
+      "bytes": 8563
+    }
+  },
+  "original_training_campaigns": 1,
+  "original_training_individual_fits": 3,
+  "new_training_runs": 0,
+  "new_remote_model_calls": 0,
+  "historical_training_summary_path": ".tools/relation-probe-v064-training/training.json",
+  "historical_public_cost_report": "results/v0.64.0/measurement-context.json",
+  "prior_fully_verified_release": "v0.64.0",
+  "prior_release_commit": "60857f2a898c4741e809b96c84276d937215a1bb",
+  "prior_final_proof_sha256": "78a6d1274da990f277e8c7e0d8fdb94644facfbd442343c64e95334757dfa8aa",
+  "formal_owned_workers_before_freeze": 0
+}
