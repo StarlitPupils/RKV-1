@@ -1,0 +1,53 @@
+{
+  "source_retrieval_model": {
+    "path": "E:/memorystorage/.tools/scifact-graph-v053-training/model.json",
+    "bytes": 10152832,
+    "sha256": "f062c7a784421b71bbfaf3c299be78ff323a391847afbf5420e4c06a4d422be0"
+  },
+  "private_scientific_inputs": "data/scifact",
+  "source_input_manifest": "docs/scifact-graph-inputs.json",
+  "classifier_parameters": {
+    "buckets_per_channel": 128,
+    "dimension": 389,
+    "epochs": 200,
+    "learning_rate": 0.5,
+    "L2_excluding_bias": 0.01,
+    "features": "hashed-claim_document_shared-logTF-L2-plus4scalars-bias-v1",
+    "tokenizer": "casefold-ascii-alnum-all-including-stopwords",
+    "threshold": 0.5,
+    "shuffle_seed": 20261027
+  },
+  "methods": [
+    "majority",
+    "pair",
+    "claim_only",
+    "permuted_pair"
+  ],
+  "training_campaigns": 1,
+  "individual_fits": 3,
+  "formal_workers": 12,
+  "orders": [
+    "ABCD",
+    "BADC",
+    "CDAB"
+  ],
+  "H1": "pair retrieved-explicit-gold balanced accuracy strictly above all3controls; all-gold correct not lower",
+  "H2": {
+    "full_current_method_model_bytes_max": 1048576,
+    "classification_wall_seconds_per_1000_output_pairs_max": 2.0,
+    "classification_CPU_seconds_per_1000_output_pairs_max": 2.0,
+    "scope": "Local feasibility cap only, not relative end-to-end speed or production inference gain"
+  },
+  "unknown_without_gold_not_negative_or_NEI": true,
+  "explicit_source_labels_only": [
+    "SUPPORT",
+    "CONTRADICT"
+  ],
+  "official_schema": "https://github.com/allenai/scifact/blob/master/doc/data.md",
+  "known_dev_not_unseen_validation": true,
+  "prior_fully_verified_release": "v0.63.0",
+  "prior_tag_commit": "8792b36deb50bbe231e58147e8de6d6cc4d2b4f0",
+  "prior_final_proof_sha256": "2440d70878ae15b0fe7114988fd323c94b0fb77dfa875c69606e7aeed6814e88",
+  "real_relation_training_campaigns_before_adoption": 0,
+  "real_relation_dev_predictions_before_adoption": 0
+}
