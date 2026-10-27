@@ -51,6 +51,27 @@ jobs:
         env:
           RKV_NATIVE_LIBRARY: rust/target/release/librkv1_core.so
         run: python -m unittest discover -s tests -p test_native.py -v
+      - run: cargo test --manifest-path rust/postings/Cargo.toml
+      - run: cargo build --release --manifest-path rust/postings/Cargo.toml
+      - if: runner.os == 'Windows'
+        run: python -m scripts.postings_native_metadata rust/postings/target/release/rkv1_postings.dll --output rust/postings/target/release/native-postings.json
+      - if: runner.os == 'Linux'
+        run: python -m scripts.postings_native_metadata rust/postings/target/release/librkv1_postings.so --output rust/postings/target/release/native-postings.json
+      - if: runner.os == 'Windows'
+        env:
+          RKV_POSTINGS_LIBRARY: rust/postings/target/release/rkv1_postings.dll
+        run: python -m unittest discover -s tests -p test_native_postings.py -v
+      - if: runner.os == 'Linux'
+        env:
+          RKV_POSTINGS_LIBRARY: rust/postings/target/release/librkv1_postings.so
+        run: python -m unittest discover -s tests -p test_native_postings.py -v
+      - uses: actions/upload-artifact@v4
+        with:
+          name: postings-native-ci-${{ runner.os }}
+          path: |
+            rust/postings/target/release/rkv1_postings.dll
+            rust/postings/target/release/librkv1_postings.so
+            rust/postings/target/release/native-postings.json
       - uses: actions/upload-artifact@v4
         with:
           name: native-ci-${{ runner.os }}

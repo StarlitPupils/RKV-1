@@ -15,9 +15,11 @@ jobs:
           - os: ubuntu-latest
             suffix: linux-x86_64
             library: librkv1_core.so
+            postings_library: librkv1_postings.so
           - os: windows-latest
             suffix: windows-x86_64
             library: rkv1_core.dll
+            postings_library: rkv1_postings.dll
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
@@ -32,6 +34,15 @@ jobs:
           NATIVE_LIBRARY: ${{ matrix.library }}
         run: |
           python -c "import hashlib,json,os,pathlib,shutil,subprocess,zipfile; p=pathlib.Path('rust/target/release')/os.environ['NATIVE_LIBRARY']; out=pathlib.Path('native-dist'); out.mkdir(); meta={'abi':1,'library':p.name,'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'bytes':p.stat().st_size,'source_commit':os.environ['GITHUB_SHA'],'tag':os.environ['RELEASE_TAG'],'platform':os.environ['NATIVE_SUFFIX'],'rustc':subprocess.check_output(['rustc','--version'],text=True).strip(),'gear_abi':1,'features':['csv-columns-v1','gear-v1'],'scope':'CSV inverse and Gear boundary scan; not a complete decoder; performance depends on the explicitly measured binary'}; z=zipfile.ZipFile(out/('rkv1-native-'+os.environ['RELEASE_TAG']+'-'+os.environ['NATIVE_SUFFIX']+'.zip'),'w',compression=zipfile.ZIP_DEFLATED); z.write(p,p.name); z.writestr('native.json',json.dumps(meta,indent=2)+'\n'); z.close()"
+      - run: cargo build --release --manifest-path rust/postings/Cargo.toml
+      - run: python -m scripts.postings_native_metadata rust/postings/target/release/${{ matrix.postings_library }} --output rust/postings/target/release/native-postings.json
+      - name: Package current postings native candidate with full provenance
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+          NATIVE_SUFFIX: ${{ matrix.suffix }}
+          POSTINGS_LIBRARY: ${{ matrix.postings_library }}
+        run: |
+          python -c "import os,pathlib,zipfile; p=pathlib.Path('rust/postings/target/release'); z=zipfile.ZipFile(pathlib.Path('native-dist')/('rkv1-postings-native-'+os.environ['RELEASE_TAG']+'-'+os.environ['NATIVE_SUFFIX']+'.zip'),'w',compression=zipfile.ZIP_DEFLATED); z.write(p/os.environ['POSTINGS_LIBRARY'],os.environ['POSTINGS_LIBRARY']); z.write(p/'native-postings.json','native-postings.json'); z.close()"
       - uses: actions/upload-artifact@v4
         with:
           name: native-${{ matrix.suffix }}
