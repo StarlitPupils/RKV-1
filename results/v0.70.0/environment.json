@@ -1,0 +1,7 @@
+{
+  "platform": "Windows-11-10.0.26200-SP0",
+  "parent_python": "3.13.12",
+  "worker_executable": ".tools/scientific-venv/Scripts/python.exe",
+  "CPU_only": true,
+  "scope": "Host metadata collected immediately afterformal during report; not independent machine/coldcache performance"
+}

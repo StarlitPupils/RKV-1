@@ -417,3 +417,7 @@ H1关系分类质量False / H2局部CPU与model可行性True / 本probe联合Fal
 ## v0.69：官方OWA给定形式representation
 
 固定64theory/allquestion，原JSON→derivedsource独立审计和closure，H1=True/H2=True，不称English/NLI/回答；0新训练/API。E3净收益/E4整体/无限上下文未完，详见results/v0.69.0/SUMMARY.md。
+
+## v0.70：受限controlledEnglish预测与后置reference对齐
+
+固定officialtest64全部题，English唯一预测源，givenrepresentation后置audit，H1=True/H2=True。不称开放NL/科学NLI，0训练/API；E3净收益/E4整体/回答/无限上下文未完成，详见results/v0.70.0/SUMMARY.md。

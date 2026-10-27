@@ -1,0 +1,176 @@
+{
+  "runtime_protocol_input_freeze": "7621aebba20aa26df272e4b922a3817d1aff43ab",
+  "candidate_CI": 40465723718,
+  "formal_workers": 1,
+  "formal_retries": 0,
+  "timeout_s": 600,
+  "fixed_theories": 64,
+  "all_encountered_questions": true,
+  "controlled_English_only_predictor": true,
+  "formal_reference_only_postaudit": true,
+  "new_scientific_evaluations": 0,
+  "new_training_runs": 0,
+  "new_remote_model_calls": 0,
+  "prior_release_commit": "87e70181739c78795d598a05d72f539eecdf6102",
+  "prior_final_proof_sha256": "139d4afb8b047b2bb51dfd648c9431055c1596ebed869d38ae760f2c27aa84bc",
+  "test_log_sha256": "48b3398562cd76f8986bde598a10eb4f69e7340ec28fdfb63dbf7ce7396b7f1d",
+  "scope": "Official artificial OWA64testtheory controlledEnglish predictor;formalreference onlypostaudit;notopenNL/scientificNLI, not unrestrictedNL/scientificNLI/answers",
+  "input_manifest": {
+    "schema": "proofwriter-OWA-controlled-English-test-v1",
+    "archive": {
+      "path": ".tools/proofwriter-preparation/proofwriter-dataset-V2020.12.3.zip",
+      "bytes": 214185889,
+      "sha256": "bbc5694901e8306d0bd659aa1ad53ccfd02c201864f4b320ffa3777827d1fc26",
+      "url": "https://aristo-data-public.s3.amazonaws.com/proofwriter/proofwriter-dataset-V2020.12.3.zip"
+    },
+    "member": "proofwriter-dataset-V2020.12.3/OWA/depth-5/meta-test.jsonl",
+    "prefix_physical_lines": 64,
+    "all_questions_denominator": true,
+    "world": "OWA",
+    "work_budget": 100000,
+    "source_byte_budget": 1048576,
+    "primary_dataset": "https://allenai.org/data/proofwriter",
+    "paper": "https://aclanthology.org/2021.findings-acl.317/",
+    "exposed_train_schema_rows": 32,
+    "exposed_train_prefix_bytes": 1048689,
+    "exposed_train_prefix_sha256": "1037a07baac41fecee3db6151110cffb47876bc694c549fdb806fb4741ed2690",
+    "initial_train20of32_negative_record_preserved": true,
+    "corrected_OWA_train32of32_independent_representation_agreement": true,
+    "dev_test_contents_read_before_freeze": false,
+    "H1": "allquestions controlledEnglish correct>=95percent andall3classes;correctrequirespostpredictionformalreferencealignment andcompleteclosure",
+    "H2": "allquestions acceptedcontrolledEnglishreferencealignment pluscompleteclosure and64recoveries",
+    "new_training_runs": 0,
+    "current_loaded_model_bytes": 0,
+    "new_remote_model_calls": 0,
+    "scientific_entailment_verified": false,
+    "English_translation_verified": false,
+    "original_raw_benchmark_rows_and_map_private": true,
+    "predictor_inputs": [
+      "triples.text",
+      "rules.text",
+      "questions.question"
+    ],
+    "supplied_representation_only": false,
+    "supplied_representation_used_only_postprediction_alignment_oracle": true,
+    "all_theory_predictions_persist_before_reference_gold": true,
+    "controlled_grammar_train_source32of32_agreement": true,
+    "initial_train25of32_negative_record_preserved": true,
+    "dev_test_English_read_for_grammar_design": false,
+    "official_test_member_read_before_freeze": false,
+    "prior_fully_verified_release": "v0.69.0",
+    "prior_release_commit": "87e70181739c78795d598a05d72f539eecdf6102",
+    "prior_final_proof_sha256": "139d4afb8b047b2bb51dfd648c9431055c1596ebed869d38ae760f2c27aa84bc",
+    "formal_campaigns_before_freeze": 0
+  },
+  "private_original_archive_schema_train_and_all_preparation_files": {
+    ".tools/proofwriter-preparation/archive-provenance.json": {
+      "bytes": 23984,
+      "sha256": "70925fc03000ed6c92041ac35bdf48921ab367965b05dfefa334f36757adbef2"
+    },
+    ".tools/proofwriter-preparation/discovery.json": {
+      "bytes": 916,
+      "sha256": "dd7bbeae9cda9b763d309f1fa687fa6699f2dc46db824c8b013aaf7c22baccf3"
+    },
+    ".tools/proofwriter-preparation/official-README.md": {
+      "bytes": 21696,
+      "sha256": "80877812e5caeab154dc820b0388c11d5ddf178b77789b639f097806c2828e9e"
+    },
+    ".tools/proofwriter-preparation/proofwriter-dataset-V2020.12.3.zip": {
+      "bytes": 214185889,
+      "sha256": "bbc5694901e8306d0bd659aa1ad53ccfd02c201864f4b320ffa3777827d1fc26"
+    },
+    ".tools/proofwriter-preparation/schema-discovery.json": {
+      "bytes": 770,
+      "sha256": "3f6a46890abbe17b75e17aecffd5617546d3f7b82a53bf7c8850d6d135faefd6"
+    },
+    ".tools/proofwriter-preparation/schema-train32.jsonl": {
+      "bytes": 1048689,
+      "sha256": "1037a07baac41fecee3db6151110cffb47876bc694c549fdb806fb4741ed2690"
+    },
+    ".tools/proofwriter-preparation/train32-compiler-check-OWA.json": {
+      "bytes": 3927,
+      "sha256": "ec4d8757c833a3e9f6e91155a07a94afff02d06cfe46207326b26fc7e18debcc"
+    },
+    ".tools/proofwriter-preparation/train32-compiler-check.json": {
+      "bytes": 5443,
+      "sha256": "bbeaaa7d8471e4d47cccd02caccca89575be7e04fab604a18ce39c08384186c8"
+    }
+  },
+  "private_preparation_total_bytes": 215291314,
+  "all_previous_science_model_training_source_snapshots_retained": "results/v0.68.0/measurement-context.json and olderreports",
+  "prior_symbolic_and_current_English_preparation_negatives_preserved": true,
+  "English_train32source_agreement_and6necessarytests": true,
+  "current_loaded_model_bytes": 0,
+  "original_English_oracleproof_not_used_by_reasoner": true,
+  "wholeJSON_decoded_but_gold_values_not_used_until_predpersistence": true,
+  "dependency_OS_allocator_unallocated_not_zero": true,
+  "controlled_English_private_preparation_source_and_train_aggregate_files": {
+    ".tools/v070-draft/audit_proofwriter_english.py": {
+      "bytes": 2340,
+      "sha256": "f745ee16b62685f3610d373601bc297cfcbc25ca0088e85a44bce46743465ad1"
+    },
+    ".tools/v070-draft/PREPARATION.md": {
+      "bytes": 2477,
+      "sha256": "19acfd15a12076fc4d4949e10a3baf5e662b8ace97f07e0d431a3ce0b9fbae6e"
+    },
+    ".tools/v070-draft/proofwriter-english-inputs.json": {
+      "bytes": 2049,
+      "sha256": "d6fb0c55655faccf2c1ce5548938ef856374f0e6458d6b8f47b25cedf65225e3"
+    },
+    ".tools/v070-draft/PROOFWRITER-ENGLISH.md": {
+      "bytes": 5643,
+      "sha256": "6ab714af58f4a03a1cf7220e443d66f06fef3f53ebc0bc872fbf305c015a3c83"
+    },
+    ".tools/v070-draft/proofwriter_english.py": {
+      "bytes": 5399,
+      "sha256": "c755620d2d356ae8456eb3d82ebe9521802d6cb4313d16702d4cc4f225a916fb"
+    },
+    ".tools/v070-draft/run_proofwriter_english.py": {
+      "bytes": 14136,
+      "sha256": "7315c13a6129d496f8947213503b3fde04fb1538bb0e2526dcdc320b084c10d1"
+    },
+    ".tools/v070-draft/test_proofwriter_english.py": {
+      "bytes": 2606,
+      "sha256": "028a15fa34c652e899a6dd215d5e6e59b8c38fbe423e68210e295b160fd6d147"
+    },
+    ".tools/v070-draft/test_proofwriter_english_worker.py": {
+      "bytes": 3049,
+      "sha256": "d7ab874992b1eb5c1b0041e5c805a707f381c23ecfe397f181de774aba34937f"
+    },
+    ".tools/v070-draft/train32-English-plural-bald-eagle.json": {
+      "bytes": 2741,
+      "sha256": "daa84c8a2fadf71a590d332500f741b40791eb2e5887299bf4536a2172997ae0"
+    },
+    ".tools/v070-draft/train32-English-source-preparation.json": {
+      "bytes": 3905,
+      "sha256": "020849825635f5ae9db31cc8f1e5dc28d77f3ce10e74ed1965e14b1ea1b6b8cb"
+    }
+  },
+  "controlled_English_private_preparation_test_logs": {
+    ".tools/test-v070-draft-fixed.log": {
+      "bytes": 107,
+      "sha256": "351f929ed84aacafade91b6fd67dc7be9217ffaea2ca9d1c9d59bd385ba30fb6"
+    },
+    ".tools/test-v070-draft-plural.log": {
+      "bytes": 107,
+      "sha256": "351f929ed84aacafade91b6fd67dc7be9217ffaea2ca9d1c9d59bd385ba30fb6"
+    },
+    ".tools/test-v070-draft-worker.log": {
+      "bytes": 109,
+      "sha256": "5e07d6b7262febdb5483b067265f939be12f7fd23f57ea69067a44b5e09c10a2"
+    },
+    ".tools/test-v070-draft.log": {
+      "bytes": 818,
+      "sha256": "84358736e60a1b4f51a58b524aab0f69276d040460952628d034f1a62ca75ca5"
+    }
+  },
+  "controlled_English_preparation_total_bytes": 45486,
+  "plot_label_correction": {
+    "actual_input_member": "proofwriter-dataset-V2020.12.3/OWA/depth-5/meta-test.jsonl",
+    "original_dev_label_plot_retained_private_sha256": "2db18710d3744f642e01c456bbcaa67bfa407164786e352c68a7398cbc7e2c61",
+    "corrected_test_label_plot_sha256": "1d3b6ccda4ea60a869a5baea3bd93f8109d58e3213219f1a0809648609869dd1",
+    "formal_experiment_rerun": false,
+    "original_plot_retained_bytes": 121785,
+    "corrected_plot_visually_inspected": true
+  }
+}

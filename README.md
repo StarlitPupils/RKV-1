@@ -6,7 +6,16 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.69.0 · 外部人工规则形式表示
+## 当前版本：v0.70.0 · 受限英语输入到证据规则
+
+官方人工OWA test64理论共1394题，正确且接受1394，H1=True/H2=True。预测只读声明范围内的English句子，给定formalreference仅在预测后独立核验；未实现通用语言理解或科学真理判断。
+
+![受限English全部分母](results/v0.70.0/proofwriter-english.png)
+
+395检查394pass/1权限skip；0新训练/API，默认SDK/UI不改。E3净收益/E4整体/可靠长对话/无限上下文未完成。
+[协议](docs/PROOFWRITER-ENGLISH.md) · [详实报告](results/v0.70.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.70.0)。
+
+## v0.69.0 · 外部人工规则形式表示
 
 官方OWA前64理论共1360问题，正确且独立接受1360，H1=True、全题接受/恢复H2=True。只用数据给定形式表示，原JSON到派生source逐条独立审计，自动English解析和科学真理判断仍未实现。
 
