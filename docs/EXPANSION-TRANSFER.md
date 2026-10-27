@@ -1,0 +1,22 @@
+# v0.63 冻结协议：原SciFact训练词语关联无重训迁移EntailmentBank
+
+v062完整proof后采用。v062诊断near承载5/13正增益、nonnear还有提升；仅字面，不证明语义无泄漏，因此另做下述明确跨语料试验。两个语料都在旧项目用过，绝不称全新未知科学验证。source旧SciFact base10152832B、原v061sidecar609487B SHAfb5b520385cb4b727401bc334566bcfe1b857589a9230ca0afa7e898a6c86f0a、target旧EntB base4629668B SHA2f82ee4b28c943038e7a37ddcbd8871443f7a441ddd45a1af599decc8bade183均不重训/重写映射或改alpha.25/terms8。新binding显式sourceBase/sidecar/targetBase三个SHA，不伪改原sidecar sourceSHA为target。
+
+constructor一次读/核/parse整个sourcebase+sidecar+targetbase并validate原关联；baseline只需targetbase，候选/控制额外原sourcebase+sidecar读/解析/RAM/parent费用都计，实际关联仍source语料训练，target图不参与ranking。query仅原问题string，原targetBM25+旧source扩展，未知target词自然无贡献，原whole12facts/4096原memberB不变。所有model历史训练和整模型原文件及control/专用源码/整库继续记账，不因不重训就零成本。
+
+固定target原labels-test340（旧v051已seen-dev排1后339），追加source训练normalized SHA排重但保留失败分母记录；不以target labels/answers挑参数。3方法lexical/expansion/permuted_expansion×3轮ABC/BCA/CAB=9worker、600s0retry。来源ID与literal两组指标/未解/annotationrewrite反例照旧，不能将ID提升等同语义或回答收益。原v051lexical所有仍被评问题的proof必须一致，若不同保留审计不覆盖。
+
+H1 source-ID质量每轮macro严格胜baseline与control且complete不低；H2literal质量同规则，H3candidate/lexical querywall/CPU/parent配对中位≤1，joint H1&&H2&&H3；零分母null失败。单target已见test的迁移结果不是E4整体/NLI/真实长会话/无限上下文。没有新神经模型或API调用。
+
+5项owned必要检查（transfer4项+实际toy Store三角色与literal/未解反例）和完整340检查339pass/1权限skip之后先freeze code/protocol/input，exactCI成功后再固定3输入model身份记录（无新训练），才能运行唯一9worker。独立ref ranking不调用candidate，重算ID/literal gold、source byte/locator/来源SHA、预算、read-only ledger/实际全部文件和旧v051 lexical retained逐题proof。rawJSON/图实际看/详实报告/README/release/CI后actual7assets SHA/66Python+HTML/Rust/scripts/物理外wheel/currentGear/currentpostings/actualsdist新旧smoke/finalproof8完整后才下一版。
+
+
+## 查询与constructor时间分界
+
+source_base/sidecar raw读取/3SHA验证/JSON解析/源侧validate在candidate/control constructor，单独wall/CPU且计完整parent/worker/RSS；baseline不读取source_base/sidecar，目标原model按旧路径加载。candidate为了独立binding重新parse目标，产生额外目标对象成本如实记账，不从parent移除。query只原问题string+已固定模型，不每query整model重hash，也不把构造代价藏掉；原sourceverify在每query时间内，scoring/gold读取在query完成后。全部模型文件/旧source/训练CPU、字典/元数据/专用源码/整库/worker源复制/CAS/plan/fullhits本地残留均收费，不以private不发布当零B。
+
+## 结果解释
+
+两个数据集都已在项目评过：v061source SciFact与v051targetEntBtest，源关联训练与target评估对象不同但不代表前所未见科学数据；本轮只能判断冻结这个具体跨语料应用是否改善来源ID或literal指标。ID/literal差异及unresolved/nonliteral反例不得合并抹掉；literal一致仍非语义蕴含或回答质量，来源UUID相同但annotation改写不能硬当literal命中。H1/H2/H3任一失败则jointFalse，参数/目标问题/预算/控制都不在看结果后修改。
+
+SSD物理/全系统IO/冷缓存/跨机保持null，observedRSS非精确增量/常驻RAM。无新native性能测量，旧Gear/postings仅完整测试/发行功能回归；source/target/sidecar原训练账本继续保留。0模型API（旧24已耗尽），不下载新模型，E3净收益/E4整体/NLI/生成回答/真实长会话/无限上下文未验收。
