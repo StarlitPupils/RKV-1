@@ -1,0 +1,8 @@
+{
+  "wall_s": 0.9779304000549018,
+  "cpu_s": 0.953125,
+  "peak_RSS_bytes": 83927040,
+  "additional_source_DAG_audits": 78,
+  "additional_source_recoveries": 63,
+  "includes_full_source_recovery_beyond_query_selection": true
+}

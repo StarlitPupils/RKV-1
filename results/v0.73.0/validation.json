@@ -1,0 +1,22 @@
+{
+  "H1": true,
+  "H2": true,
+  "formal_fresh_workers": 3,
+  "cases": 78,
+  "preflight_controls": 36,
+  "old_strict_controls": 9,
+  "tamper_controls": 30,
+  "historical_equal": 24,
+  "additional_actual_original_DAG_audits": 78,
+  "additional_actual_source_file_recoveries": 63,
+  "unit_tests_run": 427,
+  "unit_tests_passed": 426,
+  "unit_tests_skipped": 1,
+  "global_verdict_always_null": true,
+  "all_rounds_mechanical_projection_equal": true,
+  "scientific_entailment_verified": false,
+  "new_training_runs": 0,
+  "new_remote_model_calls": 0,
+  "figure_visually_inspected": true,
+  "source_protocol_input_freeze": "c6451e16ce1affb799cc0b8516f3bde330a69e5c"
+}

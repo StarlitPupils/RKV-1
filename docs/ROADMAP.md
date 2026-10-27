@@ -429,3 +429,7 @@ H1关系分类质量False / H2局部CPU与model可行性True / 本probe联合Fal
 ## v0.72：冻结grammar在实际NatLang human source上的边界
 
 同32theory规范control与实际sentences分开，H1human=False/H2=False，unsupported全分母、0适配/训练/API，非开放NL/科学NLI。E3净收益/E4整体/回答/无限上下文未完，详见results/v0.72.0/SUMMARY.md。
+
+## v0.73候选：部分选集单调证据，禁止全局结论
+
+78case/36preflight/9oldstrict/30tamper/24history通过，追加78原DAG/63原文件恢复；global_verdict永null，真实全目录先验。427检查426pass1skip，不称NLI/回答/全库完整或性能收益。发行安装/资产核验尚未完成，详见results/v0.73.0/SUMMARY.md。
