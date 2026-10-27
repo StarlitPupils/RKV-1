@@ -1,0 +1,40 @@
+{
+  "datasets": {
+    "entailmentbank": {
+      "path": "E:/memorystorage/.tools/question-retrieval-v050-training/model.json",
+      "sha256": "2f82ee4b28c943038e7a37ddcbd8871443f7a441ddd45a1af599decc8bade183",
+      "bytes": 4629668,
+      "role": "scientific_index",
+      "frame_path": "E:/memorystorage/.tools/index-frame-v058-workers/round-1-entailmentbank-typed-lzma/index.rkvpost",
+      "frame_bytes": 864534,
+      "frame_sha256": "edb2221a41085c18b48d97b97c4a0629f8587c380eced0d05e96c8b0cbd21dab",
+      "prior_worker_report_sha256": "67bd893eefdb55541e4b784783f3489989f6c5439a1ef520542229cc0e170f0a"
+    },
+    "scifact": {
+      "path": "E:/memorystorage/.tools/scifact-graph-v053-training/model.json",
+      "sha256": "f062c7a784421b71bbfaf3c299be78ff323a391847afbf5420e4c06a4d422be0",
+      "bytes": 10152832,
+      "role": "scientific_index",
+      "frame_path": "E:/memorystorage/.tools/index-frame-v058-workers/round-1-scifact-typed-lzma/index.rkvpost",
+      "frame_bytes": 1123730,
+      "frame_sha256": "b8e235f7bd8cb32dadce610992a3b098703a9cbff0f1f489e00948889f3c1208",
+      "prior_worker_report_sha256": "15fa63404fef9cecdea44cee7bcb27df1eb0ca28a8cebb2a36683e9d9a6381c5"
+    },
+    "synthetic_control": {
+      "path": "E:/memorystorage/.tools/index-frame-v058-inputs/control-index.json",
+      "sha256": "d9f5ce24c804e639f0de3711cc6be66eee0703a6667f48d5a181a99033aa1f1b",
+      "bytes": 353987,
+      "role": "owned_structured_control",
+      "frame_path": "E:/memorystorage/.tools/index-frame-v058-workers/round-1-synthetic_control-typed-lzma/index.rkvpost",
+      "frame_bytes": 47178,
+      "frame_sha256": "8f5d0987e55b48cbfc31b3651b46ac7d1aeaeda85d9b94d680a4d7ba74bf33f4",
+      "prior_worker_report_sha256": "74115ecd8278f890b51dcf96a6b6b7533717215d3bd7c1313d4c6c98eb73c666"
+    }
+  },
+  "prior_fully_verified_release": "v0.58.0",
+  "prior_tag_commit": "70c01218f7ed5d297782dd12815a7edf5a55ae73",
+  "prior_final_proof_sha256": "c951c279b65cf0189e46fd87004f16a8fc429868fde288da1d976a03ae95b202",
+  "already_seen_preparation_probes": 2,
+  "preparation_profile_sha256": "0bd32ce1e619fec9785a3b09e5b334b1418408c0fc5d37004439aeadc58cf3e7",
+  "reencodings": 0
+}
