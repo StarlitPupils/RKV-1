@@ -6,7 +6,16 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.68.0 · 多来源显式规则与原文件证据链
+## 当前版本：v0.69.0 · 外部人工规则形式表示
+
+官方OWA前64理论共1360问题，正确且独立接受1360，H1=True、全题接受/恢复H2=True。只用数据给定形式表示，原JSON到派生source逐条独立审计，自动English解析和科学真理判断仍未实现。
+
+![外部规则全部分母](results/v0.69.0/proofwriter-representation.png)
+
+389检查388pass/1权限skip；0新训练/API，默认SDK/UI不改。E3净收益/E4整体/可靠长对话/无限上下文未完成。
+[协议](docs/PROOFWRITER-REPRESENTATION.md) · [详实报告](results/v0.69.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.69.0)。
+
+## v0.68.0 · 多来源显式规则与原文件证据链
 
 能把不同文件里的显式事实/规则接起来，逐条核验原file来源；216检查中36完整、144证据不全、36工作不足，72旧快照proof一致、12篡改拒绝。来源与推导范围受限于人工公理，自动语言理解和科学真理判断仍未实现。
 

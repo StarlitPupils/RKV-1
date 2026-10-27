@@ -413,3 +413,7 @@ H1关系分类质量False / H2局部CPU与model可行性True / 本probe联合Fal
 ## v0.68：多来源显式规则原fileDAG
 
 216case/36fullclosure/144sourceincomplete/36workincomplete/72history/12tamper/7恢复通过，原tuple与独立closure，不代表NL或科学真理，0新训练/API。E3净收益/E4整体/回答/无限上下文未完成，详见results/v0.68.0/SUMMARY.md。
+
+## v0.69：官方OWA给定形式representation
+
+固定64theory/allquestion，原JSON→derivedsource独立审计和closure，H1=True/H2=True，不称English/NLI/回答；0新训练/API。E3净收益/E4整体/无限上下文未完，详见results/v0.69.0/SUMMARY.md。

@@ -1,0 +1,94 @@
+{
+  "runtime_protocol_input_freeze": "3598bfb23c3dc83f10ae8348f444a43f042f6a72",
+  "candidate_CI": 40463571353,
+  "formal_workers": 1,
+  "formal_retries": 0,
+  "timeout_s": 600,
+  "fixed_theories": 64,
+  "all_encountered_questions": true,
+  "supplied_representation_only": true,
+  "new_scientific_evaluations": 0,
+  "new_training_runs": 0,
+  "new_remote_model_calls": 0,
+  "prior_release_commit": "5434a9965329b7a7c3054469b4d706aff81a45b1",
+  "prior_final_proof_sha256": "937b6e94c7cb8551eb663b6d5229a6fda290685634f9897d9cb89f55ecbdbd2c",
+  "test_log_sha256": "8bccf3c396ef5291bc5101a0033d811d322633a816d6e26c91511badf8fe1743",
+  "scope": "Official artificial OWA64theory suppliedformalrepresentation/compiler/originaltranslation/closure;notEnglish orscientificNLI, not NL parsing/scientific NLI/answers",
+  "input_manifest": {
+    "schema": "proofwriter-OWA-supplied-formal-representation-v1",
+    "archive": {
+      "path": ".tools/proofwriter-preparation/proofwriter-dataset-V2020.12.3.zip",
+      "bytes": 214185889,
+      "sha256": "bbc5694901e8306d0bd659aa1ad53ccfd02c201864f4b320ffa3777827d1fc26",
+      "url": "https://aristo-data-public.s3.amazonaws.com/proofwriter/proofwriter-dataset-V2020.12.3.zip"
+    },
+    "member": "proofwriter-dataset-V2020.12.3/OWA/depth-5/meta-dev.jsonl",
+    "prefix_physical_lines": 64,
+    "all_questions_denominator": true,
+    "world": "OWA",
+    "work_budget": 100000,
+    "source_byte_budget": 1048576,
+    "primary_dataset": "https://allenai.org/data/proofwriter",
+    "paper": "https://aclanthology.org/2021.findings-acl.317/",
+    "exposed_train_schema_rows": 32,
+    "exposed_train_prefix_bytes": 1048689,
+    "exposed_train_prefix_sha256": "1037a07baac41fecee3db6151110cffb47876bc694c549fdb806fb4741ed2690",
+    "initial_train20of32_negative_record_preserved": true,
+    "corrected_OWA_train32of32_independent_representation_agreement": true,
+    "dev_test_contents_read_before_freeze": false,
+    "H1": "allquestions correct>=95percent and all3goldclasses present; correct only if originaltranslation and fullclosure independently accepted",
+    "H2": "allquestions acceptedcompleteformal plus64original/derivedfullrecoveries",
+    "new_training_runs": 0,
+    "current_loaded_model_bytes": 0,
+    "new_remote_model_calls": 0,
+    "scientific_entailment_verified": false,
+    "English_translation_verified": false,
+    "original_raw_benchmark_rows_and_map_private": true,
+    "prior_fully_verified_release": "v0.68.0",
+    "prior_release_commit": "5434a9965329b7a7c3054469b4d706aff81a45b1",
+    "prior_final_proof_sha256": "937b6e94c7cb8551eb663b6d5229a6fda290685634f9897d9cb89f55ecbdbd2c",
+    "formal_campaigns_before_freeze": 0
+  },
+  "private_original_archive_schema_train_and_all_preparation_files": {
+    ".tools/proofwriter-preparation/archive-provenance.json": {
+      "bytes": 23984,
+      "sha256": "70925fc03000ed6c92041ac35bdf48921ab367965b05dfefa334f36757adbef2"
+    },
+    ".tools/proofwriter-preparation/discovery.json": {
+      "bytes": 916,
+      "sha256": "dd7bbeae9cda9b763d309f1fa687fa6699f2dc46db824c8b013aaf7c22baccf3"
+    },
+    ".tools/proofwriter-preparation/official-README.md": {
+      "bytes": 21696,
+      "sha256": "80877812e5caeab154dc820b0388c11d5ddf178b77789b639f097806c2828e9e"
+    },
+    ".tools/proofwriter-preparation/proofwriter-dataset-V2020.12.3.zip": {
+      "bytes": 214185889,
+      "sha256": "bbc5694901e8306d0bd659aa1ad53ccfd02c201864f4b320ffa3777827d1fc26"
+    },
+    ".tools/proofwriter-preparation/schema-discovery.json": {
+      "bytes": 770,
+      "sha256": "3f6a46890abbe17b75e17aecffd5617546d3f7b82a53bf7c8850d6d135faefd6"
+    },
+    ".tools/proofwriter-preparation/schema-train32.jsonl": {
+      "bytes": 1048689,
+      "sha256": "1037a07baac41fecee3db6151110cffb47876bc694c549fdb806fb4741ed2690"
+    },
+    ".tools/proofwriter-preparation/train32-compiler-check-OWA.json": {
+      "bytes": 3927,
+      "sha256": "ec4d8757c833a3e9f6e91155a07a94afff02d06cfe46207326b26fc7e18debcc"
+    },
+    ".tools/proofwriter-preparation/train32-compiler-check.json": {
+      "bytes": 5443,
+      "sha256": "bbeaaa7d8471e4d47cccd02caccca89575be7e04fab604a18ce39c08384186c8"
+    }
+  },
+  "private_preparation_total_bytes": 215291314,
+  "all_previous_science_model_training_source_snapshots_retained": "results/v0.68.0/measurement-context.json and olderreports",
+  "initial_preparation_train20of32_and_private_spy_failure_preserved": true,
+  "corrected_train32of32_and9necessarytests": true,
+  "current_loaded_model_bytes": 0,
+  "original_English_oracleproof_not_used_by_reasoner": true,
+  "wholeJSON_decoded_but_gold_values_not_used_until_predpersistence": true,
+  "dependency_OS_allocator_unallocated_not_zero": true
+}

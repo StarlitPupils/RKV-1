@@ -1,0 +1,23 @@
+{
+  "H1": true,
+  "H2": true,
+  "formal_workers": 1,
+  "formal_retries": 0,
+  "theories": 64,
+  "questions": 1360,
+  "correct": 1360,
+  "accepted": 1360,
+  "independent_original_translation_theories": 64,
+  "full_original_derived_recovery_theories": 64,
+  "unit_tests_run": 389,
+  "unit_tests_passed": 388,
+  "unit_tests_skipped": 1,
+  "runtime_module_count": 66,
+  "html_files": 1,
+  "new_training_runs": 0,
+  "new_remote_model_calls": 0,
+  "scientific_entailment_verified": false,
+  "English_translation_verified": false,
+  "freeze": "3598bfb23c3dc83f10ae8348f444a43f042f6a72",
+  "figure_visually_inspected": true
+}
