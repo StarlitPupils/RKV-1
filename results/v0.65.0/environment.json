@@ -1,0 +1,8 @@
+{
+  "platform": "Windows-11-10.0.26200-SP0",
+  "parent_python": "3.13.12",
+  "worker_python_executable": ".tools/scientific-venv/Scripts/python.exe",
+  "CPU_only": true,
+  "worker_peak_RSS_in_raw_worker": true,
+  "environment_collection_scope": "Host metadata collected during immediate report/package stage; not separate benchmark or physical/cold-cache measurement"
+}

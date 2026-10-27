@@ -6,7 +6,16 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.64.0 · 实际检索证据上的CPU词面关系probe
+## 当前版本：v0.65.0 · 显式规则来源证明与词序碰撞反例
+
+72份受限规则证书、3个未完成预算控制、6个篡改控制通过；更新后读旧快照结果相同。自造主客体反转问题上，旧四模型各8/16，说明词袋丢失顺序，不能据此声称科学NLI/回答提升。
+
+![受限机制与词序反例](results/v0.65.0/signed-logic.png)
+
+357检查356通过/1权限skip；0新训练/模型API，默认SDK/UI不变。结构化公理是人工输入，自动语言到可靠证据关系仍未实现。E3净收益、E4整体、真实长会话与无限上下文未完成。
+[冻结协议](docs/SIGNED-LOGIC.md) · [详实报告](results/v0.65.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.65.0)。
+
+## v0.64.0 · 实际检索证据上的CPU词面关系probe
 
 同一原BM25真实source，四方法12worker，先预测实际返回paper再读gold；1训练campaign含3fit与多数类，4model SHA先冻结。明确gold/unknown/missing分母分别记录。
 **H1关系分类质量False / H2局部CPU与model可行性True / 本probe联合False**。弱词面分类不等于可靠NLI/科学验证或回答，所有verified始终False。

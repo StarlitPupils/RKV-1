@@ -1,0 +1,23 @@
+{
+  "formal_workers": 1,
+  "formal_retries": 0,
+  "main_certificates": 72,
+  "budget_controls": 3,
+  "tamper_controls": 6,
+  "owned_collision_predictions": 64,
+  "historical_SHA_identical": true,
+  "source_record_bindings_for_successful_certificates": 1833,
+  "unit_tests_run": 357,
+  "unit_tests_passed": 356,
+  "unit_tests_skipped": 1,
+  "runtime_module_count": 66,
+  "html_files": 1,
+  "freeze": "78218038d9a6ab1675c5eef63e54160bb175844e",
+  "H1": true,
+  "H2": true,
+  "scientific_validation": false,
+  "scientific_entailment_verified": false,
+  "new_training_runs": 0,
+  "new_remote_model_calls": 0,
+  "figure_visually_inspected": true
+}
