@@ -1,0 +1,23 @@
+{
+  "additional_actual_frame_decoder_audits": 72,
+  "all_system_file_bytes": null,
+  "cold_cache": null,
+  "cross_machine": null,
+  "deterministic_cells": 24,
+  "formal_workers": 72,
+  "freeze": "3ab06440027edd63c076202b8cf65522a317ec81",
+  "html_files": 1,
+  "new_remote_model_calls": 0,
+  "new_scientific_question_trials": 0,
+  "new_training_runs": 0,
+  "original_byte_recoveries": 72,
+  "physical_SSD_bytes": null,
+  "primary_joint": false,
+  "primary_load_gate": false,
+  "primary_space_gate": false,
+  "runtime_module_count": 66,
+  "unit_tests_passed": 309,
+  "unit_tests_run": 310,
+  "unit_tests_skipped": 1,
+  "figure_visually_inspected": true
+}

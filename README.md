@@ -6,7 +6,17 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.57.0 · 最佳原句匹配重排整篇论文
+## 当前版本：v0.58.0 · 可逆索引postings存储格式
+
+RKVPOST1实验格式/CLI，原两个canonical词法/图索引及一个人工结构控制，72worker全部逐字节恢复、追加72实际frame审计通过。
+预定typed/zstd空间/加载/联合均False；同codec和LZMA空间点完整保留，但加载明显更慢，不称综合推理收益。
+
+![含恢复JSON与源码的完整活动路径](results/v0.58.0/index-frames.png)
+
+typed/LZMA相对best plain/LZMA完整空间净少60122B和527350B；原模型不改，默认SDK/归档/UI不集成新frame。310检查309pass/1权限跳过，66runtime仅版本，0新模型API。
+[格式/协议](docs/INDEX-FRAME.md) · [详实报告](results/v0.58.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.58.0)。E3旧净收益/E4整体/回答/无限上下文未完成。
+
+## v0.57.0 · 最佳原句匹配重排整篇论文
 
 原返回单位、12篇/4096原B不改，唯一新候选按abstract最佳句BM25分数排parent；旧paper词法/图基线不改，独立一次source索引SHA冻结后9worker。
 **来源质量False / 时间False / 联合False**。sentence_max完整109/188、macro 0.588209，逐题损失/额外索引35012961B及全部CPU/RAM成本保留。
