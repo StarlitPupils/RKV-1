@@ -1,0 +1,27 @@
+{
+  "files": {
+    "corpus.jsonl": {
+      "bytes": 8307875,
+      "sha256": "b8d6c89624cb2ed74dee8938effc4f5d8bd2086887880af8110d64be4ceade62",
+      "lines": 5183
+    },
+    "claims_train.jsonl": {
+      "bytes": 175616,
+      "sha256": "f4c8fa82d8bd0653a9cc8d61a6ea48c25eacea64e90af5dbf390ebb1b74372f0",
+      "lines": 809
+    },
+    "claims_dev.jsonl": {
+      "bytes": 65007,
+      "sha256": "86f0435d08fdb65d1aa41d1472684f57e6e71930626497bdf4d7a9ec1a632217",
+      "lines": 300
+    }
+  },
+  "paper_model_sha256": "f062c7a784421b71bbfaf3c299be78ff323a391847afbf5420e4c06a4d422be0",
+  "expected_source_snapshot_id": "8b8cb80a0dac481b562ab353e0963277d02565c092ed52c68e0a8681538d281d",
+  "prior_fully_verified_release": "v0.56.0",
+  "prior_tag_commit": "446dc3a6d94b7e9cd7a273a24447748327d7a4a8",
+  "prior_final_proof_sha256": "99d31b05a468d90b56eb9de62f5a7540edf3e3b7f8ee47313ec8da1a9f9b9ef6",
+  "known_project_data_not_unseen": true,
+  "dataset_provenance_and_license_manifest": "docs/scifact-graph-inputs.json",
+  "scope": "Single sentence-max whole-parent ranking candidate; original source units admitted and fixed12/4096 unchanged; no API generation or new model service"
+}
