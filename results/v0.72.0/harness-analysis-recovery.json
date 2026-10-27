@@ -1,0 +1,24 @@
+{
+  "initial_controller_import_failure_before_input_access": true,
+  "six_formal_workers_completed_once": true,
+  "formal_worker_retries": 0,
+  "plot_error": "AttributeError: Text.set labelsize",
+  "plot_fixed_to_fontsize": true,
+  "resume_loaded_completed_scores_and_audits_without_repeating_them": true,
+  "failed_analysis_total_wall_s": null,
+  "logs_retained_private": {
+    "start-formal-v072.log": {
+      "bytes": 1175,
+      "sha256": "4824f0e60111f0f050b4f5c43b5fd6ffb5cc0472519470aa35ae0fc570be4cc7"
+    },
+    "start-formal-v072-resume.log": {
+      "bytes": 4006,
+      "sha256": "7886edd7fd39f5867790076fa52f265518ec8e9cc56700b24540efd71a1bd67c"
+    },
+    "resume-report-v072.log": {
+      "bytes": 94,
+      "sha256": "cbeec398fc4690de9b1ad7a2de9bf324d5b7122079097854fca075b136a462be"
+    }
+  },
+  "all_failed_analysis_costs_not_zero": true
+}

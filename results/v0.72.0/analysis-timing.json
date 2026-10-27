@@ -1,0 +1,11 @@
+{
+  "wall_s": 0.6040820998605341,
+  "cpu_s": 0.609375,
+  "peak_RSS_bytes": 90497024,
+  "actual_translation_audits": 96,
+  "actual_accepted_DAG_audits": 1596,
+  "actual_original_file_recoveries": 96,
+  "method_semantic_predictions_repeated": 0,
+  "scope": "Recovered plot/report generation only; source/DAG audit counts are completed prior analysis totals, not repeated timed operations",
+  "prior_failed_analysis_wall_s": null
+}

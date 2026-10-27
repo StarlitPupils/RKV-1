@@ -6,7 +6,16 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.71.0 · 证明共享布局与普通压缩对照
+## 当前版本：v0.72.0 · 人工改写来源的适用边界
+
+同32个官方NatLang理论每方法532题，规范text控制正确532，实际human句子正确0、接受0；H1=False/H2=False。没有用规范旁注冒充人的改写，所有解析拒绝留在分母。
+
+![人工改写适用性](results/v0.72.0/human-source-coverage.png)
+
+412检查411pass/1权限skip；旧parser不调，0新训练/API，默认SDK/UI不改。受限合成句型成绩不能外推开放NL，E3净收益/E4整体/科学问答/无限上下文未完成。
+[协议](docs/HUMAN-SOURCE-COVERAGE.md) · [详实报告](results/v0.72.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.72.0)。
+
+## v0.71.0 · 证明共享布局与普通压缩对照
 
 768组证明包逐字节恢复及原querySHA通过，主Zstd完整保守空间H1=False、整进程时间H2=False、联合=False。源码/metadata/全部残留和时间都计费；这是已见证明的格式实验，未新增科学NLI或回答收益。
 

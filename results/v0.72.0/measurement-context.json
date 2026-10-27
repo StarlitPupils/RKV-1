@@ -1,0 +1,129 @@
+{
+  "all_encountered_questions": true,
+  "candidate_CI": 40470668279,
+  "external_prefix_theories": 32,
+  "formal_retries": 0,
+  "formal_workers": 6,
+  "input_freeze": {
+    "archive_sha256": "bbc5694901e8306d0bd659aa1ad53ccfd02c201864f4b320ffa3777827d1fc26",
+    "frozen_before_any_NatLang_dev_predictions_scoring": true,
+    "member": "proofwriter-dataset-V2020.12.3/OWA/NatLang/meta-dev.jsonl",
+    "physical_theories": 32,
+    "prefix_bytes": 478358,
+    "prefix_path": "E:/memorystorage/.tools/human-source-v072-inputs/private-frozen-NatLang-dev32.jsonl",
+    "prefix_sha256": "609a2caee1c4f9fde94292097b10164ae86c4e1cdb5e027b16b11319d480402f",
+    "preparation_cpu_s": 0.15625,
+    "preparation_wall_s": 0.1525312999729067
+  },
+  "methods": [
+    "canonical",
+    "human"
+  ],
+  "new_grammar_adaptation": false,
+  "new_remote_model_calls": 0,
+  "new_training_runs": 0,
+  "orders": [
+    "AB",
+    "BA",
+    "AB"
+  ],
+  "prior_final_proof_sha256": "5d3fa451debb0fa5672c4aaa31f65dd16fa03fe9d54008f0038f8bf1ee431a04",
+  "prior_release_commit": "31b2dc514a3f7d73c50de1ad41c9b451609902ff",
+  "runtime_protocol_input_freeze": "63d5225ff60a65d64accdc4c760d6512a73b5af6",
+  "scope": "Frozenparser canonicalpositivecontrol vs realhumanparaphrase sourceonly;no canonical/mapping fallback forhuman predictor",
+  "test_log_sha256": "f97fc3d080b6523242555b7445f0ccd05d5c9e288049912c63018925b2e1af66",
+  "timeout_per_worker_s": 600,
+  "input_manifest": {
+    "schema": "ProofWriter-OWA-NatLang-human-source-boundary-v1",
+    "archive": {
+      "path": ".tools/proofwriter-preparation/proofwriter-dataset-V2020.12.3.zip",
+      "bytes": 214185889,
+      "sha256": "bbc5694901e8306d0bd659aa1ad53ccfd02c201864f4b320ffa3777827d1fc26",
+      "url": "https://aristo-data-public.s3.amazonaws.com/proofwriter/proofwriter-dataset-V2020.12.3.zip"
+    },
+    "member": "proofwriter-dataset-V2020.12.3/OWA/NatLang/meta-dev.jsonl",
+    "prefix_physical_lines": 32,
+    "methods": [
+      "canonical",
+      "human"
+    ],
+    "orders": [
+      "AB",
+      "BA",
+      "AB"
+    ],
+    "formal_workers": 6,
+    "all_questions_denominator": true,
+    "world": "OWA",
+    "work_budget": 100000,
+    "source_byte_budget": 1048576,
+    "unchanged_English_parser_sha256": "a19219e0efebb2abf2cad3d494ba15c69049c1b797a78d49ecca6605a9547b53",
+    "unchanged_symbolic_parser_sha256": "40b668ecffcdc4c385e11b89a2d4a581ddbd6de91c3c78433bd6f7314dbf93b7",
+    "NatLang_train_schema_rows_read": 1,
+    "NatLang_train_schema_SHA256": "46ca917cd26287738925747eca8e5d55f37d9596183c2f10ec7889a420058549",
+    "NatLang_dev_test_contents_read_before_freeze": false,
+    "human_method_inputs": [
+      "sentences",
+      "questions.question"
+    ],
+    "forbidden_human_predictor_inputs": [
+      "triples",
+      "rules",
+      "mappings",
+      "representation",
+      "answer",
+      "proofs"
+    ],
+    "H1": "humanallquestionscorrect>=95percent/all3classes inevery3rounds",
+    "H2": "humanallquestionsacceptedand32actualrecoveries inevery3rounds",
+    "no_abstention_speed_benefit_claim": true,
+    "new_training_runs": 0,
+    "current_loaded_model_bytes": 0,
+    "new_remote_model_calls": 0,
+    "scientific_entailment_verified": false,
+    "unrestricted_English_NLI_verified": false,
+    "prior_fully_verified_release": "v0.71.0",
+    "prior_release_commit": "31b2dc514a3f7d73c50de1ad41c9b451609902ff",
+    "prior_final_proof_sha256": "5d3fa451debb0fa5672c4aaa31f65dd16fa03fe9d54008f0038f8bf1ee431a04",
+    "formal_campaigns_before_freeze": 0
+  },
+  "private_preparation_files": {
+    "E:/memorystorage/.tools/v072-draft/audit_human_source_coverage.py": {
+      "bytes": 3394,
+      "sha256": "df3909598a9deeaec4a12ca6e6066eee21046128ec9173877f39b05f72e69471"
+    },
+    "E:/memorystorage/.tools/v072-draft/human-source-coverage-inputs.json": {
+      "bytes": 1708,
+      "sha256": "e755019373aa695c19c7e222f30d21f1bd61c40e4209010cd04ab3e573301ad0"
+    },
+    "E:/memorystorage/.tools/v072-draft/HUMAN-SOURCE-COVERAGE.md": {
+      "bytes": 6425,
+      "sha256": "56af029fbbe27cd4bb7c5b14f16a56b58bc71a998b5e88f57251c7b868c100f4"
+    },
+    "E:/memorystorage/.tools/v072-draft/human_source_coverage.py": {
+      "bytes": 1415,
+      "sha256": "f8af68b3467c9bf468707e1336cea45ac92fe96f5667dbaa12d2f432197b0f6b"
+    },
+    "E:/memorystorage/.tools/v072-draft/run_human_source_coverage.py": {
+      "bytes": 12304,
+      "sha256": "a98c59a66ae025f389738ce90f4c74926123a77a593e757f7c12e76188178e7a"
+    },
+    "E:/memorystorage/.tools/v072-draft/schema-discovery.json": {
+      "bytes": 897,
+      "sha256": "12bb12a5d927c31b46eb6c1a42bb93ee7b2507bb36435f21fb407569241e2ff4"
+    },
+    "E:/memorystorage/.tools/v072-draft/schema-NatLang-train1.json": {
+      "bytes": 12552,
+      "sha256": "46ca917cd26287738925747eca8e5d55f37d9596183c2f10ec7889a420058549"
+    },
+    "E:/memorystorage/.tools/v072-draft/test_human_source_coverage.py": {
+      "bytes": 5152,
+      "sha256": "84caad3b045a07430d4c5f8043143f775c7099978cd87458418d9625d3e57b26"
+    }
+  },
+  "private_preparation_total_bytes": 43847,
+  "all_previous_science_model_train_source_snapshots_retained": true,
+  "raw_NatLang_train1_dev32_canonical_human_originals_and_maps_private": true,
+  "alloldEnglish_and_symbolic_parsers_byte_unchanged": true,
+  "unallocated_dependency_OS_allocator_cost_not_zero": true
+}

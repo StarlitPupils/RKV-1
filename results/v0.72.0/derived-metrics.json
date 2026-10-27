@@ -1,0 +1,265 @@
+{
+  "headline": {
+    "H1_human_allquestion_quality": false,
+    "H2_human_complete_acceptance_and_recovery": false,
+    "formal_workers": 6,
+    "prefix_theories": 32,
+    "questions_per_method_worker": 532,
+    "canonical_correct": 532,
+    "human_correct": 0,
+    "canonical_accepted": 532,
+    "human_accepted": 0,
+    "human_source_failure_theories": 32,
+    "new_parser_adaptation": false,
+    "new_training_runs": 0,
+    "new_remote_model_calls": 0
+  },
+  "summaries": [
+    {
+      "round": 1,
+      "method": "canonical",
+      "theories": 32,
+      "questions": 532,
+      "correct": 532,
+      "accepted": 532,
+      "allquestions_accuracy": 1.0,
+      "classes": {
+        "False": {
+          "correct": 133,
+          "total": 133
+        },
+        "True": {
+          "correct": 133,
+          "total": 133
+        },
+        "Unknown": {
+          "correct": 266,
+          "total": 266
+        }
+      },
+      "source_compilation_failure_theories": 0,
+      "source_reference_alignment_failed_theories": 0,
+      "source_failure_counts": {},
+      "query_failure_counts": {},
+      "abstained_or_failed": 0,
+      "accepted_wrong": 0,
+      "actual_original_recovery_theories": 32,
+      "original_English_bindings": 548,
+      "derived_record_DAG_bindings": 8168,
+      "worker_wall_s": 3.970761900069192,
+      "worker_cpu_s": 3.484375,
+      "parent_full_process_wall_s": 4.097551199840382,
+      "peak_RSS_bytes": 38735872,
+      "retained_all_work_bytes": 6543337
+    },
+    {
+      "round": 1,
+      "method": "human",
+      "theories": 32,
+      "questions": 532,
+      "correct": 0,
+      "accepted": 0,
+      "allquestions_accuracy": 0.0,
+      "classes": {
+        "False": {
+          "correct": 0,
+          "total": 133
+        },
+        "True": {
+          "correct": 0,
+          "total": 133
+        },
+        "Unknown": {
+          "correct": 0,
+          "total": 266
+        }
+      },
+      "source_compilation_failure_theories": 32,
+      "source_reference_alignment_failed_theories": 0,
+      "source_failure_counts": {
+        "UnsupportedEnglish:Explicit controlled rule required": 32
+      },
+      "query_failure_counts": {
+        "UnsupportedEnglish:Explicit controlled rule required": 532
+      },
+      "abstained_or_failed": 532,
+      "accepted_wrong": 0,
+      "actual_original_recovery_theories": 0,
+      "original_English_bindings": 0,
+      "derived_record_DAG_bindings": 0,
+      "worker_wall_s": 0.5435028998181224,
+      "worker_cpu_s": 0.359375,
+      "parent_full_process_wall_s": 0.6675982000306249,
+      "peak_RSS_bytes": 34557952,
+      "retained_all_work_bytes": 893599
+    },
+    {
+      "round": 2,
+      "method": "canonical",
+      "theories": 32,
+      "questions": 532,
+      "correct": 532,
+      "accepted": 532,
+      "allquestions_accuracy": 1.0,
+      "classes": {
+        "False": {
+          "correct": 133,
+          "total": 133
+        },
+        "True": {
+          "correct": 133,
+          "total": 133
+        },
+        "Unknown": {
+          "correct": 266,
+          "total": 266
+        }
+      },
+      "source_compilation_failure_theories": 0,
+      "source_reference_alignment_failed_theories": 0,
+      "source_failure_counts": {},
+      "query_failure_counts": {},
+      "abstained_or_failed": 0,
+      "accepted_wrong": 0,
+      "actual_original_recovery_theories": 32,
+      "original_English_bindings": 548,
+      "derived_record_DAG_bindings": 8168,
+      "worker_wall_s": 3.9168895999900997,
+      "worker_cpu_s": 3.390625,
+      "parent_full_process_wall_s": 4.047045600134879,
+      "peak_RSS_bytes": 38850560,
+      "retained_all_work_bytes": 6543332
+    },
+    {
+      "round": 2,
+      "method": "human",
+      "theories": 32,
+      "questions": 532,
+      "correct": 0,
+      "accepted": 0,
+      "allquestions_accuracy": 0.0,
+      "classes": {
+        "False": {
+          "correct": 0,
+          "total": 133
+        },
+        "True": {
+          "correct": 0,
+          "total": 133
+        },
+        "Unknown": {
+          "correct": 0,
+          "total": 266
+        }
+      },
+      "source_compilation_failure_theories": 32,
+      "source_reference_alignment_failed_theories": 0,
+      "source_failure_counts": {
+        "UnsupportedEnglish:Explicit controlled rule required": 32
+      },
+      "query_failure_counts": {
+        "UnsupportedEnglish:Explicit controlled rule required": 532
+      },
+      "abstained_or_failed": 532,
+      "accepted_wrong": 0,
+      "actual_original_recovery_theories": 0,
+      "original_English_bindings": 0,
+      "derived_record_DAG_bindings": 0,
+      "worker_wall_s": 0.5709130000323057,
+      "worker_cpu_s": 0.234375,
+      "parent_full_process_wall_s": 0.7126096000429243,
+      "peak_RSS_bytes": 34566144,
+      "retained_all_work_bytes": 893585
+    },
+    {
+      "round": 3,
+      "method": "canonical",
+      "theories": 32,
+      "questions": 532,
+      "correct": 532,
+      "accepted": 532,
+      "allquestions_accuracy": 1.0,
+      "classes": {
+        "False": {
+          "correct": 133,
+          "total": 133
+        },
+        "True": {
+          "correct": 133,
+          "total": 133
+        },
+        "Unknown": {
+          "correct": 266,
+          "total": 266
+        }
+      },
+      "source_compilation_failure_theories": 0,
+      "source_reference_alignment_failed_theories": 0,
+      "source_failure_counts": {},
+      "query_failure_counts": {},
+      "abstained_or_failed": 0,
+      "accepted_wrong": 0,
+      "actual_original_recovery_theories": 32,
+      "original_English_bindings": 548,
+      "derived_record_DAG_bindings": 8168,
+      "worker_wall_s": 3.9391757000703365,
+      "worker_cpu_s": 3.515625,
+      "parent_full_process_wall_s": 4.068407000042498,
+      "peak_RSS_bytes": 39317504,
+      "retained_all_work_bytes": 6543370
+    },
+    {
+      "round": 3,
+      "method": "human",
+      "theories": 32,
+      "questions": 532,
+      "correct": 0,
+      "accepted": 0,
+      "allquestions_accuracy": 0.0,
+      "classes": {
+        "False": {
+          "correct": 0,
+          "total": 133
+        },
+        "True": {
+          "correct": 0,
+          "total": 133
+        },
+        "Unknown": {
+          "correct": 0,
+          "total": 266
+        }
+      },
+      "source_compilation_failure_theories": 32,
+      "source_reference_alignment_failed_theories": 0,
+      "source_failure_counts": {
+        "UnsupportedEnglish:Explicit controlled rule required": 32
+      },
+      "query_failure_counts": {
+        "UnsupportedEnglish:Explicit controlled rule required": 532
+      },
+      "abstained_or_failed": 532,
+      "accepted_wrong": 0,
+      "actual_original_recovery_theories": 0,
+      "original_English_bindings": 0,
+      "derived_record_DAG_bindings": 0,
+      "worker_wall_s": 0.5420331999193877,
+      "worker_cpu_s": 0.296875,
+      "parent_full_process_wall_s": 0.6640708001796156,
+      "peak_RSS_bytes": 34578432,
+      "retained_all_work_bytes": 893538
+    }
+  ],
+  "method_quality_determinism_over3rounds": true,
+  "same_original_theories_questions_gold_all6workers": true,
+  "predictions_before_gold_files_independently_checked": 192,
+  "additional_actual_source_reference_translation_audits": 96,
+  "additional_actual_accepted_DAG_audits": 1596,
+  "additional_actual_original_file_recoveries": 96,
+  "canonical_parser_byte_SHA_unchanged": true,
+  "new_semantic_claim": "Externalhuman-source applicability measurement only; no open/scientificNLIverified",
+  "no_speed_gate_for_abstention": true,
+  "scientific_entailment_verified": false,
+  "unrestricted_English_NLI_verified": false,
+  "generated_answers": 0
+}

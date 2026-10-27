@@ -425,3 +425,7 @@ H1关系分类质量False / H2局部CPU与model可行性True / 本probe联合Fal
 ## v0.71：已见证明可逆共享布局与ordinarycodec
 
 12worker/768root恢复/actualframe独立审计，primaryZstd保守空间H1=False/整process时间H2=False/joint=False；全部source/deps/metadata/旧新残留成本保留，不称新科学NLI/推理收益，详见results/v0.71.0/SUMMARY.md。
+
+## v0.72：冻结grammar在实际NatLang human source上的边界
+
+同32theory规范control与实际sentences分开，H1human=False/H2=False，unsupported全分母、0适配/训练/API，非开放NL/科学NLI。E3净收益/E4整体/回答/无限上下文未完，详见results/v0.72.0/SUMMARY.md。
