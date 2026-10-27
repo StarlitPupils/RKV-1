@@ -383,3 +383,5 @@ H1相对typed Python加载时间：True；H2相对plain完整空间/加载联合
 ## v0.61候选实验（发行核验待办）
 
 来源质量True / 时间False / 联合False。一次train另冻sidecarSHA、9worker/独立排名和来源audit，known-dev单域，原12/4096未改；详细报告results/v0.61.0/SUMMARY.md。尚未完整发布，不能称E4/回答/无限上下文完成。
+
+补记v0.61 actual发行收尾：ReleaseCI40446749549、7base实际下载SHA/全源码/物理外wheel与currentnative及新旧sdist功能/第8proof重下载通过，proof SHA e94f7a210f551e41f58bc24e54e284342d26e566e6f87194985467a59a8a55d5。原tag前报告状态不覆写，实际发行proof为完成证据。

@@ -6,13 +6,14 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 下一候选 v0.61.0（实验报告已形成，尚待安装与发行核验）
+## 当前版本：v0.61.0 · 训练集词语关联来源检索
 
-来源质量True / 时间False / 联合False；固定train-only词语关联、原12/4096和置换control，已见SciFact，非回答/NLI或E4整体验收。
+来源质量通过、时间和联合未通过：完整证据139→142/188，macro recall .750443→.767730；查询约慢21.14%，新增完整sidecar609487B。331检查330pass/1权限跳过。
+7实际资产SHA、递归66Python+HTML及新旧源码、物理仓库外actual wheel/currentnative/actualsdist新旧smoke和最终proof重下载均通过。
 
-[实验报告](results/v0.61.0/SUMMARY.md) · [冻结协议](docs/SUPERVISED-EXPANSION.md)。完整已核验版本仍为v0.60.0。
+[详实报告](results/v0.61.0/SUMMARY.md) · [协议](docs/SUPERVISED-EXPANSION.md) · [实际发行核验证明](https://github.com/StarlitPupils/RKV-1/releases/download/v0.61.0/published-verification.json)。报告内“待发行”是tag前状态，实际完成证明为准；原实验结果不回写。E3净收益/E4整体/NLI/回答/无限上下文未完成。
 
-## 当前版本：v0.60.0 · 同frame的Rust批量规范varint读取
+## v0.60.0 · 同frame的Rust批量规范varint读取
 
 27新鲜无profiler配对原byte/model一致，追加27Python/9actualnative decode审计通过；旧Python格式/变换不改，整个DLL/metadata/专用源码收费。
 **H1相对typed Python加载时间：True；H2相对plain完整空间/加载联合：False**。C/B是实现时间，C/A才是完整活动路径；不把内核或已见索引结果当回答提升。
