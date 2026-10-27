@@ -6,7 +6,17 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.61.0 · 训练集词语关联来源检索
+## 当前版本：v0.62.0 · 训练问题字面相似度诊断
+
+固定4/5 Jaccard，1诊断worker/298已有问题、188annotated/110null，独立整数交叉乘与2682既有proof核对；0新检索/训练/source范围绑定/模型API。
+**H1至少一半正增益在近似训练问题组：False；H2非近似组仍有来源质量提升：True**。字面nonnear不是语义独立/无泄漏证明，v061质量/时间/联合结论不改。
+
+![相似组与来源覆盖](results/v0.62.0/query-similarity.png)
+
+335检查334pass/1权限skip；默认SDK/UI/归档不变，完整source/模型历史账本保留。
+[协议](docs/QUERY-SIMILARITY.md) · [详实报告](results/v0.62.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.62.0)。E3净收益/E4整体/回答/无限上下文未完成。
+
+## v0.61.0 · 训练集词语关联来源检索
 
 来源质量通过、时间和联合未通过：完整证据139→142/188，macro recall .750443→.767730；查询约慢21.14%，新增完整sidecar609487B。331检查330pass/1权限跳过。
 7实际资产SHA、递归66Python+HTML及新旧源码、物理仓库外actual wheel/currentnative/actualsdist新旧smoke和最终proof重下载均通过。

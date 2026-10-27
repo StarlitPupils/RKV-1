@@ -1,0 +1,22 @@
+{
+  "H1": false,
+  "H2": true,
+  "annotated_records": 188,
+  "formal_diagnostic_workers": 1,
+  "freeze": "d3f0c67bf35ba6ffd71665eb8d94deeec4d9f3fa",
+  "html_files": 1,
+  "independent_integer_Jaccard_audits": 298,
+  "new_query_calls": 0,
+  "new_remote_model_calls": 0,
+  "new_scientific_trials": 0,
+  "new_training_runs": 0,
+  "prior_report_proofs_checked": 2682,
+  "retrieved_records": 298,
+  "runtime_module_count": 66,
+  "source_range_bindings": 0,
+  "unannotated_null_records": 110,
+  "unit_tests_passed": 334,
+  "unit_tests_run": 335,
+  "unit_tests_skipped": 1,
+  "figure_visually_inspected": true
+}

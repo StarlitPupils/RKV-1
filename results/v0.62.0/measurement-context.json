@@ -1,0 +1,95 @@
+{
+  "runtime_protocol_input_freeze": "d3f0c67bf35ba6ffd71665eb8d94deeec4d9f3fa",
+  "candidate_CI": 40447714225,
+  "formal_workers": 1,
+  "formal_retries": 0,
+  "known_data_split_pairs": 1,
+  "existing_method_reports": 9,
+  "source_range_bindings": 0,
+  "new_scientific_question_trials": 0,
+  "new_training_runs": 0,
+  "new_remote_model_calls": 0,
+  "prior_fully_verified_release": "v0.61.0",
+  "prior_final_proof_sha256": "e94f7a210f551e41f58bc24e54e284342d26e566e6f87194985467a59a8a55d5",
+  "primary_profile": "Fixed4/5 tokenJaccard overlap diagnostic of prior reports; H1>=halfpositivegainnear,H2nonnearpositivewithcomplete>=baseline; no new retrieval/training",
+  "input_manifest": {
+    "files": {
+      "train": {
+        "path": "E:/memorystorage/data/scifact/claims_train.jsonl",
+        "bytes": 175616,
+        "sha256": "f4c8fa82d8bd0653a9cc8d61a6ea48c25eacea64e90af5dbf390ebb1b74372f0"
+      },
+      "dev": {
+        "path": "E:/memorystorage/data/scifact/claims_dev.jsonl",
+        "bytes": 65007,
+        "sha256": "86f0435d08fdb65d1aa41d1472684f57e6e71930626497bdf4d7a9ec1a632217"
+      },
+      "lexical": {
+        "path": "E:/memorystorage/results/v0.61.0/round-1-lexical.json",
+        "bytes": 533549,
+        "sha256": "c5db650b26f660ac7326397d918087e5554980a9c3415e011a250be5e94e8318"
+      },
+      "lexical_round2": {
+        "path": "E:/memorystorage/results/v0.61.0/round-2-lexical.json",
+        "bytes": 533586,
+        "sha256": "92b65e23c4d284e245657a478926c8459ba7c0f45742472bfc41242987b77e22"
+      },
+      "lexical_round3": {
+        "path": "E:/memorystorage/results/v0.61.0/round-3-lexical.json",
+        "bytes": 533567,
+        "sha256": "71463f22d8e77da018cdaf6c9bd46c66a32b63337b5aeee0a177095c4b81f444"
+      },
+      "expansion": {
+        "path": "E:/memorystorage/results/v0.61.0/round-1-expansion.json",
+        "bytes": 534993,
+        "sha256": "5063c81ae7bb86c86af6c32483c84b9228244f36a39480d646bd7d776b43db50"
+      },
+      "expansion_round2": {
+        "path": "E:/memorystorage/results/v0.61.0/round-2-expansion.json",
+        "bytes": 534985,
+        "sha256": "1d85dbf092601ee7b5098c11d208f10a7b7b778b749a53553613fbe4b3696595"
+      },
+      "expansion_round3": {
+        "path": "E:/memorystorage/results/v0.61.0/round-3-expansion.json",
+        "bytes": 535005,
+        "sha256": "1ead96b192a8aa0e51ca20f2c8e8cc5ae30c01c198c223463a0842a7c6e46ae0"
+      },
+      "permuted_expansion": {
+        "path": "E:/memorystorage/results/v0.61.0/round-1-permuted_expansion.json",
+        "bytes": 535402,
+        "sha256": "c23ea1f7dea6a7891442c301858cdf38f6fc175cecde1c6dd2cc096e4bc88876"
+      },
+      "permuted_expansion_round2": {
+        "path": "E:/memorystorage/results/v0.61.0/round-2-permuted_expansion.json",
+        "bytes": 535430,
+        "sha256": "a6b61f731d05b3feba5256022749bdc1c97c702ee3b8b8cc27df4fb6b964e4e3"
+      },
+      "permuted_expansion_round3": {
+        "path": "E:/memorystorage/results/v0.61.0/round-3-permuted_expansion.json",
+        "bytes": 535468,
+        "sha256": "2621c102a14bce35c4928a7459c438e4448f9b9b1a263b2e0bb0c22a004d04d4"
+      }
+    },
+    "prior_fully_verified_release": "v0.61.0",
+    "prior_tag_commit": "358cfc8e9c3cb3a781a3e1e220682d2d735fbe0c",
+    "prior_final_proof_sha256": "e94f7a210f551e41f58bc24e54e284342d26e566e6f87194985467a59a8a55d5",
+    "jaccard_threshold": {
+      "numerator": 4,
+      "denominator": 5
+    },
+    "new_query_calls": 0,
+    "new_training_runs": 0,
+    "new_source_range_bindings": 0
+  },
+  "previous_model_and_training_ledgers": [
+    "results/v0.53.0/measurement-context.json",
+    "results/v0.61.0/measurement-context.json"
+  ],
+  "retained_base_model_bytes": 10152832,
+  "retained_new_v061_sidecar_bytes": 609487,
+  "old_source_allocation_and_history_preserved": true,
+  "new_query_or_training_or_scientific_trials": 0,
+  "raw_scientific_corpus_source_range_bindings": 0,
+  "new_native_performance_calls": 0,
+  "runtime_dependency_binaries_platform_pycache_costs_unallocated": true
+}
