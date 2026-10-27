@@ -1,0 +1,58 @@
+{
+  "schema": "owned-multi-source-signed-Horn-v1",
+  "plan_sha256": "d2afbd2863043b0610e00406251bf5f0abaa9e3aee66a17bcc81f5d2f7cff348",
+  "source_input_SHA": {
+    "initial": {
+      "one.logic.jsonl": {
+        "bytes": 289,
+        "sha256": "72332c465d7c035cac18be8663a6cd6a96ad2cb95c2069e6aa574648078b7763"
+      },
+      "two.logic.jsonl": {
+        "bytes": 754,
+        "sha256": "e2aee0d7bf0653e0724c7796140df92275e91411366d988406f2749f25b8fc57"
+      },
+      "notes.txt": {
+        "bytes": 59,
+        "sha256": "acbd66a4fd4dc08e848706c4af9e5124becbd3040b832602cabf310980a15a5d"
+      }
+    },
+    "updated": {
+      "one.logic.jsonl": {
+        "bytes": 289,
+        "sha256": "72332c465d7c035cac18be8663a6cd6a96ad2cb95c2069e6aa574648078b7763"
+      },
+      "two.logic.jsonl": {
+        "bytes": 754,
+        "sha256": "e2aee0d7bf0653e0724c7796140df92275e91411366d988406f2749f25b8fc57"
+      },
+      "notes.txt": {
+        "bytes": 59,
+        "sha256": "acbd66a4fd4dc08e848706c4af9e5124becbd3040b832602cabf310980a15a5d"
+      },
+      "late.logic.jsonl": {
+        "bytes": 96,
+        "sha256": "eb778e20a55bb4b8ecdeb385686911a7dac3762f544b51e3258941294aa63b0a"
+      }
+    }
+  },
+  "main_certificates": 216,
+  "complete": 36,
+  "source_incomplete": 144,
+  "work_incomplete": 36,
+  "history_equal": 72,
+  "tamper_controls": 12,
+  "new_training_runs": 0,
+  "new_remote_model_calls": 0,
+  "current_loaded_model_bytes": 0,
+  "scientific_entailment_verified": false,
+  "frozen_source_engine_dependencies": [
+    "scripts/signed_logic.py",
+    "scripts/audit_signed_logic.py",
+    "scripts/source_universe.py",
+    "scripts/audit_source_universe.py"
+  ],
+  "prior_fully_verified_release": "v0.67.0",
+  "prior_release_commit": "fa5bc5afabd6cbaa9c5135638b098f52845c08a6",
+  "prior_final_proof_sha256": "a9a26c24b13c8c04f5f51e59078e0eae649ec31109a1e72a62f8730434c689bf",
+  "formal_campaigns_before_freeze": 0
+}
