@@ -1,0 +1,10 @@
+{
+  "scope": "Packaging sequencing failure, not candidate/scientific failure",
+  "failure": "Local audit started before final build process exited; initial archive lacked newly added package-validation.json",
+  "confirmed_after_build_exit_package_validation_present": true,
+  "failure_log_bytes": 524,
+  "failure_log_sha256": "fb88e581fb72a701f675951798fe275bccdc62c93e978c776064dc012b487b8b",
+  "recovery": "Preserve initial log, rebuild final source package including this append-only record, await exit code0 before package audit",
+  "scientific_or_diagnostic_reruns": 0,
+  "additional_packaging_CPU_wall_s": null
+}

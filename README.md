@@ -6,7 +6,17 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.55.0 · 可调用的实验性论文证据API
+## 当前版本：v0.56.0 · 原整论文证据的容量上界诊断
+
+原预算12篇/4096原B不改，1诊断worker/188唯一gold主张、209组，贪心/独立DP及总B可行性核对通过；0新科学试次/训练/源范围绑定。
+H1失败主张至少半数gold本身放不下：**False**（9/49）；H2漏gold至少半数单篇>4096B：**False**（4/62）。
+
+![原整论文容量诊断](results/v0.56.0/paper-capacity.png)
+
+全知gold上界可完整179/188，实际graph仍139/188；oracle不是可部署检索或干预收益。289检查288通过/1权限跳过，66runtime仅版本，完整模型/历史训练/全部文件费用保留。
+[协议](docs/PAPER-CAPACITY.md) · [详实报告](results/v0.56.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.56.0)。E3净收益/E4整体/真实长会话/回答/无限上下文未完成。
+
+## v0.55.0 · 可调用的实验性论文证据API
 
 新增wheel内PaperRetriever：显式SID/modelSHA、固定BM25/图/控制、最多12篇/4096原B，返回可核原文位置。默认Memory/CLI/UI不改，不生成答案。
 3机制worker/894调用全部匹配原proof，2559原文绑定及独立追加2559/整源恢复通过；285检查284通过/1权限跳过。
