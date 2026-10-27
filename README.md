@@ -6,7 +6,17 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.62.0 · 训练问题字面相似度诊断
+## 当前版本：v0.63.0 · 冻结词语关联无重训跨语料迁移
+
+旧SciFact关联与source/target模型3SHA不变，9fresh worker，ID/literal质量与时间分别验收；全部sourcebase/sidecar/target加载与历史训练成本计账。
+**来源ID质量False / literal质量False / 时间False / 全联合False**。已见EntB目标，不称语义蕴含、回答或E4整体通过。
+
+![跨语料来源覆盖与成本](results/v0.63.0/expansion-transfer.png)
+
+340检查339pass/1权限skip；默认SDK/UI/归档不改，0新训练/模型API。
+[协议](docs/EXPANSION-TRANSFER.md) · [详实报告](results/v0.63.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.63.0)。E3/E4整体/回答/无限上下文未完成。
+
+## v0.62.0 · 训练问题字面相似度诊断
 
 固定4/5 Jaccard，1诊断worker/298已有问题、188annotated/110null，独立整数交叉乘与2682既有proof核对；0新检索/训练/source范围绑定/模型API。
 **H1至少一半正增益在近似训练问题组：False；H2非近似组仍有来源质量提升：True**。字面nonnear不是语义独立/无泄漏证明，v061质量/时间/联合结论不改。

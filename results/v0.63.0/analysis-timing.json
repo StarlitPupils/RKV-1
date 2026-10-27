@@ -1,0 +1,6 @@
+{
+  "analysis_wall_s": 38.141170900082216,
+  "analysis_cpu_s": 35.8125,
+  "observed_peak_rss_bytes": 172605440,
+  "scope": "Separate pure ranking replay, independent gold/source binding/full file audit and plot; not a new evaluation trial or model retrain"
+}

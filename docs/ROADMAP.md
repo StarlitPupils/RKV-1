@@ -6,7 +6,7 @@
 固定决策：公开科学数据集；本地 CPU；压缩与科学推理共同优化；Python 原型、
 经性能分析后迁移 Rust 核心。先交付可运行 E0/E1，后续阶段分别发布版本。
 
-| 阶段 | 内容 | 验收门槛 | v0.62.0 状态 |
+| 阶段 | 内容 | 验收门槛 | v0.63.0 状态 |
 |---|---|---|---|
 | E0 | Zstd、Brotli、LZMA、Zlib、去重对照 | 固定数据哈希，重复测量体积、时间、RAM、随机读 | 同容器对照；新增十个查询种子、读取器生命周期、打开阶段与配对波动；冷缓存/跨机器未测 |
 | E1 | 分块、内容寻址、校验、增量编码复用、解码 | 逐字节恢复；损坏必须失败 | 两个独立家族各三次真实发布；同格式IO消融与冻结v0.8对照；240次正式恢复/92,160次正式范围读取一致。IO收益混合，默认reference/link不变；全量读源/校验保留；归档恢复默认文件同步、198条故障审计，80次正式恢复一致；目录/掉电未测 |
@@ -389,3 +389,7 @@ H1相对typed Python加载时间：True；H2相对plain完整空间/加载联合
 ## v0.62：既有增益与训练问题字面相似度
 
 H1至少一半正增益在近似训练问题组：False；H2非近似组仍有来源质量提升：True。固定4/5、1诊断worker/298问题/188annotated/110null，独立integerJaccard/2682已有proof与exactdelta守恒；非semantic leakage或泛化证明，原v061时间/联合失败保持。详见results/v0.62.0/SUMMARY.md。
+
+## v0.63：源SciFact关联无重训迁移目标EntB
+
+来源ID质量False / literal质量False / 时间False / 全联合False。既有3model输入SHA不改，9worker/独立ref/source/gold/oldbaselineaudit，ID/literal反例与完整加载/历史成本保留；已见目标非未知科学验证。详见results/v0.63.0/SUMMARY.md。
