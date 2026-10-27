@@ -6,7 +6,16 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.66.0 · 有限规则程序变形检查
+## 当前版本：v0.67.0 · 证据来源未读全时明确拒绝
+
+36来源集合检查：12完整、24预算或遗漏时明确incomplete，12旧快照证明不变，10无效完整proof拒绝。只验证机器来源字节集合，语法/逻辑/科学验证均未声称通过；自动自然语言理解仍未实现。
+
+![来源集合边界](results/v0.67.0/source-universe.png)
+
+369检查368pass/1权限skip，0新训练/API，默认SDK/UI不改。E3净收益、E4整体、可靠长对话和无限上下文未完成。
+[协议](docs/SOURCE-UNIVERSE.md) · [详实报告](results/v0.67.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.67.0)。
+
+## v0.66.0 · 有限规则程序变形检查
 
 12人工程序、4种变形，1296推导证书/972一致性/36跨源拒绝/48历史恢复通过。检查规则改名、行序、正负符号变化后结果是否一致；结构化公理仍是显式输入，不代表自然语言科学理解。
 

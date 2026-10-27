@@ -1,0 +1,82 @@
+{
+  "runtime_protocol_input_freeze": "6655390d3dcf19d68d0febe293d04b3bd4139dfd",
+  "candidate_CI": 40459565942,
+  "formal_workers": 1,
+  "formal_retries": 0,
+  "timeout_s": 600,
+  "source_cases": 36,
+  "complete": 12,
+  "incomplete": 24,
+  "history_equal": 12,
+  "invalid_complete_controls": 10,
+  "new_scientific_evaluations": 0,
+  "new_training_runs": 0,
+  "new_remote_model_calls": 0,
+  "prior_release_commit": "947167df830903f935018482cd680f473bdf04dc",
+  "prior_final_proof_sha256": "a262f897ebfd8dd8a9de03d4f7a0e7cf0db0679d0fe562f279eab57824648fe4",
+  "test_log_sha256": "580d189ac77797629608816e35480e5dfb04b1188ed6f1752de66f5c7ddb1ffc",
+  "scope": "Eligible-source byte coverage, preflight omission refusal and independent whole-source SHA mechanism, not NL parsing/scientific NLI/answers",
+  "input_manifest": {
+    "schema": "owned-eligible-source-coverage-v1",
+    "plan_sha256": "9988aac49c7c0fa0a12d64635b050fedc06f8aa0709b2de3d28b47370b1fe3d5",
+    "main_cases": 36,
+    "complete": 12,
+    "incomplete": 24,
+    "history_equal": 12,
+    "invalid_complete_controls": 10,
+    "source_input_SHA": {
+      "initial": {
+        "one.logic.jsonl": {
+          "bytes": 102,
+          "sha256": "14b718588925b839afc030f34dfc2d4d3645e5ca71c4e6ef6136dedd98b0747a"
+        },
+        "two.logic.jsonl": {
+          "bytes": 176,
+          "sha256": "355262dc7f71bcede3537bbe793b5b0e8d9604a48da08dce49b3025c3e46b3da"
+        },
+        "notes.txt": {
+          "bytes": 75,
+          "sha256": "8bb9222ad80bc7bebfa7302755916e601fe0c8c44a9d6efba65dc58093e52257"
+        }
+      },
+      "updated": {
+        "one.logic.jsonl": {
+          "bytes": 102,
+          "sha256": "14b718588925b839afc030f34dfc2d4d3645e5ca71c4e6ef6136dedd98b0747a"
+        },
+        "two.logic.jsonl": {
+          "bytes": 176,
+          "sha256": "355262dc7f71bcede3537bbe793b5b0e8d9604a48da08dce49b3025c3e46b3da"
+        },
+        "notes.txt": {
+          "bytes": 75,
+          "sha256": "8bb9222ad80bc7bebfa7302755916e601fe0c8c44a9d6efba65dc58093e52257"
+        },
+        "late.logic.jsonl": {
+          "bytes": 106,
+          "sha256": "4a52bac662bc2c3884db41221f50daa4d8f10f055beaa56357333b4ee1dea258"
+        }
+      }
+    },
+    "eligible_suffix": ".logic.jsonl",
+    "max_source_payload_bytes": 1048576,
+    "max_eligible_files": 8,
+    "current_loaded_model_bytes": 0,
+    "new_training_runs": 0,
+    "new_remote_model_calls": 0,
+    "source_grammar_verified": false,
+    "logical_closure_verified": false,
+    "scientific_entailment_verified": false,
+    "generated_answer": null,
+    "prior_fully_verified_release": "v0.66.0",
+    "prior_release_commit": "947167df830903f935018482cd680f473bdf04dc",
+    "prior_final_proof_sha256": "a262f897ebfd8dd8a9de03d4f7a0e7cf0db0679d0fe562f279eab57824648fe4",
+    "formal_campaigns_before_freeze": 0
+  },
+  "current_loaded_model_bytes": 0,
+  "all_previous_source_model_training_snapshot_costs_retained": "results/v0.66.0/measurement-context.json and olderreports",
+  "source_payload_cap_applies_to_loader_only_not_auditor_recovery_metadata_OS": true,
+  "source_grammar_verified": false,
+  "logical_closure_verified": false,
+  "scientific_entailment_verified": false
+}

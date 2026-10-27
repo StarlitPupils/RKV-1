@@ -405,3 +405,7 @@ H1关系分类质量False / H2局部CPU与model可行性True / 本probe联合Fal
 ## v0.66：有限规则变形与独立原证机制
 
 1296主/972一致性/36跨源拒绝/48历史恢复通过；人工3constant/3predicate有限域，不是科学NLI或自然语言解析证明。旧signedengine/checker不改，0新训练/API。E3净收益/E4整体/回答/无限上下文未完成，详见results/v0.66.0/SUMMARY.md。
+
+## v0.67：eligible来源集合字节覆盖边界
+
+36case/12完整/24incomplete/12history/10无效完整proof拒绝。只做StageA字节覆盖，sourcegrammar/logic/science flagsFalse，跨文件推导和自然语言NLI未实现，0新训练/API。E3净收益/E4整体/回答/无限上下文未完成，详见results/v0.67.0/SUMMARY.md。
