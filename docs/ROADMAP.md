@@ -433,3 +433,7 @@ H1关系分类质量False / H2局部CPU与model可行性True / 本probe联合Fal
 ## v0.73候选：部分选集单调证据，禁止全局结论
 
 78case/36preflight/9oldstrict/30tamper/24history通过，追加78原DAG/63原文件恢复；global_verdict永null，真实全目录先验。427检查426pass1skip，不称NLI/回答/全库完整或性能收益。发行安装/资产核验尚未完成，详见results/v0.73.0/SUMMARY.md。
+
+## v0.74：固定证据的全目录放大诊断
+
+12worker/96query、96actualDAG/14055file恢复，H1True，但4096/9wall214–243x、证书25.84x，H2/H3/jointFalse；CPU零base保留null，observerON非生产速度，完整成本与负结果保留。下一步应分别研究紧凑catalogue绑定与pinned metadata复用，不能混两个改动解释收益。发行核验待完成，详见results/v0.74.0/SUMMARY.md。

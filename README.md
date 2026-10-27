@@ -6,6 +6,14 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
+## v0.74.0 研究候选 · 固定证据下的目录放大（发行待核验）
+
+12worker/96query与追加96原DAG、14055原file恢复通过，H1=True；但4096/9耗时214–243倍、证明25.84倍，H2=False/H3=False/joint=False。只取少量证据不等于整体成本固定；没有宣称科学NLI或加速。
+
+![目录增长成本](results/v0.74.0/catalog-scaling.png)
+
+436检查435pass/1权限skip；[详实报告](results/v0.74.0/SUMMARY.md) · [协议](docs/CATALOG-SCALING.md)。最新完整核验发行见下列v0.73。
+
 ## 当前版本：v0.73.0 · 部分记忆中的证据
 
 3个进程共78证据case、36预算拒绝、9旧严格控制、30篡改拒绝、24历史相等通过。可从少量原文件找出可核验证据，所有全库结论保持null；不是语言理解或科学真理判断。427检查426pass/1权限skip，0新训练/API。

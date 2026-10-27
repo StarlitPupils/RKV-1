@@ -1,0 +1,20 @@
+{
+  "H1_fixed_payload_witness_invariance": true,
+  "H2_4096_vs9_wall_and_CPU_at_most2x_eachround": false,
+  "H3_4096_vs9_certificate_bytes_at_most2x_eachround": false,
+  "joint": false,
+  "workers": 12,
+  "queries": 96,
+  "new_remote_model_calls": 0,
+  "new_training_runs": 0,
+  "not_acceleration_or_science_claim": true,
+  "unit_tests_run": 436,
+  "unit_tests_passed": 435,
+  "unit_tests_skipped": 1,
+  "actual_original_DAG_audits": 96,
+  "actual_all_source_file_recoveries": 14055,
+  "formal_retries": 0,
+  "figure_visually_inspected": true,
+  "scientific_entailment_verified": false,
+  "freeze": "23356fa25b3afa3178f338204ec54fa0264ae76f"
+}

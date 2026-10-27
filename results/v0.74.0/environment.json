@@ -1,0 +1,9 @@
+{
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.12",
+  "CPU_only": true,
+  "physical_SSD_bytes": null,
+  "all_system_IO_bytes": null,
+  "cold_cache": null,
+  "cross_machine": null
+}
