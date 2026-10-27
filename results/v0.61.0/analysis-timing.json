@@ -1,0 +1,6 @@
+{
+  "analysis_wall_s": 12.652167499996722,
+  "analysis_cpu_s": 10.828125,
+  "observed_peak_rss_bytes": 160178176,
+  "scope": "Independent raw-paper binding, gold/ranking/tree audit and plot; not new evaluation trial/training"
+}

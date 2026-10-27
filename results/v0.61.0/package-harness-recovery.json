@@ -1,0 +1,9 @@
+{
+  "failure": "Physical external local install started before initial build finished; wheel did not exist",
+  "failed_log_bytes": 1309,
+  "failed_log_sha256": "95a80c6b694c6feeec7c0387fa655830dc1f2edc1d046b856cd377e1f2441b3f",
+  "scientific_training_or_trials_rerun": 0,
+  "failed_external_directory_retained": "C:/Users/Administrator/AppData/Local/Temp/rkv1-local-v061-t7mm751q",
+  "failed_external_copies_bytes": 124419,
+  "resume_requires_confirmed_initial_build_exit0": true
+}

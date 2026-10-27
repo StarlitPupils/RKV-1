@@ -6,6 +6,12 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
+## 下一候选 v0.61.0（实验报告已形成，尚待安装与发行核验）
+
+来源质量True / 时间False / 联合False；固定train-only词语关联、原12/4096和置换control，已见SciFact，非回答/NLI或E4整体验收。
+
+[实验报告](results/v0.61.0/SUMMARY.md) · [冻结协议](docs/SUPERVISED-EXPANSION.md)。完整已核验版本仍为v0.60.0。
+
 ## 当前版本：v0.60.0 · 同frame的Rust批量规范varint读取
 
 27新鲜无profiler配对原byte/model一致，追加27Python/9actualnative decode审计通过；旧Python格式/变换不改，整个DLL/metadata/专用源码收费。

@@ -379,3 +379,7 @@ H1观察器开销≤10%：False；H2 instrumented inverse+varint self-time占比
 ## v0.60：原frame同表示Rust批量u64读取
 
 H1相对typed Python加载时间：True；H2相对plain完整空间/加载联合：False。原LZMA frame不重编码，27无profiler worker原byte/model和追加27Python/9native audit通过，完整DLL/metadata/Python+Rust/Cargo费用计入；被测CI binary SHA与当前发行binary功能proof分开。保持v058/v059负结果，不由内核时间推断问答/无限上下文。详见results/v0.60.0/SUMMARY.md。
+
+## v0.61候选实验（发行核验待办）
+
+来源质量True / 时间False / 联合False。一次train另冻sidecarSHA、9worker/独立排名和来源audit，known-dev单域，原12/4096未改；详细报告results/v0.61.0/SUMMARY.md。尚未完整发布，不能称E4/回答/无限上下文完成。

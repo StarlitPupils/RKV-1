@@ -1,0 +1,143 @@
+{
+  "runtime_protocol_input_freeze": "216871604f86746835e0a5b2e6c7604ed21d3b3a",
+  "candidate_CI": 40439353914,
+  "formal_workers": 9,
+  "formal_evaluation_retries": 0,
+  "formal_training_runs": 1,
+  "new_remote_model_calls": 0,
+  "prior_fully_verified_release": "v0.60.0",
+  "prior_final_proof_sha256": "da5647866025ce5a1d351c74187e18704f67830dddeb147233076e2b66ed0e54",
+  "code_frozen_utc": "2026-10-27T02:39:01.200741+00:00",
+  "known_project_benchmark_transfer": true,
+  "dev_not_scored_with_this_candidate_before_training": true,
+  "model_freeze": {
+    "code_protocol_freeze": "216871604f86746835e0a5b2e6c7604ed21d3b3a",
+    "dev_not_scored_with_this_candidate_before_model_freeze": true,
+    "frozen_utc": "2026-10-27T02:39:01.680226+00:00",
+    "known_project_data": true,
+    "model_bytes": 10152832,
+    "model_sha256": "f062c7a784421b71bbfaf3c299be78ff323a391847afbf5420e4c06a4d422be0",
+    "sidecar_bytes": 609487,
+    "sidecar_sha256": "fb5b520385cb4b727401bc334566bcfe1b857589a9230ca0afa7e898a6c86f0a",
+    "training_parent": {
+      "error": null,
+      "parent_full_process_wall_s": 0.47004940011538565,
+      "return_code": 0
+    },
+    "training_summary": {
+      "base_model_bytes": 10152832,
+      "base_model_sha256": "f062c7a784421b71bbfaf3c299be78ff323a391847afbf5420e4c06a4d422be0",
+      "dev_scored": false,
+      "model_parts": {
+        "annotated_training_rows": 505,
+        "annotated_unique_questions": 504,
+        "component_bytes": {
+          "base_model_sha256": 66,
+          "control_key_permutation": 41623,
+          "expansion": 283747,
+          "parameters": 158,
+          "permuted_expansion": 283747,
+          "schema": 38
+        },
+        "component_sha256": {
+          "base_model_sha256": "75014c04c69d33a1bb853b36c67d2f457532ae904e9f66a726460ee1db0c2c2a",
+          "control_key_permutation": "230706f1f1a6cc149de87fb0994e4eb00a16b810936b911fd7d9b7b4ab2c5792",
+          "expansion": "c2c52515a1fcf8f7a5616e2c3b8c2041133c2b7799171467e4aed234587e1055",
+          "parameters": "b3145a4361ae0aa9b88592a0df2ff415d0af830d6eec5246e17232e4dc94f0b5",
+          "permuted_expansion": "e11fb45834016add121c32e3ed32ad7e5a6e6869a989828d153680771a8703d4",
+          "schema": "149bc4f097d0239cb414b041a452e9dfbae1d48e0e4aa8890540d8d38e35fff9"
+        },
+        "control_available": true,
+        "control_fixed_points": 0,
+        "gold_training_documents": 365,
+        "input_training_rows": 809,
+        "learned_query_terms": 1990,
+        "new_remote_model_calls": 0,
+        "retained_target_edges": 15920,
+        "unique_training_questions": 807
+      },
+      "observed_peak_rss_bytes": 124022784,
+      "scope": "Train-only normalized-question associations. Gold paper IDs mean relevance including support/contradiction, never verdict training.",
+      "sidecar_bytes": 609487,
+      "sidecar_sha256": "fb5b520385cb4b727401bc334566bcfe1b857589a9230ca0afa7e898a6c86f0a",
+      "source_sha256": "b8d6c89624cb2ed74dee8938effc4f5d8bd2086887880af8110d64be4ceade62",
+      "training_label_sha256": "f4c8fa82d8bd0653a9cc8d61a6ea48c25eacea64e90af5dbf390ebb1b74372f0",
+      "training_runs": 1,
+      "worker_cpu_s": 0.359375,
+      "worker_wall_s": 0.37417419999837875
+    }
+  },
+  "input_manifest": {
+    "base_model": {
+      "path": "E:/memorystorage/.tools/scifact-graph-v053-training/model.json",
+      "bytes": 10152832,
+      "sha256": "f062c7a784421b71bbfaf3c299be78ff323a391847afbf5420e4c06a4d422be0"
+    },
+    "source_inputs_manifest": "docs/scifact-graph-inputs.json",
+    "private_source_inputs": "data/scifact",
+    "training_rows": 809,
+    "known_data_preparation_only": {
+      "normalized_train_questions": 807,
+      "annotated_train_rows": 505,
+      "query_term_types": 2817,
+      "new_real_training_runs": 0,
+      "new_dev_scoring": 0
+    },
+    "prior_fully_verified_release": "v0.60.0",
+    "prior_tag_commit": "04977fb64cbc0523f544f886c83cd96cd7d703fe",
+    "prior_final_proof_sha256": "da5647866025ce5a1d351c74187e18704f67830dddeb147233076e2b66ed0e54",
+    "parameters": {
+      "document_terms": 16,
+      "mapping_terms": 8,
+      "query_terms": 8,
+      "alpha": 0.25,
+      "count_budget": 12,
+      "original_record_byte_budget": 4096
+    }
+  },
+  "retained_base_training_ledger": "results/v0.53.0/measurement-context.json",
+  "retained_history_artifacts_ledger": "results/v0.60.0/measurement-context.json",
+  "sidecar_private_not_published": true,
+  "prior_preparation_real_training_runs": 0,
+  "prior_preparation_dev_scoring": 0,
+  "same_known_dev_not_independent_new_science": true,
+  "default_SDK_UI_archive_unchanged": true,
+  "native_binaries_legacy_functional_only_no_new_native_performance": true,
+  "test_protocol_input_source_files": {
+    "docs/SUPERVISED-EXPANSION.md": {
+      "bytes": 4801,
+      "sha256": "482b87b5d152305a7566c044fbb7e8ee9bb515eccb6ddfe5c94720881fbf2a6a"
+    },
+    "docs/supervised-expansion-inputs.json": {
+      "bytes": 924,
+      "sha256": "09c4566453a14d9ffc8d07b0fff96d644a1991a0b926b3cf615bc00c3e2cd0d1"
+    },
+    "tests/test_audit_supervised_expansion.py": {
+      "bytes": 2572,
+      "sha256": "00071af1c1d2329dd353481c538238cb87aa82ba49b0ca59ff9c9685f3b74210"
+    },
+    "tests/test_supervised_expansion.py": {
+      "bytes": 4215,
+      "sha256": "c32ff461c7cc4d831924a232cb1756c29cde0e0e1790ecf03099c9789fd5922d"
+    },
+    "tests/test_supervised_expansion_worker.py": {
+      "bytes": 3298,
+      "sha256": "7a1670ff7153cdfdb2af320cdd08f66c408705119de44bf2836f04187a72fea9"
+    }
+  },
+  "actual_training_retained_files": {
+    ".tools/supervised-expansion-v061-training/expansion.json": {
+      "bytes": 609487,
+      "sha256": "fb5b520385cb4b727401bc334566bcfe1b857589a9230ca0afa7e898a6c86f0a"
+    },
+    ".tools/supervised-expansion-v061-training/model-freeze.json": {
+      "bytes": 2182,
+      "sha256": "e144319e33093e6cd879cd748f95bf7544846b17951e0d9faff886c5dbec9832"
+    },
+    ".tools/supervised-expansion-v061-training/training.json": {
+      "bytes": 1883,
+      "sha256": "f64f4dc2cff11d8366d104257c9610e34cf27d22fe2cee90da77fbd44ed79c7a"
+    }
+  },
+  "actual_training_retained_total_bytes": 613552
+}
