@@ -1,0 +1,54 @@
+{
+  "schema": "ProofWriter-OWA-NatLang-human-source-boundary-v1",
+  "archive": {
+    "path": ".tools/proofwriter-preparation/proofwriter-dataset-V2020.12.3.zip",
+    "bytes": 214185889,
+    "sha256": "bbc5694901e8306d0bd659aa1ad53ccfd02c201864f4b320ffa3777827d1fc26",
+    "url": "https://aristo-data-public.s3.amazonaws.com/proofwriter/proofwriter-dataset-V2020.12.3.zip"
+  },
+  "member": "proofwriter-dataset-V2020.12.3/OWA/NatLang/meta-dev.jsonl",
+  "prefix_physical_lines": 32,
+  "methods": [
+    "canonical",
+    "human"
+  ],
+  "orders": [
+    "AB",
+    "BA",
+    "AB"
+  ],
+  "formal_workers": 6,
+  "all_questions_denominator": true,
+  "world": "OWA",
+  "work_budget": 100000,
+  "source_byte_budget": 1048576,
+  "unchanged_English_parser_sha256": "a19219e0efebb2abf2cad3d494ba15c69049c1b797a78d49ecca6605a9547b53",
+  "unchanged_symbolic_parser_sha256": "40b668ecffcdc4c385e11b89a2d4a581ddbd6de91c3c78433bd6f7314dbf93b7",
+  "NatLang_train_schema_rows_read": 1,
+  "NatLang_train_schema_SHA256": "46ca917cd26287738925747eca8e5d55f37d9596183c2f10ec7889a420058549",
+  "NatLang_dev_test_contents_read_before_freeze": false,
+  "human_method_inputs": [
+    "sentences",
+    "questions.question"
+  ],
+  "forbidden_human_predictor_inputs": [
+    "triples",
+    "rules",
+    "mappings",
+    "representation",
+    "answer",
+    "proofs"
+  ],
+  "H1": "humanallquestionscorrect>=95percent/all3classes inevery3rounds",
+  "H2": "humanallquestionsacceptedand32actualrecoveries inevery3rounds",
+  "no_abstention_speed_benefit_claim": true,
+  "new_training_runs": 0,
+  "current_loaded_model_bytes": 0,
+  "new_remote_model_calls": 0,
+  "scientific_entailment_verified": false,
+  "unrestricted_English_NLI_verified": false,
+  "prior_fully_verified_release": "v0.71.0",
+  "prior_release_commit": "31b2dc514a3f7d73c50de1ad41c9b451609902ff",
+  "prior_final_proof_sha256": "5d3fa451debb0fa5672c4aaa31f65dd16fa03fe9d54008f0038f8bf1ee431a04",
+  "formal_campaigns_before_freeze": 0
+}
