@@ -6,7 +6,17 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.63.0 · 冻结词语关联无重训跨语料迁移
+## 当前版本：v0.64.0 · 实际检索证据上的CPU词面关系probe
+
+同一原BM25真实source，四方法12worker，先预测实际返回paper再读gold；1训练campaign含3fit与多数类，4model SHA先冻结。明确gold/unknown/missing分母分别记录。
+**H1关系分类质量False / H2局部CPU与model可行性True / 本probe联合False**。弱词面分类不等于可靠NLI/科学验证或回答，所有verified始终False。
+
+![关系分类对照与分母](results/v0.64.0/relation-probe.png)
+
+349检查348pass/1权限skip，66runtime仅版本，默认SDK/UI/归档不改；0新模型API。
+[协议](docs/RELATION-PROBE.md) · [详实报告](results/v0.64.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.64.0)。E3净收益/E4整体/回答/无限上下文未完成。
+
+## v0.63.0 · 冻结词语关联无重训跨语料迁移
 
 旧SciFact关联与source/target模型3SHA不变，9fresh worker，ID/literal质量与时间分别验收；全部sourcebase/sidecar/target加载与历史训练成本计账。
 **来源ID质量False / literal质量False / 时间False / 全联合False**。已见EntB目标，不称语义蕴含、回答或E4整体通过。

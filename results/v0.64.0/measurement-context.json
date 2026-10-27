@@ -1,0 +1,277 @@
+{
+  "runtime_protocol_input_freeze": "125924b3e485794d2f1ec0d93a8dc27130c35e1d",
+  "candidate_CI": 40452438712,
+  "formal_workers": 12,
+  "formal_retries": 0,
+  "training_campaigns": 1,
+  "individual_fits": 3,
+  "majority_count_models": 1,
+  "training_parent": {
+    "error": null,
+    "parent_full_process_wall_s": 12.007936300011352,
+    "return_code": 0
+  },
+  "model_freeze": {
+    "code_protocol_freeze": "125924b3e485794d2f1ec0d93a8dc27130c35e1d",
+    "source_retrieval_model_sha256": "f062c7a784421b71bbfaf3c299be78ff323a391847afbf5420e4c06a4d422be0",
+    "models": {
+      "claim_only": {
+        "bytes": 4211,
+        "fit_cpu_s": 4.09375,
+        "fit_details": {
+          "class_counts_preserved_by_shuffle": {
+            "CONTRADICT": 194,
+            "SUPPORT": 368
+          },
+          "epochs": 200,
+          "feature_matrix_float_values": 218618,
+          "individual_fit": 1,
+          "permuted_label_positions_changed": null,
+          "training_objective_trace": [
+            {
+              "epoch": 1,
+              "training_objective": 0.6438550807728802
+            },
+            {
+              "epoch": 25,
+              "training_objective": 0.6334493979855309
+            },
+            {
+              "epoch": 50,
+              "training_objective": 0.6270475262767232
+            },
+            {
+              "epoch": 100,
+              "training_objective": 0.6207480359292689
+            },
+            {
+              "epoch": 200,
+              "training_objective": 0.6168362830591075
+            }
+          ]
+        },
+        "fit_wall_s": 4.146465400001034,
+        "observed_peak_rss_bytes": 73728000,
+        "path": "E:/memorystorage/.tools/relation-probe-v064-training/claim_only.json",
+        "scientific_entailment_verified": false,
+        "sha256": "25ffc7eb96bd69ef8360fae01a7f77c70281b10464e4cc13fed0425c6a856fd7",
+        "training_class_counts": {
+          "CONTRADICT": 194,
+          "SUPPORT": 368
+        }
+      },
+      "majority": {
+        "bytes": 488,
+        "fit_cpu_s": 0.0,
+        "fit_details": {
+          "epochs": 0,
+          "individual_fit": 0
+        },
+        "fit_wall_s": 6.769993342459202e-05,
+        "observed_peak_rss_bytes": 69369856,
+        "path": "E:/memorystorage/.tools/relation-probe-v064-training/majority.json",
+        "scientific_entailment_verified": false,
+        "sha256": "e4f8d05a688935f476b846751185c58fbc4a5ac9d73ce2c2abe94ed01cb02996",
+        "training_class_counts": {
+          "CONTRADICT": 194,
+          "SUPPORT": 368
+        }
+      },
+      "pair": {
+        "bytes": 8545,
+        "fit_cpu_s": 3.890625,
+        "fit_details": {
+          "class_counts_preserved_by_shuffle": {
+            "CONTRADICT": 194,
+            "SUPPORT": 368
+          },
+          "epochs": 200,
+          "feature_matrix_float_values": 218618,
+          "individual_fit": 1,
+          "permuted_label_positions_changed": null,
+          "training_objective_trace": [
+            {
+              "epoch": 1,
+              "training_objective": 0.6429354677564907
+            },
+            {
+              "epoch": 25,
+              "training_objective": 0.6228247906905378
+            },
+            {
+              "epoch": 50,
+              "training_objective": 0.6126479391748941
+            },
+            {
+              "epoch": 100,
+              "training_objective": 0.6029017049342847
+            },
+            {
+              "epoch": 200,
+              "training_objective": 0.59678294530335
+            }
+          ]
+        },
+        "fit_wall_s": 3.9536291998811066,
+        "observed_peak_rss_bytes": 73728000,
+        "path": "E:/memorystorage/.tools/relation-probe-v064-training/pair.json",
+        "scientific_entailment_verified": false,
+        "sha256": "aad660b51b3361177311212e920a52b08115afa047c3af6aa911b8781bdc9961",
+        "training_class_counts": {
+          "CONTRADICT": 194,
+          "SUPPORT": 368
+        }
+      },
+      "permuted_pair": {
+        "bytes": 8563,
+        "fit_cpu_s": 3.734375,
+        "fit_details": {
+          "class_counts_preserved_by_shuffle": {
+            "CONTRADICT": 194,
+            "SUPPORT": 368
+          },
+          "epochs": 200,
+          "feature_matrix_float_values": 218618,
+          "individual_fit": 1,
+          "permuted_label_positions_changed": 242,
+          "training_objective_trace": [
+            {
+              "epoch": 1,
+              "training_objective": 0.6438650924328767
+            },
+            {
+              "epoch": 25,
+              "training_objective": 0.6335432869965077
+            },
+            {
+              "epoch": 50,
+              "training_objective": 0.6265439616601447
+            },
+            {
+              "epoch": 100,
+              "training_objective": 0.6186424406301928
+            },
+            {
+              "epoch": 200,
+              "training_objective": 0.6129547355115917
+            }
+          ]
+        },
+        "fit_wall_s": 3.7367883000988513,
+        "observed_peak_rss_bytes": 73756672,
+        "path": "E:/memorystorage/.tools/relation-probe-v064-training/permuted_pair.json",
+        "scientific_entailment_verified": false,
+        "sha256": "fe6ed6235947995c1c56fbeba0b4682e3b3e827f20c0e0b90b29abf73a9e3870",
+        "training_class_counts": {
+          "CONTRADICT": 194,
+          "SUPPORT": 368
+        }
+      }
+    },
+    "training_summary_sha256": "1389acf7d29c672b7b0b1b8efdcc1e7cd7765f57dcfc8d80110532941cd7561d",
+    "training_summary_bytes": 3746,
+    "training_parent": {
+      "error": null,
+      "parent_full_process_wall_s": 12.007936300011352,
+      "return_code": 0
+    },
+    "known_project_data": true,
+    "real_dev_predictions_before_this_freeze": 0,
+    "training_campaigns": 1,
+    "individual_fits": 3,
+    "majority_count_models": 1
+  },
+  "new_remote_model_calls": 0,
+  "prior_fully_verified_release": "v0.63.0",
+  "prior_final_proof_sha256": "2440d70878ae15b0fe7114988fd323c94b0fb77dfa875c69606e7aeed6814e88",
+  "scope": "Actual lexical-retrieved-paper weak relation classification, explicitgold/unknown/missing denominators, no scientific entailment certificate or generated answer",
+  "input_manifest": {
+    "source_retrieval_model": {
+      "path": "E:/memorystorage/.tools/scifact-graph-v053-training/model.json",
+      "bytes": 10152832,
+      "sha256": "f062c7a784421b71bbfaf3c299be78ff323a391847afbf5420e4c06a4d422be0"
+    },
+    "private_scientific_inputs": "data/scifact",
+    "source_input_manifest": "docs/scifact-graph-inputs.json",
+    "classifier_parameters": {
+      "buckets_per_channel": 128,
+      "dimension": 389,
+      "epochs": 200,
+      "learning_rate": 0.5,
+      "L2_excluding_bias": 0.01,
+      "features": "hashed-claim_document_shared-logTF-L2-plus4scalars-bias-v1",
+      "tokenizer": "casefold-ascii-alnum-all-including-stopwords",
+      "threshold": 0.5,
+      "shuffle_seed": 20261027
+    },
+    "methods": [
+      "majority",
+      "pair",
+      "claim_only",
+      "permuted_pair"
+    ],
+    "training_campaigns": 1,
+    "individual_fits": 3,
+    "formal_workers": 12,
+    "orders": [
+      "ABCD",
+      "BADC",
+      "CDAB"
+    ],
+    "H1": "pair retrieved-explicit-gold balanced accuracy strictly above all3controls; all-gold correct not lower",
+    "H2": {
+      "full_current_method_model_bytes_max": 1048576,
+      "classification_wall_seconds_per_1000_output_pairs_max": 2.0,
+      "classification_CPU_seconds_per_1000_output_pairs_max": 2.0,
+      "scope": "Local feasibility cap only, not relative end-to-end speed or production inference gain"
+    },
+    "unknown_without_gold_not_negative_or_NEI": true,
+    "explicit_source_labels_only": [
+      "SUPPORT",
+      "CONTRADICT"
+    ],
+    "official_schema": "https://github.com/allenai/scifact/blob/master/doc/data.md",
+    "known_dev_not_unseen_validation": true,
+    "prior_fully_verified_release": "v0.63.0",
+    "prior_tag_commit": "8792b36deb50bbe231e58147e8de6d6cc4d2b4f0",
+    "prior_final_proof_sha256": "2440d70878ae15b0fe7114988fd323c94b0fb77dfa875c69606e7aeed6814e88",
+    "real_relation_training_campaigns_before_adoption": 0,
+    "real_relation_dev_predictions_before_adoption": 0
+  },
+  "old_retrieval_source_training_ledger": "results/v0.53.0/measurement-context.json",
+  "all_new_training_retained_files": {
+    ".tools/relation-probe-v064-training/claim_only.json": {
+      "bytes": 4211,
+      "sha256": "25ffc7eb96bd69ef8360fae01a7f77c70281b10464e4cc13fed0425c6a856fd7"
+    },
+    ".tools/relation-probe-v064-training/majority.json": {
+      "bytes": 488,
+      "sha256": "e4f8d05a688935f476b846751185c58fbc4a5ac9d73ce2c2abe94ed01cb02996"
+    },
+    ".tools/relation-probe-v064-training/model-freeze.json": {
+      "bytes": 3496,
+      "sha256": "923a6d9d6b86366d4295481958bc1c2d5d77bf471cad8325ca12cf38f6a8dfa1"
+    },
+    ".tools/relation-probe-v064-training/pair.json": {
+      "bytes": 8545,
+      "sha256": "aad660b51b3361177311212e920a52b08115afa047c3af6aa911b8781bdc9961"
+    },
+    ".tools/relation-probe-v064-training/permuted_pair.json": {
+      "bytes": 8563,
+      "sha256": "fe6ed6235947995c1c56fbeba0b4682e3b3e827f20c0e0b90b29abf73a9e3870"
+    },
+    ".tools/relation-probe-v064-training/training-example-identities.json": {
+      "bytes": 85893,
+      "sha256": "7c1f45a60ef460a89dde382d5db60f376355bfa75b18415485fa242c0bcfeb18"
+    },
+    ".tools/relation-probe-v064-training/training.json": {
+      "bytes": 3746,
+      "sha256": "1389acf7d29c672b7b0b1b8efdcc1e7cd7765f57dcfc8d80110532941cd7561d"
+    }
+  },
+  "all_new_training_retained_directory_bytes": 114942,
+  "old_private_history_and_snapshot_ledgers_preserved": true,
+  "model_weights_and_raw_scientific_inputs_not_published": true,
+  "semantic_entailment_or_generated_answer_proof": false,
+  "runtime_dependency_binaries_platform_pycache_costs_unallocated": true
+}

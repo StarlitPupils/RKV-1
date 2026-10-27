@@ -1,0 +1,1 @@
+{"cpu_s":16.3125,"independent_predictions":10236,"independent_terminal_training_objective_evaluations":3,"observed_peak_rss_bytes":165867520,"scope":"Independent frozen-model feature/logit/gold/source/file audit and standard plot, not retraining or new formal dev trials","source_rebindings":10236,"wall_s":18.315480600111187}
