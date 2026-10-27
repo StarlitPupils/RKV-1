@@ -6,13 +6,13 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## v0.73.0 候选 · 部分记忆中的证据（发行核验待完成）
+## 当前版本：v0.73.0 · 部分记忆中的证据
 
 3个进程共78证据case、36预算拒绝、9旧严格控制、30篡改拒绝、24历史相等通过。可从少量原文件找出可核验证据，所有全库结论保持null；不是语言理解或科学真理判断。427检查426pass/1权限skip，0新训练/API。
 
-[详实实验报告](results/v0.73.0/SUMMARY.md) · [冻结协议](docs/SELECTED-WITNESS.md)。完整Release资产/仓库外安装/最终proof核验完成前，最新完整交付仍是下列v0.72。
+[详实实验报告](results/v0.73.0/SUMMARY.md) · [冻结协议](docs/SELECTED-WITNESS.md)。[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.73.0) 的实际7资产、全源码、仓库外安装及最终核验文件均已通过。
 
-## 当前版本：v0.72.0 · 人工改写来源的适用边界
+## v0.72.0 · 人工改写来源的适用边界
 
 同32个官方NatLang理论每方法532题，规范text控制正确532，实际human句子正确0、接受0；H1=False/H2=False。没有用规范旁注冒充人的改写，所有解析拒绝留在分母。
 

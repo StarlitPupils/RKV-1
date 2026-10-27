@@ -1,0 +1,37 @@
+# Catalogue amplification at fixed selected evidence — v0.74 frozen candidate protocol
+
+This candidate changes no v0.73 query algorithm. It tests a bounded-memory caveat: selected source payload can remain fixed while whole snapshot metadata validation and certificate catalogue grow. This is owned mechanical scaling, not scientific-language validation or an optimization win. v0.73 actual publication was completed and verified before this public candidate adoption.
+
+## Fixed geometry and prior exposure
+
+Eligible counts **9,64,512,4096**, each uses the same two selected original source files, one explicit opposite witness hidden in unselected `late.logic.jsonl`, and deterministic duplicate-content filler sources. `notes.txt` remains noneligible. Three fresh workers at every count: **12 workers, 8 queries each = 96**. No full worker at4096 before freeze; owned necessary tests constructed9/64 dictionaries and a real9-source Store to check observer semantics, not large-store timing. Existing v0.73 same core facts/rules are already known; this is not a new unknown/science dataset.
+
+Round1 order9/64/512/4096; round2 64/9/4096/512; round3 512/4096/9/64. Eachworker timeout600s, zero retries, fresh owned source+Store, source/file/hash construction and ingest separately timed. Fixed 4 ground queries repeated twice with work100000: reach(a,c) supports only in selection, reach(c,b) opposite only, edge(a,b) supports only, edge(c,a) neither; the hidden opposite to reach(a,c) does not let selection claim global classification. All global_verdict null. Parent complete subprocess wall measured exclusive sidecar, no replacement rounds or tuning after seen timing.
+
+The worker starts a fresh selected Witness for each query. No decoded/source/metadata cache is introduced. Certificate serialization/hash/file persistence and final retained-file ledger are outside producer+auditor query timings, inside worker/parent whole-process costs. Every raw query and first/repeated position remains; primary query metric is median of all8 query producer+auditor wall and processCPU within eachworker. This is warmed/ordinary local file/cache state, not controlled cold cache.
+
+## Three preregistered diagnostic gates
+
+H1: all96 fixed explicit expected flag pairs, selected closure, original-file DAG/independent closure audits pass; same normalized original nodes per query across all scales/rounds (only citation SID removed for this comparison), selected payload and actual producer/auditor application returnedB identical per query, no unselected payload reads and no constructor validation failure. Actualmetadata eligible count must match9/64/512/4096 and actual source set recovered separately in analysis. H1 includes all raw workers, no failing query exclusion.
+
+H2: **4096/9 median producer+auditor query wall AND CPU <=2.0 in each of the three paired rounds**. This is an intentionally stated overhead-sensitivity diagnostic ceiling, not production SLA or an acceleration comparison. If baselineCPU/wall<=0, its ratio is null and H2 cannot pass; never turn coarse timer zero into a free cost or speed win. Other scales' ratios are reported but do not replace the4096primary.
+
+H3: **4096/9 median canonical certificate bytes <=2.0 in every paired round**, canonical JSON bytes exclude only final newline, includes full claimed eligible catalogue. Joint H1&H2&H3. No compressing proofs, dropping catalogue, changing scales/queries/work budget, or switching a metric after seeing outcome. Preserve any negative gate. Bounds do not promise this invariance; this falsifies only an informal fixed-payload-equals-fixed-whole-cost assumption.
+
+## Observer and independent audit
+
+Snapshot constructor wrapper counts/times actual `Snapshot.__init__` and exceptions; calls original implementation, never bypasses SID/manifest/chunks validation. A separate wrapper records actual `Snapshot.read_range` return length/path. Scope is single query's producer then auditor; methods restore on normal/exception exit, no cross-request retention. Observer ON in all formal query cases, overhead itself not separately estimated. Thus wall/CPU are instrumented-method costs; cannot claim observed difference proves uninstrumented production throughput or acceleration.
+
+Producer source return must equal selected payloadB; auditor counts each repeated original whole-file and record-range read and reconciles its own ledger. This excludes direct snapshot manifest `_load_record` reads/metadata/SQLite/CAS decode/OS/SSD/system IO. Snapshot stored fileB and constructor call/time are measured proxies, **not manifest application bytes read**, and no multiplication by calls is labelled physical traffic. Metadata enumeration/validation/RAM is outside selected payload cap. Query CPU excludes serialization; worker/parent and fileledger include it.
+
+Analysis rereads all96 original certificates from actualStores, checks SHA, original realSID/file/DAG/closure; separately recovers every source file in every worker, **14055 owned file recoveries** =3*(10+65+513+4097), including noneligible notes. These added read/CPU costs are separate from worker selected query traffic and do not mean queries read all source payloads. Exact all-source content comes from owned fixture and actualStore comparison; recovery cannot be inferred from sourceprefixSHA alone. Analysis reads every file including filler duplicates, does not sample or count unique chunks as allfiles.
+
+Costs: source generation+ingest, source/CAS/snapshots/proof/privateworkerreports and every retained file, all actual recursive Python+HTML and every experimental script/protocol/test/input, processRSS/worker/parent/observerCPU, original records and prior model/train/frames/history separately. Current model/training/API0 does not erase old costs. Metadata allocator/OS/binary dependencies unallocated marked unmeasured, not free. Hardware cache/cross-machine/fullsystem/SSD remain unmeasured.
+
+## Required validation and delivery
+
+Nine necessary owned checks: unchanged two selected files/hidden opposite across scales, bounded counts and exact unique orders, actual9-source Store observer preserves validation and range-return conservation, exception cleanup; exact12unique workers/all8queries denominator, any round negative gate retained, zeroCPU base produces null/fail, changed normalized proof or actual query fails H1. Private initial analysis-test missingrepo import failure retained; no formal worker was affected. Full regression and exact source/protocol/input CI success required before formal launch. All helper failures and partial outcomes remain, zero formal retries.
+
+Deliver raw12worker+fullparent, independent aggregate, resource/file/SHA ledger, standard plots actually viewed, detailed report/README/release notes and runnable scripts. Localinitialbuild exit0→physicaloutsideactualwheel/currentnative/new+legacyactualsdist→finalbuild/sourceaudit exit0→push/tagReleaseCI→actual7assetSHA/recursivePython+HTML/allsource/outsideactualpublishedinstall/finalproof8. Until all gates, candidate/report isn't full delivery.
+
+CPU/offline only; old24 modelAPI allowance exhausted, no new remote calls/downloaded model. Do not publish rawscience/human/model/private research/templates/personalreports/keys. No new scientificNLI/language extraction/longsession/answer/infinitecontext completion. Follow current actual quota window1793110159; read officialquota eachcycle, stopactual100/ordinarydenied/windowend, save exact partial anddeletecontinuation, nevercrossreset/usecredits.
