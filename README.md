@@ -6,7 +6,16 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.65.0 · 显式规则来源证明与词序碰撞反例
+## 当前版本：v0.66.0 · 有限规则程序变形检查
+
+12人工程序、4种变形，1296推导证书/972一致性/36跨源拒绝/48历史恢复通过。检查规则改名、行序、正负符号变化后结果是否一致；结构化公理仍是显式输入，不代表自然语言科学理解。
+
+![有限规则变形检查](results/v0.66.0/logic-metamorphic.png)
+
+361检查360pass/1权限skip；0新训练/API，旧引擎和默认SDK/UI不改。E3净收益/E4整体/可靠回答/无限上下文未完成。
+[协议](docs/LOGIC-METAMORPHIC.md) · [详实报告](results/v0.66.0/SUMMARY.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.66.0)。
+
+## v0.65.0 · 显式规则来源证明与词序碰撞反例
 
 72份受限规则证书、3个未完成预算控制、6个篡改控制通过；更新后读旧快照结果相同。自造主客体反转问题上，旧四模型各8/16，说明词袋丢失顺序，不能据此声称科学NLI/回答提升。
 

@@ -401,3 +401,7 @@ H1关系分类质量False / H2局部CPU与model可行性True / 本probe联合Fal
 ## v0.65：显式规则证明与旧词袋方向反例
 
 72主/3预算/6篡改机制通过；64owned方向预测旧4model各8/16，不是新科学验证。显式axioms/SID/逐record证书和独立有限闭包不等于自然语言抽取或科学真理，0新训练/API。E3净收益/E4整体/回答/无限上下文未完成。详见results/v0.65.0/SUMMARY.md。
+
+## v0.66：有限规则变形与独立原证机制
+
+1296主/972一致性/36跨源拒绝/48历史恢复通过；人工3constant/3predicate有限域，不是科学NLI或自然语言解析证明。旧signedengine/checker不改，0新训练/API。E3净收益/E4整体/回答/无限上下文未完成，详见results/v0.66.0/SUMMARY.md。

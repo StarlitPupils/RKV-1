@@ -1,0 +1,21 @@
+{
+  "H1": true,
+  "H2": true,
+  "formal_workers": 1,
+  "formal_retries": 0,
+  "main_certificates": 1296,
+  "metamorphic_nonbase_comparisons": 972,
+  "cross_source_controls": 36,
+  "historical_full_source_recoveries": 48,
+  "unit_tests_run": 361,
+  "unit_tests_passed": 360,
+  "unit_tests_skipped": 1,
+  "runtime_module_count": 66,
+  "html_files": 1,
+  "scientific_entailment_verified": false,
+  "scientific_evaluations": 0,
+  "new_training_runs": 0,
+  "new_remote_model_calls": 0,
+  "freeze": "1e13a6cbb3f906db37bc18acea7c67c45e48e91c",
+  "figure_visually_inspected": true
+}
