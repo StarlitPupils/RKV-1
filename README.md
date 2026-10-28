@@ -6,7 +6,15 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.77.0 · 有限批次元数据复用
+## 当前候选：v0.78.0 · 显式同快照读取 SDK
+
+新增 opt-in `Store.read_scope(explicit_sid)`；默认 snapshot 和磁盘格式保持不变。固定12 worker的96对SDK/原实验接口证明、14055完整文件与范围读取、48拒绝控制，以及追加192 fresh原DAG/14055文件恢复通过。实际旧v0.77 wheel仓库外读取新wheel普通快照通过，H1/H2/H3/joint=True。
+
+![SDK一致性和metadata大小](results/v0.78.0/sdk-read-scope.png)
+
+478测试477 pass/1权限skip；[详实报告](results/v0.78.0/SUMMARY.md) · [协议](docs/SDK-READ-SCOPE.md)。无新速度、压缩、科学NLI或回答收益声明；本地安装已验，CI发行资产及最终proof尚待发布后核验。
+
+## v0.77.0 · 有限批次元数据复用
 
 固定48worker/384query与额外384fresh原DAG、56220原file恢复通过，H1/H2/H3/joint=True。主4096/meterOFF查证批wall约0.0416–0.0419倍，整进程约0.331–0.336倍，peakRSS约0.761–0.770倍；原source读取B与证明不变。收益限于单SID有限批次规则负载，缓存保留初始metadata的故障语义已说明，无科学NLI/回答/压缩收益声明。
 
