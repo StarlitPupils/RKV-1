@@ -66,8 +66,8 @@
       "sha256": "ab8622f5e01224077ccae28802947408dd89ef08d3fec8a8598bc33eb823db31"
     },
     "tests/test_catalog_commitment.py": {
-      "bytes": 5368,
-      "sha256": "0381aeac7355bd5677d619c9d720b6b118a2fcd5c75359112a04c6ac2ef3199a"
+      "bytes": 5308,
+      "sha256": "518f9e8203aeb4f49f8a814f565c5cdba085834ae189d486f5690761761e07ad"
     },
     "docs/CATALOG-MEMBERSHIP.md": {
       "bytes": 5665,
