@@ -449,3 +449,10 @@ H1关系分类质量False / H2局部CPU与model可行性True / 本probe联合Fal
 ## v0.77：单SID有限批次metadata复用
 
 48worker/384query与384freshDAG/56220file恢复，H1/H2/H3True；primary4096meterOFF批wall约.042、parent约.333、RSS约.765，原sourceB不变。保留初始metadata语义/初始O(N)/tracked cap不等于峰值RAM，未集成默认SDK/不称生产或语义收益。发行核验待完成，详见results/v0.77.0/SUMMARY.md。
+
+
+## v0.78 候选：显式 SDK 同快照读取作用域
+
+在 v0.77 组件验证后新增 opt-in Store.read_scope，不改默认 snapshot 或磁盘格式。固定 12 worker 做 SDK/旧实验接口逐字节、范围、全验证、证据与生命周期一致性；旧实际 v0.77 wheel 兼容性必须仓库外安装后才记通过。478 本机测试 477 pass/1 skip；无新速度、压缩或语义收益声明。冻结协议见 docs/SDK-READ-SCOPE.md；正式实验尚未执行。
+
+状态更正：v0.73–v0.77 以上历史段落中的“发行核验待完成”或“尚未完成”均已在各版后续实际资产/安装/proof 核验中收尾；最新已完整交付版本为 v0.77.0，各原始实验门槛及负结果不变。

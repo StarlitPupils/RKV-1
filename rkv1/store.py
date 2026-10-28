@@ -259,6 +259,11 @@ class Store:
     def snapshot(self, snapshot_id):
         return Snapshot(self, snapshot_id)
 
+    def read_scope(self, snapshot_id, *, metadata_budget=16 << 20):
+        """Explicit same-SID read scope; full initial metadata validation, no payload cache."""
+        from .snapshot_scope import SnapshotReadScope
+        return SnapshotReadScope(self, snapshot_id, metadata_budget=metadata_budget)
+
     def stats(self):
         items = list(files_in(self.root))
         sizes = {rel: path.stat().st_size for path, rel in items}
