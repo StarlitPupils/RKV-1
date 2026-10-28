@@ -445,3 +445,7 @@ H1关系分类质量False / H2局部CPU与model可行性True / 本probe联合Fal
 ## v0.76：train-only人类结构模板泛化
 
 一次1681train/1099模板，NatLangtest32/532Q三role全拒答；308新句key命中0，测试实体全在train词表。H1/H2False/H3True/jointFalse，source实际审核/恢复0不冒充prefixSHA恢复，负结果全保留，禁止测试后补规则。更强语义模型资源待用户选择，当前只纯CPU离线元数据实验授权。发行核验待完成，详见results/v0.76.0/SUMMARY.md。
+
+## v0.77：单SID有限批次metadata复用
+
+48worker/384query与384freshDAG/56220file恢复，H1/H2/H3True；primary4096meterOFF批wall约.042、parent约.333、RSS约.765，原sourceB不变。保留初始metadata语义/初始O(N)/tracked cap不等于峰值RAM，未集成默认SDK/不称生产或语义收益。发行核验待完成，详见results/v0.77.0/SUMMARY.md。

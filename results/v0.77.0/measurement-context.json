@@ -1,0 +1,198 @@
+{
+  "exact_CI": 40639479254,
+  "input_manifest": {
+    "RSS_ratio_ceiling": 1.25,
+    "additional_actual_file_recoveries": 56220,
+    "cap_excludes_initial_peak_and_OS_allocator": true,
+    "count_orders": [
+      [
+        9,
+        64,
+        512,
+        4096
+      ],
+      [
+        64,
+        9,
+        4096,
+        512
+      ],
+      [
+        512,
+        4096,
+        9,
+        64
+      ]
+    ],
+    "data": "Known owned fixed evidence catalogue, no new science or model",
+    "files": {
+      "docs/PINNED-METADATA.md": {
+        "bytes": 5449,
+        "sha256": "3d4fda785bb3e83119a0273d1579d292a0c05fdd355731f5aa8adaf96db7873a"
+      },
+      "scripts/analyze_pinned_metadata.py": {
+        "bytes": 3497,
+        "sha256": "43b9a43b480d07e6155dcaa59324e0be724db78aaf8d48a0251366c55759d5c3"
+      },
+      "scripts/audit_selected_witness.py": {
+        "bytes": 4613,
+        "sha256": "dcb5d684f1546655d9ae83325ba0d1eab2d06b080fab72ce2db4f2a679050973"
+      },
+      "scripts/audit_signed_logic.py": {
+        "bytes": 8244,
+        "sha256": "6a5aa9ba2322a8aec3613033b702e62e59c93a6c6d078c4d4c4fc4e4bf8abd44"
+      },
+      "scripts/audit_source_set_logic.py": {
+        "bytes": 8017,
+        "sha256": "665a9df6a3d1ed339619768e30d39ca1ec6c1ecb2a62ad0f273ae8d64f0dbf96"
+      },
+      "scripts/audit_source_universe.py": {
+        "bytes": 2932,
+        "sha256": "8544d098387f6dd5fd1b3e551bb8825235b47cfa80a67105d723213c95b57e6f"
+      },
+      "scripts/catalog_fixture.py": {
+        "bytes": 816,
+        "sha256": "c136ff4d2d6beabf7668a14c6489ee30ef3cdd5511e81d8554b6c0dae64d3932"
+      },
+      "scripts/catalog_observer.py": {
+        "bytes": 1051,
+        "sha256": "172eb6f4602c5cd1ff488bd52dc62e051810779e79ce45e88caf5518273d6e69"
+      },
+      "scripts/logic_fixture.py": {
+        "bytes": 3001,
+        "sha256": "d18ab1b057dcec8184c46917579a9d19ad951eeef197add209ead38aac9c25d3"
+      },
+      "scripts/pinned_metadata.py": {
+        "bytes": 2668,
+        "sha256": "063cb7f8205532c56c3812417febab38af8c420b02da45666643b630e32b7d1c"
+      },
+      "scripts/postings_transform.py": {
+        "bytes": 6138,
+        "sha256": "e4326ff144bb5332c7cedf0aafe0be509efd78de1f0cc7f14de5cbbae5b8004e"
+      },
+      "scripts/run_pinned_metadata.py": {
+        "bytes": 4659,
+        "sha256": "549354c6c65e875863458445fb799068d0ad96624ef56be24d2b3dc349c436c0"
+      },
+      "scripts/selected_witness.py": {
+        "bytes": 3155,
+        "sha256": "dce809ada9798b48aa549a121f0a0606cee0d5438322d09040966dc71c9caff6"
+      },
+      "scripts/signed_logic.py": {
+        "bytes": 6765,
+        "sha256": "606e2945cd7459a0376ee62ffea56641cdce06e723601ffa39e756bcc732af08"
+      },
+      "scripts/source_set_fixture.py": {
+        "bytes": 2274,
+        "sha256": "5c0bec25565e0e9f26cf1548b8773a22dc7fe34f51323e6698e92892e6ef1ac1"
+      },
+      "scripts/source_set_logic.py": {
+        "bytes": 2147,
+        "sha256": "dc57f7b30ec0aa4aa5b6398072e9412e0d9ac2154fde90be8eef276110b306f0"
+      },
+      "scripts/source_universe.py": {
+        "bytes": 2396,
+        "sha256": "306041d27c5016d74e1c3b52b2a4f4516ca6eef6ffa6b1add6314e826e024def"
+      },
+      "tests/test_pinned_metadata.py": {
+        "bytes": 4925,
+        "sha256": "585e6c40c25be6774e4ae71336e6f75084c314ea03c8e3951dbb0cdb8961279f"
+      },
+      "tests/test_pinned_metadata_analysis.py": {
+        "bytes": 2832,
+        "sha256": "9477361afe799616463dba2fe2c4c859004c435bc367eed03cd4c41e7305afb4"
+      }
+    },
+    "formal_workers": 48,
+    "format": "RKVPINNEDMETAINPUT1",
+    "new_remote_model_calls": 0,
+    "primary_count": 4096,
+    "primary_meter": "off",
+    "queries_per_worker": 8,
+    "role_orders": [
+      "ABCD",
+      "BADC",
+      "CDAB"
+    ],
+    "roles": {
+      "A": [
+        "fresh",
+        "off"
+      ],
+      "B": [
+        "pinned",
+        "off"
+      ],
+      "C": [
+        "fresh",
+        "on"
+      ],
+      "D": [
+        "pinned",
+        "on"
+      ]
+    },
+    "time_ratio_ceiling": 1.0,
+    "total_queries": 384,
+    "tracked_metadata_cap_B": 16777216,
+    "work_budget": 100000,
+    "worker_retries": 0,
+    "worker_timeout_s": 600
+  },
+  "prior_complete_release_commit": "36bbcabaf8cdff367d3e78c0b504f1b7dfeefc9b",
+  "prior_finalproof": "0b87ba0454913c1e59974baf5a2fe7e702fbbe870464922b3dca3c42a4b28441",
+  "retries": 0,
+  "source_protocol_input_commit": "b0880d9581ea3034588de652ac57dda28cdcf4fd",
+  "workers": 48,
+  "private_preparation_size_SHA": {
+    ".tools/v077-draft/analyze_pinned_metadata.py": {
+      "bytes": 3538,
+      "sha256": "aa2ad82a011f2deb23b075c34cd495fbb1a826426c76217ab928c4db0a413208"
+    },
+    ".tools/v077-draft/pinned_metadata.py": {
+      "bytes": 2676,
+      "sha256": "7732d1c19bdede3441cb131fbeaf107989032f630f0b9d78059ae3ec4b7e3991"
+    },
+    ".tools/v077-draft/preparation-results.json": {
+      "bytes": 1720,
+      "sha256": "b57f9a8aafe4f63f683568e3c6f9a32a083f5993dc81b5c6bc9893537d362d36"
+    },
+    ".tools/v077-draft/PROTOCOL.md": {
+      "bytes": 5385,
+      "sha256": "48a974ce69c2246f4d13b49f9f12f60c5ac39c9471caa22f4ed1bf24b41bfd44"
+    },
+    ".tools/v077-draft/run_pinned_metadata.py": {
+      "bytes": 4660,
+      "sha256": "df139e6dc718f905df5ab0eea454cece63acfb5f319ae6a2f4775bfab308785c"
+    },
+    ".tools/v077-draft/test_pinned_metadata.py": {
+      "bytes": 4999,
+      "sha256": "d26f9f9bd9aa3a8e43d5dec22073a09b92622dec45347333d76cd249214c7784"
+    },
+    ".tools/v077-draft/test_pinned_metadata_analysis.py": {
+      "bytes": 2915,
+      "sha256": "e5be80caf4e182384c1be2c50cc5e0c1b420af6fe21d8741c608e1cd9ac03c3d"
+    },
+    ".tools/v077-draft/unit-analysis.log": {
+      "bytes": 107,
+      "sha256": "327d4e41e5072cef686b750f74b63ca495ed468a6aa7aaa7f6c96e8c3739c632"
+    },
+    ".tools/v077-draft/unit-prototype-fixed.log": {
+      "bytes": 109,
+      "sha256": "189d69ee1c28e5a4803599c33977c84e60d33589f0cfd70cb3d5e7fd5e55d369"
+    },
+    ".tools/v077-draft/unit-prototype.log": {
+      "bytes": 781,
+      "sha256": "515350400a953a01d62196e2d90eb02eb9fd3b9f4d9ceebea55f8b541ed9d74c"
+    },
+    ".tools/v077-draft/unit-worker.log": {
+      "bytes": 110,
+      "sha256": "97769e0b4cdccf4a03c4f0e4b02bd46889007aa6fce2c208e41401d6e7efa431"
+    }
+  },
+  "private_preparation_B": 27000,
+  "observerOFF_null_not_zero": true,
+  "independent_postanalysis_uses_fresh_real_Store_metadata_not_pinnedview": true,
+  "scope_semantics_during_on_disk_manifest_corruption_differs_from_fresh_perread_constructor": true,
+  "no_production_science_or_compression_gain_claim": true
+}

@@ -1,0 +1,19 @@
+{
+  "H1_identity_payload_lifecycle_measurement": true,
+  "H2_primary4096_meterOFF_time": true,
+  "H3_primary4096_meterOFF_RSS_atmost1_25": true,
+  "joint": true,
+  "formal_workers": 48,
+  "queries": 384,
+  "no_compression_or_source_payload_gain": true,
+  "unit_tests_run": 472,
+  "unit_tests_passed": 471,
+  "unit_tests_skipped": 1,
+  "additional_actual_fresh_DAG_audits": 384,
+  "additional_actual_allfile_recoveries": 56220,
+  "formal_retries": 0,
+  "figure_visually_inspected": true,
+  "freeze": "b0880d9581ea3034588de652ac57dda28cdcf4fd",
+  "new_model_calls": 0,
+  "scientific_entailment_verified": false
+}

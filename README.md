@@ -6,6 +6,14 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
+## v0.77.0 研究候选 · 有限批次元数据复用（发行待核验）
+
+固定48worker/384query与额外384fresh原DAG、56220原file恢复通过，H1/H2/H3/joint=True。主4096/meterOFF查证批wall约0.0416–0.0419倍，整进程约0.331–0.336倍，peakRSS约0.761–0.770倍；原source读取B与证明不变。收益限于单SID有限批次规则负载，缓存保留初始metadata的故障语义已说明，无科学NLI/回答/压缩收益声明。
+
+![元数据复用完整计量](results/v0.77.0/pinned-metadata.png)
+
+472检查471pass/1权限skip；[详实报告](results/v0.77.0/SUMMARY.md) · [协议](docs/PINNED-METADATA.md)。最新完整核验发行仍为v0.76。
+
 ## 当前版本：v0.76.0 · 训练集结构模板
 
 一次训练1681理论得到1099模板；新测试308human句子命中0，baseline/learned/control各532题全拒答，H1=False/H2=False/H3=True/joint=False。8个训练实体名字覆盖测试实体，不能把失败归因于缺人名；不补已见测试模板。
