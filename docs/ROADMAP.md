@@ -441,3 +441,7 @@ H1关系分类质量False / H2局部CPU与model可行性True / 本probe联合Fal
 ## v0.75：原Store依赖的紧凑证书
 
 1152byte/原DAG通过，主Zstd完整列明B H1True（净-42136至-42177B），时间H2False（1.44–1.51x），jointFalse；不是通用压缩或E3/NLI/回答收益。postanalysis完整计时因builtin-zlib收尾失败未知null保留，formal计时齐。发行核验待完成，详见results/v0.75.0/SUMMARY.md。
+
+## v0.76：train-only人类结构模板泛化
+
+一次1681train/1099模板，NatLangtest32/532Q三role全拒答；308新句key命中0，测试实体全在train词表。H1/H2False/H3True/jointFalse，source实际审核/恢复0不冒充prefixSHA恢复，负结果全保留，禁止测试后补规则。更强语义模型资源待用户选择，当前只纯CPU离线元数据实验授权。发行核验待完成，详见results/v0.76.0/SUMMARY.md。

@@ -1,0 +1,8 @@
+{
+  "exit_success": true,
+  "training_attempts": 1,
+  "new_remote_model_calls": 0,
+  "full_worker_wall_s": 1.9313878999091685,
+  "full_worker_cpu_s": 1.828125,
+  "peak_RSS_bytes": 212074496
+}

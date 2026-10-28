@@ -1,0 +1,273 @@
+{
+  "scope": "Posthoc frozen sentence-key coverage and reference-only vocabulary diagnosis; no source recompilation/engine query/model fit or new formal scoring",
+  "all_predictions_already_completed": true,
+  "model_SHA_unchanged": true,
+  "training_registry_size": 8,
+  "total_test_human_sentences": 308,
+  "known_frozen_template_keys": 0,
+  "normalization_errors": 0,
+  "theories_all_sentence_keys_present": 0,
+  "theories_with_reference_entity_unseen_in_train_registry": 0,
+  "distinct_unseen_reference_entity_ID_count": 0,
+  "per_theory": [
+    {
+      "physical_theory_index": 0,
+      "human_sentences": 10,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 3,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 1,
+      "human_sentences": 10,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 3,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 2,
+      "human_sentences": 10,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 4,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 3,
+      "human_sentences": 9,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 3,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 4,
+      "human_sentences": 10,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 4,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 5,
+      "human_sentences": 8,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 3,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 6,
+      "human_sentences": 9,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 3,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 7,
+      "human_sentences": 9,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 3,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 8,
+      "human_sentences": 11,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 4,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 9,
+      "human_sentences": 10,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 4,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 10,
+      "human_sentences": 8,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 4,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 11,
+      "human_sentences": 8,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 3,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 12,
+      "human_sentences": 8,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 4,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 13,
+      "human_sentences": 9,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 2,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 14,
+      "human_sentences": 10,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 4,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 15,
+      "human_sentences": 8,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 4,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 16,
+      "human_sentences": 11,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 4,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 17,
+      "human_sentences": 11,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 4,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 18,
+      "human_sentences": 11,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 4,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 19,
+      "human_sentences": 10,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 4,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 20,
+      "human_sentences": 9,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 2,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 21,
+      "human_sentences": 10,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 4,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 22,
+      "human_sentences": 10,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 4,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 23,
+      "human_sentences": 10,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 4,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 24,
+      "human_sentences": 11,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 4,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 25,
+      "human_sentences": 11,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 4,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 26,
+      "human_sentences": 10,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 3,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 27,
+      "human_sentences": 9,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 3,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 28,
+      "human_sentences": 10,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 3,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 29,
+      "human_sentences": 9,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 4,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 30,
+      "human_sentences": 10,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 3,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    },
+    {
+      "physical_theory_index": 31,
+      "human_sentences": 9,
+      "keys_present_in_frozen_learned_model": 0,
+      "normalization_errors": 0,
+      "posthoc_reference_ground_entity_count": 4,
+      "posthoc_reference_unseen_ground_entity_count": 0
+    }
+  ],
+  "diagnostic_separate_CPU_s": null,
+  "diagnostic_separate_wall_s": null,
+  "diagnostic_time_not_assumed_zero": true
+}
