@@ -1,0 +1,93 @@
+{
+  "format": "RKVCATALOGMEMBERINPUT1",
+  "owned_seen_geometry": true,
+  "counts": [
+    9,
+    64,
+    512,
+    4096
+  ],
+  "count_orders": [
+    [
+      9,
+      64,
+      512,
+      4096
+    ],
+    [
+      64,
+      9,
+      4096,
+      512
+    ],
+    [
+      512,
+      4096,
+      9,
+      64
+    ]
+  ],
+  "formal_workers": 12,
+  "selected_paths": [
+    "one.logic.jsonl",
+    "two.logic.jsonl"
+  ],
+  "positive_memberships": 24,
+  "negative_controls": 96,
+  "oldSID_accepts": 12,
+  "newHEAD_rebind_refusals": 12,
+  "postanalysis_eligible_records": 14043,
+  "postanalysis_fullfile_recoveries": 14055,
+  "metadata_messages": 8,
+  "primary_count": 4096,
+  "H2_packet_ratio_atmost": 0.25,
+  "H3_full_new_metadata_delta_strict_negative": true,
+  "worker_timeout_s": 600,
+  "worker_retries": 0,
+  "conservative_new_public_files": [
+    "scripts/catalog_commitment.py",
+    "scripts/audit_catalog_commitment.py",
+    "scripts/run_catalog_membership.py",
+    "tests/test_catalog_commitment.py",
+    "docs/CATALOG-MEMBERSHIP.md",
+    "docs/catalog-membership-inputs.json"
+  ],
+  "files": {
+    "scripts/catalog_commitment.py": {
+      "bytes": 2476,
+      "sha256": "333b028710e54f9e9b143dc6a3f9f462135e88d8334dfc2886d3e85c6963963a"
+    },
+    "scripts/audit_catalog_commitment.py": {
+      "bytes": 3425,
+      "sha256": "70fe91dadc040c287bc991d1c74d2f5c1c8ac44df97d9fc1f17e270d4aac7be1"
+    },
+    "scripts/run_catalog_membership.py": {
+      "bytes": 6467,
+      "sha256": "ab8622f5e01224077ccae28802947408dd89ef08d3fec8a8598bc33eb823db31"
+    },
+    "tests/test_catalog_commitment.py": {
+      "bytes": 5368,
+      "sha256": "0381aeac7355bd5677d619c9d720b6b118a2fcd5c75359112a04c6ac2ef3199a"
+    },
+    "docs/CATALOG-MEMBERSHIP.md": {
+      "bytes": 5665,
+      "sha256": "6d565ba67b1c58fbce39151fb8f54bee33073f2fc4d93c9c9b3e9a995d7a0e1c"
+    },
+    "scripts/catalog_fixture.py": {
+      "bytes": 816,
+      "sha256": "c136ff4d2d6beabf7668a14c6489ee30ef3cdd5511e81d8554b6c0dae64d3932"
+    },
+    "scripts/selected_witness.py": {
+      "bytes": 3155,
+      "sha256": "dce809ada9798b48aa549a121f0a0606cee0d5438322d09040966dc71c9caff6"
+    },
+    "scripts/source_universe.py": {
+      "bytes": 2396,
+      "sha256": "306041d27c5016d74e1c3b52b2a4f4516ca6eef6ffa6b1add6314e826e024def"
+    },
+    "scripts/postings_transform.py": {
+      "bytes": 6138,
+      "sha256": "e4326ff144bb5332c7cedf0aafe0be509efd78de1f0cc7f14de5cbbae5b8004e"
+    }
+  }
+}
