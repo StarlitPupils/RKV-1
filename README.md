@@ -6,15 +6,15 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## v0.76.0 研究候选 · 训练集结构模板（发行待核验）
+## 当前版本：v0.76.0 · 训练集结构模板
 
 一次训练1681理论得到1099模板；新测试308human句子命中0，baseline/learned/control各532题全拒答，H1=False/H2=False/H3=True/joint=False。8个训练实体名字覆盖测试实体，不能把失败归因于缺人名；不补已见测试模板。
 
 ![模板全部问题分母](results/v0.76.0/typed-templates.png)
 
-461检查460pass/1权限skip，0模型API。不是神经模型/开放NL/科学NLI，E3净收益/E4整体/长期对话/回答/无限上下文未完成。[详实报告](results/v0.76.0/SUMMARY.md) · [协议](docs/TYPED-TEMPLATES.md)。最新完整核验发行仍为v0.75。
+461检查460pass/1权限skip，0模型API。不是神经模型/开放NL/科学NLI，E3净收益/E4整体/长期对话/回答/无限上下文未完成。[详实报告](results/v0.76.0/SUMMARY.md) · [协议](docs/TYPED-TEMPLATES.md)。[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.76.0)实际7资产/全源码/物理仓库外安装/最终proof重下载均已通过。
 
-## 当前版本：v0.75.0 · 原Store依赖紧凑证明
+## v0.75.0 · 原Store依赖紧凑证明
 
 1152精确恢复/原证据通过H0=True；主Zstd计入全部新增源码后节省42136–42177B，H1=True，但耗时约1.44–1.51倍，H2=False/joint=False。节省依赖既有Store，非contextless压缩/E3净收益/科学NLI；后置分析收尾时间缺项保留null。
 
