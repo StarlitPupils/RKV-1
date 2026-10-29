@@ -1,0 +1,7 @@
+{
+  "presentation_only_no_formal_or_audit_rerun": true,
+  "reason": "Use exact annotated count grid for0/1/48 readability",
+  "wall_s": 0.6515418000053614,
+  "CPU_s": 0.640625,
+  "input_aggregate_SHA": "b99f4adf7ad113faf253f42789fa4500d5397287004b75cdb2a7f3bcc6989e5a"
+}

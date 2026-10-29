@@ -576,3 +576,7 @@ tag23f7eee03d86b3bdbc4c3724918eeecdc1a513af/ReleaseCI40866699127/finalprooff5480
 ## v0.90候选：只读活动检查与report-only恢复
 
 纯离线owned进程硬退出7边界+成功控制各3轮24child、4篡改负控制，0实时HTTP；所有动作model_send_allowedFalse。先冻代码协议和exactCI再跑完整矩阵，测原文件不变/预留不重发/计数一致与完整parent计时；不叫断电或科学推理提升。当前准备，无正式结果。
+
+### v0.90实测（发行待核验）
+
+唯一24child/3round/4tamper正式与独立原bytes/源请求及响应SHA/完整parent计数通过，H1/H2True。总162reserved/156raw/153result/159owned-send marker，inspector/report额外发送0，真实HTTP0。21硬退出childfinally缺失CPU/RSS保持null，非断电或科学质量验证。原v089失败轮保持关闭。

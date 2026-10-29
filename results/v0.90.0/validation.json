@@ -1,0 +1,17 @@
+{
+  "H1_fixed_boundaries_counts_originalbytes_and_independent_audit": true,
+  "H2_inspection_report_no_additional_sends": true,
+  "fresh_children": 24,
+  "rounds": 3,
+  "negative_controls": 4,
+  "new_remote_model_calls": 0,
+  "scientific_quality_or_powerloss_claim": false,
+  "figure_visually_inspected": true,
+  "original_v089_campaign_not_read_or_resumed": true,
+  "totals_owned_only": {
+    "reserved": 162,
+    "responses": 156,
+    "results": 153,
+    "owned_fake_send_markers": 159
+  }
+}
