@@ -3,3 +3,6 @@
 *.rkv binary
 # Preserve the historical decoder byte-for-byte, including line endings.
 rkv1/experiments/csv_v0_3.py -text
+
+# Preserve v0.79 measured runtime metadata bytes, including existing line endings.
+rkv1/__init__.py -text
