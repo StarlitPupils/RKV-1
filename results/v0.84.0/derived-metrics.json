@@ -1,0 +1,1469 @@
+{
+  "rows": [
+    {
+      "index": 0,
+      "claim_id": "903",
+      "condition": "rotated",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "CONTRADICT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 42,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1125,
+        "prompt_tokens": 1125,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1167
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 1,
+      "claim_id": "540",
+      "condition": "retrieved",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "SUPPORT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 45,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1162,
+        "prompt_tokens": 1162,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1207
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 2,
+      "claim_id": "921",
+      "condition": "empty",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "SUPPORT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 33,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 162,
+        "prompt_tokens": 162,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 195
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 3,
+      "claim_id": "1163",
+      "condition": "rotated",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "SUPPORT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 44,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1049,
+        "prompt_tokens": 1177,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1221
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 4,
+      "claim_id": "1019",
+      "condition": "empty",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "SUPPORT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 36,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 163,
+        "prompt_tokens": 163,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 199
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 5,
+      "claim_id": "1280",
+      "condition": "empty",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "INSUFFICIENT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": true,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": null,
+      "usage": {
+        "completion_tokens": 39,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 184,
+        "prompt_tokens": 184,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 223
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 6,
+      "claim_id": "1298",
+      "condition": "empty",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "SUPPORT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 38,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 181,
+        "prompt_tokens": 181,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 219
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 7,
+      "claim_id": "219",
+      "condition": "empty",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "CONTRADICT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 28,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 163,
+        "prompt_tokens": 163,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 191
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 8,
+      "claim_id": "535",
+      "condition": "empty",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "INSUFFICIENT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": true,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": null,
+      "usage": {
+        "completion_tokens": 35,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 162,
+        "prompt_tokens": 162,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 197
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 9,
+      "claim_id": "759",
+      "condition": "retrieved",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "CONTRADICT",
+      "predicted_verdict": "SUPPORT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": 0.0,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 60,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1059,
+        "prompt_tokens": 1187,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1247
+      },
+      "response_model": "deepseek-flash",
+      "citations": [
+        [
+          "1805641",
+          3
+        ],
+        [
+          "1805641",
+          14
+        ]
+      ]
+    },
+    {
+      "index": 10,
+      "claim_id": "1320",
+      "condition": "empty",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "CONTRADICT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 38,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 171,
+        "prompt_tokens": 171,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 209
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 11,
+      "claim_id": "1241",
+      "condition": "empty",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "SUPPORT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 35,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 164,
+        "prompt_tokens": 164,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 199
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 12,
+      "claim_id": "577",
+      "condition": "rotated",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "INSUFFICIENT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": true,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": null,
+      "usage": {
+        "completion_tokens": 44,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1038,
+        "prompt_tokens": 1166,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1210
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 13,
+      "claim_id": "1280",
+      "condition": "retrieved",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "INSUFFICIENT",
+      "predicted_verdict": "SUPPORT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": null,
+      "usage": {
+        "completion_tokens": 65,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1162,
+        "prompt_tokens": 1290,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1355
+      },
+      "response_model": "deepseek-flash",
+      "citations": [
+        [
+          "29214508",
+          6
+        ],
+        [
+          "37768883",
+          0
+        ]
+      ]
+    },
+    {
+      "index": 14,
+      "claim_id": "1179",
+      "condition": "retrieved",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "INSUFFICIENT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": true,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": null,
+      "usage": {
+        "completion_tokens": 53,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1109,
+        "prompt_tokens": 1237,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1290
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 15,
+      "claim_id": "219",
+      "condition": "rotated",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "CONTRADICT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 47,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1075,
+        "prompt_tokens": 1203,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1250
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 16,
+      "claim_id": "142",
+      "condition": "empty",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "CONTRADICT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 40,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 176,
+        "prompt_tokens": 176,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 216
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 17,
+      "claim_id": "921",
+      "condition": "rotated",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "SUPPORT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 37,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 943,
+        "prompt_tokens": 1071,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1108
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 18,
+      "claim_id": "535",
+      "condition": "rotated",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "INSUFFICIENT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": true,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": null,
+      "usage": {
+        "completion_tokens": 38,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1161,
+        "prompt_tokens": 1289,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1327
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 19,
+      "claim_id": "577",
+      "condition": "empty",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "INSUFFICIENT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": true,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": null,
+      "usage": {
+        "completion_tokens": 30,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 180,
+        "prompt_tokens": 180,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 210
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 20,
+      "claim_id": "1298",
+      "condition": "retrieved",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "SUPPORT",
+      "predicted_verdict": "SUPPORT",
+      "correct": true,
+      "complete_annotated_rationale": true,
+      "annotated_citation_precision": 1.0,
+      "grounded_annotated_correct": true,
+      "usage": {
+        "completion_tokens": 66,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1128,
+        "prompt_tokens": 1256,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1322
+      },
+      "response_model": "deepseek-flash",
+      "citations": [
+        [
+          "11718220",
+          11
+        ],
+        [
+          "11718220",
+          13
+        ]
+      ]
+    },
+    {
+      "index": 21,
+      "claim_id": "535",
+      "condition": "retrieved",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "INSUFFICIENT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": true,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": null,
+      "usage": {
+        "completion_tokens": 43,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1020,
+        "prompt_tokens": 1148,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1191
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 22,
+      "claim_id": "903",
+      "condition": "empty",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "CONTRADICT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 37,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 164,
+        "prompt_tokens": 164,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 201
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 23,
+      "claim_id": "185",
+      "condition": "rotated",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "CONTRADICT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 33,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1083,
+        "prompt_tokens": 1211,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1244
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 24,
+      "claim_id": "142",
+      "condition": "rotated",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "CONTRADICT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 43,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1124,
+        "prompt_tokens": 1252,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1295
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 25,
+      "claim_id": "1179",
+      "condition": "empty",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "INSUFFICIENT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": true,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": null,
+      "usage": {
+        "completion_tokens": 40,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 167,
+        "prompt_tokens": 167,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 207
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 26,
+      "claim_id": "1019",
+      "condition": "retrieved",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "SUPPORT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 38,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1072,
+        "prompt_tokens": 1200,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1238
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 27,
+      "claim_id": "1298",
+      "condition": "rotated",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "SUPPORT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 46,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1123,
+        "prompt_tokens": 1251,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1297
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 28,
+      "claim_id": "219",
+      "condition": "retrieved",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "CONTRADICT",
+      "predicted_verdict": "CONTRADICT",
+      "correct": true,
+      "complete_annotated_rationale": true,
+      "annotated_citation_precision": 0.5,
+      "grounded_annotated_correct": true,
+      "usage": {
+        "completion_tokens": 71,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1068,
+        "prompt_tokens": 1196,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1267
+      },
+      "response_model": "deepseek-flash",
+      "citations": [
+        [
+          "21366394",
+          2
+        ],
+        [
+          "21366394",
+          4
+        ]
+      ]
+    },
+    {
+      "index": 29,
+      "claim_id": "1163",
+      "condition": "empty",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "SUPPORT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 33,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 169,
+        "prompt_tokens": 169,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 202
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 30,
+      "claim_id": "185",
+      "condition": "empty",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "CONTRADICT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 33,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 161,
+        "prompt_tokens": 161,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 194
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 31,
+      "claim_id": "759",
+      "condition": "empty",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "CONTRADICT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 42,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 179,
+        "prompt_tokens": 179,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 221
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 32,
+      "claim_id": "1179",
+      "condition": "rotated",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "INSUFFICIENT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": true,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": null,
+      "usage": {
+        "completion_tokens": 46,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1242,
+        "prompt_tokens": 1370,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1416
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 33,
+      "claim_id": "1320",
+      "condition": "retrieved",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "CONTRADICT",
+      "predicted_verdict": "CONTRADICT",
+      "correct": true,
+      "complete_annotated_rationale": true,
+      "annotated_citation_precision": 0.5,
+      "grounded_annotated_correct": true,
+      "usage": {
+        "completion_tokens": 65,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1016,
+        "prompt_tokens": 1144,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1209
+      },
+      "response_model": "deepseek-flash",
+      "citations": [
+        [
+          "16284655",
+          3
+        ],
+        [
+          "16284655",
+          4
+        ]
+      ]
+    },
+    {
+      "index": 34,
+      "claim_id": "1241",
+      "condition": "rotated",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "SUPPORT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 46,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1069,
+        "prompt_tokens": 1197,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1243
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 35,
+      "claim_id": "1280",
+      "condition": "rotated",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "INSUFFICIENT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": true,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": null,
+      "usage": {
+        "completion_tokens": 45,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1131,
+        "prompt_tokens": 1259,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1304
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 36,
+      "claim_id": "1019",
+      "condition": "rotated",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "SUPPORT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 49,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1008,
+        "prompt_tokens": 1136,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1185
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 37,
+      "claim_id": "1163",
+      "condition": "retrieved",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "SUPPORT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": true,
+      "annotated_citation_precision": 0.5,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 72,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1002,
+        "prompt_tokens": 1130,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1202
+      },
+      "response_model": "deepseek-flash",
+      "citations": [
+        [
+          "15305881",
+          2
+        ],
+        [
+          "15305881",
+          5
+        ]
+      ]
+    },
+    {
+      "index": 38,
+      "claim_id": "903",
+      "condition": "retrieved",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "CONTRADICT",
+      "predicted_verdict": "CONTRADICT",
+      "correct": true,
+      "complete_annotated_rationale": true,
+      "annotated_citation_precision": 1.0,
+      "grounded_annotated_correct": true,
+      "usage": {
+        "completion_tokens": 53,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1112,
+        "prompt_tokens": 1240,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1293
+      },
+      "response_model": "deepseek-flash",
+      "citations": [
+        [
+          "10648422",
+          4
+        ]
+      ]
+    },
+    {
+      "index": 39,
+      "claim_id": "759",
+      "condition": "rotated",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "CONTRADICT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 46,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1088,
+        "prompt_tokens": 1216,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1262
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 40,
+      "claim_id": "1320",
+      "condition": "rotated",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "CONTRADICT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 41,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1043,
+        "prompt_tokens": 1171,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1212
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 41,
+      "claim_id": "142",
+      "condition": "retrieved",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "CONTRADICT",
+      "predicted_verdict": "CONTRADICT",
+      "correct": true,
+      "complete_annotated_rationale": true,
+      "annotated_citation_precision": 1.0,
+      "grounded_annotated_correct": true,
+      "usage": {
+        "completion_tokens": 58,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1175,
+        "prompt_tokens": 1303,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1361
+      },
+      "response_model": "deepseek-flash",
+      "citations": [
+        [
+          "10582939",
+          12
+        ]
+      ]
+    },
+    {
+      "index": 42,
+      "claim_id": "540",
+      "condition": "empty",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "SUPPORT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 33,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 162,
+        "prompt_tokens": 162,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 195
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 43,
+      "claim_id": "540",
+      "condition": "rotated",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "SUPPORT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 40,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1140,
+        "prompt_tokens": 1268,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1308
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 44,
+      "claim_id": "1241",
+      "condition": "retrieved",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "SUPPORT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 53,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 945,
+        "prompt_tokens": 1073,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1126
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 45,
+      "claim_id": "921",
+      "condition": "retrieved",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "SUPPORT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 34,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1084,
+        "prompt_tokens": 1212,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1246
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    },
+    {
+      "index": 46,
+      "claim_id": "185",
+      "condition": "retrieved",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "CONTRADICT",
+      "predicted_verdict": "CONTRADICT",
+      "correct": true,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": 0.0,
+      "grounded_annotated_correct": false,
+      "usage": {
+        "completion_tokens": 62,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1236,
+        "prompt_tokens": 1364,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1426
+      },
+      "response_model": "deepseek-flash",
+      "citations": [
+        [
+          "21874312",
+          0
+        ],
+        [
+          "23557241",
+          9
+        ]
+      ]
+    },
+    {
+      "index": 47,
+      "claim_id": "577",
+      "condition": "retrieved",
+      "attempted": true,
+      "accepted": true,
+      "gold_verdict": "INSUFFICIENT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": true,
+      "complete_annotated_rationale": false,
+      "annotated_citation_precision": null,
+      "grounded_annotated_correct": null,
+      "usage": {
+        "completion_tokens": 35,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1092,
+        "prompt_tokens": 1220,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "total_tokens": 1255
+      },
+      "response_model": "deepseek-flash",
+      "citations": []
+    }
+  ],
+  "groups": {
+    "empty": {
+      "planned": 16,
+      "attempted": 16,
+      "accepted": 16,
+      "correct": 4,
+      "annotated_denominator": 12,
+      "grounded_annotated_correct": 0,
+      "class_denominators": {
+        "SUPPORT": 6,
+        "CONTRADICT": 6,
+        "INSUFFICIENT": 4
+      }
+    },
+    "retrieved": {
+      "planned": 16,
+      "attempted": 16,
+      "accepted": 16,
+      "correct": 9,
+      "annotated_denominator": 12,
+      "grounded_annotated_correct": 5,
+      "class_denominators": {
+        "SUPPORT": 6,
+        "CONTRADICT": 6,
+        "INSUFFICIENT": 4
+      }
+    },
+    "rotated": {
+      "planned": 16,
+      "attempted": 16,
+      "accepted": 16,
+      "correct": 4,
+      "annotated_denominator": 12,
+      "grounded_annotated_correct": 0,
+      "class_denominators": {
+        "SUPPORT": 6,
+        "CONTRADICT": 6,
+        "INSUFFICIENT": 4
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "retrieved_vs": "empty",
+      "win": 6,
+      "loss": 1,
+      "tie": 9,
+      "two_sided_exact_p_descriptive_only": 0.125
+    },
+    {
+      "retrieved_vs": "rotated",
+      "win": 6,
+      "loss": 1,
+      "tie": 9,
+      "two_sided_exact_p_descriptive_only": 0.125
+    }
+  ],
+  "complete": true,
+  "source_records_independently_checked": 43,
+  "source_application_B": 62647,
+  "H1_mechanical_audit": true,
+  "H2_retrieved_quality_over_both_controls": true,
+  "no_independent_scientific_entailment_proof": true,
+  "unannotated_is_annotation_proxy_not_absence_proof": true,
+  "costs": {
+    "known_calls_with_usage": 48,
+    "unknown_or_missing_calls": 0,
+    "known_reference_band_USD": {
+      "low": 0.00692832,
+      "high": 0.01385664
+    },
+    "not_account_bill_or_total_when_usage_missing": true
+  },
+  "rotated_overlap": [
+    {
+      "claim_id": "903",
+      "donor_claim_id": "1163",
+      "same_selected_papers": [],
+      "donor_annotated_gold_papers": []
+    },
+    {
+      "claim_id": "1163",
+      "donor_claim_id": "759",
+      "same_selected_papers": [],
+      "donor_annotated_gold_papers": []
+    },
+    {
+      "claim_id": "577",
+      "donor_claim_id": "535",
+      "same_selected_papers": [],
+      "donor_annotated_gold_papers": []
+    },
+    {
+      "claim_id": "219",
+      "donor_claim_id": "577",
+      "same_selected_papers": [],
+      "donor_annotated_gold_papers": []
+    },
+    {
+      "claim_id": "921",
+      "donor_claim_id": "1241",
+      "same_selected_papers": [],
+      "donor_annotated_gold_papers": []
+    },
+    {
+      "claim_id": "535",
+      "donor_claim_id": "142",
+      "same_selected_papers": [],
+      "donor_annotated_gold_papers": []
+    },
+    {
+      "claim_id": "185",
+      "donor_claim_id": "921",
+      "same_selected_papers": [],
+      "donor_annotated_gold_papers": []
+    },
+    {
+      "claim_id": "142",
+      "donor_claim_id": "903",
+      "same_selected_papers": [],
+      "donor_annotated_gold_papers": []
+    },
+    {
+      "claim_id": "1298",
+      "donor_claim_id": "1179",
+      "same_selected_papers": [],
+      "donor_annotated_gold_papers": []
+    },
+    {
+      "claim_id": "1179",
+      "donor_claim_id": "185",
+      "same_selected_papers": [],
+      "donor_annotated_gold_papers": []
+    },
+    {
+      "claim_id": "1241",
+      "donor_claim_id": "219",
+      "same_selected_papers": [],
+      "donor_annotated_gold_papers": []
+    },
+    {
+      "claim_id": "1280",
+      "donor_claim_id": "1298",
+      "same_selected_papers": [],
+      "donor_annotated_gold_papers": []
+    },
+    {
+      "claim_id": "1019",
+      "donor_claim_id": "1320",
+      "same_selected_papers": [],
+      "donor_annotated_gold_papers": []
+    },
+    {
+      "claim_id": "759",
+      "donor_claim_id": "1019",
+      "same_selected_papers": [],
+      "donor_annotated_gold_papers": []
+    },
+    {
+      "claim_id": "1320",
+      "donor_claim_id": "540",
+      "same_selected_papers": [],
+      "donor_annotated_gold_papers": []
+    },
+    {
+      "claim_id": "540",
+      "donor_claim_id": "1280",
+      "same_selected_papers": [],
+      "donor_annotated_gold_papers": []
+    }
+  ],
+  "descriptive_intervals": {
+    "empty": {
+      "point": 0.25,
+      "low": 0.10182067491213048,
+      "high": 0.49498316535508774,
+      "method": "Wilson95_descriptive_known_sample_not_independent_generalization"
+    },
+    "retrieved": {
+      "point": 0.5625,
+      "low": 0.331785563988119,
+      "high": 0.7690134759450765,
+      "method": "Wilson95_descriptive_known_sample_not_independent_generalization"
+    },
+    "rotated": {
+      "point": 0.25,
+      "low": 0.10182067491213048,
+      "high": 0.49498316535508774,
+      "method": "Wilson95_descriptive_known_sample_not_independent_generalization"
+    }
+  },
+  "figure_visually_inspected": true
+}

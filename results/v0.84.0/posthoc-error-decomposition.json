@@ -1,0 +1,210 @@
+{
+  "posthoc_only_not_new_science_or_new_calls": true,
+  "selection_or_prompt_not_changed": true,
+  "classes": {
+    "SUPPORT": {
+      "denominator": 6,
+      "correct": 1
+    },
+    "CONTRADICT": {
+      "denominator": 6,
+      "correct": 5
+    },
+    "INSUFFICIENT": {
+      "denominator": 4,
+      "correct": 3
+    }
+  },
+  "annotated_partition": {
+    "annotated_paper_not_selected": 5,
+    "annotated_paper_selected_verdict_wrong": 2,
+    "annotated_correct_with_complete_rationale": 5
+  },
+  "rows": [
+    {
+      "claim_id": "540",
+      "expected_verdict": "SUPPORT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "grounded_annotated_correct": false,
+      "annotated_paper_count": 1,
+      "selected_annotated_papers": 0,
+      "selected_papers": 3,
+      "selected_original_record_B": 4063
+    },
+    {
+      "claim_id": "759",
+      "expected_verdict": "CONTRADICT",
+      "predicted_verdict": "SUPPORT",
+      "correct": false,
+      "grounded_annotated_correct": false,
+      "annotated_paper_count": 1,
+      "selected_annotated_papers": 1,
+      "selected_papers": 2,
+      "selected_original_record_B": 4069
+    },
+    {
+      "claim_id": "1280",
+      "expected_verdict": "INSUFFICIENT",
+      "predicted_verdict": "SUPPORT",
+      "correct": false,
+      "grounded_annotated_correct": null,
+      "annotated_paper_count": 0,
+      "selected_annotated_papers": 0,
+      "selected_papers": 2,
+      "selected_original_record_B": 3785
+    },
+    {
+      "claim_id": "1179",
+      "expected_verdict": "INSUFFICIENT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": true,
+      "grounded_annotated_correct": null,
+      "annotated_paper_count": 0,
+      "selected_annotated_papers": 0,
+      "selected_papers": 3,
+      "selected_original_record_B": 4050
+    },
+    {
+      "claim_id": "1298",
+      "expected_verdict": "SUPPORT",
+      "predicted_verdict": "SUPPORT",
+      "correct": true,
+      "grounded_annotated_correct": true,
+      "annotated_paper_count": 1,
+      "selected_annotated_papers": 1,
+      "selected_papers": 2,
+      "selected_original_record_B": 3700
+    },
+    {
+      "claim_id": "535",
+      "expected_verdict": "INSUFFICIENT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": true,
+      "grounded_annotated_correct": null,
+      "annotated_paper_count": 0,
+      "selected_annotated_papers": 0,
+      "selected_papers": 3,
+      "selected_original_record_B": 3983
+    },
+    {
+      "claim_id": "1019",
+      "expected_verdict": "SUPPORT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "grounded_annotated_correct": false,
+      "annotated_paper_count": 1,
+      "selected_annotated_papers": 0,
+      "selected_papers": 3,
+      "selected_original_record_B": 3979
+    },
+    {
+      "claim_id": "219",
+      "expected_verdict": "CONTRADICT",
+      "predicted_verdict": "CONTRADICT",
+      "correct": true,
+      "grounded_annotated_correct": true,
+      "annotated_paper_count": 1,
+      "selected_annotated_papers": 1,
+      "selected_papers": 3,
+      "selected_original_record_B": 3981
+    },
+    {
+      "claim_id": "1320",
+      "expected_verdict": "CONTRADICT",
+      "predicted_verdict": "CONTRADICT",
+      "correct": true,
+      "grounded_annotated_correct": true,
+      "annotated_paper_count": 1,
+      "selected_annotated_papers": 1,
+      "selected_papers": 4,
+      "selected_original_record_B": 4005
+    },
+    {
+      "claim_id": "1163",
+      "expected_verdict": "SUPPORT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "grounded_annotated_correct": false,
+      "annotated_paper_count": 1,
+      "selected_annotated_papers": 1,
+      "selected_papers": 3,
+      "selected_original_record_B": 3740
+    },
+    {
+      "claim_id": "903",
+      "expected_verdict": "CONTRADICT",
+      "predicted_verdict": "CONTRADICT",
+      "correct": true,
+      "grounded_annotated_correct": true,
+      "annotated_paper_count": 1,
+      "selected_annotated_papers": 1,
+      "selected_papers": 3,
+      "selected_original_record_B": 4021
+    },
+    {
+      "claim_id": "142",
+      "expected_verdict": "CONTRADICT",
+      "predicted_verdict": "CONTRADICT",
+      "correct": true,
+      "grounded_annotated_correct": true,
+      "annotated_paper_count": 1,
+      "selected_annotated_papers": 1,
+      "selected_papers": 2,
+      "selected_original_record_B": 3795
+    },
+    {
+      "claim_id": "1241",
+      "expected_verdict": "SUPPORT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "grounded_annotated_correct": false,
+      "annotated_paper_count": 1,
+      "selected_annotated_papers": 0,
+      "selected_papers": 2,
+      "selected_original_record_B": 3678
+    },
+    {
+      "claim_id": "921",
+      "expected_verdict": "SUPPORT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": false,
+      "grounded_annotated_correct": false,
+      "annotated_paper_count": 1,
+      "selected_annotated_papers": 0,
+      "selected_papers": 3,
+      "selected_original_record_B": 3958
+    },
+    {
+      "claim_id": "185",
+      "expected_verdict": "CONTRADICT",
+      "predicted_verdict": "CONTRADICT",
+      "correct": true,
+      "grounded_annotated_correct": false,
+      "annotated_paper_count": 1,
+      "selected_annotated_papers": 0,
+      "selected_papers": 3,
+      "selected_original_record_B": 3966
+    },
+    {
+      "claim_id": "577",
+      "expected_verdict": "INSUFFICIENT",
+      "predicted_verdict": "INSUFFICIENT",
+      "correct": true,
+      "grounded_annotated_correct": null,
+      "annotated_paper_count": 0,
+      "selected_annotated_papers": 0,
+      "selected_papers": 2,
+      "selected_original_record_B": 3874
+    }
+  ],
+  "all48_citation_schema_pass_does_not_mean_all48_semantically_correct": true,
+  "annotation_is_not_exhaustive_relevance": true,
+  "new_model_calls": 0,
+  "pre_plot_partial_wall_s": 0.0013307000044733286,
+  "full_child_CPU_s": null,
+  "full_child_wall_s": null,
+  "parent_tool_wall_s": 0.9189081,
+  "timer_provenance": "Parent exec_command receipt wall0.9189081 includes full shell+Python+plot; no dedicated full child wall/CPU timer was recorded for this added posthoc script. Pre-plot partial is not full analysis wall; original formal/postanalysis timers untouched.",
+  "figure_visually_inspected": true
+}

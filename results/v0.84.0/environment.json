@@ -1,0 +1,10 @@
+{
+  "python": "3.13.12",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "local_CPU_storage_retrieval_only": true,
+  "answer_generation": "remote_user_API",
+  "cold_cache": null,
+  "cross_machine": null,
+  "SSD_physical_B": null,
+  "full_system_IO": null
+}

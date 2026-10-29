@@ -6,7 +6,15 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.83.0 · 固定跨度准入四法对照
+## 当前候选：v0.84.0 · 模型API证据干预
+
+16个已见科学主张×三条件共48次真实API完成。空证据与其他题证据均4/16正确，检索证据9/16；12有标注问题中“判定+完整标注依据”分别0/12、0/12和5/12。独立原文/引用核验通过，冻结质量门槛通过；但16题较小、p=.125，不称普遍或显著提升。SUPPORT仅1/6，5题未取回标注论文，完整错误分解保留。
+
+![API三条件对照](results/v0.84.0/api-intervention.png)
+
+530检查529pass/1权限skip；[详实报告](results/v0.84.0/SUMMARY.md) · [协议](docs/API-EVIDENCE-INTERVENTION.md)。原source/prompt/response/密钥私存，48次新预算已用完，不额外调用；完整发行核验待完成，当前完整交付仍为v0.83.0。引用身份不是科学蕴含，尚未实现无限上下文。
+
+## v0.83.0 · 固定跨度准入四法对照
 
 48worker/384证明/768成员/192控制，以及独立48根/56172叶/56220文件恢复通过。固定span>=64候选主4096每轮80命中、零淘汰，额外状态约为全树1.90%；但算法wall仍为全树1.74–2.00倍、CPU1.33–2.50倍，H1/H2=True、H3/joint=False。完整RSS比0.941–0.956，不能把额外状态降幅当总RAM或压缩收益。
 

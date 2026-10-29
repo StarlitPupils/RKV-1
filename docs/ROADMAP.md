@@ -508,3 +508,7 @@ tag4f3264fd66dbe7a71b350eaf995a904317e133a4、ReleaseCI40829377990、finalproof 
 ## v0.84候选：API证据干预
 
 用户授权新48call×512out、失败0retry，密钥只用户环境。16已见SciFact题×empty/retrieved/固定环rotated，排除旧API12题和train重复；source/citation/annotation分开核验。当前13owned机制检查通过，真实API调用0；源码协议输入freeze/全CI后才正式，未发布。不把byte绑定当NLI，不把unannotated当无证据证明。
+
+## v0.84实测（完整发行待核验）
+
+唯一48次真实API全部完成、原文与引用独立audit通过：empty4/16、retrieved9/16、rotated4/16；annotated判定+完整rationale为0/12、5/12、0/12，H1/H2True。仅16已见题，p=.125，SUPPORT1/6，5gold论文未取回，2已取回但判定错，不能称科学NLI已解决或普遍收益。新48call已用完，禁止额外付费调用。
