@@ -6,13 +6,13 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 最新实验：v0.88.0 · 两批回答的失败定位（发行待核验）
+## 当前版本：v0.88.0 · 两批回答的失败定位
 
 原32问题、96回答审计完成，0新API。两批各12有标注检索题：第一批缺标注论文5题、已有论文仍判定错2题；第二批分别3题和2题。缺来源占完整依据失败的5/7及3/5，两批多数假设成立，但不能据此推断加预算或补论文一定改善回答。
 
 ![原回答失败定位](results/v0.88.0/failure-diagnostic.png)
 
-556检查555pass/1权限skip，worker与独立审计各89来源绑定通过；[详实报告](results/v0.88.0/SUMMARY.md) · [协议](docs/API-FAILURE-DIAGNOSTIC.md)。仅已见事后诊断，发行核验待完成，下方v0.87为完整交付版本。
+556检查555pass/1权限skip，worker与独立审计各89来源绑定通过；[详实报告](results/v0.88.0/SUMMARY.md) · [协议](docs/API-FAILURE-DIAGNOSTIC.md)。仅已见事后诊断；[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.88.0)实际7份资产SHA、67Python+HTML/全部源码、仓库外发行wheel/current native及新旧sdist复测均通过，第8份proof已重下载核验。
 
 ## 当前版本：v0.87.0 · 第二批问题API复测
 

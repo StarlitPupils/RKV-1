@@ -556,3 +556,7 @@ tagdcb7be19c281117da844a11ac1bcb3c67b10ef41/ReleaseCI40854945377/finalproofcbb74
 ### v0.88实测（发行待核验）
 
 96原输出/32问题/24主有标注retrieved，worker及独立source/citation/audit各89绑定、125625应用B通过；H1True，H2两批True。缺来源5/7及3/5为grounded失败多数；已有来源仍判定错各2，保留。0新API/训练/检索，先前已见结果的定位不称新的科学或因果验证。
+
+### v0.88完整交付确认
+
+tagd07671b6826aa4a0130146914df9aa5e8e5dc853、ReleaseCI40860126424、finalproof48d6ad9965e14e0a98826eb07908d2d3a147fd1128b9fb6a79f2acd954513554。实际7资产SHA/67Python+HTML/全部源码/物理仓库外实际发行wheel-currentnative与96owned响应诊断和所有旧sdist/proof8通过。原科学结果、tag、资产、计时不变；仅更新主分支核验状态。
