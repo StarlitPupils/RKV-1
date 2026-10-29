@@ -524,3 +524,11 @@ tag506dd5e1cc3d15400e30c79707154d8d72ceaa33，proofd6fe01703d81a2cd0033c41b32eed
 ## v0.85实测（发行待核验）
 
 H1原排序/选集/字节与计量通过，H2原单record自身体积>4096B多数命题False（0/5）。5漏选rank2/2/4/7/225，都是当时剩余不足，不应混称结构性超长或纯预算因果。原16case/43selected+12gold、worker与独立analysis各48binding/fullcorpus1均核，0新API。图已实际看，完整发行待收尾。
+
+### v0.85完整交付
+
+tagaca19bfb3598c787ae3a9da941122defde3c592b，原proofbf3479d10dae42fe30ce68f5bca4f4498827878bebcb51629cdc5e114e0fe7f4，actual7SHA/全源码/外actualwheel-currentnative/owned-new/alllegacyactualsdist/proof8通过；随后追加scope人工文案更正资产，现共9asset，原proof/科学结果不变。
+
+## v0.86候选：固定预算的原记录分数密度
+
+三角色旧lexical/精确Fraction score_per_byte/length_only，原12wholepaper4096B不改；primary270问题168annotated/102质量null，排除旧API28题和train重合但仍是已见dev。9freshworkers/2430本机query、0新API/训练，严格先freeze/CI再评分；当前8必要owned通过，真实结果未知，未发布。

@@ -6,13 +6,13 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前候选：v0.85.0 · 排名与原记录准入诊断
+## 当前版本：v0.85.0 · 排名与原记录准入诊断
 
 原16问题的词法排序、43旧选中文献、12标注论文与原字节完全匹配。5个漏选来源中，没有一条自身超过4096B，原先“多数因为单篇太大”的假设失败（0/5）；其余预算不足与排序相互影响，原rank包含2、2、4、7和225。不能据此声称加预算必有收益。
 
 ![排名和原记录准入](results/v0.85.0/api-admission-audit.png)
 
-536检查535pass/1权限skip，0新模型调用；[详实报告](results/v0.85.0/SUMMARY.md) · [协议](docs/API-ADMISSION-AUDIT.md)。这是已见事后解释，H1True/H2False，完整发行核验待完成，最新完整交付仍v0.84.0。
+536检查535pass/1权限skip，0新模型调用；[详实报告](results/v0.85.0/SUMMARY.md) · [协议](docs/API-ADMISSION-AUDIT.md)。这是已见事后解释，H1True/H2False，[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.85.0)原7资产SHA/源码/外安装/第8proof重下载通过，另有仅人工scope文案的第9份追加更正，原数据/结果/原proofSHA不变。
 
 ## v0.84.0 · 模型API证据干预
 
