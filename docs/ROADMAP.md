@@ -475,3 +475,8 @@ v0.79全部发行核验已通过，原固定8消息净增340600B负结果不改�
 
 
 v0.80实测：24case/192packet384member、fresh24根/28086叶/28110file恢复和96控制通过，H1/H2True，但算法phase5.4–5.6x/CPU6–7x，parent回退，H3/jointFalse。额外状态比.00062255不是RSS，RSS比.938–.946；无生产速度/压缩/NLI收益。报告results/v0.80.0/SUMMARY.md，发行核验待完成。
+
+
+## v0.81候选：64KiB metadata subtree cache
+
+v080已全部发行核验，其省状态但phase慢5.4–5.6x负结果保持。候选固定完整cache-owned graph操作后上界65536B，provisional/全prover/Scope/RSS另列；36worker ABC/BCA/CAB，同8迟到请求，正确性、C/A常驻RAM和完整phase CPU/wall/parent联合门槛先冻结。不得以删index/只限hash payload隐藏费用。协议docs/BOUNDED-MEMBERSHIP.md；尚未正式/发布。
