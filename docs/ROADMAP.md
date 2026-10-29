@@ -500,3 +500,11 @@ v081发行资产/外部安装/proof已齐。对原全部12Ccase/96请求192成�
 ## v0.83实验结果（发行待核验）
 
 固定span>=64四法48worker/384packet768成员192控制、fresh48root56172leaf56220file通过。D主4096每轮80命中/0淘汰/10311hashnode；初末状态45634/45690B、cache max49368B，D/A额外状态约1.90%，RSS约.941–.956。wall仍1.74–2.00x/CPU1.33–2.50x，H3/jointFalse；完整本地/实际发行资产安装proof仍待收尾，不称交付或生产/推理收益。
+
+### v0.83完整交付确认
+
+tag4f3264fd66dbe7a71b350eaf995a904317e133a4、ReleaseCI40829377990、finalproof d67e7b67861a98e2c043a5ee15dd89902e22a2a5fa45fa2d9ae528648f5df0e9，实际7SHA/67Python+HTML/allsource/外actualwheel-currentnative/newspan/alllegacyactualsdist/proof8通过；旧实验不变。
+
+## v0.84候选：API证据干预
+
+用户授权新48call×512out、失败0retry，密钥只用户环境。16已见SciFact题×empty/retrieved/固定环rotated，排除旧API12题和train重复；source/citation/annotation分开核验。当前13owned机制检查通过，真实API调用0；源码协议输入freeze/全CI后才正式，未发布。不把byte绑定当NLI，不把unannotated当无证据证明。

@@ -1,0 +1,24 @@
+{
+  "currency": "USD",
+  "unit_tokens": 1000000,
+  "model_alias": "deepseek-flash",
+  "observed_UTC": "2026-10-29T06:28:17.715694+00:00",
+  "source": "https://api-docs.deepseek.com/quick_start/pricing/?push_animated=1&theme=light&webview_progress_bar=1",
+  "official_reference_rates": {
+    "input_cache_hit": {
+      "low": 0.003,
+      "high": 0.006
+    },
+    "input_cache_miss": {
+      "low": 0.15,
+      "high": 0.3
+    },
+    "output": {
+      "low": 0.6,
+      "high": 1.2
+    }
+  },
+  "band_only_not_account_bill": true,
+  "peak_holiday_account_discount_unknown": true,
+  "refresh_before_formal_if_changed": true
+}

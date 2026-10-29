@@ -6,13 +6,13 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前候选：v0.83.0 · 固定跨度准入四法对照
+## 当前版本：v0.83.0 · 固定跨度准入四法对照
 
 48worker/384证明/768成员/192控制，以及独立48根/56172叶/56220文件恢复通过。固定span>=64候选主4096每轮80命中、零淘汰，额外状态约为全树1.90%；但算法wall仍为全树1.74–2.00倍、CPU1.33–2.50倍，H1/H2=True、H3/joint=False。完整RSS比0.941–0.956，不能把额外状态降幅当总RAM或压缩收益。
 
 ![跨度准入完整比较](results/v0.83.0/span-membership.png)
 
-517检查516pass/1权限skip；[详实报告](results/v0.83.0/SUMMARY.md) · [冻结协议](docs/SPAN-ADMISSION.md)。图已实际视觉检查，完整发行核验待完成；当前完整交付仍为v0.82.0。不改阈值/预算/请求数追正，不称科学NLI、回答或无限上下文收益。
+517检查516pass/1权限skip；[详实报告](results/v0.83.0/SUMMARY.md) · [冻结协议](docs/SPAN-ADMISSION.md)。图已实际视觉检查；[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.83.0)的实际7资产SHA、67Python+HTML/全部源码、仓库外实际发行安装和第8份proof重下载均通过。不改阈值/预算/请求数追正，不称科学NLI、回答或无限上下文收益。
 
 ## v0.82.0 · 缓存使用前淘汰诊断
 
