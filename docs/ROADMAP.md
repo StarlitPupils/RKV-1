@@ -592,3 +592,7 @@ tag58411a4d58b2b9850045f464b0bc0cb2889ffb0d、ReleaseCI40874134052、finalproofb
 ### v0.91实测（发行待核验）
 
 固定6HEAD/3对无认证根路径，system/direct各3/3观测401HTTP、0非响应错误，H1True/H2False，0模型调用。过去v089原因、认证有效、模型生成可用性均未证明；不把相近小样本墙钟当可靠提速。独立metadata/计数/原始时钟audit通过，图已实际看。
+
+### v0.91完整软件交付确认
+
+tag80d8179a2328bea5bc5be105b24a1aa40fb21f61、ReleaseCI40885089220、finalproof36cca54492ad8bc01a255da2ae3a20120dd4f873f92601a98c9f9bf7d95b4f6f，实际7资产SHA/67Python+HTML/全部源码/仓库外实际发行wheel-currentnative/新6FAKE HEAD及全部旧sdist/proof8通过。仅更新主分支交付状态，原协议、6次观测、源码、tag、资产和计时不变；401不表示认证成功或生成可用，也不解释v089旧失败。
