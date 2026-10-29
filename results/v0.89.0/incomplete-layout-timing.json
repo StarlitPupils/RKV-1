@@ -1,0 +1,7 @@
+{
+  "presentation_only_no_API_or_scoring_rerun": true,
+  "reason": "Make incomplete denominator and response acceptance explicit",
+  "wall_s": 0.6111426001880318,
+  "CPU_s": 0.609375,
+  "input_aggregate_SHA": "3251228c4e442643a85ef3565b0437ed8754792c3133788109b265fdbc62beb2"
+}

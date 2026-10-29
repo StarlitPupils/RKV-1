@@ -1,0 +1,14 @@
+{
+  "H1_all48_complete_accepted_original_source_budget_audit": false,
+  "H2_oracle_quality_over_fresh_retrieval": false,
+  "all48completed": false,
+  "planned_calls": 48,
+  "attempted_calls": 7,
+  "figure_visually_inspected": true,
+  "oracle_annotation_aware_not_deployable": true,
+  "no_unseen_scientific_entailment_or_infinite_context_claim": true,
+  "transport_error_calls": 1,
+  "accepted_responses": 6,
+  "unattempted": 41,
+  "efficacy_comparison_inconclusive": true
+}

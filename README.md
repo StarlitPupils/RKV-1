@@ -6,6 +6,14 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
+## 最新实验：v0.89.0 · 同批证据对照未完成（发行待核验）
+
+计划24题×两条件48次API，第7次请求出现URLError，按协议停止：7次尝试、6份响应、41次未尝试。没有重试或补齐，H1/H2未通过，不能据此比较两组有效性。原48分母、失败记录和独立审计保留；后续仅报告与发行工程。
+
+![未完成轮的完整分母](results/v0.89.0/oracle-intervention.png)
+
+562检查561pass/1权限skip；[详实报告](results/v0.89.0/SUMMARY.md) · [冻结协议](docs/API-ORACLE-INTERVENTION.md)。科学实验未完成与软件发布是否通过分别记录；下方v0.88为最新完整交付版本。
+
 ## 当前版本：v0.88.0 · 两批回答的失败定位
 
 原32问题、96回答审计完成，0新API。两批各12有标注检索题：第一批缺标注论文5题、已有论文仍判定错2题；第二批分别3题和2题。缺来源占完整依据失败的5/7及3/5，两批多数假设成立，但不能据此推断加预算或补论文一定改善回答。

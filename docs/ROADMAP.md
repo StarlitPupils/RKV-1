@@ -564,3 +564,7 @@ tagd07671b6826aa4a0130146914df9aa5e8e5dc853、ReleaseCI40860126424、finalproof4
 ## v0.89候选：实际检索与标注论文对照的同批干预
 
 用户明确新增批准48次512out/0retry，24有标注原问题×实际检索/annotation-aware整论文控制，重测两条件而不拿新oracle对旧服务回答。固定12/4096不调，oracle不是可部署检索器。新API0；先代码/协议/inputSHA/exactCI冻结再唯一正式，H1全48机械接受，H2oracle在24总分母的判定及依据均严格提高，否则False。
+
+### v0.89原正式轮未完成（发行待核验）
+
+第7预留请求URLError，7attempted/6response/41missing，按协议停止且0重试。H1/H2False，不能从缺失不对称推断检索或oracle效能。原slot/source/响应和原48分母独立审计通过，分析前quota接口暂时失败恢复后仅补未开始的audit，未重发API。剩余41授权名额未使用但本轮已关闭。
