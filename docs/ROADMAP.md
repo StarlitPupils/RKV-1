@@ -488,3 +488,7 @@ v081实测补充：36worker和独立fullaudit通过，H1/H2True，主4096 C cach
 ## v0.82候选：v081缓存0命中的只读事后诊断
 
 v081发行资产/外部安装/proof已齐。对原全部12Ccase/96请求192成员冻结原输入SHA，replay要求initial/final trace及全部packet字节保真，观察原cache key是否在使用前被淘汰。observer CPU/RSS独立，不回填旧性能，不测新策略/不称新科学。507检查待通过，freeze/CI后才能唯一replay。协议docs/CACHE-REPLAY.md。
+
+## v0.82.0 · 已见缓存事后诊断
+
+12case/96请求保真；主4096每query初始142相关节点均在查找前丢失，H1/H2通过。独立12根/14043叶/14055file/192成员原bytes通过。没有新策略/科学/提速，旧负结果保持，完整发行待核验。

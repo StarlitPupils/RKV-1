@@ -6,7 +6,15 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.81.0 · 有界 metadata 子树缓存
+## 当前候选：v0.82.0 · 缓存使用前淘汰诊断
+
+原12case/96请求的保真重放通过，原初末trace、96证明和192成员原字节一致。主4096的24个请求每次开始有142个相关缓存节点，但实际查找前全部被淘汰，解释零命中；H1/H2通过。已见任务事后诊断，没有新策略、提速或问答收益，旧负结果不变。
+
+![使用前淘汰诊断](results/v0.82.0/cache-replay.png)
+
+507检查506pass/1权限skip；[详实报告](results/v0.82.0/SUMMARY.md) · [协议](docs/CACHE-REPLAY.md)。发行资产和仓库外安装待完整核验，当前完整交付仍为v0.81.0。
+
+## v0.81.0 · 有界 metadata 子树缓存
 
 36worker/288packet576成员/144控制和fresh36根、42129叶、42165文件恢复通过。完整cache-owned graph操作后上界65536B满足，主4096额外prover状态约为全树2.52%，但cache实际0命中、反复淘汰，算法phase慢15.9–18.5倍，CPU13.3–22倍，parent回退。H1/H2=True、H3/joint=False，负结果保留。
 
