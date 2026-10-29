@@ -25,3 +25,6 @@ H1：全部12case initial/final trace、96原packet SHA/192原bytes、所有file
 整库/全部新旧scripts、原source/CAS/metadata/请求/packet、replay输出、observer引用/临时对象/CPU/RSS、旧science/human/train/models/frames/restored/cache/失败全部分开记费。当前0model/API不抹除旧费，原scientific corpus/模型/恢复/帧/私研/模板课程个人报告密钥不公开；原owned fixture重建方式沿v081公开代码，私有临时数据不打包。物理SSD/全系统IO/coldcache/crossmachine未知null。E3净收益/E4整体/真实长期对话/科学NLI/回答/无限上下文未完成。
 
 授权参考reset1793258458，实际100%/ordinary不允许/到参考reset或确认下一窗口立即保存准确partial删除续跑，不跨窗。时间不足优先收尾已启动版本。
+
+
+评分前记录完备性补充：显式保存initial_keys/initial_relevant_keys/initial_keys_asked/initial_keys_lost_before_lookup四个range列表，允许后置独立核set包含关系及histogram，而不只相信聚合数。原等待CI的controller已在输出目录不存在、0真实replay时中止；此次只补只读输出字段，不改cache算法/参数/输入，需新source freeze和exactCI，旧等待日志保留。

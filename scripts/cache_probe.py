@@ -24,7 +24,7 @@ class CacheProbe:
  def end(self):
   if not self.running:raise ValueError('No query active')
   self.running=False;assert self.lookups==self.hits+self.misses and self.target.hits-self.initial_hits==self.hits and self.target.misses-self.initial_misses==self.misses and self.lost_initial<=self.asked_initial<=self.relevant
-  return {'lookups':self.lookups,'hits':self.hits,'misses':self.misses,'initial_entries':len(self.initial),'initial_relevant_entries':len(self.relevant),'initial_relevant_asked_unique':len(self.asked_initial),'initial_entries_lost_before_lookup_unique':len(self.lost_initial),'initial_entries_lost_before_lookup_events':self.lost_events,'initial_relevant_not_asked':len(self.relevant-self.asked_initial),'initial_span_histogram':{str(k):v for k,v in sorted(self.hist.items())}}
+  return {'lookups':self.lookups,'hits':self.hits,'misses':self.misses,'initial_entries':len(self.initial),'initial_relevant_entries':len(self.relevant),'initial_relevant_asked_unique':len(self.asked_initial),'initial_entries_lost_before_lookup_unique':len(self.lost_initial),'initial_entries_lost_before_lookup_events':self.lost_events,'initial_relevant_not_asked':len(self.relevant-self.asked_initial),'initial_span_histogram':{str(k):v for k,v in sorted(self.hist.items())},'initial_keys':[list(k) for k in sorted(self.initial)],'initial_relevant_keys':[list(k) for k in sorted(self.relevant)],'initial_keys_asked':[list(k) for k in sorted(self.asked_initial)],'initial_keys_lost_before_lookup':[list(k) for k in sorted(self.lost_initial)]}
  def __exit__(self,*args):
   global _ACTIVE
   NodeLRU.get=self.original;_ACTIVE=False;self.target=None;self.running=False;self.initial=frozenset();self.relevant=set()

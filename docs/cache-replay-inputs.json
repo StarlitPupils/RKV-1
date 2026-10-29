@@ -607,8 +607,8 @@
   "replay_retries": 0,
   "files": {
     "scripts/cache_probe.py": {
-      "bytes": 2212,
-      "sha256": "8612fb7dff8e019d30b11d05e6877b115cee7a792f4597a72580d8a89b3a124d"
+      "bytes": 2478,
+      "sha256": "86464aa844c7c1d7e3dbc6f7b489349e7eb948b92f2a04fdc764a2db28ea7801"
     },
     "scripts/replay_cache.py": {
       "bytes": 3993,
@@ -623,8 +623,8 @@
       "sha256": "072f31d87d5a073267fd476d587b78514924fed60dc67acb30aa4500bf598ea8"
     },
     "docs/CACHE-REPLAY.md": {
-      "bytes": 4238,
-      "sha256": "3137b54f440e0e8e3fb1cefbdfd9d4389147417be4b37ae8264404d48cbb7e06"
+      "bytes": 4671,
+      "sha256": "2bc439f3e9d6764b21bfb44689afbed8604d610d38721ce1caf718578114e10e"
     },
     "scripts/node_lru.py": {
       "bytes": 3411,
