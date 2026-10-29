@@ -6,13 +6,13 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前候选：v0.79.0 · 选中来源的短成员证明
+## 当前版本：v0.79.0 · 选中来源的短成员证明
 
 24成员/96篡改与预算拒绝、历史SID和14043叶metadata/14055原文件复核通过。主4096短消息显著变小，但完整index+全部新增源码和固定8条消息后成本增加约34万B，H1=True/H2=True/H3=False/joint=False；负结果保留，不增加摊销次数追正。
 
 ![短成员与完整费用](results/v0.79.0/catalog-membership.png)
 
-需要独立可信anchor SHA/SID/path和初次完整manifest校验，不是仅凭SID自认证、逻辑DAG/NLI/压缩或回答收益。485检查484pass/1权限skip；[详实报告](results/v0.79.0/SUMMARY.md) · [协议](docs/CATALOG-MEMBERSHIP.md)。发行核验待完成。
+需要独立可信anchor SHA/SID/path和初次完整manifest校验，不是仅凭SID自认证、逻辑DAG/NLI/压缩或回答收益。485检查484pass/1权限skip；[详实报告](results/v0.79.0/SUMMARY.md) · [协议](docs/CATALOG-MEMBERSHIP.md)。[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.79.0)实际7资产SHA/67Python+HTML/所有源码/物理仓库外安装与最终proof重下载均已通过。
 
 ## v0.78.0 · 显式同快照读取 SDK
 

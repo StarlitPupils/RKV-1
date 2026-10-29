@@ -467,3 +467,8 @@ v0.78已完整发行核验。下一项针对v0.74的全eligible目录通信放�
 
 
 v0.79实验补充：固定12worker完成且独立14043叶/14055file恢复通过。H1/H2=True，但完整index+新代码+固定8消息H3=False/joint=False；仅消息小不能代替净收益，不变更复用次数追正。详实报告results/v0.79.0/SUMMARY.md；发行核验待完成。
+
+
+## v0.80候选：迟到成员请求的RAM/CPU取舍
+
+v0.79全部发行核验已通过，原固定8消息净增340600B负结果不改。新候选同held Scope/初始完整metadata与可信anchor，A保留全树/B每迟到请求重遍历；24worker/8双path/192packet/384成员，RAM与完整算法phase CPU/wall/parent gate分开，不用删除诊断文件声称压缩。必要owned测试已过，全回归/精确CI后才能正式。协议docs/LATE-MEMBERSHIP.md，当前尚未正式或发布。
