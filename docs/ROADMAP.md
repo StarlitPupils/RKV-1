@@ -584,3 +584,7 @@ tag23f7eee03d86b3bdbc4c3724918eeecdc1a513af/ReleaseCI40866699127/finalprooff5480
 ### v0.90完整软件交付确认
 
 tag58411a4d58b2b9850045f464b0bc0cb2889ffb0d、ReleaseCI40874134052、finalproofb64c5bfd6bc17eb54b5b4a76d42d8f44a13c37b0ffaabec5a3646c54fff26b6b，实际7资产SHA/67Python+HTML/全部源码/仓库外实际发行wheel-currentnative/新生命周期owned和全部旧sdist/proof8通过。原实验、tag、资产、计时不改，本段仅更新主分支核验状态。v089科学7/6/41继续关闭，机械通过不当推理收益。
+
+## v0.91候选：固定静态源HEAD的访问路径观测
+
+用户在新实际窗口1793298289明确继续。一个fresh worker、system/direct三轮固定6次HEAD/15s/0retry，仅https://api.deepseek.com/根路径、无密钥/认证/正文/redirect/模型调用；H1请求与原计时/隐私字段守恒，H2direct少于system非HTTP响应失败仅描述当前小样本。不能回溯解释v089或保证生成服务。先freeze/exactCI再正式。

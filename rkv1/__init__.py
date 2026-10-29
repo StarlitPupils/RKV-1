@@ -2,5 +2,5 @@
 
 from .core import Archive, assert_tree_equal, pack, unpack, verify
 
-__version__ = "0.90.0"
+__version__ = "0.91.0"
 __all__ = ["Archive", "assert_tree_equal", "pack", "unpack", "verify"]
