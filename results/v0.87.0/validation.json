@@ -1,0 +1,10 @@
+{
+  "H1_independent_mechanical_audit": true,
+  "H2_retrieved_quality_over_both_controls": true,
+  "all48completed": true,
+  "planned_calls": 48,
+  "attempted_calls": 48,
+  "figure_visually_inspected": true,
+  "scientific_entailment_proven": false,
+  "unknown_data_generalization_proven": false
+}

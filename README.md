@@ -6,6 +6,14 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
+## 最新实验：v0.87.0 · 第二批问题API复测（发行待核验）
+
+另一批16题、三条件共48次真实API及独立审计完成：检索证据12/16正确，空证据和其他题证据各4/16；12有标注题的判定加完整依据为7/12对两组0/12。固定门槛通过，仍是项目已见公开数据，不代表未知科学泛化或无限上下文。
+
+![第二批API复测](results/v0.87.0/api-intervention.png)
+
+549检查548pass/1权限skip；[详实报告](results/v0.87.0/SUMMARY.md) · [协议](docs/API-EVIDENCE-REPLICATION.md)。本批48次额度全部使用，图已实际检查，打包与实际发行核验待完成。下方v0.86为最新完整交付版本。
+
 ## 当前版本：v0.86.0 · 固定预算的来源选择三法对照
 
 270个已见问题、三方法各三轮共2430本机查询完成。168有标注问题中，旧词法宏来源recall为76.24%、完整覆盖126题；按分数/原字节排序降至57.86%、95题，长度控制为1.19%、2题。新候选算法wall约4.54–4.74倍，质量与时间联合门槛失败，保留旧默认方法。

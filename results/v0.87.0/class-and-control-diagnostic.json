@@ -1,0 +1,114 @@
+{
+  "posthoc_existing48outputs_only": true,
+  "new_model_calls": 0,
+  "new_retrieval_trials": 0,
+  "no_parameter_or_donor_changes": true,
+  "classes": [
+    {
+      "condition": "empty",
+      "gold_label": "SUPPORT",
+      "denominator": 6,
+      "correct": 0,
+      "confusion": {
+        "SUPPORT": 0,
+        "CONTRADICT": 0,
+        "INSUFFICIENT": 6
+      }
+    },
+    {
+      "condition": "empty",
+      "gold_label": "CONTRADICT",
+      "denominator": 6,
+      "correct": 0,
+      "confusion": {
+        "SUPPORT": 0,
+        "CONTRADICT": 0,
+        "INSUFFICIENT": 6
+      }
+    },
+    {
+      "condition": "empty",
+      "gold_label": "INSUFFICIENT",
+      "denominator": 4,
+      "correct": 4,
+      "confusion": {
+        "SUPPORT": 0,
+        "CONTRADICT": 0,
+        "INSUFFICIENT": 4
+      }
+    },
+    {
+      "condition": "retrieved",
+      "gold_label": "SUPPORT",
+      "denominator": 6,
+      "correct": 5,
+      "confusion": {
+        "SUPPORT": 5,
+        "CONTRADICT": 0,
+        "INSUFFICIENT": 1
+      }
+    },
+    {
+      "condition": "retrieved",
+      "gold_label": "CONTRADICT",
+      "denominator": 6,
+      "correct": 3,
+      "confusion": {
+        "SUPPORT": 0,
+        "CONTRADICT": 3,
+        "INSUFFICIENT": 3
+      }
+    },
+    {
+      "condition": "retrieved",
+      "gold_label": "INSUFFICIENT",
+      "denominator": 4,
+      "correct": 4,
+      "confusion": {
+        "SUPPORT": 0,
+        "CONTRADICT": 0,
+        "INSUFFICIENT": 4
+      }
+    },
+    {
+      "condition": "rotated",
+      "gold_label": "SUPPORT",
+      "denominator": 6,
+      "correct": 0,
+      "confusion": {
+        "SUPPORT": 0,
+        "CONTRADICT": 0,
+        "INSUFFICIENT": 6
+      }
+    },
+    {
+      "condition": "rotated",
+      "gold_label": "CONTRADICT",
+      "denominator": 6,
+      "correct": 0,
+      "confusion": {
+        "SUPPORT": 0,
+        "CONTRADICT": 0,
+        "INSUFFICIENT": 6
+      }
+    },
+    {
+      "condition": "rotated",
+      "gold_label": "INSUFFICIENT",
+      "denominator": 4,
+      "correct": 4,
+      "confusion": {
+        "SUPPORT": 0,
+        "CONTRADICT": 0,
+        "INSUFFICIENT": 4
+      }
+    }
+  ],
+  "actual_response_model_names": [
+    "deepseek-flash"
+  ],
+  "control_queries_with_selected_overlap": 0,
+  "control_queries_with_annotated_gold_overlap": 0,
+  "input_aggregate_SHA": "6b7e827d673b705eb3e21a8e4e47d104188ce5eeb7ddb3798a2762b047951053",
+  "figure_actually_visually_inspected": true
+}

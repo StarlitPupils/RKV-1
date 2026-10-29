@@ -1,0 +1,1812 @@
+[
+  {
+    "index": 0,
+    "claim_id": "411",
+    "condition": "retrieved",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "INSUFFICIENT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": true,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": null,
+    "usage": {
+      "completion_tokens": 63,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 1143,
+      "prompt_tokens": 1143,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 1206
+    },
+    "response_model": "deepseek-flash",
+    "citations": [
+      [
+        "14924526",
+        1
+      ],
+      [
+        "14924526",
+        2
+      ]
+    ],
+    "request_B": 5456,
+    "request_SHA": "c1afb6621a141ca4d9a19bcd8383c054ea9ef46816b848900b2f9b59121ea814",
+    "response_B": 760,
+    "response_SHA": "95cb210278df651522a5859e890862b31142bf433082ade44665cdac5039d58d",
+    "request_wall_s": 1.2686418001540005,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.00020925,
+      "high": 0.0004185
+    }
+  },
+  {
+    "index": 1,
+    "claim_id": "1319",
+    "condition": "rotated",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "SUPPORT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 43,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 1322,
+      "prompt_tokens": 1322,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 1365
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 5344,
+    "request_SHA": "1f15ecda24913451216bcf72c3e4b60dbe915866bb44baa5ec6469298a247d97",
+    "response_B": 660,
+    "response_SHA": "303e6fbb35f33b3e7cff75f0b98c585bd4277820432d004dfb3052f1858d9d8b",
+    "request_wall_s": 1.1375871999189258,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.0002241,
+      "high": 0.0004482
+    }
+  },
+  {
+    "index": 2,
+    "claim_id": "180",
+    "condition": "retrieved",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "CONTRADICT",
+    "predicted_verdict": "CONTRADICT",
+    "correct": true,
+    "complete_annotated_rationale": true,
+    "annotated_citation_precision": 1.0,
+    "grounded_annotated_correct": true,
+    "usage": {
+      "completion_tokens": 63,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 1195,
+      "prompt_tokens": 1195,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 1258
+    },
+    "response_model": "deepseek-flash",
+    "citations": [
+      [
+        "16966326",
+        5
+      ]
+    ],
+    "request_B": 5360,
+    "request_SHA": "5ce1bdd38d0f96c4edec5769bd5f93d677b69509cca16102473a80b83039c4ac",
+    "response_B": 738,
+    "response_SHA": "6bf2e030ade31b7e58a5a4d46642fa5bf8e6fe6082de2bb122ae8ed51f1040d5",
+    "request_wall_s": 0.8576970000285655,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.00021705,
+      "high": 0.0004341
+    }
+  },
+  {
+    "index": 3,
+    "claim_id": "411",
+    "condition": "rotated",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "INSUFFICIENT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": true,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": null,
+    "usage": {
+      "completion_tokens": 46,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 1262,
+      "prompt_tokens": 1262,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 1308
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 5632,
+    "request_SHA": "45b362cbd927d800688266f974cd08f844184bdbdc36e950304b1f37816d9bdc",
+    "response_B": 668,
+    "response_SHA": "8abc514118c6b5b287b42f93fcdbe9fa10548396a1dfc36c0453c7e7cba1756d",
+    "request_wall_s": 0.8930098998825997,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.0002169,
+      "high": 0.0004338
+    }
+  },
+  {
+    "index": 4,
+    "claim_id": "437",
+    "condition": "rotated",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "INSUFFICIENT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": true,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": null,
+    "usage": {
+      "completion_tokens": 41,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 1155,
+      "prompt_tokens": 1155,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 1196
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 5639,
+    "request_SHA": "c874440a9ad3841666cca59b926b4fd4d8eb8f7095b6e5bf4c4b7a736ee4dc78",
+    "response_B": 665,
+    "response_SHA": "33927ef0980eb9512f89fb3711ee9d4abd93980a5379723f45948e8e01410b55",
+    "request_wall_s": 0.7224868999328464,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.00019785,
+      "high": 0.0003957
+    }
+  },
+  {
+    "index": 5,
+    "claim_id": "770",
+    "condition": "retrieved",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "SUPPORT",
+    "predicted_verdict": "SUPPORT",
+    "correct": true,
+    "complete_annotated_rationale": true,
+    "annotated_citation_precision": 1.0,
+    "grounded_annotated_correct": true,
+    "usage": {
+      "completion_tokens": 52,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 1403,
+      "prompt_tokens": 1403,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 1455
+    },
+    "response_model": "deepseek-flash",
+    "citations": [
+      [
+        "15476777",
+        16
+      ]
+    ],
+    "request_B": 5658,
+    "request_SHA": "8d7b9048d41f49ff4bf4bae1be57e3a1952e0797e17ab6b08aadc6b3c41b46da",
+    "response_B": 698,
+    "response_SHA": "add3f80995557e78e96de5f163e25171910cb209dc16a5e779433745d361bcbb",
+    "request_wall_s": 0.8406463998835534,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.00024165,
+      "high": 0.0004833
+    }
+  },
+  {
+    "index": 6,
+    "claim_id": "852",
+    "condition": "retrieved",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "CONTRADICT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 34,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 1159,
+      "prompt_tokens": 1159,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 1193
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 5350,
+    "request_SHA": "b7b6ff631978921525ac64407abb1e6538622529dc0b92dec1b23a4b9203acaa",
+    "response_B": 647,
+    "response_SHA": "c7164e9532ee1a8e2b01d21338f337bcf8a42971bd883c5fa072ae22020d8fe5",
+    "request_wall_s": 1.0344660999253392,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.00019425,
+      "high": 0.0003885
+    }
+  },
+  {
+    "index": 7,
+    "claim_id": "1245",
+    "condition": "retrieved",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "INSUFFICIENT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": true,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": null,
+    "usage": {
+      "completion_tokens": 33,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 1138,
+      "prompt_tokens": 1138,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 1171
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 5568,
+    "request_SHA": "7b177b619bd27f3cc2fada87c8cfadc414167f43229c126f49d9cf2093c91992",
+    "response_B": 618,
+    "response_SHA": "797a6f349611b2d9b08ea4858a4faabe7b223ced3e8cde19300c1d0030ccc2f8",
+    "request_wall_s": 0.9651442999020219,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.0001905,
+      "high": 0.000381
+    }
+  },
+  {
+    "index": 8,
+    "claim_id": "1089",
+    "condition": "rotated",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "SUPPORT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 53,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 1393,
+      "prompt_tokens": 1393,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 1446
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 5548,
+    "request_SHA": "31aa6477089ad58a2ed3c258e5ac50b2317ba6e22acc70aaaa178a4b6bb1c7d7",
+    "response_B": 689,
+    "response_SHA": "b303f6ec0e6997546a827f5ef235d15662a532fee04c9e5ac2f420efdb6c6556",
+    "request_wall_s": 0.8159767999313772,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.00024074999999999997,
+      "high": 0.00048149999999999994
+    }
+  },
+  {
+    "index": 9,
+    "claim_id": "533",
+    "condition": "retrieved",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "SUPPORT",
+    "predicted_verdict": "SUPPORT",
+    "correct": true,
+    "complete_annotated_rationale": true,
+    "annotated_citation_precision": 1.0,
+    "grounded_annotated_correct": true,
+    "usage": {
+      "completion_tokens": 83,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 1173,
+      "prompt_tokens": 1173,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 1256
+    },
+    "response_model": "deepseek-flash",
+    "citations": [
+      [
+        "12991445",
+        5
+      ],
+      [
+        "12991445",
+        9
+      ],
+      [
+        "12991445",
+        11
+      ]
+    ],
+    "request_B": 5051,
+    "request_SHA": "dca2d023bb2b05ae272939836a3e818a147534b7249ca716796e76434bbd9076",
+    "response_B": 812,
+    "response_SHA": "96649b086353ea61560dfa7105caa65809e9b6eb7d6b4577d4b813f1ad668cf7",
+    "request_wall_s": 0.9017234998755157,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.00022574999999999998,
+      "high": 0.00045149999999999997
+    }
+  },
+  {
+    "index": 10,
+    "claim_id": "1187",
+    "condition": "retrieved",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "SUPPORT",
+    "predicted_verdict": "SUPPORT",
+    "correct": true,
+    "complete_annotated_rationale": true,
+    "annotated_citation_precision": 0.5,
+    "grounded_annotated_correct": true,
+    "usage": {
+      "completion_tokens": 64,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 1282,
+      "prompt_tokens": 1282,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 1346
+    },
+    "response_model": "deepseek-flash",
+    "citations": [
+      [
+        "52873726",
+        2
+      ],
+      [
+        "52873726",
+        3
+      ]
+    ],
+    "request_B": 5732,
+    "request_SHA": "38d6812561f6453d74510317a20060137578866cadb043c0ec5bae5a2cd7c181",
+    "response_B": 744,
+    "response_SHA": "efc24f357dc13f432b0db6d519c85a64d6fe2e2837acf0c93ac5b4234ee5dd93",
+    "request_wall_s": 1.1283028998877853,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.00023069999999999997,
+      "high": 0.00046139999999999994
+    }
+  },
+  {
+    "index": 11,
+    "claim_id": "1319",
+    "condition": "empty",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "SUPPORT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 35,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 164,
+      "prompt_tokens": 164,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 199
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 815,
+    "request_SHA": "0699fccb5147ebcd0a222088ce5ebb34e337aa43f133edaeab5bd0ddc2739991",
+    "response_B": 629,
+    "response_SHA": "236dfb2a3d34c3e8af0ae999c7f214263d8d709b4d98402079fba864ee4cab6a",
+    "request_wall_s": 1.16173700010404,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 4.56e-05,
+      "high": 9.12e-05
+    }
+  },
+  {
+    "index": 12,
+    "claim_id": "232",
+    "condition": "rotated",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "INSUFFICIENT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": true,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": null,
+    "usage": {
+      "completion_tokens": 48,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 1028,
+      "prompt_tokens": 1156,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 1204
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 5114,
+    "request_SHA": "6073e3a11a6aef92acf195e338cf1d4e0e998b84b20d1f6e98bbae4875d9deae",
+    "response_B": 678,
+    "response_SHA": "595606404071b7579a48e013813ef357837f233f1a95ab62484e66fd914d7c4d",
+    "request_wall_s": 0.7248354000039399,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.00018338399999999998,
+      "high": 0.00036676799999999996
+    }
+  },
+  {
+    "index": 13,
+    "claim_id": "1089",
+    "condition": "empty",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "SUPPORT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 45,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 176,
+      "prompt_tokens": 176,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 221
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 833,
+    "request_SHA": "49f45745d193f539f72f74770a630ab584d99790f7ee8cda738a1c2ac63714ae",
+    "response_B": 643,
+    "response_SHA": "130adc9b0663b1eff0df17fe6daa4dd69966456b45dca8075d2af2534872ce76",
+    "request_wall_s": 0.6717054999899119,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 5.34e-05,
+      "high": 0.0001068
+    }
+  },
+  {
+    "index": 14,
+    "claim_id": "922",
+    "condition": "retrieved",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "CONTRADICT",
+    "predicted_verdict": "CONTRADICT",
+    "correct": true,
+    "complete_annotated_rationale": true,
+    "annotated_citation_precision": 1.0,
+    "grounded_annotated_correct": true,
+    "usage": {
+      "completion_tokens": 68,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 1102,
+      "prompt_tokens": 1230,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 1298
+    },
+    "response_model": "deepseek-flash",
+    "citations": [
+      [
+        "17077004",
+        7
+      ],
+      [
+        "17077004",
+        9
+      ]
+    ],
+    "request_B": 5190,
+    "request_SHA": "9036a6c0c63d737ddccfb7f8e9c4c64ccd5533811c9991b1954f72aa9442b3b7",
+    "response_B": 769,
+    "response_SHA": "6138a8b07bfc5e37e9eedb2f43f7fde598ef0472255932042c63194d88f62711",
+    "request_wall_s": 0.9478651999961585,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.00020648399999999997,
+      "high": 0.00041296799999999994
+    }
+  },
+  {
+    "index": 15,
+    "claim_id": "852",
+    "condition": "empty",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "CONTRADICT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 37,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 166,
+      "prompt_tokens": 166,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 203
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 850,
+    "request_SHA": "4fc05ab16a6b8601432f223c31f6a293fcb855946747d72d877cb0cc86151b85",
+    "response_B": 662,
+    "response_SHA": "ec7f0e1bf17adab02a40b3462e01111fca9a37887cc26a4ef9c5242e242be7be",
+    "request_wall_s": 0.8165283999405801,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 4.71e-05,
+      "high": 9.42e-05
+    }
+  },
+  {
+    "index": 16,
+    "claim_id": "533",
+    "condition": "empty",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "SUPPORT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 41,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 168,
+      "prompt_tokens": 168,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 209
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 816,
+    "request_SHA": "b7d122dc5fcfb4f761d41d8db465ccb11d67b356eb57f001500341726d8b8757",
+    "response_B": 635,
+    "response_SHA": "26fbed31f1580221a07e77c053870e75bba5e82ab40c5227cb54478b9976fd4f",
+    "request_wall_s": 1.0967204999178648,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 4.98e-05,
+      "high": 9.96e-05
+    }
+  },
+  {
+    "index": 17,
+    "claim_id": "1232",
+    "condition": "retrieved",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "CONTRADICT",
+    "predicted_verdict": "CONTRADICT",
+    "correct": true,
+    "complete_annotated_rationale": true,
+    "annotated_citation_precision": 1.0,
+    "grounded_annotated_correct": true,
+    "usage": {
+      "completion_tokens": 50,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 1054,
+      "prompt_tokens": 1182,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 1232
+    },
+    "response_model": "deepseek-flash",
+    "citations": [
+      [
+        "13905670",
+        3
+      ]
+    ],
+    "request_B": 5494,
+    "request_SHA": "c262de28d0ad7efdbe9633480213fb9b75f65414c24fcbdb39b0f4740b420cd6",
+    "response_B": 674,
+    "response_SHA": "20de69bb74b64474d5b4281037f1bc1ab4344786bc6fedbd0ae7e54338e4a8d8",
+    "request_wall_s": 1.001491699833423,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.000188484,
+      "high": 0.000376968
+    }
+  },
+  {
+    "index": 18,
+    "claim_id": "692",
+    "condition": "rotated",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "CONTRADICT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 47,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 1041,
+      "prompt_tokens": 1169,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 1216
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 5065,
+    "request_SHA": "42330dedb86364d7cbac0a7c67742ceb9f107a1e5f4ba866247cb16d6259a467",
+    "response_B": 682,
+    "response_SHA": "3289b90bbbc710e72b7004c2a1521aed096b8bb81b7763a19f98e913dfcf067d",
+    "request_wall_s": 1.0751189000438899,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.000184734,
+      "high": 0.000369468
+    }
+  },
+  {
+    "index": 19,
+    "claim_id": "784",
+    "condition": "rotated",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "SUPPORT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 50,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 1242,
+      "prompt_tokens": 1370,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 1420
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 5636,
+    "request_SHA": "df5d9e129b667bf2ee93897b9890105f548672ce2c185298c0615a5268c916c0",
+    "response_B": 686,
+    "response_SHA": "51f8e186f7bbbffa058091d22ccf18d7933041a89102b22e2b6b8b82ca1ad45a",
+    "request_wall_s": 1.0825599001254886,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.00021668399999999997,
+      "high": 0.00043336799999999995
+    }
+  },
+  {
+    "index": 20,
+    "claim_id": "1187",
+    "condition": "empty",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "SUPPORT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 33,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 181,
+      "prompt_tokens": 181,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 214
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 909,
+    "request_SHA": "6261703323f4ec8b0dee98d37c9cce771e2d1bc4309ba32bbcc8dd47171b10af",
+    "response_B": 602,
+    "response_SHA": "3f8e3bff60360fbc5757283fc95b33fca7b98217e74069e7feda5b880c1c1994",
+    "request_wall_s": 0.8787090999539942,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 4.695e-05,
+      "high": 9.39e-05
+    }
+  },
+  {
+    "index": 21,
+    "claim_id": "1245",
+    "condition": "empty",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "INSUFFICIENT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": true,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": null,
+    "usage": {
+      "completion_tokens": 32,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 162,
+      "prompt_tokens": 162,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 194
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 814,
+    "request_SHA": "52bb91f6dc7a9f01de52203d1f37e37fce27ff2e32bf344a24230999cf20217a",
+    "response_B": 612,
+    "response_SHA": "84ed8324f788c5504d778b20d22898c171ffa0b703322964332657018e233c23",
+    "request_wall_s": 0.8784069002140313,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 4.35e-05,
+      "high": 8.7e-05
+    }
+  },
+  {
+    "index": 22,
+    "claim_id": "437",
+    "condition": "empty",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "INSUFFICIENT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": true,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": null,
+    "usage": {
+      "completion_tokens": 40,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 179,
+      "prompt_tokens": 179,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 219
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 885,
+    "request_SHA": "c913b1a37eda7b42ee5c4cb8a1831853808c67a3a5cdbe520d9ee2466c01581f",
+    "response_B": 658,
+    "response_SHA": "c35195a190f79beb14d31800a7900799437aaa86dfd6ad08de48ec39b7954efb",
+    "request_wall_s": 0.6706469000782818,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 5.085e-05,
+      "high": 0.0001017
+    }
+  },
+  {
+    "index": 23,
+    "claim_id": "922",
+    "condition": "rotated",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "CONTRADICT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 42,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 1050,
+      "prompt_tokens": 1178,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 1220
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 5300,
+    "request_SHA": "2a5c6ae8a902cde32170922993662342395731192b0af34644d10d76f52543f3",
+    "response_B": 675,
+    "response_SHA": "ac85ff35b0cd2c3fc1aafe39d099465b54234cb1bee6714d63f1c38b35d18fd2",
+    "request_wall_s": 1.1011171001009643,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.000183084,
+      "high": 0.000366168
+    }
+  },
+  {
+    "index": 24,
+    "claim_id": "437",
+    "condition": "retrieved",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "INSUFFICIENT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": true,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": null,
+    "usage": {
+      "completion_tokens": 40,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 1035,
+      "prompt_tokens": 1163,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 1203
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 5427,
+    "request_SHA": "ee9455f79a4768049d9244a336d425f69c5c0b79955c1267db22baf85a17e1eb",
+    "response_B": 664,
+    "response_SHA": "e7c7620d639384cefc00022bd9bef6412bf0f40ba64ceaf2fd74c4d1ab4b18cc",
+    "request_wall_s": 1.0448792001698166,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.000179634,
+      "high": 0.000359268
+    }
+  },
+  {
+    "index": 25,
+    "claim_id": "1089",
+    "condition": "retrieved",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "SUPPORT",
+    "predicted_verdict": "SUPPORT",
+    "correct": true,
+    "complete_annotated_rationale": true,
+    "annotated_citation_precision": 0.3333333333333333,
+    "grounded_annotated_correct": true,
+    "usage": {
+      "completion_tokens": 79,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 1247,
+      "prompt_tokens": 1375,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 1454
+    },
+    "response_model": "deepseek-flash",
+    "citations": [
+      [
+        "17628888",
+        5
+      ],
+      [
+        "17628888",
+        7
+      ],
+      [
+        "17628888",
+        8
+      ]
+    ],
+    "request_B": 5608,
+    "request_SHA": "c3a98f72ad88b977bcbba578a79fe00fc4dcbf30a6f3b3673a2c934fd83cac1a",
+    "response_B": 765,
+    "response_SHA": "970407ca0cbe6f0eb3479931ee70d5fec8e9d97752dd345ff092f4c0b437a964",
+    "request_wall_s": 1.2342042000964284,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.00023483399999999998,
+      "high": 0.00046966799999999996
+    }
+  },
+  {
+    "index": 26,
+    "claim_id": "873",
+    "condition": "retrieved",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "CONTRADICT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 40,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 1021,
+      "prompt_tokens": 1149,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 1189
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 5093,
+    "request_SHA": "d5acdc0842923301545e18762278ae8837a30312d0644a413fd0037ff3f84d14",
+    "response_B": 681,
+    "response_SHA": "2233dc18523ecbfc796737c4d3c43d6fc5822ee771499e12b2f593da41f7c05f",
+    "request_wall_s": 0.848671100102365,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.000177534,
+      "high": 0.000355068
+    }
+  },
+  {
+    "index": 27,
+    "claim_id": "922",
+    "condition": "empty",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "CONTRADICT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 34,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 163,
+      "prompt_tokens": 163,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 197
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 818,
+    "request_SHA": "5852def796a6ae045b5bba2cfef8178775c54456476efa0789d36bedf222fd28",
+    "response_B": 621,
+    "response_SHA": "8c65c721f951d35dff08bde9fed9d2f78cb7f542516416772861852162422b26",
+    "request_wall_s": 0.8886563999112695,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 4.484999999999999e-05,
+      "high": 8.969999999999998e-05
+    }
+  },
+  {
+    "index": 28,
+    "claim_id": "533",
+    "condition": "rotated",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "SUPPORT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 51,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 1033,
+      "prompt_tokens": 1161,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 1212
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 5316,
+    "request_SHA": "0f58dff8cec0048a5f41d16187145bb6ce0a77c281ae7ffe92516a1f06b1be36",
+    "response_B": 691,
+    "response_SHA": "52ce5791b09c81170fb5ba849a078428fd7b1b07ca07998509ba3a658142e983",
+    "request_wall_s": 0.9740481001790613,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.00018593399999999999,
+      "high": 0.00037186799999999997
+    }
+  },
+  {
+    "index": 29,
+    "claim_id": "232",
+    "condition": "retrieved",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "INSUFFICIENT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": true,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": null,
+    "usage": {
+      "completion_tokens": 70,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 1197,
+      "prompt_tokens": 1325,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 1395
+    },
+    "response_model": "deepseek-flash",
+    "citations": [
+      [
+        "10536636",
+        2
+      ],
+      [
+        "7655029",
+        1
+      ]
+    ],
+    "request_B": 5347,
+    "request_SHA": "31c9dbd3e46afa428981d837b372689fd8cb044835fdf15b4620755fce14d6a3",
+    "response_B": 759,
+    "response_SHA": "f4328ec230c4e7f8149f038b909b121aba7ee8456642c707f9837910c3610b89",
+    "request_wall_s": 1.085432899883017,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.00022193399999999997,
+      "high": 0.00044386799999999993
+    }
+  },
+  {
+    "index": 30,
+    "claim_id": "1319",
+    "condition": "retrieved",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "SUPPORT",
+    "predicted_verdict": "SUPPORT",
+    "correct": true,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": 0.0,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 42,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 978,
+      "prompt_tokens": 1106,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 1148
+    },
+    "response_model": "deepseek-flash",
+    "citations": [
+      [
+        "14192687",
+        4
+      ]
+    ],
+    "request_B": 5337,
+    "request_SHA": "64baa649c5852e62221d7cfdd874f1664394c385e9d3f208be372c57b5d6b7b5",
+    "response_B": 644,
+    "response_SHA": "6d5aaacf753ca1ba8c55623b3071800458302bc70e8cb9d27597dd0af6e2c65f",
+    "request_wall_s": 0.7355668998789042,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.00017228399999999998,
+      "high": 0.00034456799999999996
+    }
+  },
+  {
+    "index": 31,
+    "claim_id": "873",
+    "condition": "rotated",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "CONTRADICT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 43,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 1014,
+      "prompt_tokens": 1142,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 1185
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 5444,
+    "request_SHA": "331c77c6574ac79ab61958190184ec64aa8d8076dd48b9499fc348e2ae104370",
+    "response_B": 688,
+    "response_SHA": "f0ff8e6105c312d98527ee784324c41af44b8085c18efbfe7fdda2609b80c230",
+    "request_wall_s": 0.9891975000500679,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.000178284,
+      "high": 0.000356568
+    }
+  },
+  {
+    "index": 32,
+    "claim_id": "411",
+    "condition": "empty",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "INSUFFICIENT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": true,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": null,
+    "usage": {
+      "completion_tokens": 32,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 161,
+      "prompt_tokens": 161,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 193
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 809,
+    "request_SHA": "d24284cb85a00dc1392ba2fe5b72f42844ca792a35aa6f72060b8bc4a2f0f4d5",
+    "response_B": 612,
+    "response_SHA": "2909b60f9d82a843891085de2d1c6fdb6960970fb27d02a5b05fb1871d3a47d0",
+    "request_wall_s": 0.9168497000355273,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 4.3349999999999997e-05,
+      "high": 8.669999999999999e-05
+    }
+  },
+  {
+    "index": 33,
+    "claim_id": "692",
+    "condition": "empty",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "CONTRADICT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 38,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 164,
+      "prompt_tokens": 164,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 202
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 830,
+    "request_SHA": "c9ecbbf951dde8a748926560aa37074c67ac3538e0fff77ab646a3473142a1f2",
+    "response_B": 650,
+    "response_SHA": "a33834651d7c5448eb87e88c7f17d3033a4b81e9540157aa4651af8f1b48510d",
+    "request_wall_s": 0.8634146999102086,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 4.74e-05,
+      "high": 9.48e-05
+    }
+  },
+  {
+    "index": 34,
+    "claim_id": "180",
+    "condition": "empty",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "CONTRADICT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 42,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 180,
+      "prompt_tokens": 180,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 222
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 878,
+    "request_SHA": "999d15da3b51de91aa810165ce6a1f313c4b5ff28a3b367aa20d5f0775760172",
+    "response_B": 643,
+    "response_SHA": "12a4eeb8f43684bb6eda050232b4ea56a0106d763ac2502c4543ae0966078c44",
+    "request_wall_s": 1.2653917002025992,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 5.2199999999999995e-05,
+      "high": 0.00010439999999999999
+    }
+  },
+  {
+    "index": 35,
+    "claim_id": "1187",
+    "condition": "rotated",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "SUPPORT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 39,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 1037,
+      "prompt_tokens": 1165,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 1204
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 5451,
+    "request_SHA": "9f3302fc4674a1462256555728171089ea2aa955fc6597f555dd64b9d2abb735",
+    "response_B": 633,
+    "response_SHA": "5ea4ed200f381035451bc281b69012178130cc25f89b1cb85ba25deb8800b772",
+    "request_wall_s": 0.815849999897182,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.000179334,
+      "high": 0.000358668
+    }
+  },
+  {
+    "index": 36,
+    "claim_id": "770",
+    "condition": "empty",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "SUPPORT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 33,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 186,
+      "prompt_tokens": 186,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 219
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 943,
+    "request_SHA": "1687a354d70e3ecb7e6a1c1cdc4c1e8e7b24224002044b3ca4ecf4f1b699383f",
+    "response_B": 602,
+    "response_SHA": "cc6fcb3f8a5d75a896ce31f2a0a10842c6b5b6369c6e2616fd244c1a1bee60ba",
+    "request_wall_s": 0.9106614000629634,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 4.7699999999999994e-05,
+      "high": 9.539999999999999e-05
+    }
+  },
+  {
+    "index": 37,
+    "claim_id": "852",
+    "condition": "rotated",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "CONTRADICT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 40,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 1185,
+      "prompt_tokens": 1313,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 1353
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 5771,
+    "request_SHA": "cd314906ece58571fdf4d0ed1157b6650ab03c0e821ef975e61776d2fdf38673",
+    "response_B": 661,
+    "response_SHA": "1075e6dce7304348adb0aa748507d8f823ea8bf7c65488a2f586ebcd14dfa792",
+    "request_wall_s": 0.7218541000038385,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.000202134,
+      "high": 0.000404268
+    }
+  },
+  {
+    "index": 38,
+    "claim_id": "692",
+    "condition": "retrieved",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "CONTRADICT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 39,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 1090,
+      "prompt_tokens": 1218,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 1257
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 5455,
+    "request_SHA": "6e9618a486455161cc7249827d7f41fd38233e25fd184b32b1e8f5a3aa8ab347",
+    "response_B": 668,
+    "response_SHA": "6d7cdee25dc342636bede6d29b9118a502e544cb9cdd5c550f34d2c1aa421f11",
+    "request_wall_s": 2.0208006999455392,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.000187284,
+      "high": 0.000374568
+    }
+  },
+  {
+    "index": 39,
+    "claim_id": "873",
+    "condition": "empty",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "CONTRADICT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 33,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 160,
+      "prompt_tokens": 160,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 193
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 797,
+    "request_SHA": "e6fd933f92d116e5852e6d6c40677880f536c6dfa45873835888932ec036d6c4",
+    "response_B": 624,
+    "response_SHA": "68e6dad9a9e105a6e02f63bffc965bb60c3ca46603fe7fea3a88551b47af8816",
+    "request_wall_s": 0.5719041000120342,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 4.38e-05,
+      "high": 8.76e-05
+    }
+  },
+  {
+    "index": 40,
+    "claim_id": "784",
+    "condition": "retrieved",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "SUPPORT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 34,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 1190,
+      "prompt_tokens": 1318,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 1352
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 5782,
+    "request_SHA": "d3d09c6c6fc26817f5c3a6e1238761f97fbb5f08d38198e5b956dc0072c0f292",
+    "response_B": 634,
+    "response_SHA": "a740fa9faf7908d8d486a3b615f1cccf9dc0080a4726aebb876ac8496e774c2b",
+    "request_wall_s": 1.0775774999056011,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.000199284,
+      "high": 0.000398568
+    }
+  },
+  {
+    "index": 41,
+    "claim_id": "770",
+    "condition": "rotated",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "SUPPORT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 45,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 1071,
+      "prompt_tokens": 1199,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 1244
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 5612,
+    "request_SHA": "06c616c8a1227fb2287b1741a8f4e2eca9a849154e18d47a5db7ebe5b2f0d117",
+    "response_B": 678,
+    "response_SHA": "03f3ec774b431803c868ea4b92ed4d205cf1a2886086527a9ff1a685bd8f3b06",
+    "request_wall_s": 1.4717438998632133,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.000188034,
+      "high": 0.000376068
+    }
+  },
+  {
+    "index": 42,
+    "claim_id": "180",
+    "condition": "rotated",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "CONTRADICT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 41,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 994,
+      "prompt_tokens": 1122,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 1163
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 5400,
+    "request_SHA": "c1adef99f10db48781e5c000d3f1e0421a7627741fd6706ef035f26eb8cf4ae6",
+    "response_B": 618,
+    "response_SHA": "b7ed882af844e705c96507a53c5ca6cb3e8a6c30fdfb88db5b7690e343f2e2ad",
+    "request_wall_s": 0.9827876000199467,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.000174084,
+      "high": 0.000348168
+    }
+  },
+  {
+    "index": 43,
+    "claim_id": "784",
+    "condition": "empty",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "SUPPORT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 30,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 171,
+      "prompt_tokens": 171,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 201
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 861,
+    "request_SHA": "de0bae8802d2f515d17f23560767ab2e44844d9e43cab5edaeae3e0bb1d34e21",
+    "response_B": 582,
+    "response_SHA": "21c1748201fac5442c3a7c09712c51aaa16666bb1aa5891cd52020228ad823c6",
+    "request_wall_s": 0.8109492000658065,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 4.3650000000000004e-05,
+      "high": 8.730000000000001e-05
+    }
+  },
+  {
+    "index": 44,
+    "claim_id": "1232",
+    "condition": "rotated",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "CONTRADICT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 45,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 1108,
+      "prompt_tokens": 1236,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 1281
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 5197,
+    "request_SHA": "fa773f643202f6b85efc4397007b7b5e2b1af6fe85b209c8c75909985876b9e7",
+    "response_B": 675,
+    "response_SHA": "03989ae8f49a29bbf1fde0973c2c528f726c3a42088681813a0cd20f68c1836a",
+    "request_wall_s": 1.1393182999454439,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.000193584,
+      "high": 0.000387168
+    }
+  },
+  {
+    "index": 45,
+    "claim_id": "232",
+    "condition": "empty",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "INSUFFICIENT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": true,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": null,
+    "usage": {
+      "completion_tokens": 39,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 167,
+      "prompt_tokens": 167,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 206
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 818,
+    "request_SHA": "01885ae924e39f516c21c103489529cfd1abaa952d827e1fc26e9c169756e3b9",
+    "response_B": 641,
+    "response_SHA": "705d6d9d3481a3b750b90b5af8db0a62119d35f63ccafbb64e2345ab0694fbc4",
+    "request_wall_s": 0.9450828998815268,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 4.845e-05,
+      "high": 9.69e-05
+    }
+  },
+  {
+    "index": 46,
+    "claim_id": "1245",
+    "condition": "rotated",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "INSUFFICIENT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": true,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": null,
+    "usage": {
+      "completion_tokens": 46,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 1088,
+      "prompt_tokens": 1216,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "total_tokens": 1262
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 5439,
+    "request_SHA": "9d3c406263083e845f3bf40e97566470fb9ea90571bc380a2bda63f4a19f9062",
+    "response_B": 679,
+    "response_SHA": "2131ed905df8608806e5350e4481ba273a7b413e26209bad3ce47095292e9b94",
+    "request_wall_s": 0.8142971999477595,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 0.00019118399999999998,
+      "high": 0.00038236799999999995
+    }
+  },
+  {
+    "index": 47,
+    "claim_id": "1232",
+    "condition": "empty",
+    "attempted": true,
+    "accepted": true,
+    "gold_verdict": "CONTRADICT",
+    "predicted_verdict": "INSUFFICIENT",
+    "correct": false,
+    "complete_annotated_rationale": false,
+    "annotated_citation_precision": null,
+    "grounded_annotated_correct": false,
+    "usage": {
+      "completion_tokens": 34,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 169,
+      "prompt_tokens": 169,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 203
+    },
+    "response_model": "deepseek-flash",
+    "citations": [],
+    "request_B": 825,
+    "request_SHA": "940410b995370b19fb75b94d01f3cd5a149c9aa9dbc5a2f0d43ad68bf06cf3dc",
+    "response_B": 601,
+    "response_SHA": "22d256e947f4a05759c2871c7e1e2acc7ab076e003870a643364c84ddca66df4",
+    "request_wall_s": 0.942865899996832,
+    "finish_reason": "stop",
+    "error": null,
+    "reference_USD_band": {
+      "low": 4.575e-05,
+      "high": 9.15e-05
+    }
+  }
+]
