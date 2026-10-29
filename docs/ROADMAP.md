@@ -604,3 +604,7 @@ tag80d8179a2328bea5bc5be105b24a1aa40fb21f61、ReleaseCI40885089220、finalproof3
 ### v0.92实测（发行待核验）
 
 18freshworker/510record/1020token/108控制/18旧SID均通过独立原JSONL边界/byte-token/完整source与packetSHA/全文件不变audit，H1True；主65record完整packet/record为5.402235和4.948228，三轮完全一致，H2False。包含完整定位信息与hex开销，不以选中token小替代整个packet净收益。0科学数据/模型/API/HEAD，所有18parent/child与独立audit完整时钟保留；图已实际看。正式和audit不重跑，下一步完整local/CI/实际资产安装proof。
+
+### v0.92完整软件交付确认
+
+tage28fbcd145a4f04e6ceaca5dd3b58663e6dacc4f、ReleaseCI40900556305、finalproof684ebfea5651372d73dd68d0c7ed8db5ecdc5a3c93866932d349371f4015c6b3，实际7资产SHA/67Python+HTML/全部源码/仓库外实际发行wheel-currentnative/新source-span owned与全部旧sdist/proof8通过。本段仅更新主分支交付状态，原协议/18case/510record/1020token/108控制/计时/source/tag/资产不改；完整packet放大4.95–5.40倍的H2False保持，不当净压缩或语义收益。

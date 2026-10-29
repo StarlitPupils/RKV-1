@@ -6,13 +6,13 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 最新实验：v0.92.0 · 原文句子定位与完整表示成本（发行待核验）
+## 当前版本：v0.92.0 · 原文句子定位与完整表示成本
 
 18个离线子进程、510原记录、1020句子token的原始字节及独立来源核验通过，108项拒绝控制和18项旧SID检查通过。定位能做到精确，但计入完整定位信息和hex传输后，主测试packet仍为原记录的4.95–5.40倍，尺寸门槛未通过，不能称省空间或回答提升。
 
 ![原句定位和完整成本](results/v0.92.0/source-spans.png)
 
-584检查583pass/1权限skip；[详实报告](results/v0.92.0/SUMMARY.md) · [冻结协议](docs/SOURCE-SPANS.md)。仅自建数据、0模型/HEAD调用；完整record读取、metadata/CPU/RAM及全部旧费用保留。图已实际看，完整发行核验待完成。
+584检查583pass/1权限skip；[详实报告](results/v0.92.0/SUMMARY.md) · [冻结协议](docs/SOURCE-SPANS.md)。仅自建数据、0模型/HEAD调用；完整record读取、metadata/CPU/RAM及全部旧费用保留。图已实际看。[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.92.0)实际7资产SHA、67Python+HTML/全部源码、仓库外实际发行wheel/current native及新旧sdist通过，第8proof重下载核验通过。
 
 ## 当前版本：v0.91.0 · 静态HEAD网络路径观测
 
