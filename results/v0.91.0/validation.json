@@ -1,0 +1,10 @@
+{
+  "H1_six_fixed_origin_HEAD_no_credentials_no_redirect_no_model": true,
+  "H2_direct_fewer_non_response_errors_than_system": false,
+  "formal_requests": 6,
+  "new_model_API_calls": 0,
+  "formal_retries": 0,
+  "figure_visually_inspected": true,
+  "past_v089_failure_cause_established": false,
+  "model_generation_availability_or_quality_measured": false
+}

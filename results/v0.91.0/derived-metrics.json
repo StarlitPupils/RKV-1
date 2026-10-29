@@ -1,0 +1,37 @@
+{
+  "groups": {
+    "system": {
+      "attempts": 3,
+      "http_response_observed": 3,
+      "non_response_errors": 0,
+      "wall_s": 0.48545209993608296,
+      "status_codes": [
+        401,
+        401,
+        401
+      ],
+      "error_classes": [
+        "HTTPError",
+        "HTTPError",
+        "HTTPError"
+      ]
+    },
+    "direct": {
+      "attempts": 3,
+      "http_response_observed": 3,
+      "non_response_errors": 0,
+      "wall_s": 0.5002755001187325,
+      "status_codes": [
+        401,
+        401,
+        401
+      ],
+      "error_classes": [
+        "HTTPError",
+        "HTTPError",
+        "HTTPError"
+      ]
+    }
+  },
+  "six_known_time_requests_not_generalizable_reliability": true
+}

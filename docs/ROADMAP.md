@@ -588,3 +588,7 @@ tag58411a4d58b2b9850045f464b0bc0cb2889ffb0d、ReleaseCI40874134052、finalproofb
 ## v0.91候选：固定静态源HEAD的访问路径观测
 
 用户在新实际窗口1793298289明确继续。一个fresh worker、system/direct三轮固定6次HEAD/15s/0retry，仅https://api.deepseek.com/根路径、无密钥/认证/正文/redirect/模型调用；H1请求与原计时/隐私字段守恒，H2direct少于system非HTTP响应失败仅描述当前小样本。不能回溯解释v089或保证生成服务。先freeze/exactCI再正式。
+
+### v0.91实测（发行待核验）
+
+固定6HEAD/3对无认证根路径，system/direct各3/3观测401HTTP、0非响应错误，H1True/H2False，0模型调用。过去v089原因、认证有效、模型生成可用性均未证明；不把相近小样本墙钟当可靠提速。独立metadata/计数/原始时钟audit通过，图已实际看。

@@ -6,6 +6,14 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
+## 最新实验：v0.91.0 · 静态HEAD网络路径观测（发行待核验）
+
+固定6次无密钥HEAD根路径请求完成：system与direct各3次，均观测HTTP401响应、无“未得到HTTP响应”错误。H1通过，direct更少错误的H2未通过；不能据此认定直连更可靠、认证成功、模型服务可用或解释旧失败。
+
+![静态网络路径](results/v0.91.0/transport-observability.png)
+
+573检查572pass/1权限skip；[详实报告](results/v0.91.0/SUMMARY.md) · [协议](docs/TRANSPORT-OBSERVABILITY.md)。无认证/正文/跳转/模型调用，图已实际检查，完整软件发行核验待完成。
+
 ## 当前版本：v0.90.0 · 中断状态检查与报告恢复
 
 24个离线子进程覆盖七个固定硬退出点和成功控制，各测三轮，另有4项篡改拒绝。状态、原文件SHA及计数独立核验通过；检查和报告步骤没有增加模拟发送。预留后缺结果保持“不确定”，不会自动重发。
