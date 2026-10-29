@@ -580,3 +580,7 @@ tag23f7eee03d86b3bdbc4c3724918eeecdc1a513af/ReleaseCI40866699127/finalprooff5480
 ### v0.90实测（发行待核验）
 
 唯一24child/3round/4tamper正式与独立原bytes/源请求及响应SHA/完整parent计数通过，H1/H2True。总162reserved/156raw/153result/159owned-send marker，inspector/report额外发送0，真实HTTP0。21硬退出childfinally缺失CPU/RSS保持null，非断电或科学质量验证。原v089失败轮保持关闭。
+
+### v0.90完整软件交付确认
+
+tag58411a4d58b2b9850045f464b0bc0cb2889ffb0d、ReleaseCI40874134052、finalproofb64c5bfd6bc17eb54b5b4a76d42d8f44a13c37b0ffaabec5a3646c54fff26b6b，实际7资产SHA/67Python+HTML/全部源码/仓库外实际发行wheel-currentnative/新生命周期owned和全部旧sdist/proof8通过。原实验、tag、资产、计时不改，本段仅更新主分支核验状态。v089科学7/6/41继续关闭，机械通过不当推理收益。

@@ -6,13 +6,13 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 最新实验：v0.90.0 · 中断状态检查与报告恢复（发行待核验）
+## 当前版本：v0.90.0 · 中断状态检查与报告恢复
 
 24个离线子进程覆盖七个固定硬退出点和成功控制，各测三轮，另有4项篡改拒绝。状态、原文件SHA及计数独立核验通过；检查和报告步骤没有增加模拟发送。预留后缺结果保持“不确定”，不会自动重发。
 
 ![进程状态与完整计时](results/v0.90.0/campaign-lifecycle.png)
 
-570检查569pass/1权限skip；[详实报告](results/v0.90.0/SUMMARY.md) · [协议](docs/CAMPAIGN-LIFECYCLE.md)。0真实API，这只是固定进程边界的工程验证，尚不代表掉电或科学推理收益。原失败科学轮不补发，软件发行核验待完成。
+570检查569pass/1权限skip；[详实报告](results/v0.90.0/SUMMARY.md) · [协议](docs/CAMPAIGN-LIFECYCLE.md)。0真实API，仅固定进程边界工程验证，不代表掉电或科学推理收益。原失败科学轮不补发。[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.90.0)实际7资产SHA、67Python+HTML/全部源码、仓库外发行wheel/current native及新旧sdist均通过，第8proof重下载核验通过。
 
 ## 当前版本：v0.89.0 · 科学对照未完成，软件已核验发布
 
