@@ -6,7 +6,15 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.78.0 · 显式同快照读取 SDK
+## 当前候选：v0.79.0 · 选中来源的短成员证明
+
+24成员/96篡改与预算拒绝、历史SID和14043叶metadata/14055原文件复核通过。主4096短消息显著变小，但完整index+全部新增源码和固定8条消息后成本增加约34万B，H1=True/H2=True/H3=False/joint=False；负结果保留，不增加摊销次数追正。
+
+![短成员与完整费用](results/v0.79.0/catalog-membership.png)
+
+需要独立可信anchor SHA/SID/path和初次完整manifest校验，不是仅凭SID自认证、逻辑DAG/NLI/压缩或回答收益。485检查484pass/1权限skip；[详实报告](results/v0.79.0/SUMMARY.md) · [协议](docs/CATALOG-MEMBERSHIP.md)。发行核验待完成。
+
+## v0.78.0 · 显式同快照读取 SDK
 
 新增 opt-in `Store.read_scope(explicit_sid)`；默认 snapshot 和磁盘格式保持不变。固定12 worker的96对SDK/原实验接口证明、14055完整文件与范围读取、48拒绝控制，以及追加192 fresh原DAG/14055文件恢复通过。实际旧v0.77 wheel仓库外读取新wheel普通快照通过，H1/H2/H3/joint=True。
 

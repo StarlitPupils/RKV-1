@@ -1,0 +1,22 @@
+{
+  "H1_exact_membership_controls_metadata_and_source": true,
+  "H2_primary4096_packet_ratio_atmost_quarter": true,
+  "H3_primary4096_fixed8_full_new_metadata_net_B": false,
+  "joint": false,
+  "formal_workers": 12,
+  "positive_memberships": 24,
+  "negative_controls": 96,
+  "oldSID_accepts": 12,
+  "newHEAD_rebind_refusals": 12,
+  "additional_actual_eligible_leaf_checks": 14043,
+  "additional_actual_allfile_recoveries": 14055,
+  "additional_actual_selected_memberships": 24,
+  "unit_tests_run": 485,
+  "unit_tests_passed": 484,
+  "unit_tests_skipped": 1,
+  "formal_retries": 0,
+  "figure_visually_inspected": true,
+  "source_protocol_input_freeze": "0a8b71ff3f74c18774312b3c8048c159e30af45a",
+  "new_model_calls": 0,
+  "logic_DAG_or_scientific_entailment_verified": false
+}

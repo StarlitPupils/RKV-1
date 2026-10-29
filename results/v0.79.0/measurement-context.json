@@ -1,0 +1,147 @@
+{
+  "exact_CI": 40655001347,
+  "input_manifest": {
+    "H2_packet_ratio_atmost": 0.25,
+    "H3_full_new_metadata_delta_strict_negative": true,
+    "conservative_new_public_files": [
+      "scripts/catalog_commitment.py",
+      "scripts/audit_catalog_commitment.py",
+      "scripts/run_catalog_membership.py",
+      "tests/test_catalog_commitment.py",
+      "docs/CATALOG-MEMBERSHIP.md",
+      "docs/catalog-membership-inputs.json"
+    ],
+    "count_orders": [
+      [
+        9,
+        64,
+        512,
+        4096
+      ],
+      [
+        64,
+        9,
+        4096,
+        512
+      ],
+      [
+        512,
+        4096,
+        9,
+        64
+      ]
+    ],
+    "counts": [
+      9,
+      64,
+      512,
+      4096
+    ],
+    "files": {
+      "docs/CATALOG-MEMBERSHIP.md": {
+        "bytes": 5665,
+        "sha256": "6d565ba67b1c58fbce39151fb8f54bee33073f2fc4d93c9c9b3e9a995d7a0e1c"
+      },
+      "scripts/audit_catalog_commitment.py": {
+        "bytes": 3425,
+        "sha256": "70fe91dadc040c287bc991d1c74d2f5c1c8ac44df97d9fc1f17e270d4aac7be1"
+      },
+      "scripts/catalog_commitment.py": {
+        "bytes": 2476,
+        "sha256": "333b028710e54f9e9b143dc6a3f9f462135e88d8334dfc2886d3e85c6963963a"
+      },
+      "scripts/catalog_fixture.py": {
+        "bytes": 816,
+        "sha256": "c136ff4d2d6beabf7668a14c6489ee30ef3cdd5511e81d8554b6c0dae64d3932"
+      },
+      "scripts/postings_transform.py": {
+        "bytes": 6138,
+        "sha256": "e4326ff144bb5332c7cedf0aafe0be509efd78de1f0cc7f14de5cbbae5b8004e"
+      },
+      "scripts/run_catalog_membership.py": {
+        "bytes": 6467,
+        "sha256": "ab8622f5e01224077ccae28802947408dd89ef08d3fec8a8598bc33eb823db31"
+      },
+      "scripts/selected_witness.py": {
+        "bytes": 3155,
+        "sha256": "dce809ada9798b48aa549a121f0a0606cee0d5438322d09040966dc71c9caff6"
+      },
+      "scripts/source_universe.py": {
+        "bytes": 2396,
+        "sha256": "306041d27c5016d74e1c3b52b2a4f4516ca6eef6ffa6b1add6314e826e024def"
+      },
+      "tests/test_catalog_commitment.py": {
+        "bytes": 5308,
+        "sha256": "518f9e8203aeb4f49f8a814f565c5cdba085834ae189d486f5690761761e07ad"
+      }
+    },
+    "formal_workers": 12,
+    "format": "RKVCATALOGMEMBERINPUT1",
+    "metadata_messages": 8,
+    "negative_controls": 96,
+    "newHEAD_rebind_refusals": 12,
+    "oldSID_accepts": 12,
+    "owned_seen_geometry": true,
+    "positive_memberships": 24,
+    "postanalysis_eligible_records": 14043,
+    "postanalysis_fullfile_recoveries": 14055,
+    "primary_count": 4096,
+    "selected_paths": [
+      "one.logic.jsonl",
+      "two.logic.jsonl"
+    ],
+    "worker_retries": 0,
+    "worker_timeout_s": 600
+  },
+  "prior_complete_release_commit": "539aaf63b6056224e8c07bfce2826773dd2f5949",
+  "prior_finalproof": "cdfc1ba5c4f8a01d74c6d2ff4f0cb31fac6a302eb96989f3cf0cbae14f72e951",
+  "retries": 0,
+  "source_protocol_input_commit": "0a8b71ff3f74c18774312b3c8048c159e30af45a",
+  "workers": 12,
+  "private_preparation_size_SHA": {
+    ".tools/v079-draft/audit_catalog_commitment.py": {
+      "bytes": 3420,
+      "sha256": "b47f3cb69453d323e66182ce31fe43248a6ed293992024510fbaa74d3a762748"
+    },
+    ".tools/v079-draft/catalog_commitment.py": {
+      "bytes": 2471,
+      "sha256": "6bd1e186cb12881477fe133ab9f7d421e8d72ff80498b7614bc3a79bff60401a"
+    },
+    ".tools/v079-draft/PREPARATION-REPORT.md": {
+      "bytes": 2607,
+      "sha256": "0dd88d2d91bebb27022a64cb1544d9da786e5ccac0cbf23d7d188c11687723b3"
+    },
+    ".tools/v079-draft/run_catalog_membership.py": {
+      "bytes": 6523,
+      "sha256": "52e37b61503762022c91f431f8dae0fad931c5f8969cc9cdb807c3af17e5d828"
+    },
+    ".tools/v079-draft/test_catalog_commitment.py": {
+      "bytes": 5373,
+      "sha256": "6b0c6a632c1d15be97b86c47025a42cc1d5fe5412b0f80a66b7d0cd1990c2185"
+    },
+    ".tools/v079-draft/unit-boundary.log": {
+      "bytes": 110,
+      "sha256": "8e7a7faa7a4eed2dd9def4fbeec8bf5384b5f7204f7bca87e775580e86669533"
+    },
+    ".tools/v079-draft/unit-prototype.log": {
+      "bytes": 108,
+      "sha256": "ffe40085de9aea3f29e0e1da0e6afc771375a4491df98d1d202b438a808705bc"
+    }
+  },
+  "private_preparation_B": 20612,
+  "preformal_attempts": "Official quota transport failed once; after recovery raw Windows CRLF test bytes differed from Git LF before any worker. Original logs/freeze retained; normalized input SHA and new exact CI before formal. Formal0 at correction, no scientific retry.",
+  "preformal_complete_CPU_wall": null,
+  "new_public_fee_B": 25784,
+  "source_fee_files": [
+    "scripts/catalog_commitment.py",
+    "scripts/audit_catalog_commitment.py",
+    "scripts/run_catalog_membership.py",
+    "tests/test_catalog_commitment.py",
+    "docs/CATALOG-MEMBERSHIP.md",
+    "docs/catalog-membership-inputs.json"
+  ],
+  "anchor_requires_independent_trusted_full_manifest_provenance": true,
+  "not_standalone_SID_authentication": true,
+  "renewed_user_authorized_window": 1793258458,
+  "additional_preformal_index_stat_refresh": "Git stat cache marked test modified although raw/manifest/Git blob SHA were identical; git add refreshed unchanged index, no source or formal data changes."
+}

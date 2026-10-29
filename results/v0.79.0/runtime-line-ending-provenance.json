@@ -1,0 +1,11 @@
+{
+  "only_affected_module": "__init__.py",
+  "measured_bytes": 255,
+  "measured_sha256": "23c5337a1233ba9e1d6a944fb03c0ce9e6ca444efdb6e2cbac8e542d1d00f9bb",
+  "prior_Git_freeze_bytes": 249,
+  "prior_Git_freeze_sha256": "941be3265dab538d3b2da05cb09ac20e32db5baa355a233131a375d92ec68396",
+  "difference": "Six CR bytes in metadata-only version/import file; normalized content exactly equal.",
+  "actual_runtime_file_modified_after_measurement": false,
+  "measured_JSON_or_cases_rewritten": false,
+  "resolution": "Preserve measured metadata bytes via -text and bind exact measured file in release Git tree; release CI tests exact packaged bytes."
+}

@@ -464,3 +464,6 @@ v0.78补充：固定12worker全部正确性/生命周期控制通过，追加192
 ## v0.79 候选：选中原文件的短成员证明
 
 v0.78已完整发行核验。下一项针对v0.74的全eligible目录通信放大，初始完整可信manifest派生anchor，独立接收端用显式外部可信anchor SHA/SID/path验选中文件成员。不是仅凭SID自认证、逻辑DAG或科学证明；保留同SID伪anchor反例。固定12worker/24成员/96控制/12历史与重绑定控制，primary4096短packet与固定8消息完整索引+新增源码费用分开检验，不能以packet节省代替完整净收益。485检查484pass/1skip，正式尚未执行。协议docs/CATALOG-MEMBERSHIP.md。
+
+
+v0.79实验补充：固定12worker完成且独立14043叶/14055file恢复通过。H1/H2=True，但完整index+新代码+固定8消息H3=False/joint=False；仅消息小不能代替净收益，不变更复用次数追正。详实报告results/v0.79.0/SUMMARY.md；发行核验待完成。
