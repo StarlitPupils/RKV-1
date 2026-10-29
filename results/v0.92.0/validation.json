@@ -1,0 +1,12 @@
+{
+  "H1_original_record_token_counts_identity_reference_and_immutability": true,
+  "H2_primary_full_packet_not_larger_than_original_records": false,
+  "cases": 18,
+  "records": 510,
+  "selected_tokens": 1020,
+  "negative_controls": 108,
+  "old_SID_checks": 18,
+  "new_model_API_calls": 0,
+  "figure_visually_inspected": true,
+  "retrieval_semantics_or_answer_gain_measured": false
+}

@@ -600,3 +600,7 @@ tag80d8179a2328bea5bc5be105b24a1aa40fb21f61、ReleaseCI40885089220、finalproof3
 ## v0.92候选：精确句子token与原Store来源绑定
 
 固定18fresh ownedStore worker，3/17/65记录×两编码×三轮，510record/1020选中token/108拒绝/18旧SID。原SID/path/fullfileSHA/recordrangeSHA/显式abstract或sentences与独立原JSONL行边界/byte-token参考核验，原完整record读取、UTF8offsetmap/metadata/hexpacket成本计费。H1完整机械保真，H2六primary完整packet<=原record；不叫净压缩/检索/推理收益。无科学数据/gold/模型/API；先冻结协议输入源码与exactCI再正式。11必要owned检查已通过，正式0。详见docs/SOURCE-SPANS.md。
+
+### v0.92实测（发行待核验）
+
+18freshworker/510record/1020token/108控制/18旧SID均通过独立原JSONL边界/byte-token/完整source与packetSHA/全文件不变audit，H1True；主65record完整packet/record为5.402235和4.948228，三轮完全一致，H2False。包含完整定位信息与hex开销，不以选中token小替代整个packet净收益。0科学数据/模型/API/HEAD，所有18parent/child与独立audit完整时钟保留；图已实际看。正式和audit不重跑，下一步完整local/CI/实际资产安装proof。

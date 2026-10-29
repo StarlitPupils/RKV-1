@@ -1,0 +1,23 @@
+{
+  "primary_packet_to_record_ratios": [
+    5.402234636871508,
+    4.948228304689158,
+    5.402234636871508,
+    4.948228304689158,
+    5.402234636871508,
+    4.948228304689158
+  ],
+  "CAS_decode_B": null,
+  "OS_physical_IO_B": null,
+  "wire_format": "explicit original token hex plus complete witness, not API prompt",
+  "H2_is_not_net_compression_or_semantic_quality": true,
+  "all_cases_cost_totals": {
+    "record_B": 105138,
+    "selected_token_B": 41682,
+    "decoded_utf8_B": 35562,
+    "witness_serialized_B": 439329,
+    "packet_serialized_B": 543603,
+    "application_record_return_B": 210276
+  },
+  "cost_decomposition_scope": "Algebra over frozen already measured bytes only; no new source/audit/benchmark/API run. Explicit full witness and hex expansion; packet is not an API prompt. Phase application bytes omit controls, audit and lower layers."
+}
