@@ -492,3 +492,7 @@ v081发行资产/外部安装/proof已齐。对原全部12Ccase/96请求192成�
 ## v0.82.0 · 已见缓存事后诊断
 
 12case/96请求保真；主4096每query初始142相关节点均在查找前丢失，H1/H2通过。独立12根/14043叶/14055file/192成员原bytes通过。没有新策略/科学/提速，旧负结果保持，完整发行待核验。
+
+### v0.82 完整交付确认（2026-10-29）
+
+前述“候选/待完成”记录为冻结时状态。现ReleaseCI 40821635891、7实际资产SHA、全部源码、仓库外actualwheel/currentnative及新旧actualsdist、最终第8份proof重下载全部通过。tag ac5a9f6cc182ba19abaacc78f065bc8c5389877c，proof SHA256 e1cd3c0645a061c7cc6dcb0ed93e308511dc8b56c89380294ef0065cdb691a24；不改旧tag/原测量。
