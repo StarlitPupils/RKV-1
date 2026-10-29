@@ -1,0 +1,22 @@
+{
+  "H1_original_order_ids_source_fullbytes_and_metadata": true,
+  "H2_missing_papers_self_exceed4096_strict_majority": false,
+  "missing_denominator": 5,
+  "missing_self_oversize": 0,
+  "formal_workers": 1,
+  "formal_queries": 16,
+  "annotated_gold_papers": 12,
+  "worker_record_bindings": 48,
+  "analysis_record_bindings": 48,
+  "worker_full_corpus_recoveries": 1,
+  "analysis_full_corpus_recoveries": 1,
+  "old_selected_bindings_matched": 43,
+  "unit_tests_run": 536,
+  "unit_tests_passed": 535,
+  "unit_tests_skipped": 1,
+  "new_model_calls": 0,
+  "formal_retries": 0,
+  "new_scientific_evaluations": 0,
+  "figure_visually_inspected": true,
+  "freeze": "f014dd70277b9d9f1b21f35e6fd39655bf24f961"
+}

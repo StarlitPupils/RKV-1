@@ -1,0 +1,166 @@
+{
+  "headline": {
+    "H1_original_order_ids_source_fullbytes_and_metadata": true,
+    "H2_missing_papers_self_exceed4096_strict_majority": false,
+    "missing_denominator": 5,
+    "missing_self_oversize": 0,
+    "formal_workers": 1,
+    "formal_queries": 16,
+    "annotated_gold_papers": 12,
+    "worker_record_bindings": 48,
+    "analysis_record_bindings": 48,
+    "worker_full_corpus_recoveries": 1,
+    "analysis_full_corpus_recoveries": 1,
+    "old_selected_bindings_matched": 43,
+    "unit_tests_run": 536,
+    "unit_tests_passed": 535,
+    "unit_tests_skipped": 1,
+    "new_model_calls": 0,
+    "formal_retries": 0,
+    "new_scientific_evaluations": 0,
+    "figure_visually_inspected": true,
+    "freeze": "f014dd70277b9d9f1b21f35e6fd39655bf24f961"
+  },
+  "gold_events": [
+    {
+      "claim_id": "903",
+      "paper_id": "doc:10648422",
+      "category": "recovered",
+      "original_record_B": 1309,
+      "rank": 1,
+      "remaining_B_before": 4096,
+      "selected_count_before": 0,
+      "self_exceeds_entire_budget": false,
+      "used_B_before": 0
+    },
+    {
+      "claim_id": "1163",
+      "paper_id": "doc:15305881",
+      "category": "recovered",
+      "original_record_B": 1334,
+      "rank": 1,
+      "remaining_B_before": 4096,
+      "selected_count_before": 0,
+      "self_exceeds_entire_budget": false,
+      "used_B_before": 0
+    },
+    {
+      "claim_id": "759",
+      "paper_id": "doc:1805641",
+      "category": "recovered",
+      "original_record_B": 3344,
+      "rank": 1,
+      "remaining_B_before": 4096,
+      "selected_count_before": 0,
+      "self_exceeds_entire_budget": false,
+      "used_B_before": 0
+    },
+    {
+      "claim_id": "1019",
+      "paper_id": "doc:11603066",
+      "category": "byte_rejected",
+      "original_record_B": 1835,
+      "rank": 2,
+      "remaining_B_before": 1759,
+      "selected_count_before": 1,
+      "self_exceeds_entire_budget": false,
+      "used_B_before": 2337
+    },
+    {
+      "claim_id": "1320",
+      "paper_id": "doc:16284655",
+      "category": "recovered",
+      "original_record_B": 1264,
+      "rank": 1,
+      "remaining_B_before": 4096,
+      "selected_count_before": 0,
+      "self_exceeds_entire_budget": false,
+      "used_B_before": 0
+    },
+    {
+      "claim_id": "540",
+      "paper_id": "doc:11886686",
+      "category": "byte_rejected",
+      "original_record_B": 1369,
+      "rank": 7,
+      "remaining_B_before": 847,
+      "selected_count_before": 2,
+      "self_exceeds_entire_budget": false,
+      "used_B_before": 3249
+    },
+    {
+      "claim_id": "1298",
+      "paper_id": "doc:11718220",
+      "category": "recovered",
+      "original_record_B": 2358,
+      "rank": 1,
+      "remaining_B_before": 4096,
+      "selected_count_before": 0,
+      "self_exceeds_entire_budget": false,
+      "used_B_before": 0
+    },
+    {
+      "claim_id": "185",
+      "paper_id": "doc:18340282",
+      "category": "byte_rejected",
+      "original_record_B": 2199,
+      "rank": 4,
+      "remaining_B_before": 130,
+      "selected_count_before": 3,
+      "self_exceeds_entire_budget": false,
+      "used_B_before": 3966
+    },
+    {
+      "claim_id": "921",
+      "paper_id": "doc:1642727",
+      "category": "byte_rejected",
+      "original_record_B": 2664,
+      "rank": 2,
+      "remaining_B_before": 2642,
+      "selected_count_before": 1,
+      "self_exceeds_entire_budget": false,
+      "used_B_before": 1454
+    },
+    {
+      "claim_id": "1241",
+      "paper_id": "doc:4427392",
+      "category": "byte_rejected",
+      "original_record_B": 2029,
+      "rank": 225,
+      "remaining_B_before": 418,
+      "selected_count_before": 2,
+      "self_exceeds_entire_budget": false,
+      "used_B_before": 3678
+    },
+    {
+      "claim_id": "219",
+      "paper_id": "doc:21366394",
+      "category": "recovered",
+      "original_record_B": 1343,
+      "rank": 1,
+      "remaining_B_before": 4096,
+      "selected_count_before": 0,
+      "self_exceeds_entire_budget": false,
+      "used_B_before": 0
+    },
+    {
+      "claim_id": "142",
+      "paper_id": "doc:10582939",
+      "category": "recovered",
+      "original_record_B": 2998,
+      "rank": 1,
+      "remaining_B_before": 4096,
+      "selected_count_before": 0,
+      "self_exceeds_entire_budget": false,
+      "used_B_before": 0
+    }
+  ],
+  "categories": {
+    "recovered": 7,
+    "no_candidate": 0,
+    "byte_rejected": 5,
+    "count_stop": 0
+  },
+  "analysis_application_returned_B": 8380618,
+  "new_model_calls": 0
+}

@@ -1,0 +1,9 @@
+{
+  "python": "3.13.12",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "CPU_only": true,
+  "new_remote_model_calls": 0,
+  "cold_cache": null,
+  "cross_machine": null,
+  "SSD_IO": null
+}

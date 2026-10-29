@@ -520,3 +520,7 @@ tag506dd5e1cc3d15400e30c79707154d8d72ceaa33，proofd6fe01703d81a2cd0033c41b32eed
 ## v0.85候选：旧API漏检的排名/原记录准入审计
 
 0新API/训练/检索方法；只独立复算原16已见问题的冻结词法排序与12/4096whole-record准入，匹配43旧返回记录和12gold，检验5缺gold论文中原记录自身>4096B是否严格过半。精确一次worker16case，parent/worker/finally/分析全程计时；本版未冻结或正式，不能当新科学验证。
+
+## v0.85实测（发行待核验）
+
+H1原排序/选集/字节与计量通过，H2原单record自身体积>4096B多数命题False（0/5）。5漏选rank2/2/4/7/225，都是当时剩余不足，不应混称结构性超长或纯预算因果。原16case/43selected+12gold、worker与独立analysis各48binding/fullcorpus1均核，0新API。图已实际看，完整发行待收尾。

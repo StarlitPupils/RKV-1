@@ -6,7 +6,15 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.84.0 · 模型API证据干预
+## 当前候选：v0.85.0 · 排名与原记录准入诊断
+
+原16问题的词法排序、43旧选中文献、12标注论文与原字节完全匹配。5个漏选来源中，没有一条自身超过4096B，原先“多数因为单篇太大”的假设失败（0/5）；其余预算不足与排序相互影响，原rank包含2、2、4、7和225。不能据此声称加预算必有收益。
+
+![排名和原记录准入](results/v0.85.0/api-admission-audit.png)
+
+536检查535pass/1权限skip，0新模型调用；[详实报告](results/v0.85.0/SUMMARY.md) · [协议](docs/API-ADMISSION-AUDIT.md)。这是已见事后解释，H1True/H2False，完整发行核验待完成，最新完整交付仍v0.84.0。
+
+## v0.84.0 · 模型API证据干预
 
 16个已见科学主张×三条件共48次真实API完成。空证据与其他题证据均4/16正确，检索证据9/16；12有标注问题中“判定+完整标注依据”分别0/12、0/12和5/12。独立原文/引用核验通过，冻结质量门槛通过；但16题较小、p=.125，不称普遍或显著提升。SUPPORT仅1/6，5题未取回标注论文，完整错误分解保留。
 
