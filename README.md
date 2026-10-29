@@ -6,7 +6,15 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.80.0 · 迟到成员请求的 RAM/CPU 取舍
+## 当前候选：v0.81.0 · 有界 metadata 子树缓存
+
+36worker/288packet576成员/144控制和fresh36根、42129叶、42165文件恢复通过。完整cache-owned graph操作后上界65536B满足，主4096额外prover状态约为全树2.52%，但cache实际0命中、反复淘汰，算法phase慢15.9–18.5倍，CPU13.3–22倍，parent回退。H1/H2=True、H3/joint=False，负结果保留。
+
+![有界缓存完整费用](results/v0.81.0/bounded-membership.png)
+
+504检查503pass/1权限skip；[详实报告](results/v0.81.0/SUMMARY.md) · [协议](docs/BOUNDED-MEMBERSHIP.md)。插入瞬时graph可70552B、完整RSS另列，不把64KiB当全流程峰值上限，不称压缩/NLI/回答收益。发行核验待完成。
+
+## v0.80.0 · 迟到成员请求的 RAM/CPU 取舍
 
 固定24worker/192packet/384成员与额外24fresh根、28086叶、28110原文件恢复通过。重算法额外常驻状态约为完整树的0.0623%，但完整进程peakRSS只小约5–6%；算法phase慢约5.4–5.6倍、CPU约6–7倍，parent也回退。H1/H2=True、H3/joint=False，负结果保留。
 

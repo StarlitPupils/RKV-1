@@ -1,0 +1,22 @@
+{
+  "H1_exact_packets_original_bytes_lifecycle_cache_bound_and_measurements": true,
+  "H2_primary_C_retained_state_atmost_half_A": true,
+  "H3_primary_C_phasewall_CPU_and_parent_atmost_A": false,
+  "joint": false,
+  "formal_workers": 36,
+  "packets": 288,
+  "members": 576,
+  "controls": 144,
+  "additional_fresh_root_audits": 36,
+  "additional_actual_leaf_checks": 42129,
+  "additional_actual_allfile_recoveries": 42165,
+  "additional_original_memberships": 576,
+  "unit_tests_run": 504,
+  "unit_tests_passed": 503,
+  "unit_tests_skipped": 1,
+  "formal_retries": 0,
+  "figure_visually_inspected": true,
+  "freeze": "e953fa06a62afbaf1c8d91ee28900bcaa8b10e6a",
+  "new_model_calls": 0,
+  "logic_DAG_or_science_verified": false
+}

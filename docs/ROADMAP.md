@@ -480,3 +480,6 @@ v0.80实测：24case/192packet384member、fresh24根/28086叶/28110file恢复和
 ## v0.81候选：64KiB metadata subtree cache
 
 v080已全部发行核验，其省状态但phase慢5.4–5.6x负结果保持。候选固定完整cache-owned graph操作后上界65536B，provisional/全prover/Scope/RSS另列；36worker ABC/BCA/CAB，同8迟到请求，正确性、C/A常驻RAM和完整phase CPU/wall/parent联合门槛先冻结。不得以删index/只限hash payload隐藏费用。协议docs/BOUNDED-MEMBERSHIP.md；尚未正式/发布。
+
+
+v081实测补充：36worker和独立fullaudit通过，H1/H2True，主4096 C cache0 hits、73719 hash nodes与9次完整树相同，LRU反复淘汰，phasewall15.9–18.5x/CPU13.3–22x，H3/jointFalse。操作后保守max65272B，provisional70552B另列；额外prover60474B不是全RSS。报告results/v0.81.0/SUMMARY.md，发行核验待完成。
