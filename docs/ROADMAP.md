@@ -512,3 +512,11 @@ tag4f3264fd66dbe7a71b350eaf995a904317e133a4、ReleaseCI40829377990、finalproof 
 ## v0.84实测（完整发行待核验）
 
 唯一48次真实API全部完成、原文与引用独立audit通过：empty4/16、retrieved9/16、rotated4/16；annotated判定+完整rationale为0/12、5/12、0/12，H1/H2True。仅16已见题，p=.125，SUPPORT1/6，5gold论文未取回，2已取回但判定错，不能称科学NLI已解决或普遍收益。新48call已用完，禁止额外付费调用。
+
+### v0.84完整交付确认
+
+tag506dd5e1cc3d15400e30c79707154d8d72ceaa33，proofd6fe01703d81a2cd0033c41b32eed6d17ebbe8631bf6d2a5a654e63b9beb0b7e，actual7SHA/67Python+HTML/allsource/物理外actualwheel-currentnative/newAPI fake和alllegacyactualsdist/proof8齐。旧48调用不再执行。
+
+## v0.85候选：旧API漏检的排名/原记录准入审计
+
+0新API/训练/检索方法；只独立复算原16已见问题的冻结词法排序与12/4096whole-record准入，匹配43旧返回记录和12gold，检验5缺gold论文中原记录自身>4096B是否严格过半。精确一次worker16case，parent/worker/finally/分析全程计时；本版未冻结或正式，不能当新科学验证。
