@@ -544,3 +544,11 @@ tag5c91df742af503252e9c874dd961865abf6696f2、ReleaseCI40842671596、finalproof4
 ## v0.87候选：第二批16题API证据干预复测
 
 用户明确新增授权48次/512out/0retry。新16题以SHA分层6/6/4、排除所有旧API28题及train重合，固定原提示/模型alias/三条件/12篇4096B。新call0；先必要测试、源码/协议/输入SHA与exactCI，再唯一正式。数据仍项目已见dev，不称未知科学泛化。
+
+### v0.87完整交付
+
+tagdcb7be19c281117da844a11ac1bcb3c67b10ef41/ReleaseCI40854945377/finalproofcbb747cc31af15c7d0033abd7bd9beba2cca12b7a9aefdf496567e36d5f56c6d，actual7SHA/67Python+HTML/全部源码/物理外actualwheel-currentnative/newselector+alllegacyactualsdist/proof8通过。
+
+## v0.88候选：两批原96回答的证据可得性与失败定位
+
+0新API/训练/检索，32问题×三条件原输出，主24有标注retrieved，互斥区分缺标注论文/有来源判定错/判定对依据不全/grounded正确；按每批保留多数假设和零分母null。已见事后诊断，先冻代码/协议/输入SHA和exactCI再唯一正式。当前仅准备，无实测结果。

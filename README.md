@@ -6,13 +6,13 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 最新实验：v0.87.0 · 第二批问题API复测（发行待核验）
+## 当前版本：v0.87.0 · 第二批问题API复测
 
 另一批16题、三条件共48次真实API及独立审计完成：检索证据12/16正确，空证据和其他题证据各4/16；12有标注题的判定加完整依据为7/12对两组0/12。固定门槛通过，仍是项目已见公开数据，不代表未知科学泛化或无限上下文。
 
 ![第二批API复测](results/v0.87.0/api-intervention.png)
 
-549检查548pass/1权限skip；[详实报告](results/v0.87.0/SUMMARY.md) · [协议](docs/API-EVIDENCE-REPLICATION.md)。本批48次额度全部使用，图已实际检查，打包与实际发行核验待完成。下方v0.86为最新完整交付版本。
+549检查548pass/1权限skip；[详实报告](results/v0.87.0/SUMMARY.md) · [协议](docs/API-EVIDENCE-REPLICATION.md)。本批48次额度全部使用，两图实际检查；实际7份资产SHA、67Python+HTML与所有源码、仓库外实际发行wheel/current native和新旧sdist均通过，第8份proof重下载核验通过。[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.87.0)。
 
 ## 当前版本：v0.86.0 · 固定预算的来源选择三法对照
 
