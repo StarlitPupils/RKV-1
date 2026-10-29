@@ -596,3 +596,7 @@ tag58411a4d58b2b9850045f464b0bc0cb2889ffb0d、ReleaseCI40874134052、finalproofb
 ### v0.91完整软件交付确认
 
 tag80d8179a2328bea5bc5be105b24a1aa40fb21f61、ReleaseCI40885089220、finalproof36cca54492ad8bc01a255da2ae3a20120dd4f873f92601a98c9f9bf7d95b4f6f，实际7资产SHA/67Python+HTML/全部源码/仓库外实际发行wheel-currentnative/新6FAKE HEAD及全部旧sdist/proof8通过。仅更新主分支交付状态，原协议、6次观测、源码、tag、资产和计时不变；401不表示认证成功或生成可用，也不解释v089旧失败。
+
+## v0.92候选：精确句子token与原Store来源绑定
+
+固定18fresh ownedStore worker，3/17/65记录×两编码×三轮，510record/1020选中token/108拒绝/18旧SID。原SID/path/fullfileSHA/recordrangeSHA/显式abstract或sentences与独立原JSONL行边界/byte-token参考核验，原完整record读取、UTF8offsetmap/metadata/hexpacket成本计费。H1完整机械保真，H2六primary完整packet<=原record；不叫净压缩/检索/推理收益。无科学数据/gold/模型/API；先冻结协议输入源码与exactCI再正式。11必要owned检查已通过，正式0。详见docs/SOURCE-SPANS.md。
