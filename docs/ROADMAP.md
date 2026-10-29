@@ -472,3 +472,6 @@ v0.79实验补充：固定12worker完成且独立14043叶/14055file恢复通过�
 ## v0.80候选：迟到成员请求的RAM/CPU取舍
 
 v0.79全部发行核验已通过，原固定8消息净增340600B负结果不改。新候选同held Scope/初始完整metadata与可信anchor，A保留全树/B每迟到请求重遍历；24worker/8双path/192packet/384成员，RAM与完整算法phase CPU/wall/parent gate分开，不用删除诊断文件声称压缩。必要owned测试已过，全回归/精确CI后才能正式。协议docs/LATE-MEMBERSHIP.md，当前尚未正式或发布。
+
+
+v0.80实测：24case/192packet384member、fresh24根/28086叶/28110file恢复和96控制通过，H1/H2True，但算法phase5.4–5.6x/CPU6–7x，parent回退，H3/jointFalse。额外状态比.00062255不是RSS，RSS比.938–.946；无生产速度/压缩/NLI收益。报告results/v0.80.0/SUMMARY.md，发行核验待完成。

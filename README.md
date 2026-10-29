@@ -6,7 +6,15 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前版本：v0.79.0 · 选中来源的短成员证明
+## 当前候选：v0.80.0 · 迟到成员请求的 RAM/CPU 取舍
+
+固定24worker/192packet/384成员与额外24fresh根、28086叶、28110原文件恢复通过。重算法额外常驻状态约为完整树的0.0623%，但完整进程peakRSS只小约5–6%；算法phase慢约5.4–5.6倍、CPU约6–7倍，parent也回退。H1/H2=True、H3/joint=False，负结果保留。
+
+![迟到请求的内存与阶段时间](results/v0.80.0/late-membership.png)
+
+496检查495pass/1权限skip；[详实报告](results/v0.80.0/SUMMARY.md) · [协议](docs/LATE-MEMBERSHIP.md)。保持初始完整metadata和外部可信anchor，不称总RAM同幅降低、生产加速/压缩/NLI或回答收益。发行核验待完成。
+
+## v0.79.0 · 选中来源的短成员证明
 
 24成员/96篡改与预算拒绝、历史SID和14043叶metadata/14055原文件复核通过。主4096短消息显著变小，但完整index+全部新增源码和固定8条消息后成本增加约34万B，H1=True/H2=True/H3=False/joint=False；负结果保留，不增加摊销次数追正。
 
