@@ -568,3 +568,11 @@ tagd07671b6826aa4a0130146914df9aa5e8e5dc853、ReleaseCI40860126424、finalproof4
 ### v0.89原正式轮未完成（发行待核验）
 
 第7预留请求URLError，7attempted/6response/41missing，按协议停止且0重试。H1/H2False，不能从缺失不对称推断检索或oracle效能。原slot/source/响应和原48分母独立审计通过，分析前quota接口暂时失败恢复后仅补未开始的audit，未重发API。剩余41授权名额未使用但本轮已关闭。
+
+### v0.89软件交付确认（科学轮保持未完成）
+
+tag23f7eee03d86b3bdbc4c3724918eeecdc1a513af/ReleaseCI40866699127/finalprooff5480b3889387c13805208082db68be280d332251a98ecc5c95c3ea51eaa5ec2，actual7SHA/67Python+HTML/全部源码/外实际发行安装与paired48owned及alllegacyactualsdist/proof8通过。科学7attempt/6responses/41missing原轮冻结不变，不补发。
+
+## v0.90候选：只读活动检查与report-only恢复
+
+纯离线owned进程硬退出7边界+成功控制各3轮24child、4篡改负控制，0实时HTTP；所有动作model_send_allowedFalse。先冻代码协议和exactCI再跑完整矩阵，测原文件不变/预留不重发/计数一致与完整parent计时；不叫断电或科学推理提升。当前准备，无正式结果。
