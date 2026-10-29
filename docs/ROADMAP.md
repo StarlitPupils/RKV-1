@@ -496,3 +496,7 @@ v081发行资产/外部安装/proof已齐。对原全部12Ccase/96请求192成�
 ### v0.82 完整交付确认（2026-10-29）
 
 前述“候选/待完成”记录为冻结时状态。现ReleaseCI 40821635891、7实际资产SHA、全部源码、仓库外actualwheel/currentnative及新旧actualsdist、最终第8份proof重下载全部通过。tag ac5a9f6cc182ba19abaacc78f065bc8c5389877c，proof SHA256 e1cd3c0645a061c7cc6dcb0ed93e308511dc8b56c89380294ef0065cdb691a24；不改旧tag/原测量。
+
+## v0.83实验结果（发行待核验）
+
+固定span>=64四法48worker/384packet768成员192控制、fresh48root56172leaf56220file通过。D主4096每轮80命中/0淘汰/10311hashnode；初末状态45634/45690B、cache max49368B，D/A额外状态约1.90%，RSS约.941–.956。wall仍1.74–2.00x/CPU1.33–2.50x，H3/jointFalse；完整本地/实际发行资产安装proof仍待收尾，不称交付或生产/推理收益。
