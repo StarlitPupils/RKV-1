@@ -552,3 +552,7 @@ tagdcb7be19c281117da844a11ac1bcb3c67b10ef41/ReleaseCI40854945377/finalproofcbb74
 ## v0.88候选：两批原96回答的证据可得性与失败定位
 
 0新API/训练/检索，32问题×三条件原输出，主24有标注retrieved，互斥区分缺标注论文/有来源判定错/判定对依据不全/grounded正确；按每批保留多数假设和零分母null。已见事后诊断，先冻代码/协议/输入SHA和exactCI再唯一正式。当前仅准备，无实测结果。
+
+### v0.88实测（发行待核验）
+
+96原输出/32问题/24主有标注retrieved，worker及独立source/citation/audit各89绑定、125625应用B通过；H1True，H2两批True。缺来源5/7及3/5为grounded失败多数；已有来源仍判定错各2，保留。0新API/训练/检索，先前已见结果的定位不称新的科学或因果验证。

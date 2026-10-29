@@ -1,0 +1,7 @@
+{
+  "presentation_only_no_scientific_re_evaluation": true,
+  "reason": "Place legend below data and label segment counts",
+  "input_aggregate_SHA": "029808cc490050254172b09a4e91dfc128630fc807dd74962a939a5af70061eb",
+  "wall_s": 0.589295000070706,
+  "CPU_s": 0.578125
+}

@@ -1,0 +1,1641 @@
+{
+  "H1_original_source_scores_and_denominators": true,
+  "H2_per_cohort": {
+    "v084": true,
+    "v087": true
+  },
+  "rows": [
+    {
+      "cohort": "v084",
+      "index": 0,
+      "claim_id": "903",
+      "condition": "rotated",
+      "gold_papers": [
+        "10648422"
+      ],
+      "provided_papers": [
+        "15305881",
+        "799586",
+        "8065561"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 1,
+      "claim_id": "540",
+      "condition": "retrieved",
+      "gold_papers": [
+        "11886686"
+      ],
+      "provided_papers": [
+        "14782049",
+        "17150648",
+        "306311"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 2,
+      "claim_id": "921",
+      "condition": "empty",
+      "gold_papers": [
+        "1642727"
+      ],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 3,
+      "claim_id": "1163",
+      "condition": "rotated",
+      "gold_papers": [
+        "15305881"
+      ],
+      "provided_papers": [
+        "1805641",
+        "28821565"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 4,
+      "claim_id": "1019",
+      "condition": "empty",
+      "gold_papers": [
+        "11603066"
+      ],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 5,
+      "claim_id": "1280",
+      "condition": "empty",
+      "gold_papers": [],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": null,
+      "category": "unannotated_proxy"
+    },
+    {
+      "cohort": "v084",
+      "index": 6,
+      "claim_id": "1298",
+      "condition": "empty",
+      "gold_papers": [
+        "11718220"
+      ],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 7,
+      "claim_id": "219",
+      "condition": "empty",
+      "gold_papers": [
+        "21366394"
+      ],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 8,
+      "claim_id": "535",
+      "condition": "empty",
+      "gold_papers": [],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": null,
+      "category": "unannotated_proxy"
+    },
+    {
+      "cohort": "v084",
+      "index": 9,
+      "claim_id": "759",
+      "condition": "retrieved",
+      "gold_papers": [
+        "1805641"
+      ],
+      "provided_papers": [
+        "1805641",
+        "28821565"
+      ],
+      "any_annotated_paper_available": true,
+      "correct": false,
+      "grounded": false,
+      "category": "annotated_paper_available_verdict_wrong"
+    },
+    {
+      "cohort": "v084",
+      "index": 10,
+      "claim_id": "1320",
+      "condition": "empty",
+      "gold_papers": [
+        "16284655"
+      ],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 11,
+      "claim_id": "1241",
+      "condition": "empty",
+      "gold_papers": [
+        "4427392"
+      ],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 12,
+      "claim_id": "577",
+      "condition": "rotated",
+      "gold_papers": [],
+      "provided_papers": [
+        "2138843",
+        "43483151",
+        "43557480"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": null,
+      "category": "unannotated_proxy"
+    },
+    {
+      "cohort": "v084",
+      "index": 13,
+      "claim_id": "1280",
+      "condition": "retrieved",
+      "gold_papers": [],
+      "provided_papers": [
+        "29214508",
+        "37768883"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": null,
+      "category": "unannotated_proxy"
+    },
+    {
+      "cohort": "v084",
+      "index": 14,
+      "claim_id": "1179",
+      "condition": "retrieved",
+      "gold_papers": [],
+      "provided_papers": [
+        "10627801",
+        "2566674",
+        "6144337"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": null,
+      "category": "unannotated_proxy"
+    },
+    {
+      "cohort": "v084",
+      "index": 15,
+      "claim_id": "219",
+      "condition": "rotated",
+      "gold_papers": [
+        "21366394"
+      ],
+      "provided_papers": [
+        "23777820",
+        "24705390"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 16,
+      "claim_id": "142",
+      "condition": "empty",
+      "gold_papers": [
+        "10582939"
+      ],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 17,
+      "claim_id": "921",
+      "condition": "rotated",
+      "gold_papers": [
+        "1642727"
+      ],
+      "provided_papers": [
+        "14296612",
+        "6148876"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 18,
+      "claim_id": "535",
+      "condition": "rotated",
+      "gold_papers": [],
+      "provided_papers": [
+        "10582939",
+        "19511011"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": null,
+      "category": "unannotated_proxy"
+    },
+    {
+      "cohort": "v084",
+      "index": 19,
+      "claim_id": "577",
+      "condition": "empty",
+      "gold_papers": [],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": null,
+      "category": "unannotated_proxy"
+    },
+    {
+      "cohort": "v084",
+      "index": 20,
+      "claim_id": "1298",
+      "condition": "retrieved",
+      "gold_papers": [
+        "11718220"
+      ],
+      "provided_papers": [
+        "11718220",
+        "34338075"
+      ],
+      "any_annotated_paper_available": true,
+      "correct": true,
+      "grounded": true,
+      "category": "grounded_correct"
+    },
+    {
+      "cohort": "v084",
+      "index": 21,
+      "claim_id": "535",
+      "condition": "retrieved",
+      "gold_papers": [],
+      "provided_papers": [
+        "2138843",
+        "43483151",
+        "43557480"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": null,
+      "category": "unannotated_proxy"
+    },
+    {
+      "cohort": "v084",
+      "index": 22,
+      "claim_id": "903",
+      "condition": "empty",
+      "gold_papers": [
+        "10648422"
+      ],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 23,
+      "claim_id": "185",
+      "condition": "rotated",
+      "gold_papers": [
+        "18340282"
+      ],
+      "provided_papers": [
+        "14079881",
+        "19958277",
+        "37156349"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 24,
+      "claim_id": "142",
+      "condition": "rotated",
+      "gold_papers": [
+        "10582939"
+      ],
+      "provided_papers": [
+        "10648422",
+        "1360607",
+        "13905670"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 25,
+      "claim_id": "1179",
+      "condition": "empty",
+      "gold_papers": [],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": null,
+      "category": "unannotated_proxy"
+    },
+    {
+      "cohort": "v084",
+      "index": 26,
+      "claim_id": "1019",
+      "condition": "retrieved",
+      "gold_papers": [
+        "11603066"
+      ],
+      "provided_papers": [
+        "1225513",
+        "38528892",
+        "44172171"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 27,
+      "claim_id": "1298",
+      "condition": "rotated",
+      "gold_papers": [
+        "11718220"
+      ],
+      "provided_papers": [
+        "10627801",
+        "2566674",
+        "6144337"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 28,
+      "claim_id": "219",
+      "condition": "retrieved",
+      "gold_papers": [
+        "21366394"
+      ],
+      "provided_papers": [
+        "20311968",
+        "21366394",
+        "696006"
+      ],
+      "any_annotated_paper_available": true,
+      "correct": true,
+      "grounded": true,
+      "category": "grounded_correct"
+    },
+    {
+      "cohort": "v084",
+      "index": 29,
+      "claim_id": "1163",
+      "condition": "empty",
+      "gold_papers": [
+        "15305881"
+      ],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 30,
+      "claim_id": "185",
+      "condition": "empty",
+      "gold_papers": [
+        "18340282"
+      ],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 31,
+      "claim_id": "759",
+      "condition": "empty",
+      "gold_papers": [
+        "1805641"
+      ],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 32,
+      "claim_id": "1179",
+      "condition": "rotated",
+      "gold_papers": [],
+      "provided_papers": [
+        "15512462",
+        "21874312",
+        "23557241"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": null,
+      "category": "unannotated_proxy"
+    },
+    {
+      "cohort": "v084",
+      "index": 33,
+      "claim_id": "1320",
+      "condition": "retrieved",
+      "gold_papers": [
+        "16284655"
+      ],
+      "provided_papers": [
+        "106301",
+        "16284655",
+        "46193388",
+        "5236443"
+      ],
+      "any_annotated_paper_available": true,
+      "correct": true,
+      "grounded": true,
+      "category": "grounded_correct"
+    },
+    {
+      "cohort": "v084",
+      "index": 34,
+      "claim_id": "1241",
+      "condition": "rotated",
+      "gold_papers": [
+        "4427392"
+      ],
+      "provided_papers": [
+        "20311968",
+        "21366394",
+        "696006"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 35,
+      "claim_id": "1280",
+      "condition": "rotated",
+      "gold_papers": [],
+      "provided_papers": [
+        "11718220",
+        "34338075"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": null,
+      "category": "unannotated_proxy"
+    },
+    {
+      "cohort": "v084",
+      "index": 36,
+      "claim_id": "1019",
+      "condition": "rotated",
+      "gold_papers": [
+        "11603066"
+      ],
+      "provided_papers": [
+        "106301",
+        "16284655",
+        "46193388",
+        "5236443"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 37,
+      "claim_id": "1163",
+      "condition": "retrieved",
+      "gold_papers": [
+        "15305881"
+      ],
+      "provided_papers": [
+        "15305881",
+        "799586",
+        "8065561"
+      ],
+      "any_annotated_paper_available": true,
+      "correct": false,
+      "grounded": false,
+      "category": "annotated_paper_available_verdict_wrong"
+    },
+    {
+      "cohort": "v084",
+      "index": 38,
+      "claim_id": "903",
+      "condition": "retrieved",
+      "gold_papers": [
+        "10648422"
+      ],
+      "provided_papers": [
+        "10648422",
+        "1360607",
+        "13905670"
+      ],
+      "any_annotated_paper_available": true,
+      "correct": true,
+      "grounded": true,
+      "category": "grounded_correct"
+    },
+    {
+      "cohort": "v084",
+      "index": 39,
+      "claim_id": "759",
+      "condition": "rotated",
+      "gold_papers": [
+        "1805641"
+      ],
+      "provided_papers": [
+        "1225513",
+        "38528892",
+        "44172171"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 40,
+      "claim_id": "1320",
+      "condition": "rotated",
+      "gold_papers": [
+        "16284655"
+      ],
+      "provided_papers": [
+        "14782049",
+        "17150648",
+        "306311"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 41,
+      "claim_id": "142",
+      "condition": "retrieved",
+      "gold_papers": [
+        "10582939"
+      ],
+      "provided_papers": [
+        "10582939",
+        "19511011"
+      ],
+      "any_annotated_paper_available": true,
+      "correct": true,
+      "grounded": true,
+      "category": "grounded_correct"
+    },
+    {
+      "cohort": "v084",
+      "index": 42,
+      "claim_id": "540",
+      "condition": "empty",
+      "gold_papers": [
+        "11886686"
+      ],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 43,
+      "claim_id": "540",
+      "condition": "rotated",
+      "gold_papers": [
+        "11886686"
+      ],
+      "provided_papers": [
+        "29214508",
+        "37768883"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 44,
+      "claim_id": "1241",
+      "condition": "retrieved",
+      "gold_papers": [
+        "4427392"
+      ],
+      "provided_papers": [
+        "14296612",
+        "6148876"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 45,
+      "claim_id": "921",
+      "condition": "retrieved",
+      "gold_papers": [
+        "1642727"
+      ],
+      "provided_papers": [
+        "14079881",
+        "19958277",
+        "37156349"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 46,
+      "claim_id": "185",
+      "condition": "retrieved",
+      "gold_papers": [
+        "18340282"
+      ],
+      "provided_papers": [
+        "15512462",
+        "21874312",
+        "23557241"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v084",
+      "index": 47,
+      "claim_id": "577",
+      "condition": "retrieved",
+      "gold_papers": [],
+      "provided_papers": [
+        "23777820",
+        "24705390"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": null,
+      "category": "unannotated_proxy"
+    },
+    {
+      "cohort": "v087",
+      "index": 0,
+      "claim_id": "411",
+      "condition": "retrieved",
+      "gold_papers": [],
+      "provided_papers": [
+        "14924526",
+        "15889329",
+        "29723642",
+        "599582"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": null,
+      "category": "unannotated_proxy"
+    },
+    {
+      "cohort": "v087",
+      "index": 1,
+      "claim_id": "1319",
+      "condition": "rotated",
+      "gold_papers": [
+        "16284655"
+      ],
+      "provided_papers": [
+        "10536636",
+        "4530659",
+        "7655029"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 2,
+      "claim_id": "180",
+      "condition": "retrieved",
+      "gold_papers": [
+        "16966326"
+      ],
+      "provided_papers": [
+        "16966326",
+        "21179714",
+        "9217800"
+      ],
+      "any_annotated_paper_available": true,
+      "correct": true,
+      "grounded": true,
+      "category": "grounded_correct"
+    },
+    {
+      "cohort": "v087",
+      "index": 3,
+      "claim_id": "411",
+      "condition": "rotated",
+      "gold_papers": [],
+      "provided_papers": [
+        "19099739",
+        "3893473",
+        "52873726",
+        "80109277"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": null,
+      "category": "unannotated_proxy"
+    },
+    {
+      "cohort": "v087",
+      "index": 4,
+      "claim_id": "437",
+      "condition": "rotated",
+      "gold_papers": [],
+      "provided_papers": [
+        "11748341",
+        "39593548"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": null,
+      "category": "unannotated_proxy"
+    },
+    {
+      "cohort": "v087",
+      "index": 5,
+      "claim_id": "770",
+      "condition": "retrieved",
+      "gold_papers": [
+        "15476777"
+      ],
+      "provided_papers": [
+        "13580614",
+        "15476777"
+      ],
+      "any_annotated_paper_available": true,
+      "correct": true,
+      "grounded": true,
+      "category": "grounded_correct"
+    },
+    {
+      "cohort": "v087",
+      "index": 6,
+      "claim_id": "852",
+      "condition": "retrieved",
+      "gold_papers": [
+        "13843341"
+      ],
+      "provided_papers": [
+        "13843341",
+        "474325"
+      ],
+      "any_annotated_paper_available": true,
+      "correct": false,
+      "grounded": false,
+      "category": "annotated_paper_available_verdict_wrong"
+    },
+    {
+      "cohort": "v087",
+      "index": 7,
+      "claim_id": "1245",
+      "condition": "retrieved",
+      "gold_papers": [],
+      "provided_papers": [
+        "11748341",
+        "39593548"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": null,
+      "category": "unannotated_proxy"
+    },
+    {
+      "cohort": "v087",
+      "index": 8,
+      "claim_id": "1089",
+      "condition": "rotated",
+      "gold_papers": [
+        "17628888"
+      ],
+      "provided_papers": [
+        "13580614",
+        "15476777"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 9,
+      "claim_id": "533",
+      "condition": "retrieved",
+      "gold_papers": [
+        "12991445"
+      ],
+      "provided_papers": [
+        "12991445",
+        "18111172"
+      ],
+      "any_annotated_paper_available": true,
+      "correct": true,
+      "grounded": true,
+      "category": "grounded_correct"
+    },
+    {
+      "cohort": "v087",
+      "index": 10,
+      "claim_id": "1187",
+      "condition": "retrieved",
+      "gold_papers": [
+        "52873726"
+      ],
+      "provided_papers": [
+        "19099739",
+        "3893473",
+        "52873726",
+        "80109277"
+      ],
+      "any_annotated_paper_available": true,
+      "correct": true,
+      "grounded": true,
+      "category": "grounded_correct"
+    },
+    {
+      "cohort": "v087",
+      "index": 11,
+      "claim_id": "1319",
+      "condition": "empty",
+      "gold_papers": [
+        "16284655"
+      ],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 12,
+      "claim_id": "232",
+      "condition": "rotated",
+      "gold_papers": [],
+      "provided_papers": [
+        "12658073",
+        "21874312",
+        "22843838"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": null,
+      "category": "unannotated_proxy"
+    },
+    {
+      "cohort": "v087",
+      "index": 13,
+      "claim_id": "1089",
+      "condition": "empty",
+      "gold_papers": [
+        "17628888"
+      ],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 14,
+      "claim_id": "922",
+      "condition": "retrieved",
+      "gold_papers": [
+        "17077004"
+      ],
+      "provided_papers": [
+        "17077004",
+        "28821565",
+        "37444589"
+      ],
+      "any_annotated_paper_available": true,
+      "correct": true,
+      "grounded": true,
+      "category": "grounded_correct"
+    },
+    {
+      "cohort": "v087",
+      "index": 15,
+      "claim_id": "852",
+      "condition": "empty",
+      "gold_papers": [
+        "13843341"
+      ],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 16,
+      "claim_id": "533",
+      "condition": "empty",
+      "gold_papers": [
+        "12991445"
+      ],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 17,
+      "claim_id": "1232",
+      "condition": "retrieved",
+      "gold_papers": [
+        "13905670"
+      ],
+      "provided_papers": [
+        "13905670",
+        "2844490",
+        "6957332"
+      ],
+      "any_annotated_paper_available": true,
+      "correct": true,
+      "grounded": true,
+      "category": "grounded_correct"
+    },
+    {
+      "cohort": "v087",
+      "index": 18,
+      "claim_id": "692",
+      "condition": "rotated",
+      "gold_papers": [
+        "24088502"
+      ],
+      "provided_papers": [
+        "12991445",
+        "18111172"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 19,
+      "claim_id": "784",
+      "condition": "rotated",
+      "gold_papers": [
+        "2356950"
+      ],
+      "provided_papers": [
+        "17628888",
+        "23577014",
+        "7915836"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 20,
+      "claim_id": "1187",
+      "condition": "empty",
+      "gold_papers": [
+        "52873726"
+      ],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 21,
+      "claim_id": "1245",
+      "condition": "empty",
+      "gold_papers": [],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": null,
+      "category": "unannotated_proxy"
+    },
+    {
+      "cohort": "v087",
+      "index": 22,
+      "claim_id": "437",
+      "condition": "empty",
+      "gold_papers": [],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": null,
+      "category": "unannotated_proxy"
+    },
+    {
+      "cohort": "v087",
+      "index": 23,
+      "claim_id": "922",
+      "condition": "rotated",
+      "gold_papers": [
+        "17077004"
+      ],
+      "provided_papers": [
+        "16966326",
+        "21179714",
+        "9217800"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 24,
+      "claim_id": "437",
+      "condition": "retrieved",
+      "gold_papers": [],
+      "provided_papers": [
+        "24466904",
+        "3863543",
+        "39851630"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": null,
+      "category": "unannotated_proxy"
+    },
+    {
+      "cohort": "v087",
+      "index": 25,
+      "claim_id": "1089",
+      "condition": "retrieved",
+      "gold_papers": [
+        "17628888"
+      ],
+      "provided_papers": [
+        "17628888",
+        "23577014",
+        "7915836"
+      ],
+      "any_annotated_paper_available": true,
+      "correct": true,
+      "grounded": true,
+      "category": "grounded_correct"
+    },
+    {
+      "cohort": "v087",
+      "index": 26,
+      "claim_id": "873",
+      "condition": "retrieved",
+      "gold_papers": [
+        "1180972",
+        "19307912",
+        "27393799",
+        "29025270",
+        "3315558"
+      ],
+      "provided_papers": [
+        "12658073",
+        "21874312",
+        "22843838"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 27,
+      "claim_id": "922",
+      "condition": "empty",
+      "gold_papers": [
+        "17077004"
+      ],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 28,
+      "claim_id": "533",
+      "condition": "rotated",
+      "gold_papers": [
+        "12991445"
+      ],
+      "provided_papers": [
+        "13843341",
+        "474325"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 29,
+      "claim_id": "232",
+      "condition": "retrieved",
+      "gold_papers": [],
+      "provided_papers": [
+        "10536636",
+        "4530659",
+        "7655029"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": null,
+      "category": "unannotated_proxy"
+    },
+    {
+      "cohort": "v087",
+      "index": 30,
+      "claim_id": "1319",
+      "condition": "retrieved",
+      "gold_papers": [
+        "16284655"
+      ],
+      "provided_papers": [
+        "14192687",
+        "34258065",
+        "4388470"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 31,
+      "claim_id": "873",
+      "condition": "rotated",
+      "gold_papers": [
+        "1180972",
+        "19307912",
+        "27393799",
+        "29025270",
+        "3315558"
+      ],
+      "provided_papers": [
+        "14924526",
+        "15889329",
+        "29723642",
+        "599582"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 32,
+      "claim_id": "411",
+      "condition": "empty",
+      "gold_papers": [],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": null,
+      "category": "unannotated_proxy"
+    },
+    {
+      "cohort": "v087",
+      "index": 33,
+      "claim_id": "692",
+      "condition": "empty",
+      "gold_papers": [
+        "24088502"
+      ],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 34,
+      "claim_id": "180",
+      "condition": "empty",
+      "gold_papers": [
+        "16966326"
+      ],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 35,
+      "claim_id": "1187",
+      "condition": "rotated",
+      "gold_papers": [
+        "52873726"
+      ],
+      "provided_papers": [
+        "24466904",
+        "3863543",
+        "39851630"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 36,
+      "claim_id": "770",
+      "condition": "empty",
+      "gold_papers": [
+        "15476777"
+      ],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 37,
+      "claim_id": "852",
+      "condition": "rotated",
+      "gold_papers": [
+        "13843341"
+      ],
+      "provided_papers": [
+        "1447990",
+        "16999023",
+        "23535770"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 38,
+      "claim_id": "692",
+      "condition": "retrieved",
+      "gold_papers": [
+        "24088502"
+      ],
+      "provided_papers": [
+        "1583041",
+        "24088502",
+        "27049238"
+      ],
+      "any_annotated_paper_available": true,
+      "correct": false,
+      "grounded": false,
+      "category": "annotated_paper_available_verdict_wrong"
+    },
+    {
+      "cohort": "v087",
+      "index": 39,
+      "claim_id": "873",
+      "condition": "empty",
+      "gold_papers": [
+        "1180972",
+        "19307912",
+        "27393799",
+        "29025270",
+        "3315558"
+      ],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 40,
+      "claim_id": "784",
+      "condition": "retrieved",
+      "gold_papers": [
+        "2356950"
+      ],
+      "provided_papers": [
+        "1447990",
+        "16999023",
+        "23535770"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 41,
+      "claim_id": "770",
+      "condition": "rotated",
+      "gold_papers": [
+        "15476777"
+      ],
+      "provided_papers": [
+        "13905670",
+        "2844490",
+        "6957332"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 42,
+      "claim_id": "180",
+      "condition": "rotated",
+      "gold_papers": [
+        "16966326"
+      ],
+      "provided_papers": [
+        "14192687",
+        "34258065",
+        "4388470"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 43,
+      "claim_id": "784",
+      "condition": "empty",
+      "gold_papers": [
+        "2356950"
+      ],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 44,
+      "claim_id": "1232",
+      "condition": "rotated",
+      "gold_papers": [
+        "13905670"
+      ],
+      "provided_papers": [
+        "17077004",
+        "28821565",
+        "37444589"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    },
+    {
+      "cohort": "v087",
+      "index": 45,
+      "claim_id": "232",
+      "condition": "empty",
+      "gold_papers": [],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": null,
+      "category": "unannotated_proxy"
+    },
+    {
+      "cohort": "v087",
+      "index": 46,
+      "claim_id": "1245",
+      "condition": "rotated",
+      "gold_papers": [],
+      "provided_papers": [
+        "1583041",
+        "24088502",
+        "27049238"
+      ],
+      "any_annotated_paper_available": false,
+      "correct": true,
+      "grounded": null,
+      "category": "unannotated_proxy"
+    },
+    {
+      "cohort": "v087",
+      "index": 47,
+      "claim_id": "1232",
+      "condition": "empty",
+      "gold_papers": [
+        "13905670"
+      ],
+      "provided_papers": [],
+      "any_annotated_paper_available": false,
+      "correct": false,
+      "grounded": false,
+      "category": "no_annotated_paper_available"
+    }
+  ],
+  "groups": {
+    "v084:empty": {
+      "counts": {
+        "unannotated_proxy": 4,
+        "no_annotated_paper_available": 12,
+        "annotated_paper_available_verdict_wrong": 0,
+        "verdict_correct_rationale_incomplete": 0,
+        "grounded_correct": 0
+      },
+      "all_rows": 16,
+      "annotated_grounded_failures": 12,
+      "missing_paper_strict_majority": true
+    },
+    "v084:retrieved": {
+      "counts": {
+        "unannotated_proxy": 4,
+        "no_annotated_paper_available": 5,
+        "annotated_paper_available_verdict_wrong": 2,
+        "verdict_correct_rationale_incomplete": 0,
+        "grounded_correct": 5
+      },
+      "all_rows": 16,
+      "annotated_grounded_failures": 7,
+      "missing_paper_strict_majority": true
+    },
+    "v084:rotated": {
+      "counts": {
+        "unannotated_proxy": 4,
+        "no_annotated_paper_available": 12,
+        "annotated_paper_available_verdict_wrong": 0,
+        "verdict_correct_rationale_incomplete": 0,
+        "grounded_correct": 0
+      },
+      "all_rows": 16,
+      "annotated_grounded_failures": 12,
+      "missing_paper_strict_majority": true
+    },
+    "v087:empty": {
+      "counts": {
+        "unannotated_proxy": 4,
+        "no_annotated_paper_available": 12,
+        "annotated_paper_available_verdict_wrong": 0,
+        "verdict_correct_rationale_incomplete": 0,
+        "grounded_correct": 0
+      },
+      "all_rows": 16,
+      "annotated_grounded_failures": 12,
+      "missing_paper_strict_majority": true
+    },
+    "v087:retrieved": {
+      "counts": {
+        "unannotated_proxy": 4,
+        "no_annotated_paper_available": 3,
+        "annotated_paper_available_verdict_wrong": 2,
+        "verdict_correct_rationale_incomplete": 0,
+        "grounded_correct": 7
+      },
+      "all_rows": 16,
+      "annotated_grounded_failures": 5,
+      "missing_paper_strict_majority": true
+    },
+    "v087:rotated": {
+      "counts": {
+        "unannotated_proxy": 4,
+        "no_annotated_paper_available": 12,
+        "annotated_paper_available_verdict_wrong": 0,
+        "verdict_correct_rationale_incomplete": 0,
+        "grounded_correct": 0
+      },
+      "all_rows": 16,
+      "annotated_grounded_failures": 12,
+      "missing_paper_strict_majority": true
+    }
+  },
+  "old_output_count": 96,
+  "unique_questions": 32,
+  "primary_annotated_retrieved": 24,
+  "new_model_calls": 0,
+  "new_retrieval_trials": 0,
+  "source_bindings": 89,
+  "application_returned_B": 125625,
+  "posthoc_known_outputs_not_new_science": true
+}

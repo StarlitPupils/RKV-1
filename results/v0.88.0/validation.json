@@ -1,0 +1,17 @@
+{
+  "H1_all96original_scores_sources_taxonomy_independent": true,
+  "H2_missing_paper_majority_per_cohort": {
+    "v084": true,
+    "v087": true
+  },
+  "original_outputs": 96,
+  "unique_questions": 32,
+  "primary_annotated_retrieved": 24,
+  "new_model_calls": 0,
+  "new_retrieval_trials": 0,
+  "figure_visually_inspected": true,
+  "posthoc_known_outputs_not_new_science": true,
+  "worker_source_bindings": 89,
+  "independent_source_bindings": 89,
+  "independent_application_returned_B": 125625
+}
