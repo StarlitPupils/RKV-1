@@ -540,3 +540,7 @@ tagaca19bfb3598c787ae3a9da941122defde3c592b，原proofbf3479d10dae42fe30ce68f5bc
 ### v0.86完整交付确认
 
 tag5c91df742af503252e9c874dd961865abf6696f2、ReleaseCI40842671596、finalproof4294d006e7a1f3cdccce7571dcaffa92c0efcd461fcf20b4f57844da02c3fa6d。7份实际资产SHA、67Python+HTML/全部源码、仓库外实际发行wheel/current native及新cost-aware三方法owned与所有旧sdist smoke通过，最终第8份proof重下载通过。原负结果、协议、原始JSON及图保持冻结；本段为核验完成后的主分支状态更新，不移动tag。
+
+## v0.87候选：第二批16题API证据干预复测
+
+用户明确新增授权48次/512out/0retry。新16题以SHA分层6/6/4、排除所有旧API28题及train重合，固定原提示/模型alias/三条件/12篇4096B。新call0；先必要测试、源码/协议/输入SHA与exactCI，再唯一正式。数据仍项目已见dev，不称未知科学泛化。
