@@ -1,0 +1,9 @@
+{
+  "round": 1,
+  "method": "score_per_byte",
+  "parent_full_wall_s": 9.186467499937862,
+  "parent_own_CPU_s": 0.015625,
+  "exit_code": 0,
+  "error": null,
+  "formal_retries": 0
+}

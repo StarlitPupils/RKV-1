@@ -532,3 +532,7 @@ tagaca19bfb3598c787ae3a9da941122defde3c592b，原proofbf3479d10dae42fe30ce68f5bc
 ## v0.86候选：固定预算的原记录分数密度
 
 三角色旧lexical/精确Fraction score_per_byte/length_only，原12wholepaper4096B不改；primary270问题168annotated/102质量null，排除旧API28题和train重合但仍是已见dev。9freshworkers/2430本机query、0新API/训练，严格先freeze/CI再评分；当前8必要owned通过，真实结果未知，未发布。
+
+## v0.86固定预算来源选择实测（发行待核验）
+
+9worker/2430查询、270已见问题中168annotated和102质量null；独立11244原记录绑定与完整corpus恢复通过。旧词法/分数密度/长度控制宏paperrecall为76.24%/57.86%/1.19%，完整126/95/2题。H1True、H2False、H3False、jointFalse；密度候选完整算法wall4.54–4.74x，0新API/训练。图已实际检查，不继续调此旧集合参数追正；当前只收尾本版实际包/CI/外安装/proof核验。

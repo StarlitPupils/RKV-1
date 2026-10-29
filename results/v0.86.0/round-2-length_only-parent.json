@@ -1,0 +1,9 @@
+{
+  "round": 2,
+  "method": "length_only",
+  "parent_full_wall_s": 2.8739809999242425,
+  "parent_own_CPU_s": 0.015625,
+  "exit_code": 0,
+  "error": null,
+  "formal_retries": 0
+}
