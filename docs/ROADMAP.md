@@ -536,3 +536,7 @@ tagaca19bfb3598c787ae3a9da941122defde3c592b，原proofbf3479d10dae42fe30ce68f5bc
 ## v0.86固定预算来源选择实测（发行待核验）
 
 9worker/2430查询、270已见问题中168annotated和102质量null；独立11244原记录绑定与完整corpus恢复通过。旧词法/分数密度/长度控制宏paperrecall为76.24%/57.86%/1.19%，完整126/95/2题。H1True、H2False、H3False、jointFalse；密度候选完整算法wall4.54–4.74x，0新API/训练。图已实际检查，不继续调此旧集合参数追正；当前只收尾本版实际包/CI/外安装/proof核验。
+
+### v0.86完整交付确认
+
+tag5c91df742af503252e9c874dd961865abf6696f2、ReleaseCI40842671596、finalproof4294d006e7a1f3cdccce7571dcaffa92c0efcd461fcf20b4f57844da02c3fa6d。7份实际资产SHA、67Python+HTML/全部源码、仓库外实际发行wheel/current native及新cost-aware三方法owned与所有旧sdist smoke通过，最终第8份proof重下载通过。原负结果、协议、原始JSON及图保持冻结；本段为核验完成后的主分支状态更新，不移动tag。

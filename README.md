@@ -6,13 +6,13 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前实验：v0.86.0 · 固定预算的来源选择三法对照
+## 当前版本：v0.86.0 · 固定预算的来源选择三法对照
 
 270个已见问题、三方法各三轮共2430本机查询完成。168有标注问题中，旧词法宏来源recall为76.24%、完整覆盖126题；按分数/原字节排序降至57.86%、95题，长度控制为1.19%、2题。新候选算法wall约4.54–4.74倍，质量与时间联合门槛失败，保留旧默认方法。
 
 ![固定预算质量与成本](results/v0.86.0/cost-aware-sources.png)
 
-544检查543pass/1权限skip，独立11244原记录绑定和完整语料恢复通过。0新API/训练；[详实报告](results/v0.86.0/SUMMARY.md) · [冻结协议](docs/COST-AWARE-SOURCES.md)。图已实际检查，发行资产与外部安装尚待核验；不称模型回答提升或未知科学泛化。
+544检查543pass/1权限skip，独立11244原记录绑定和完整语料恢复通过。0新API/训练；[详实报告](results/v0.86.0/SUMMARY.md) · [冻结协议](docs/COST-AWARE-SOURCES.md)。图已实际检查，[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.86.0)的7份实际资产SHA、67Python+HTML与所有源码、仓库外实际发行wheel/current native和新旧sdist核验均通过，第8份[最终核验文件](https://github.com/StarlitPupils/RKV-1/releases/download/v0.86.0/published-verification.json)重下载通过。不称模型回答提升或未知科学泛化。
 
 ## v0.85.0 · 排名与原记录准入诊断
 
