@@ -647,3 +647,7 @@ source d6dcaaf8e23e9c3386e986c4fa1bb1abf71cf241/exactCI41025946893，616检查61
 ### v0.95完整软件交付确认
 
 tag63a187ecdb6a6ee087dec182f239d31949ce6c2f、ReleaseCI41028557446、finalproof88a019da9aa5d4b4239fa9d6813239a766199e7d3fa7702caec9a190fe525d99。实际7资产SHA/全部68Python+HTML与tag源码/当前结果范围/仓库外实际wheel-currentnative与newsession48owned+全部旧actualsdist/proof8通过。实际CI源码1819843B SHA9f4c73331e3cb84c513159be6addb17916622ac5ddd546b3bc7537d10d41384b；原冻结协议不改，计划27worker/2592请求仍为完整分母；实际9worker/864请求/108修订/27拒绝，18worker/1728未尝试永久封存。H1全轮False/H2H3全轮null/jointFalse保持，缺失计时null，不补跑。软件交付不等于完整正式轮完成。owned更新历史机械验证不代表真人长期会话/NLI/回答或无限上下文，全部负结果及历史成本保持。
+
+### v0.95执行可观测性更正
+
+9个工作进程/864次查询有持久化结果并已独立核验。其余18个工作进程/1728个计划槽没有可核验执行记录；由于缺少启动预约日志及计划/外层finally，不能严格证明它们未启动或未尝试。原报告、README和核验资产中的“未尝试 / unattempted”表述证据过强，现更正为“执行情况未确认”。额外尝试数、丢失工作量和相关CPU/RAM/IO成本均未知null，不报0、不当免费，也不从文件时间重建。全27/2592原计划分母不变，原轮次永久封存、不补跑；H1完整性False、H2/H3全轮null、jointFalse保持。原tag/8项资产/核验证明和已保存原始文件不重写，软件安装验证结论不变。这是观测边界更正，没有新增科学样本或性能结论。

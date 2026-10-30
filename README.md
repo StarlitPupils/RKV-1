@@ -8,11 +8,15 @@
 
 ## 当前版本：v0.95 · 显式快照有界会话
 
-新增opt-in显式SID/modelSHA读取器会话；616检查615pass/1权限skip，8项new owned检查通过。正式计划27进程/2592请求中断，实际9进程/864请求、108修订/自建索引及27拒绝已保存并独立原source/排名/packet/历史审计通过；其余18进程/1728请求未尝试，永久封存不补跑。H1完整性False，H2/H3全轮null，jointFalse；不把软件核验或未完成当实验成功/无效证据。
+新增opt-in显式SID/modelSHA读取器会话；616检查615pass/1权限skip，8项new owned检查通过。正式计划27进程/2592请求中断，实际9进程/864请求、108修订/自建索引及27拒绝已保存并独立原source/排名/packet/历史审计通过；其余18进程/1728计划槽无可核验执行记录，启动/尝试及额外成本未知，永久封存不补跑。H1完整性False，H2/H3全轮null，jointFalse；不把软件核验或未完成当实验成功/无效证据。
 
 ![全部已保存进程与完整未完成分母](results/v0.95.0/reader-session.png)
 
 [完整中断报告](results/v0.95.0/SUMMARY.md) · [冻结协议](docs/READER-SESSION.md)。图已实际看，[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.95.0)的完整local、实际7资产SHA/全部68Python+HTML与tag源码、仓库外实际wheel-currentnative/newsession+全部旧actualsdist、第8proof实际重下载均通过。软件交付不代表真实人类长期对话或科学回答能力验收。0新模型/HEAD调用；机械更新与历史请求不是真实长期对话、科学回答或无限上下文。当前完整软件交付为v0.95，正式实验仍未完成，默认Memory/CLI/UI不改。
+
+### v0.95执行可观测性更正
+
+9个工作进程/864次查询有持久化结果并已独立核验。其余18个工作进程/1728个计划槽没有可核验执行记录；由于缺少启动预约日志及计划/外层finally，不能严格证明它们未启动或未尝试。原报告、README和核验资产中的“未尝试 / unattempted”表述证据过强，现更正为“执行情况未确认”。额外尝试数、丢失工作量和相关CPU/RAM/IO成本均未知null，不报0、不当免费，也不从文件时间重建。全27/2592原计划分母不变，原轮次永久封存、不补跑；H1完整性False、H2/H3全轮null、jointFalse保持。原tag/8项资产/核验证明和已保存原始文件不重写，软件安装验证结论不变。这是观测边界更正，没有新增科学样本或性能结论。
 
 ## 当前版本：v0.94 · 完整证据视图中的来源选择
 
