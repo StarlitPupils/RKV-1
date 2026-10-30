@@ -1,0 +1,7 @@
+{
+  "success": true,
+  "full_wall_s": 5.633438100107014,
+  "full_CPU_s": 0.0,
+  "peak_RSS_B": 28209152,
+  "scope": "Worker parent only; subprocess CPU/RSS uninstrumented null"
+}

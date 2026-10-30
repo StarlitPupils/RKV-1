@@ -612,3 +612,7 @@ tage28fbcd145a4f04e6ceaca5dd3b58663e6dacc4f、ReleaseCI40900556305、finalproof6
 ## v0.93候选：当前实验发行包与历史结果分离
 
 完整runtime/HTML/scripts/tests/fixtures/docs/Rust保留；sdist只含当前结果，历史仍在原Git/tag/Release，旧分析需对应历史目录。冻结后唯一build和独立完整成员/SHA/历史树不变audit，H2压缩文件<=旧实际asset10%，这是改变发行内容，不是科学压缩或推理收益。现有证据视图5项private准备暂不公共采用；本版先消除164MB重复历史传输瓶颈。正式0，详见SCOPED-SDIST.md。
+
+### v0.93正式构建与独立审计（发行待核验）
+
+1次冻结构建1401293B，对旧actual164035251B约0.854%；711必要源/currentseed文件、719实际成员与92历史目录Git树不变通过独立参考，H1/H2True。改变发行内容，不是科学压缩/速度收益。5个旧checkout文本行尾差异明确记录，formal本地raw与实际CI Git字节各自核验，不隐藏SHA差异；所有旧结果/成本留存。图已实际看，完整local/actual发行源范围/外安装/proof尚待。
