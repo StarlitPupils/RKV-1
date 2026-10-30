@@ -6,13 +6,13 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前研究：v0.95 · 显式快照有界会话（发行待核验）
+## 当前版本：v0.95 · 显式快照有界会话
 
 新增opt-in显式SID/modelSHA读取器会话；616检查615pass/1权限skip，8项new owned检查通过。正式计划27进程/2592请求中断，实际9进程/864请求、108修订/自建索引及27拒绝已保存并独立原source/排名/packet/历史审计通过；其余18进程/1728请求未尝试，永久封存不补跑。H1完整性False，H2/H3全轮null，jointFalse；不把软件核验或未完成当实验成功/无效证据。
 
 ![全部已保存进程与完整未完成分母](results/v0.95.0/reader-session.png)
 
-[完整中断报告](results/v0.95.0/SUMMARY.md) · [冻结协议](docs/READER-SESSION.md)。图已实际看，完整local/实际发行资产/外安装/proof8尚待。0新模型/HEAD调用；机械更新与历史请求不是真实长期对话、科学回答或无限上下文。最新完整软件交付仍是v0.94，默认Memory/CLI/UI不改。
+[完整中断报告](results/v0.95.0/SUMMARY.md) · [冻结协议](docs/READER-SESSION.md)。图已实际看，[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.95.0)的完整local、实际7资产SHA/全部68Python+HTML与tag源码、仓库外实际wheel-currentnative/newsession+全部旧actualsdist、第8proof实际重下载均通过。软件交付不代表真实人类长期对话或科学回答能力验收。0新模型/HEAD调用；机械更新与历史请求不是真实长期对话、科学回答或无限上下文。当前完整软件交付为v0.95，正式实验仍未完成，默认Memory/CLI/UI不改。
 
 ## 当前版本：v0.94 · 完整证据视图中的来源选择
 
