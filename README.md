@@ -6,13 +6,13 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 最新实验：v0.93.0 · 当前结果发行包与历史档案分离（发行待核验）
+## 当前版本：v0.93.0 · 当前结果发行包与历史档案分离
 
 一次冻结构建将源码包从旧实际资产164.04MB降至正式构建1.40MB，保留全部711个必要源码/当前seed文件，独立核对719个实际成员及92个历史结果目录Git树不变。历史资料仍在原Git/tag/Release，新包只携带当前实验输出。最终报告包与实际CI资产还须另行核验，不能冒充正式构建的size/SHA。
 
 ![发行内容与体积](results/v0.93.0/sdist-scope.png)
 
-588检查587pass/1权限skip；[详实报告](results/v0.93.0/SUMMARY.md) · [协议](docs/SCOPED-SDIST.md) · [历史档案](docs/RESULTS-INDEX.md)。这是减少重复分发内容，不是科学压缩或推理收益。0新模型/HEAD调用，图已实际看，完整发行核验待完成。
+588检查587pass/1权限skip；[详实报告](results/v0.93.0/SUMMARY.md) · [协议](docs/SCOPED-SDIST.md) · [历史档案](docs/RESULTS-INDEX.md)。这是减少重复分发内容，不是科学压缩或推理收益。0新模型/HEAD调用，图已实际看。[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.93.0)实际7资产SHA、完整tag源码/当前输出范围、仓库外实际wheel-current native及全部旧owned sdist通过，第8proof重下载通过。
 
 ## 当前版本：v0.92.0 · 原文句子定位与完整表示成本
 

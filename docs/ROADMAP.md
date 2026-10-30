@@ -616,3 +616,7 @@ tage28fbcd145a4f04e6ceaca5dd3b58663e6dacc4f、ReleaseCI40900556305、finalproof6
 ### v0.93正式构建与独立审计（发行待核验）
 
 1次冻结构建1401293B，对旧actual164035251B约0.854%；711必要源/currentseed文件、719实际成员与92历史目录Git树不变通过独立参考，H1/H2True。改变发行内容，不是科学压缩/速度收益。5个旧checkout文本行尾差异明确记录，formal本地raw与实际CI Git字节各自核验，不隐藏SHA差异；所有旧结果/成本留存。图已实际看，完整local/actual发行源范围/外安装/proof尚待。
+
+### v0.93完整软件交付确认
+
+tag10f8fd5fc4ef55ade0311918c33554d53019c97e、ReleaseCI40991471278、finalproof537ae9958e95052a03563f1d63a9280e59cbfcb7bac6bcbc1ee4959ce1194109，实际7资产SHA/完整tag源码与当前输出范围/仓库外actualwheel-currentnative及全部owned旧sdist/proof8通过。实际CI源码资产1622227B，SHAf881bcb429cb63f3ff12b0700ed60eec74f46e2693dc662381d2387dd30c9d77；与formal/local archive分别记账，不冒充同一SHA。92历史目录原Git树保留、旧分析需对应历史checkout；改变分发范围，不是科学压缩或推理收益。原科学结果/tag/资产不改。
