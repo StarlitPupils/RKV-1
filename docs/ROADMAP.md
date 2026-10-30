@@ -608,3 +608,7 @@ tag80d8179a2328bea5bc5be105b24a1aa40fb21f61、ReleaseCI40885089220、finalproof3
 ### v0.92完整软件交付确认
 
 tage28fbcd145a4f04e6ceaca5dd3b58663e6dacc4f、ReleaseCI40900556305、finalproof684ebfea5651372d73dd68d0c7ed8db5ecdc5a3c93866932d349371f4015c6b3，实际7资产SHA/67Python+HTML/全部源码/仓库外实际发行wheel-currentnative/新source-span owned与全部旧sdist/proof8通过。本段仅更新主分支交付状态，原协议/18case/510record/1020token/108控制/计时/source/tag/资产不改；完整packet放大4.95–5.40倍的H2False保持，不当净压缩或语义收益。
+
+## v0.93候选：当前实验发行包与历史结果分离
+
+完整runtime/HTML/scripts/tests/fixtures/docs/Rust保留；sdist只含当前结果，历史仍在原Git/tag/Release，旧分析需对应历史目录。冻结后唯一build和独立完整成员/SHA/历史树不变audit，H2压缩文件<=旧实际asset10%，这是改变发行内容，不是科学压缩或推理收益。现有证据视图5项private准备暂不公共采用；本版先消除164MB重复历史传输瓶颈。正式0，详见SCOPED-SDIST.md。
