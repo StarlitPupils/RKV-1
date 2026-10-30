@@ -1,0 +1,20 @@
+{
+  "posthoc_same_frozen_predictions_only": true,
+  "annotated": 168,
+  "unannotated_null": 102,
+  "pair_C_vs_control": {
+    "whole_record": {
+      "tie": 120,
+      "loss": 44,
+      "win": 4
+    },
+    "first_two": {
+      "win": 88,
+      "tie": 80
+    }
+  },
+  "new_predictions": 0,
+  "new_scientific_samples": 0,
+  "not_generated_answer_or_entailment": true,
+  "primary_H2_still_False": true
+}

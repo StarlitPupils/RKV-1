@@ -6,9 +6,13 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 正在进行：v0.94候选 · 完整证据视图中的来源选择
+## 当前研究：v0.94 · 完整证据视图中的来源选择（发行待核验）
 
-目前在E4受控来源检索阶段；整条原记录/前两句/按问题选两句共三组，同原论文排序与完整20000B视图上限。20项自建检查通过，正式270题×9进程尚未运行；冻结、exactCI、科学结果和实际发行核验仍待。版本候选不代表回答、语义或无限上下文收益。[固定协议](docs/EVIDENCE-VIEW-SELECTION.md)。最新完整交付仍是下述v0.93。
+固定已见270题，三组九freshworker共2430预测；原source/词法排名/token/规范packet/准入与gold后置独立审计通过。168annotated题完整rationale来源可用：整记录149、前两句21、问题选两句109；每组102无标注质量null。问题选句优于前两句但未超过整记录，完整process wall约1.60–1.94倍；H1True，H2/H3/jointFalse，负结果保持。0新模型/HEAD调用，不是回答、科学NLI或无限上下文收益。
+
+![来源可用性与完整成本](results/v0.94.0/evidence-views.png)
+
+608检查607pass/1权限skip；图已实际看。[完整报告](results/v0.94.0/SUMMARY.md) · [协议](docs/EVIDENCE-VIEW-SELECTION.md)。这是完整规范20000B evidence-view的新合同，不等同旧4096原record预算或完整API请求wire。local/outside实际安装、ReleaseCI、实际7资产SHA/全源码与外published安装/proof8尚待，最新完整交付仍为v0.93。
 
 ## 当前版本：v0.93.0 · 当前结果发行包与历史档案分离
 

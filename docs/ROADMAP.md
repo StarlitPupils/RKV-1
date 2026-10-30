@@ -627,3 +627,7 @@ tag10f8fd5fc4ef55ade0311918c33554d53019c97e、ReleaseCI40991471278、finalproof5
 整体仍在E4来源检索/精确证据回溯的受控诊断阶段。E0/E1可运行并多轮核验，E2部分策略收益，E3完整净收益未通过；E4未知泛化/NLI/多跳/真实长期会话/回答和无限上下文未完成。v0.93是最新完整交付，不能按版本次数折算整个计划百分比。
 
 v0.94将原whole-record与first-two/overlap-two句子视图置于同一完整规范20000B evidence-view合同，保持旧词法论文排序；这是新合同，不冒充旧4096原record预算。20项必要owned检查已通过，完整全回归与source/protocol/input freeze/exactCI尚待完成；真实270题×9freshworker0/2430，gold保持后置。详见EVIDENCE-VIEW-SELECTION.md。全部科学数据及原负结果、模型与派生/失败成本保留，0新模型/提供方请求。
+
+### v0.94正式来源对照完成，软件发行待核验
+
+sourcefreezeb57d18c/exactCI41011054418，608checks607pass1skip。9freshworker/2430预测独立原source/排名/token/packet/准入核验通过，gold在全预测+独立行后读取，三轮同结果。168annotated完整rationale来源149/21/109，paperrecall.86706/.92827/.92827；102质量null。C/A完整wall1.60–1.94x、CPU1.76–2.06x，H1True/H2False/H3False/jointFalse。不调参数追正，不把来源可用当语义/模型答案。已实际看图，完整local/CI资产/外安装/proof尚待。整体仍处E4受控诊断，E3净收益与长期会话/推理/无限上下文未完成。

@@ -1,0 +1,6 @@
+{
+  "full_wall_s": 0.7066026998218149,
+  "full_CPU_s": 0.59375,
+  "scope": "Post-report inventories/docs only; no reranking/rescoring/scientific input parse",
+  "new_model_API_calls": 0
+}
