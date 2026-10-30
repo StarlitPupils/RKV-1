@@ -635,3 +635,7 @@ sourcefreezeb57d18c/exactCI41011054418，608checks607pass1skip。9freshworker/24
 ### v0.94完整软件交付确认
 
 taga9d67f34c9d6ca0af7858530396d128a7a7ede25、ReleaseCI41012885560、finalproofc664d2e87ffa503780a130dae1fb6e004af4174544ba114458c1448232e8e681，实际7资产SHA/全部tag源码与当前输出范围/仓库外实际wheel-currentnative及新18ownedview+全部旧actualsdist/proof8通过。实际CI源码资产2387749B SHAf8662d75565cf266b78df5ae2b4276b35d2a2016e7ec8f2d623e0a2d71063e81。原sourcefreeze/2430预测/独立审计/计时/tag/资产不改，H1True/H2False/H3False/jointFalse保持，不称回答/NLI/未知泛化/无限上下文收益。
+
+## v0.95候选：显式SID/modelSHA的有界读取器会话
+
+上一轮来源选句H2/H3负结果保持；本轮不调整旧科学问题、句数或预算。补动态记忆工程基础：固定owned更新/历史/空查询轨迹，比对每次构造、LRU容量2和容量0，所有request仍读当前模型并校验SHA/原snapshot/source/selectedCAS，不能用复用隐藏损坏或偷换HEAD。9/65/257篇×3角色×3轮共27fresh进程，12修订/96请求各自完整计生成、索引构建、读取、写出、关闭与拒绝控制；独立原字节/来源排名/packet审计。8必要自建检查通过；全回归/冻结/CI/正式矩阵尚待。机械负载不是实际长期对话或问答泛化，E4整体未完成。

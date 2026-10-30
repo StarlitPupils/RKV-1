@@ -6,6 +6,10 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
+## 正在进行：v0.95候选 · 显式快照的有界读取器会话
+
+连续更新与历史请求的owned工程对照：每次新建/最多复用2个读取器/关闭复用控制。每次仍验证模型文件SHA、指定SID和原selected CAS，容量上限不冒充完整RAM。8项必要自建检查已通过；计划3规模×3角色×3轮共27freshworker/2592查询，正式矩阵尚未运行，冻结与exactCI先行。这不是真实人类长期对话或科学回答评价；默认Memory/CLI/UI不变，0新API/HEAD。[协议](docs/READER-SESSION.md)。最新完整交付仍是v0.94。
+
 ## 当前版本：v0.94 · 完整证据视图中的来源选择
 
 固定已见270题，三组九freshworker共2430预测；原source/词法排名/token/规范packet/准入与gold后置独立审计通过。168annotated题完整rationale来源可用：整记录149、前两句21、问题选两句109；每组102无标注质量null。问题选句优于前两句但未超过整记录，完整process wall约1.60–1.94倍；H1True，H2/H3/jointFalse，负结果保持。0新模型/HEAD调用，不是回答、科学NLI或无限上下文收益。
