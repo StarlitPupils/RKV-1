@@ -6,6 +6,10 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
+## 正在进行：v0.94候选 · 完整证据视图中的来源选择
+
+目前在E4受控来源检索阶段；整条原记录/前两句/按问题选两句共三组，同原论文排序与完整20000B视图上限。20项自建检查通过，正式270题×9进程尚未运行；冻结、exactCI、科学结果和实际发行核验仍待。版本候选不代表回答、语义或无限上下文收益。[固定协议](docs/EVIDENCE-VIEW-SELECTION.md)。最新完整交付仍是下述v0.93。
+
 ## 当前版本：v0.93.0 · 当前结果发行包与历史档案分离
 
 一次冻结构建将源码包从旧实际资产164.04MB降至正式构建1.40MB，保留全部711个必要源码/当前seed文件，独立核对719个实际成员及92个历史结果目录Git树不变。历史资料仍在原Git/tag/Release，新包只携带当前实验输出。最终报告包与实际CI资产还须另行核验，不能冒充正式构建的size/SHA。

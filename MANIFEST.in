@@ -7,4 +7,4 @@ recursive-include tests *.py
 recursive-include tests/fixtures *.json
 recursive-include rust *.toml *.rs *.md
 prune results
-recursive-include results/v0.93.0 *.json *.jsonl *.md *.png
+recursive-include results/v0.94.0 *.json *.jsonl *.md *.png

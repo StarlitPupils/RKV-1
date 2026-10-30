@@ -620,3 +620,10 @@ tage28fbcd145a4f04e6ceaca5dd3b58663e6dacc4f、ReleaseCI40900556305、finalproof6
 ### v0.93完整软件交付确认
 
 tag10f8fd5fc4ef55ade0311918c33554d53019c97e、ReleaseCI40991471278、finalproof537ae9958e95052a03563f1d63a9280e59cbfcb7bac6bcbc1ee4959ce1194109，实际7资产SHA/完整tag源码与当前输出范围/仓库外actualwheel-currentnative及全部owned旧sdist/proof8通过。实际CI源码资产1622227B，SHAf881bcb429cb63f3ff12b0700ed60eec74f46e2693dc662381d2387dd30c9d77；与formal/local archive分别记账，不冒充同一SHA。92历史目录原Git树保留、旧分析需对应历史checkout；改变分发范围，不是科学压缩或推理收益。原科学结果/tag/资产不改。
+
+
+## 当前推进位置：v0.94公共候选（真实实验未开始）
+
+整体仍在E4来源检索/精确证据回溯的受控诊断阶段。E0/E1可运行并多轮核验，E2部分策略收益，E3完整净收益未通过；E4未知泛化/NLI/多跳/真实长期会话/回答和无限上下文未完成。v0.93是最新完整交付，不能按版本次数折算整个计划百分比。
+
+v0.94将原whole-record与first-two/overlap-two句子视图置于同一完整规范20000B evidence-view合同，保持旧词法论文排序；这是新合同，不冒充旧4096原record预算。20项必要owned检查已通过，完整全回归与source/protocol/input freeze/exactCI尚待完成；真实270题×9freshworker0/2430，gold保持后置。详见EVIDENCE-VIEW-SELECTION.md。全部科学数据及原负结果、模型与派生/失败成本保留，0新模型/提供方请求。
