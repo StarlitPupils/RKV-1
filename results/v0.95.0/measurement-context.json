@@ -1,0 +1,18 @@
+{
+  "source_freeze": "d6dcaaf8e23e9c3386e986c4fa1bb1abf71cf241",
+  "exact_CI": 41025946893,
+  "scope": "Post-interruption audit of all persisted first-round workers. Not a new campaign or formal retry.",
+  "frozen_manifest": {
+    "bytes": 88889,
+    "sha256": "493650d57423a1966659024afb7adee3e0c7a166250fb442e18f78863ccef9da"
+  },
+  "old_full_resource_ledger": {
+    "bytes": 593604,
+    "sha256": "74e0c8f94be0821aaa88d6d660020da18973efef85ff6c1d691a2e87c6e98ee3"
+  },
+  "self_CPU_excludes_quota_subprocess": true,
+  "full_process_tree_CPU_s": null,
+  "physical_SSD_IO_B": null,
+  "all_prior_science_train_models_Store_CAS_snapshots_frames_restored_derived_failed_API_costs_retained": true,
+  "external_termination_reason_not_proven": true
+}

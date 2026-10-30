@@ -1,0 +1,10 @@
+{
+  "new_post_interruption_driver": {
+    "bytes": 12075,
+    "sha256": "c16722014b70007532c7752c01eca5d45853b66d1c2a622cf279a78f750c03c2"
+  },
+  "original_complete_driver_unchanged": {
+    "bytes": 14273,
+    "sha256": "a5825869611bccffd8981a3c9321e0cd2e49af65cb88269bad2617f81fd10823"
+  }
+}

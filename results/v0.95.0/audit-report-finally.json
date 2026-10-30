@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "full_wall_s": 1.6727358000352979,
+  "self_CPU_s": 1.671875,
+  "process_peak_RSS_B": 81457152,
+  "external_process_tree_CPU_s": null,
+  "includes_reference_builds_audit_ledger_plot_and_report": true
+}
