@@ -631,3 +631,7 @@ v0.94将原whole-record与first-two/overlap-two句子视图置于同一完整规
 ### v0.94正式来源对照完成，软件发行待核验
 
 sourcefreezeb57d18c/exactCI41011054418，608checks607pass1skip。9freshworker/2430预测独立原source/排名/token/packet/准入核验通过，gold在全预测+独立行后读取，三轮同结果。168annotated完整rationale来源149/21/109，paperrecall.86706/.92827/.92827；102质量null。C/A完整wall1.60–1.94x、CPU1.76–2.06x，H1True/H2False/H3False/jointFalse。不调参数追正，不把来源可用当语义/模型答案。已实际看图，完整local/CI资产/外安装/proof尚待。整体仍处E4受控诊断，E3净收益与长期会话/推理/无限上下文未完成。
+
+### v0.94完整软件交付确认
+
+taga9d67f34c9d6ca0af7858530396d128a7a7ede25、ReleaseCI41012885560、finalproofc664d2e87ffa503780a130dae1fb6e004af4174544ba114458c1448232e8e681，实际7资产SHA/全部tag源码与当前输出范围/仓库外实际wheel-currentnative及新18ownedview+全部旧actualsdist/proof8通过。实际CI源码资产2387749B SHAf8662d75565cf266b78df5ae2b4276b35d2a2016e7ec8f2d623e0a2d71063e81。原sourcefreeze/2430预测/独立审计/计时/tag/资产不改，H1True/H2False/H3False/jointFalse保持，不称回答/NLI/未知泛化/无限上下文收益。
