@@ -659,3 +659,7 @@ tag63a187ecdb6a6ee087dec182f239d31949ce6c2f、ReleaseCI41028557446、finalproof8
 ### v0.96固定观测实验完成，发行待核验
 
 source08892375208e2ebf7a5f885248863d3b31f4d3f6/exactCI41859034865，620检查619pass1权限skip。3控制/36叶进程/6实际终止/45拒绝控制完成；独立原字节/状态/外部凭据/父实际退出与immutability核对通过，只有3场景具备完整退出证据，缺失状态不推作未尝试。全计划wall53.2352655s，全部阶段时钟/CPU/RSS与源码资源账本保留；图已实际看。0新模型/旧科学输入，H1H2H3joint仅机械合同。local/实际资产/仓库外安装/proof8尚待；E3净收益/E4整体/NLI/真实长期会话/回答/无限上下文仍未完成。
+
+### v0.96完整软件交付确认
+
+tag1350b94b973953d4a2f5d352d1763e2bc9c9096a、ReleaseCI41861180230、finalproof3000e4429848b2ba9f5ad40b3642144115761972698d520707fb47950c019275。实际7资产SHA/全部68Python+HTML与tag源码/当前结果范围/仓库外实际wheel-currentnative与newsession48owned+全部旧actualsdist/proof8通过。实际CI源码1750071B SHA7b983bc62ea09988033df2e5bbadd62407a9f7b12055b83d95bfb3cf0a2acbce；原固定3controller/36leaf/45controls、独立审计与完整时钟/门槛不改；6次实际进程终止，不称掉电/并发/推理收益。v095原轮封存，缺失槽执行和成本unknownnull，不补跑。owned记录与外部凭据机械验证不代表真人长期会话/NLI/回答或无限上下文，全部负结果及历史成本保持。

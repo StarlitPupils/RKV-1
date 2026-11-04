@@ -6,13 +6,13 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前研究：v0.96 · 严格执行记录与退出凭据（发行待核验）
+## 当前版本：v0.96 · 严格执行记录与退出凭据
 
 固定三轮、36个fresh进程场景、6次实际进程终止和45项拒绝控制，独立原plan/事件链/artifact/父退出记录审计通过。只有3个具备全部阶段footer与外部父exit0凭据的场景判为完成；缺少记录仍保持执行情况未知，0自动重放许可。H1/H2/H3/joint通过仅适用于本轮机械观测合同，不代表掉电、并发、回答或长期对话能力。
 
 ![状态观测与完整控制进程成本](results/v0.96.0/receipt-observability.png)
 
-620检查619pass/1权限skip；[完整报告](results/v0.96.0/SUMMARY.md) · [协议](docs/RECEIPT-OBSERVABILITY.md)。图已实际看，完整local/实际发行资产/外安装/proof8尚待。0新模型/HEAD、0旧科学数据读取，默认Memory/CLI/UI不变。最新完整软件交付仍为v0.95；其原中断轮保持封存。
+620检查619pass/1权限skip；[完整报告](results/v0.96.0/SUMMARY.md) · [协议](docs/RECEIPT-OBSERVABILITY.md)。图已实际看，[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.96.0)的完整local、实际7资产SHA/全部68Python+HTML与tag源码、仓库外实际wheel-currentnative/newsession+全部旧actualsdist、第8proof实际重下载均通过。软件交付不代表真实人类长期对话或科学回答能力验收。0新模型/HEAD、0旧科学数据读取，默认Memory/CLI/UI不变。当前完整软件交付为v0.96；其原中断轮保持封存。
 
 ## 当前版本：v0.95 · 显式快照有界会话
 
