@@ -1,0 +1,9 @@
+{
+  "source_freeze": "08892375208e2ebf7a5f885248863d3b31f4d3f6",
+  "exact_CI": 41859034865,
+  "protocol": "docs/RECEIPT-OBSERVABILITY.md",
+  "full_process_tree_CPU_RSS": null,
+  "physical_SSD_IO_B": null,
+  "directory_sync_powerloss_or_concurrency_measured": false,
+  "external_parent_trust_required": true
+}

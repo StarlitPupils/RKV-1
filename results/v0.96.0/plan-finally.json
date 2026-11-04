@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "planned_controllers": 3,
+  "completed_controllers": 3,
+  "planned_leaf_cases": 36,
+  "planned_refusals": 45,
+  "full_wall_s": 53.23526550000679,
+  "self_CPU_s": 0.046875,
+  "full_process_tree_CPU_RSS": null
+}

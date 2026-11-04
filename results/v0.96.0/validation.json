@@ -1,0 +1,21 @@
+{
+  "H1_all36_expected_original_states_parent_bindings_and45_controls": true,
+  "H2_no_replay_permission_and_inspection_file_immutability": true,
+  "H3_strict_bounded_schemas_and_external_witness_required": true,
+  "joint": true,
+  "planned_controllers": 3,
+  "completed_controllers": 3,
+  "planned_leaf_cases": 36,
+  "completed_leaf_cases": 36,
+  "actual_OS_kill_cases": 6,
+  "intentional_exit76_cases": 24,
+  "exit0_controls": 6,
+  "witness_bound_complete_cases": 3,
+  "refusal_controls": 45,
+  "new_model_API_calls": 0,
+  "new_provider_requests": 0,
+  "old_science_inputs_read": 0,
+  "no_speed_compression_answer_or_long_dialogue_claim": true,
+  "figure_visually_inspected": true,
+  "software_release_complete": false
+}

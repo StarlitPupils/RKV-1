@@ -1,0 +1,1895 @@
+{
+  "controllers": [
+    {
+      "round": 1,
+      "parent": {
+        "round": 1,
+        "observed_exit_code": 0,
+        "actual_pid": 11052,
+        "parent_wall_s": 16.67754799999966,
+        "parent_self_CPU_s": 0.0,
+        "no_retry": true
+      },
+      "entry": {
+        "success": true,
+        "entry_wall_s": 16.638485600000422,
+        "entry_self_CPU_s": 0.328125,
+        "peak_RSS_B": 28581888,
+        "full_process_tree_CPU_RSS": null
+      },
+      "matrix_finally": {
+        "success": true,
+        "full_wall_s": 16.5692904000025,
+        "self_CPU_s": 0.265625,
+        "peak_RSS_B": 28581888,
+        "child_CPU_or_full_process_tree_RSS": null
+      }
+    },
+    {
+      "round": 2,
+      "parent": {
+        "round": 2,
+        "observed_exit_code": 0,
+        "actual_pid": 37704,
+        "parent_wall_s": 14.85850439999922,
+        "parent_self_CPU_s": 0.0,
+        "no_retry": true
+      },
+      "entry": {
+        "success": true,
+        "entry_wall_s": 14.810908699997526,
+        "entry_self_CPU_s": 0.390625,
+        "peak_RSS_B": 28491776,
+        "full_process_tree_CPU_RSS": null
+      },
+      "matrix_finally": {
+        "success": true,
+        "full_wall_s": 14.740416699998605,
+        "self_CPU_s": 0.328125,
+        "peak_RSS_B": 28491776,
+        "child_CPU_or_full_process_tree_RSS": null
+      }
+    },
+    {
+      "round": 3,
+      "parent": {
+        "round": 3,
+        "observed_exit_code": 0,
+        "actual_pid": 17096,
+        "parent_wall_s": 17.494641899997077,
+        "parent_self_CPU_s": 0.0,
+        "no_retry": true
+      },
+      "entry": {
+        "success": true,
+        "entry_wall_s": 17.45410979999724,
+        "entry_self_CPU_s": 0.265625,
+        "peak_RSS_B": 28626944,
+        "full_process_tree_CPU_RSS": null
+      },
+      "matrix_finally": {
+        "success": true,
+        "full_wall_s": 17.387875300002634,
+        "self_CPU_s": 0.21875,
+        "peak_RSS_B": 28626944,
+        "child_CPU_or_full_process_tree_RSS": null
+      }
+    }
+  ],
+  "cases": [
+    {
+      "round": 1,
+      "case": "before_reserve",
+      "parent": {
+        "wall_s": 0.07915859999775421,
+        "self_CPU_s": 0.0,
+        "actual_pid": 37792,
+        "observed_exit_code": 76,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "ec902517c6eeb77599925d6508806942cf6b400e1334fe2af9a1711aeb126727",
+        "events_SHA": "caecf82c725045641afcd5623a77fbca0b263f5e1adee998512cb851e90d12b3"
+      },
+      "inspection": {
+        "plan_SHA": "ec902517c6eeb77599925d6508806942cf6b400e1334fe2af9a1711aeb126727",
+        "events_SHA": "caecf82c725045641afcd5623a77fbca0b263f5e1adee998512cb851e90d12b3",
+        "tip_SHA": "25736340ab0153d9b6fcc66fe20af31ece40be83fb5ddd8d13a4985524864755",
+        "states": {
+          "one": "stage_completed",
+          "two": "unreserved",
+          "three": "unreserved"
+        },
+        "application_read_B": 935,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 76,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 582,
+          "sha256": "caecf82c725045641afcd5623a77fbca0b263f5e1adee998512cb851e90d12b3"
+        },
+        "plan.json": {
+          "bytes": 100,
+          "sha256": "ec902517c6eeb77599925d6508806942cf6b400e1334fe2af9a1711aeb126727"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        }
+      }
+    },
+    {
+      "round": 1,
+      "case": "after_reserve",
+      "parent": {
+        "wall_s": 0.11212869999872055,
+        "self_CPU_s": 0.0,
+        "actual_pid": 39492,
+        "observed_exit_code": 76,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "57a692c1f1271667f336d381e493eec9a39c1d9fd81b223c6a36c60c2735d989",
+        "events_SHA": "4a4194be63af9b85ed185e9d774c98515f4956fb6bde0cae048312db094bd799"
+      },
+      "inspection": {
+        "plan_SHA": "57a692c1f1271667f336d381e493eec9a39c1d9fd81b223c6a36c60c2735d989",
+        "events_SHA": "4a4194be63af9b85ed185e9d774c98515f4956fb6bde0cae048312db094bd799",
+        "tip_SHA": "f79cda12da66bea725ab69d889f98fd816e7ed3caaa6b354a4992ccc344db419",
+        "states": {
+          "one": "stage_completed",
+          "two": "reserved",
+          "three": "unreserved"
+        },
+        "application_read_B": 1050,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 76,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 699,
+          "sha256": "4a4194be63af9b85ed185e9d774c98515f4956fb6bde0cae048312db094bd799"
+        },
+        "plan.json": {
+          "bytes": 99,
+          "sha256": "57a692c1f1271667f336d381e493eec9a39c1d9fd81b223c6a36c60c2735d989"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        }
+      }
+    },
+    {
+      "round": 1,
+      "case": "after_started",
+      "parent": {
+        "wall_s": 0.10986469999625115,
+        "self_CPU_s": 0.0,
+        "actual_pid": 31972,
+        "observed_exit_code": 76,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "9bdba18a5ba1795dc2e41bb55da6104746340f4e8bc2a8cb2e939203eb486a2c",
+        "events_SHA": "4a4ef31c58b595f77a786718a7e922c7194c75e9243cae5179f9b9a61ecd332b"
+      },
+      "inspection": {
+        "plan_SHA": "9bdba18a5ba1795dc2e41bb55da6104746340f4e8bc2a8cb2e939203eb486a2c",
+        "events_SHA": "4a4ef31c58b595f77a786718a7e922c7194c75e9243cae5179f9b9a61ecd332b",
+        "tip_SHA": "c7bbb6ae7d25542be0a72823950f56aa80425a48a388ba659d81f46cfb955cdc",
+        "states": {
+          "one": "stage_completed",
+          "two": "started",
+          "three": "unreserved"
+        },
+        "application_read_B": 1166,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 76,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 815,
+          "sha256": "4a4ef31c58b595f77a786718a7e922c7194c75e9243cae5179f9b9a61ecd332b"
+        },
+        "plan.json": {
+          "bytes": 99,
+          "sha256": "9bdba18a5ba1795dc2e41bb55da6104746340f4e8bc2a8cb2e939203eb486a2c"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        }
+      }
+    },
+    {
+      "round": 1,
+      "case": "partial_artifact",
+      "parent": {
+        "wall_s": 0.12617229999887059,
+        "self_CPU_s": 0.015625,
+        "actual_pid": 38796,
+        "observed_exit_code": 76,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "5308115de510f5675e8f454197ba030a1b716c3e64c8e89c7bd80104dc2bf6c1",
+        "events_SHA": "1ae6052ed93ec9ebdc80ade64c2a6d0ba3fdc02e856f1d58cb7c75412020d259"
+      },
+      "inspection": {
+        "plan_SHA": "5308115de510f5675e8f454197ba030a1b716c3e64c8e89c7bd80104dc2bf6c1",
+        "events_SHA": "1ae6052ed93ec9ebdc80ade64c2a6d0ba3fdc02e856f1d58cb7c75412020d259",
+        "tip_SHA": "00998e15671c9a6dcb880ed5a2143938b0e23533f304a278afd2c4c583dfc09f",
+        "states": {
+          "one": "stage_completed",
+          "two": "started",
+          "three": "unreserved"
+        },
+        "application_read_B": 1172,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 76,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 815,
+          "sha256": "1ae6052ed93ec9ebdc80ade64c2a6d0ba3fdc02e856f1d58cb7c75412020d259"
+        },
+        "plan.json": {
+          "bytes": 102,
+          "sha256": "5308115de510f5675e8f454197ba030a1b716c3e64c8e89c7bd80104dc2bf6c1"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        },
+        "artifacts/two.bin": {
+          "bytes": 2,
+          "sha256": "153078218f243968d9b217d3cfb5e24122d16c7a90e8c01cf92347afa45d106b"
+        }
+      }
+    },
+    {
+      "round": 1,
+      "case": "after_artifact",
+      "parent": {
+        "wall_s": 0.11713089999830117,
+        "self_CPU_s": 0.0,
+        "actual_pid": 21756,
+        "observed_exit_code": 76,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "659fdd6d7413937934d393ed9928d13b398b18d6daf4f84eb9e65fbcba231cba",
+        "events_SHA": "3148216dee1bd1fadd608c7f22222af6824bc772e66a4cb825ae9685ff980cd5"
+      },
+      "inspection": {
+        "plan_SHA": "659fdd6d7413937934d393ed9928d13b398b18d6daf4f84eb9e65fbcba231cba",
+        "events_SHA": "3148216dee1bd1fadd608c7f22222af6824bc772e66a4cb825ae9685ff980cd5",
+        "tip_SHA": "b7f041dcb5ff2b635793ffb5aca569ee58f17d252eb172217c6f109943a335db",
+        "states": {
+          "one": "stage_completed",
+          "two": "started",
+          "three": "unreserved"
+        },
+        "application_read_B": 1168,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 76,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 815,
+          "sha256": "3148216dee1bd1fadd608c7f22222af6824bc772e66a4cb825ae9685ff980cd5"
+        },
+        "plan.json": {
+          "bytes": 100,
+          "sha256": "659fdd6d7413937934d393ed9928d13b398b18d6daf4f84eb9e65fbcba231cba"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        },
+        "artifacts/two.bin": {
+          "bytes": 9,
+          "sha256": "40f0cbdd56f31cbdb31774801e3750fca92f448b6c7d1f31c3ec7ab6e1cc3aee"
+        }
+      }
+    },
+    {
+      "round": 1,
+      "case": "after_receipt",
+      "parent": {
+        "wall_s": 0.1255853999973624,
+        "self_CPU_s": 0.0,
+        "actual_pid": 38640,
+        "observed_exit_code": 76,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "696ff759f4cedf8582711ccdc5b7d1c8318bd169719e3b8f74d7bd0e1be48ff7",
+        "events_SHA": "5238265704108f566af8600cd39b4a0a9f75a15eab1b412cd34399dac30ce116"
+      },
+      "inspection": {
+        "plan_SHA": "696ff759f4cedf8582711ccdc5b7d1c8318bd169719e3b8f74d7bd0e1be48ff7",
+        "events_SHA": "5238265704108f566af8600cd39b4a0a9f75a15eab1b412cd34399dac30ce116",
+        "tip_SHA": "95eed06ac978d96dbf81a2611049a7dc6f8006745cdde78688474f4b027c62ae",
+        "states": {
+          "one": "stage_completed",
+          "two": "artifact_verified",
+          "three": "unreserved"
+        },
+        "application_read_B": 1400,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 76,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 1040,
+          "sha256": "5238265704108f566af8600cd39b4a0a9f75a15eab1b412cd34399dac30ce116"
+        },
+        "plan.json": {
+          "bytes": 99,
+          "sha256": "696ff759f4cedf8582711ccdc5b7d1c8318bd169719e3b8f74d7bd0e1be48ff7"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        },
+        "artifacts/two.bin": {
+          "bytes": 9,
+          "sha256": "40f0cbdd56f31cbdb31774801e3750fca92f448b6c7d1f31c3ec7ab6e1cc3aee"
+        }
+      }
+    },
+    {
+      "round": 1,
+      "case": "after_stage_footer",
+      "parent": {
+        "wall_s": 0.12684080000326503,
+        "self_CPU_s": 0.0,
+        "actual_pid": 17876,
+        "observed_exit_code": 76,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "273bc5715d949efa99023c70663dd2470b0d9eb22408ac859024cb7064e76998",
+        "events_SHA": "be5412c093aab10818451d1c53b136c4ecbc09425152b931d1b45cafb0137603"
+      },
+      "inspection": {
+        "plan_SHA": "273bc5715d949efa99023c70663dd2470b0d9eb22408ac859024cb7064e76998",
+        "events_SHA": "be5412c093aab10818451d1c53b136c4ecbc09425152b931d1b45cafb0137603",
+        "tip_SHA": "e9212742fe3281e5f1218e1096e28de10ddd7151fe204a308e57d6fcc7e6c143",
+        "states": {
+          "one": "stage_completed",
+          "two": "stage_completed",
+          "three": "unreserved"
+        },
+        "application_read_B": 1534,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 76,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 1164,
+          "sha256": "be5412c093aab10818451d1c53b136c4ecbc09425152b931d1b45cafb0137603"
+        },
+        "plan.json": {
+          "bytes": 104,
+          "sha256": "273bc5715d949efa99023c70663dd2470b0d9eb22408ac859024cb7064e76998"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        },
+        "artifacts/two.bin": {
+          "bytes": 9,
+          "sha256": "40f0cbdd56f31cbdb31774801e3750fca92f448b6c7d1f31c3ec7ab6e1cc3aee"
+        }
+      }
+    },
+    {
+      "round": 1,
+      "case": "all_stages_no_witness",
+      "parent": {
+        "wall_s": 0.16790510000282666,
+        "self_CPU_s": 0.0,
+        "actual_pid": 38632,
+        "observed_exit_code": 0,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "a945637cfe3a7db025f4e4ed0bdb62a482d0c28215939df81087d2cddcae3165",
+        "events_SHA": "c3f4d0ee23fd4d98ea26f6eaea4dc72a5dc394c35f233de2973ac436fbbe2be0"
+      },
+      "inspection": {
+        "plan_SHA": "a945637cfe3a7db025f4e4ed0bdb62a482d0c28215939df81087d2cddcae3165",
+        "events_SHA": "c3f4d0ee23fd4d98ea26f6eaea4dc72a5dc394c35f233de2973ac436fbbe2be0",
+        "tip_SHA": "9494278ee76245be8bf40de9bf1141384c35414c7f8ec0b2540726f6c9c37c4e",
+        "states": {
+          "one": "stage_completed",
+          "two": "stage_completed",
+          "three": "stage_completed"
+        },
+        "application_read_B": 1893,
+        "all_stage_footers_present": true,
+        "externally_observed_exit": null,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 1757,
+          "sha256": "c3f4d0ee23fd4d98ea26f6eaea4dc72a5dc394c35f233de2973ac436fbbe2be0"
+        },
+        "plan.json": {
+          "bytes": 107,
+          "sha256": "a945637cfe3a7db025f4e4ed0bdb62a482d0c28215939df81087d2cddcae3165"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        },
+        "artifacts/three.bin": {
+          "bytes": 11,
+          "sha256": "dab94e800a4195f1ff7f3e1e18cc6d3573af145d7e4b72467d1c05def049e5de"
+        },
+        "artifacts/two.bin": {
+          "bytes": 9,
+          "sha256": "40f0cbdd56f31cbdb31774801e3750fca92f448b6c7d1f31c3ec7ab6e1cc3aee"
+        }
+      }
+    },
+    {
+      "round": 1,
+      "case": "success",
+      "parent": {
+        "wall_s": 0.17849549999664305,
+        "self_CPU_s": 0.0,
+        "actual_pid": 39352,
+        "observed_exit_code": 0,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "93732e7df676ba12cdc46029ab881ed0d038308c9aeeccafdd589c02b0dd6125",
+        "events_SHA": "ef7fcf791e8c3b94270adea5e3868e1877f1594a3c6da1b059501970bf39ae04"
+      },
+      "inspection": {
+        "plan_SHA": "93732e7df676ba12cdc46029ab881ed0d038308c9aeeccafdd589c02b0dd6125",
+        "events_SHA": "ef7fcf791e8c3b94270adea5e3868e1877f1594a3c6da1b059501970bf39ae04",
+        "tip_SHA": "e549f25366b18624f8487bf1b7819670ce830991b655f8e57555401cdae87ced",
+        "states": {
+          "one": "stage_completed",
+          "two": "stage_completed",
+          "three": "stage_completed"
+        },
+        "application_read_B": 2115,
+        "all_stage_footers_present": true,
+        "externally_observed_exit": 0,
+        "writer_lock_present": false,
+        "campaign_complete": true,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 1757,
+          "sha256": "ef7fcf791e8c3b94270adea5e3868e1877f1594a3c6da1b059501970bf39ae04"
+        },
+        "plan.json": {
+          "bytes": 93,
+          "sha256": "93732e7df676ba12cdc46029ab881ed0d038308c9aeeccafdd589c02b0dd6125"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        },
+        "artifacts/three.bin": {
+          "bytes": 11,
+          "sha256": "dab94e800a4195f1ff7f3e1e18cc6d3573af145d7e4b72467d1c05def049e5de"
+        },
+        "artifacts/two.bin": {
+          "bytes": 9,
+          "sha256": "40f0cbdd56f31cbdb31774801e3750fca92f448b6c7d1f31c3ec7ab6e1cc3aee"
+        }
+      }
+    },
+    {
+      "round": 1,
+      "case": "kill_after_reserve",
+      "parent": {
+        "wall_s": 0.10406659999716794,
+        "self_CPU_s": 0.0,
+        "actual_pid": 26132,
+        "observed_exit_code": 1,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "3b0df5015657e3ef5f748c6920e28294f2874dd20347df143b5c86af41b08795",
+        "events_SHA": "11cf197d05bede35ad169c1e46e3a936630d61bddb64f214a149256a32be59d7"
+      },
+      "inspection": {
+        "plan_SHA": "3b0df5015657e3ef5f748c6920e28294f2874dd20347df143b5c86af41b08795",
+        "events_SHA": "11cf197d05bede35ad169c1e46e3a936630d61bddb64f214a149256a32be59d7",
+        "tip_SHA": "8ad4deac31ec4c347aaef7527a2ae982c739f7cf9724f0c5aeea89d59c9175ff",
+        "states": {
+          "one": "stage_completed",
+          "two": "reserved",
+          "three": "unreserved"
+        },
+        "application_read_B": 1059,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 1,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 699,
+          "sha256": "11cf197d05bede35ad169c1e46e3a936630d61bddb64f214a149256a32be59d7"
+        },
+        "plan.json": {
+          "bytes": 104,
+          "sha256": "3b0df5015657e3ef5f748c6920e28294f2874dd20347df143b5c86af41b08795"
+        },
+        "READY": {
+          "bytes": 13,
+          "sha256": "6dc9c5d112630602ffc1720bf875a9e372725ca58446a567d17177d95c7f7c75"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        }
+      }
+    },
+    {
+      "round": 1,
+      "case": "kill_after_artifact",
+      "parent": {
+        "wall_s": 0.11130599999887636,
+        "self_CPU_s": 0.0,
+        "actual_pid": 25776,
+        "observed_exit_code": 1,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "b7a42504bc89287ffb64ad008a22269844d98b8184e317d5237c4cbd828b7f7e",
+        "events_SHA": "e94368d0e1805cd6d02d61f27de7c2ddcd18578b1f6db84012a974f897594584"
+      },
+      "inspection": {
+        "plan_SHA": "b7a42504bc89287ffb64ad008a22269844d98b8184e317d5237c4cbd828b7f7e",
+        "events_SHA": "e94368d0e1805cd6d02d61f27de7c2ddcd18578b1f6db84012a974f897594584",
+        "tip_SHA": "0535a82056f2d6d87a017c772471148f4f87bff2af2290251d24abdd5c22b3bc",
+        "states": {
+          "one": "stage_completed",
+          "two": "started",
+          "three": "unreserved"
+        },
+        "application_read_B": 1177,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 1,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 815,
+          "sha256": "e94368d0e1805cd6d02d61f27de7c2ddcd18578b1f6db84012a974f897594584"
+        },
+        "plan.json": {
+          "bytes": 105,
+          "sha256": "b7a42504bc89287ffb64ad008a22269844d98b8184e317d5237c4cbd828b7f7e"
+        },
+        "READY": {
+          "bytes": 14,
+          "sha256": "ead70b9646ae8b2ebb67f7427925f9861b842808ffacb0814cddc94cacb7e027"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        },
+        "artifacts/two.bin": {
+          "bytes": 9,
+          "sha256": "40f0cbdd56f31cbdb31774801e3750fca92f448b6c7d1f31c3ec7ab6e1cc3aee"
+        }
+      }
+    },
+    {
+      "round": 1,
+      "case": "exit_nonzero_allstages",
+      "parent": {
+        "wall_s": 0.17829179999534972,
+        "self_CPU_s": 0.0,
+        "actual_pid": 27820,
+        "observed_exit_code": 76,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "09c08430cee4e5b3d94535344fa8d3fac3d4fc1374c936bd441d867974858928",
+        "events_SHA": "902dfaf582dfb25f70809fc77bdd73688bda98ffcb76fcb93510eac671c9cc87"
+      },
+      "inspection": {
+        "plan_SHA": "09c08430cee4e5b3d94535344fa8d3fac3d4fc1374c936bd441d867974858928",
+        "events_SHA": "902dfaf582dfb25f70809fc77bdd73688bda98ffcb76fcb93510eac671c9cc87",
+        "tip_SHA": "827ab845fe51cc2bb07ecda07525014b9292226486fa368ef8d92276f9ab97c4",
+        "states": {
+          "one": "stage_completed",
+          "two": "stage_completed",
+          "three": "stage_completed"
+        },
+        "application_read_B": 2146,
+        "all_stage_footers_present": true,
+        "externally_observed_exit": 76,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 1757,
+          "sha256": "902dfaf582dfb25f70809fc77bdd73688bda98ffcb76fcb93510eac671c9cc87"
+        },
+        "plan.json": {
+          "bytes": 108,
+          "sha256": "09c08430cee4e5b3d94535344fa8d3fac3d4fc1374c936bd441d867974858928"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        },
+        "artifacts/three.bin": {
+          "bytes": 11,
+          "sha256": "dab94e800a4195f1ff7f3e1e18cc6d3573af145d7e4b72467d1c05def049e5de"
+        },
+        "artifacts/two.bin": {
+          "bytes": 9,
+          "sha256": "40f0cbdd56f31cbdb31774801e3750fca92f448b6c7d1f31c3ec7ab6e1cc3aee"
+        }
+      }
+    },
+    {
+      "round": 2,
+      "case": "before_reserve",
+      "parent": {
+        "wall_s": 0.09849869999743532,
+        "self_CPU_s": 0.0,
+        "actual_pid": 26284,
+        "observed_exit_code": 76,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "ec902517c6eeb77599925d6508806942cf6b400e1334fe2af9a1711aeb126727",
+        "events_SHA": "caecf82c725045641afcd5623a77fbca0b263f5e1adee998512cb851e90d12b3"
+      },
+      "inspection": {
+        "plan_SHA": "ec902517c6eeb77599925d6508806942cf6b400e1334fe2af9a1711aeb126727",
+        "events_SHA": "caecf82c725045641afcd5623a77fbca0b263f5e1adee998512cb851e90d12b3",
+        "tip_SHA": "25736340ab0153d9b6fcc66fe20af31ece40be83fb5ddd8d13a4985524864755",
+        "states": {
+          "one": "stage_completed",
+          "two": "unreserved",
+          "three": "unreserved"
+        },
+        "application_read_B": 935,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 76,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 582,
+          "sha256": "caecf82c725045641afcd5623a77fbca0b263f5e1adee998512cb851e90d12b3"
+        },
+        "plan.json": {
+          "bytes": 100,
+          "sha256": "ec902517c6eeb77599925d6508806942cf6b400e1334fe2af9a1711aeb126727"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        }
+      }
+    },
+    {
+      "round": 2,
+      "case": "after_reserve",
+      "parent": {
+        "wall_s": 0.10600870000052964,
+        "self_CPU_s": 0.0,
+        "actual_pid": 7872,
+        "observed_exit_code": 76,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "57a692c1f1271667f336d381e493eec9a39c1d9fd81b223c6a36c60c2735d989",
+        "events_SHA": "4a4194be63af9b85ed185e9d774c98515f4956fb6bde0cae048312db094bd799"
+      },
+      "inspection": {
+        "plan_SHA": "57a692c1f1271667f336d381e493eec9a39c1d9fd81b223c6a36c60c2735d989",
+        "events_SHA": "4a4194be63af9b85ed185e9d774c98515f4956fb6bde0cae048312db094bd799",
+        "tip_SHA": "f79cda12da66bea725ab69d889f98fd816e7ed3caaa6b354a4992ccc344db419",
+        "states": {
+          "one": "stage_completed",
+          "two": "reserved",
+          "three": "unreserved"
+        },
+        "application_read_B": 1049,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 76,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 699,
+          "sha256": "4a4194be63af9b85ed185e9d774c98515f4956fb6bde0cae048312db094bd799"
+        },
+        "plan.json": {
+          "bytes": 99,
+          "sha256": "57a692c1f1271667f336d381e493eec9a39c1d9fd81b223c6a36c60c2735d989"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        }
+      }
+    },
+    {
+      "round": 2,
+      "case": "after_started",
+      "parent": {
+        "wall_s": 0.10757220000232337,
+        "self_CPU_s": 0.0,
+        "actual_pid": 32964,
+        "observed_exit_code": 76,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "9bdba18a5ba1795dc2e41bb55da6104746340f4e8bc2a8cb2e939203eb486a2c",
+        "events_SHA": "4a4ef31c58b595f77a786718a7e922c7194c75e9243cae5179f9b9a61ecd332b"
+      },
+      "inspection": {
+        "plan_SHA": "9bdba18a5ba1795dc2e41bb55da6104746340f4e8bc2a8cb2e939203eb486a2c",
+        "events_SHA": "4a4ef31c58b595f77a786718a7e922c7194c75e9243cae5179f9b9a61ecd332b",
+        "tip_SHA": "c7bbb6ae7d25542be0a72823950f56aa80425a48a388ba659d81f46cfb955cdc",
+        "states": {
+          "one": "stage_completed",
+          "two": "started",
+          "three": "unreserved"
+        },
+        "application_read_B": 1166,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 76,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 815,
+          "sha256": "4a4ef31c58b595f77a786718a7e922c7194c75e9243cae5179f9b9a61ecd332b"
+        },
+        "plan.json": {
+          "bytes": 99,
+          "sha256": "9bdba18a5ba1795dc2e41bb55da6104746340f4e8bc2a8cb2e939203eb486a2c"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        }
+      }
+    },
+    {
+      "round": 2,
+      "case": "partial_artifact",
+      "parent": {
+        "wall_s": 0.11941139999544248,
+        "self_CPU_s": 0.015625,
+        "actual_pid": 25972,
+        "observed_exit_code": 76,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "5308115de510f5675e8f454197ba030a1b716c3e64c8e89c7bd80104dc2bf6c1",
+        "events_SHA": "1ae6052ed93ec9ebdc80ade64c2a6d0ba3fdc02e856f1d58cb7c75412020d259"
+      },
+      "inspection": {
+        "plan_SHA": "5308115de510f5675e8f454197ba030a1b716c3e64c8e89c7bd80104dc2bf6c1",
+        "events_SHA": "1ae6052ed93ec9ebdc80ade64c2a6d0ba3fdc02e856f1d58cb7c75412020d259",
+        "tip_SHA": "00998e15671c9a6dcb880ed5a2143938b0e23533f304a278afd2c4c583dfc09f",
+        "states": {
+          "one": "stage_completed",
+          "two": "started",
+          "three": "unreserved"
+        },
+        "application_read_B": 1172,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 76,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 815,
+          "sha256": "1ae6052ed93ec9ebdc80ade64c2a6d0ba3fdc02e856f1d58cb7c75412020d259"
+        },
+        "plan.json": {
+          "bytes": 102,
+          "sha256": "5308115de510f5675e8f454197ba030a1b716c3e64c8e89c7bd80104dc2bf6c1"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        },
+        "artifacts/two.bin": {
+          "bytes": 2,
+          "sha256": "153078218f243968d9b217d3cfb5e24122d16c7a90e8c01cf92347afa45d106b"
+        }
+      }
+    },
+    {
+      "round": 2,
+      "case": "after_artifact",
+      "parent": {
+        "wall_s": 0.11083220000000438,
+        "self_CPU_s": 0.0,
+        "actual_pid": 34944,
+        "observed_exit_code": 76,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "659fdd6d7413937934d393ed9928d13b398b18d6daf4f84eb9e65fbcba231cba",
+        "events_SHA": "3148216dee1bd1fadd608c7f22222af6824bc772e66a4cb825ae9685ff980cd5"
+      },
+      "inspection": {
+        "plan_SHA": "659fdd6d7413937934d393ed9928d13b398b18d6daf4f84eb9e65fbcba231cba",
+        "events_SHA": "3148216dee1bd1fadd608c7f22222af6824bc772e66a4cb825ae9685ff980cd5",
+        "tip_SHA": "b7f041dcb5ff2b635793ffb5aca569ee58f17d252eb172217c6f109943a335db",
+        "states": {
+          "one": "stage_completed",
+          "two": "started",
+          "three": "unreserved"
+        },
+        "application_read_B": 1168,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 76,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 815,
+          "sha256": "3148216dee1bd1fadd608c7f22222af6824bc772e66a4cb825ae9685ff980cd5"
+        },
+        "plan.json": {
+          "bytes": 100,
+          "sha256": "659fdd6d7413937934d393ed9928d13b398b18d6daf4f84eb9e65fbcba231cba"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        },
+        "artifacts/two.bin": {
+          "bytes": 9,
+          "sha256": "40f0cbdd56f31cbdb31774801e3750fca92f448b6c7d1f31c3ec7ab6e1cc3aee"
+        }
+      }
+    },
+    {
+      "round": 2,
+      "case": "after_receipt",
+      "parent": {
+        "wall_s": 0.12164349999511614,
+        "self_CPU_s": 0.0,
+        "actual_pid": 39516,
+        "observed_exit_code": 76,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "696ff759f4cedf8582711ccdc5b7d1c8318bd169719e3b8f74d7bd0e1be48ff7",
+        "events_SHA": "5238265704108f566af8600cd39b4a0a9f75a15eab1b412cd34399dac30ce116"
+      },
+      "inspection": {
+        "plan_SHA": "696ff759f4cedf8582711ccdc5b7d1c8318bd169719e3b8f74d7bd0e1be48ff7",
+        "events_SHA": "5238265704108f566af8600cd39b4a0a9f75a15eab1b412cd34399dac30ce116",
+        "tip_SHA": "95eed06ac978d96dbf81a2611049a7dc6f8006745cdde78688474f4b027c62ae",
+        "states": {
+          "one": "stage_completed",
+          "two": "artifact_verified",
+          "three": "unreserved"
+        },
+        "application_read_B": 1400,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 76,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 1040,
+          "sha256": "5238265704108f566af8600cd39b4a0a9f75a15eab1b412cd34399dac30ce116"
+        },
+        "plan.json": {
+          "bytes": 99,
+          "sha256": "696ff759f4cedf8582711ccdc5b7d1c8318bd169719e3b8f74d7bd0e1be48ff7"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        },
+        "artifacts/two.bin": {
+          "bytes": 9,
+          "sha256": "40f0cbdd56f31cbdb31774801e3750fca92f448b6c7d1f31c3ec7ab6e1cc3aee"
+        }
+      }
+    },
+    {
+      "round": 2,
+      "case": "after_stage_footer",
+      "parent": {
+        "wall_s": 0.1332745999970939,
+        "self_CPU_s": 0.0,
+        "actual_pid": 11740,
+        "observed_exit_code": 76,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "273bc5715d949efa99023c70663dd2470b0d9eb22408ac859024cb7064e76998",
+        "events_SHA": "be5412c093aab10818451d1c53b136c4ecbc09425152b931d1b45cafb0137603"
+      },
+      "inspection": {
+        "plan_SHA": "273bc5715d949efa99023c70663dd2470b0d9eb22408ac859024cb7064e76998",
+        "events_SHA": "be5412c093aab10818451d1c53b136c4ecbc09425152b931d1b45cafb0137603",
+        "tip_SHA": "e9212742fe3281e5f1218e1096e28de10ddd7151fe204a308e57d6fcc7e6c143",
+        "states": {
+          "one": "stage_completed",
+          "two": "stage_completed",
+          "three": "unreserved"
+        },
+        "application_read_B": 1534,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 76,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 1164,
+          "sha256": "be5412c093aab10818451d1c53b136c4ecbc09425152b931d1b45cafb0137603"
+        },
+        "plan.json": {
+          "bytes": 104,
+          "sha256": "273bc5715d949efa99023c70663dd2470b0d9eb22408ac859024cb7064e76998"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        },
+        "artifacts/two.bin": {
+          "bytes": 9,
+          "sha256": "40f0cbdd56f31cbdb31774801e3750fca92f448b6c7d1f31c3ec7ab6e1cc3aee"
+        }
+      }
+    },
+    {
+      "round": 2,
+      "case": "all_stages_no_witness",
+      "parent": {
+        "wall_s": 0.15895699999964563,
+        "self_CPU_s": 0.0,
+        "actual_pid": 37044,
+        "observed_exit_code": 0,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "a945637cfe3a7db025f4e4ed0bdb62a482d0c28215939df81087d2cddcae3165",
+        "events_SHA": "c3f4d0ee23fd4d98ea26f6eaea4dc72a5dc394c35f233de2973ac436fbbe2be0"
+      },
+      "inspection": {
+        "plan_SHA": "a945637cfe3a7db025f4e4ed0bdb62a482d0c28215939df81087d2cddcae3165",
+        "events_SHA": "c3f4d0ee23fd4d98ea26f6eaea4dc72a5dc394c35f233de2973ac436fbbe2be0",
+        "tip_SHA": "9494278ee76245be8bf40de9bf1141384c35414c7f8ec0b2540726f6c9c37c4e",
+        "states": {
+          "one": "stage_completed",
+          "two": "stage_completed",
+          "three": "stage_completed"
+        },
+        "application_read_B": 1893,
+        "all_stage_footers_present": true,
+        "externally_observed_exit": null,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 1757,
+          "sha256": "c3f4d0ee23fd4d98ea26f6eaea4dc72a5dc394c35f233de2973ac436fbbe2be0"
+        },
+        "plan.json": {
+          "bytes": 107,
+          "sha256": "a945637cfe3a7db025f4e4ed0bdb62a482d0c28215939df81087d2cddcae3165"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        },
+        "artifacts/three.bin": {
+          "bytes": 11,
+          "sha256": "dab94e800a4195f1ff7f3e1e18cc6d3573af145d7e4b72467d1c05def049e5de"
+        },
+        "artifacts/two.bin": {
+          "bytes": 9,
+          "sha256": "40f0cbdd56f31cbdb31774801e3750fca92f448b6c7d1f31c3ec7ab6e1cc3aee"
+        }
+      }
+    },
+    {
+      "round": 2,
+      "case": "success",
+      "parent": {
+        "wall_s": 0.15280619999975897,
+        "self_CPU_s": 0.015625,
+        "actual_pid": 39020,
+        "observed_exit_code": 0,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "93732e7df676ba12cdc46029ab881ed0d038308c9aeeccafdd589c02b0dd6125",
+        "events_SHA": "ef7fcf791e8c3b94270adea5e3868e1877f1594a3c6da1b059501970bf39ae04"
+      },
+      "inspection": {
+        "plan_SHA": "93732e7df676ba12cdc46029ab881ed0d038308c9aeeccafdd589c02b0dd6125",
+        "events_SHA": "ef7fcf791e8c3b94270adea5e3868e1877f1594a3c6da1b059501970bf39ae04",
+        "tip_SHA": "e549f25366b18624f8487bf1b7819670ce830991b655f8e57555401cdae87ced",
+        "states": {
+          "one": "stage_completed",
+          "two": "stage_completed",
+          "three": "stage_completed"
+        },
+        "application_read_B": 2115,
+        "all_stage_footers_present": true,
+        "externally_observed_exit": 0,
+        "writer_lock_present": false,
+        "campaign_complete": true,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 1757,
+          "sha256": "ef7fcf791e8c3b94270adea5e3868e1877f1594a3c6da1b059501970bf39ae04"
+        },
+        "plan.json": {
+          "bytes": 93,
+          "sha256": "93732e7df676ba12cdc46029ab881ed0d038308c9aeeccafdd589c02b0dd6125"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        },
+        "artifacts/three.bin": {
+          "bytes": 11,
+          "sha256": "dab94e800a4195f1ff7f3e1e18cc6d3573af145d7e4b72467d1c05def049e5de"
+        },
+        "artifacts/two.bin": {
+          "bytes": 9,
+          "sha256": "40f0cbdd56f31cbdb31774801e3750fca92f448b6c7d1f31c3ec7ab6e1cc3aee"
+        }
+      }
+    },
+    {
+      "round": 2,
+      "case": "kill_after_reserve",
+      "parent": {
+        "wall_s": 0.09557320000021718,
+        "self_CPU_s": 0.0,
+        "actual_pid": 36856,
+        "observed_exit_code": 1,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "3b0df5015657e3ef5f748c6920e28294f2874dd20347df143b5c86af41b08795",
+        "events_SHA": "11cf197d05bede35ad169c1e46e3a936630d61bddb64f214a149256a32be59d7"
+      },
+      "inspection": {
+        "plan_SHA": "3b0df5015657e3ef5f748c6920e28294f2874dd20347df143b5c86af41b08795",
+        "events_SHA": "11cf197d05bede35ad169c1e46e3a936630d61bddb64f214a149256a32be59d7",
+        "tip_SHA": "8ad4deac31ec4c347aaef7527a2ae982c739f7cf9724f0c5aeea89d59c9175ff",
+        "states": {
+          "one": "stage_completed",
+          "two": "reserved",
+          "three": "unreserved"
+        },
+        "application_read_B": 1059,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 1,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 699,
+          "sha256": "11cf197d05bede35ad169c1e46e3a936630d61bddb64f214a149256a32be59d7"
+        },
+        "plan.json": {
+          "bytes": 104,
+          "sha256": "3b0df5015657e3ef5f748c6920e28294f2874dd20347df143b5c86af41b08795"
+        },
+        "READY": {
+          "bytes": 13,
+          "sha256": "6dc9c5d112630602ffc1720bf875a9e372725ca58446a567d17177d95c7f7c75"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        }
+      }
+    },
+    {
+      "round": 2,
+      "case": "kill_after_artifact",
+      "parent": {
+        "wall_s": 0.12100469999859342,
+        "self_CPU_s": 0.015625,
+        "actual_pid": 33116,
+        "observed_exit_code": 1,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "b7a42504bc89287ffb64ad008a22269844d98b8184e317d5237c4cbd828b7f7e",
+        "events_SHA": "e94368d0e1805cd6d02d61f27de7c2ddcd18578b1f6db84012a974f897594584"
+      },
+      "inspection": {
+        "plan_SHA": "b7a42504bc89287ffb64ad008a22269844d98b8184e317d5237c4cbd828b7f7e",
+        "events_SHA": "e94368d0e1805cd6d02d61f27de7c2ddcd18578b1f6db84012a974f897594584",
+        "tip_SHA": "0535a82056f2d6d87a017c772471148f4f87bff2af2290251d24abdd5c22b3bc",
+        "states": {
+          "one": "stage_completed",
+          "two": "started",
+          "three": "unreserved"
+        },
+        "application_read_B": 1177,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 1,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 815,
+          "sha256": "e94368d0e1805cd6d02d61f27de7c2ddcd18578b1f6db84012a974f897594584"
+        },
+        "plan.json": {
+          "bytes": 105,
+          "sha256": "b7a42504bc89287ffb64ad008a22269844d98b8184e317d5237c4cbd828b7f7e"
+        },
+        "READY": {
+          "bytes": 14,
+          "sha256": "ead70b9646ae8b2ebb67f7427925f9861b842808ffacb0814cddc94cacb7e027"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        },
+        "artifacts/two.bin": {
+          "bytes": 9,
+          "sha256": "40f0cbdd56f31cbdb31774801e3750fca92f448b6c7d1f31c3ec7ab6e1cc3aee"
+        }
+      }
+    },
+    {
+      "round": 2,
+      "case": "exit_nonzero_allstages",
+      "parent": {
+        "wall_s": 0.16038169999956153,
+        "self_CPU_s": 0.0,
+        "actual_pid": 26188,
+        "observed_exit_code": 76,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "09c08430cee4e5b3d94535344fa8d3fac3d4fc1374c936bd441d867974858928",
+        "events_SHA": "902dfaf582dfb25f70809fc77bdd73688bda98ffcb76fcb93510eac671c9cc87"
+      },
+      "inspection": {
+        "plan_SHA": "09c08430cee4e5b3d94535344fa8d3fac3d4fc1374c936bd441d867974858928",
+        "events_SHA": "902dfaf582dfb25f70809fc77bdd73688bda98ffcb76fcb93510eac671c9cc87",
+        "tip_SHA": "827ab845fe51cc2bb07ecda07525014b9292226486fa368ef8d92276f9ab97c4",
+        "states": {
+          "one": "stage_completed",
+          "two": "stage_completed",
+          "three": "stage_completed"
+        },
+        "application_read_B": 2146,
+        "all_stage_footers_present": true,
+        "externally_observed_exit": 76,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 1757,
+          "sha256": "902dfaf582dfb25f70809fc77bdd73688bda98ffcb76fcb93510eac671c9cc87"
+        },
+        "plan.json": {
+          "bytes": 108,
+          "sha256": "09c08430cee4e5b3d94535344fa8d3fac3d4fc1374c936bd441d867974858928"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        },
+        "artifacts/three.bin": {
+          "bytes": 11,
+          "sha256": "dab94e800a4195f1ff7f3e1e18cc6d3573af145d7e4b72467d1c05def049e5de"
+        },
+        "artifacts/two.bin": {
+          "bytes": 9,
+          "sha256": "40f0cbdd56f31cbdb31774801e3750fca92f448b6c7d1f31c3ec7ab6e1cc3aee"
+        }
+      }
+    },
+    {
+      "round": 3,
+      "case": "before_reserve",
+      "parent": {
+        "wall_s": 0.10050259999843547,
+        "self_CPU_s": 0.0,
+        "actual_pid": 37432,
+        "observed_exit_code": 76,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "ec902517c6eeb77599925d6508806942cf6b400e1334fe2af9a1711aeb126727",
+        "events_SHA": "caecf82c725045641afcd5623a77fbca0b263f5e1adee998512cb851e90d12b3"
+      },
+      "inspection": {
+        "plan_SHA": "ec902517c6eeb77599925d6508806942cf6b400e1334fe2af9a1711aeb126727",
+        "events_SHA": "caecf82c725045641afcd5623a77fbca0b263f5e1adee998512cb851e90d12b3",
+        "tip_SHA": "25736340ab0153d9b6fcc66fe20af31ece40be83fb5ddd8d13a4985524864755",
+        "states": {
+          "one": "stage_completed",
+          "two": "unreserved",
+          "three": "unreserved"
+        },
+        "application_read_B": 935,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 76,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 582,
+          "sha256": "caecf82c725045641afcd5623a77fbca0b263f5e1adee998512cb851e90d12b3"
+        },
+        "plan.json": {
+          "bytes": 100,
+          "sha256": "ec902517c6eeb77599925d6508806942cf6b400e1334fe2af9a1711aeb126727"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        }
+      }
+    },
+    {
+      "round": 3,
+      "case": "after_reserve",
+      "parent": {
+        "wall_s": 0.09723769999982323,
+        "self_CPU_s": 0.0,
+        "actual_pid": 36312,
+        "observed_exit_code": 76,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "57a692c1f1271667f336d381e493eec9a39c1d9fd81b223c6a36c60c2735d989",
+        "events_SHA": "4a4194be63af9b85ed185e9d774c98515f4956fb6bde0cae048312db094bd799"
+      },
+      "inspection": {
+        "plan_SHA": "57a692c1f1271667f336d381e493eec9a39c1d9fd81b223c6a36c60c2735d989",
+        "events_SHA": "4a4194be63af9b85ed185e9d774c98515f4956fb6bde0cae048312db094bd799",
+        "tip_SHA": "f79cda12da66bea725ab69d889f98fd816e7ed3caaa6b354a4992ccc344db419",
+        "states": {
+          "one": "stage_completed",
+          "two": "reserved",
+          "three": "unreserved"
+        },
+        "application_read_B": 1050,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 76,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 699,
+          "sha256": "4a4194be63af9b85ed185e9d774c98515f4956fb6bde0cae048312db094bd799"
+        },
+        "plan.json": {
+          "bytes": 99,
+          "sha256": "57a692c1f1271667f336d381e493eec9a39c1d9fd81b223c6a36c60c2735d989"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        }
+      }
+    },
+    {
+      "round": 3,
+      "case": "after_started",
+      "parent": {
+        "wall_s": 0.09936369999923045,
+        "self_CPU_s": 0.0,
+        "actual_pid": 19128,
+        "observed_exit_code": 76,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "9bdba18a5ba1795dc2e41bb55da6104746340f4e8bc2a8cb2e939203eb486a2c",
+        "events_SHA": "4a4ef31c58b595f77a786718a7e922c7194c75e9243cae5179f9b9a61ecd332b"
+      },
+      "inspection": {
+        "plan_SHA": "9bdba18a5ba1795dc2e41bb55da6104746340f4e8bc2a8cb2e939203eb486a2c",
+        "events_SHA": "4a4ef31c58b595f77a786718a7e922c7194c75e9243cae5179f9b9a61ecd332b",
+        "tip_SHA": "c7bbb6ae7d25542be0a72823950f56aa80425a48a388ba659d81f46cfb955cdc",
+        "states": {
+          "one": "stage_completed",
+          "two": "started",
+          "three": "unreserved"
+        },
+        "application_read_B": 1166,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 76,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 815,
+          "sha256": "4a4ef31c58b595f77a786718a7e922c7194c75e9243cae5179f9b9a61ecd332b"
+        },
+        "plan.json": {
+          "bytes": 99,
+          "sha256": "9bdba18a5ba1795dc2e41bb55da6104746340f4e8bc2a8cb2e939203eb486a2c"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        }
+      }
+    },
+    {
+      "round": 3,
+      "case": "partial_artifact",
+      "parent": {
+        "wall_s": 0.11590520000027027,
+        "self_CPU_s": 0.0,
+        "actual_pid": 38992,
+        "observed_exit_code": 76,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "5308115de510f5675e8f454197ba030a1b716c3e64c8e89c7bd80104dc2bf6c1",
+        "events_SHA": "1ae6052ed93ec9ebdc80ade64c2a6d0ba3fdc02e856f1d58cb7c75412020d259"
+      },
+      "inspection": {
+        "plan_SHA": "5308115de510f5675e8f454197ba030a1b716c3e64c8e89c7bd80104dc2bf6c1",
+        "events_SHA": "1ae6052ed93ec9ebdc80ade64c2a6d0ba3fdc02e856f1d58cb7c75412020d259",
+        "tip_SHA": "00998e15671c9a6dcb880ed5a2143938b0e23533f304a278afd2c4c583dfc09f",
+        "states": {
+          "one": "stage_completed",
+          "two": "started",
+          "three": "unreserved"
+        },
+        "application_read_B": 1172,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 76,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 815,
+          "sha256": "1ae6052ed93ec9ebdc80ade64c2a6d0ba3fdc02e856f1d58cb7c75412020d259"
+        },
+        "plan.json": {
+          "bytes": 102,
+          "sha256": "5308115de510f5675e8f454197ba030a1b716c3e64c8e89c7bd80104dc2bf6c1"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        },
+        "artifacts/two.bin": {
+          "bytes": 2,
+          "sha256": "153078218f243968d9b217d3cfb5e24122d16c7a90e8c01cf92347afa45d106b"
+        }
+      }
+    },
+    {
+      "round": 3,
+      "case": "after_artifact",
+      "parent": {
+        "wall_s": 0.11068599999998696,
+        "self_CPU_s": 0.0,
+        "actual_pid": 26044,
+        "observed_exit_code": 76,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "659fdd6d7413937934d393ed9928d13b398b18d6daf4f84eb9e65fbcba231cba",
+        "events_SHA": "3148216dee1bd1fadd608c7f22222af6824bc772e66a4cb825ae9685ff980cd5"
+      },
+      "inspection": {
+        "plan_SHA": "659fdd6d7413937934d393ed9928d13b398b18d6daf4f84eb9e65fbcba231cba",
+        "events_SHA": "3148216dee1bd1fadd608c7f22222af6824bc772e66a4cb825ae9685ff980cd5",
+        "tip_SHA": "b7f041dcb5ff2b635793ffb5aca569ee58f17d252eb172217c6f109943a335db",
+        "states": {
+          "one": "stage_completed",
+          "two": "started",
+          "three": "unreserved"
+        },
+        "application_read_B": 1168,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 76,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 815,
+          "sha256": "3148216dee1bd1fadd608c7f22222af6824bc772e66a4cb825ae9685ff980cd5"
+        },
+        "plan.json": {
+          "bytes": 100,
+          "sha256": "659fdd6d7413937934d393ed9928d13b398b18d6daf4f84eb9e65fbcba231cba"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        },
+        "artifacts/two.bin": {
+          "bytes": 9,
+          "sha256": "40f0cbdd56f31cbdb31774801e3750fca92f448b6c7d1f31c3ec7ab6e1cc3aee"
+        }
+      }
+    },
+    {
+      "round": 3,
+      "case": "after_receipt",
+      "parent": {
+        "wall_s": 0.11762550000275951,
+        "self_CPU_s": 0.0,
+        "actual_pid": 39604,
+        "observed_exit_code": 76,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "696ff759f4cedf8582711ccdc5b7d1c8318bd169719e3b8f74d7bd0e1be48ff7",
+        "events_SHA": "5238265704108f566af8600cd39b4a0a9f75a15eab1b412cd34399dac30ce116"
+      },
+      "inspection": {
+        "plan_SHA": "696ff759f4cedf8582711ccdc5b7d1c8318bd169719e3b8f74d7bd0e1be48ff7",
+        "events_SHA": "5238265704108f566af8600cd39b4a0a9f75a15eab1b412cd34399dac30ce116",
+        "tip_SHA": "95eed06ac978d96dbf81a2611049a7dc6f8006745cdde78688474f4b027c62ae",
+        "states": {
+          "one": "stage_completed",
+          "two": "artifact_verified",
+          "three": "unreserved"
+        },
+        "application_read_B": 1400,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 76,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 1040,
+          "sha256": "5238265704108f566af8600cd39b4a0a9f75a15eab1b412cd34399dac30ce116"
+        },
+        "plan.json": {
+          "bytes": 99,
+          "sha256": "696ff759f4cedf8582711ccdc5b7d1c8318bd169719e3b8f74d7bd0e1be48ff7"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        },
+        "artifacts/two.bin": {
+          "bytes": 9,
+          "sha256": "40f0cbdd56f31cbdb31774801e3750fca92f448b6c7d1f31c3ec7ab6e1cc3aee"
+        }
+      }
+    },
+    {
+      "round": 3,
+      "case": "after_stage_footer",
+      "parent": {
+        "wall_s": 0.1369806000002427,
+        "self_CPU_s": 0.0,
+        "actual_pid": 27932,
+        "observed_exit_code": 76,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "273bc5715d949efa99023c70663dd2470b0d9eb22408ac859024cb7064e76998",
+        "events_SHA": "be5412c093aab10818451d1c53b136c4ecbc09425152b931d1b45cafb0137603"
+      },
+      "inspection": {
+        "plan_SHA": "273bc5715d949efa99023c70663dd2470b0d9eb22408ac859024cb7064e76998",
+        "events_SHA": "be5412c093aab10818451d1c53b136c4ecbc09425152b931d1b45cafb0137603",
+        "tip_SHA": "e9212742fe3281e5f1218e1096e28de10ddd7151fe204a308e57d6fcc7e6c143",
+        "states": {
+          "one": "stage_completed",
+          "two": "stage_completed",
+          "three": "unreserved"
+        },
+        "application_read_B": 1534,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 76,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 1164,
+          "sha256": "be5412c093aab10818451d1c53b136c4ecbc09425152b931d1b45cafb0137603"
+        },
+        "plan.json": {
+          "bytes": 104,
+          "sha256": "273bc5715d949efa99023c70663dd2470b0d9eb22408ac859024cb7064e76998"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        },
+        "artifacts/two.bin": {
+          "bytes": 9,
+          "sha256": "40f0cbdd56f31cbdb31774801e3750fca92f448b6c7d1f31c3ec7ab6e1cc3aee"
+        }
+      }
+    },
+    {
+      "round": 3,
+      "case": "all_stages_no_witness",
+      "parent": {
+        "wall_s": 0.18423369999800343,
+        "self_CPU_s": 0.0,
+        "actual_pid": 26568,
+        "observed_exit_code": 0,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "a945637cfe3a7db025f4e4ed0bdb62a482d0c28215939df81087d2cddcae3165",
+        "events_SHA": "c3f4d0ee23fd4d98ea26f6eaea4dc72a5dc394c35f233de2973ac436fbbe2be0"
+      },
+      "inspection": {
+        "plan_SHA": "a945637cfe3a7db025f4e4ed0bdb62a482d0c28215939df81087d2cddcae3165",
+        "events_SHA": "c3f4d0ee23fd4d98ea26f6eaea4dc72a5dc394c35f233de2973ac436fbbe2be0",
+        "tip_SHA": "9494278ee76245be8bf40de9bf1141384c35414c7f8ec0b2540726f6c9c37c4e",
+        "states": {
+          "one": "stage_completed",
+          "two": "stage_completed",
+          "three": "stage_completed"
+        },
+        "application_read_B": 1893,
+        "all_stage_footers_present": true,
+        "externally_observed_exit": null,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 1757,
+          "sha256": "c3f4d0ee23fd4d98ea26f6eaea4dc72a5dc394c35f233de2973ac436fbbe2be0"
+        },
+        "plan.json": {
+          "bytes": 107,
+          "sha256": "a945637cfe3a7db025f4e4ed0bdb62a482d0c28215939df81087d2cddcae3165"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        },
+        "artifacts/three.bin": {
+          "bytes": 11,
+          "sha256": "dab94e800a4195f1ff7f3e1e18cc6d3573af145d7e4b72467d1c05def049e5de"
+        },
+        "artifacts/two.bin": {
+          "bytes": 9,
+          "sha256": "40f0cbdd56f31cbdb31774801e3750fca92f448b6c7d1f31c3ec7ab6e1cc3aee"
+        }
+      }
+    },
+    {
+      "round": 3,
+      "case": "success",
+      "parent": {
+        "wall_s": 0.18621329999587033,
+        "self_CPU_s": 0.015625,
+        "actual_pid": 25380,
+        "observed_exit_code": 0,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "93732e7df676ba12cdc46029ab881ed0d038308c9aeeccafdd589c02b0dd6125",
+        "events_SHA": "ef7fcf791e8c3b94270adea5e3868e1877f1594a3c6da1b059501970bf39ae04"
+      },
+      "inspection": {
+        "plan_SHA": "93732e7df676ba12cdc46029ab881ed0d038308c9aeeccafdd589c02b0dd6125",
+        "events_SHA": "ef7fcf791e8c3b94270adea5e3868e1877f1594a3c6da1b059501970bf39ae04",
+        "tip_SHA": "e549f25366b18624f8487bf1b7819670ce830991b655f8e57555401cdae87ced",
+        "states": {
+          "one": "stage_completed",
+          "two": "stage_completed",
+          "three": "stage_completed"
+        },
+        "application_read_B": 2115,
+        "all_stage_footers_present": true,
+        "externally_observed_exit": 0,
+        "writer_lock_present": false,
+        "campaign_complete": true,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 1757,
+          "sha256": "ef7fcf791e8c3b94270adea5e3868e1877f1594a3c6da1b059501970bf39ae04"
+        },
+        "plan.json": {
+          "bytes": 93,
+          "sha256": "93732e7df676ba12cdc46029ab881ed0d038308c9aeeccafdd589c02b0dd6125"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        },
+        "artifacts/three.bin": {
+          "bytes": 11,
+          "sha256": "dab94e800a4195f1ff7f3e1e18cc6d3573af145d7e4b72467d1c05def049e5de"
+        },
+        "artifacts/two.bin": {
+          "bytes": 9,
+          "sha256": "40f0cbdd56f31cbdb31774801e3750fca92f448b6c7d1f31c3ec7ab6e1cc3aee"
+        }
+      }
+    },
+    {
+      "round": 3,
+      "case": "kill_after_reserve",
+      "parent": {
+        "wall_s": 0.1083202000008896,
+        "self_CPU_s": 0.0,
+        "actual_pid": 39928,
+        "observed_exit_code": 1,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "3b0df5015657e3ef5f748c6920e28294f2874dd20347df143b5c86af41b08795",
+        "events_SHA": "11cf197d05bede35ad169c1e46e3a936630d61bddb64f214a149256a32be59d7"
+      },
+      "inspection": {
+        "plan_SHA": "3b0df5015657e3ef5f748c6920e28294f2874dd20347df143b5c86af41b08795",
+        "events_SHA": "11cf197d05bede35ad169c1e46e3a936630d61bddb64f214a149256a32be59d7",
+        "tip_SHA": "8ad4deac31ec4c347aaef7527a2ae982c739f7cf9724f0c5aeea89d59c9175ff",
+        "states": {
+          "one": "stage_completed",
+          "two": "reserved",
+          "three": "unreserved"
+        },
+        "application_read_B": 1059,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 1,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 699,
+          "sha256": "11cf197d05bede35ad169c1e46e3a936630d61bddb64f214a149256a32be59d7"
+        },
+        "plan.json": {
+          "bytes": 104,
+          "sha256": "3b0df5015657e3ef5f748c6920e28294f2874dd20347df143b5c86af41b08795"
+        },
+        "READY": {
+          "bytes": 13,
+          "sha256": "6dc9c5d112630602ffc1720bf875a9e372725ca58446a567d17177d95c7f7c75"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        }
+      }
+    },
+    {
+      "round": 3,
+      "case": "kill_after_artifact",
+      "parent": {
+        "wall_s": 0.12304239999502897,
+        "self_CPU_s": 0.015625,
+        "actual_pid": 33972,
+        "observed_exit_code": 1,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "b7a42504bc89287ffb64ad008a22269844d98b8184e317d5237c4cbd828b7f7e",
+        "events_SHA": "e94368d0e1805cd6d02d61f27de7c2ddcd18578b1f6db84012a974f897594584"
+      },
+      "inspection": {
+        "plan_SHA": "b7a42504bc89287ffb64ad008a22269844d98b8184e317d5237c4cbd828b7f7e",
+        "events_SHA": "e94368d0e1805cd6d02d61f27de7c2ddcd18578b1f6db84012a974f897594584",
+        "tip_SHA": "0535a82056f2d6d87a017c772471148f4f87bff2af2290251d24abdd5c22b3bc",
+        "states": {
+          "one": "stage_completed",
+          "two": "started",
+          "three": "unreserved"
+        },
+        "application_read_B": 1177,
+        "all_stage_footers_present": false,
+        "externally_observed_exit": 1,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 815,
+          "sha256": "e94368d0e1805cd6d02d61f27de7c2ddcd18578b1f6db84012a974f897594584"
+        },
+        "plan.json": {
+          "bytes": 105,
+          "sha256": "b7a42504bc89287ffb64ad008a22269844d98b8184e317d5237c4cbd828b7f7e"
+        },
+        "READY": {
+          "bytes": 14,
+          "sha256": "ead70b9646ae8b2ebb67f7427925f9861b842808ffacb0814cddc94cacb7e027"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        },
+        "artifacts/two.bin": {
+          "bytes": 9,
+          "sha256": "40f0cbdd56f31cbdb31774801e3750fca92f448b6c7d1f31c3ec7ab6e1cc3aee"
+        }
+      }
+    },
+    {
+      "round": 3,
+      "case": "exit_nonzero_allstages",
+      "parent": {
+        "wall_s": 0.17447140000149375,
+        "self_CPU_s": 0.0,
+        "actual_pid": 18756,
+        "observed_exit_code": 76,
+        "child_CPU_s": null,
+        "full_process_tree_peak_RSS_B": null,
+        "plan_SHA": "09c08430cee4e5b3d94535344fa8d3fac3d4fc1374c936bd441d867974858928",
+        "events_SHA": "902dfaf582dfb25f70809fc77bdd73688bda98ffcb76fcb93510eac671c9cc87"
+      },
+      "inspection": {
+        "plan_SHA": "09c08430cee4e5b3d94535344fa8d3fac3d4fc1374c936bd441d867974858928",
+        "events_SHA": "902dfaf582dfb25f70809fc77bdd73688bda98ffcb76fcb93510eac671c9cc87",
+        "tip_SHA": "827ab845fe51cc2bb07ecda07525014b9292226486fa368ef8d92276f9ab97c4",
+        "states": {
+          "one": "stage_completed",
+          "two": "stage_completed",
+          "three": "stage_completed"
+        },
+        "application_read_B": 2146,
+        "all_stage_footers_present": true,
+        "externally_observed_exit": 76,
+        "writer_lock_present": false,
+        "campaign_complete": false,
+        "automatic_replay_permitted": false,
+        "unreserved_implies_unattempted": false,
+        "local_hash_chain_authenticates_controller": false
+      },
+      "file_identities": {
+        "events.jsonl": {
+          "bytes": 1757,
+          "sha256": "902dfaf582dfb25f70809fc77bdd73688bda98ffcb76fcb93510eac671c9cc87"
+        },
+        "plan.json": {
+          "bytes": 108,
+          "sha256": "09c08430cee4e5b3d94535344fa8d3fac3d4fc1374c936bd441d867974858928"
+        },
+        "artifacts/one.bin": {
+          "bytes": 9,
+          "sha256": "11ef5f30d0180fe8e251adb292ad81348812b58267c8c1d84b79adfb144980f5"
+        },
+        "artifacts/three.bin": {
+          "bytes": 11,
+          "sha256": "dab94e800a4195f1ff7f3e1e18cc6d3573af145d7e4b72467d1c05def049e5de"
+        },
+        "artifacts/two.bin": {
+          "bytes": 9,
+          "sha256": "40f0cbdd56f31cbdb31774801e3750fca92f448b6c7d1f31c3ec7ab6e1cc3aee"
+        }
+      }
+    }
+  ],
+  "independent_application_read_B": 50444,
+  "all_original_files_unchanged_by_audit": true
+}
