@@ -2076,3 +2076,7 @@ SHA-256 用于完整性检查，不能证明来源身份或科学结论正确。
 [首版 v0.1.0 记录](results/v0.1.0/SUMMARY.md) 与 [v0.2.0 记录](results/v0.2.0/SUMMARY.md) 保留；各版协议不同，不能直接把耗时
 变化全归为单个优化。每版本在 [Release](https://github.com/StarlitPupils/RKV-1/releases)
 更新改动、结果和限制；tag 不改写。代码 [MIT](LICENSE)。
+
+## v0.96候选：执行记录与外部退出凭据
+
+在已封存v0.95之外，新增严格有界的计划/阶段记录与独立父退出凭据。12个owned进程场景（含2次实际终止）和15项坏输入检查的准备集成通过；全回归、source/protocol/input冻结及exactCI先于正式三轮36子进程/45拒绝控制。尚无正式结果或v0.96交付。详见[协议](docs/RECEIPT-OBSERVABILITY.md)。0新模型/提供方请求；不回填原轮次，不宣称推理或长期对话收益。
