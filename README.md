@@ -6,6 +6,10 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
+## 当前研究：v0.98 · 固定来源读取视图与真实读写交错（发行待核验）
+
+新增opt-in `Memory.pin`固定SID身份、逐次重新核验原source，无结果或decoded缓存。tiny owned的3reader/1writer、33操作及CAS/manifest/HEAD/literal控制准备通过；正式9controller/36子进程/297操作/36坏副本控制必须在完整回归及source/protocol/input冻结与exactCI成功后运行。尚无正式结果或v0.98交付，不称科学回答或长期对话收益；默认Memory/CLI/UI读取不改。
+
 ## 当前版本：v0.97 · 真实Memory更新中断与来源历史
 
 三轮17/129/513条自建来源、54fresh producer、45次真实producer终止、27项坏副本拒绝与独立原字节/旧SID/HEAD/退出凭据审计通过。新HEAD可见18例，操作完成凭据仅9例；其余发布后终止保持完成未知，0自动重试/回滚。144保存来源查询，含预期拒绝与坏副本共171次本地来源查询尝试，primary/independent/negative共315次完整source恢复均计费。H1/H2/H3/joint通过仅属本轮动态来源工程合同，不称物理掉电、并发、NLI/问答或长期人类会话收益。

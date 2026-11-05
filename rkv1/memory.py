@@ -231,6 +231,15 @@ class Memory:
             raise ValueError("Memory manifest does not bind current CAS snapshot")
         return value
 
+    def pin(self, *, snapshot=None):
+        """Opt-in fixed-SID identity view; source is reverified per operation.
+
+        No decoded source, results or SQLite handles are retained. New HEAD
+        publications do not retarget this view; close rejects further reads.
+        """
+        from .memory_view import ReadView
+        return ReadView(self, snapshot=snapshot)
+
     def search(self,question,*,top_k=5,snapshot=None):
         if not isinstance(question,str) or not 1<=len(question)<=4096 or type(top_k) is not int or not 1<=top_k<=20:
             raise ValueError("Invalid memory query or top_k")

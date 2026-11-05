@@ -675,3 +675,7 @@ tag1350b94b973953d4a2f5d352d1763e2bc9c9096a、ReleaseCI41861180230、finalproof3
 ### v0.97完整软件交付确认
 
 tag4457a632d0351083623995d00d99fa4d06c481e7、ReleaseCI41980898403、finalproof0bbfa7cd17a55c6aa1362d96a475cc0e5584f93409e0261cc130da4c6185f0bb。实际7资产SHA/全部68Python+HTML与tag源码/当前结果范围/仓库外实际wheel-currentnative与new6真实Memory故障/3source控制+全部旧actualsdist/proof8通过。实际CI源码1925244B SHA12984027c05dbb564b5adefdee07c59dd8b12951f74cb2866bb21ee6dc481b1e；原固定9controller/54producer/45实际终止/144保存来源查询/27坏副本控制、独立审计与完整时钟/门槛不改；18新HEAD可见但仅9操作完整，不称掉电/并发/推理收益。v095原轮封存，缺失槽执行和成本unknownnull，不补跑。owned记录与外部凭据机械验证不代表真人长期会话/NLI/回答或无限上下文，全部负结果及历史成本保持。
+
+## v0.98候选：固定来源视图与真实读写交错
+
+新opt-in Memory.pin不缓存原文/查询，逐次调用原Memory source验证。正式计划3规模3轮/36真实子进程/297操作/36坏副本控制，先freeze/exactCI再运行；受控singlewriter并发，不泛化多写者/物理掉电/NLI/问答/长期人类会话。v095原轮封存，旧API不复用。
