@@ -671,3 +671,7 @@ tag1350b94b973953d4a2f5d352d1763e2bc9c9096a、ReleaseCI41861180230、finalproof3
 ### v0.97真实Memory更新中断对照完成，发行待核验
 
 最终sourcecfef49552f772ab28a3353b8bbae4ed9ce309fea/exactCI41979690570；624全回归623pass1权限skip。54fresh producer/45实际终止/9成功、144保存查询/171含拒绝本地来源query、315完整source恢复/27坏副本控制，独立原文/历史SID/HEAD/凭据/oldfiles复核通过。18新HEAD可见不等于9完整操作，kill未知不重试。完整plan92.1197205s、独立+控制+图报告3.2794671s，各阶段selfCPU/RSS/原始坏字节/孤立对象/源资源均保留；图已实际看。0新模型/旧科学输入，不是掉电、并发、NLI/问答/真实长期人类会话收益，E4整体未完成。初始source只到CI等待，原子JSON信号修正前无正式矩阵；重新freeze/CI后唯一54实际轮。local/实际资产/外安装/proof8尚待。
+
+### v0.97完整软件交付确认
+
+tag4457a632d0351083623995d00d99fa4d06c481e7、ReleaseCI41980898403、finalproof0bbfa7cd17a55c6aa1362d96a475cc0e5584f93409e0261cc130da4c6185f0bb。实际7资产SHA/全部68Python+HTML与tag源码/当前结果范围/仓库外实际wheel-currentnative与new6真实Memory故障/3source控制+全部旧actualsdist/proof8通过。实际CI源码1925244B SHA12984027c05dbb564b5adefdee07c59dd8b12951f74cb2866bb21ee6dc481b1e；原固定9controller/54producer/45实际终止/144保存来源查询/27坏副本控制、独立审计与完整时钟/门槛不改；18新HEAD可见但仅9操作完整，不称掉电/并发/推理收益。v095原轮封存，缺失槽执行和成本unknownnull，不补跑。owned记录与外部凭据机械验证不代表真人长期会话/NLI/回答或无限上下文，全部负结果及历史成本保持。

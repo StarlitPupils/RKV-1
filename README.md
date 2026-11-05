@@ -6,13 +6,13 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前研究：v0.97 · 真实Memory更新中断与来源历史（发行待核验）
+## 当前版本：v0.97 · 真实Memory更新中断与来源历史
 
 三轮17/129/513条自建来源、54fresh producer、45次真实producer终止、27项坏副本拒绝与独立原字节/旧SID/HEAD/退出凭据审计通过。新HEAD可见18例，操作完成凭据仅9例；其余发布后终止保持完成未知，0自动重试/回滚。144保存来源查询，含预期拒绝与坏副本共171次本地来源查询尝试，primary/independent/negative共315次完整source恢复均计费。H1/H2/H3/joint通过仅属本轮动态来源工程合同，不称物理掉电、并发、NLI/问答或长期人类会话收益。
 
 ![真实Memory更新中断与完整成本](results/v0.97.0/memory-update-faults.png)
 
-624检查623pass/1权限skip；[完整报告](results/v0.97.0/SUMMARY.md) · [协议](docs/MEMORY-UPDATE-FAULTS.md)。图已实际看，完整local/实际发行资产/外安装/proof8尚待。0新模型/HEAD提供方请求、0旧科学数据读取，默认Memory/CLI/UI不改；最新完整软件交付仍为v0.96。
+624检查623pass/1权限skip；[完整报告](results/v0.97.0/SUMMARY.md) · [协议](docs/MEMORY-UPDATE-FAULTS.md)。图已实际看，[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.97.0)的完整local、实际7资产SHA/全部68Python+HTML与tag源码、仓库外实际wheel-currentnative/new6真实Memory故障场景及3source坏副本+全部旧actualsdist、第8proof实际重下载均通过。软件交付不代表真实人类长期对话或科学回答能力验收。0新模型/HEAD提供方请求、0旧科学数据读取，默认Memory/CLI/UI不改；当前完整软件交付为v0.97。
 
 ## 当前版本：v0.96 · 严格执行记录与退出凭据
 
