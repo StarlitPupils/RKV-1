@@ -6,13 +6,13 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前研究：v0.98 · 固定来源读取视图与真实读写交错（发行待核验）
+## 当前版本：v0.98 · 固定来源读取视图与真实读写交错
 
 新增opt-in `Memory.pin`固定SID，逐次重新核验原source。三轮17/129/513条自建来源，9controller/36真实子进程/297操作/54实际跨HEAD发布查询区间与36坏副本控制、36关闭调用拒绝均通过独立原JSONL/完整source/历史SID/PID退出与immutability审计。固定视图与原explicit SID逐次相同；动态current按各次请求解析版本，单个已开始查询不混新旧。H1/H2/H3/joint仅本轮受控singlewriter机械合同，不称一般并发、科学回答或长期人类对话收益。
 
 ![固定来源轨迹与完整控制进程成本](results/v0.98.0/memory-read-views.png)
 
-628检查627pass/1权限skip；[完整报告](results/v0.98.0/SUMMARY.md) · [协议](docs/MEMORY-READ-VIEWS.md)。图已实际看。完整local/实际发行资产/外安装/proof8尚待。0新模型/提供方HEAD/旧科学输入，默认Memory/CLI/UI不改。最新完整软件交付仍为v0.97。
+628检查627pass/1权限skip；[完整报告](results/v0.98.0/SUMMARY.md) · [协议](docs/MEMORY-READ-VIEWS.md)。图已实际看。[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.98.0)的完整local、实际7资产SHA/全部69Python+HTML与tag源码、仓库外实际wheel-currentnative/new3reader1writer33操作6重叠区间4source控制+全部旧actualsdist、第8proof实际重下载均通过。软件交付不代表真实人类长期对话或科学回答能力验收。0新模型/提供方HEAD/旧科学输入，默认Memory/CLI/UI不改。当前完整软件交付为v0.98。
 
 ## 当前版本：v0.97 · 真实Memory更新中断与来源历史
 
