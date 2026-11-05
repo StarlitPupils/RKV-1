@@ -2084,3 +2084,7 @@ SHA-256 用于完整性检查，不能证明来源身份或科学结论正确。
 [首版 v0.1.0 记录](results/v0.1.0/SUMMARY.md) 与 [v0.2.0 记录](results/v0.2.0/SUMMARY.md) 保留；各版协议不同，不能直接把耗时
 变化全归为单个优化。每版本在 [Release](https://github.com/StarlitPupils/RKV-1/releases)
 更新改动、结果和限制；tag 不改写。代码 [MIT](LICENSE)。
+
+## v0.97候选：真实Memory更新中断与来源历史
+
+将v0.96执行凭据接入实际CAS对象/源快照/索引/HEAD五个发布边界，tiny owned准备已核对旧SID、当前来源、新SID索引可见性与操作完成区分，并拒绝CAS/HEAD/返回证据损坏。当前4项必要集成检查通过，正式计划17/129/513条×6场景×3轮=54fresh producer/45实际终止/27坏副本控制；全回归、source/protocol/input冻结与exactCI先于正式运行。0新模型/旧科学输入，非NLI/问答/长期对话收益，尚未发布v0.97。

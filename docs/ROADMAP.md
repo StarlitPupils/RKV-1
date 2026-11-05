@@ -663,3 +663,7 @@ source08892375208e2ebf7a5f885248863d3b31f4d3f6/exactCI41859034865，620检查619
 ### v0.96完整软件交付确认
 
 tag1350b94b973953d4a2f5d352d1763e2bc9c9096a、ReleaseCI41861180230、finalproof3000e4429848b2ba9f5ad40b3642144115761972698d520707fb47950c019275。实际7资产SHA/全部68Python+HTML与tag源码/当前结果范围/仓库外实际wheel-currentnative与newsession48owned+全部旧actualsdist/proof8通过。实际CI源码1750071B SHA7b983bc62ea09988033df2e5bbadd62407a9f7b12055b83d95bfb3cf0a2acbce；原固定3controller/36leaf/45controls、独立审计与完整时钟/门槛不改；6次实际进程终止，不称掉电/并发/推理收益。v095原轮封存，缺失槽执行和成本unknownnull，不补跑。owned记录与外部凭据机械验证不代表真人长期会话/NLI/回答或无限上下文，全部负结果及历史成本保持。
+
+## v0.97候选：真实Memory更新中断与来源历史
+
+将v0.96执行凭据接入实际CAS对象/源快照/索引/HEAD五个发布边界，tiny owned准备已核对旧SID、当前来源、新SID索引可见性与操作完成区分，并拒绝CAS/HEAD/返回证据损坏。当前4项必要集成检查通过，正式计划17/129/513条×6场景×3轮=54fresh producer/45实际终止/27坏副本控制；全回归、source/protocol/input冻结与exactCI先于正式运行。0新模型/旧科学输入，非NLI/问答/长期对话收益，尚未发布v0.97。
