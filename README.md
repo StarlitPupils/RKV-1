@@ -6,6 +6,14 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
+## 当前研究：v0.97 · 真实Memory更新中断与来源历史（发行待核验）
+
+三轮17/129/513条自建来源、54fresh producer、45次真实producer终止、27项坏副本拒绝与独立原字节/旧SID/HEAD/退出凭据审计通过。新HEAD可见18例，操作完成凭据仅9例；其余发布后终止保持完成未知，0自动重试/回滚。144保存来源查询，含预期拒绝与坏副本共171次本地来源查询尝试，primary/independent/negative共315次完整source恢复均计费。H1/H2/H3/joint通过仅属本轮动态来源工程合同，不称物理掉电、并发、NLI/问答或长期人类会话收益。
+
+![真实Memory更新中断与完整成本](results/v0.97.0/memory-update-faults.png)
+
+624检查623pass/1权限skip；[完整报告](results/v0.97.0/SUMMARY.md) · [协议](docs/MEMORY-UPDATE-FAULTS.md)。图已实际看，完整local/实际发行资产/外安装/proof8尚待。0新模型/HEAD提供方请求、0旧科学数据读取，默认Memory/CLI/UI不改；最新完整软件交付仍为v0.96。
+
 ## 当前版本：v0.96 · 严格执行记录与退出凭据
 
 固定三轮、36个fresh进程场景、6次实际进程终止和45项拒绝控制，独立原plan/事件链/artifact/父退出记录审计通过。只有3个具备全部阶段footer与外部父exit0凭据的场景判为完成；缺少记录仍保持执行情况未知，0自动重放许可。H1/H2/H3/joint通过仅适用于本轮机械观测合同，不代表掉电、并发、回答或长期对话能力。
@@ -2084,7 +2092,3 @@ SHA-256 用于完整性检查，不能证明来源身份或科学结论正确。
 [首版 v0.1.0 记录](results/v0.1.0/SUMMARY.md) 与 [v0.2.0 记录](results/v0.2.0/SUMMARY.md) 保留；各版协议不同，不能直接把耗时
 变化全归为单个优化。每版本在 [Release](https://github.com/StarlitPupils/RKV-1/releases)
 更新改动、结果和限制；tag 不改写。代码 [MIT](LICENSE)。
-
-## v0.97候选：真实Memory更新中断与来源历史
-
-将v0.96执行凭据接入实际CAS对象/源快照/索引/HEAD五个发布边界，tiny owned准备已核对旧SID、当前来源、新SID索引可见性与操作完成区分，并拒绝CAS/HEAD/返回证据损坏。当前4项必要集成检查通过，正式计划17/129/513条×6场景×3轮=54fresh producer/45实际终止/27坏副本控制；全回归、source/protocol/input冻结与exactCI先于正式运行。0新模型/旧科学输入，非NLI/问答/长期对话收益，尚未发布v0.97。

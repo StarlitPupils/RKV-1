@@ -667,3 +667,7 @@ tag1350b94b973953d4a2f5d352d1763e2bc9c9096a、ReleaseCI41861180230、finalproof3
 ## v0.97候选：真实Memory更新中断与来源历史
 
 将v0.96执行凭据接入实际CAS对象/源快照/索引/HEAD五个发布边界，tiny owned准备已核对旧SID、当前来源、新SID索引可见性与操作完成区分，并拒绝CAS/HEAD/返回证据损坏。当前4项必要集成检查通过，正式计划17/129/513条×6场景×3轮=54fresh producer/45实际终止/27坏副本控制；全回归、source/protocol/input冻结与exactCI先于正式运行。0新模型/旧科学输入，非NLI/问答/长期对话收益，尚未发布v0.97。
+
+### v0.97真实Memory更新中断对照完成，发行待核验
+
+最终sourcecfef49552f772ab28a3353b8bbae4ed9ce309fea/exactCI41979690570；624全回归623pass1权限skip。54fresh producer/45实际终止/9成功、144保存查询/171含拒绝本地来源query、315完整source恢复/27坏副本控制，独立原文/历史SID/HEAD/凭据/oldfiles复核通过。18新HEAD可见不等于9完整操作，kill未知不重试。完整plan92.1197205s、独立+控制+图报告3.2794671s，各阶段selfCPU/RSS/原始坏字节/孤立对象/源资源均保留；图已实际看。0新模型/旧科学输入，不是掉电、并发、NLI/问答/真实长期人类会话收益，E4整体未完成。初始source只到CI等待，原子JSON信号修正前无正式矩阵；重新freeze/CI后唯一54实际轮。local/实际资产/外安装/proof8尚待。

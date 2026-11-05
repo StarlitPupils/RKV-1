@@ -1,0 +1,41 @@
+{
+  "source_freeze": "cfef49552f772ab28a3353b8bbae4ed9ce309fea",
+  "exact_CI": 41979690570,
+  "fixed_sizes": [
+    17,
+    129,
+    513
+  ],
+  "fixed_rounds": 3,
+  "original_source_anchors": {
+    "17:0": {
+      "bytes": 1631,
+      "sha256": "3f5ab0068118e5ba7e9efc9435652aa17909511d202fdc09188a34ab74533c4a"
+    },
+    "17:1": {
+      "bytes": 1631,
+      "sha256": "20d208ab13bc3e20e56a23d21db133ab885db9eb1606a02b94254e1d892943e4"
+    },
+    "129:0": {
+      "bytes": 10342,
+      "sha256": "063edf7385bbd1c93e49fee47c78c57f811b2dc93b7b4488fbee5e4b0390b33b"
+    },
+    "129:1": {
+      "bytes": 10342,
+      "sha256": "d471f2af9cd440565f632316917c2c3247b4f40b1e1d7f83807b26b5c03842c9"
+    },
+    "513:0": {
+      "bytes": 41062,
+      "sha256": "3f03eb7c918d21a5d9546385b8688cf9c62852dd3a5caf2c80ca0987f638c4ca"
+    },
+    "513:1": {
+      "bytes": 41062,
+      "sha256": "13db830128cf24505831610ee6c28cdda5a57e31514693e59a910471be0783b5"
+    }
+  },
+  "physical_SSD_IO_B": null,
+  "full_process_tree_CPU_RSS": null,
+  "killed_child_without_footer_CPU_RSS": null,
+  "runtime_update_functions_unchanged": true,
+  "phase_adapters_only_in_owned_process": true
+}
