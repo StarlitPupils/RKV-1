@@ -679,3 +679,7 @@ tag4457a632d0351083623995d00d99fa4d06c481e7、ReleaseCI41980898403、finalproof0
 ## v0.98候选：固定来源视图与真实读写交错
 
 新opt-in Memory.pin不缓存原文/查询，逐次调用原Memory source验证。正式计划3规模3轮/36真实子进程/297操作/36坏副本控制，先freeze/exactCI再运行；受控singlewriter并发，不泛化多写者/物理掉电/NLI/问答/长期人类会话。v095原轮封存，旧API不复用。
+
+### v0.98固定受控交错完成，发行待核验
+
+sourcefdad26c4b4c861a90f47d35a2a5b7093dd977ece/exactCI41994638712；628检查627pass1权限skip。9controller/36process/297操作/54实际跨发布区间/36坏副本/36关闭拒绝、固定轨迹与原source独立审计通过；固定SID不缓存proof，每次仍重新核验。图已实际看；全部root/controller/子进程/parent/analysis时钟、源/库/坏副本与旧费用保留。非NLI/回答/长期人类会话或一般多writer保证；local/实际资产/外安装/proof8尚待。

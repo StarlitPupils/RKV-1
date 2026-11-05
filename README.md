@@ -8,7 +8,11 @@
 
 ## 当前研究：v0.98 · 固定来源读取视图与真实读写交错（发行待核验）
 
-新增opt-in `Memory.pin`固定SID身份、逐次重新核验原source，无结果或decoded缓存。tiny owned的3reader/1writer、33操作及CAS/manifest/HEAD/literal控制准备通过；正式9controller/36子进程/297操作/36坏副本控制必须在完整回归及source/protocol/input冻结与exactCI成功后运行。尚无正式结果或v0.98交付，不称科学回答或长期对话收益；默认Memory/CLI/UI读取不改。
+新增opt-in `Memory.pin`固定SID，逐次重新核验原source。三轮17/129/513条自建来源，9controller/36真实子进程/297操作/54实际跨HEAD发布查询区间与36坏副本控制、36关闭调用拒绝均通过独立原JSONL/完整source/历史SID/PID退出与immutability审计。固定视图与原explicit SID逐次相同；动态current按各次请求解析版本，单个已开始查询不混新旧。H1/H2/H3/joint仅本轮受控singlewriter机械合同，不称一般并发、科学回答或长期人类对话收益。
+
+![固定来源轨迹与完整控制进程成本](results/v0.98.0/memory-read-views.png)
+
+628检查627pass/1权限skip；[完整报告](results/v0.98.0/SUMMARY.md) · [协议](docs/MEMORY-READ-VIEWS.md)。图已实际看。完整local/实际发行资产/外安装/proof8尚待。0新模型/提供方HEAD/旧科学输入，默认Memory/CLI/UI不改。最新完整软件交付仍为v0.97。
 
 ## 当前版本：v0.97 · 真实Memory更新中断与来源历史
 

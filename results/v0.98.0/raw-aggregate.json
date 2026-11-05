@@ -1,0 +1,1260 @@
+{
+  "controllers": [
+    {
+      "round": 1,
+      "size": 17,
+      "operations": 33,
+      "overlap_intervals": 6,
+      "corrupt_controls": 4,
+      "entry": {
+        "success": true,
+        "entry_wall_s": 1.745349200005876,
+        "entry_self_CPU_s": 0.171875,
+        "peak_RSS_B": 30707712,
+        "fulltree_CPU_RSS": null
+      },
+      "parent": {
+        "observed_controller_launcher_exit_code": 0,
+        "controller_actual_pid": 11912,
+        "observed_controller_actual_exit_code": 0,
+        "launcher_pid": 36080,
+        "parent_wall_s": 1.794245700002648,
+        "parent_self_CPU_s": 0.0,
+        "retry": 0
+      },
+      "readers_and_writer": [
+        {
+          "actual_pid": 15740,
+          "entry_wall_s": 0.5911310000083176,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29331456,
+          "self_CPU_s": 0.15625,
+          "success": true,
+          "role": "pinned"
+        },
+        {
+          "actual_pid": 44064,
+          "entry_wall_s": 0.4846520999999484,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29138944,
+          "self_CPU_s": 0.15625,
+          "success": true,
+          "role": "explicit"
+        },
+        {
+          "actual_pid": 42792,
+          "entry_wall_s": 0.3665467999962857,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29159424,
+          "self_CPU_s": 0.125,
+          "success": true,
+          "role": "current"
+        },
+        {
+          "actual_pid": 33908,
+          "entry_wall_s": 0.23156920001201797,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 30171136,
+          "self_CPU_s": 0.09375,
+          "success": true,
+          "role": "writer"
+        }
+      ],
+      "primary_source_return_B": 56859
+    },
+    {
+      "round": 1,
+      "size": 129,
+      "operations": 33,
+      "overlap_intervals": 6,
+      "corrupt_controls": 4,
+      "entry": {
+        "success": true,
+        "entry_wall_s": 1.72369629998866,
+        "entry_self_CPU_s": 0.1875,
+        "peak_RSS_B": 30642176,
+        "fulltree_CPU_RSS": null
+      },
+      "parent": {
+        "observed_controller_launcher_exit_code": 0,
+        "controller_actual_pid": 23380,
+        "observed_controller_actual_exit_code": 0,
+        "launcher_pid": 41696,
+        "parent_wall_s": 1.7720486000034725,
+        "parent_self_CPU_s": 0.03125,
+        "retry": 0
+      },
+      "readers_and_writer": [
+        {
+          "actual_pid": 28980,
+          "entry_wall_s": 0.5464168000034988,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29265920,
+          "self_CPU_s": 0.109375,
+          "success": true,
+          "role": "pinned"
+        },
+        {
+          "actual_pid": 45628,
+          "entry_wall_s": 0.443778899993049,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29343744,
+          "self_CPU_s": 0.125,
+          "success": true,
+          "role": "explicit"
+        },
+        {
+          "actual_pid": 42832,
+          "entry_wall_s": 0.3391128000075696,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29233152,
+          "self_CPU_s": 0.140625,
+          "success": true,
+          "role": "current"
+        },
+        {
+          "actual_pid": 43580,
+          "entry_wall_s": 0.20485500000359025,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 30535680,
+          "self_CPU_s": 0.09375,
+          "success": true,
+          "role": "writer"
+        }
+      ],
+      "primary_source_return_B": 359106
+    },
+    {
+      "round": 1,
+      "size": 513,
+      "operations": 33,
+      "overlap_intervals": 6,
+      "corrupt_controls": 4,
+      "entry": {
+        "success": true,
+        "entry_wall_s": 1.8294277000095462,
+        "entry_self_CPU_s": 0.1875,
+        "peak_RSS_B": 30937088,
+        "fulltree_CPU_RSS": null
+      },
+      "parent": {
+        "observed_controller_launcher_exit_code": 0,
+        "controller_actual_pid": 42900,
+        "observed_controller_actual_exit_code": 0,
+        "launcher_pid": 25096,
+        "parent_wall_s": 1.8786494999949355,
+        "parent_self_CPU_s": 0.015625,
+        "retry": 0
+      },
+      "readers_and_writer": [
+        {
+          "actual_pid": 35648,
+          "entry_wall_s": 0.6125659999961499,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29863936,
+          "self_CPU_s": 0.1875,
+          "success": true,
+          "role": "pinned"
+        },
+        {
+          "actual_pid": 23880,
+          "entry_wall_s": 0.49705739998898935,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29741056,
+          "self_CPU_s": 0.171875,
+          "success": true,
+          "role": "explicit"
+        },
+        {
+          "actual_pid": 38632,
+          "entry_wall_s": 0.39028559999132995,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29978624,
+          "self_CPU_s": 0.140625,
+          "success": true,
+          "role": "current"
+        },
+        {
+          "actual_pid": 41588,
+          "entry_wall_s": 0.24669290000747424,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 30871552,
+          "self_CPU_s": 0.140625,
+          "success": true,
+          "role": "writer"
+        }
+      ],
+      "primary_source_return_B": 1423554
+    },
+    {
+      "round": 2,
+      "size": 17,
+      "operations": 33,
+      "overlap_intervals": 6,
+      "corrupt_controls": 4,
+      "entry": {
+        "success": true,
+        "entry_wall_s": 1.64396429999033,
+        "entry_self_CPU_s": 0.171875,
+        "peak_RSS_B": 30679040,
+        "fulltree_CPU_RSS": null
+      },
+      "parent": {
+        "observed_controller_launcher_exit_code": 0,
+        "controller_actual_pid": 34556,
+        "observed_controller_actual_exit_code": 0,
+        "launcher_pid": 41508,
+        "parent_wall_s": 1.691219500004081,
+        "parent_self_CPU_s": 0.0,
+        "retry": 0
+      },
+      "readers_and_writer": [
+        {
+          "actual_pid": 26076,
+          "entry_wall_s": 0.5243216000089888,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29261824,
+          "self_CPU_s": 0.140625,
+          "success": true,
+          "role": "pinned"
+        },
+        {
+          "actual_pid": 45164,
+          "entry_wall_s": 0.41858379999757744,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29143040,
+          "self_CPU_s": 0.109375,
+          "success": true,
+          "role": "explicit"
+        },
+        {
+          "actual_pid": 3776,
+          "entry_wall_s": 0.319745700006024,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29159424,
+          "self_CPU_s": 0.109375,
+          "success": true,
+          "role": "current"
+        },
+        {
+          "actual_pid": 42292,
+          "entry_wall_s": 0.18799089999811258,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 30228480,
+          "self_CPU_s": 0.09375,
+          "success": true,
+          "role": "writer"
+        }
+      ],
+      "primary_source_return_B": 56859
+    },
+    {
+      "round": 2,
+      "size": 129,
+      "operations": 33,
+      "overlap_intervals": 6,
+      "corrupt_controls": 4,
+      "entry": {
+        "success": true,
+        "entry_wall_s": 1.8607113000034587,
+        "entry_self_CPU_s": 0.1875,
+        "peak_RSS_B": 30621696,
+        "fulltree_CPU_RSS": null
+      },
+      "parent": {
+        "observed_controller_launcher_exit_code": 0,
+        "controller_actual_pid": 41456,
+        "observed_controller_actual_exit_code": 0,
+        "launcher_pid": 45368,
+        "parent_wall_s": 1.9068618000019342,
+        "parent_self_CPU_s": 0.015625,
+        "retry": 0
+      },
+      "readers_and_writer": [
+        {
+          "actual_pid": 37420,
+          "entry_wall_s": 0.5728601000009803,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29417472,
+          "self_CPU_s": 0.140625,
+          "success": true,
+          "role": "pinned"
+        },
+        {
+          "actual_pid": 29548,
+          "entry_wall_s": 0.45830250000290107,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29622272,
+          "self_CPU_s": 0.109375,
+          "success": true,
+          "role": "explicit"
+        },
+        {
+          "actual_pid": 33100,
+          "entry_wall_s": 0.3551039000012679,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29388800,
+          "self_CPU_s": 0.109375,
+          "success": true,
+          "role": "current"
+        },
+        {
+          "actual_pid": 25936,
+          "entry_wall_s": 0.2117869000067003,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 30355456,
+          "self_CPU_s": 0.125,
+          "success": true,
+          "role": "writer"
+        }
+      ],
+      "primary_source_return_B": 359106
+    },
+    {
+      "round": 2,
+      "size": 513,
+      "operations": 33,
+      "overlap_intervals": 6,
+      "corrupt_controls": 4,
+      "entry": {
+        "success": true,
+        "entry_wall_s": 1.7991023999929894,
+        "entry_self_CPU_s": 0.203125,
+        "peak_RSS_B": 30822400,
+        "fulltree_CPU_RSS": null
+      },
+      "parent": {
+        "observed_controller_launcher_exit_code": 0,
+        "controller_actual_pid": 5228,
+        "observed_controller_actual_exit_code": 0,
+        "launcher_pid": 42600,
+        "parent_wall_s": 1.8451315999991493,
+        "parent_self_CPU_s": 0.03125,
+        "retry": 0
+      },
+      "readers_and_writer": [
+        {
+          "actual_pid": 45100,
+          "entry_wall_s": 0.5998111999942921,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29650944,
+          "self_CPU_s": 0.140625,
+          "success": true,
+          "role": "pinned"
+        },
+        {
+          "actual_pid": 4440,
+          "entry_wall_s": 0.503968300006818,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29933568,
+          "self_CPU_s": 0.109375,
+          "success": true,
+          "role": "explicit"
+        },
+        {
+          "actual_pid": 41120,
+          "entry_wall_s": 0.4015962999983458,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29794304,
+          "self_CPU_s": 0.15625,
+          "success": true,
+          "role": "current"
+        },
+        {
+          "actual_pid": 26972,
+          "entry_wall_s": 0.25580790000094566,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 30973952,
+          "self_CPU_s": 0.140625,
+          "success": true,
+          "role": "writer"
+        }
+      ],
+      "primary_source_return_B": 1423554
+    },
+    {
+      "round": 3,
+      "size": 17,
+      "operations": 33,
+      "overlap_intervals": 6,
+      "corrupt_controls": 4,
+      "entry": {
+        "success": true,
+        "entry_wall_s": 1.7084991000010632,
+        "entry_self_CPU_s": 0.203125,
+        "peak_RSS_B": 30605312,
+        "fulltree_CPU_RSS": null
+      },
+      "parent": {
+        "observed_controller_launcher_exit_code": 0,
+        "controller_actual_pid": 37296,
+        "observed_controller_actual_exit_code": 0,
+        "launcher_pid": 42288,
+        "parent_wall_s": 1.7537386000039987,
+        "parent_self_CPU_s": 0.015625,
+        "retry": 0
+      },
+      "readers_and_writer": [
+        {
+          "actual_pid": 35648,
+          "entry_wall_s": 0.55800150000141,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29401088,
+          "self_CPU_s": 0.109375,
+          "success": true,
+          "role": "pinned"
+        },
+        {
+          "actual_pid": 38708,
+          "entry_wall_s": 0.44371870000031777,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29171712,
+          "self_CPU_s": 0.109375,
+          "success": true,
+          "role": "explicit"
+        },
+        {
+          "actual_pid": 28396,
+          "entry_wall_s": 0.3267327000066871,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29143040,
+          "self_CPU_s": 0.125,
+          "success": true,
+          "role": "current"
+        },
+        {
+          "actual_pid": 18396,
+          "entry_wall_s": 0.19572110001172405,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 30326784,
+          "self_CPU_s": 0.09375,
+          "success": true,
+          "role": "writer"
+        }
+      ],
+      "primary_source_return_B": 56859
+    },
+    {
+      "round": 3,
+      "size": 129,
+      "operations": 33,
+      "overlap_intervals": 6,
+      "corrupt_controls": 4,
+      "entry": {
+        "success": true,
+        "entry_wall_s": 1.6835887000052026,
+        "entry_self_CPU_s": 0.15625,
+        "peak_RSS_B": 30732288,
+        "fulltree_CPU_RSS": null
+      },
+      "parent": {
+        "observed_controller_launcher_exit_code": 0,
+        "controller_actual_pid": 33188,
+        "observed_controller_actual_exit_code": 0,
+        "launcher_pid": 38888,
+        "parent_wall_s": 1.7306956999964314,
+        "parent_self_CPU_s": 0.0,
+        "retry": 0
+      },
+      "readers_and_writer": [
+        {
+          "actual_pid": 40608,
+          "entry_wall_s": 0.5444964999915101,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29097984,
+          "self_CPU_s": 0.125,
+          "success": true,
+          "role": "pinned"
+        },
+        {
+          "actual_pid": 38348,
+          "entry_wall_s": 0.44296130001021083,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29315072,
+          "self_CPU_s": 0.109375,
+          "success": true,
+          "role": "explicit"
+        },
+        {
+          "actual_pid": 43956,
+          "entry_wall_s": 0.34471689999918453,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29409280,
+          "self_CPU_s": 0.109375,
+          "success": true,
+          "role": "current"
+        },
+        {
+          "actual_pid": 26176,
+          "entry_wall_s": 0.21243479999247938,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 30457856,
+          "self_CPU_s": 0.046875,
+          "success": true,
+          "role": "writer"
+        }
+      ],
+      "primary_source_return_B": 359106
+    },
+    {
+      "round": 3,
+      "size": 513,
+      "operations": 33,
+      "overlap_intervals": 6,
+      "corrupt_controls": 4,
+      "entry": {
+        "success": true,
+        "entry_wall_s": 1.7259021000063512,
+        "entry_self_CPU_s": 0.1875,
+        "peak_RSS_B": 30961664,
+        "fulltree_CPU_RSS": null
+      },
+      "parent": {
+        "observed_controller_launcher_exit_code": 0,
+        "controller_actual_pid": 37168,
+        "observed_controller_actual_exit_code": 0,
+        "launcher_pid": 15988,
+        "parent_wall_s": 1.7716671000089264,
+        "parent_self_CPU_s": 0.015625,
+        "retry": 0
+      },
+      "readers_and_writer": [
+        {
+          "actual_pid": 21040,
+          "entry_wall_s": 0.5798877999914112,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29818880,
+          "self_CPU_s": 0.171875,
+          "success": true,
+          "role": "pinned"
+        },
+        {
+          "actual_pid": 21172,
+          "entry_wall_s": 0.4783390000084182,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29749248,
+          "self_CPU_s": 0.140625,
+          "success": true,
+          "role": "explicit"
+        },
+        {
+          "actual_pid": 41860,
+          "entry_wall_s": 0.37566409999271855,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 29843456,
+          "self_CPU_s": 0.15625,
+          "success": true,
+          "role": "current"
+        },
+        {
+          "actual_pid": 12904,
+          "entry_wall_s": 0.2396450999949593,
+          "full_process_tree_CPU_RSS": null,
+          "peak_RSS_B": 30928896,
+          "self_CPU_s": 0.125,
+          "success": true,
+          "role": "writer"
+        }
+      ],
+      "primary_source_return_B": 1423554
+    }
+  ],
+  "independent_audits": [
+    {
+      "round": 1,
+      "size": 17,
+      "processes": 4,
+      "saved_operations_verified": 33,
+      "full_source_restores": 33,
+      "source_application_return_B": 56859,
+      "control_full_source_restores": 2,
+      "control_source_application_return_B": 3446,
+      "corruption_controls": [
+        "returned_literal_tamper_refused",
+        "existing_pin_reverifies_CAS",
+        "existing_pin_reverifies_manifest",
+        "existing_pin_independent_of_later_bad_HEAD_new_pin_refused"
+      ],
+      "overlap_intervals": [
+        {
+          "role": "pinned",
+          "revision": 1,
+          "selected_sid": "74a102902595bd2b4a31152ce501a89b1544b0ceff6b204712b84b5ca3c162ae",
+          "before_head_ns": 104341492998200,
+          "query_entered_ns": 104341505853500,
+          "after_head_ns": 104341520611200,
+          "query_finished_ns": 104341538409400
+        },
+        {
+          "role": "pinned",
+          "revision": 2,
+          "selected_sid": "74a102902595bd2b4a31152ce501a89b1544b0ceff6b204712b84b5ca3c162ae",
+          "before_head_ns": 104341590641100,
+          "query_entered_ns": 104341602960900,
+          "after_head_ns": 104341614664900,
+          "query_finished_ns": 104341628345700
+        },
+        {
+          "role": "explicit",
+          "revision": 1,
+          "selected_sid": "74a102902595bd2b4a31152ce501a89b1544b0ceff6b204712b84b5ca3c162ae",
+          "before_head_ns": 104341492998200,
+          "query_entered_ns": 104341501959400,
+          "after_head_ns": 104341520611200,
+          "query_finished_ns": 104341538847700
+        },
+        {
+          "role": "explicit",
+          "revision": 2,
+          "selected_sid": "74a102902595bd2b4a31152ce501a89b1544b0ceff6b204712b84b5ca3c162ae",
+          "before_head_ns": 104341590641100,
+          "query_entered_ns": 104341602882500,
+          "after_head_ns": 104341614664900,
+          "query_finished_ns": 104341628490700
+        },
+        {
+          "role": "current",
+          "revision": 1,
+          "selected_sid": "74a102902595bd2b4a31152ce501a89b1544b0ceff6b204712b84b5ca3c162ae",
+          "before_head_ns": 104341492998200,
+          "query_entered_ns": 104341506206900,
+          "after_head_ns": 104341520611200,
+          "query_finished_ns": 104341536897400
+        },
+        {
+          "role": "current",
+          "revision": 2,
+          "selected_sid": "6b86d3be10c1fbede4aef7d267d100559eab13662bda67a5479218e4847c602a",
+          "before_head_ns": 104341590641100,
+          "query_entered_ns": 104341600847600,
+          "after_head_ns": 104341614664900,
+          "query_finished_ns": 104341622720900
+        }
+      ],
+      "pinned_equals_unchanged_explicit_SID": true,
+      "originals_immutable": true,
+      "no_writer_replay": true,
+      "not_answer_or_semantic_quality": true
+    },
+    {
+      "round": 1,
+      "size": 129,
+      "processes": 4,
+      "saved_operations_verified": 33,
+      "full_source_restores": 33,
+      "source_application_return_B": 359106,
+      "control_full_source_restores": 2,
+      "control_source_application_return_B": 21764,
+      "corruption_controls": [
+        "returned_literal_tamper_refused",
+        "existing_pin_reverifies_CAS",
+        "existing_pin_reverifies_manifest",
+        "existing_pin_independent_of_later_bad_HEAD_new_pin_refused"
+      ],
+      "overlap_intervals": [
+        {
+          "role": "pinned",
+          "revision": 1,
+          "selected_sid": "29cf1ebea269612caa9651db14d488537ffefa93e7b8644e9ce77fe7930ff37c",
+          "before_head_ns": 104343291716400,
+          "query_entered_ns": 104343299559500,
+          "after_head_ns": 104343312008400,
+          "query_finished_ns": 104343326537000
+        },
+        {
+          "role": "pinned",
+          "revision": 2,
+          "selected_sid": "29cf1ebea269612caa9651db14d488537ffefa93e7b8644e9ce77fe7930ff37c",
+          "before_head_ns": 104343377944000,
+          "query_entered_ns": 104343386185900,
+          "after_head_ns": 104343397628900,
+          "query_finished_ns": 104343407543200
+        },
+        {
+          "role": "explicit",
+          "revision": 1,
+          "selected_sid": "29cf1ebea269612caa9651db14d488537ffefa93e7b8644e9ce77fe7930ff37c",
+          "before_head_ns": 104343291716400,
+          "query_entered_ns": 104343299671500,
+          "after_head_ns": 104343312008400,
+          "query_finished_ns": 104343327281800
+        },
+        {
+          "role": "explicit",
+          "revision": 2,
+          "selected_sid": "29cf1ebea269612caa9651db14d488537ffefa93e7b8644e9ce77fe7930ff37c",
+          "before_head_ns": 104343377944000,
+          "query_entered_ns": 104343387683400,
+          "after_head_ns": 104343397628900,
+          "query_finished_ns": 104343409573900
+        },
+        {
+          "role": "current",
+          "revision": 1,
+          "selected_sid": "29cf1ebea269612caa9651db14d488537ffefa93e7b8644e9ce77fe7930ff37c",
+          "before_head_ns": 104343291716400,
+          "query_entered_ns": 104343299779200,
+          "after_head_ns": 104343312008400,
+          "query_finished_ns": 104343327902800
+        },
+        {
+          "role": "current",
+          "revision": 2,
+          "selected_sid": "1a5bc8ebab2a69e2b285a6721455df4652deaf5967c3328f0b0a896006d790f2",
+          "before_head_ns": 104343377944000,
+          "query_entered_ns": 104343387172600,
+          "after_head_ns": 104343397628900,
+          "query_finished_ns": 104343408862800
+        }
+      ],
+      "pinned_equals_unchanged_explicit_SID": true,
+      "originals_immutable": true,
+      "no_writer_replay": true,
+      "not_answer_or_semantic_quality": true
+    },
+    {
+      "round": 1,
+      "size": 513,
+      "processes": 4,
+      "saved_operations_verified": 33,
+      "full_source_restores": 33,
+      "source_application_return_B": 1423554,
+      "control_full_source_restores": 2,
+      "control_source_application_return_B": 86276,
+      "corruption_controls": [
+        "returned_literal_tamper_refused",
+        "existing_pin_reverifies_CAS",
+        "existing_pin_reverifies_manifest",
+        "existing_pin_independent_of_later_bad_HEAD_new_pin_refused"
+      ],
+      "overlap_intervals": [
+        {
+          "role": "pinned",
+          "revision": 1,
+          "selected_sid": "4492220f1a0ccff695b3ff2d1c8e06d0826dbdf6fbf8c3b507594b7a067e1e2b",
+          "before_head_ns": 104345129775700,
+          "query_entered_ns": 104345136752200,
+          "after_head_ns": 104345149183400,
+          "query_finished_ns": 104345161999200
+        },
+        {
+          "role": "pinned",
+          "revision": 2,
+          "selected_sid": "4492220f1a0ccff695b3ff2d1c8e06d0826dbdf6fbf8c3b507594b7a067e1e2b",
+          "before_head_ns": 104345232966300,
+          "query_entered_ns": 104345241061500,
+          "after_head_ns": 104345258274200,
+          "query_finished_ns": 104345271085900
+        },
+        {
+          "role": "explicit",
+          "revision": 1,
+          "selected_sid": "4492220f1a0ccff695b3ff2d1c8e06d0826dbdf6fbf8c3b507594b7a067e1e2b",
+          "before_head_ns": 104345129775700,
+          "query_entered_ns": 104345138300400,
+          "after_head_ns": 104345149183400,
+          "query_finished_ns": 104345162363300
+        },
+        {
+          "role": "explicit",
+          "revision": 2,
+          "selected_sid": "4492220f1a0ccff695b3ff2d1c8e06d0826dbdf6fbf8c3b507594b7a067e1e2b",
+          "before_head_ns": 104345232966300,
+          "query_entered_ns": 104345241607900,
+          "after_head_ns": 104345258274200,
+          "query_finished_ns": 104345271382000
+        },
+        {
+          "role": "current",
+          "revision": 1,
+          "selected_sid": "4492220f1a0ccff695b3ff2d1c8e06d0826dbdf6fbf8c3b507594b7a067e1e2b",
+          "before_head_ns": 104345129775700,
+          "query_entered_ns": 104345134852900,
+          "after_head_ns": 104345149183400,
+          "query_finished_ns": 104345163285200
+        },
+        {
+          "role": "current",
+          "revision": 2,
+          "selected_sid": "318a8c97e2baaaa9f336ac2d14c3f8b1fc48e5a523614b98f7a484b66bab649b",
+          "before_head_ns": 104345232966300,
+          "query_entered_ns": 104345242497200,
+          "after_head_ns": 104345258274200,
+          "query_finished_ns": 104345272018900
+        }
+      ],
+      "pinned_equals_unchanged_explicit_SID": true,
+      "originals_immutable": true,
+      "no_writer_replay": true,
+      "not_answer_or_semantic_quality": true
+    },
+    {
+      "round": 2,
+      "size": 17,
+      "processes": 4,
+      "saved_operations_verified": 33,
+      "full_source_restores": 33,
+      "source_application_return_B": 56859,
+      "control_full_source_restores": 2,
+      "control_source_application_return_B": 3446,
+      "corruption_controls": [
+        "returned_literal_tamper_refused",
+        "existing_pin_reverifies_CAS",
+        "existing_pin_reverifies_manifest",
+        "existing_pin_independent_of_later_bad_HEAD_new_pin_refused"
+      ],
+      "overlap_intervals": [
+        {
+          "role": "pinned",
+          "revision": 1,
+          "selected_sid": "74a102902595bd2b4a31152ce501a89b1544b0ceff6b204712b84b5ca3c162ae",
+          "before_head_ns": 104346880132200,
+          "query_entered_ns": 104346888236000,
+          "after_head_ns": 104346899120600,
+          "query_finished_ns": 104346909050000
+        },
+        {
+          "role": "pinned",
+          "revision": 2,
+          "selected_sid": "74a102902595bd2b4a31152ce501a89b1544b0ceff6b204712b84b5ca3c162ae",
+          "before_head_ns": 104346949061700,
+          "query_entered_ns": 104346961236600,
+          "after_head_ns": 104346974362100,
+          "query_finished_ns": 104346987104400
+        },
+        {
+          "role": "explicit",
+          "revision": 1,
+          "selected_sid": "74a102902595bd2b4a31152ce501a89b1544b0ceff6b204712b84b5ca3c162ae",
+          "before_head_ns": 104346880132200,
+          "query_entered_ns": 104346888144200,
+          "after_head_ns": 104346899120600,
+          "query_finished_ns": 104346909121000
+        },
+        {
+          "role": "explicit",
+          "revision": 2,
+          "selected_sid": "74a102902595bd2b4a31152ce501a89b1544b0ceff6b204712b84b5ca3c162ae",
+          "before_head_ns": 104346949061700,
+          "query_entered_ns": 104346960279600,
+          "after_head_ns": 104346974362100,
+          "query_finished_ns": 104346985676000
+        },
+        {
+          "role": "current",
+          "revision": 1,
+          "selected_sid": "74a102902595bd2b4a31152ce501a89b1544b0ceff6b204712b84b5ca3c162ae",
+          "before_head_ns": 104346880132200,
+          "query_entered_ns": 104346886152500,
+          "after_head_ns": 104346899120600,
+          "query_finished_ns": 104346913130300
+        },
+        {
+          "role": "current",
+          "revision": 2,
+          "selected_sid": "6b86d3be10c1fbede4aef7d267d100559eab13662bda67a5479218e4847c602a",
+          "before_head_ns": 104346949061700,
+          "query_entered_ns": 104346958925600,
+          "after_head_ns": 104346974362100,
+          "query_finished_ns": 104346990287500
+        }
+      ],
+      "pinned_equals_unchanged_explicit_SID": true,
+      "originals_immutable": true,
+      "no_writer_replay": true,
+      "not_answer_or_semantic_quality": true
+    },
+    {
+      "round": 2,
+      "size": 129,
+      "processes": 4,
+      "saved_operations_verified": 33,
+      "full_source_restores": 33,
+      "source_application_return_B": 359106,
+      "control_full_source_restores": 2,
+      "control_source_application_return_B": 21764,
+      "corruption_controls": [
+        "returned_literal_tamper_refused",
+        "existing_pin_reverifies_CAS",
+        "existing_pin_reverifies_manifest",
+        "existing_pin_independent_of_later_bad_HEAD_new_pin_refused"
+      ],
+      "overlap_intervals": [
+        {
+          "role": "pinned",
+          "revision": 1,
+          "selected_sid": "29cf1ebea269612caa9651db14d488537ffefa93e7b8644e9ce77fe7930ff37c",
+          "before_head_ns": 104348771928300,
+          "query_entered_ns": 104348778157400,
+          "after_head_ns": 104348796211700,
+          "query_finished_ns": 104348811522800
+        },
+        {
+          "role": "pinned",
+          "revision": 2,
+          "selected_sid": "29cf1ebea269612caa9651db14d488537ffefa93e7b8644e9ce77fe7930ff37c",
+          "before_head_ns": 104348857805900,
+          "query_entered_ns": 104348867524400,
+          "after_head_ns": 104348876581700,
+          "query_finished_ns": 104348889807800
+        },
+        {
+          "role": "explicit",
+          "revision": 1,
+          "selected_sid": "29cf1ebea269612caa9651db14d488537ffefa93e7b8644e9ce77fe7930ff37c",
+          "before_head_ns": 104348771928300,
+          "query_entered_ns": 104348780951400,
+          "after_head_ns": 104348796211700,
+          "query_finished_ns": 104348807667600
+        },
+        {
+          "role": "explicit",
+          "revision": 2,
+          "selected_sid": "29cf1ebea269612caa9651db14d488537ffefa93e7b8644e9ce77fe7930ff37c",
+          "before_head_ns": 104348857805900,
+          "query_entered_ns": 104348868408300,
+          "after_head_ns": 104348876581700,
+          "query_finished_ns": 104348885687100
+        },
+        {
+          "role": "current",
+          "revision": 1,
+          "selected_sid": "29cf1ebea269612caa9651db14d488537ffefa93e7b8644e9ce77fe7930ff37c",
+          "before_head_ns": 104348771928300,
+          "query_entered_ns": 104348778354100,
+          "after_head_ns": 104348796211700,
+          "query_finished_ns": 104348811407400
+        },
+        {
+          "role": "current",
+          "revision": 2,
+          "selected_sid": "1a5bc8ebab2a69e2b285a6721455df4652deaf5967c3328f0b0a896006d790f2",
+          "before_head_ns": 104348857805900,
+          "query_entered_ns": 104348867712100,
+          "after_head_ns": 104348876581700,
+          "query_finished_ns": 104348890017300
+        }
+      ],
+      "pinned_equals_unchanged_explicit_SID": true,
+      "originals_immutable": true,
+      "no_writer_replay": true,
+      "not_answer_or_semantic_quality": true
+    },
+    {
+      "round": 2,
+      "size": 513,
+      "processes": 4,
+      "saved_operations_verified": 33,
+      "full_source_restores": 33,
+      "source_application_return_B": 1423554,
+      "control_full_source_restores": 2,
+      "control_source_application_return_B": 86276,
+      "corruption_controls": [
+        "returned_literal_tamper_refused",
+        "existing_pin_reverifies_CAS",
+        "existing_pin_reverifies_manifest",
+        "existing_pin_independent_of_later_bad_HEAD_new_pin_refused"
+      ],
+      "overlap_intervals": [
+        {
+          "role": "pinned",
+          "revision": 1,
+          "selected_sid": "4492220f1a0ccff695b3ff2d1c8e06d0826dbdf6fbf8c3b507594b7a067e1e2b",
+          "before_head_ns": 104350585173700,
+          "query_entered_ns": 104350590163100,
+          "after_head_ns": 104350604488900,
+          "query_finished_ns": 104350615607100
+        },
+        {
+          "role": "pinned",
+          "revision": 2,
+          "selected_sid": "4492220f1a0ccff695b3ff2d1c8e06d0826dbdf6fbf8c3b507594b7a067e1e2b",
+          "before_head_ns": 104350693522000,
+          "query_entered_ns": 104350701585000,
+          "after_head_ns": 104350712849100,
+          "query_finished_ns": 104350726016400
+        },
+        {
+          "role": "explicit",
+          "revision": 1,
+          "selected_sid": "4492220f1a0ccff695b3ff2d1c8e06d0826dbdf6fbf8c3b507594b7a067e1e2b",
+          "before_head_ns": 104350585173700,
+          "query_entered_ns": 104350592622000,
+          "after_head_ns": 104350604488900,
+          "query_finished_ns": 104350616957600
+        },
+        {
+          "role": "explicit",
+          "revision": 2,
+          "selected_sid": "4492220f1a0ccff695b3ff2d1c8e06d0826dbdf6fbf8c3b507594b7a067e1e2b",
+          "before_head_ns": 104350693522000,
+          "query_entered_ns": 104350701675800,
+          "after_head_ns": 104350712849100,
+          "query_finished_ns": 104350726192100
+        },
+        {
+          "role": "current",
+          "revision": 1,
+          "selected_sid": "4492220f1a0ccff695b3ff2d1c8e06d0826dbdf6fbf8c3b507594b7a067e1e2b",
+          "before_head_ns": 104350585173700,
+          "query_entered_ns": 104350593698900,
+          "after_head_ns": 104350604488900,
+          "query_finished_ns": 104350618548400
+        },
+        {
+          "role": "current",
+          "revision": 2,
+          "selected_sid": "318a8c97e2baaaa9f336ac2d14c3f8b1fc48e5a523614b98f7a484b66bab649b",
+          "before_head_ns": 104350693522000,
+          "query_entered_ns": 104350699008900,
+          "after_head_ns": 104350712849100,
+          "query_finished_ns": 104350728597900
+        }
+      ],
+      "pinned_equals_unchanged_explicit_SID": true,
+      "originals_immutable": true,
+      "no_writer_replay": true,
+      "not_answer_or_semantic_quality": true
+    },
+    {
+      "round": 3,
+      "size": 17,
+      "processes": 4,
+      "saved_operations_verified": 33,
+      "full_source_restores": 33,
+      "source_application_return_B": 56859,
+      "control_full_source_restores": 2,
+      "control_source_application_return_B": 3446,
+      "corruption_controls": [
+        "returned_literal_tamper_refused",
+        "existing_pin_reverifies_CAS",
+        "existing_pin_reverifies_manifest",
+        "existing_pin_independent_of_later_bad_HEAD_new_pin_refused"
+      ],
+      "overlap_intervals": [
+        {
+          "role": "pinned",
+          "revision": 1,
+          "selected_sid": "74a102902595bd2b4a31152ce501a89b1544b0ceff6b204712b84b5ca3c162ae",
+          "before_head_ns": 104352384815100,
+          "query_entered_ns": 104352394062800,
+          "after_head_ns": 104352404056000,
+          "query_finished_ns": 104352413393900
+        },
+        {
+          "role": "pinned",
+          "revision": 2,
+          "selected_sid": "74a102902595bd2b4a31152ce501a89b1544b0ceff6b204712b84b5ca3c162ae",
+          "before_head_ns": 104352459507300,
+          "query_entered_ns": 104352470465400,
+          "after_head_ns": 104352484303100,
+          "query_finished_ns": 104352493503500
+        },
+        {
+          "role": "explicit",
+          "revision": 1,
+          "selected_sid": "74a102902595bd2b4a31152ce501a89b1544b0ceff6b204712b84b5ca3c162ae",
+          "before_head_ns": 104352384815100,
+          "query_entered_ns": 104352390581400,
+          "after_head_ns": 104352404056000,
+          "query_finished_ns": 104352417525400
+        },
+        {
+          "role": "explicit",
+          "revision": 2,
+          "selected_sid": "74a102902595bd2b4a31152ce501a89b1544b0ceff6b204712b84b5ca3c162ae",
+          "before_head_ns": 104352459507300,
+          "query_entered_ns": 104352470217900,
+          "after_head_ns": 104352484303100,
+          "query_finished_ns": 104352493276600
+        },
+        {
+          "role": "current",
+          "revision": 1,
+          "selected_sid": "74a102902595bd2b4a31152ce501a89b1544b0ceff6b204712b84b5ca3c162ae",
+          "before_head_ns": 104352384815100,
+          "query_entered_ns": 104352390722900,
+          "after_head_ns": 104352404056000,
+          "query_finished_ns": 104352417818600
+        },
+        {
+          "role": "current",
+          "revision": 2,
+          "selected_sid": "6b86d3be10c1fbede4aef7d267d100559eab13662bda67a5479218e4847c602a",
+          "before_head_ns": 104352459507300,
+          "query_entered_ns": 104352470341200,
+          "after_head_ns": 104352484303100,
+          "query_finished_ns": 104352493264800
+        }
+      ],
+      "pinned_equals_unchanged_explicit_SID": true,
+      "originals_immutable": true,
+      "no_writer_replay": true,
+      "not_answer_or_semantic_quality": true
+    },
+    {
+      "round": 3,
+      "size": 129,
+      "processes": 4,
+      "saved_operations_verified": 33,
+      "full_source_restores": 33,
+      "source_application_return_B": 359106,
+      "control_full_source_restores": 2,
+      "control_source_application_return_B": 21764,
+      "corruption_controls": [
+        "returned_literal_tamper_refused",
+        "existing_pin_reverifies_CAS",
+        "existing_pin_reverifies_manifest",
+        "existing_pin_independent_of_later_bad_HEAD_new_pin_refused"
+      ],
+      "overlap_intervals": [
+        {
+          "role": "pinned",
+          "revision": 1,
+          "selected_sid": "29cf1ebea269612caa9651db14d488537ffefa93e7b8644e9ce77fe7930ff37c",
+          "before_head_ns": 104354103172600,
+          "query_entered_ns": 104354112315700,
+          "after_head_ns": 104354127705200,
+          "query_finished_ns": 104354140422100
+        },
+        {
+          "role": "pinned",
+          "revision": 2,
+          "selected_sid": "29cf1ebea269612caa9651db14d488537ffefa93e7b8644e9ce77fe7930ff37c",
+          "before_head_ns": 104354188500400,
+          "query_entered_ns": 104354200427900,
+          "after_head_ns": 104354213075400,
+          "query_finished_ns": 104354227734600
+        },
+        {
+          "role": "explicit",
+          "revision": 1,
+          "selected_sid": "29cf1ebea269612caa9651db14d488537ffefa93e7b8644e9ce77fe7930ff37c",
+          "before_head_ns": 104354103172600,
+          "query_entered_ns": 104354112335800,
+          "after_head_ns": 104354127705200,
+          "query_finished_ns": 104354140278600
+        },
+        {
+          "role": "explicit",
+          "revision": 2,
+          "selected_sid": "29cf1ebea269612caa9651db14d488537ffefa93e7b8644e9ce77fe7930ff37c",
+          "before_head_ns": 104354188500400,
+          "query_entered_ns": 104354200327900,
+          "after_head_ns": 104354213075400,
+          "query_finished_ns": 104354227298400
+        },
+        {
+          "role": "current",
+          "revision": 1,
+          "selected_sid": "29cf1ebea269612caa9651db14d488537ffefa93e7b8644e9ce77fe7930ff37c",
+          "before_head_ns": 104354103172600,
+          "query_entered_ns": 104354111715300,
+          "after_head_ns": 104354127705200,
+          "query_finished_ns": 104354137744600
+        },
+        {
+          "role": "current",
+          "revision": 2,
+          "selected_sid": "1a5bc8ebab2a69e2b285a6721455df4652deaf5967c3328f0b0a896006d790f2",
+          "before_head_ns": 104354188500400,
+          "query_entered_ns": 104354196954900,
+          "after_head_ns": 104354213075400,
+          "query_finished_ns": 104354229161300
+        }
+      ],
+      "pinned_equals_unchanged_explicit_SID": true,
+      "originals_immutable": true,
+      "no_writer_replay": true,
+      "not_answer_or_semantic_quality": true
+    },
+    {
+      "round": 3,
+      "size": 513,
+      "processes": 4,
+      "saved_operations_verified": 33,
+      "full_source_restores": 33,
+      "source_application_return_B": 1423554,
+      "control_full_source_restores": 2,
+      "control_source_application_return_B": 86276,
+      "corruption_controls": [
+        "returned_literal_tamper_refused",
+        "existing_pin_reverifies_CAS",
+        "existing_pin_reverifies_manifest",
+        "existing_pin_independent_of_later_bad_HEAD_new_pin_refused"
+      ],
+      "overlap_intervals": [
+        {
+          "role": "pinned",
+          "revision": 1,
+          "selected_sid": "4492220f1a0ccff695b3ff2d1c8e06d0826dbdf6fbf8c3b507594b7a067e1e2b",
+          "before_head_ns": 104355850200000,
+          "query_entered_ns": 104355858616700,
+          "after_head_ns": 104355869869200,
+          "query_finished_ns": 104355883396800
+        },
+        {
+          "role": "pinned",
+          "revision": 2,
+          "selected_sid": "4492220f1a0ccff695b3ff2d1c8e06d0826dbdf6fbf8c3b507594b7a067e1e2b",
+          "before_head_ns": 104355957681800,
+          "query_entered_ns": 104355968346700,
+          "after_head_ns": 104355976522200,
+          "query_finished_ns": 104355986858900
+        },
+        {
+          "role": "explicit",
+          "revision": 1,
+          "selected_sid": "4492220f1a0ccff695b3ff2d1c8e06d0826dbdf6fbf8c3b507594b7a067e1e2b",
+          "before_head_ns": 104355850200000,
+          "query_entered_ns": 104355855089300,
+          "after_head_ns": 104355869869200,
+          "query_finished_ns": 104355884271200
+        },
+        {
+          "role": "explicit",
+          "revision": 2,
+          "selected_sid": "4492220f1a0ccff695b3ff2d1c8e06d0826dbdf6fbf8c3b507594b7a067e1e2b",
+          "before_head_ns": 104355957681800,
+          "query_entered_ns": 104355968387700,
+          "after_head_ns": 104355976522200,
+          "query_finished_ns": 104355987829400
+        },
+        {
+          "role": "current",
+          "revision": 1,
+          "selected_sid": "4492220f1a0ccff695b3ff2d1c8e06d0826dbdf6fbf8c3b507594b7a067e1e2b",
+          "before_head_ns": 104355850200000,
+          "query_entered_ns": 104355859250200,
+          "after_head_ns": 104355869869200,
+          "query_finished_ns": 104355883395800
+        },
+        {
+          "role": "current",
+          "revision": 2,
+          "selected_sid": "318a8c97e2baaaa9f336ac2d14c3f8b1fc48e5a523614b98f7a484b66bab649b",
+          "before_head_ns": 104355957681800,
+          "query_entered_ns": 104355968393900,
+          "after_head_ns": 104355976522200,
+          "query_finished_ns": 104355987657200
+        }
+      ],
+      "pinned_equals_unchanged_explicit_SID": true,
+      "originals_immutable": true,
+      "no_writer_replay": true,
+      "not_answer_or_semantic_quality": true
+    }
+  ],
+  "plan": {
+    "success": true,
+    "planned_controllers": 9,
+    "completed_controllers": 9,
+    "planned_processes": 36,
+    "planned_operations": 297,
+    "planned_corruption_controls": 36,
+    "full_wall_s": 17.172203599999193,
+    "self_CPU_s": 0.203125,
+    "fulltree_CPU_RSS": null
+  },
+  "fulltree_CPU_RSS": null
+}
