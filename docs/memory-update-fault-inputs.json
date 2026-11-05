@@ -246,8 +246,8 @@
       "sha256": "ca170f7f7d08e9213e202f568ed8fc95a03f560801af2a069e1fd0808144c98a"
     },
     "docs/MEMORY-UPDATE-FAULTS.md": {
-      "bytes": 7219,
-      "sha256": "9e3b4ecf58457c6c91088b61613a0f268b24d981e9cc17283f1a52e2ba5b6c1d"
+      "bytes": 7747,
+      "sha256": "dfcbcb545995545559b01c158daa1cd1002b1dff531641191c48e5de00b2701a"
     },
     "docs/MEMORY-UPDATES.md": {
       "bytes": 5033,
@@ -2118,8 +2118,8 @@
       "sha256": "8c4656877020e9de1a2c458d5524317c4cb72770c9830ed13cf08da4e24be736"
     },
     "scripts/run_memory_fault_worker.py": {
-      "bytes": 3054,
-      "sha256": "75efe93a58de3655cecc235e411d13483b07066b3a84b01521e2b2b6ac65ba34"
+      "bytes": 3144,
+      "sha256": "409ae5e4d51ee9114a228588e864cff02e7577f39a05bab2d836d0f10cee98ef"
     },
     "scripts/run_memory_history.py": {
       "bytes": 13573,
@@ -3098,6 +3098,14 @@
     ".tools/push_source_v097_api.py": {
       "bytes": 4844,
       "sha256": "39c4ba05ed82df81ef58ef3f42f774c44fe26cf6c675a6da8d0828b782e3da0f"
+    },
+    ".tools/v097-draft/freeze_atomic.py": {
+      "bytes": 3136,
+      "sha256": "8082a4ee9845b187cd429c2893673934f6965e77adf5eb177fe362c49cb9fc11"
+    },
+    ".tools/push_source_v097_atomic_marker_api.py": {
+      "bytes": 4594,
+      "sha256": "ba815a24cae180d13223af118753a282f72e5e70e5ebf30e5497f768d76aa682"
     }
   },
   "approved_preexisting_checkout_CRLF_vs_Git": [
@@ -3108,5 +3116,11 @@
     "docs/releases/v0.86.0.md"
   ],
   "self_identity_bound_by_exact_source_commit": true,
-  "old_scientific_source_model_question_gold_or_provider_reads": 0
+  "old_scientific_source_model_question_gold_or_provider_reads": 0,
+  "preformal_atomic_marker_revision": {
+    "previous_source_commit": "1672f8b3f2c5015814c5b201d9900401939132ea",
+    "no_formal_output_or_finalfreeze_before_correction": true,
+    "same_fixtures_sizes_queries_boundaries_budget": true,
+    "fresh_full624_after_functional_signal_publication_fix": true
+  }
 }

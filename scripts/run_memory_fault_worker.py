@@ -16,16 +16,20 @@ def wait(path):
  while not path.exists():
   if time.monotonic()>end:raise TimeoutError('Owned barrier timeout')
   time.sleep(.005)
+def marker(name,value):
+ temporary=root/('.'+name+'.tmp')
+ exclusive(temporary,encoded(value))
+ temporary.rename(root/name)
 def stop(phase,**extra):
  if point==phase:
-  exclusive(root/'FAULT_READY',encoded({'phase':phase,'producer_pid':os.getpid(),**extra}))
+  marker('FAULT_READY',{'phase':phase,'producer_pid':os.getpid(),**extra})
   while True:time.sleep(.01)
 memory=None;old_publish=old_head=old_build=None;ok=False
 try:
  (root/'source').mkdir();(root/'source'/'corpus.jsonl').write_bytes(source(n,0))
  memory=Memory.create(root/'memory',compression='zlib',chunk_size=4096)
  oldsid=memory.add(root/'source',label='owned-old')['snapshot_id']
- exclusive(root/'BASELINE_READY',encoded({'old_sid':oldsid,'producer_pid':os.getpid()}));wait(root/'GO_UPDATE')
+ marker('BASELINE_READY',{'old_sid':oldsid,'producer_pid':os.getpid()});wait(root/'GO_UPDATE')
  append(root/'receipts',anchor,'update','reserved');append(root/'receipts',anchor,'update','started')
  (root/'source'/'corpus.jsonl').write_bytes(source(n,1))
  old_publish=memory.store._publish;old_head=memory_module._head;old_build=index_module.build
