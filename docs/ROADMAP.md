@@ -695,3 +695,7 @@ tag6031226242b8626b77f2ecc72339451d9291aff1、ReleaseCI41995862520、finalproof4
 ### v0.99协作写入固定实验完成，发行待核验
 
 sourceb618fa0c7250f67ba1b6fbf6a55e406281c8985f/exactCI42017602297；632检查631pass1权限skip。54writer/18实际终止/162source查询/54实际竞争拒绝/81坏副本/54closed拒绝、原文/oldSID/真实PID退出与不可变文件独立审计通过。18中断A不当完成/未执行/可重试，B为独立新意图。图已实际看；原始parent/entry/finally/root/analysis/全部source/坏副本/库源码与旧费用保留。原Memory.add可绕过，非一般多writer/NLI/问答/真人长期会话保证。local/实际资产/外安装/proof8尚待。
+
+### v0.99完整软件交付确认
+
+tag526107c8bb8f1a57d7735afe157f5f93417ec8da、ReleaseCI42018737545、finalproof754f0e8aeb56c1b2dcacc37fa0d83de60d47b4c9765f36690f9327b09ae20d01。实际7资产SHA/全部70Python+HTML与tag源码/当前结果范围/仓库外实际wheel-currentnative与new6writer2实际终止18原文查询9source控制+全部旧actualsdist/proof8通过。实际CI源码1994473B SHA87a01ef1f790acd32924511bdefbb13b0c81a8a263391da6cd19d7379b57fac2；原固定9controller/54writer/18实际终止/162查询/81坏副本控制、独立审计与完整时钟/门槛不改；锁释放不等于A操作完成，B为冻结独立新意图且不重放A，不称掉电/并发/推理收益。v095原轮封存，缺失槽执行和成本unknownnull，不补跑。owned记录与外部凭据机械验证不代表真人长期会话/NLI/回答或无限上下文，全部负结果及历史成本保持。

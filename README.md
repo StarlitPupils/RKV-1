@@ -6,13 +6,13 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
-## 当前研究：v0.99 · 协作写入作用域与进程退出（发行待核验）
+## 当前版本：v0.99 · 协作写入作用域与进程退出
 
 新增opt-in `Memory.writer()`，使用非阻塞OS句柄约束协作写入者；原Memory.add仍可绕过，默认不改。固定9controller/54写入进程/18实际终止/162原文查询/54竞争拒绝/81坏副本与54关闭调用拒绝，独立原JSONL/完整Store/oldSID/pin/PID实际退出/库immutability核验通过。锁释放不等于A操作完成，18个中断A不重试，B为冻结独立新意图。H1/H2/H3/joint仅本轮协作机械合同，不称通用多写者/掉电/NLI/回答或人类长期对话收益。
 
 ![锁释放与写入完成、完整控制成本](results/v0.99.0/memory-writer-scopes.png)
 
-632检查631pass/1权限skip；[完整报告](results/v0.99.0/SUMMARY.md) · [协议](docs/MEMORY-WRITER-SCOPES.md)。图已实际看。完整local/实际发行资产/外安装/proof8尚待。0新模型/提供方HEAD/原科学输入，最新完整软件交付仍为v0.98。
+632检查631pass/1权限skip；[完整报告](results/v0.99.0/SUMMARY.md) · [协议](docs/MEMORY-WRITER-SCOPES.md)。图已实际看。[Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.99.0)的完整local、实际7资产SHA/全部70Python+HTML与tag源码、仓库外实际wheel-currentnative/new6writer2实际终止18原文查询9source控制+全部旧actualsdist、第8proof实际重下载均通过。软件交付不代表真实人类长期对话或科学回答能力验收。0新模型/提供方HEAD/原科学输入，当前完整软件交付为v0.99。
 
 ## 当前版本：v0.98 · 固定来源读取视图与真实读写交错
 
