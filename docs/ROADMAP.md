@@ -691,3 +691,7 @@ tag6031226242b8626b77f2ecc72339451d9291aff1、ReleaseCI41995862520、finalproof4
 ## v0.99候选：协作写入作用域与进程退出
 
 新增显式Memory.writer()非阻塞OSscope；默认add仍可绕过，限协作参与者。固定3边界×3规模×3轮=27case/54写入进程/18实际终止/162原文查询/81坏副本，先freeze/exactCI再运行，A中断不重放、B为冻结不同意图。全费用与未知边界保留；非掉电/NLI/回答/长期人类对话。
+
+### v0.99协作写入固定实验完成，发行待核验
+
+sourceb618fa0c7250f67ba1b6fbf6a55e406281c8985f/exactCI42017602297；632检查631pass1权限skip。54writer/18实际终止/162source查询/54实际竞争拒绝/81坏副本/54closed拒绝、原文/oldSID/真实PID退出与不可变文件独立审计通过。18中断A不当完成/未执行/可重试，B为独立新意图。图已实际看；原始parent/entry/finally/root/analysis/全部source/坏副本/库源码与旧费用保留。原Memory.add可绕过，非一般多writer/NLI/问答/真人长期会话保证。local/实际资产/外安装/proof8尚待。

@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "planned_controllers": 9,
+  "completed_controllers": 9,
+  "planned_processes": 54,
+  "planned_operations": 162,
+  "planned_corruption_controls": 81,
+  "full_wall_s": 25.117794299992966,
+  "self_CPU_s": 0.109375,
+  "fulltree_CPU_RSS": null
+}

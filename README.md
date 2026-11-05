@@ -8,7 +8,11 @@
 
 ## 当前研究：v0.99 · 协作写入作用域与进程退出（发行待核验）
 
-新增opt-in Memory.writer()以OS持有的非阻塞句柄约束协作写入者，原Memory.add可绕过、默认不改。tiny准备已实际验证竞争拒绝、HEAD前/后终止释放、不同B新意图写入及oldSID/pin原文，尚无正式结果。正式9controller/54producer/162查询/81坏副本控制先全回归及source/protocol/input冻结/exactCI后唯一执行；锁释放不代表A写入完成，不自动重试或回滚，不称一般多写者、科学回答或长期对话收益。
+新增opt-in `Memory.writer()`，使用非阻塞OS句柄约束协作写入者；原Memory.add仍可绕过，默认不改。固定9controller/54写入进程/18实际终止/162原文查询/54竞争拒绝/81坏副本与54关闭调用拒绝，独立原JSONL/完整Store/oldSID/pin/PID实际退出/库immutability核验通过。锁释放不等于A操作完成，18个中断A不重试，B为冻结独立新意图。H1/H2/H3/joint仅本轮协作机械合同，不称通用多写者/掉电/NLI/回答或人类长期对话收益。
+
+![锁释放与写入完成、完整控制成本](results/v0.99.0/memory-writer-scopes.png)
+
+632检查631pass/1权限skip；[完整报告](results/v0.99.0/SUMMARY.md) · [协议](docs/MEMORY-WRITER-SCOPES.md)。图已实际看。完整local/实际发行资产/外安装/proof8尚待。0新模型/提供方HEAD/原科学输入，最新完整软件交付仍为v0.98。
 
 ## 当前版本：v0.98 · 固定来源读取视图与真实读写交错
 

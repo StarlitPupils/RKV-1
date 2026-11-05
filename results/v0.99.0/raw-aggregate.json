@@ -1,0 +1,1755 @@
+{
+  "controllers": [
+    {
+      "round": 1,
+      "size": 17,
+      "cases": [
+        {
+          "A_call_completed": false,
+          "A_known_sid": "255476e920f6e11fb6f42a9f9de5301ff39fd2410c8592949843f62be4c886b3",
+          "A_scope_release_reason": "observed OS process exit",
+          "A_visible_epoch_while_held": 0,
+          "B_distinct_source_sid": "597c11dfba548278599f092fd699462e7a74ecb4247dd9addd75a1f74dde8ece",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "01040966f64bd0bc2d25ee2b6c9502cd6742c9c6803480df1e9a38f9c394829d",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 77,
+              "launcher_pid": 46676,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114442700901700,
+              "parent_self_CPU_s": 0.03125,
+              "parent_wall_s": 0.22640170001250226,
+              "producer_observed_exit": 77,
+              "producer_pid": 35200
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 32808,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114442760042800,
+              "parent_self_CPU_s": 0.046875,
+              "parent_wall_s": 0.17061970000213478,
+              "producer_observed_exit": 0,
+              "producer_pid": 30744
+            }
+          },
+          "phase": "before_HEAD",
+          "primary_source_return_B": 9462,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        },
+        {
+          "A_call_completed": false,
+          "A_known_sid": "255476e920f6e11fb6f42a9f9de5301ff39fd2410c8592949843f62be4c886b3",
+          "A_scope_release_reason": "observed OS process exit",
+          "A_visible_epoch_while_held": 1,
+          "B_distinct_source_sid": "597c11dfba548278599f092fd699462e7a74ecb4247dd9addd75a1f74dde8ece",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "01040966f64bd0bc2d25ee2b6c9502cd6742c9c6803480df1e9a38f9c394829d",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 77,
+              "launcher_pid": 45228,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114443026106000,
+              "parent_self_CPU_s": 0.0625,
+              "parent_wall_s": 0.2300556999980472,
+              "producer_observed_exit": 77,
+              "producer_pid": 46112
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 39912,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114443087580100,
+              "parent_self_CPU_s": 0.03125,
+              "parent_wall_s": 0.17833629999950062,
+              "producer_observed_exit": 0,
+              "producer_pid": 37336
+            }
+          },
+          "phase": "after_HEAD",
+          "primary_source_return_B": 9462,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        },
+        {
+          "A_call_completed": true,
+          "A_known_sid": "255476e920f6e11fb6f42a9f9de5301ff39fd2410c8592949843f62be4c886b3",
+          "A_scope_release_reason": "clean close",
+          "A_visible_epoch_while_held": 1,
+          "B_distinct_source_sid": "597c11dfba548278599f092fd699462e7a74ecb4247dd9addd75a1f74dde8ece",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "01040966f64bd0bc2d25ee2b6c9502cd6742c9c6803480df1e9a38f9c394829d",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 38136,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114443370788000,
+              "parent_self_CPU_s": 0.046875,
+              "parent_wall_s": 0.24658790000830777,
+              "producer_observed_exit": 0,
+              "producer_pid": 46516
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 8816,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114443429859200,
+              "parent_self_CPU_s": 0.03125,
+              "parent_wall_s": 0.18599729999550618,
+              "producer_observed_exit": 0,
+              "producer_pid": 40676
+            }
+          },
+          "phase": "clean_close",
+          "primary_source_return_B": 9462,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        }
+      ],
+      "entry": {
+        "success": true,
+        "entry_wall_s": 2.2513226000010036,
+        "entry_self_CPU_s": 0.34375,
+        "peak_RSS_B": 31158272,
+        "fulltree_CPU_RSS": null
+      },
+      "parent": {
+        "observed_controller_launcher_exit_code": 0,
+        "controller_actual_pid": 21756,
+        "observed_controller_actual_exit_code": 0,
+        "launcher_pid": 41120,
+        "parent_wall_s": 2.296893699996872,
+        "parent_self_CPU_s": 0.015625,
+        "retry": 0
+      },
+      "primary_source_return_B": 28386
+    },
+    {
+      "round": 1,
+      "size": 129,
+      "cases": [
+        {
+          "A_call_completed": false,
+          "A_known_sid": "507b723a77797efbdf524acd9c96d7c3f62f7c642521e3e589e94bb704aa4f14",
+          "A_scope_release_reason": "observed OS process exit",
+          "A_visible_epoch_while_held": 0,
+          "B_distinct_source_sid": "b4920ed0219e12600657adba2a7aa3fd0a869277ac541327a4e04057d1f11bd9",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "34a8e00a475a49bd0da43db0d814308e6b881b1249b9136b8f9ea624c3c56b29",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 77,
+              "launcher_pid": 27900,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114444970364900,
+              "parent_self_CPU_s": 0.015625,
+              "parent_wall_s": 0.23499019999871962,
+              "producer_observed_exit": 77,
+              "producer_pid": 35172
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 41896,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114445047677700,
+              "parent_self_CPU_s": 0.03125,
+              "parent_wall_s": 0.19297560000268277,
+              "producer_observed_exit": 0,
+              "producer_pid": 24512
+            }
+          },
+          "phase": "before_HEAD",
+          "primary_source_return_B": 60384,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        },
+        {
+          "A_call_completed": false,
+          "A_known_sid": "507b723a77797efbdf524acd9c96d7c3f62f7c642521e3e589e94bb704aa4f14",
+          "A_scope_release_reason": "observed OS process exit",
+          "A_visible_epoch_while_held": 1,
+          "B_distinct_source_sid": "b4920ed0219e12600657adba2a7aa3fd0a869277ac541327a4e04057d1f11bd9",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "34a8e00a475a49bd0da43db0d814308e6b881b1249b9136b8f9ea624c3c56b29",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 77,
+              "launcher_pid": 16324,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114445324063600,
+              "parent_self_CPU_s": 0.046875,
+              "parent_wall_s": 0.23264950000157114,
+              "producer_observed_exit": 77,
+              "producer_pid": 35368
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 29216,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114445391864200,
+              "parent_self_CPU_s": 0.046875,
+              "parent_wall_s": 0.18120020000787918,
+              "producer_observed_exit": 0,
+              "producer_pid": 38496
+            }
+          },
+          "phase": "after_HEAD",
+          "primary_source_return_B": 60384,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        },
+        {
+          "A_call_completed": true,
+          "A_known_sid": "507b723a77797efbdf524acd9c96d7c3f62f7c642521e3e589e94bb704aa4f14",
+          "A_scope_release_reason": "clean close",
+          "A_visible_epoch_while_held": 1,
+          "B_distinct_source_sid": "b4920ed0219e12600657adba2a7aa3fd0a869277ac541327a4e04057d1f11bd9",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "34a8e00a475a49bd0da43db0d814308e6b881b1249b9136b8f9ea624c3c56b29",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 33816,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114445695057600,
+              "parent_self_CPU_s": 0.078125,
+              "parent_wall_s": 0.2595822000002954,
+              "producer_observed_exit": 0,
+              "producer_pid": 40192
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 38480,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114445762259000,
+              "parent_self_CPU_s": 0.0625,
+              "parent_wall_s": 0.20176599999831524,
+              "producer_observed_exit": 0,
+              "producer_pid": 35008
+            }
+          },
+          "phase": "clean_close",
+          "primary_source_return_B": 60384,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        }
+      ],
+      "entry": {
+        "success": true,
+        "entry_wall_s": 2.286371700000018,
+        "entry_self_CPU_s": 0.34375,
+        "peak_RSS_B": 31490048,
+        "fulltree_CPU_RSS": null
+      },
+      "parent": {
+        "observed_controller_launcher_exit_code": 0,
+        "controller_actual_pid": 37480,
+        "observed_controller_actual_exit_code": 0,
+        "launcher_pid": 44904,
+        "parent_wall_s": 2.331818899998325,
+        "parent_self_CPU_s": 0.0,
+        "retry": 0
+      },
+      "primary_source_return_B": 181152
+    },
+    {
+      "round": 1,
+      "size": 513,
+      "cases": [
+        {
+          "A_call_completed": false,
+          "A_known_sid": "bbedd74fa6e5716cab45139384abb6315ff84a5e23c599fe1ece417ccf1186b3",
+          "A_scope_release_reason": "observed OS process exit",
+          "A_visible_epoch_while_held": 0,
+          "B_distinct_source_sid": "a0929f247a5e401479671644e8c2ac5ca54dd5be073f8df50606372d7ae128a7",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "e7fc737305105cdff85900d8ab3bb440c311143eb13343489cbacc0655ce3e37",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 77,
+              "launcher_pid": 43384,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114447491390500,
+              "parent_self_CPU_s": 0.0625,
+              "parent_wall_s": 0.2651451999990968,
+              "producer_observed_exit": 77,
+              "producer_pid": 37940
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 46380,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114447582739600,
+              "parent_self_CPU_s": 0.078125,
+              "parent_wall_s": 0.21753729999181814,
+              "producer_observed_exit": 0,
+              "producer_pid": 46132
+            }
+          },
+          "phase": "before_HEAD",
+          "primary_source_return_B": 240096,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        },
+        {
+          "A_call_completed": false,
+          "A_known_sid": "bbedd74fa6e5716cab45139384abb6315ff84a5e23c599fe1ece417ccf1186b3",
+          "A_scope_release_reason": "observed OS process exit",
+          "A_visible_epoch_while_held": 1,
+          "B_distinct_source_sid": "a0929f247a5e401479671644e8c2ac5ca54dd5be073f8df50606372d7ae128a7",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "e7fc737305105cdff85900d8ab3bb440c311143eb13343489cbacc0655ce3e37",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 77,
+              "launcher_pid": 45892,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114447914024900,
+              "parent_self_CPU_s": 0.0625,
+              "parent_wall_s": 0.26187009998830035,
+              "producer_observed_exit": 77,
+              "producer_pid": 27480
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 29460,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114448010482400,
+              "parent_self_CPU_s": 0.078125,
+              "parent_wall_s": 0.22161760000744835,
+              "producer_observed_exit": 0,
+              "producer_pid": 30988
+            }
+          },
+          "phase": "after_HEAD",
+          "primary_source_return_B": 240096,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        },
+        {
+          "A_call_completed": true,
+          "A_known_sid": "bbedd74fa6e5716cab45139384abb6315ff84a5e23c599fe1ece417ccf1186b3",
+          "A_scope_release_reason": "clean close",
+          "A_visible_epoch_while_held": 1,
+          "B_distinct_source_sid": "a0929f247a5e401479671644e8c2ac5ca54dd5be073f8df50606372d7ae128a7",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "e7fc737305105cdff85900d8ab3bb440c311143eb13343489cbacc0655ce3e37",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 45200,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114448368788200,
+              "parent_self_CPU_s": 0.0625,
+              "parent_wall_s": 0.27905070000269916,
+              "producer_observed_exit": 0,
+              "producer_pid": 3340
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 42596,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114448462285200,
+              "parent_self_CPU_s": 0.0625,
+              "parent_wall_s": 0.23553730000276119,
+              "producer_observed_exit": 0,
+              "producer_pid": 46108
+            }
+          },
+          "phase": "clean_close",
+          "primary_source_return_B": 240096,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        }
+      ],
+      "entry": {
+        "success": true,
+        "entry_wall_s": 2.6569951999990735,
+        "entry_self_CPU_s": 0.515625,
+        "peak_RSS_B": 32313344,
+        "fulltree_CPU_RSS": null
+      },
+      "parent": {
+        "observed_controller_launcher_exit_code": 0,
+        "controller_actual_pid": 37824,
+        "observed_controller_actual_exit_code": 0,
+        "launcher_pid": 12496,
+        "parent_wall_s": 2.702768599992851,
+        "parent_self_CPU_s": 0.0,
+        "retry": 0
+      },
+      "primary_source_return_B": 720288
+    },
+    {
+      "round": 2,
+      "size": 17,
+      "cases": [
+        {
+          "A_call_completed": false,
+          "A_known_sid": "255476e920f6e11fb6f42a9f9de5301ff39fd2410c8592949843f62be4c886b3",
+          "A_scope_release_reason": "observed OS process exit",
+          "A_visible_epoch_while_held": 0,
+          "B_distinct_source_sid": "597c11dfba548278599f092fd699462e7a74ecb4247dd9addd75a1f74dde8ece",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "01040966f64bd0bc2d25ee2b6c9502cd6742c9c6803480df1e9a38f9c394829d",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 77,
+              "launcher_pid": 34296,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114449942519600,
+              "parent_self_CPU_s": 0.0625,
+              "parent_wall_s": 0.22420090000377968,
+              "producer_observed_exit": 77,
+              "producer_pid": 43580
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 36236,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114450006355200,
+              "parent_self_CPU_s": 0.046875,
+              "parent_wall_s": 0.17436920000182,
+              "producer_observed_exit": 0,
+              "producer_pid": 41680
+            }
+          },
+          "phase": "before_HEAD",
+          "primary_source_return_B": 9462,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        },
+        {
+          "A_call_completed": false,
+          "A_known_sid": "255476e920f6e11fb6f42a9f9de5301ff39fd2410c8592949843f62be4c886b3",
+          "A_scope_release_reason": "observed OS process exit",
+          "A_visible_epoch_while_held": 1,
+          "B_distinct_source_sid": "597c11dfba548278599f092fd699462e7a74ecb4247dd9addd75a1f74dde8ece",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "01040966f64bd0bc2d25ee2b6c9502cd6742c9c6803480df1e9a38f9c394829d",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 77,
+              "launcher_pid": 38224,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114450265373700,
+              "parent_self_CPU_s": 0.03125,
+              "parent_wall_s": 0.22498159999668133,
+              "producer_observed_exit": 77,
+              "producer_pid": 46092
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 46096,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114450324178500,
+              "parent_self_CPU_s": 0.03125,
+              "parent_wall_s": 0.17103330000827555,
+              "producer_observed_exit": 0,
+              "producer_pid": 42840
+            }
+          },
+          "phase": "after_HEAD",
+          "primary_source_return_B": 9462,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        },
+        {
+          "A_call_completed": true,
+          "A_known_sid": "255476e920f6e11fb6f42a9f9de5301ff39fd2410c8592949843f62be4c886b3",
+          "A_scope_release_reason": "clean close",
+          "A_visible_epoch_while_held": 1,
+          "B_distinct_source_sid": "597c11dfba548278599f092fd699462e7a74ecb4247dd9addd75a1f74dde8ece",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "01040966f64bd0bc2d25ee2b6c9502cd6742c9c6803480df1e9a38f9c394829d",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 39452,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114450601995000,
+              "parent_self_CPU_s": 0.0625,
+              "parent_wall_s": 0.2429400999972131,
+              "producer_observed_exit": 0,
+              "producer_pid": 18744
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 46832,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114450668181200,
+              "parent_self_CPU_s": 0.046875,
+              "parent_wall_s": 0.19430380000267178,
+              "producer_observed_exit": 0,
+              "producer_pid": 40120
+            }
+          },
+          "phase": "clean_close",
+          "primary_source_return_B": 9462,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        }
+      ],
+      "entry": {
+        "success": true,
+        "entry_wall_s": 2.1493256999965524,
+        "entry_self_CPU_s": 0.359375,
+        "peak_RSS_B": 31371264,
+        "fulltree_CPU_RSS": null
+      },
+      "parent": {
+        "observed_controller_launcher_exit_code": 0,
+        "controller_actual_pid": 16844,
+        "observed_controller_actual_exit_code": 0,
+        "launcher_pid": 13516,
+        "parent_wall_s": 2.1982853000081377,
+        "parent_self_CPU_s": 0.0,
+        "retry": 0
+      },
+      "primary_source_return_B": 28386
+    },
+    {
+      "round": 2,
+      "size": 129,
+      "cases": [
+        {
+          "A_call_completed": false,
+          "A_known_sid": "507b723a77797efbdf524acd9c96d7c3f62f7c642521e3e589e94bb704aa4f14",
+          "A_scope_release_reason": "observed OS process exit",
+          "A_visible_epoch_while_held": 0,
+          "B_distinct_source_sid": "b4920ed0219e12600657adba2a7aa3fd0a869277ac541327a4e04057d1f11bd9",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "34a8e00a475a49bd0da43db0d814308e6b881b1249b9136b8f9ea624c3c56b29",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 77,
+              "launcher_pid": 21796,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114452407786400,
+              "parent_self_CPU_s": 0.03125,
+              "parent_wall_s": 0.24101499999233056,
+              "producer_observed_exit": 77,
+              "producer_pid": 26000
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 1960,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114452475075500,
+              "parent_self_CPU_s": 0.03125,
+              "parent_wall_s": 0.18777600000612438,
+              "producer_observed_exit": 0,
+              "producer_pid": 39768
+            }
+          },
+          "phase": "before_HEAD",
+          "primary_source_return_B": 60384,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        },
+        {
+          "A_call_completed": false,
+          "A_known_sid": "507b723a77797efbdf524acd9c96d7c3f62f7c642521e3e589e94bb704aa4f14",
+          "A_scope_release_reason": "observed OS process exit",
+          "A_visible_epoch_while_held": 1,
+          "B_distinct_source_sid": "b4920ed0219e12600657adba2a7aa3fd0a869277ac541327a4e04057d1f11bd9",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "34a8e00a475a49bd0da43db0d814308e6b881b1249b9136b8f9ea624c3c56b29",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 77,
+              "launcher_pid": 25904,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114452758500100,
+              "parent_self_CPU_s": 0.046875,
+              "parent_wall_s": 0.23997700000472832,
+              "producer_observed_exit": 77,
+              "producer_pid": 43532
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 46776,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114452829445600,
+              "parent_self_CPU_s": 0.046875,
+              "parent_wall_s": 0.19068480000714771,
+              "producer_observed_exit": 0,
+              "producer_pid": 38924
+            }
+          },
+          "phase": "after_HEAD",
+          "primary_source_return_B": 60384,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        },
+        {
+          "A_call_completed": true,
+          "A_known_sid": "507b723a77797efbdf524acd9c96d7c3f62f7c642521e3e589e94bb704aa4f14",
+          "A_scope_release_reason": "clean close",
+          "A_visible_epoch_while_held": 1,
+          "B_distinct_source_sid": "b4920ed0219e12600657adba2a7aa3fd0a869277ac541327a4e04057d1f11bd9",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "34a8e00a475a49bd0da43db0d814308e6b881b1249b9136b8f9ea624c3c56b29",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 46312,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114453137448700,
+              "parent_self_CPU_s": 0.078125,
+              "parent_wall_s": 0.2615030000015395,
+              "producer_observed_exit": 0,
+              "producer_pid": 30744
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 11740,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114453214807000,
+              "parent_self_CPU_s": 0.078125,
+              "parent_wall_s": 0.2135165999934543,
+              "producer_observed_exit": 0,
+              "producer_pid": 44492
+            }
+          },
+          "phase": "clean_close",
+          "primary_source_return_B": 60384,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        }
+      ],
+      "entry": {
+        "success": true,
+        "entry_wall_s": 2.501381299996865,
+        "entry_self_CPU_s": 0.359375,
+        "peak_RSS_B": 31531008,
+        "fulltree_CPU_RSS": null
+      },
+      "parent": {
+        "observed_controller_launcher_exit_code": 0,
+        "controller_actual_pid": 38616,
+        "observed_controller_actual_exit_code": 0,
+        "launcher_pid": 43280,
+        "parent_wall_s": 2.5485609999886947,
+        "parent_self_CPU_s": 0.015625,
+        "retry": 0
+      },
+      "primary_source_return_B": 181152
+    },
+    {
+      "round": 2,
+      "size": 513,
+      "cases": [
+        {
+          "A_call_completed": false,
+          "A_known_sid": "bbedd74fa6e5716cab45139384abb6315ff84a5e23c599fe1ece417ccf1186b3",
+          "A_scope_release_reason": "observed OS process exit",
+          "A_visible_epoch_while_held": 0,
+          "B_distinct_source_sid": "a0929f247a5e401479671644e8c2ac5ca54dd5be073f8df50606372d7ae128a7",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "e7fc737305105cdff85900d8ab3bb440c311143eb13343489cbacc0655ce3e37",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 77,
+              "launcher_pid": 31896,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114454821548100,
+              "parent_self_CPU_s": 0.0625,
+              "parent_wall_s": 0.2699441000004299,
+              "producer_observed_exit": 77,
+              "producer_pid": 29576
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 46924,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114454913979000,
+              "parent_self_CPU_s": 0.046875,
+              "parent_wall_s": 0.22270460000436287,
+              "producer_observed_exit": 0,
+              "producer_pid": 45872
+            }
+          },
+          "phase": "before_HEAD",
+          "primary_source_return_B": 240096,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        },
+        {
+          "A_call_completed": false,
+          "A_known_sid": "bbedd74fa6e5716cab45139384abb6315ff84a5e23c599fe1ece417ccf1186b3",
+          "A_scope_release_reason": "observed OS process exit",
+          "A_visible_epoch_while_held": 1,
+          "B_distinct_source_sid": "a0929f247a5e401479671644e8c2ac5ca54dd5be073f8df50606372d7ae128a7",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "e7fc737305105cdff85900d8ab3bb440c311143eb13343489cbacc0655ce3e37",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 77,
+              "launcher_pid": 17332,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114455252529300,
+              "parent_self_CPU_s": 0.0625,
+              "parent_wall_s": 0.2687005999905523,
+              "producer_observed_exit": 77,
+              "producer_pid": 35172
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 39460,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114455348301400,
+              "parent_self_CPU_s": 0.078125,
+              "parent_wall_s": 0.22529479999502655,
+              "producer_observed_exit": 0,
+              "producer_pid": 41336
+            }
+          },
+          "phase": "after_HEAD",
+          "primary_source_return_B": 240096,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        },
+        {
+          "A_call_completed": true,
+          "A_known_sid": "bbedd74fa6e5716cab45139384abb6315ff84a5e23c599fe1ece417ccf1186b3",
+          "A_scope_release_reason": "clean close",
+          "A_visible_epoch_while_held": 1,
+          "B_distinct_source_sid": "a0929f247a5e401479671644e8c2ac5ca54dd5be073f8df50606372d7ae128a7",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "e7fc737305105cdff85900d8ab3bb440c311143eb13343489cbacc0655ce3e37",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 43400,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114455703652900,
+              "parent_self_CPU_s": 0.078125,
+              "parent_wall_s": 0.284787900003721,
+              "producer_observed_exit": 0,
+              "producer_pid": 41896
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 33072,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114455799239100,
+              "parent_self_CPU_s": 0.0625,
+              "parent_wall_s": 0.23546270000224467,
+              "producer_observed_exit": 0,
+              "producer_pid": 44176
+            }
+          },
+          "phase": "clean_close",
+          "primary_source_return_B": 240096,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        }
+      ],
+      "entry": {
+        "success": true,
+        "entry_wall_s": 2.537254999988363,
+        "entry_self_CPU_s": 0.546875,
+        "peak_RSS_B": 32186368,
+        "fulltree_CPU_RSS": null
+      },
+      "parent": {
+        "observed_controller_launcher_exit_code": 0,
+        "controller_actual_pid": 35628,
+        "observed_controller_actual_exit_code": 0,
+        "launcher_pid": 38732,
+        "parent_wall_s": 2.5837576999911107,
+        "parent_self_CPU_s": 0.0,
+        "retry": 0
+      },
+      "primary_source_return_B": 720288
+    },
+    {
+      "round": 3,
+      "size": 17,
+      "cases": [
+        {
+          "A_call_completed": false,
+          "A_known_sid": "255476e920f6e11fb6f42a9f9de5301ff39fd2410c8592949843f62be4c886b3",
+          "A_scope_release_reason": "observed OS process exit",
+          "A_visible_epoch_while_held": 0,
+          "B_distinct_source_sid": "597c11dfba548278599f092fd699462e7a74ecb4247dd9addd75a1f74dde8ece",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "01040966f64bd0bc2d25ee2b6c9502cd6742c9c6803480df1e9a38f9c394829d",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 77,
+              "launcher_pid": 27892,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114457313230000,
+              "parent_self_CPU_s": 0.03125,
+              "parent_wall_s": 0.22427560000505764,
+              "producer_observed_exit": 77,
+              "producer_pid": 45216
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 25892,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114457379374900,
+              "parent_self_CPU_s": 0.046875,
+              "parent_wall_s": 0.176383199999691,
+              "producer_observed_exit": 0,
+              "producer_pid": 45364
+            }
+          },
+          "phase": "before_HEAD",
+          "primary_source_return_B": 9462,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        },
+        {
+          "A_call_completed": false,
+          "A_known_sid": "255476e920f6e11fb6f42a9f9de5301ff39fd2410c8592949843f62be4c886b3",
+          "A_scope_release_reason": "observed OS process exit",
+          "A_visible_epoch_while_held": 1,
+          "B_distinct_source_sid": "597c11dfba548278599f092fd699462e7a74ecb4247dd9addd75a1f74dde8ece",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "01040966f64bd0bc2d25ee2b6c9502cd6742c9c6803480df1e9a38f9c394829d",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 77,
+              "launcher_pid": 31524,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114457642882700,
+              "parent_self_CPU_s": 0.046875,
+              "parent_wall_s": 0.22879190000821836,
+              "producer_observed_exit": 77,
+              "producer_pid": 38948
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 43896,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114457706537300,
+              "parent_self_CPU_s": 0.03125,
+              "parent_wall_s": 0.17641960000037216,
+              "producer_observed_exit": 0,
+              "producer_pid": 29464
+            }
+          },
+          "phase": "after_HEAD",
+          "primary_source_return_B": 9462,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        },
+        {
+          "A_call_completed": true,
+          "A_known_sid": "255476e920f6e11fb6f42a9f9de5301ff39fd2410c8592949843f62be4c886b3",
+          "A_scope_release_reason": "clean close",
+          "A_visible_epoch_while_held": 1,
+          "B_distinct_source_sid": "597c11dfba548278599f092fd699462e7a74ecb4247dd9addd75a1f74dde8ece",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "01040966f64bd0bc2d25ee2b6c9502cd6742c9c6803480df1e9a38f9c394829d",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 46132,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114457982211800,
+              "parent_self_CPU_s": 0.015625,
+              "parent_wall_s": 0.24131530000886414,
+              "producer_observed_exit": 0,
+              "producer_pid": 27096
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 26556,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114458047256800,
+              "parent_self_CPU_s": 0.046875,
+              "parent_wall_s": 0.19342680000409018,
+              "producer_observed_exit": 0,
+              "producer_pid": 33932
+            }
+          },
+          "phase": "clean_close",
+          "primary_source_return_B": 9462,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        }
+      ],
+      "entry": {
+        "success": true,
+        "entry_wall_s": 2.1964630000002217,
+        "entry_self_CPU_s": 0.28125,
+        "peak_RSS_B": 31047680,
+        "fulltree_CPU_RSS": null
+      },
+      "parent": {
+        "observed_controller_launcher_exit_code": 0,
+        "controller_actual_pid": 40192,
+        "observed_controller_actual_exit_code": 0,
+        "launcher_pid": 43464,
+        "parent_wall_s": 2.2416764000081457,
+        "parent_self_CPU_s": 0.03125,
+        "retry": 0
+      },
+      "primary_source_return_B": 28386
+    },
+    {
+      "round": 3,
+      "size": 129,
+      "cases": [
+        {
+          "A_call_completed": false,
+          "A_known_sid": "507b723a77797efbdf524acd9c96d7c3f62f7c642521e3e589e94bb704aa4f14",
+          "A_scope_release_reason": "observed OS process exit",
+          "A_visible_epoch_while_held": 0,
+          "B_distinct_source_sid": "b4920ed0219e12600657adba2a7aa3fd0a869277ac541327a4e04057d1f11bd9",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "34a8e00a475a49bd0da43db0d814308e6b881b1249b9136b8f9ea624c3c56b29",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 77,
+              "launcher_pid": 29568,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114459574981100,
+              "parent_self_CPU_s": 0.0625,
+              "parent_wall_s": 0.23931190000439528,
+              "producer_observed_exit": 77,
+              "producer_pid": 18904
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 46472,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114459646787900,
+              "parent_self_CPU_s": 0.03125,
+              "parent_wall_s": 0.19086019998940174,
+              "producer_observed_exit": 0,
+              "producer_pid": 2008
+            }
+          },
+          "phase": "before_HEAD",
+          "primary_source_return_B": 60384,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        },
+        {
+          "A_call_completed": false,
+          "A_known_sid": "507b723a77797efbdf524acd9c96d7c3f62f7c642521e3e589e94bb704aa4f14",
+          "A_scope_release_reason": "observed OS process exit",
+          "A_visible_epoch_while_held": 1,
+          "B_distinct_source_sid": "b4920ed0219e12600657adba2a7aa3fd0a869277ac541327a4e04057d1f11bd9",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "34a8e00a475a49bd0da43db0d814308e6b881b1249b9136b8f9ea624c3c56b29",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 77,
+              "launcher_pid": 20152,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114459931160800,
+              "parent_self_CPU_s": 0.0625,
+              "parent_wall_s": 0.23849370000243653,
+              "producer_observed_exit": 77,
+              "producer_pid": 43592
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 45664,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114459998755200,
+              "parent_self_CPU_s": 0.046875,
+              "parent_wall_s": 0.18760540000221226,
+              "producer_observed_exit": 0,
+              "producer_pid": 45728
+            }
+          },
+          "phase": "after_HEAD",
+          "primary_source_return_B": 60384,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        },
+        {
+          "A_call_completed": true,
+          "A_known_sid": "507b723a77797efbdf524acd9c96d7c3f62f7c642521e3e589e94bb704aa4f14",
+          "A_scope_release_reason": "clean close",
+          "A_visible_epoch_while_held": 1,
+          "B_distinct_source_sid": "b4920ed0219e12600657adba2a7aa3fd0a869277ac541327a4e04057d1f11bd9",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "34a8e00a475a49bd0da43db0d814308e6b881b1249b9136b8f9ea624c3c56b29",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 34296,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114460289297500,
+              "parent_self_CPU_s": 0.046875,
+              "parent_wall_s": 0.24670360000163782,
+              "producer_observed_exit": 0,
+              "producer_pid": 46752
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 33240,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114460360438000,
+              "parent_self_CPU_s": 0.03125,
+              "parent_wall_s": 0.19829510001000017,
+              "producer_observed_exit": 0,
+              "producer_pid": 22956
+            }
+          },
+          "phase": "clean_close",
+          "primary_source_return_B": 60384,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        }
+      ],
+      "entry": {
+        "success": true,
+        "entry_wall_s": 2.265475799998967,
+        "entry_self_CPU_s": 0.359375,
+        "peak_RSS_B": 31195136,
+        "fulltree_CPU_RSS": null
+      },
+      "parent": {
+        "observed_controller_launcher_exit_code": 0,
+        "controller_actual_pid": 27060,
+        "observed_controller_actual_exit_code": 0,
+        "launcher_pid": 27480,
+        "parent_wall_s": 2.313690499999211,
+        "parent_self_CPU_s": 0.0,
+        "retry": 0
+      },
+      "primary_source_return_B": 181152
+    },
+    {
+      "round": 3,
+      "size": 513,
+      "cases": [
+        {
+          "A_call_completed": false,
+          "A_known_sid": "bbedd74fa6e5716cab45139384abb6315ff84a5e23c599fe1ece417ccf1186b3",
+          "A_scope_release_reason": "observed OS process exit",
+          "A_visible_epoch_while_held": 0,
+          "B_distinct_source_sid": "a0929f247a5e401479671644e8c2ac5ca54dd5be073f8df50606372d7ae128a7",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "e7fc737305105cdff85900d8ab3bb440c311143eb13343489cbacc0655ce3e37",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 77,
+              "launcher_pid": 46760,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114463629404400,
+              "parent_self_CPU_s": 0.078125,
+              "parent_wall_s": 0.27026949998980854,
+              "producer_observed_exit": 77,
+              "producer_pid": 18936
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 26000,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114463723602700,
+              "parent_self_CPU_s": 0.078125,
+              "parent_wall_s": 0.22408149999682792,
+              "producer_observed_exit": 0,
+              "producer_pid": 40832
+            }
+          },
+          "phase": "before_HEAD",
+          "primary_source_return_B": 240096,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        },
+        {
+          "A_call_completed": false,
+          "A_known_sid": "bbedd74fa6e5716cab45139384abb6315ff84a5e23c599fe1ece417ccf1186b3",
+          "A_scope_release_reason": "observed OS process exit",
+          "A_visible_epoch_while_held": 1,
+          "B_distinct_source_sid": "a0929f247a5e401479671644e8c2ac5ca54dd5be073f8df50606372d7ae128a7",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "e7fc737305105cdff85900d8ab3bb440c311143eb13343489cbacc0655ce3e37",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 77,
+              "launcher_pid": 38248,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114464058421900,
+              "parent_self_CPU_s": 0.0625,
+              "parent_wall_s": 0.26553260000946466,
+              "producer_observed_exit": 77,
+              "producer_pid": 40128
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 25904,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114464157298600,
+              "parent_self_CPU_s": 0.078125,
+              "parent_wall_s": 0.22758530000282917,
+              "producer_observed_exit": 0,
+              "producer_pid": 46888
+            }
+          },
+          "phase": "after_HEAD",
+          "primary_source_return_B": 240096,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        },
+        {
+          "A_call_completed": true,
+          "A_known_sid": "bbedd74fa6e5716cab45139384abb6315ff84a5e23c599fe1ece417ccf1186b3",
+          "A_scope_release_reason": "clean close",
+          "A_visible_epoch_while_held": 1,
+          "B_distinct_source_sid": "a0929f247a5e401479671644e8c2ac5ca54dd5be073f8df50606372d7ae128a7",
+          "B_never_replayed_A": true,
+          "final_probe_scope_acquired": true,
+          "old_sid": "e7fc737305105cdff85900d8ab3bb440c311143eb13343489cbacc0655ce3e37",
+          "parents": {
+            "A": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 38336,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114464529606900,
+              "parent_self_CPU_s": 0.03125,
+              "parent_wall_s": 0.2852636000025086,
+              "producer_observed_exit": 0,
+              "producer_pid": 40500
+            },
+            "B": {
+              "launcher_observed_exit": 0,
+              "launcher_pid": 42476,
+              "no_child_clock_if_no_finally": null,
+              "observed_ns": 114464626888000,
+              "parent_self_CPU_s": 0.046875,
+              "parent_wall_s": 0.238946900004521,
+              "producer_observed_exit": 0,
+              "producer_pid": 29828
+            }
+          },
+          "phase": "clean_close",
+          "primary_source_return_B": 240096,
+          "retained_old_files_unchanged": true,
+          "saved_queries": 6
+        }
+      ],
+      "entry": {
+        "success": true,
+        "entry_wall_s": 4.219654200001969,
+        "entry_self_CPU_s": 0.453125,
+        "peak_RSS_B": 32194560,
+        "fulltree_CPU_RSS": null
+      },
+      "parent": {
+        "observed_controller_launcher_exit_code": 0,
+        "controller_actual_pid": 13404,
+        "observed_controller_actual_exit_code": 0,
+        "launcher_pid": 40424,
+        "parent_wall_s": 4.267705699996441,
+        "parent_self_CPU_s": 0.0,
+        "retry": 0
+      },
+      "primary_source_return_B": 720288
+    }
+  ],
+  "independent_audits": [
+    {
+      "round": 1,
+      "size": 17,
+      "cases": 3,
+      "actual_A_terminations": 2,
+      "fresh_writer_processes": 6,
+      "queries_verified": 18,
+      "source_application_return_B": 28386,
+      "corrupt_controls": [
+        {
+          "phase": "before_HEAD",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "before_HEAD",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "before_HEAD",
+          "kind": "returned_literal",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "returned_literal",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "returned_literal",
+          "refused": true
+        }
+      ],
+      "control_full_source_restores": 3,
+      "control_source_application_return_B": 4731,
+      "old_source_history_and_case_timelines_verified": true,
+      "lock_release_not_operation_completion": true,
+      "all_original_files_unchanged": true,
+      "no_writer_or_candidate_lock_replay_in_main_audit": true
+    },
+    {
+      "round": 1,
+      "size": 129,
+      "cases": 3,
+      "actual_A_terminations": 2,
+      "fresh_writer_processes": 6,
+      "queries_verified": 18,
+      "source_application_return_B": 181152,
+      "corrupt_controls": [
+        {
+          "phase": "before_HEAD",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "before_HEAD",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "before_HEAD",
+          "kind": "returned_literal",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "returned_literal",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "returned_literal",
+          "refused": true
+        }
+      ],
+      "control_full_source_restores": 3,
+      "control_source_application_return_B": 30192,
+      "old_source_history_and_case_timelines_verified": true,
+      "lock_release_not_operation_completion": true,
+      "all_original_files_unchanged": true,
+      "no_writer_or_candidate_lock_replay_in_main_audit": true
+    },
+    {
+      "round": 1,
+      "size": 513,
+      "cases": 3,
+      "actual_A_terminations": 2,
+      "fresh_writer_processes": 6,
+      "queries_verified": 18,
+      "source_application_return_B": 720288,
+      "corrupt_controls": [
+        {
+          "phase": "before_HEAD",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "before_HEAD",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "before_HEAD",
+          "kind": "returned_literal",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "returned_literal",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "returned_literal",
+          "refused": true
+        }
+      ],
+      "control_full_source_restores": 3,
+      "control_source_application_return_B": 120048,
+      "old_source_history_and_case_timelines_verified": true,
+      "lock_release_not_operation_completion": true,
+      "all_original_files_unchanged": true,
+      "no_writer_or_candidate_lock_replay_in_main_audit": true
+    },
+    {
+      "round": 2,
+      "size": 17,
+      "cases": 3,
+      "actual_A_terminations": 2,
+      "fresh_writer_processes": 6,
+      "queries_verified": 18,
+      "source_application_return_B": 28386,
+      "corrupt_controls": [
+        {
+          "phase": "before_HEAD",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "before_HEAD",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "before_HEAD",
+          "kind": "returned_literal",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "returned_literal",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "returned_literal",
+          "refused": true
+        }
+      ],
+      "control_full_source_restores": 3,
+      "control_source_application_return_B": 4731,
+      "old_source_history_and_case_timelines_verified": true,
+      "lock_release_not_operation_completion": true,
+      "all_original_files_unchanged": true,
+      "no_writer_or_candidate_lock_replay_in_main_audit": true
+    },
+    {
+      "round": 2,
+      "size": 129,
+      "cases": 3,
+      "actual_A_terminations": 2,
+      "fresh_writer_processes": 6,
+      "queries_verified": 18,
+      "source_application_return_B": 181152,
+      "corrupt_controls": [
+        {
+          "phase": "before_HEAD",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "before_HEAD",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "before_HEAD",
+          "kind": "returned_literal",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "returned_literal",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "returned_literal",
+          "refused": true
+        }
+      ],
+      "control_full_source_restores": 3,
+      "control_source_application_return_B": 30192,
+      "old_source_history_and_case_timelines_verified": true,
+      "lock_release_not_operation_completion": true,
+      "all_original_files_unchanged": true,
+      "no_writer_or_candidate_lock_replay_in_main_audit": true
+    },
+    {
+      "round": 2,
+      "size": 513,
+      "cases": 3,
+      "actual_A_terminations": 2,
+      "fresh_writer_processes": 6,
+      "queries_verified": 18,
+      "source_application_return_B": 720288,
+      "corrupt_controls": [
+        {
+          "phase": "before_HEAD",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "before_HEAD",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "before_HEAD",
+          "kind": "returned_literal",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "returned_literal",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "returned_literal",
+          "refused": true
+        }
+      ],
+      "control_full_source_restores": 3,
+      "control_source_application_return_B": 120048,
+      "old_source_history_and_case_timelines_verified": true,
+      "lock_release_not_operation_completion": true,
+      "all_original_files_unchanged": true,
+      "no_writer_or_candidate_lock_replay_in_main_audit": true
+    },
+    {
+      "round": 3,
+      "size": 17,
+      "cases": 3,
+      "actual_A_terminations": 2,
+      "fresh_writer_processes": 6,
+      "queries_verified": 18,
+      "source_application_return_B": 28386,
+      "corrupt_controls": [
+        {
+          "phase": "before_HEAD",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "before_HEAD",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "before_HEAD",
+          "kind": "returned_literal",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "returned_literal",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "returned_literal",
+          "refused": true
+        }
+      ],
+      "control_full_source_restores": 3,
+      "control_source_application_return_B": 4731,
+      "old_source_history_and_case_timelines_verified": true,
+      "lock_release_not_operation_completion": true,
+      "all_original_files_unchanged": true,
+      "no_writer_or_candidate_lock_replay_in_main_audit": true
+    },
+    {
+      "round": 3,
+      "size": 129,
+      "cases": 3,
+      "actual_A_terminations": 2,
+      "fresh_writer_processes": 6,
+      "queries_verified": 18,
+      "source_application_return_B": 181152,
+      "corrupt_controls": [
+        {
+          "phase": "before_HEAD",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "before_HEAD",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "before_HEAD",
+          "kind": "returned_literal",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "returned_literal",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "returned_literal",
+          "refused": true
+        }
+      ],
+      "control_full_source_restores": 3,
+      "control_source_application_return_B": 30192,
+      "old_source_history_and_case_timelines_verified": true,
+      "lock_release_not_operation_completion": true,
+      "all_original_files_unchanged": true,
+      "no_writer_or_candidate_lock_replay_in_main_audit": true
+    },
+    {
+      "round": 3,
+      "size": 513,
+      "cases": 3,
+      "actual_A_terminations": 2,
+      "fresh_writer_processes": 6,
+      "queries_verified": 18,
+      "source_application_return_B": 720288,
+      "corrupt_controls": [
+        {
+          "phase": "before_HEAD",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "before_HEAD",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "before_HEAD",
+          "kind": "returned_literal",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "after_HEAD",
+          "kind": "returned_literal",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "CAS",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "manifest",
+          "refused": true
+        },
+        {
+          "phase": "clean_close",
+          "kind": "returned_literal",
+          "refused": true
+        }
+      ],
+      "control_full_source_restores": 3,
+      "control_source_application_return_B": 120048,
+      "old_source_history_and_case_timelines_verified": true,
+      "lock_release_not_operation_completion": true,
+      "all_original_files_unchanged": true,
+      "no_writer_or_candidate_lock_replay_in_main_audit": true
+    }
+  ],
+  "plan": {
+    "success": true,
+    "planned_controllers": 9,
+    "completed_controllers": 9,
+    "planned_processes": 54,
+    "planned_operations": 162,
+    "planned_corruption_controls": 81,
+    "full_wall_s": 25.117794299992966,
+    "self_CPU_s": 0.109375,
+    "fulltree_CPU_RSS": null
+  },
+  "fulltree_CPU_RSS": null
+}

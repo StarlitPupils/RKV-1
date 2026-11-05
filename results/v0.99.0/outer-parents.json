@@ -1,0 +1,14 @@
+{
+  "analysis-parent.json": {
+    "full_wall_s": 3.8724338000029093,
+    "self_CPU_s": 0.0,
+    "observed_exit_code": 0,
+    "retry": 0
+  },
+  "formal-parent.json": {
+    "full_wall_s": 25.16520329999912,
+    "self_CPU_s": 0.0,
+    "observed_exit_code": 0,
+    "retry": 0
+  }
+}
