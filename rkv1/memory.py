@@ -231,6 +231,15 @@ class Memory:
             raise ValueError("Memory manifest does not bind current CAS snapshot")
         return value
 
+    def writer(self):
+        """Acquire an opt-in nonblocking cooperative writer scope.
+
+        All participating writers must use this scope. Direct add() remains
+        unchanged and can bypass exclusion. Scope release never retries writes.
+        """
+        from .memory_writer import WriterScope
+        return WriterScope(self)
+
     def pin(self, *, snapshot=None):
         """Opt-in fixed-SID identity view; source is reverified per operation.
 

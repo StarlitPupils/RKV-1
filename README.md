@@ -6,6 +6,10 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
+## 当前研究：v0.99 · 协作写入作用域与进程退出（发行待核验）
+
+新增opt-in Memory.writer()以OS持有的非阻塞句柄约束协作写入者，原Memory.add可绕过、默认不改。tiny准备已实际验证竞争拒绝、HEAD前/后终止释放、不同B新意图写入及oldSID/pin原文，尚无正式结果。正式9controller/54producer/162查询/81坏副本控制先全回归及source/protocol/input冻结/exactCI后唯一执行；锁释放不代表A写入完成，不自动重试或回滚，不称一般多写者、科学回答或长期对话收益。
+
 ## 当前版本：v0.98 · 固定来源读取视图与真实读写交错
 
 新增opt-in `Memory.pin`固定SID，逐次重新核验原source。三轮17/129/513条自建来源，9controller/36真实子进程/297操作/54实际跨HEAD发布查询区间与36坏副本控制、36关闭调用拒绝均通过独立原JSONL/完整source/历史SID/PID退出与immutability审计。固定视图与原explicit SID逐次相同；动态current按各次请求解析版本，单个已开始查询不混新旧。H1/H2/H3/joint仅本轮受控singlewriter机械合同，不称一般并发、科学回答或长期人类对话收益。

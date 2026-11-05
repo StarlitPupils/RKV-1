@@ -687,3 +687,7 @@ sourcefdad26c4b4c861a90f47d35a2a5b7093dd977ece/exactCI41994638712；628检查627
 ### v0.98完整软件交付确认
 
 tag6031226242b8626b77f2ecc72339451d9291aff1、ReleaseCI41995862520、finalproof40860763a43a28aa7584bd9ddf4c782a4c7c7ce384c19a0bc1a409556f23e529。实际7资产SHA/全部69Python+HTML与tag源码/当前结果范围/仓库外实际wheel-currentnative与new3reader1writer33操作6重叠区间4source控制+全部旧actualsdist/proof8通过。实际CI源码1971702B SHA3189e30dbfcaa546154ffc874c2ea1c137b513ff1f394ae9797fb18bb4ad9719；原固定9controller/36子进程/297操作/54重叠区间/36坏副本控制、独立审计与完整时钟/门槛不改；固定SID/当前SID轨迹按预定受控交错保持，不称掉电/并发/推理收益。v095原轮封存，缺失槽执行和成本unknownnull，不补跑。owned记录与外部凭据机械验证不代表真人长期会话/NLI/回答或无限上下文，全部负结果及历史成本保持。
+
+## v0.99候选：协作写入作用域与进程退出
+
+新增显式Memory.writer()非阻塞OSscope；默认add仍可绕过，限协作参与者。固定3边界×3规模×3轮=27case/54写入进程/18实际终止/162原文查询/81坏副本，先freeze/exactCI再运行，A中断不重放、B为冻结不同意图。全费用与未知边界保留；非掉电/NLI/回答/长期人类对话。
