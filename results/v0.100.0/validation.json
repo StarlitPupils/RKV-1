@@ -1,0 +1,22 @@
+{
+  "formal_source_commit": "631e62474dea9b4a31707094025702173f4d8657",
+  "exact_CI": 42186383255,
+  "formal_complete": true,
+  "independent_audit_complete": true,
+  "cases": 27,
+  "terminations": 18,
+  "cli_contention_refusals": 54,
+  "cli_successes_after_exit": 54,
+  "primary_queries": 162,
+  "independent_queries": 162,
+  "unknown_A_completion": 18,
+  "software_release_complete": false,
+  "metadata_only_runtime_change": {
+    "path": "rkv1/__init__.py",
+    "prior_bytes": 255,
+    "release_bytes": 256,
+    "change": "version 0.99.0 to 0.100.0 with CRLF preserved"
+  },
+  "default_writer_semantics_frozen": true,
+  "new_remote_model_calls": 0
+}
