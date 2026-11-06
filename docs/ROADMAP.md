@@ -707,3 +707,9 @@ sourceb618fa0c7250f67ba1b6fbf6a55e406281c8985f/exactCI42017602297；632检查631
 ### v0.99完整软件交付确认
 
 tag526107c8bb8f1a57d7735afe157f5f93417ec8da、ReleaseCI42018737545、finalproof754f0e8aeb56c1b2dcacc37fa0d83de60d47b4c9765f36690f9327b09ae20d01。实际7资产SHA/全部70Python+HTML与tag源码/当前结果范围/仓库外实际wheel-currentnative与new6writer2实际终止18原文查询9source控制+全部旧actualsdist/proof8通过。实际CI源码1994473B SHA87a01ef1f790acd32924511bdefbb13b0c81a8a263391da6cd19d7379b57fac2；原固定9controller/54writer/18实际终止/162查询/81坏副本控制、独立审计与完整时钟/门槛不改；锁释放不等于A操作完成，B为冻结独立新意图且不重放A，不称掉电/并发/推理收益。v095原轮封存，缺失槽执行和成本unknownnull，不补跑。owned记录与外部凭据机械验证不代表真人长期会话/NLI/回答或无限上下文，全部负结果及历史成本保持。
+
+### v0.100 完整交付确认
+
+Release CI 42189457264 成功，实际 7 资产 SHA、70Python+HTML、全部 tag 源码和实验 ZIP、严格当前源码包范围、实际发布 wheel-currentnative 仓库外安装、新默认 API/真实 CLI 三场景两次终止十八次来源查询六次竞争拒绝与全部既有兼容性检查通过。第 8 项 proof 已实际重下载，SHA256 为 `2b85d19845d4e1b92e7cdea027f5de31b5a95da925748bacff4e1f7e130c71a6`。tag 提交 `32ed8981ad30daaa4d4415e6257f6678a143bdb9`。
+
+原正式 27 例、18 次终止和 162 次来源查询的结果保留，18 个中断调用完成状态未知。首次 CI 路径比较失败、修正后的源码 CI 和全部成本记录保留。默认写入整合轮已完成，下一阶段按开发指南设计带版本修订的证据问答对照。

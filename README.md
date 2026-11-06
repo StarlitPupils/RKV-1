@@ -8,7 +8,15 @@
 
 开发和版本迭代前，先查阅 [开发与迭代指南](docs/DEVELOPMENT-GUIDE.md)。
 
-v0.100 的默认写入统一锁处于开发验收阶段，进度与固定清单见 [候选说明](docs/MEMORY-DEFAULT-WRITER.md)。当前完整交付版本为 v0.99。
+## 当前完整交付版本 v0.100
+
+默认 Memory.add、预算配置及对应命令行入口共用非阻塞 OS 写锁。固定 27 场景、18 次实际终止、54 次命令行竞争拒绝、54 次退出后调用成功及 162 次来源查询完成，独立原文、旧版本与退出凭据核验通过。18 个中断写入的完成状态保持未知，后续写入使用独立新意图。
+
+本地完整回归 636 项中 635 项通过、1 项权限跳过。Release CI、实际 7 项资产指纹、全部 70 个 Python 模块及 HTML、源码包与实验 ZIP、实际发布 wheel 和当前 native 的仓库外安装、新默认入口与全部既有兼容性检查，以及第 8 项 proof 的实际重下载均通过。版本初始化模块因版本号增加显式从 255 字节 CRLF 改为 256 字节 CRLF。
+
+[正式验收报告](results/v0.100.0/SUMMARY.md) · [写入接口与边界](docs/MEMORY-DEFAULT-WRITER.md) · [Release](https://github.com/StarlitPupils/RKV-1/releases/tag/v0.100.0) · [实际核验证明](https://github.com/StarlitPupils/RKV-1/releases/download/v0.100.0/published-verification.json)
+
+报告和 validation.json 保留发布前状态快照，最新完整交付以 Release 实际核验证明和本条完成确认为准。后续主任务为带版本修订的证据问答对照设计，具体规则见开发与迭代指南。
 
 ## 当前版本：v0.99 · 协作写入作用域与进程退出
 
