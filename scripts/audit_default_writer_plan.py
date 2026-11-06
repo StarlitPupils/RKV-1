@@ -13,6 +13,7 @@ from scripts.writer_scope_fixture import ledger, meta, publish
 
 
 def audit(root, plan_path, out):
+    root = Path(root).resolve()
     def load(path):
         return json.loads(path.read_bytes())
 

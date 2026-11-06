@@ -302,8 +302,8 @@
       "sha256": "40871a07e6cf5883425e446765f9145e39c3963b42edb60dae2140e333e8a378"
     },
     "scripts/audit_default_writer_plan.py": {
-      "bytes": 6973,
-      "sha256": "14db78c8af6d74d2f2854f4883d50541aaba43e16380e0da6f434ddd866c4981"
+      "bytes": 7005,
+      "sha256": "6d66c60e949d9e28e38b7a84eb89c801a4ce08dfe259c390b1780ca730ac8bb2"
     },
     "scripts/run_memory_fault_matrix.py": {
       "bytes": 8934,

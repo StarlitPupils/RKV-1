@@ -28,7 +28,10 @@ class DefaultWriterPlanTests(unittest.TestCase):
             path.write_text(json.dumps(self.plan()), encoding='utf-8')
             run(root/'run', path)
             before = ledger(root/'run')
-            audit(root/'run', path, root/'audit.json')
+            # Windows CI can spell TEMP with a short-name alias. Exercise an
+            # equivalent noncanonical path on every OS before comparing argv.
+            (root/'alias').mkdir()
+            audit(root/'alias'/'..'/'run', path, root/'audit.json')
             result = json.loads((root/'audit.json').read_bytes())
             self.assertEqual(result['queries_verified'],18)
             self.assertEqual(result['cli_contention_refusals'],6)
