@@ -1,5 +1,6 @@
 """Cooperative, fail-fast OS-held writer scope. The lock file is never removed."""
 import errno,os,stat,threading,weakref
+from contextlib import contextmanager
 
 def _regular_or_absent(path):
     if path.exists() or path.is_symlink():
@@ -59,15 +60,27 @@ class WriterScope:
 
     def info(self):
         return {'closed':self.closed,'owner_pid':self._pid,'backend':self._backend,
-                'handle_inheritable':False,'scope':'Cooperating Memory.writer callers only; direct Memory.add can bypass',
+                'handle_inheritable':False,'scope':'Memory add and replay-budget changes share this lock; direct Store writers can bypass',
                 'lock_file_persisted':True,'automatic_retry':False}
 
-    def add(self,source,*,label='evidence',chunker_backend='python',native_library=None):
+    @contextmanager
+    def _operation(self):
         self._owner()
         if self._busy:raise ValueError('Reentrant writer operation refused')
         self._busy=True
-        try:return self._memory.add(source,label=label,chunker_backend=chunker_backend,native_library=native_library)
-        finally:self._busy=False
+        try:
+            yield
+        finally:
+            self._busy=False
+
+    def add(self,source,*,label='evidence',chunker_backend='python',native_library=None):
+        with self._operation():
+            return self._memory._add(source,label=label,chunker_backend=chunker_backend,native_library=native_library)
+
+    def enable_replay_budget(self,limits=None):
+        """Change the replay budget while retaining this writer scope."""
+        with self._operation():
+            return self._memory._enable_replay_budget(limits)
 
     def close(self):
         if self.closed:return

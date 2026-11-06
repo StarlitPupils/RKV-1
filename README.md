@@ -6,6 +6,10 @@
 [![tests](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml/badge.svg)](https://github.com/StarlitPupils/RKV-1/actions/workflows/ci.yml)
 [版本发布](https://github.com/StarlitPupils/RKV-1/releases) · [路线](docs/ROADMAP.md) · [格式](docs/FORMAT.md)
 
+开发和版本迭代前，先查阅 [开发与迭代指南](docs/DEVELOPMENT-GUIDE.md)。
+
+v0.100 的默认写入统一锁处于开发验收阶段，进度与固定清单见 [候选说明](docs/MEMORY-DEFAULT-WRITER.md)。当前完整交付版本为 v0.99。
+
 ## 当前版本：v0.99 · 协作写入作用域与进程退出
 
 新增opt-in `Memory.writer()`，使用非阻塞OS句柄约束协作写入者；原Memory.add仍可绕过，默认不改。固定9controller/54写入进程/18实际终止/162原文查询/54竞争拒绝/81坏副本与54关闭调用拒绝，独立原JSONL/完整Store/oldSID/pin/PID实际退出/库immutability核验通过。锁释放不等于A操作完成，18个中断A不重试，B为冻结独立新意图。H1/H2/H3/joint仅本轮协作机械合同，不称通用多写者/掉电/NLI/回答或人类长期对话收益。

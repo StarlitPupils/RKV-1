@@ -55,8 +55,9 @@ class MemoryWriterScopeTests(unittest.TestCase):
 
     def test_invalid_lock_path_fixture_anchor_and_plan_input_refuse(self):
         with tempfile.TemporaryDirectory() as td:
-            root=Path(td);m=self.memory(root);(m.root/'.writer.lock').mkdir()
+            root=Path(td);m=Memory.create(root/'memory');(m.root/'.writer.lock').mkdir()
             with self.assertRaises(ValueError):m.writer()
+            with self.assertRaisesRegex(ValueError,'nonlinked regular'):m.add(root/'source')
             for n in (False,8,1024):
                 with self.assertRaises(ValueError):run(root/'not-created',n)
             self.assertFalse((root/'not-created').exists())

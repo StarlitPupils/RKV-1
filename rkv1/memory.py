@@ -148,6 +148,10 @@ class Memory:
 
     def enable_replay_budget(self,limits=None):
         """Change only future writer policy; retained views and HEAD stay intact."""
+        with self.writer() as scope:
+            return scope.enable_replay_budget(limits)
+
+    def _enable_replay_budget(self,limits):
         from .memory_budget import budget
         from .memory_index import configuration,V3_PROFILES
         settings=budget(limits);old=configuration(self)
@@ -160,6 +164,10 @@ class Memory:
 
     def add(self,source,*,label="evidence",chunker_backend="python",native_library=None):
         """Replace current evidence snapshot; old snapshots/indexes remain addressable."""
+        with self.writer() as scope:
+            return scope.add(source,label=label,chunker_backend=chunker_backend,native_library=native_library)
+
+    def _add(self,source,*,label,chunker_backend,native_library):
         source=Path(source).resolve()
         if source.is_relative_to(self.root) or self.root.is_relative_to(source):
             raise ValueError("Evidence source and memory root must not overlap; answers are derived records")
@@ -232,10 +240,10 @@ class Memory:
         return value
 
     def writer(self):
-        """Acquire an opt-in nonblocking cooperative writer scope.
+        """Acquire the nonblocking lock shared by Memory writes and policy changes.
 
-        All participating writers must use this scope. Direct add() remains
-        unchanged and can bypass exclusion. Scope release never retries writes.
+        Use the scope's methods to perform several operations under one lock.
+        Scope release never retries writes.
         """
         from .memory_writer import WriterScope
         return WriterScope(self)

@@ -1,0 +1,315 @@
+{
+  "schema": "rkv1-memory-default-writer-plan-v1",
+  "scope": "owned process and source-history acceptance",
+  "status": "protocol_inputs_pinned_pending_runner_source_and_exact_ci",
+  "schedule": [
+    {
+      "id": "r1-n17-before_HEAD",
+      "round": 1,
+      "size": 17,
+      "phase": "before_HEAD"
+    },
+    {
+      "id": "r1-n17-after_HEAD",
+      "round": 1,
+      "size": 17,
+      "phase": "after_HEAD"
+    },
+    {
+      "id": "r1-n17-clean_return",
+      "round": 1,
+      "size": 17,
+      "phase": "clean_return"
+    },
+    {
+      "id": "r1-n129-before_HEAD",
+      "round": 1,
+      "size": 129,
+      "phase": "before_HEAD"
+    },
+    {
+      "id": "r1-n129-after_HEAD",
+      "round": 1,
+      "size": 129,
+      "phase": "after_HEAD"
+    },
+    {
+      "id": "r1-n129-clean_return",
+      "round": 1,
+      "size": 129,
+      "phase": "clean_return"
+    },
+    {
+      "id": "r1-n513-before_HEAD",
+      "round": 1,
+      "size": 513,
+      "phase": "before_HEAD"
+    },
+    {
+      "id": "r1-n513-after_HEAD",
+      "round": 1,
+      "size": 513,
+      "phase": "after_HEAD"
+    },
+    {
+      "id": "r1-n513-clean_return",
+      "round": 1,
+      "size": 513,
+      "phase": "clean_return"
+    },
+    {
+      "id": "r2-n17-before_HEAD",
+      "round": 2,
+      "size": 17,
+      "phase": "before_HEAD"
+    },
+    {
+      "id": "r2-n17-after_HEAD",
+      "round": 2,
+      "size": 17,
+      "phase": "after_HEAD"
+    },
+    {
+      "id": "r2-n17-clean_return",
+      "round": 2,
+      "size": 17,
+      "phase": "clean_return"
+    },
+    {
+      "id": "r2-n129-before_HEAD",
+      "round": 2,
+      "size": 129,
+      "phase": "before_HEAD"
+    },
+    {
+      "id": "r2-n129-after_HEAD",
+      "round": 2,
+      "size": 129,
+      "phase": "after_HEAD"
+    },
+    {
+      "id": "r2-n129-clean_return",
+      "round": 2,
+      "size": 129,
+      "phase": "clean_return"
+    },
+    {
+      "id": "r2-n513-before_HEAD",
+      "round": 2,
+      "size": 513,
+      "phase": "before_HEAD"
+    },
+    {
+      "id": "r2-n513-after_HEAD",
+      "round": 2,
+      "size": 513,
+      "phase": "after_HEAD"
+    },
+    {
+      "id": "r2-n513-clean_return",
+      "round": 2,
+      "size": 513,
+      "phase": "clean_return"
+    },
+    {
+      "id": "r3-n17-before_HEAD",
+      "round": 3,
+      "size": 17,
+      "phase": "before_HEAD"
+    },
+    {
+      "id": "r3-n17-after_HEAD",
+      "round": 3,
+      "size": 17,
+      "phase": "after_HEAD"
+    },
+    {
+      "id": "r3-n17-clean_return",
+      "round": 3,
+      "size": 17,
+      "phase": "clean_return"
+    },
+    {
+      "id": "r3-n129-before_HEAD",
+      "round": 3,
+      "size": 129,
+      "phase": "before_HEAD"
+    },
+    {
+      "id": "r3-n129-after_HEAD",
+      "round": 3,
+      "size": 129,
+      "phase": "after_HEAD"
+    },
+    {
+      "id": "r3-n129-clean_return",
+      "round": 3,
+      "size": 129,
+      "phase": "clean_return"
+    },
+    {
+      "id": "r3-n513-before_HEAD",
+      "round": 3,
+      "size": 513,
+      "phase": "before_HEAD"
+    },
+    {
+      "id": "r3-n513-after_HEAD",
+      "round": 3,
+      "size": 513,
+      "phase": "after_HEAD"
+    },
+    {
+      "id": "r3-n513-clean_return",
+      "round": 3,
+      "size": 513,
+      "phase": "clean_return"
+    }
+  ],
+  "counts": {
+    "cases": 27,
+    "default_api_processes": 27,
+    "terminations": 18,
+    "normal_returns": 9,
+    "cli_attempts": 108,
+    "cli_contention_refusals": 54,
+    "cli_successes_after_exit": 54,
+    "primary_queries": 162,
+    "independent_queries": 162
+  },
+  "fixture_files": {
+    "17:0": {
+      "bytes": 1577,
+      "sha256": "6186a78cc98f0e0a7c58b57b47e560dcc37b98828152568fea7856bea3d61647"
+    },
+    "17:1": {
+      "bytes": 1577,
+      "sha256": "e5df928e632966155377a0741ad962cdde15318ea22cf953f064be99f6dc1f99"
+    },
+    "17:2": {
+      "bytes": 1577,
+      "sha256": "aeab67c8aeb1b0609f1c8b2093705953b27c395b70b6f8807861e118b2047c9f"
+    },
+    "129:0": {
+      "bytes": 10064,
+      "sha256": "044e4870998055a9e6efd8343c21f241ac34361235501feef33edff59f8d77d6"
+    },
+    "129:1": {
+      "bytes": 10064,
+      "sha256": "9ab73ea1021b2de223e229312fc76ef14b766e795d50d7cc82430b76658b0031"
+    },
+    "129:2": {
+      "bytes": 10064,
+      "sha256": "46070dad8ef87ec88e49b3bda2e6f22755f4727d4338e92fa20568e2ae2020ef"
+    },
+    "513:0": {
+      "bytes": 40016,
+      "sha256": "9593a6b4226082399b974713e6dfe4a79c1947b5c7bf131c28f4fbfa8dbd7833"
+    },
+    "513:1": {
+      "bytes": 40016,
+      "sha256": "f8053132248953d1ed19eab701dc830cf4593a60f164b52e3cb33db65a135fe2"
+    },
+    "513:2": {
+      "bytes": 40016,
+      "sha256": "584f94ab42aa0db97222318ee32676b547b4e16992904ec708bff385620bf40a"
+    }
+  },
+  "per_case_cli": [
+    {
+      "point": "while_held",
+      "command": "memory-add",
+      "exit": 2
+    },
+    {
+      "point": "while_held",
+      "command": "memory-budget",
+      "exit": 2
+    },
+    {
+      "point": "after_owner_exit",
+      "command": "memory-add",
+      "intent": "epoch_2_independent_B",
+      "exit": 0
+    },
+    {
+      "point": "after_owner_exit",
+      "command": "memory-budget",
+      "exit": 0
+    }
+  ],
+  "expected": {
+    "before_HEAD": {
+      "held_current_epoch": 0,
+      "after_exit_epoch": 0,
+      "owner_completed": null
+    },
+    "after_HEAD": {
+      "held_current_epoch": 1,
+      "after_exit_epoch": 1,
+      "owner_completed": null
+    },
+    "clean_return": {
+      "held_current_epoch": 0,
+      "after_exit_epoch": 1,
+      "owner_completed": true
+    },
+    "after_new_intent_epoch": 2,
+    "pinned_and_explicit_epoch": 0
+  },
+  "limits_s": {
+    "cli": 15,
+    "owner_start_or_ready": 30,
+    "owner_barrier": 75,
+    "case": 150,
+    "whole_run": 1800,
+    "independent_audit": 300
+  },
+  "policy": {
+    "retry": 0,
+    "require_exact_source_ci_success": true,
+    "stop_on_failed_gate_or_quota_unavailable": true,
+    "missing_execution_and_extra_cost": null,
+    "external_model_calls": 0
+  },
+  "candidate_source_anchors": {
+    "rkv1/memory.py": {
+      "bytes": 20216,
+      "sha256": "09d006c8ac878fa966eea3fcb84a14c27a23b31235d287a25e9607d1de005aaf"
+    },
+    "rkv1/memory_writer.py": {
+      "bytes": 4635,
+      "sha256": "5f6b6ee80deba3f148540b4106bdb94a00e3add0a721510f1932557bb4e1c6b1"
+    },
+    "rkv1/cli.py": {
+      "bytes": 13967,
+      "sha256": "a045b59fe39c6559ef832fb9fa34fcfb61ff7d1cd0d7bd69d31f1b38c99a7f66"
+    },
+    "scripts/writer_scope_fixture.py": {
+      "bytes": 3338,
+      "sha256": "3eec30390f7c27bdb58c61e37d181a716b4dc3c0ec6dad4e9a179c5b02457f0c"
+    },
+    "scripts/audit_read_view_plan.py": {
+      "bytes": 8310,
+      "sha256": "b5414bf464f388631488707ada458f26f36e14a630ea04e66fc668e201022b60"
+    },
+    "scripts/default_writer_plan.py": {
+      "bytes": 4021,
+      "sha256": "e28f3ab9d85c8590560e017448945c16f81035c5d7de83f225666ec898836054"
+    },
+    "scripts/run_default_writer_plan.py": {
+      "bytes": 11084,
+      "sha256": "40871a07e6cf5883425e446765f9145e39c3963b42edb60dae2140e333e8a378"
+    },
+    "scripts/audit_default_writer_plan.py": {
+      "bytes": 6973,
+      "sha256": "14db78c8af6d74d2f2854f4883d50541aaba43e16380e0da6f434ddd866c4981"
+    },
+    "scripts/run_memory_fault_matrix.py": {
+      "bytes": 8934,
+      "sha256": "8c4656877020e9de1a2c458d5524317c4cb72770c9830ed13cf08da4e24be736"
+    }
+  },
+  "mode": "formal",
+  "source_identity_encoding": "UTF-8 text with CRLF normalized to LF"
+}
