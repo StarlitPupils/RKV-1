@@ -1,0 +1,27 @@
+name: Version cost candidate checks
+on:
+  push:
+    branches: ['codex/version-cost-candidate-*']
+    paths:
+      - 'research/version_cost_candidate/**'
+      - '.github/workflows/version-cost-candidate.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  owned-windows:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install the declared test dependency
+        run: python -m pip install --only-binary=:all: zstandard==0.24.0
+      - name: Compile candidate sources
+        run: python -m compileall -q research/version_cost_candidate
+      - name: Synthetic interface and admission checks
+        run: python research/version_cost_candidate/version_cost_candidate_ci_checks.py --offline
+      - name: Fresh native owned workers (no quota RPC)
+        run: python research/version_cost_candidate/version_cost_candidate_ci_checks.py --worker-smoke
