@@ -1,10 +1,15 @@
 """Synthetic regressions for per-task quota binding and formal result extraction."""
 import json
+import os
 import tempfile
+import threading
 import unittest
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
+from unittest.mock import patch
 
 from version_cost_candidate_ci_checks import fixture
+from version_cost_candidate_engine import PreparedCoordinator, logical_budget_snapshot
 from version_cost_candidate_interface import compile_plan
 from version_cost_formal_results import audit, digest, score, verify_guard, verify_outputs, verify_task
 from version_cost_official_guard_link import permission_from_binding
@@ -23,6 +28,77 @@ class FormalReceiptTests(unittest.TestCase):
         parent = Path(__file__).resolve().parent / 'ci-owned-fixtures'
         parent.mkdir(exist_ok=True)
         cls.root = Path(tempfile.mkdtemp(prefix='formal-receipts-', dir=parent))
+
+    def test_budget_counts_one_root_scan_with_live_lock_and_bundle_removal(self):
+        root = self.root / 'owned-budget'
+        library = root / 'libraries' / 'solid'
+        library.mkdir(parents=True)
+        (library / 'stable').write_bytes(b's' * 96)
+        (root / 'journal').write_bytes(b'j' * 32)
+        gate = threading.Barrier(2)
+
+        def writer():
+            gate.wait(timeout=5)
+            for i in range(128):
+                lock = library / 'append.lock'
+                lock.write_bytes(b'x' * 64)
+                tmp = library / '.HEAD.tmp'
+                tmp.write_bytes(b'h' * 16)
+                os.replace(tmp, library / 'HEAD')
+                bundle = library / f'bundle-{i}'
+                bundle.write_bytes(b'b' * 256)
+                bundle.unlink()
+                lock.unlink()
+
+        with ThreadPoolExecutor(max_workers=1) as pool:
+            target = pool.submit(writer)
+            gate.wait(timeout=5)
+            for _ in range(128):
+                size, libs, terms, _ = logical_budget_snapshot(root, ['solid', 'empty'])
+                self.assertEqual(size - libs['solid'], 32)
+                self.assertEqual(libs['empty'], 0)
+                self.assertGreaterEqual(terms, 2)
+                self.assertGreaterEqual(libs['solid'], 96)
+            target.result(timeout=10)
+        self.assertEqual(logical_budget_snapshot(root, ['solid', 'empty']), (144, {'solid': 112, 'empty': 0}, 3, 0))
+
+    def test_budget_snapshot_discards_only_bounded_missing_entry_failures(self):
+        root = self.root / 'synthetic-root'
+        with patch('version_cost_candidate_engine.scan_logical_sizes',
+                   side_effect=[FileNotFoundError(), (12, {'a': 5}, 2)]) as scan:
+            self.assertEqual(logical_budget_snapshot(root, ['a']), (12, {'a': 5}, 2, 1))
+            self.assertEqual(scan.call_count, 2)
+        with patch('version_cost_candidate_engine.scan_logical_sizes', side_effect=FileNotFoundError()) as scan:
+            with self.assertRaises(FileNotFoundError):
+                logical_budget_snapshot(root, ['a'])
+            self.assertEqual(scan.call_count, 3)
+        with patch('version_cost_candidate_engine.scan_logical_sizes', side_effect=PermissionError()) as scan:
+            with self.assertRaises(PermissionError):
+                logical_budget_snapshot(root, ['a'])
+            self.assertEqual(scan.call_count, 1)
+
+    def test_observed_global_and_library_caps_remain_fail_closed(self):
+        root = self.root / 'budget-caps'
+        library = root / 'libraries' / 'a'
+        library.mkdir(parents=True)
+        (library / 'stored').write_bytes(b'x' * 20)
+        (root / 'log').write_bytes(b'x' * 10)
+        coordinator = PreparedCoordinator.__new__(PreparedCoordinator)
+        coordinator.root = root
+        coordinator.started = 0
+        coordinator.budget_metrics = dict.fromkeys(
+            ('calls', 'wall_ns', 'self_cpu_ns', 'logical_file_size_terms', 'discarded_snapshot_retries'), 0)
+        limits = {'global_wall_s': 5, 'metadata_reserve_B': 2, 'global_output_B': 32, 'library_B': 20}
+        coordinator.plan = {'libraries': [{'library_key': 'a'}], 'budgets': limits}
+        with patch('version_cost_candidate_engine.time.perf_counter', return_value=1):
+            self.assertIsNone(coordinator.budget()['reason'])
+            limits['global_output_B'] = 31
+            self.assertEqual(coordinator.budget()['reason'], 'global_output_limit')
+            limits['global_output_B'] = 32
+            limits['library_B'] = 19
+            self.assertEqual(coordinator.budget()['reason'], 'library_output_limit')
+        with patch('version_cost_candidate_engine.time.perf_counter', return_value=6):
+            self.assertEqual(coordinator.budget()['reason'], 'global_wall_limit')
 
     def test_same_run_quota_cannot_move_between_tasks_or_plans(self):
         task = 'task-a'

@@ -44,6 +44,12 @@ at most10s with2s shared cleanup reserve. The original total wall1800s is not pr
 3600s is a review-only alternative, not accepted permission or a completion guarantee.
 Final admission must bind the selected budget and exact immutable plan/source/input hashes.
 
+The parent samples output and per-library logical sizes in the same directory traversal,
+using a single directory-entry observation for type and size. A disappearing entry can
+invalidate the sample. Discard it and allow at most two fresh traversals. Continued failure
+or another read error stops the run. These observations can miss between-sample peaks.
+The archive endpoint inventories remain separate from the live budget observations.
+
 Each quota observation binds its own task ID and plan digest inside the preflight specification.
 The coordinator verifies that specification and reads the observation from that exact task directory.
 An observation from a different row cannot grant permission.

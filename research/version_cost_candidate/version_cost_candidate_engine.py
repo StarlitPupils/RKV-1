@@ -1,6 +1,8 @@
 """Serial coordinator for a bound formal plan or the owned smoke."""
 import json
+import os
 import re
+import stat
 import time
 from pathlib import Path
 from version_cost_readonly_receipts import canonical, capture, delta, identity, save, sha, unchanged
@@ -8,6 +10,44 @@ from version_cost_task_monitor import run_task
 from version_cost_official_guard_link import check_row, permission_from_binding
 
 from version_cost_candidate_interface import validate_execution_plan as validate_plan, require_formal_admission
+
+
+def scan_logical_sizes(root, library_keys):
+    """Observe file sizes in one traversal without restatting previously listed paths."""
+    libraries = dict.fromkeys(library_keys, 0)
+    total = terms = 0
+    pending = [(root, ())]
+    while pending:
+        directory, parents = pending.pop()
+        with os.scandir(directory) as entries:
+            for entry in entries:
+                # Use the same directory entry for type and size. A later Path.stat()
+                # can race with an owned writer unlinking append.lock or an old bundle.
+                metadata = entry.stat(follow_symlinks=False)
+                if getattr(metadata, 'st_file_attributes', 0) & 0x400:
+                    raise ValueError('Reparse point in budget scope')
+                if stat.S_ISDIR(metadata.st_mode):
+                    pending.append((entry.path, (*parents, entry.name)))
+                elif stat.S_ISREG(metadata.st_mode):
+                    total += metadata.st_size
+                    terms += 1
+                    if len(parents) >= 2 and parents[0] == 'libraries':
+                        libraries[parents[1]] += metadata.st_size
+                else:
+                    raise ValueError('Unsupported entry in budget scope')
+    return total, libraries, terms
+
+
+def logical_budget_snapshot(root, library_keys):
+    # If the platform cannot finish reading a changing directory, discard that
+    # observation and start over. Never use a partial total or suppress other errors.
+    for attempt in range(3):
+        try:
+            total, libraries, terms = scan_logical_sizes(root, library_keys)
+            return total, libraries, terms, attempt
+        except FileNotFoundError:
+            if attempt == 2:
+                raise
 
 class PreparedCoordinator:
     def __init__(self, stage, plan_path, expected_plan_sha, guard, formal_admission=None, package_sha256=None):
@@ -25,7 +65,8 @@ class PreparedCoordinator:
         self.formal_admission = formal_admission
         self.package_sha256 = package_sha256
         self.prev, self.seq = None, 0
-        self.budget_metrics = {'calls': 0, 'wall_ns': 0, 'self_cpu_ns': 0, 'logical_file_size_terms': 0}
+        self.budget_metrics = {'calls': 0, 'wall_ns': 0, 'self_cpu_ns': 0,
+                               'logical_file_size_terms': 0, 'discarded_snapshot_retries': 0}
 
     def journal(self, event, **fields):
         value = {'seq': self.seq, 'previous_line_sha256': self.prev,
@@ -35,25 +76,25 @@ class PreparedCoordinator:
         with (self.root / 'journal.jsonl').open('ab') as stream:
             stream.write(raw)
             stream.flush()
-            import os
             os.fsync(stream.fileno())
         self.prev, self.seq = sha(raw), self.seq + 1
 
     def budget(self):
         start_ns, cpu_ns = time.perf_counter_ns(), time.process_time_ns()
+        keys = [lib['library_key'] for lib in self.plan['libraries']]
+        self.budget_metrics['calls'] += 1
+        try:
+            total, libraries, terms, retries = logical_budget_snapshot(self.root, keys)
+        finally:
+            self.budget_metrics['wall_ns'] += time.perf_counter_ns() - start_ns
+            self.budget_metrics['self_cpu_ns'] += time.process_time_ns() - cpu_ns
         elapsed = time.perf_counter() - self.started
-        root_files = [path for path in self.root.rglob('*') if path.is_file()]
-        total = sum(path.stat().st_size for path in root_files)
-        library_files = {lib['library_key']: [path for path in (self.root / 'libraries' / lib['library_key']).rglob('*') if path.is_file()] for lib in self.plan['libraries']}
-        libraries = {key: sum(path.stat().st_size for path in paths) for key, paths in library_files.items()}
         limits = self.plan['budgets']
         reason = ('global_wall_limit' if elapsed > limits['global_wall_s'] else
                   'global_output_limit' if total + limits['metadata_reserve_B'] > limits['global_output_B'] else
                   'library_output_limit' if any(value > limits['library_B'] for value in libraries.values()) else None)
-        self.budget_metrics['calls'] += 1
-        self.budget_metrics['wall_ns'] += time.perf_counter_ns() - start_ns
-        self.budget_metrics['self_cpu_ns'] += time.process_time_ns() - cpu_ns
-        self.budget_metrics['logical_file_size_terms'] += len(root_files) + sum(len(paths) for paths in library_files.values())
+        self.budget_metrics['logical_file_size_terms'] += terms
+        self.budget_metrics['discarded_snapshot_retries'] += retries
         return {'reason': reason, 'elapsed_s': elapsed, 'root_logical_B': total,
                 'all_library_logical_B': libraries, 'metadata_reserve_B': limits['metadata_reserve_B']}
 
