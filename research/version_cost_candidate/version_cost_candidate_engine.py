@@ -1,11 +1,11 @@
-"""Global serial coordinator for at most SIX new tiny-owned libraries, not real12."""
+"""Serial coordinator for a bound formal plan or the owned smoke."""
 import json
 import re
 import time
 from pathlib import Path
 from version_cost_readonly_receipts import canonical, capture, delta, identity, save, sha, unchanged
 from version_cost_task_monitor import run_task
-from version_cost_official_guard_link import permission_from_binding
+from version_cost_official_guard_link import check_row, permission_from_binding
 
 from version_cost_candidate_interface import validate_execution_plan as validate_plan, require_formal_admission
 
@@ -84,9 +84,12 @@ class PreparedCoordinator:
                 if task['requires'] and task['requires'][0] not in completed:
                     raise ValueError('Actual predecessor not complete')
                 self.journal('task_reserved', task_id=task['id'], library_key=task['library_key'])
-                guard = self.guard(task, self.plan['authorized_reference'])
+                reference = self.plan['authorized_reference']
+                guard = (check_row(self, task, reference)
+                         if self.plan['mode'] == 'prepared-formal-version-cost-1'
+                         else self.guard(task, reference))
                 save(self.root / 'guards' / (task['id'] + '.json'), guard)
-                allowed = permission_from_binding(guard, self.root, self.plan['authorized_reference'])
+                allowed = permission_from_binding(guard, self.root, reference, task['id'], self.plan_sha)
                 self.journal('bounded_guard_checked', task_id=task['id'], allowed=allowed,
                              guard_sha256=identity(self.root / 'guards' / (task['id'] + '.json'))['sha256'])
                 if not allowed:
@@ -160,13 +163,16 @@ class PreparedCoordinator:
         except BaseException as exc:
             reason = reason or 'identity_or_integration_failure'
             error = {'type': type(exc).__name__, 'message': str(exc)}
+        last_budget = self.budget()
+        reason = reason or last_budget['reason']
         status = 'complete' if reason is None and len(completed) == len(self.plan['tasks']) else 'stopped'
         self.journal('run_' + status, completed=len(completed), launched=len(launched), reason=reason)
         terminal = {'status': status, 'reason': reason, 'error': error, 'plan_sha256': self.plan_sha,
                     'planned_tasks': len(self.plan['tasks']), 'completed_task_ids': completed,
                     'launched_task_ids': launched, 'journal_tip_sha256': self.prev, 'journal_events': self.seq,
                     'parent_wall_s': time.perf_counter() - self.started, 'parent_self_CPU_s': time.process_time() - self.cpu,
-                    'last_budget': self.budget(), 'formal_ready': False, 'real12_performance': False,
+                    'last_budget': last_budget, 'formal_ready': False,
+                    'mode': self.plan['mode'],
                     'guard_mode': 'bounded-official-preflight'}
         terminal['budget_observer_metrics'] = dict(self.budget_metrics)
         save(self.root / 'terminal.json', terminal)

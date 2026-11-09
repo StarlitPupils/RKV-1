@@ -2,21 +2,28 @@
 import json
 import time
 from pathlib import Path
-from version_cost_readonly_receipts import identity
+from version_cost_readonly_receipts import identity, sha
 from version_cost_bounded_preflight import run_bounded, allowed
 
-def permission_from_binding(binding, root, reference):
-    if binding.get('origin') != 'bounded-official-preflight':
+def permission_from_binding(binding, root, reference, task_id, plan_sha):
+    if (binding.get('origin') != 'bounded-official-preflight' or
+            binding.get('fresh_run_for_task') != task_id or binding.get('cache_reused') is not False):
         return False
     try:
         path = Path(binding['observation_path']).resolve()
-        if not path.is_relative_to(Path(root).resolve() / 'preflights'):
+        expected = Path(root).resolve() / 'preflights' / task_id / 'observation.json'
+        if path != expected or not expected.resolve().is_relative_to(Path(root).resolve()):
             return False
-        if identity(path)['sha256'] != binding['observation_sha256']:
+        raw = path.read_bytes()
+        if sha(raw) != binding['observation_sha256']:
             return False
-        record = json.loads(path.read_bytes())
-        # Re-evaluate the actual observation. A callback boolean or stale summary is insufficient.
-        return record['authorized_reference'] == reference and allowed(record)
+        record = json.loads(raw)
+        spec_raw = (path.parent / 'spec.json').read_bytes()
+        spec = json.loads(spec_raw)
+        return (spec['mode'] == 'official' and spec['authorized_reference'] == reference and
+                spec['task_id'] == task_id and spec['plan_sha256'] == plan_sha and
+                record['spec_sha256'] == sha(spec_raw) and
+                record['authorized_reference'] == reference and allowed(record))
     except (OSError, KeyError, TypeError, ValueError):
         return False
 
@@ -28,7 +35,8 @@ def check_row(controller, task, reference):
     spec = {'mode': plan['preflight_mode'], 'authorized_reference': reference,
             'worker': plan['preflight_worker'], 'quota_script': plan['quota_script'],
             'freeze_path': plan['preflight_freeze_path'],
-            'freeze_sha256': plan['preflight_freeze_sha256']}
+            'freeze_sha256': plan['preflight_freeze_sha256'],
+            'task_id': task['id'], 'plan_sha256': controller.plan_sha}
     folder = controller.root / 'preflights' / task['id']
     record = run_bounded(folder, spec, deadline=deadline, cleanup_s=cleanup_s)
     path = folder / 'observation.json'

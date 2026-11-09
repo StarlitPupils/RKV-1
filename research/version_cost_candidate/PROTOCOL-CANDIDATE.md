@@ -44,6 +44,20 @@ at most10s with2s shared cleanup reserve. The original total wall1800s is not pr
 3600s is a review-only alternative, not accepted permission or a completion guarantee.
 Final admission must bind the selected budget and exact immutable plan/source/input hashes.
 
+Each quota observation binds its own task ID and plan digest inside the preflight specification.
+The coordinator verifies that specification and reads the observation from that exact task directory.
+An observation from a different row cannot grant permission.
+
+The independent result reader takes externally retained plan and terminal digests. It verifies
+the journal chain and all 648 task receipts, including actual exits, quota observations, library
+endpoints and 3024 saved original files. A stopped run keeps its full denominator and receives
+no score. For a complete run, pair retained library bytes by order and report all six pairs for
+each baseline, with and without deployment. All six deployment-inclusive pairs must meet
+the space threshold for that comparison. For timing and RSS compare each fixed update or cold
+read across its six observations. For total update wall, sum the twelve disjoint update intervals
+per library separately for API and whole-process wall. History-check resources remain in the
+ledger and separate from the scored update and read intervals.
+
 Unknown/denied/100% quota, unauthorized window, bad source/identity/output/exit witness,
 budget exhaustion or unavailable measurement stops the full run. Do not retry, fill missing
 slots, recycle roots, roll back or lower denominators. Missing receipts alone cannot prove

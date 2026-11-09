@@ -25,3 +25,5 @@ jobs:
         run: python research/version_cost_candidate/version_cost_candidate_ci_checks.py --offline
       - name: Fresh native owned workers (no quota RPC)
         run: python research/version_cost_candidate/version_cost_candidate_ci_checks.py --worker-smoke
+      - name: Synthetic formal receipt and scoring regressions
+        run: python research/version_cost_candidate/test_formal_receipts.py
