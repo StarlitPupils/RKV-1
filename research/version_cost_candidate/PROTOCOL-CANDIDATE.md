@@ -64,10 +64,22 @@ read across its six observations. For total update wall, sum the twelve disjoint
 per library separately for API and whole-process wall. History-check resources remain in the
 ledger and separate from the scored update and read intervals.
 
-Unknown/denied/100% quota, unauthorized window, bad source/identity/output/exit witness,
-budget exhaustion or unavailable measurement stops the full run. Do not retry, fill missing
-slots, recycle roots, roll back or lower denominators. Missing receipts alone cannot prove
-globally unattempted work. Preserve exact partial state and unknown costs.
+An official preflight may perform one additional quota read before launching that task's
+data worker. The first read must report the exact account quota request-send error
+observed in formal attempt three (JSON-RPC response id 2, code -32603 and the matching
+transport message). The first worker and its app-server must have confirmed exit and
+cleanup witnesses. Run the second read in its own held Job and directory under the
+same absolute deadline, at most 10 seconds from the start of the task preflight.
+The existing cleanup reserve still applies. The guard binds both observations and
+their identical task and plan specifications. The second read must itself provide
+fresh, valid quota permission before the deadline. Include both reads and their
+intervening overhead in the preflight wall measurement for that task.
+
+Other unknown/denied/100% quota, unauthorized window, bad source/identity/output/exit
+witness, budget exhaustion or unavailable measurement stops the full run. An
+unsuccessful second read also stops it. Preserve the full denominator, exact partial
+state and unknown costs. Closed runs and data worker attempts have no replay, fill,
+root reuse or rollback. Missing receipts alone cannot prove globally unattempted work.
 
 Real execution remains blocked until explicit human/window authorization, accepted budget,
 final code/protocol/input freeze, and successful CI for that exact candidate source are bound.

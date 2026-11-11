@@ -8,6 +8,7 @@ from decimal import Decimal
 from pathlib import Path
 
 from version_cost_candidate_decisions import joint, median, rss, space, wall
+from version_cost_official_guard_link import RETRY_DIR, retry_timing_valid, retryable_transport_error
 
 
 def require(condition, message):
@@ -76,6 +77,26 @@ def verify_guard(root, plan_sha, reference, task_id, event):
             Path(binding['observation_path']) == path / 'observation.json' and event['allowed'] is True,
             'Guard path or task differs')
     observation = read(path / 'observation.json', binding['observation_sha256'])
+    elapsed_s = observation['wall_s']
+    if 'retry' in binding:
+        first = observation
+        first_spec_path = path / 'spec.json'
+        first_spec = read(first_spec_path, first['spec_sha256'])
+        require(retryable_transport_error(first) and first_spec['task_id'] == task_id and
+                first_spec['plan_sha256'] == plan_sha and first_spec['mode'] == 'official' and
+                first_spec['authorized_reference'] == first['authorized_reference'] == reference and
+                first['worker_result'] == read(path / 'work/result.json') and
+                first['worker_footer'] == read(path / 'work/finally.json'),
+                'Retry lacks a bound transport failure and cleanup evidence')
+        path = path / RETRY_DIR
+        retry = binding['retry']
+        retry_path = path / 'observation.json'
+        require(retry_path.resolve() == retry_path, 'Retry observation path escaped its task')
+        observation = read(retry_path, retry['observation_sha256'])
+        require((path / 'spec.json').read_bytes() == first_spec_path.read_bytes() and
+                observation['permission'] is True and retry_timing_valid(retry, first, observation),
+                'Retry specification, permission or shared deadline differs')
+        elapsed_s = retry['elapsed_s']
     spec = read(path / 'spec.json', observation['spec_sha256'])
     require(spec['task_id'] == task_id and spec['plan_sha256'] == plan_sha and
             spec['mode'] == observation['mode'] == 'official' and
@@ -98,7 +119,7 @@ def verify_guard(root, plan_sha, reference, task_id, event):
             type(primary['usedPercent']) in (int, float) and 0 <= primary['usedPercent'] < 100 and
             type(primary['resetsAt']) is int and abs(primary['resetsAt'] - reference) <= 60,
             'Official quota or helper cleanup evidence differs')
-    return ns(observation['wall_s'])
+    return ns(elapsed_s)
 
 
 def verify_task(root, plan_sha, task, events, prior):

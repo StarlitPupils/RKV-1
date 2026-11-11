@@ -6,13 +6,14 @@ import threading
 import unittest
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
+from types import SimpleNamespace
 from unittest.mock import patch
 
 from version_cost_candidate_ci_checks import fixture
 from version_cost_candidate_engine import PreparedCoordinator, logical_budget_snapshot
 from version_cost_candidate_interface import compile_plan
 from version_cost_formal_results import audit, digest, score, verify_guard, verify_outputs, verify_task
-from version_cost_official_guard_link import permission_from_binding
+from version_cost_official_guard_link import TRANSPORT_ERROR, check_row, permission_from_binding
 
 
 def write(path, value):
@@ -28,6 +29,99 @@ class FormalReceiptTests(unittest.TestCase):
         parent = Path(__file__).resolve().parent / 'ci-owned-fixtures'
         parent.mkdir(exist_ok=True)
         cls.root = Path(tempfile.mkdtemp(prefix='formal-receipts-', dir=parent))
+
+    def simulate_guard(self, case, summaries, walls, *, cleanup=True):
+        root = self.root / case
+        reference = 1000
+        plan_sha = 'c' * 64
+        task_id = 'task-a'
+        controller = SimpleNamespace(root=root, plan_sha=plan_sha, started=100,
+                                     plan={'guard_cap_s': 10, 'budgets': {'global_wall_s': 3600},
+                                           'preflight_mode': 'official', 'preflight_worker': 'synthetic',
+                                           'quota_script': 'synthetic', 'preflight_freeze_path': 'synthetic',
+                                           'preflight_freeze_sha256': 'a' * 64})
+        now = 100.
+        calls = []
+
+        def observe(folder, spec, *, deadline, cleanup_s):
+            nonlocal now
+            index = len(calls)
+            self.assertEqual(deadline, 110.)
+            self.assertEqual(cleanup_s, 2.)
+            calls.append(folder)
+            summary = summaries[index]
+            wall = walls[index]
+            now += wall
+            permit = (summary.get('ordinaryUsageAllowed') is True and
+                      summary['primary']['usedPercent'] < 100 and summary['primary']['resetsAt'] == reference)
+            spec_sha = write(folder / 'spec.json', spec)
+            pid, helper = 40 + index * 2, 41 + index * 2
+            result = {'pid': pid, 'spec_sha256': spec_sha, 'read_record': {
+                'failure': None, 'summary': summary, 'official_RPC_source_unchanged': True,
+                'RPC_retries': 0, 'owned_failure_before_RPC': False,
+                'held_app_servers': [{'pid': helper, 'actual_exit_code': 1, 'pipes_closed': True,
+                                      'cleanup_error': None}],
+            }}
+            footer = {'pid': pid, 'spec_sha256': spec_sha, 'success': True}
+            record = {'mode': 'official', 'authorized_reference': reference,
+                      'reason': None if permit else 'quota_or_evidence_denied',
+                      'root_pid': pid, 'root_exit_code': 0, 'cleanup_confirmed': cleanup,
+                      'job_final': {'active': 0}, 'spec_sha256': spec_sha, 'worker_result': result,
+                      'worker_footer': footer, 'wall_s': wall, 'permission': permit,
+                      'members': [{'pid': helper, 'actual_exit_code': 1, 'observation_error': None}]}
+            write(folder / 'work/result.json', result)
+            write(folder / 'work/finally.json', footer)
+            write(folder / 'observation.json', record)
+            return record
+
+        with patch('version_cost_official_guard_link.run_bounded', side_effect=observe):
+            with patch('version_cost_official_guard_link.time.perf_counter', side_effect=lambda: now):
+                binding = check_row(controller, {'id': task_id}, reference)
+        return root, reference, plan_sha, task_id, calls, binding
+
+    def test_quota_transport_retry_keeps_both_witnesses_and_same_deadline(self):
+        error = {'id': 2, 'error': {'code': -32603, 'message': TRANSPORT_ERROR}}
+        ok = {'ordinaryUsageAllowed': True, 'primary': {'usedPercent': 74, 'resetsAt': 1000}}
+        root, reference, plan_sha, task, calls, binding = self.simulate_guard('retry-ok', [error, ok], [6., 3.])
+        self.assertEqual(calls, [root / 'preflights/task-a', root / 'preflights/task-a/retry-01'])
+        self.assertTrue(permission_from_binding(binding, root, reference, task, plan_sha))
+        guard = root / 'guards/task-a.json'
+        event = {'allowed': True, 'guard_sha256': write(guard, binding)}
+        self.assertEqual(verify_guard(root, plan_sha, reference, task, event), 9_000_000_000)
+
+        retry_spec = calls[1] / 'spec.json'
+        spec = json.loads(retry_spec.read_bytes())
+        write(retry_spec, {**spec, 'task_id': 'task-b'})
+        self.assertFalse(permission_from_binding(binding, root, reference, task, plan_sha))
+        with self.assertRaises(ValueError):
+            verify_guard(root, plan_sha, reference, task, event)
+
+    def test_quota_retry_refuses_denial_unknown_late_and_unclean_cases(self):
+        error = {'id': 2, 'error': {'code': -32603, 'message': TRANSPORT_ERROR}}
+        other = {'id': 2, 'error': {'code': -32603, 'message': 'unclassified'}}
+        ok = {'ordinaryUsageAllowed': True, 'primary': {'usedPercent': 74, 'resetsAt': 1000}}
+        denied = {**ok, 'ordinaryUsageAllowed': False}
+        exhausted = {**ok, 'primary': {'usedPercent': 100, 'resetsAt': 1000}}
+        changed = {**ok, 'primary': {'usedPercent': 74, 'resetsAt': 1061}}
+        cases = [
+            ('initial-ok', [ok], [1.], True, 1, True),
+            ('denied', [denied], [1.], True, 1, False),
+            ('exhausted', [exhausted], [1.], True, 1, False),
+            ('changed-window', [changed], [1.], True, 1, False),
+            ('unknown', [other], [1.], True, 1, False),
+            ('unclean', [error], [1.], False, 1, False),
+            ('expired-first', [error], [10.], True, 1, False),
+            ('expired-retry', [error, ok], [6., 4.], True, 2, False),
+            ('repeated-error', [error, error], [1., 1.], True, 2, False),
+            ('retry-denied', [error, denied], [1., 1.], True, 2, False),
+            ('retry-changed-window', [error, changed], [1., 1.], True, 2, False),
+        ]
+        for case, summaries, walls, cleanup, attempts, permitted in cases:
+            with self.subTest(case=case):
+                root, reference, plan_sha, task, calls, binding = self.simulate_guard(
+                    case, summaries, walls, cleanup=cleanup)
+                self.assertEqual(len(calls), attempts)
+                self.assertEqual(permission_from_binding(binding, root, reference, task, plan_sha), permitted)
 
     def test_budget_counts_one_root_scan_with_live_lock_and_bundle_removal(self):
         root = self.root / 'owned-budget'
